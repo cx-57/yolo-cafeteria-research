@@ -1,0 +1,8 @@
+dataset: INSPIRE Phase1 512
+source_format: yolo_object_detection
+target_taxonomy: configs/classes.yaml
+
+manual_review:
+  Paper_foodtray: paper_boat
+
+drop_unlisted: true
