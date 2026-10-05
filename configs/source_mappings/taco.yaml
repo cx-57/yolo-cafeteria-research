@@ -1,0 +1,20 @@
+dataset: TACO
+source_format: coco_instance_segmentation
+target_taxonomy: configs/classes.yaml
+
+# Safe semantic candidates. They still require visual filtering before inclusion.
+candidate_mappings:
+  Plastic utensils: utensil
+  Drink carton: milk_carton
+  Crisp packet: wrapper
+  Other plastic wrapper: wrapper
+  Clear plastic bottle: bottle
+  Other plastic bottle: bottle
+
+# These labels are too broad or visually mismatched to map automatically.
+manual_review:
+  Tissues: napkin
+  Disposable food container: hinged_container
+  Food waste: food
+
+drop_unlisted: true
