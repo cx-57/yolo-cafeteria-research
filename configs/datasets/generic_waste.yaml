@@ -1,0 +1,8 @@
+name: generic_waste
+purpose: supplementary non-food object coverage
+sources:
+  - {name: TACO, role: packaging_and_disposable_objects, status: subset_only}
+  - {name: UC Food Waste, role: food_mixed_with_material_contaminants, status: subset_only}
+selection_rule: >
+  Keep only images that visually resemble NHS cafeteria waste objects.
+  Class-name match alone is not sufficient.

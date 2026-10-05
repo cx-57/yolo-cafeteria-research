@@ -1,0 +1,8 @@
+name: nhs
+purpose: local domain adaptation and final evaluation
+raw_root: data/raw/nhs
+group_fields: [collection_day, session_id, scene_id]
+rules:
+  - never_split_near_duplicate_scenes_across_partitions
+  - reserve_final_test_days_before_training
+  - do_not_use_test_images_for_threshold_tuning

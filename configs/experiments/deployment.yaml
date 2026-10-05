@@ -1,0 +1,8 @@
+name: deployment
+description: Accuracy-latency deployment candidate.
+model: yolo26n.pt
+imgsz: 640
+confidence_threshold: 0.70
+manual_check_below_threshold: true
+rules: configs/disposal_rules.yaml
+evaluation_set: nhs_final_test

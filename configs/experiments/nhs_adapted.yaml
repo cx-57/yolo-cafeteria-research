@@ -1,0 +1,9 @@
+name: nhs_adapted
+description: Public cafeteria data plus NHS-specific training data.
+model: yolo26n.pt
+imgsz: 640
+epochs: 100
+dataset_configs:
+  - configs/datasets/public_cafeteria.yaml
+  - configs/datasets/nhs.yaml
+evaluation_set: nhs_final_test

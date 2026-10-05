@@ -1,0 +1,10 @@
+name: public_cafeteria
+purpose: cafeteria-domain training data
+sources:
+  - {name: FLIC, role: full_and_leftover_trays, status: vet_before_download}
+  - {name: Ferreira School Canteen, role: school_canteen_food_waste, status: vet_before_download}
+  - {name: PUST Cafeteria, role: cafeteria_meals, status: vet_before_download}
+  - {name: CC-FOOD-100, role: canteen_food_detection, status: vet_before_download}
+  - {name: UNIMIB2015, role: full_and_leftover_trays, status: vet_before_download}
+  - {name: UNIMIB2016, role: canteen_trays, status: vet_before_download}
+  - {name: HPI Food Waste, role: institutional_leftovers, status: vet_before_download}

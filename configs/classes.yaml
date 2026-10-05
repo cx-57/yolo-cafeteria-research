@@ -1,0 +1,13 @@
+# Provisional taxonomy. Freeze after the NHS waste audit.
+names:
+  0: food
+  1: plate
+  2: paper_boat
+  3: utensil
+  4: compartment_container
+  5: hinged_container
+  6: napkin
+  7: milk_carton
+  8: condiment_packet
+  9: wrapper
+  10: bottle

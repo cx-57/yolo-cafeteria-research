@@ -1,0 +1,7 @@
+name: cafeteria_public
+description: Public cafeteria-domain training only.
+model: yolo26n.pt
+imgsz: 640
+epochs: 100
+dataset_config: configs/datasets/public_cafeteria.yaml
+evaluation_set: nhs_final_test
