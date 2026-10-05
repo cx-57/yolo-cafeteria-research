@@ -1,41 +1,37 @@
-"""Remap YOLO class IDs using an explicit old->new mapping."""
-
-from __future__ import annotations
 import argparse
 from pathlib import Path
 
-def remap_label_file(path: Path, mapping: dict[int, int], drop_unmapped: bool = True) -> None:
-    out: list[str] = []
-    for line in path.read_text().splitlines():
+parser = argparse.ArgumentParser()
+parser.add_argument("labels_dir")
+parser.add_argument("--mapping", required=True, help='Example: "0:0,3:0,5:2"')
+parser.add_argument("--keep-unmapped", action="store_true")
+args = parser.parse_args()
+
+labels_dir = Path(args.labels_dir)
+
+mapping = {}
+for pair in args.mapping.split(","):
+    old_class, new_class = pair.split(":")
+    mapping[int(old_class)] = int(new_class)
+
+for label_file in labels_dir.rglob("*.txt"):
+    new_lines = []
+
+    for line in label_file.read_text().splitlines():
         parts = line.split()
+
         if len(parts) < 5:
             continue
-        old_id = int(parts[0])
-        if old_id not in mapping:
-            if drop_unmapped:
-                continue
-            out.append(line)
-            continue
-        parts[0] = str(mapping[old_id])
-        out.append(" ".join(parts))
-    path.write_text("\n".join(out) + ("\n" if out else ""))
 
-def parse_mapping(text: str) -> dict[int, int]:
-    result = {}
-    for pair in text.split(","):
-        old, new = pair.split(":")
-        result[int(old)] = int(new)
-    return result
+        old_class = int(parts[0])
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("labels_dir", type=Path)
-    parser.add_argument("--mapping", required=True, help='Example: "0:0,3:0,5:2"')
-    parser.add_argument("--keep-unmapped", action="store_true")
-    args = parser.parse_args()
-    mapping = parse_mapping(args.mapping)
-    for path in args.labels_dir.rglob("*.txt"):
-        remap_label_file(path, mapping, not args.keep_unmapped)
+        if old_class in mapping:
+            parts[0] = str(mapping[old_class])
+            new_lines.append(" ".join(parts))
 
-if __name__ == "__main__":
-    main()
+        elif args.keep_unmapped:
+            new_lines.append(line)
+
+    label_file.write_text("\n".join(new_lines) + ("\n" if new_lines else ""))
+
+print("Done remapping classes.")

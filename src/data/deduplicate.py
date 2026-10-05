@@ -1,33 +1,34 @@
-"""Report exact perceptual-hash duplicate groups without deleting files."""
-
-from __future__ import annotations
 import argparse
-from collections import defaultdict
 from pathlib import Path
+
 import imagehash
 from PIL import Image
 
-IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
+parser = argparse.ArgumentParser()
+parser.add_argument("root")
+args = parser.parse_args()
 
-def find_duplicates(root: Path) -> list[list[Path]]:
-    groups: dict[str, list[Path]] = defaultdict(list)
-    for path in root.rglob("*"):
-        if path.suffix.lower() not in IMAGE_SUFFIXES:
-            continue
-        try:
-            with Image.open(path) as image:
-                groups[str(imagehash.phash(image))].append(path)
-        except Exception:
-            continue
-    return [paths for paths in groups.values() if len(paths) > 1]
+root = Path(args.root)
+image_extensions = {".jpg", ".jpeg", ".png", ".webp"}
+hashes = {}
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("root", type=Path)
-    args = parser.parse_args()
-    for group in find_duplicates(args.root):
-        print("---")
-        print("\n".join(map(str, group)))
+for file in root.rglob("*"):
+    if file.suffix.lower() not in image_extensions:
+        continue
 
-if __name__ == "__main__":
-    main()
+    try:
+        with Image.open(file) as image:
+            image_hash = str(imagehash.phash(image))
+    except Exception:
+        continue
+
+    if image_hash not in hashes:
+        hashes[image_hash] = []
+
+    hashes[image_hash].append(file)
+
+for files in hashes.values():
+    if len(files) > 1:
+        print("--- duplicate group ---")
+        for file in files:
+            print(file)

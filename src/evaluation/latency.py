@@ -1,13 +1,15 @@
-"""End-to-end latency summaries."""
-
 import numpy as np
 
-def latency_summary(milliseconds: list[float]) -> dict[str, float]:
-    if not milliseconds:
-        return {"mean_ms": 0.0, "p50_ms": 0.0, "p95_ms": 0.0}
-    arr = np.asarray(milliseconds, dtype=float)
+def latency_summary(milliseconds):
+    if len(milliseconds) == 0:
+        return {
+            "mean_ms": 0,
+            "p50_ms": 0,
+            "p95_ms": 0,
+        }
+
     return {
-        "mean_ms": float(arr.mean()),
-        "p50_ms": float(np.percentile(arr, 50)),
-        "p95_ms": float(np.percentile(arr, 95)),
+        "mean_ms": np.mean(milliseconds),
+        "p50_ms": np.percentile(milliseconds, 50),
+        "p95_ms": np.percentile(milliseconds, 95),
     }

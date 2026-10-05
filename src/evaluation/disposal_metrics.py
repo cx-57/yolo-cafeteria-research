@@ -1,22 +1,23 @@
-"""Metrics for correct disposal guidance."""
+def calculate_disposal_metrics(total_items, correct, abstained):
+    if total_items == 0:
+        return {
+            "overall_accuracy": 0,
+            "coverage": 0,
+            "answered_accuracy": 0,
+        }
 
-from dataclasses import dataclass
+    answered = total_items - abstained
 
-@dataclass(frozen=True)
-class DisposalResult:
-    total_items: int
-    correct: int
-    abstained: int
+    overall_accuracy = correct / total_items
+    coverage = answered / total_items
 
-    @property
-    def coverage(self) -> float:
-        return 0.0 if self.total_items == 0 else (self.total_items - self.abstained) / self.total_items
+    if answered == 0:
+        answered_accuracy = 0
+    else:
+        answered_accuracy = correct / answered
 
-    @property
-    def overall_accuracy(self) -> float:
-        return 0.0 if self.total_items == 0 else self.correct / self.total_items
-
-    @property
-    def answered_accuracy(self) -> float:
-        answered = self.total_items - self.abstained
-        return 0.0 if answered == 0 else self.correct / answered
+    return {
+        "overall_accuracy": overall_accuracy,
+        "coverage": coverage,
+        "answered_accuracy": answered_accuracy,
+    }

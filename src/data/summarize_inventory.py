@@ -1,37 +1,41 @@
-"""Summarize strict-match image counts and deficits from the dataset manifests."""
-
-from __future__ import annotations
-
-from pathlib import Path
 import pandas as pd
 
-MANIFEST_DIR = Path("data/manifests")
+inventory = pd.read_csv("data/manifests/class_inventory.csv")
+targets = pd.read_csv("data/manifests/data_targets.csv")
 
+# Empty strict-match counts count as 0 for now
+inventory["strict_match_images"] = pd.to_numeric(
+    inventory["strict_match_images"],
+    errors="coerce",
+).fillna(0)
 
-def _numeric(series: pd.Series) -> pd.Series:
-    return pd.to_numeric(series, errors="coerce").fillna(0).astype(int)
+# Add up approved strict-match images for each target class
+totals = (
+    inventory.groupby("target_class")["strict_match_images"]
+    .sum()
+    .reset_index()
+)
 
+totals = totals.rename(
+    columns={"strict_match_images": "current_strict_match_images"}
+)
 
-def summarize() -> pd.DataFrame:
-    inventory = pd.read_csv(MANIFEST_DIR / "class_inventory.csv")
-    targets = pd.read_csv(MANIFEST_DIR / "data_targets.csv")
+# Keep the class target and compare it to what we currently have
+summary = targets[["target_class", "provisional_min_images"]].merge(
+    totals,
+    on="target_class",
+    how="left",
+)
 
-    inventory["strict_match_images"] = _numeric(inventory["strict_match_images"])
-    totals = (
-        inventory.groupby("target_class", as_index=False)["strict_match_images"]
-        .sum()
-        .rename(columns={"strict_match_images": "current_strict_match_images"})
-    )
+summary["current_strict_match_images"] = (
+    summary["current_strict_match_images"].fillna(0)
+)
 
-    out = targets.drop(columns=["current_strict_match_images", "deficit"], errors="ignore")
-    out = out.merge(totals, left_on="target_class", right_on="target_class", how="left")
-    out["current_strict_match_images"] = _numeric(out["current_strict_match_images"])
-    out["provisional_min_images"] = _numeric(out["provisional_min_images"])
-    out["deficit"] = (
-        out["provisional_min_images"] - out["current_strict_match_images"]
-    ).clip(lower=0)
-    return out
+summary["deficit"] = (
+    summary["provisional_min_images"]
+    - summary["current_strict_match_images"]
+)
 
+summary["deficit"] = summary["deficit"].clip(lower=0)
 
-if __name__ == "__main__":
-    print(summarize().to_string(index=False))
+print(summary.to_string(index=False))
