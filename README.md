@@ -1,47 +1,84 @@
 # YOLO Cafeteria Research
 
-Research repository for evaluating whether a real-time YOLO-based computer vision system can provide accurate and reliable waste-disposal guidance under realistic school cafeteria conditions.
+Goal: build a YOLO system that recognizes common NHS cafeteria waste items and maps them to local disposal guidance.
 
-## Research question
-
-> **To what extent can a real-time YOLO-based computer vision system provide accurate and reliable disposal guidance under realistic school cafeteria conditions?**
-
-## System
+## Final classes
 
 ```text
-camera
-  ↓
-YOLO object detector
-  ↓
-physical item class
-  ↓
-local disposal-rule engine
-  ↓
-compost / recycling / trash / manual check
+food
+plate
+paper_boat
+utensil
+compartment_container
+hinged_container
+napkin
+drink_carton
+condiment_packet
+wrapper
+bottle
 ```
 
-The detector predicts **physical objects**, not disposal streams. Disposal policy is kept in a separate rules file so the model can remain unchanged when local waste rules change.
+The classes are based on items actually used at NHS. Public datasets are only used when the images visually match NHS food or serviceware.
 
-## Repository layout
+Examples of NHS items we are targeting:
+- red-plaid paper food boats
+- disposable sugarcane/fiber plates
+- molded-fiber compartment trays
+- clear compartment containers
+- clear plastic clamshells
+- fiber/bagasse clamshells
+- disposable plastic utensils
+- disposable cafeteria napkins
+- small aseptic drink cartons
+- condiment packets
+- snack/food wrappers
+- beverage bottles
+- NHS-like food
 
-- `configs/` — class taxonomy, disposal rules, dataset definitions, and experiment configs
-- `data/` — manifests and local dataset layout; raw/processed image data are not committed
-- `src/data/` — dataset audit, filtering, remapping, deduplication, validation, and split tools
-- `src/training/` — model training entry point
-- `src/evaluation/` — detection, disposal, robustness, error, and latency evaluation
-- `src/inference/` — detector and real-time disposal-guidance pipeline
-- `experiments/` — compact experiment ledger
-- `results/` — paper-ready metrics, figures, tables, and qualitative examples
-- `docs/` — research protocol, taxonomy, annotation rules, and deployment protocol
-- `paper/` — manuscript and references
-- `tests/` — integrity checks for mappings and dataset structure
+## Data plan
 
-## Data principle
+The finalized source list is in `data/datasets.csv`.
 
-Public data are filtered by **visual/domain match**, not just class name. A ceramic restaurant plate, for example, should not count as useful training data for a disposable cafeteria plate simply because both are labeled `plate`.
+Nothing has been downloaded into the repo yet. Raw images stay local under:
 
-Raw images, processed datasets, model weights, and Ultralytics run directories are intentionally excluded from Git.
+```text
+data/raw/
+```
 
-## Status
+The cleaned YOLO dataset will eventually go under:
 
-Scaffolding initialized. The next research milestone is to freeze the NHS cafeteria object taxonomy after a real waste audit and populate `data/manifests/` with strictly matched sources.
+```text
+data/processed/
+```
+
+Both folders are ignored by Git because image datasets are too large to commit.
+
+## Important rule
+
+Do not use an image just because its class name matches.
+
+Keep only images that realistically resemble something seen at NHS. For example:
+- disposable fiber plate: keep
+- ceramic restaurant plate: reject
+- plastic cafeteria fork: keep
+- metal fork: reject
+- clear food clamshell: keep
+- household Tupperware: reject
+
+## Files
+
+- `config.yaml` — final class names, image targets, and disposal-rule placeholders
+- `data/datasets.csv` — finalized public/local dataset sources
+- `src/audit_dataset.py` — count images, labels, classes, and bad YOLO rows
+- `src/remap_classes.py` — convert source class IDs into our class IDs
+- `src/deduplicate.py` — report duplicate images
+- `src/train.py` — simple Ultralytics YOLO training script
+
+## Current step
+
+1. Download the finalized datasets.
+2. Keep only NHS-like images/classes.
+3. Remap labels to the classes in `config.yaml`.
+4. Deduplicate and audit.
+5. Fill class deficits with NHS-specific photos.
+6. Train the first model.

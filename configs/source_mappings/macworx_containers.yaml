@@ -1,8 +1,0 @@
-dataset: MacWorX Containers
-source_format: yolo_object_detection
-target_taxonomy: configs/classes.yaml
-
-candidate_mappings:
-  Clamshell: hinged_container
-
-drop_unlisted: true

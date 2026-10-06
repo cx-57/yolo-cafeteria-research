@@ -1,0 +1,41 @@
+classes:
+  0: food
+  1: plate
+  2: paper_boat
+  3: utensil
+  4: compartment_container
+  5: hinged_container
+  6: napkin
+  7: drink_carton
+  8: condiment_packet
+  9: wrapper
+  10: bottle
+
+# Planning targets for usable NHS-like images.
+targets:
+  food: 3000
+  plate: 400
+  paper_boat: 350
+  utensil: 500
+  compartment_container: 400
+  hinged_container: 450
+  napkin: 500
+  drink_carton: 350
+  condiment_packet: 300
+  wrapper: 500
+  bottle: 500
+
+# Fill these after NHS disposal rules are confirmed.
+disposal_rules:
+  food: TBD
+  plate: TBD
+  paper_boat: TBD
+  utensil: TBD
+  compartment_container: TBD
+  hinged_container: TBD
+  napkin: TBD
+  drink_carton: TBD
+  condiment_packet: TBD
+  wrapper: TBD
+  bottle: TBD
+  fallback: manual_check

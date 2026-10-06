@@ -1,29 +1,17 @@
-# Local data and generated artifacts
+# Local datasets and model outputs
 data/raw/
-data/interim/
 data/processed/
 runs/
-results/examples/private/
-
-# Model/export files
 *.pt
 *.onnx
-*.engine
-*.tflite
-*.torchscript
-
-# Archives
 *.zip
 *.tar
 *.tar.gz
 
-# Python
+# Python / OS
 __pycache__/
-*.py[cod]
-.pytest_cache/
+*.pyc
 .venv/
 venv/
-
-# Environment / OS
 .env
 .DS_Store

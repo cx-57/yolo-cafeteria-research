@@ -1,8 +1,0 @@
-dataset: Food Waste Management plate
-source_format: yolo_object_detection
-target_taxonomy: configs/classes.yaml
-
-manual_review:
-  plate: plate
-
-drop_unlisted: true

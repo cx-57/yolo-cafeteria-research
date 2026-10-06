@@ -1,7 +1,0 @@
-name: baseline_general
-description: Generic food/waste baseline.
-model: yolo26n.pt
-imgsz: 640
-epochs: 100
-dataset_config: configs/datasets/generic_waste.yaml
-evaluation_set: nhs_final_test

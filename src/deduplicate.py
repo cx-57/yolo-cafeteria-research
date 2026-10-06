@@ -22,10 +22,7 @@ for file in root.rglob("*"):
     except Exception:
         continue
 
-    if image_hash not in hashes:
-        hashes[image_hash] = []
-
-    hashes[image_hash].append(file)
+    hashes.setdefault(image_hash, []).append(file)
 
 for files in hashes.values():
     if len(files) > 1:
