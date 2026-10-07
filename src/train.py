@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 parser = argparse.ArgumentParser()
 parser.add_argument("data", help="Path to YOLO data.yaml")
-parser.add_argument("--model", default="yolo26n.pt")
+parser.add_argument("--model", default="yolo11n.pt")
 parser.add_argument("--epochs", type=int, default=100)
 parser.add_argument("--imgsz", type=int, default=640)
 args = parser.parse_args()
@@ -15,8 +15,6 @@ model.train(
     epochs=args.epochs,
     imgsz=args.imgsz,
     project="runs",
-
-    # Mild train-time augmentation for realistic cafeteria variation.
     degrees=10,
     translate=0.10,
     scale=0.25,

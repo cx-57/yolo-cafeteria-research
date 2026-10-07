@@ -8,23 +8,23 @@ import yaml
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
-# Source class name -> final NHS class name.
+# Only source classes that are plausible for NHS are allowed through.
 SOURCE_MAPPINGS = {
     "school_lunch": {
-        "Apple": "food",
+        "apple": "food",
         "orange": "food",
-        "Fish": "food",
+        "fish": "food",
         "strawberry": "food",
-        "Bread": "food",
+        "bread": "food",
         "pineapple": "food",
-        "Rice": "food",
+        "rice": "food",
         "cucumber": "food",
         "cheese": "food",
         "corn": "food",
         "pasta": "food",
         "butter": "food",
-        "Salad": "food",
-        "Meat": "food",
+        "salad": "food",
+        "meat": "food",
         "beans": "food",
         "fried chicken": "food",
         "fried fish": "food",
@@ -34,8 +34,8 @@ SOURCE_MAPPINGS = {
         "potatoes": "food",
         "salad fresh": "food",
         "sausages": "food",
-        "Spaghetti": "food",
-        "White bread": "food",
+        "spaghetti": "food",
+        "white bread": "food",
     },
     "food_detection": {
         "pizza": "food",
@@ -56,14 +56,11 @@ SOURCE_MAPPINGS = {
         "container with two compartments": "compartment_container",
     },
     "macworx": {
-        "Clamshell": "hinged_container",
+        "clamshell": "hinged_container",
     },
-    "waste_detection_v3": {
-        "Compost-Napkin": "napkin",
-        "Compost-Plate-Bowl": "plate",
-        "Compost-Utencil": "utensil",
-        "Recycle-Plastic-Bottle": "bottle",
-        "Trash-Wrapper": "wrapper",
+    "paper": {
+        "paper-plate": "plate",
+        "tissue": "napkin",
     },
     "garbage_classification": {
         "bottle": "bottle",
@@ -77,56 +74,32 @@ SOURCE_MAPPINGS = {
         "plastic bottle": "bottle",
         "plastic utensil": "utensil",
     },
-    "nhs_local": {
-        "food": "food",
-        "plate": "plate",
-        "paper_boat": "paper_boat",
-        "utensil": "utensil",
-        "compartment_container": "compartment_container",
-        "hinged_container": "hinged_container",
-        "napkin": "napkin",
-        "drink_carton": "drink_carton",
-        "condiment_packet": "condiment_packet",
-        "wrapper": "wrapper",
-        "bottle": "bottle",
-    },
-    "nhs_test": {
-        "food": "food",
-        "plate": "plate",
-        "paper_boat": "paper_boat",
-        "utensil": "utensil",
-        "compartment_container": "compartment_container",
-        "hinged_container": "hinged_container",
-        "napkin": "napkin",
-        "drink_carton": "drink_carton",
-        "condiment_packet": "condiment_packet",
-        "wrapper": "wrapper",
-        "bottle": "bottle",
-    },
     "milk_boxes": {
-        "ADM": "drink_carton",
-        "Alpha": "drink_carton",
-        "AlphaIQ": "drink_carton",
-        "DauNanh": "drink_carton",
-        "GrowPlus": "drink_carton",
-        "Hero": "drink_carton",
-        "OcCho": "drink_carton",
-        "Optimum": "drink_carton",
-        "SuSu": "drink_carton",
-        "Vinamilk": "drink_carton",
+        "adm": "drink_carton",
+        "alpha": "drink_carton",
+        "alphaiq": "drink_carton",
+        "daunanh": "drink_carton",
+        "growplus": "drink_carton",
+        "hero": "drink_carton",
+        "occho": "drink_carton",
+        "optimum": "drink_carton",
+        "susu": "drink_carton",
+        "vinamilk": "drink_carton",
     },
+    "nhs_local": {},
+    "nhs_test": {},
 }
 
 parser = argparse.ArgumentParser()
 parser.add_argument("source", help="Downloaded YOLO dataset folder")
-parser.add_argument("source_name", choices=sorted(SOURCE_MAPPINGS))
+parser.add_argument("source_key", choices=sorted(SOURCE_MAPPINGS))
 parser.add_argument("--output", default="data/processed")
 parser.add_argument("--config", default="config.yaml")
 args = parser.parse_args()
 
 source = Path(args.source)
 output_root = Path(args.output)
-output = output_root / args.source_name
+output = output_root / args.source_key
 
 if not source.exists():
     raise SystemExit(f"Source folder not found: {source}")
@@ -147,36 +120,42 @@ if isinstance(names, list):
 else:
     names = {int(i): name for i, name in names.items()}
 
-final_classes = project_config["classes"]
-final_ids = {name: int(class_id) for class_id, name in final_classes.items()}
-
-source_mapping = {
-    name.strip().lower(): target
-    for name, target in SOURCE_MAPPINGS[args.source_name].items()
+final_ids = {
+    name: int(class_id)
+    for class_id, name in project_config["classes"].items()
 }
+
+if args.source_key in {"nhs_local", "nhs_test"}:
+    approved = {name: name for name in final_ids}
+else:
+    approved = SOURCE_MAPPINGS[args.source_key]
 
 id_mapping = {}
 for source_id, source_class in names.items():
-    target = source_mapping.get(str(source_class).strip().lower())
+    target = approved.get(str(source_class).strip().lower())
     if target in final_ids:
         id_mapping[source_id] = final_ids[target]
 
 if not id_mapping:
     raise SystemExit("None of the approved source classes were found in data.yaml.")
 
-# This folder contains generated hard links and labels, so rebuilding it is safe.
+# Rebuilding a source starts from its mechanical candidates again.
 if output.exists():
     shutil.rmtree(output)
 (output / "images").mkdir(parents=True)
 (output / "labels").mkdir(parents=True)
 
-# Skip exact images already kept from another source.
-existing_hashes = set()
+# Exact duplicates from earlier sources point to the label file already kept.
+existing = {}
 for old_image in output_root.glob("*/images/*"):
-    if old_image.is_file() and old_image.suffix.lower() in IMAGE_EXTENSIONS:
-        existing_hashes.add(hashlib.sha256(old_image.read_bytes()).hexdigest())
+    if not old_image.is_file() or old_image.suffix.lower() not in IMAGE_EXTENSIONS:
+        continue
 
-local_hashes = {}
+    image_hash = hashlib.sha256(old_image.read_bytes()).hexdigest()
+    old_label = old_image.parent.parent / "labels" / f"{old_image.stem}.txt"
+    existing[image_hash] = old_label
+
+local = {}
 kept_images = 0
 kept_instances = 0
 duplicates = 0
@@ -240,13 +219,21 @@ for image in images:
 
     image_hash = hashlib.sha256(image.read_bytes()).hexdigest()
 
-    if image_hash in existing_hashes:
+    if image_hash in existing:
         duplicates += 1
+        old_label = existing[image_hash]
+
+        if old_label.exists():
+            old_lines = set(old_label.read_text().splitlines())
+            combined = old_lines | set(new_lines)
+            kept_instances += len(combined) - len(old_lines)
+            old_label.write_text("\n".join(sorted(combined)) + "\n")
+
         continue
 
-    if image_hash in local_hashes:
+    if image_hash in local:
         duplicates += 1
-        old_label = output / "labels" / f"{local_hashes[image_hash]}.txt"
+        old_label = output / "labels" / f"{local[image_hash]}.txt"
         old_lines = set(old_label.read_text().splitlines())
         combined = old_lines | set(new_lines)
         kept_instances += len(combined) - len(old_lines)
@@ -254,7 +241,7 @@ for image in images:
         continue
 
     relative = image.relative_to(source).with_suffix("")
-    safe_name = "_".join(relative.parts)
+    safe_name = "__".join(relative.parts)
     output_image = output / "images" / f"{safe_name}{image.suffix.lower()}"
     output_label = output / "labels" / f"{safe_name}.txt"
 
@@ -264,11 +251,11 @@ for image in images:
         shutil.copy2(image, output_image)
 
     output_label.write_text("\n".join(new_lines) + "\n")
-    local_hashes[image_hash] = safe_name
+    local[image_hash] = safe_name
     kept_images += 1
     kept_instances += len(new_lines)
 
-print(f"Source: {args.source_name}")
+print(f"Source: {args.source_key}")
 print(f"Images scanned: {len(images)}")
 print(f"Images kept: {kept_images}")
 print(f"Instances kept: {kept_instances}")

@@ -32,11 +32,13 @@ Examples:
 - cafeteria condiment packet: keep; unrelated sachet: reject
 - beverage bottle: keep; chemical/shampoo bottle: reject
 
-The source list is in `data/datasets.csv`. It was intentionally reduced to avoid redundant, weak-domain, hard-to-license, or awkward-to-download datasets.
+The source list is in `data/datasets.csv`.
+
+`paper_boat` is intentionally local-first because NHS uses a very specific open red-plaid tray. Condiment packets and exact NHS tray/container shapes should also rely heavily on local photos rather than generic public examples.
 
 ## Prepare a downloaded dataset
 
-Export/download a source in YOLO format and place it under `data/raw/`.
+Download/export a source in YOLO format and place it under `data/raw/`.
 
 Example:
 
@@ -44,25 +46,26 @@ Example:
 python3 src/prepare.py data/raw/school_lunch school_lunch
 ```
 
-`prepare.py` does the mechanical cleanup:
+`prepare.py`:
 - keeps only approved source classes
-- remaps them to our final class IDs
+- remaps them to the final class IDs
 - validates YOLO boxes
-- removes exact duplicates
-- hard-links retained images when possible, so raw + processed do not use two copies of the image bytes
+- removes exact duplicate images
+- merges useful labels when the same exact image appears in multiple sources
+- hard-links retained images when possible so raw + processed do not store two copies
 - prints the kept counts
 
-It does **not** decide whether an individual photo visually matches NHS. Every retained candidate still needs visual review before final training.
+It does **not** decide whether an individual photo visually matches NHS. Every candidate must still be visually reviewed before final training.
 
-After a source has been reviewed and the retained files are safe in `data/processed/`, its raw download can be deleted to save space. Hard-linked processed images remain on disk.
+After review, the raw source can be deleted to save space. Deleting the raw hard link does not delete the accepted processed image.
 
 ## Augmentation
 
-Augmentation happens during training only. It does not create stored image copies and does not count as new data.
+Augmentation happens during training only. It creates no stored image copies and does not count as new data.
 
 `src/train.py` uses mild rotation, translation, scaling, horizontal flips, lighting/color changes, and light mosaic. Validation and final-test images are never augmented.
 
-## Files
+## Core files
 
 ```text
 config.yaml
@@ -71,15 +74,13 @@ src/prepare.py
 src/train.py
 ```
 
-That is the intended core of the project. Keep it simple.
-
 ## Workflow
 
 1. Download one listed source in YOLO format.
 2. Run `prepare.py`.
 3. Visually review every candidate image against the NHS standard.
-4. Delete rejected candidates.
-5. Delete the raw source after review to save space.
-6. Fill remaining class deficits with staged NHS photos.
+4. Remove mismatched image/label pairs.
+5. Delete the raw source after review.
+6. Fill remaining deficits with staged NHS photos.
 7. Freeze the natural NHS final test set.
 8. Train and evaluate.
