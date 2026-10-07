@@ -1,8 +1,8 @@
 # YOLO Cafeteria Research
 
-Goal: build a YOLO system that recognizes common NHS cafeteria waste items and maps them to local disposal guidance.
+Real-time YOLO detection of common NHS cafeteria items, followed by a separate local disposal-rule step.
 
-## Final classes
+## Classes
 
 ```text
 food
@@ -18,86 +18,68 @@ wrapper
 bottle
 ```
 
-## NHS visual standard
+## Data rule
 
-Public data is only kept when the actual object looks like something NHS uses. A matching class name is not enough.
+Only keep an image when the actual object looks like something NHS uses. A matching source label is not enough.
 
-| Class | Keep | Reject |
-|---|---|---|
-| food | food NHS plausibly serves | unrelated cuisine just because it is food |
-| plate | disposable 9-inch sugarcane/fiber-style plate | ceramic or reusable plates |
-| paper_boat | open cafeteria paper food tray; especially red-plaid style | pizza boxes, closed paper boxes |
-| utensil | black or white disposable plastic fork/spoon/knife | metal silverware, chopsticks |
-| compartment_container | clear cafeteria compartment container or molded-fiber compartment tray | household food-storage containers |
-| hinged_container | clear plastic or fiber/bagasse food clamshell | household Tupperware |
-| napkin | disposable cafeteria napkin; especially natural/brown | cloth napkins or unrelated tissues |
-| drink_carton | small aseptic juice/milk-box carton | large cartons that do not resemble NHS drink boxes |
-| condiment_packet | individual flat ketchup/mayo/ranch/BBQ/mustard/dressing-style packet | random sachets or non-food packets |
-| wrapper | NHS-like snack/food wrapper | unrelated plastic film or packaging |
-| bottle | beverage/water bottle | shampoo, detergent, chemical bottles |
+Examples:
+- sugarcane/fiber disposable plate: keep; ceramic plate: reject
+- open cafeteria paper boat: keep; pizza box: reject
+- black/white disposable plastic utensil: keep; metal silverware: reject
+- clear/fiber cafeteria container: keep; household Tupperware: reject
+- natural/brown cafeteria napkin: keep; cloth napkin: reject
+- small aseptic drink carton: keep; large carton: reject
+- cafeteria condiment packet: keep; unrelated sachet: reject
+- beverage bottle: keep; chemical/shampoo bottle: reject
 
-NHS reference objects include red-plaid paper food trays, black/white plastic utensils, natural Tork-style napkins, clear 4-compartment containers, molded-fiber 5-compartment trays, clear 6/8-inch hinged containers, bagasse clamshells, small aseptic juice boxes, individual condiment packets, snack wrappers, and beverage bottles.
+The source list is in `data/datasets.csv`. It was intentionally reduced to avoid redundant, weak-domain, hard-to-license, or awkward-to-download datasets.
 
-## Dataset rule
+## Prepare a downloaded dataset
 
-The finalized source list is in `data/datasets.csv`.
+Export/download a source in YOLO format and place it under `data/raw/`.
 
-For every source:
+Example:
 
-1. Filter to potentially useful source classes.
-2. Manually inspect every candidate image that would be retained.
-3. Reject images that do not match the NHS visual standard above.
-4. Remap the accepted labels to our classes.
-5. Deduplicate.
-6. Count the accepted originals.
-
-`target_images` in `data/datasets.csv` is a planning goal, not a quota. Never keep a bad match just to hit the target.
-
-TACO and RTWFD are auxiliary only. They should not be used to pad class counts.
-
-Raw data stays local in:
-
-```text
-data/raw/
+```bash
+python3 src/prepare.py data/raw/school_lunch school_lunch
 ```
 
-Cleaned data goes in:
+`prepare.py` does the mechanical cleanup:
+- keeps only approved source classes
+- remaps them to our final class IDs
+- validates YOLO boxes
+- removes exact duplicates
+- hard-links retained images when possible, so raw + processed do not use two copies of the image bytes
+- prints the kept counts
 
-```text
-data/processed/
-```
+It does **not** decide whether an individual photo visually matches NHS. Every retained candidate still needs visual review before final training.
 
-Both are ignored by Git.
+After a source has been reviewed and the retained files are safe in `data/processed/`, its raw download can be deleted to save space. Hard-linked processed images remain on disk.
 
 ## Augmentation
 
-Use augmentation during training only, after the original images are cleaned and split.
+Augmentation happens during training only. It does not create stored image copies and does not count as new data.
 
-- augment training images only
-- never augment validation or final-test images
-- augmented views do not count as new source images
-- keep transformations realistic
-- no vertical flips
-- no heavy perspective/shear
-- no synthetic images just to inflate weak classes
-
-The default settings in `src/train.py` use mild rotation, translation, scale, horizontal flips, lighting/color variation, and light mosaic.
+`src/train.py` uses mild rotation, translation, scaling, horizontal flips, lighting/color changes, and light mosaic. Validation and final-test images are never augmented.
 
 ## Files
 
-- `config.yaml` — final classes and image targets
-- `data/datasets.csv` — final public/local source plan
-- `src/audit_dataset.py` — counts images, labels, classes, and bad YOLO rows
-- `src/remap_classes.py` — remaps source class IDs
-- `src/deduplicate.py` — reports duplicate images
-- `src/train.py` — trains YOLO with conservative train-time augmentation
+```text
+config.yaml
+data/datasets.csv
+src/prepare.py
+src/train.py
+```
 
-## Current step
+That is the intended core of the project. Keep it simple.
 
-1. Download one source at a time.
-2. Filter its source classes.
-3. Visually review every image we plan to keep.
-4. Remap and deduplicate.
-5. Fill remaining deficits with real NHS photos.
-6. Freeze the natural NHS final test set.
-7. Train and evaluate.
+## Workflow
+
+1. Download one listed source in YOLO format.
+2. Run `prepare.py`.
+3. Visually review every candidate image against the NHS standard.
+4. Delete rejected candidates.
+5. Delete the raw source after review to save space.
+6. Fill remaining class deficits with staged NHS photos.
+7. Freeze the natural NHS final test set.
+8. Train and evaluate.
