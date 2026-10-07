@@ -1,6 +1,5 @@
-# Local datasets and model outputs
+# Raw downloads and model outputs
 data/raw/
-data/processed/
 runs/
 *.pt
 *.onnx
