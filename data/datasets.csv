@@ -1,5 +1,5 @@
 source_key,dataset,source_url,public_images,use_for,target_images,license,notes
-school_lunch,School Lunch v2,https://universe.roboflow.com/school-lunch-dataset/school-lunch-lty6a/dataset/2,1876,food,1100,CC BY 4.0,"Keep only NHS-like food classes and visually matching images"
+school_lunch,School Lunch v2,https://universe.roboflow.com/school-lunch-dataset/school-lunch-lty6a/dataset/2,1876,"food;drink_carton",467,CC BY 4.0,"Manually audited strict subset: 467 NHS-relevant images only; final labels use project IDs 0=food and 7=drink_carton"
 food_detection,Food detection from folder 1,https://universe.roboflow.com/call-for-code-2023/food-detection-from-folder-1,5571,food,1800,Public Domain,"Use only the NHS-like food classes listed in prepare.py"
 food_packages,Food Packages,https://universe.roboflow.com/tirocinio-oylk4/food-packages,1808,compartment_container,250,Public Domain,"2/3-compartment containers are candidates; exact NHS tray geometry should come mainly from local photos"
 macworx,MacWorX Containers,https://universe.roboflow.com/macworx/containers-yw7aw,175,hinged_container,100,CC BY 4.0,"Clamshell only; reject household-looking containers"
