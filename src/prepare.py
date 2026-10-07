@@ -75,6 +75,9 @@ SOURCE_MAPPINGS = {
         "plastic bottle": "bottle",
         "plastic utensil": "utensil",
     },
+    "tetra_pak": {
+        "tetra pak": "drink_carton",
+    },
     "milk_boxes": {
         "adm": "drink_carton",
         "alpha": "drink_carton",
@@ -189,13 +192,13 @@ for image in images:
     for line in label.read_text().splitlines():
         parts = line.split()
 
-        if len(parts) != 5:
+        if len(parts) < 5:
             bad_rows += 1
             continue
 
         try:
-            source_id = int(parts[0])
-            values = [float(value) for value in parts[1:]]
+            source_id = int(float(parts[0]))
+            raw_values = [float(value) for value in parts[1:]]
         except ValueError:
             bad_rows += 1
             continue
@@ -204,16 +207,38 @@ for image in images:
             ignored_classes.add(names.get(source_id, str(source_id)))
             continue
 
+        # Roboflow YOLO exports can contain either detection boxes
+        # (class x_center y_center width height) or segmentation polygons
+        # (class x1 y1 x2 y2 ...). Convert polygons to axis-aligned boxes
+        # because this project trains an object detector.
+        if len(raw_values) == 4:
+            x, y, width, height = raw_values
+        elif len(raw_values) >= 6 and len(raw_values) % 2 == 0:
+            xs = raw_values[0::2]
+            ys = raw_values[1::2]
+            x_min, x_max = min(xs), max(xs)
+            y_min, y_max = min(ys), max(ys)
+            x = (x_min + x_max) / 2
+            y = (y_min + y_max) / 2
+            width = x_max - x_min
+            height = y_max - y_min
+        else:
+            bad_rows += 1
+            continue
+
+        values = [x, y, width, height]
+
         if not all(0 <= value <= 1 for value in values):
             bad_rows += 1
             continue
 
-        if values[2] <= 0 or values[3] <= 0:
+        if width <= 0 or height <= 0:
             bad_rows += 1
             continue
 
-        parts[0] = str(id_mapping[source_id])
-        new_lines.append(" ".join(parts))
+        new_lines.append(
+            f"{id_mapping[source_id]} {x:.8f} {y:.8f} {width:.8f} {height:.8f}"
+        )
 
     if not new_lines:
         continue
