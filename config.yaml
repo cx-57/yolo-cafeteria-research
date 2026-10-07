@@ -11,7 +11,7 @@ classes:
   9: wrapper
   10: bottle
 
-# Planning targets for usable NHS-like images.
+# Planning targets for usable NHS-like original images.
 targets:
   food: 3000
   plate: 400
@@ -24,18 +24,3 @@ targets:
   condiment_packet: 300
   wrapper: 500
   bottle: 500
-
-# Fill these after NHS disposal rules are confirmed.
-disposal_rules:
-  food: TBD
-  plate: TBD
-  paper_boat: TBD
-  utensil: TBD
-  compartment_container: TBD
-  hinged_container: TBD
-  napkin: TBD
-  drink_carton: TBD
-  condiment_packet: TBD
-  wrapper: TBD
-  bottle: TBD
-  fallback: manual_check
