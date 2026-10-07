@@ -36,6 +36,7 @@ SOURCE_MAPPINGS = {
         "sausages": "food",
         "spaghetti": "food",
         "white bread": "food",
+        "milk": "drink_carton",
     },
     "food_detection": {
         "pizza": "food",
