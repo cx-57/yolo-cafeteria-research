@@ -1,0 +1,8 @@
+source,reviewed,kept,scrapped,instances,native_bbox_rows,polygon_rows_converted,bad_rows,selected_without_usable_label
+school_lunch,1876,467,1409,2436,,,,
+tetra_pak,1710,661,1049,738,311,427,0,2
+macworx,420,121,299,121,84,37,0,3
+utensil,465,128,337,242,110,132,0,0
+sauce,59,0,59,0,0,0,0,0
+napkin,180,0,180,0,0,0,0,0
+plastic_detector,115,0,115,0,0,0,0,0
