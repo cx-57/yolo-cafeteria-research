@@ -78,6 +78,10 @@ SOURCE_MAPPINGS = {
     "tetra_pak": {
         "tetra pak": "drink_carton",
     },
+    "trash_detection": {
+        "clear plastic bottle": "bottle",
+        "crisp packet": "wrapper",
+    },
     "milk_boxes": {
         "adm": "drink_carton",
         "alpha": "drink_carton",
