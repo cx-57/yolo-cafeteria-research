@@ -123,13 +123,11 @@ Rejected:
 
 Final project class: `3 = utensil`.
 
-### Sauce v2
+### Sauce v2 — wrong source
 
 **0 / 59 retained.**
 
-Entire source rejected.
-
-The images primarily showed squeeze-bottle sauces. NHS target objects are single-serve cafeteria condiment packets, so these images would teach the wrong object geometry and packaging format.
+This was a source-selection mistake, not a rejection of the project's `condiment_packet` class. The uploaded ZIP corresponded to a different public Sauce dataset containing squeeze bottles. The intended user Sauce project is `https://app.roboflow.com/charles-xie/sauce-a1ypv-d8bii/train`, which contains packet-style condiment imagery and still needs to be exported and audited separately.
 
 ### napkin v1
 
