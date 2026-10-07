@@ -38,13 +38,13 @@ The source list is in `data/datasets.csv`.
 
 ## Storage
 
-Dataset images stay local, not in GitHub.
+Raw downloads and model outputs stay local. Manually reviewed processed subsets may be tracked in GitHub so the exact training corpus is reproducible.
 
-- raw downloads: `data/raw/`
-- cleaned images/labels: `data/processed/`
-- model runs/weights: `runs/`
+- raw downloads: `data/raw/` (gitignored)
+- reviewed images/labels: `data/processed/<source_key>/` (tracked)
+- model runs/weights: `runs/` (gitignored)
 
-These paths are gitignored. GitHub stores only the code, configuration, and dataset source list.
+Only visually accepted image/label pairs belong in `data/processed/`; rejected source images should never be committed.
 
 ## Prepare a downloaded dataset
 
@@ -90,7 +90,8 @@ src/train.py
 2. Run `prepare.py`.
 3. Visually review every candidate image against the NHS standard.
 4. Remove mismatched image/label pairs.
-5. Delete the raw source after review.
-6. Fill remaining deficits with staged NHS photos.
-7. Freeze the natural NHS final test set.
-8. Train and evaluate.
+5. Commit only the accepted image/label pairs under `data/processed/<source_key>/`.
+6. Delete the raw source after review.
+7. Fill remaining deficits with staged NHS photos.
+8. Freeze the natural NHS final test set.
+9. Train and evaluate.
