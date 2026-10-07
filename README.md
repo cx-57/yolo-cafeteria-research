@@ -36,6 +36,16 @@ The source list is in `data/datasets.csv`.
 
 `paper_boat` is intentionally local-first because NHS uses a very specific open red-plaid tray. Condiment packets and exact NHS tray/container shapes should also rely heavily on local photos rather than generic public examples.
 
+## Storage
+
+Dataset images stay local, not in GitHub.
+
+- raw downloads: `data/raw/`
+- cleaned images/labels: `data/processed/`
+- model runs/weights: `runs/`
+
+These paths are gitignored. GitHub stores only the code, configuration, and dataset source list.
+
 ## Prepare a downloaded dataset
 
 Download/export a source in YOLO format and place it under `data/raw/`.
