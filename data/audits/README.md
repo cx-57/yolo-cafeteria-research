@@ -1,8 +1,6 @@
 # Visual dataset audits
 
-Every uploaded source image was visually inspected against the NHS cafeteria target domain before inclusion.
-
-Current audit result:
+Every source image in the seven uploaded datasets was visually inspected against the NHS cafeteria target domain.
 
 | Source | Reviewed | Kept | Scrapped |
 | --- | ---: | ---: | ---: |
@@ -14,6 +12,8 @@ Current audit result:
 | napkin v1 | 180 | 0 | 180 |
 | Plastic Detector v11 | 115 | 0 | 115 |
 
-The School Lunch re-upload was byte-identical to the source that had already been manually audited, so its existing 467-image strict subset was left unchanged.
+The School Lunch re-upload was byte-identical to the previously processed source. Its previously selected candidates plus the remaining source images were all visually checked; the strict 467-image subset remains unchanged.
 
-Detailed image-level KEEP/SCRAP CSVs and retained manifests are added by `scripts/import_reviewed_batch.sh` together with the accepted image/label pairs.
+Detailed image-level KEEP/SCRAP CSVs and retained manifests are imported with the accepted image/label pairs by `scripts/import_reviewed_batch.sh`.
+
+Some Roboflow YOLOv11 exports contain segmentation polygons. Retained polygon annotations are converted to axis-aligned YOLO detection boxes for this object-detection project.
