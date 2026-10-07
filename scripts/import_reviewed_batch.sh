@@ -15,15 +15,15 @@ unzip -oq "$ZIP_PATH" -d .
 
 python3 - <<'PY'
 from pathlib import Path
-import csv
 
 expected = {
-    "tetra_pak": (661, 7),
-    "macworx": (121, 5),
-    "utensil": (128, 3),
+    "school_lunch": (467, {0, 7}),
+    "tetra_pak": (661, {7}),
+    "macworx": (121, {5}),
+    "utensil": (128, {3}),
 }
 
-for source, (expected_count, expected_class) in expected.items():
+for source, (expected_count, allowed_classes) in expected.items():
     root = Path("data/processed") / source
     images = sorted(p for p in (root / "images").iterdir() if p.is_file())
     labels = sorted((root / "labels").glob("*.txt"))
@@ -40,25 +40,30 @@ for source, (expected_count, expected_class) in expected.items():
         assert label.exists(), f"{source}: missing label for {image.name}"
 
     instances = 0
+    seen_classes = set()
     for label in labels:
         for line in label.read_text().splitlines():
             parts = line.split()
             assert len(parts) == 5, f"{label}: non-detection row: {line}"
             class_id = int(parts[0])
             values = [float(v) for v in parts[1:]]
-            assert class_id == expected_class, (
-                f"{label}: unexpected class {class_id}; expected {expected_class}"
+            assert class_id in allowed_classes, (
+                f"{label}: unexpected class {class_id}; allowed {sorted(allowed_classes)}"
             )
             assert all(0 <= v <= 1 for v in values), f"{label}: out-of-range box"
             assert values[2] > 0 and values[3] > 0, f"{label}: invalid box size"
+            seen_classes.add(class_id)
             instances += 1
 
-    print(f"{source}: validated {len(images)} images, {instances} instances")
+    print(
+        f"{source}: validated {len(images)} images, "
+        f"{instances} instances, classes {sorted(seen_classes)}"
+    )
 
-print("All reviewed subsets validated.")
+print("All manually reviewed subsets validated.")
 PY
 
-git add   data/processed/tetra_pak   data/processed/macworx   data/processed/utensil   data/manifests   data/audits
+git add   data/processed/school_lunch   data/processed/tetra_pak   data/processed/macworx   data/processed/utensil   data/manifests   data/audits
 
 if git diff --cached --quiet; then
   echo "No new reviewed dataset files to commit."
