@@ -60,6 +60,7 @@ python3 src/prepare.py data/raw/school_lunch school_lunch
 - keeps only approved source classes
 - remaps them to the final class IDs
 - validates YOLO boxes
+- converts Roboflow segmentation polygons to axis-aligned YOLO detection boxes when needed
 - removes exact duplicate images
 - merges useful labels when the same exact image appears in multiple sources
 - hard-links retained images when possible so raw + processed do not store two copies
@@ -68,6 +69,10 @@ python3 src/prepare.py data/raw/school_lunch school_lunch
 It does **not** decide whether an individual photo visually matches NHS. Every candidate must still be visually reviewed before final training.
 
 After review, the raw source can be deleted to save space. Deleting the raw hard link does not delete the accepted processed image.
+
+## Visual audit records
+
+Image-level review decisions are stored under `data/audits/`. A retained subset's source-index manifest is stored under `data/manifests/`. Rejected images never enter `data/processed/`.
 
 ## Augmentation
 
