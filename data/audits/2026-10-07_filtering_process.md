@@ -50,7 +50,8 @@ All final labels are validated so that:
 | Sauce v2 | 59 | 0 | 59 | condiment_packet |
 | napkin v1 | 180 | 0 | 180 | napkin |
 | Plastic Detector v11 | 115 | 0 | 115 | bottle; wrapper candidate |
-| **Total** | **4,825** | **1,377** | **3,448** | |
+| Trash Detection v1 | 2,783 | 197 | 2,586 | bottle; wrapper |
+| **Total** | **7,608** | **1,574** | **6,034** | |
 
 ## Dataset-specific decisions
 
@@ -172,3 +173,35 @@ Preferred replacement criteria:
 - real discarded-object scenes rather than isolated material samples.
 
 The replacement source must go through the same image-by-image visual audit before any image is added to `data/processed/`.
+
+## Replacement result: Trash Detection v1
+
+### Trash Detection v1
+
+**197 / 2,783 retained.**
+
+All 2,783 source images were screened on October 7, 2026. Images containing potentially useful bottle/wrapper source classes were visually reviewed in contact sheets, and the final retained set was reviewed again at larger scale.
+
+The source contained 64 classes and segmentation-style YOLO rows. For this replacement dataset, only two object-specific classes were trusted:
+
+- `Clear plastic bottle` -> project class `10 = bottle`
+- `Crisp packet` -> project class `9 = wrapper`
+
+A candidate was retained only when at least one trusted target object occupied at least **0.5% of normalized image area** (bounding-box area >= `0.005`). This removed distant/weak examples that are not representative of the close cafeteria-waste deployment view.
+
+The following broad source classes were rejected even when semantically related:
+
+- `Other plastic bottle`: mixed beverage bottles with household/chemical containers.
+- `Other plastic wrapper`: mixed food wrappers with bags, film, and unrelated packaging.
+
+Results:
+
+- **2,783** images screened
+- **197** images retained
+- **2,586** images scrapped
+- **245** retained target instances
+- **208** bottle instances
+- **37** wrapper instances
+- **245** segmentation polygons converted to axis-aligned YOLO detection boxes
+
+Detailed per-image decisions are stored in `data/audits/trash_detection_2026-10-07.csv`, and the retained source-to-processed mapping is stored in `data/manifests/trash_detection.csv`.
