@@ -117,3 +117,15 @@ The audit writes inventory, class counts, exact/near-duplicate evidence, source 
 
 The October 9 audit recovered **1,574 images and 3,782 instances**. After quarantining two mismatched images and adding two missing utensil boxes, the active corpus has **1,572 images and 3,780 instances**. There are no exact duplicates and **83 near-duplicate candidate pairs**. Five classes have zero annotations. The [Day 1 report](data/audits/2026-10-09_day1_report.md) explains the unresolved visual annotation and domain issues. Existing images are retained as historical reviewed candidates; this audit does not certify them as a clean 11-class training corpus.
 
+
+## Condiment update — October 9
+
+The correct user Sauce packet export is now included: **44 images / 44 instances**, all remapped to `8 = condiment_packet`. The active corpus now contains **1,616 images / 3,824 instances** across seven represented classes. The packet source has two designs on a shared background; keep the batch together and use independent NHS photos for evaluation. Four classes remain empty: plate, paper_boat, compartment_container, and napkin.
+
+Current combined evidence is under `data/audits/current/`; the sauce source integrity/visual audit is under `data/audits/condiments_2026-10-09/`. Run:
+
+```bash
+python3 src/audit.py --manifests data/manifests --output data/audits/current
+```
+
+The condiment images and labels are also included on the `day1-dataset-integrity` GitHub branch. The earlier Day 1 images remain in the complete downloadable bundle.

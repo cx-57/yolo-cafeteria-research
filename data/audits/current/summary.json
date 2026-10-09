@@ -1,0 +1,120 @@
+{
+  "images": 1616,
+  "instances": 3824,
+  "class_counts": [
+    {
+      "class_id": 0,
+      "name": "food",
+      "images": 467,
+      "instances": 1996
+    },
+    {
+      "class_id": 1,
+      "name": "plate",
+      "images": 0,
+      "instances": 0
+    },
+    {
+      "class_id": 2,
+      "name": "paper_boat",
+      "images": 0,
+      "instances": 0
+    },
+    {
+      "class_id": 3,
+      "name": "utensil",
+      "images": 128,
+      "instances": 244
+    },
+    {
+      "class_id": 4,
+      "name": "compartment_container",
+      "images": 0,
+      "instances": 0
+    },
+    {
+      "class_id": 5,
+      "name": "hinged_container",
+      "images": 121,
+      "instances": 121
+    },
+    {
+      "class_id": 6,
+      "name": "napkin",
+      "images": 0,
+      "instances": 0
+    },
+    {
+      "class_id": 7,
+      "name": "drink_carton",
+      "images": 1099,
+      "instances": 1174
+    },
+    {
+      "class_id": 8,
+      "name": "condiment_packet",
+      "images": 44,
+      "instances": 44
+    },
+    {
+      "class_id": 9,
+      "name": "wrapper",
+      "images": 33,
+      "instances": 37
+    },
+    {
+      "class_id": 10,
+      "name": "bottle",
+      "images": 168,
+      "instances": 208
+    }
+  ],
+  "sources": {
+    "condiments": {
+      "images": 44,
+      "class_8": 44,
+      "instances": 44
+    },
+    "macworx": {
+      "images": 121,
+      "class_5": 121,
+      "instances": 121
+    },
+    "school_lunch": {
+      "images": 467,
+      "class_0": 1996,
+      "class_7": 440,
+      "instances": 2436
+    },
+    "tetra_pak": {
+      "images": 659,
+      "class_7": 734,
+      "instances": 734
+    },
+    "trash_detection": {
+      "images": 197,
+      "class_10": 208,
+      "instances": 245,
+      "class_9": 37
+    },
+    "utensil": {
+      "images": 128,
+      "class_3": 244,
+      "instances": 244
+    }
+  },
+  "exact_duplicate_groups": 0,
+  "byte_duplicate_groups": 0,
+  "near_duplicate_candidate_pairs": 91,
+  "missing_source_target_boxes": 0,
+  "missing_classes": [
+    "plate",
+    "paper_boat",
+    "compartment_container",
+    "napkin"
+  ],
+  "issues": [],
+  "structural_pass": true,
+  "complete_11_class_annotations_verified": false,
+  "completeness_note": "Source comparison checks preservation, not all visible target objects. Full multi-class visual annotation review remains required; near-duplicate matches are candidates, not confirmed duplicates."
+}
