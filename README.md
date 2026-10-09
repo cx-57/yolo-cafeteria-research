@@ -59,12 +59,14 @@ python3 src/prepare.py data/raw/school_lunch school_lunch
 `prepare.py`:
 - keeps only approved source classes
 - remaps them to the final class IDs
-- validates YOLO boxes
+- rejects nonfinite, zero-size, out-of-range, and out-of-image YOLO boxes
 - converts Roboflow segmentation polygons to axis-aligned YOLO detection boxes when needed
-- removes exact duplicate images
-- merges useful labels when the same exact image appears in multiple sources
-- hard-links retained images when possible so raw + processed do not store two copies
-- prints the kept counts
+- writes a flat `data/candidates/<source>/images|labels` layout, preserving the source split in the filename
+- hard-links candidate images when possible, with a copy fallback across filesystems
+- refuses to overwrite different existing labels or image bytes
+- prints candidate counts
+
+Exact and near-duplicate detection is performed by `src/audit.py`, not by `prepare.py`. Near matches are review candidates; they are never deleted automatically. Candidates must be reviewed before promotion to `data/processed/`.
 
 It does **not** decide whether an individual photo visually matches NHS. Every candidate must still be visually reviewed before final training.
 
@@ -86,6 +88,7 @@ Augmentation happens during training only. It creates no stored image copies and
 config.yaml
 data/datasets.csv
 src/prepare.py
+src/audit.py
 src/train.py
 ```
 
@@ -93,10 +96,24 @@ src/train.py
 
 1. Download one listed source in YOLO format.
 2. Run `prepare.py`.
-3. Visually review every candidate image against the NHS standard.
-4. Remove mismatched image/label pairs.
+3. Visually review every candidate image against the NHS standard, including every visible target object.
+4. Copy accepted image/label pairs to `data/processed/<source>/images|labels`; preserve provenance in `data/manifests/`.
 5. Commit only the accepted image/label pairs under `data/processed/<source_key>/`.
 6. Delete the raw source after review.
 7. Fill remaining deficits with staged NHS photos.
 8. Freeze the natural NHS final test set.
 9. Train and evaluate.
+
+## Day 1 integrity checks
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 src/audit.py --manifests data/manifests
+# If the original exports are available, also verify annotation preservation:
+python3 src/audit.py --raw data/raw --manifests data/manifests
+```
+
+The audit writes inventory, class counts, exact/near-duplicate evidence, source annotation gaps, and a JSON summary to `data/audits/day1/`. Nonzero exit means a structural/provenance/source-preservation problem. Exit zero does **not** establish complete visual annotation or readiness to train all 11 classes.
+
+The October 9 audit recovered **1,574 images and 3,782 instances**. After quarantining two mismatched images and adding two missing utensil boxes, the active corpus has **1,572 images and 3,780 instances**. There are no exact duplicates and **83 near-duplicate candidate pairs**. Five classes have zero annotations. The [Day 1 report](data/audits/2026-10-09_day1_report.md) explains the unresolved visual annotation and domain issues. Existing images are retained as historical reviewed candidates; this audit does not certify them as a clean 11-class training corpus.
+
