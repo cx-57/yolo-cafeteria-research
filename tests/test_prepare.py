@@ -49,5 +49,34 @@ class PrepareTests(unittest.TestCase):
             self.assertEqual((output / 'macworx/labels/train__a.txt').read_text(), '5 .5 .5 .2 .2\n')
 
 
+
+class LvisTests(unittest.TestCase):
+    def test_plate_box_and_incomplete_flag(self):
+        import lvis
+        from PIL import Image
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'train2017').mkdir()
+            Image.new('RGB', (100, 60), 'white').save(root / 'train2017/photo.jpg')
+            data = {
+                'images': [{'id': 10, 'width': 100, 'height': 60,
+                            'coco_url': 'http://images.cocodataset.org/train2017/photo.jpg',
+                            'not_exhaustive_category_ids': [756]}],
+                'annotations': [
+                    {'image_id': 10, 'category_id': 756, 'bbox': [10, 10, 30, 20]},
+                    {'image_id': 10, 'category_id': 1, 'bbox': [0, 0, 5, 5]},
+                ],
+            }
+            failures, rows = lvis.prepare_split('train', data, root / 'candidates', root)
+            self.assertEqual(failures, [])
+            self.assertTrue(rows[0][-1])
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(
+                (root / 'candidates/labels/train__10.txt').read_text(),
+                '1 0.250000000 0.333333333 0.300000000 0.333333333\\n'.replace('\\n', '\n'),
+            )
+
+
 if __name__ == '__main__':
     unittest.main()
