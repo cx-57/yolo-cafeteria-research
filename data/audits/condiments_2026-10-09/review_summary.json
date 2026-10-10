@@ -1,0 +1,24 @@
+{
+  "source": "condiments",
+  "original_filename": "sauce.v1-v2.yolov11.zip",
+  "workspace": "charles-xie",
+  "project": "sauce-a1ypv-d8bii",
+  "version": 1,
+  "license": "CC BY 4.0",
+  "reviewed_images": 44,
+  "retained_images": 44,
+  "instances": 44,
+  "native_bbox_rows": 43,
+  "polygon_rows_converted": 1,
+  "source_classes": {
+    "chili": 23,
+    "tomato": 21
+  },
+  "source_splits": {
+    "train": 34,
+    "valid": 10
+  },
+  "target_class_id": 8,
+  "visual_diversity": "two packet designs on a shared wooden surface; exact NHS item identity and independent sessions unverified",
+  "split_policy": "Keep the entire same-background batch in one split; use independent NHS photos for evaluation"
+}

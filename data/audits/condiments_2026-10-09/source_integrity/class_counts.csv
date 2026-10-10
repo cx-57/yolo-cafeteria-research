@@ -1,0 +1,12 @@
+class_id,name,images,instances
+0,food,0,0
+1,plate,0,0
+2,paper_boat,0,0
+3,utensil,0,0
+4,compartment_container,0,0
+5,hinged_container,0,0
+6,napkin,0,0
+7,drink_carton,0,0
+8,condiment_packet,44,44
+9,wrapper,0,0
+10,bottle,0,0
