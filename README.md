@@ -28,6 +28,14 @@ For LVIS disposable paper plates, **one command** downloads the official annotat
 python3 src/lvis.py
 ```
 
+If you already have the verified \`LVIS_Paper_Plate_Candidate.zip\` archive, you can directly integrate its real images into the *local* project (rather than download them again):
+
+\`\`\`bash
+python3 src/lvis.py --import-archive ~/Downloads/LVIS_Paper_Plate_Candidate.zip
+\`\`\`
+
+This imports **344 provisional plate photos / 834 boxes** to \`data/processed/lvis_plate/\` and holds **44 flagged photos / 293 boxes** in \`data/candidates/lvis_plate/\`. Images in \`data/processed\` are **not yet fully visually reviewed or complete for the other ten classes**; inspect/reannotate before final 11-class training. Large JPEG files remain local and are not tracked in GitHub. A separate plate-addition ZIP is available from the ChatGPT deliverable.
+
 The LVIS files are placed at `data/candidates/lvis_plate/images/`, `labels/`, and `review.csv`. The script can reuse archives in `data/raw/lvis/` and existing COCO photos with `--coco-dir /path/to/coco`. Run it again to retry missing downloads. The last verified LVIS candidate count was **388 images and 1,127 plate boxes** (328 train, 60 validation). **44 images have potentially incomplete plate annotations**; see `review.csv` for flags. These candidate images are NOT automatically accepted for model training.
 
 **2. Review labels and photos.** Only keep NHS-like objects. Inspect *every* candidate for missing plates and other visible target classes. Correct boxes manually before moving an image and its label into the matching `data/processed/<source>/images/` and `labels/` folders. Maintain provenance in `data/manifests/`. Do not mix source train/validation images or nearly identical backgrounds across different evaluation splits. Keep the natural NHS test set completely untouched.
