@@ -47,7 +47,7 @@ python3 -m unittest discover -s tests -v
 python3 src/audit.py --manifests data/manifests --output data/audits/current
 ```
 
-The audit checks data integrity; it **cannot** prove that every visible target object was annotated. It never silently deletes images. Raw downloads, candidates, and trained weights are excluded from GitHub in `.gitignore`.
+The audit checks data integrity; it **cannot** prove that every visible target object was annotated. It never silently deletes images. Raw and candidate image folders are tracked when added with Git. Trained weights and ZIP archives remain excluded by `.gitignore`.
 
 **4. Train only after review and a proper train/val split.**
 
@@ -56,6 +56,22 @@ python3 src/train.py path/to/data.yaml
 ```
 
 The final class IDs are: `0 food`, `1 plate`, `2 paper_boat`, `3 utensil`, `4 compartment_container`, `5 hinged_container`, `6 napkin`, `7 drink_carton`, `8 condiment_packet`, `9 wrapper`, `10 bottle`. The model is not ready for a credible 11-class evaluation until missing classes and incomplete annotations are addressed. Use new, separate NHS cafeteria scenes for final testing.
+
+## One-time import of images into GitHub
+
+The two packaged archives, `YOLO_Raw_Images.zip` and `YOLO_Processed_Images.zip`, contain the actual source-photo snapshots, cleaned YOLO image/label pairs, LVIS plates, and candidate review files. They must be extracted **into the root of this Git repository**, then committed and pushed from a computer with Git write access:
+
+```bash
+git switch main
+git pull
+unzip -oq ~/Downloads/YOLO_Raw_Images.zip -d .
+unzip -oq ~/Downloads/YOLO_Processed_Images.zip -d .
+git add data/
+git commit -m "Add raw and processed cafeteria images including LVIS plates"
+git push origin main
+```
+
+The raw source-image snapshots duplicate original image bytes from the retained/held subset, **not the complete unfiltered downloads**. Processed labels reflect YOLO class remapping. See `data/README.md`. The GitHub repository only contains image files actually committed and pushed; documentation about packaged files does not mean they are already on GitHub.
 
 ## Current verified status (October 9–10, 2026)
 
