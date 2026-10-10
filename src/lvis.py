@@ -7,6 +7,7 @@ import argparse
 import csv
 from collections import defaultdict
 import hashlib
+import io
 import json
 from pathlib import Path
 import shutil
@@ -104,10 +105,81 @@ def prepare_split(split, data, output, coco_dir=None):
     return failures, review_rows
 
 
+def import_archive(archive_path):
+    """Add LVIS photos locally: 344 provisional plates, 44 held for review."""
+    from zipfile import ZipFile
+
+    kept, held, kept_rows, held_rows = 0, 0, [], []
+    with ZipFile(archive_path) as zip_file:
+        prefix = "LVIS_Paper_Plate_Candidate/"
+        manifest = json.loads(zip_file.read(prefix + "manifest.json"))
+        for item in manifest:
+            source_image = prefix + item["image_path"]
+            source_label = prefix + item["label_path"]
+            image_bytes = zip_file.read(source_image)
+            label_bytes = zip_file.read(source_label)
+            if hashlib.sha256(image_bytes).hexdigest() != item["sha256"]:
+                raise ValueError(f"Image checksum mismatch: {source_image}")
+            with Image.open(io.BytesIO(image_bytes)) as image:
+                image.verify()
+            with Image.open(io.BytesIO(image_bytes)) as image:
+                if image.size != (item["width"], item["height"]):
+                    raise ValueError(f"Incorrect dimensions: {source_image}")
+            if len(label_bytes.splitlines()) != item["instances"]:
+                raise ValueError(f"Plate annotation count mismatch: {source_label}")
+            for line in label_bytes.decode().splitlines():
+                parts = line.split()
+                if len(parts) != 5 or int(parts[0]) != YOLO_ID:
+                    raise ValueError(f"Invalid plate label: {source_label}")
+                x, y, width, height = map(float, parts[1:])
+                if not (width > 0 and height > 0 and
+                        x-width/2 >= -1e-6 and y-height/2 >= -1e-6 and
+                        x+width/2 <= 1+1e-6 and y+height/2 <= 1+1e-6):
+                    raise ValueError(f"Invalid plate geometry: {source_label}")
+            flagged = bool(item["non_exhaustive_plate"])
+            destination = (ROOT / "data/candidates/lvis_plate" if flagged
+                           else ROOT / "data/processed/lvis_plate")
+            filename = f"{item['split']}__{Path(source_image).name}"
+            image_path = destination / "images" / filename
+            label_path = destination / "labels" / (Path(filename).stem + ".txt")
+            for path, payload in ((image_path, image_bytes), (label_path, label_bytes)):
+                path.parent.mkdir(parents=True, exist_ok=True)
+                if path.exists() and path.read_bytes() != payload:
+                    raise ValueError(f"Refusing to overwrite different file: {path}")
+                if not path.exists():
+                    path.write_bytes(payload)
+            record = dict(source_split=item["split"], source_image=Path(source_image).name,
+                          processed_image=filename, processed_label=label_path.name,
+                          instances_kept=item["instances"], sha256=item["sha256"],
+                          source_class="LVIS paper_plate (756)", target_class_id=YOLO_ID,
+                          suggested_split_group=f"lvis_{item['image_id']}",
+                          review_status="flagged_hold" if flagged else "provisional",
+                          image_license_id=item["license_id"], coco_url=item["coco_url"],
+                          plate_labels_incomplete=flagged)
+            (held_rows if flagged else kept_rows).append(record)
+            if flagged:
+                held += 1
+            else:
+                kept += 1
+    for path, records in ((ROOT / "data/manifests/lvis_plate.csv", kept_rows),
+                          (ROOT / "data/candidates/lvis_plate/flagged_for_review.csv", held_rows)):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", newline="") as file:
+            writer = csv.DictWriter(file, fieldnames=list(records[0]))
+            writer.writeheader()
+            writer.writerows(records)
+    print(f"Added {kept} provisional plate photos; held {held} flagged photos for review.")
+    print("Provisional labels may omit other cafeteria objects; NOT ready for final evaluation.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--coco-dir", type=Path, help="Optional directory holding existing COCO train2017/val2017 photos")
+    parser.add_argument("--import-archive", type=Path, help="Import the verified LVIS candidate ZIP locally")
     args = parser.parse_args()
+    if args.import_archive:
+        import_archive(args.import_archive)
+        return
     archives = ROOT / "data/raw/lvis"
     output = ROOT / "data/candidates/lvis_plate"
     failures, review_rows = [], []
