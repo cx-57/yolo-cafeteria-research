@@ -15,3 +15,4 @@ Every source image was visually reviewed against the NHS cafeteria object standa
 - Native detection boxes retained: 110
 
 Metal, colored, transparent, wooden, reusable, bottle, and otherwise non-NHS-compatible examples were rejected.
+

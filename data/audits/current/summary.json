@@ -1,6 +1,6 @@
 {
-  "images": 1616,
-  "instances": 3824,
+  "images": 1960,
+  "instances": 4658,
   "class_counts": [
     {
       "class_id": 0,
@@ -11,8 +11,8 @@
     {
       "class_id": 1,
       "name": "plate",
-      "images": 0,
-      "instances": 0
+      "images": 344,
+      "instances": 834
     },
     {
       "class_id": 2,
@@ -75,6 +75,11 @@
       "class_8": 44,
       "instances": 44
     },
+    "lvis_plate": {
+      "images": 344,
+      "class_1": 834,
+      "instances": 834
+    },
     "macworx": {
       "images": 121,
       "class_5": 121,
@@ -108,7 +113,6 @@
   "near_duplicate_candidate_pairs": 91,
   "missing_source_target_boxes": 0,
   "missing_classes": [
-    "plate",
     "paper_boat",
     "compartment_container",
     "napkin"

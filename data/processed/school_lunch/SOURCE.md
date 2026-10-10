@@ -13,3 +13,4 @@ All 1,876 source images were visually reviewed. Only the strict NHS-transfer sub
 - Re-upload verified byte-identical to the previously processed Roboflow source
 
 The source train/validation split is recorded in `data/manifests/school_lunch.csv`; processed files are stored flat so the project can create its own final split later.
+

@@ -15,3 +15,4 @@ Every source image was visually reviewed against the NHS cafeteria object standa
 - Native detection boxes retained: 311
 
 Large/family-size cartons, synthetic/mockups, flattened unrelated packaging, and other non-NHS-like carton forms were rejected.
+

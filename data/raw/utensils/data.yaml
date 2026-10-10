@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['plastic bottle', 'plastic utensil']
+
+roboflow:
+  workspace: lemon-dataset-h2ime
+  project: utensil
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/lemon-dataset-h2ime/utensil/dataset/1

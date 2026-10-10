@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 88
+names: ['Apple', 'Bread', 'Cherry tomatoes', 'Citrus', 'Cup desserts', 'Curry', 'Drinkable yogurt', 'Fish', 'Fried noodles', 'Meat', 'Milk', 'Mixed rice', 'Rice', 'Salad', 'Soups', 'Spaghetti', 'Spicy chili-flavored tofu', 'Udon', 'White bread', 'avocado', 'beans', 'boiled eggs', 'borsch', 'butter', 'cakes', 'casserole with meat and vegetables', 'cereal based cooked food', 'cheese', 'cooked eggplant', 'cooked food based on meat', 'cooked food meat with vegetables', 'cookies', 'corn', 'crepe', 'crepe w filling', 'cucumber', 'cutlet', 'desserts', 'egg product', 'fried cheese', 'fried chicken', 'fried eggs', 'fried fish', 'fried meat', 'grapefruit', 'green olives', 'kiwi', 'lavash', 'lemon', 'lime', 'mandarin', 'mango', 'manty', 'meat based soup', 'meat product', 'melon', 'minced meat shashlyk', 'muffin', 'noodles soup', 'nuggets', 'onion rings', 'orange', 'pancakes', 'pas', 'pasta', 'pastry', 'peach', 'pear', 'pickled cucumber', 'pie', 'pineapple', 'plov', 'porridge', 'potatoes', 'salad fresh', 'salad with sauce', 'sausages', 'seafood', 'snacks', 'soup-plain', 'strawberry', 'tushpara-fried', 'tushpara-wo-soup', 'vareniki', 'vegetable based cooked food', 'vegetable soup', 'watermelon', 'wings']
+
+roboflow:
+  workspace: school-lunch-dataset
+  project: school-lunch-lty6a
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/school-lunch-dataset/school-lunch-lty6a/dataset/2
