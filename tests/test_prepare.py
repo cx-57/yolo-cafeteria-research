@@ -74,7 +74,7 @@ class LvisTests(unittest.TestCase):
             self.assertEqual(len(rows), 1)
             self.assertEqual(
                 (root / 'candidates/labels/train__10.txt').read_text(),
-                '1 0.250000000 0.333333333 0.300000000 0.333333333\\n'.replace('\\n', '\n'),
+                '1 0.250000000 0.333333333 0.300000000 0.333333333\n',
             )
 
 
