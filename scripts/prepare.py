@@ -183,7 +183,7 @@ def process_dataset(dataset, processed_root=CANDIDATE_ROOT, source_key=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("dataset", type=Path, help="Downloaded Roboflow dataset directory")
-    parser.add_argument("source_key", choices=sorted(CLASS_MAPS))
+    parser.add_argument("source_key", choices=sorted(CLASS_MAPS), metavar="source_key")
     args = parser.parse_args()
     count = process_dataset(args.dataset, source_key=args.source_key)
     print(f"{count} images added to data/candidates for visual review")
