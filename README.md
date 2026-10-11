@@ -74,6 +74,7 @@ To add the already-reviewed `Waste_Detection_v3_NHS_Curated.zip` package from th
 ```bash
 mkdir -p data/processed/waste_detection_v3
 unzip -oq ~/Downloads/Waste_Detection_v3_NHS_Curated.zip -d data/processed/waste_detection_v3
+cp data/processed/waste_detection_v3/manifest.csv data/manifests/waste_detection_v3.csv
 python3 src/train.py --build-only
 ```
 
