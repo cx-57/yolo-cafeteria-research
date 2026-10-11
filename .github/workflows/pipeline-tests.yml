@@ -2,7 +2,7 @@ name: Pipeline tests
 
 on:
   push:
-    branches: [main, training-phase-10x-20261011]
+    branches: [main, fix-80-20-split-20261011]
   pull_request:
   workflow_dispatch:
 
@@ -21,6 +21,21 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Build full 10x corpus without training
         run: python src/train.py --build-only --augment-factor 10
+      - name: Verify 80/20 of originals and 10x training views
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s = json.loads(Path("data/training/split_summary.json").read_text())
+          total = s["original_images"]
+          assert s["train_originals"] + s["val_originals"] == total
+          assert s["val_originals"] == round(total * 0.20), s
+          assert s["train_views"] == s["train_originals"] * 10
+          assert s["test_originals"] == 0
+          print("Verified:", total, "originals,", s["train_originals"],
+                "train,", s["val_originals"], "validation,",
+                s["train_views"], "training views; test is separate")
+          PY
       - name: Preserve split and class counts
         uses: actions/upload-artifact@v4
         with:

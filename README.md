@@ -38,7 +38,7 @@ The audit is read-only for originals, writes a local report, and may report sour
 
     python3 src/train.py --build-only --augment-factor 10
 
-This runs the original-label / image-decoding checks, groups Roboflow variants, keeps exact-pixel duplicates across different sources in one split, and applies a deterministic 80/20 group-level target where independent public-source splits are feasible. Condiments, TartanHacks video and four new potentially correlated imports stay **training-only**.
+This validates labels/image decoding, groups Roboflow variants and exact-pixel duplicates, and selects **approximately 80% of ALL original photos for training and 20% for validation** (2,477 / 619 at 3,096 images, if grouping permits). It does **not** apply 80/20 to only the eligible subset. To prevent leakage, condiments, TartanHacks video, and four correlated imports stay **training-only**; validation is selected from the remaining distinct-source groups. The held-out public-source validation set is consequently not fully representative of all classes.
 
 **Precisely what 10x means:** Every training original gets one original file path and **nine additional hardlinked training-view paths**. Each view is independently and randomly augmented by Ultralytics during training (brightness, color, mild geometry, horizontal flipping and mosaic). There are **ten training views per original** but **not ten independently photographed examples**, and not nine synthetic image files stored on disk. Hardlinks save considerable disk space. Validation contains exactly one untouched copy per held-out original and is not augmented. Do **not** commit `data/training/` to GitHub.
 
@@ -78,9 +78,19 @@ A fair research ablation keeps the same seed and original-image group split. Run
 
 This rebuilds the Git-ignored working dataset with one training view per original. Complete and archive the 10x results before doing so. Both models retain the same **original** validation split; augmentation does **not** change the number of genuinely different original photos. Record run settings, class-wise results, and failure examples for both. Do not conclude that 10x is better without measuring.
 
-### 6. Collect a truly independent NHS test set before research claims
+### 6. Create a truly independent NHS test set (not included in the 3,096)
 
-Take and annotate new natural NHS cafeteria scenes from separate days/lighting/cameras, with **all visible target-class instances labeled**, and keep them entirely outside train/validation and augmentation. Record capture groups and licenses/consent appropriately. Evaluate the frozen best model on these images once, reporting per-class precision, recall, mAP50 and mAP50-95, along with support and error examples. Acquire paper-boat originals and independent examples of packets, bowls and napkins if these classes matter in practice.
+The **80/20 split is training/validation**; there is **no test portion of the existing 3,096**. Keep a separate final test set: collect new, naturally occurring NHS cafeteria scenes from independent days/cameras, annotate **every visible target-class instance**, and keep all test photos completely out of training, validation, augmentation and model selection. Recording capture groups, rights/consent and a meaningful number of examples per class matters more than using an arbitrary fixed size. Reserve the final test evaluation until you freeze your model.
+
+The evaluation script accepts a separate YAML containing the 11 unchanged class names and a `test:` image-folder path. For example, copy the generated `data/training/data.yaml` to `data/training/data_with_test.yaml` and add this line (using the **actual** absolute directory of your separately annotated NHS test images):
+
+    test: /absolute/path/to/nhs_test/images
+
+Keep YOLO labels under the corresponding `nhs_test/labels/` directory. Once the independent set has been annotated, run:
+
+    python3 src/train.py data/training/data_with_test.yaml --evaluate runs/yolo11n-10x/weights/best.pt --split test --device mps
+
+The script refuses test evaluation if the provided YAML lacks a `test:` path. Never use test scores to tune hyperparameters; report final per-class precision, recall, mAP50 and mAP50-95 along with support and failure examples. Currently paper boats have no training annotations, and some smaller classes lack meaningful public-source validation.
 
 **No actual model training runs automatically on GitHub:** the repository contains scripts and CPU-only tests. Training requires a local or cloud machine with Python/PyTorch and preferably GPU/MPS acceleration. GitHub Actions checks synthetic preprocessing tests; it is not a GPU trainer.
 

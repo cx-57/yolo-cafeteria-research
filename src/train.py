@@ -169,12 +169,44 @@ def collect(names):
     return components, dict(per_source), sum(len(keys) > 1 for keys in digest_groups.values()), dict(rounded_boxes)
 
 
+def select_validation_groups(groups, seed=42, ratio=0.20):
+    """Target 20% of ORIGINAL photos for validation without splitting capture groups.
+
+    Training-only sources and any exact-pixel duplicates linked to those sources
+    remain exclusively training examples. Eligible groups are chosen in a
+    deterministic shuffled order until the target image count is reached.
+    """
+    total = sum(len(items) for items in groups.values())
+    target = round(total * ratio)
+    eligible = [
+        key for key, items in groups.items()
+        if not any(source in TRAIN_ONLY for source, _, _ in items)
+    ]
+    eligible.sort(key=lambda key: hashlib.sha256(
+        (str(seed) + ":" + key).encode()).digest())
+    validation = set()
+    count = 0
+    for key in eligible:
+        size = len(groups[key])
+        if count + size <= target:
+            validation.add(key)
+            count += size
+        if count == target:
+            break
+    # If no exact selection is possible, retain entire groups and disclose the
+    # difference rather than leaking a source group to force the percentage.
+    if not validation:
+        raise ValueError("No eligible independent validation groups")
+    return validation, target
+
+
 def build_dataset(augment_factor=10, seed=42):
     """Make grouped 80/20 source views; augmented copies are TRAIN-ONLY."""
     if augment_factor < 1 or augment_factor > 20:
         raise ValueError("--augment-factor must be between 1 and 20")
     names = class_names()
     groups, source_counts, duplicate_groups, clipped_boxes = collect(names)
+    validation_groups, val_target = select_validation_groups(groups, seed=seed)
     if OUTPUT.exists():
         shutil.rmtree(OUTPUT)  # Generated and Git-ignored, never the source corpus.
 
@@ -183,9 +215,7 @@ def build_dataset(augment_factor=10, seed=42):
     class_boxes = {"train": Counter(), "val": Counter()}
     groups_by_split = Counter()
     for key, items in sorted(groups.items()):
-        fraction = int.from_bytes(hashlib.sha256((str(seed) + ":" + key).encode()).digest()[:8], "big") / 2**64
-        must_train = any(source in TRAIN_ONLY for source, _, _ in items)
-        split = "train" if must_train or fraction < 0.8 else "val"
+        split = "val" if key in validation_groups else "train"
         groups_by_split[split] += 1
         image_dir = OUTPUT / "images" / split
         label_dir = OUTPUT / "labels" / split
@@ -229,6 +259,10 @@ def build_dataset(augment_factor=10, seed=42):
         "train_originals": counts["train_originals"],
         "train_views": counts["train_views"],
         "val_originals": counts["val_originals"],
+        "target_validation_originals": val_target,
+        "actual_train_fraction": round(counts["train_originals"] / sum(source_counts.values()), 6),
+        "actual_val_fraction": round(counts["val_originals"] / sum(source_counts.values()), 6),
+        "test_originals": 0,
         "exact_pixel_duplicate_groups_linked": duplicate_groups,
         "minor_boundary_rounding_clips_in_generated_labels": clipped_boxes,
         "group_counts": dict(groups_by_split),
@@ -248,7 +282,10 @@ def build_dataset(augment_factor=10, seed=42):
           f"{counts['train_views']} training views ({augment_factor}x); val never augmented.")
     print("Missing in training:", report["missing_train_classes"])
     print("Missing in validation:", report["missing_val_classes"])
-    print("Source-independent NHS test scenes are still REQUIRED.")
+    if counts["val_originals"] != val_target:
+        print(f"WARNING: group integrity prevented exact 80/20: target={val_target}, "
+              f"actual={counts['val_originals']}.")
+    print("No test images are drawn from this corpus. Independent NHS test scenes are REQUIRED.")
     return yaml_path
 
 
@@ -261,15 +298,19 @@ def check_names(data_file):
         raise ValueError("Dataset names/IDs must exactly match config.yaml (11 classes).")
 
 
-def evaluate(weights, data_file, imgsz=640, device=None):
-    """Evaluate only original validation images; save interpretable per-class results."""
+def evaluate(weights, data_file, imgsz=640, device=None, split="val"):
+    """Evaluate unchanged validation, or separately annotated test images."""
     from ultralytics import YOLO
 
     check_names(data_file)
+    if split not in ("val", "test"):
+        raise ValueError("split must be 'val' or 'test'")
+    if split == "test" and not yaml.safe_load(Path(data_file).read_text()).get("test"):
+        raise ValueError("For --split test, supply data.yaml with an independent test: image path")
     model = YOLO(str(weights))
     run_folder = PROJECT_ROOT / "runs"
-    options = {"data": str(data_file), "split": "val", "imgsz": imgsz,
-               "project": str(run_folder), "name": "evaluation",
+    options = {"data": str(data_file), "split": split, "imgsz": imgsz,
+               "project": str(run_folder), "name": "evaluation_" + split,
                "plots": True, "exist_ok": False}
     if device:
         options["device"] = device
@@ -280,15 +321,16 @@ def evaluate(weights, data_file, imgsz=640, device=None):
         for idx, a50, a in zip(metrics.box.ap_class_index,
                              metrics.box.ap50, metrics.box.ap)
     }
-    result = {"precision": float(metrics.box.mp), "recall": float(metrics.box.mr),
+    result = {"split": split, "precision": float(metrics.box.mp), "recall": float(metrics.box.mr),
               "map50": float(metrics.box.map50),
               "map50_95": float(metrics.box.map),
               "per_class": {name: by_id.get(i) for i, name in enumerate(names)},
-              "note": "null means class not measurable in this provisional validation split; "
-                      "these metrics are NOT independent NHS test performance."}
+              "note": ("null means class not measurable in this split. "
+                       + ("Public-source validation is NOT independent NHS test performance."
+                          if split == "val" else "Ensure test images are truly independent, exhaustively labeled NHS scenes."))}
     save_folder = Path(metrics.save_dir)
     (save_folder / "metrics.json").write_text(json.dumps(result, indent=2) + "\n")
-    print("Validation results:", save_folder / "metrics.json")
+    print(f"{split} results:", save_folder / "metrics.json")
     return result
 
 
@@ -309,6 +351,8 @@ def main():
     parser.add_argument("--name", default="yolo11n-10x")
     parser.add_argument("--evaluate", type=Path, metavar="BEST_PT",
                         help="Evaluate an existing checkpoint using prepared data.yaml")
+    parser.add_argument("--split", choices=("val", "test"), default="val",
+                        help="Which split to evaluate with --evaluate (test must be in data.yaml)")
     parser.add_argument("--resume", type=Path, metavar="LAST_PT",
                         help="Resume a stopped Ultralytics training run")
     args = parser.parse_args()
@@ -316,6 +360,8 @@ def main():
         parser.error("epochs, batch and imgsz must be positive")
     if args.evaluate and args.resume:
         parser.error("--evaluate and --resume cannot be combined")
+    if args.split != "val" and not args.evaluate:
+        parser.error("--split test requires --evaluate and a YAML with independent test: images")
 
     if args.resume:
         if not (OUTPUT / "data.yaml").exists():
@@ -326,7 +372,7 @@ def main():
 
     if args.evaluate:
         data_file = args.data or OUTPUT / "data.yaml"
-        evaluate(args.evaluate, data_file, args.imgsz, args.device)
+        evaluate(args.evaluate, data_file, args.imgsz, args.device, split=args.split)
         return
 
     data_file = args.data or build_dataset(args.augment_factor, args.seed)
