@@ -116,7 +116,7 @@ def collect_images(names):
     return combined, sources, corrections
 
 
-def build_dataset(augment_factor=10, seed=42):
+def build_dataset(augment_factor=1, seed=42):
     if not 1 <= augment_factor <= 20:
         raise ValueError("Augmentation factor must be 1–20")
     names = class_names()
@@ -255,14 +255,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data", nargs="?", type=Path, help="Prepared data.yaml")
     parser.add_argument("--build-only", action="store_true")
-    parser.add_argument("--augment-factor", type=int, default=10)
+    parser.add_argument("--augment-factor", type=int, default=1)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--model", default="yolo11n.pt")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--batch", type=int, default=8)
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--device", help="mps on Apple Silicon; 0 on NVIDIA")
-    parser.add_argument("--name", default="yolo11n-10x")
+    parser.add_argument("--name", default="yolo11n-1x")
     parser.add_argument("--resume", type=Path, metavar="LAST_PT")
     parser.add_argument("--evaluate", type=Path, metavar="BEST_PT")
     parser.add_argument("--split", choices=("val", "test"), default="val")

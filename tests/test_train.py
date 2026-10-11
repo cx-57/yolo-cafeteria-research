@@ -1,4 +1,4 @@
-"""Fast synthetic tests for split integrity, 10x views, and annotation safety."""
+"""Fast synthetic tests for split integrity, 1x default, optional 10x, and annotation safety."""
 from pathlib import Path
 import json
 import os
@@ -143,8 +143,9 @@ class TrainingPipelineTests(unittest.TestCase):
         self.populate()
         with self.assertRaises(ValueError):
             train.build_dataset(augment_factor=0)
-        train.build_dataset(augment_factor=1)
+        train.build_dataset()
         report = json.loads((self.output / "split_summary.json").read_text())
+        self.assertEqual(report["augment_factor"], 1)
         self.assertEqual(report["train_originals"], report["train_views"])
 
 
