@@ -42,7 +42,7 @@ with ZipFile(archive) as z:
     box_count, bowl_count = 0, 0
     for stem in sorted(images):
         img = z.read(images[stem])
-        if not img.startswith(b"\\xff\\xd8") and not img.startswith(b"\\x89PNG"):
+        if not img.startswith(b"\xff\xd8") and not img.startswith(b"\x89PNG"):
             sys.exit(f"Unsupported or damaged image: {images[stem]}")
         lines = z.read(labels[stem]).decode("utf-8").splitlines()
         if not lines:
