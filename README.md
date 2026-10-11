@@ -64,3 +64,17 @@ Original ID 4 is retired. The stored source manifests likewise preserve historic
 **Research limitation:** these are provisional public-source training/validation splits. Do not treat them as a trustworthy final NHS generalization estimate: source scenes may be correlated, the condiment group has no independent public-source validation, and some labels lack complete multiclass review. Reserve completely separate natural NHS cafeteria scenes/days for final evaluation.
 
 Sources, licenses and manifests are in `data/datasets.csv` and `data/manifests/`. Raw original images and historical annotation IDs are maintained as provenance.
+
+## Optional waste-detection-v3 training subset (October 10)
+
+A three-check audit screened **all 923** images (structure/boxes, NHS-domain visual contact sheets, video-frame duplicates and train/validation leakage). **250** frames showed compatible target objects, but **199** were held as near-adjacent video frames; **51** training candidates were retained: 2 plate, 9 utensil, 7 napkin, 24 wrapper, 9 bottle. **673** were rejected. The original Roboflow 877/46 train/valid split is **not independent**: four source videos cross both sets. The kept images have converted **current 10-class IDs**; the other processed sources still use historical IDs. The detailed results are in [the waste-detection-v3 audit](data/audits/waste_detection_v3_2026-10-10.md).
+
+To add the already-reviewed `Waste_Detection_v3_NHS_Curated.zip` package from the audit download, run at the repository root:
+
+```bash
+mkdir -p data/processed/waste_detection_v3
+unzip -oq ~/Downloads/Waste_Detection_v3_NHS_Curated.zip -d data/processed/waste_detection_v3
+python3 src/train.py --build-only
+```
+
+The build includes these new images **only in training**, not validation. Audit the final merged corpus and do not treat frames from these demonstration clips as independent NHS cafeteria evaluation. The ZIP includes `images/`, `labels/`, `manifest.csv`, and source attribution; the source images are not yet tracked on GitHub until imported and committed separately.

@@ -15,6 +15,8 @@ from prepare import PROJECT_ROOT, IMAGE_SUFFIXES, LEGACY_SOURCES, current_label
 CONFIG = PROJECT_ROOT / "config.yaml"
 PROCESSED = PROJECT_ROOT / "data/processed"
 OUTPUT = PROJECT_ROOT / "data/training"
+# New downloads already use current IDs; never remap them as legacy.
+ADDITIONAL_TRAIN_SOURCES = {"waste_detection_v3"}
 
 
 def group_for_split(source, filename):
@@ -35,7 +37,7 @@ def build_dataset():
         shutil.rmtree(OUTPUT)  # Generated output only; original labels untouched
 
     groups = defaultdict(list)
-    for source in sorted(LEGACY_SOURCES):
+    for source in sorted(LEGACY_SOURCES | ADDITIONAL_TRAIN_SOURCES):
         images = PROCESSED / source / "images"
         labels = PROCESSED / source / "labels"
         if not images.is_dir():
@@ -56,7 +58,7 @@ def build_dataset():
     for group, items in sorted(groups.items()):
         # Deterministic split; same scene/capture-group never crosses splits.
         fraction = int.from_bytes(hashlib.sha256(group.encode()).digest()[:4], "big") / 2**32
-        split = "train" if group.startswith("condiments:") or fraction < 0.8 else "val"
+        split = "train" if group.split(":", 1)[0] in ADDITIONAL_TRAIN_SOURCES or group.startswith("condiments:") or fraction < 0.8 else "val"
         image_dir = OUTPUT / "images" / split
         label_dir = OUTPUT / "labels" / split
         image_dir.mkdir(parents=True, exist_ok=True)
