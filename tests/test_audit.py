@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class AuditTests(unittest.TestCase):
     def run_audit(self, root, output):
-        return subprocess.run([sys.executable, str(ROOT / 'src/audit.py'), '--processed', str(root), '--output', str(output), '--config', str(ROOT / 'config.yaml')], capture_output=True, text=True)
+        return subprocess.run([sys.executable, str(ROOT / 'scripts/audit.py'), '--processed', str(root), '--output', str(output), '--config', str(ROOT / 'config.yaml')], capture_output=True, text=True)
 
     def test_empty_corpus_does_not_pass(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -47,7 +47,7 @@ class AuditTests(unittest.TestCase):
                 (folder / 'labels' / (name+'.txt')).write_text(('3' if folder == root / 'utensil' else '0')+' .5 .5 .2 .2\n')
             (raw / 'utensil/data.yaml').write_text('names: [plastic utensil]\n')
             manifests.mkdir(); (manifests / 'utensil.csv').write_text('image,original_split,instances\nutensil__photo.png,valid,1\n')
-            command = [sys.executable, str(ROOT / 'src/audit.py'), '--processed', str(root), '--raw', str(raw), '--manifests', str(manifests), '--output', str(base / 'report'), '--config', str(ROOT / 'config.yaml')]
+            command = [sys.executable, str(ROOT / 'scripts/audit.py'), '--processed', str(root), '--raw', str(raw), '--manifests', str(manifests), '--output', str(base / 'report'), '--config', str(ROOT / 'config.yaml')]
             run = subprocess.run(command, capture_output=True, text=True)
             self.assertEqual(run.returncode, 0, run.stdout+run.stderr)
             self.assertIn('valid', (base / 'report/inventory.csv').read_text())
@@ -60,7 +60,7 @@ class AuditTests(unittest.TestCase):
                 Image.new('RGB', (30, 20), color).save(folder / 'images/a.png')
                 (folder / 'labels/a.txt').write_text(f'{class_id} .5 .5 .2 .2\n')
             (raw / 'utensil/data.yaml').write_text('names: [plastic utensil]\n')
-            run = subprocess.run([sys.executable, str(ROOT / 'src/audit.py'), '--processed', str(root), '--raw', str(raw), '--output', str(base / 'report'), '--config', str(ROOT / 'config.yaml')], capture_output=True, text=True)
+            run = subprocess.run([sys.executable, str(ROOT / 'scripts/audit.py'), '--processed', str(root), '--raw', str(raw), '--output', str(base / 'report'), '--config', str(ROOT / 'config.yaml')], capture_output=True, text=True)
             self.assertNotEqual(run.returncode, 0, run.stdout+run.stderr)
             summary = json.loads((base / 'report/summary.json').read_text())
             self.assertIn('source_image_mismatch', {i['kind'] for i in summary['issues']})

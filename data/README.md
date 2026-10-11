@@ -20,4 +20,4 @@ The committed Dry & Wet Waste subset contains **233 training-only candidates** (
 
 Committed food additions: `school_lunch_asian/` — 130 new Asian lunch scenes, and `food_american/` — 380 US-style food photos. Both use current class IDs (0 food and, for Asian set, 6 milk carton), are training-only, and must NOT be remapped as older source IDs. They are already present in `data/processed/`. Existing School Lunch 467 images were excluded from the new selections.
 
-Training views: `python3 src/train.py --build-only --augment-factor 10` generates ten hardlinked **train** paths per source original, with stochastic Ultralytics augmentation during training. **Validation is never augmented**. See the main README for exact reproducible training and evaluation commands.
+Training views: `python3 scripts/train.py --build-only --augment-factor 10` generates ten hardlinked **train** paths per source original, with stochastic Ultralytics augmentation during training. **Validation is never augmented**. See the main README for exact reproducible training and evaluation commands.

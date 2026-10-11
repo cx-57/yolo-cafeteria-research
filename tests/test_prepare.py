@@ -6,13 +6,13 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'src'))
+sys.path.insert(0, str(ROOT / 'scripts'))
 import prepare
 
 
 class PrepareTests(unittest.TestCase):
     def test_documented_help_works_without_raw_data(self):
-        run = subprocess.run([sys.executable, str(ROOT / 'src/prepare.py'), '--help'], capture_output=True, text=True)
+        run = subprocess.run([sys.executable, str(ROOT / 'scripts/prepare.py'), '--help'], capture_output=True, text=True)
         self.assertEqual(run.returncode, 0, run.stderr)
         self.assertIn('source_key', run.stdout)
 

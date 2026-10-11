@@ -10,7 +10,7 @@ from unittest.mock import patch
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "scripts"))
 import train
 
 
@@ -21,7 +21,7 @@ class TrainingPipelineTests(unittest.TestCase):
         root = Path(self.tmp.name)
         self.processed = root / "processed"
         self.output = root / "training"
-        self.patch_processed = patch.object(train, "PROCESSED", self.processed)
+        self.patch_processed = patch.object(train, "DATA", root)
         self.patch_output = patch.object(train, "OUTPUT", self.output)
         self.patch_processed.start()
         self.patch_output.start()
@@ -136,7 +136,7 @@ class TrainingPipelineTests(unittest.TestCase):
         self.populate()
         self.add_image("food_american", "one", (100, 100, 100))
         (self.processed / "food_american/labels/orphan.txt").write_text("0 .5 .5 .2 .2\n")
-        with self.assertRaisesRegex(ValueError, "Orphan"):
+        with self.assertRaisesRegex(ValueError, "Label without image"):
             train.build_dataset()
 
     def test_factor_one_and_invalid_factor(self):
