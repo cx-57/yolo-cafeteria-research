@@ -136,7 +136,7 @@ class TrainingPipelineTests(unittest.TestCase):
         self.populate()
         self.add_image("food_american", "one", (100, 100, 100))
         (self.processed / "food_american/labels/orphan.txt").write_text("0 .5 .5 .2 .2\n")
-        with self.assertRaisesRegex(ValueError, "Orphan"):
+        with self.assertRaisesRegex(ValueError, "Label without image"):
             train.build_dataset()
 
     def test_factor_one_and_invalid_factor(self):
