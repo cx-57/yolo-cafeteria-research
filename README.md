@@ -51,7 +51,7 @@ The already-committed `data/processed/` annotations retain their **original 11-c
 | 9 wrapper | 8 |
 | 10 bottle | 9 |
 
-Original ID 4 is retired. The stored source manifests likewise preserve historical numeric IDs.
+Original ID 4 is retired. The stored source manifests likewise preserve historical numeric IDs. If you accept new candidate labels made with the current mapping, put them under a **new source folder name** rather than mixing them into an existing historical-label folder.
 
 ## Workflows
 
