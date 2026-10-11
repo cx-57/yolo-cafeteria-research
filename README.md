@@ -93,3 +93,9 @@ bash upload_dry_wet_waste.sh
 ```
 
 The script validates all 233 JPEG/label pairs, manifest checksums, YOLO geometry, and counts before committing the dataset to `data/processed/dry_wet_waste/`. This source uses the current **11-class** IDs and is **training-only** to avoid source-split leakage. Do not use the original Roboflow validation/test photos as independent NHS evaluation. The entire 1,826-image dry/wet dataset is **not** imported: only the 233-screened training candidates are. Box tightness, multiclass completeness and individual image licensing remain provisional; some stock photographs in the original source have separate rights restrictions.
+
+## Additional cafeteria food — 510 reviewed candidates
+
+Download `NHS_Food_Additions_510.zip` from ChatGPT to `~/Downloads`, then run `bash upload_food_additions.sh` in this repository. It imports **130 additional School Lunch Asian meals** (excluding the existing 467) and **380 American cafeteria food photos** (burgers, fries, pizza, fried chicken, hot dogs, salads, donuts, noodles; no steak-only photos) to `data/processed/school_lunch_asian/` and `data/processed/food_american/`. The script verifies **510 images, 510 labels, 1,197 boxes** (1,072 food + 125 milk cartons), checks hashes, and commits/pushes. Segmentation labels in the new Food export are converted to detection boxes. All additional sources are **training-only**, with current 11-class IDs; original School Lunch labels stay unchanged. Complete all-class annotation reviews and gather independent real NHS evaluation photos before reporting research accuracy.
+
+The 331 Waste Detection v3 photos are already on GitHub; to add the separately screened **233 Dry & Wet candidates**, download `Dry_Wet_Waste_NHS_233.zip` and run `bash upload_dry_wet_waste.sh`. **Verified current corpus 2,353 images; expected after both remaining imports 3,096 images.**

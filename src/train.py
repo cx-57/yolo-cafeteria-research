@@ -16,7 +16,7 @@ CONFIG = PROJECT_ROOT / "config.yaml"
 PROCESSED = PROJECT_ROOT / "data/processed"
 OUTPUT = PROJECT_ROOT / "data/training"
 # New downloads already use current IDs; never remap them as legacy.
-ADDITIONAL_TRAIN_SOURCES = {"waste_detection_v3", "dry_wet_waste"}
+ADDITIONAL_TRAIN_SOURCES = {"waste_detection_v3", "dry_wet_waste", "school_lunch_asian", "food_american"}
 
 
 def group_for_split(source, filename):
@@ -93,7 +93,7 @@ def build_dataset():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("data", nargs="?", type=Path,
-                        help="Optional already prepared 10-class data.yaml")
+                        help="Optional already prepared 11-class data.yaml")
     parser.add_argument("--build-only", action="store_true")
     parser.add_argument("--model", default="yolo11n.pt")
     parser.add_argument("--epochs", type=int, default=100)
@@ -107,7 +107,7 @@ def main():
     if isinstance(actual, dict):
         actual = [actual[k] if k in actual else actual[str(k)] for k in range(len(expected_names))]
     if actual != expected_names:
-        parser.error("Dataset class names/IDs do not match config.yaml (10 classes).")
+        parser.error("Dataset class names/IDs do not match config.yaml (11 classes).")
     if args.build_only:
         print(f"Dataset ready: {data_file}")
         return
