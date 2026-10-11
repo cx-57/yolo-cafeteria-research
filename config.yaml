@@ -9,6 +9,7 @@ classes:
   7: condiment_packet
   8: wrapper
   9: bottle
+  10: bowl
 
 # Planning targets for usable NHS-like original images.
 targets:
@@ -22,3 +23,4 @@ targets:
   condiment_packet: 300
   wrapper: 500
   bottle: 500
+  bowl: 450

@@ -1,12 +1,12 @@
 # YOLO Cafeteria Research
 
-Detect NHS-style cafeteria items using **10 object classes** with Ultralytics YOLO11. Recycling/compost/trash decisions are **separate school-specific rules**, not predictions made by object detection.
+Detect NHS-style cafeteria items using **11 object classes** with Ultralytics YOLO11. Recycling/compost/trash decisions are **separate school-specific rules**, not predictions made by object detection.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `config.yaml` | Current IDs for the 10 classes |
+| `config.yaml` | Current IDs for the 11 classes |
 | `src/prepare.py` | Convert Roboflow exports to review candidates |
 | `src/lvis.py` | Download/verify real LVIS paper-plate photos and boxes |
 | `src/audit.py` | Audit annotation integrity and dataset provenance |
@@ -29,6 +29,7 @@ Only Ultralytics, PyYAML and Pillow are third-party dependencies.
 | 7 | condiment_packet | 44 |
 | 8 | wrapper | 33 |
 | 9 | bottle | 168 |
+| 10 | bowl | 0 (new; 75 more photos packaged for import) |
 
 Images can contain multiple classes. **2,022 curated/provisional image-label pairs** with **4,721 boxes** are stored as source-specific flat pairs under `data/processed/<source>/images/` and `labels/`. This does *not* mean every image has complete multiclass labeling. Paper boats need data. New natural NHS scenes are required for final testing.
 
@@ -36,7 +37,7 @@ The school **does not use a compartment container**. That unused class was remov
 
 ## Important: historical label IDs
 
-The already-committed `data/processed/` annotations retain their **original 11-class numeric IDs** for provenance. The active **10-class mapping** is defined in `config.yaml`. `src/train.py` converts original IDs **in the generated training copy**; `src/audit.py` uses the same conversion. Do **not** point YOLO directly at the historical raw/processed labels as a 10-class dataset.
+The already-committed `data/processed/` annotations retain their **original 11-class numeric IDs** for provenance. The active **11-class mapping** is defined in `config.yaml`. `src/train.py` converts original IDs **in the generated training copy**; `src/audit.py` uses the same conversion. Do **not** point YOLO directly at the historical raw/processed labels as an 11-class dataset.
 
 | Old stored ID | Current model ID |
 |---|---|
@@ -58,24 +59,26 @@ Original ID 4 is retired. The stored source manifests likewise preserve historic
 1. **Import** an export: `python3 src/prepare.py data/raw/school_lunch school_lunch`. It goes into `data/candidates` for review; it is not automatically accepted.
 2. **Add LVIS plates** (if needed): `python3 src/lvis.py`. It fetches real COCO photos referenced by LVIS; 44 flagged candidate images are held for review. The 344 provisionally included plates need a full annotation review for other visible objects.
 3. **Check data**: `python3 -m unittest discover -s tests -v` and `python3 src/audit.py --manifests data/manifests --output data/audits/current`. `data/audits/old_11class_snapshot` keeps the historical report; regenerate `current` locally for the new classes.
-4. **Prepare training data without training**: `python3 src/train.py --build-only`. This builds `data/training/` with converted **10-class** labels and deterministic grouped train/validation splits (80/20 target). Condiment views on the same backdrop stay in training, and TartanHacks video frames are grouped by clip. The generated folder is Git-ignored.
-5. **Train**: `python3 src/train.py` (100 epochs by default), or supply your own already-reviewed `data.yaml` with the exact 10 names/IDs.
+4. **Prepare training data without training**: `python3 src/train.py --build-only`. This builds `data/training/` with converted **11-class** labels and deterministic grouped train/validation splits (80/20 target). Condiment views on the same backdrop stay in training, and TartanHacks video frames are grouped by clip. The generated folder is Git-ignored.
+5. **Train**: `python3 src/train.py` (100 epochs by default), or supply your own already-reviewed `data.yaml` with the exact 11 names/IDs.
 
 **Research limitation:** these are provisional public-source training/validation splits. Do not treat them as a trustworthy final NHS generalization estimate: source scenes may be correlated, the condiment group has no independent public-source validation, and some labels lack complete multiclass review. Reserve completely separate natural NHS cafeteria scenes/days for final evaluation.
 
 Sources, licenses and manifests are in `data/datasets.csv` and `data/manifests/`. Raw original images and historical annotation IDs are maintained as provenance.
 
-## Optional waste-detection-v3 training subset (October 10)
+## Waste Detection v3 (expanded NHS bowls)
 
-A three-check audit screened **all 923** images (structure/boxes, NHS-domain visual contact sheets, video-frame duplicates and train/validation leakage). **250** frames showed compatible target objects, but **199** were held as near-adjacent video frames; **51** training candidates were retained: 2 plate, 9 utensil, 7 napkin, 24 wrapper, 9 bottle. **673** were rejected. The original Roboflow 877/46 train/valid split is **not independent**: four source videos cross both sets. The kept images have converted **current 10-class IDs**; the other processed sources still use historical IDs. The detailed results are in [the waste-detection-v3 audit](data/audits/waste_detection_v3_2026-10-10.md).
+The user confirmed the source's **white disposable food bowls and kraft paper soup tubs are used at NHS**. A revised three-check review retains **all 250** previously eligible frames (including 199 near-adjacent frames), plus **75** newly accepted disposable bowls and **6** disposable plates. **331 training-only images / 342 boxes** in total. Nothing was thinned.
 
-To add the already-reviewed `Waste_Detection_v3_NHS_Curated.zip` package from the audit download, run at the repository root:
+The **new class is `10: bowl`**, appended without changing IDs 0–9. It covers disposable cafeteria food bowls/soup tubs, not glass bowls or beverage cups. The original Roboflow train/validation groups overlap: source images **must not be used as independent validation/test examples**. The generated training split keeps this entire source in training.
+
+Download `Waste_Detection_v3_NHS_Untrimmed_331.zip` from the ChatGPT audit deliverable into `~/Downloads`, then run from the repository root:
 
 ```bash
 mkdir -p data/processed/waste_detection_v3
-unzip -oq ~/Downloads/Waste_Detection_v3_NHS_Curated.zip -d data/processed/waste_detection_v3
+unzip -oq ~/Downloads/Waste_Detection_v3_NHS_Untrimmed_331.zip -d data/processed/waste_detection_v3
 cp data/processed/waste_detection_v3/manifest.csv data/manifests/waste_detection_v3.csv
 python3 src/train.py --build-only
 ```
 
-The build includes these new images **only in training**, not validation. Audit the final merged corpus and do not treat frames from these demonstration clips as independent NHS cafeteria evaluation. The ZIP includes `images/`, `labels/`, `manifest.csv`, and source attribution; the source images are not yet tracked on GitHub until imported and committed separately.
+**Do not merge with the obsolete 51-image subset**: the 331-image ZIP replaces it, and includes those 51 already. JPEGs and their converted YOLO labels are distributed in the ZIP, not stored on GitHub yet. For detailed decisions and limitations see [the updated three-check audit](data/audits/waste_detection_v3_2026-10-10.md).

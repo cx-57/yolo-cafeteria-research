@@ -1,4 +1,4 @@
-"""Train on the 10 current NHS object classes; never change source labels."""
+"""Train on current NHS object classes; never change source labels."""
 import argparse
 from collections import defaultdict
 import hashlib
