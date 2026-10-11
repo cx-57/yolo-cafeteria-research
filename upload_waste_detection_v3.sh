@@ -12,17 +12,27 @@ cd "$(git rev-parse --show-toplevel)"
 git switch main
 git pull --ff-only origin main
 
-# Accept the original 331-image ZIP or its identical retry download.
+# Locate the full 331-image ZIP in Downloads, regardless of downloaded filename.
+# An explicit path can always be provided as the first argument.
 if [[ $# -gt 0 ]]; then
   ZIP="$1"
-elif [[ -f "$HOME/Downloads/Waste_Detection_v3_NHS_Untrimmed_331.zip" ]]; then
-  ZIP="$HOME/Downloads/Waste_Detection_v3_NHS_Untrimmed_331.zip"
-elif [[ -f "$HOME/Downloads/waste_detection_331_retry.zip" ]]; then
-  ZIP="$HOME/Downloads/waste_detection_331_retry.zip"
 else
-  echo "331-image ZIP not found in Downloads. Pass its path: bash upload_waste_detection_v3.sh /path/to/file.zip" >&2
-  exit 1
+  ZIP=""
+  for candidate in "$HOME/Downloads/Waste_Detection_v3_NHS_331.zip" \
+                   "$HOME/Downloads/waste_detection_331_retry.zip" \
+                   "$HOME"/Downloads/*331*.zip; do
+    if [[ -f "$candidate" ]]; then
+      ZIP="$candidate"
+      break
+    fi
+  done
+  if [[ -z "$ZIP" ]]; then
+    echo "331-image ZIP not found in Downloads. Pass the downloaded file path:" >&2
+    echo "  bash upload_waste_detection_v3.sh ~/Downloads/your_filename.zip" >&2
+    exit 1
+  fi
 fi
+echo "Using dataset: $ZIP"
 python3 - "$ZIP" <<'PY'
 import csv
 import io
