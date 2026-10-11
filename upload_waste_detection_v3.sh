@@ -12,7 +12,17 @@ cd "$(git rev-parse --show-toplevel)"
 git switch main
 git pull --ff-only origin main
 
-ZIP="${1:-$HOME/Downloads/Waste_Detection_v3_NHS_Untrimmed_331.zip}"
+# Accept the original 331-image ZIP or its identical retry download.
+if [[ $# -gt 0 ]]; then
+  ZIP="$1"
+elif [[ -f "$HOME/Downloads/Waste_Detection_v3_NHS_Untrimmed_331.zip" ]]; then
+  ZIP="$HOME/Downloads/Waste_Detection_v3_NHS_Untrimmed_331.zip"
+elif [[ -f "$HOME/Downloads/waste_detection_331_retry.zip" ]]; then
+  ZIP="$HOME/Downloads/waste_detection_331_retry.zip"
+else
+  echo "331-image ZIP not found in Downloads. Pass its path: bash upload_waste_detection_v3.sh /path/to/file.zip" >&2
+  exit 1
+fi
 python3 - "$ZIP" <<'PY'
 import csv
 import io
