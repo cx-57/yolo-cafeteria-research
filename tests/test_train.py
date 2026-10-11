@@ -10,7 +10,7 @@ from unittest.mock import patch
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "scripts"))
 import train
 
 
@@ -21,7 +21,7 @@ class TrainingPipelineTests(unittest.TestCase):
         root = Path(self.tmp.name)
         self.processed = root / "processed"
         self.output = root / "training"
-        self.patch_processed = patch.object(train, "PROCESSED", self.processed)
+        self.patch_processed = patch.object(train, "DATA", root)
         self.patch_output = patch.object(train, "OUTPUT", self.output)
         self.patch_processed.start()
         self.patch_output.start()
