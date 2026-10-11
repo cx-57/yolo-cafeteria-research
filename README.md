@@ -70,7 +70,13 @@ The checked-in script extracts the original-photo snapshots under `data/raw/`, t
 
 The raw images are snapshots of retained/held photos, not the complete unfiltered Roboflow exports. Processed LVIS plates still require visual annotation review. See `data/README.md` for details.
 
-## Current verified status (October 9–10, 2026)
+## Newly committed source images (October 10)
+
+The GitHub repository now tracks **62 additional TartanHacks v2 photos** under both `data/raw/tartanhacks/` (unaltered source labels) and `data/processed/tartanhacks/` (YOLO-mapped labels): **35 napkin images / 36 boxes (class 6)** and **27 white disposable utensil images / 27 boxes (class 3)**. Photos were temporally thinned from 7 napkin and 9 utensil video clips; clip groups must not cross evaluation splits. These labels remain provisional until complete multi-class review.
+
+Food Packages v2 was inspected (1,808 photos) but **no images added**: its beige 2/3-compartment packing trays are not the school's clear four-compartment container. See `data/audits/source_screening_2026-10-10.md`.
+
+## Previous corpus audit baseline (October 9–10, 2026)
 
 The **accepted** collection has **1,616 images / 3,824 annotations**; this includes the 44 reviewed condiment photos. The verified LVIS batch is a **separate 388-image candidate set** and does not change the accepted total. Missing accepted classes: **plate, paper_boat, compartment_container, napkin**. See `data/audits/current/summary.json` and `data/audits/lvis_2026-10-10/README.md` for details.
 
