@@ -12,7 +12,7 @@ import prepare
 
 class PrepareTests(unittest.TestCase):
     def test_documented_help_works_without_raw_data(self):
-        run = subprocess.run([sys.executable, str(ROOT / 'src/prepare.py'), '--help'], capture_output=True, text=True)
+        run = subprocess.run([sys.executable, str(ROOT / 'scripts/prepare.py'), '--help'], capture_output=True, text=True)
         self.assertEqual(run.returncode, 0, run.stderr)
         self.assertIn('source_key', run.stdout)
 
