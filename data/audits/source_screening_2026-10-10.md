@@ -1,4 +1,6 @@
-# New public source dataset screening (2026-10-10)
+# Historical source screening (2026-10-10)
+
+This record describes the retired experimental 11-class design. The unused compartment class has since been removed; its proposed images were never accepted. Current IDs are defined in `config.yaml`.
 
 ## Input audits
 - TartanHacks v2: 1568 images. Source labels include 180 napkin images (182 objects), 236 utensil images and 212 rigid-plastic-container images.
@@ -16,4 +18,4 @@
 Roboflow's original train/valid/test partitions have **different frames from the SAME videos in different splits**, so using those original splits would leak scenes. Each imported manifest row records `capture_group`. All frames sharing a capture_group MUST remain in the same downstream split. Reserve separate NHS scenes for actual test evaluation.
 
 ## Limitations
-The selected images were reviewed with class contact sheets, not individually full-resolution annotated in all 11 target classes. They are *provisional* until complete multi-class box review. Original file sha256, source path, split, license, and capture group are saved to the manifest. Unselected source images are excluded from GitHub.
+The selected images were reviewed with class contact sheets, not individually full-resolution annotated in all target classes in the retired 11-class proposal. They are *provisional* until complete multi-class box review. Original file sha256, source path, split, license, and capture group are saved to the manifest. Unselected source images are excluded from GitHub.

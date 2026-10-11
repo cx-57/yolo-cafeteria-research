@@ -14,3 +14,6 @@ venv/
 .env
 .DS_Store
 
+
+# Rebuilt from curated sources; never commit generated training copies
+data/training/

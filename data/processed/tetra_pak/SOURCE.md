@@ -7,10 +7,10 @@ License: CC BY 4.0
 Every source image was visually reviewed against the NHS cafeteria object standard. Only accepted image/label pairs belong here.
 
 - Source images reviewed: 1710
-- Images retained: 661
-- Images scrapped: 1049
-- Target class: `7 = drink_carton`
-- Retained object instances: 738
+- Images retained: 659
+- Images scrapped: 1051
+- Stored historical ID: `7 = drink_carton`; training ID: `6`
+- Retained object instances: 734
 - Segmentation polygons converted to detection boxes: 427
 - Native detection boxes retained: 311
 

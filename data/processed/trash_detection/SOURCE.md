@@ -10,8 +10,8 @@ All 2,783 source images were screened. Images with potentially useful bottle/wra
 
 Strict retention policy:
 
-- `Clear plastic bottle` -> project class `10 = bottle`
-- `Crisp packet` -> project class `9 = wrapper`
+- `Clear plastic bottle` -> historical stored class `10 = bottle` (training class `9`)
+- `Crisp packet` -> historical stored class `9 = wrapper` (training class `8`)
 - require at least one trusted target object with normalized bounding-box area >= 0.005
 - reject `Other plastic bottle` as a source class because it mixes beverage bottles with household/chemical bottles
 - reject `Other plastic wrapper` as a source class because it mixes food wrappers with bags, film, and unrelated plastic packaging

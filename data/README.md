@@ -1,15 +1,14 @@
-# Cafeteria image dataset
+# Dataset organization
 
-This directory is organized so image data can be versioned in GitHub alongside the code.
+- `data/raw/<source>/`: original source-photo snapshots and some historical Roboflow exports; **never train directly on these**.
+- `data/processed/<source>/images/` and `labels/`: the **2,022 curated/provisional image–label pairs** including **62 TartanHacks frames** and **344 provisional LVIS plates**. Labels use the **retained historical 11-class IDs** and are converted on export.
+- `data/candidates/lvis_plate/`: **44 held** LVIS images with potentially incomplete plate annotations; do not train on these yet.
+- `data/manifests/`: historical source splits, checksum provenance, capture groups and historical class IDs.
+- `data/training/`: generated, ignored, safe-to-delete working copy with **current 10-class IDs** and grouped train/validation splits.
+- `data/audits/old_11class_snapshot/`: old audit results for reference; regenerate `data/audits/current/` locally.
 
-- `raw/<source>/images/`: byte-identical **source-photo snapshots** for the 2,004 images included in this delivery. These preserve original photo bytes before label remapping and review. They are **not** complete, unfiltered Roboflow exports; rejected upstream examples are not included. Original filtered LVIS train/val annotations are in `raw/lvis_plate/annotations/`.
-- `processed/<source>/images/` and `labels/`: the 1,960 currently processed YOLO image/label pairs. This includes 344 provisionally included LVIS plate images (834 plate boxes). Manual review for all other visible classes remains outstanding.
-- `candidates/lvis_plate/images/` and `labels/`: 44 held LVIS plate examples (293 existing plate boxes) flagged for potentially incomplete plate labeling. **Do not train on these until corrected.**
-- `manifests/`: provenance and source splitting metadata.
-- `audits/current/`: structural checks for the 1,960 processed images.
+Current processed corpus: **2,022 images, 4,721 annotated objects**, before a complete multi-class visual label review. Missing class: **paper_boat**. Public napkin frames come from a few clips and must stay grouped by capture.
 
-The processed collection has 4,658 annotations and currently lacks accepted `paper_boat`, `compartment_container`, and `napkin` examples. Structural checks do not prove label completeness. Keep final NHS test scenes independent and untouched.
+Duplicate, unfiltered split directories were removed from `data/processed` for clarity; their originals remain in `data/raw` and prior Git commits. The deprecated compartment-container class had **zero accepted images** and is no longer part of the model.
 
-**Avoid duplicates in your working copy:** `raw/` contains the same photo pixels as the corresponding `processed/` or `candidates/` path. Only `processed/` should be used for prepared YOLO training inputs. Do not point training to `raw/` and `processed/` simultaneously.
-
-Sources and rights are described in `datasets.csv`, source READMEs and manifests. Original COCO photos retain their individual source terms.
+Do not combine `raw`, `processed`, and `training` as one dataset; many entries contain identical images. For reliable results, retain an independent set of natural NHS test scenes from different sessions/days. Data and licenses: `data/datasets.csv`.

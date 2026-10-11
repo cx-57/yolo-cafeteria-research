@@ -9,7 +9,7 @@ Every source image was visually reviewed against the NHS cafeteria object standa
 - Source images reviewed: 420
 - Images retained: 121
 - Images scrapped: 299
-- Target class: `5 = hinged_container`
+- Historical stored class: `5 = hinged_container`; training class: `4`
 - Polygon annotations converted to detection boxes where necessary: 37
 - Native detection boxes retained: 84
 

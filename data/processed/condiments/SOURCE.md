@@ -8,7 +8,7 @@ The data.yaml metadata identifies charles-xie / sauce-a1ypv-d8bii, version 1. Th
 
 All 44 images were visually inspected in contact sheets. They depict single-serve tomato/chili sauce sachets compatible with the target object form. Keep all 44 as public-source training candidates; exact NHS packet identity is unverified.
 
-- Final class: 8 = condiment_packet
+- Historical stored class: 8 = condiment_packet; training class: 7
 - Source classes collapsed: chili (23 images), tomato (21 images)
 - Images/instances: 44 / 44
 - Native detection boxes: 43

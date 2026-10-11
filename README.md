@@ -1,83 +1,66 @@
 # YOLO Cafeteria Research
 
-Detect cafeteria objects with YOLO11, then apply **separate school-specific disposal rules** (recycle / compost / trash). Object detection does not itself determine disposal.
+Detect NHS-style cafeteria items using **10 object classes** with Ultralytics YOLO11. Recycling/compost/trash decisions are **separate school-specific rules**, not predictions made by object detection.
 
-## Files to understand
+## Files
 
 | File | Purpose |
 |---|---|
-| `config.yaml` | Final class IDs and image targets |
-| `src/prepare.py` | Convert downloaded Roboflow datasets into review candidates |
-| `src/lvis.py` | Download real LVIS paper-plate photos and matching YOLO labels |
-| `src/audit.py` | Check reviewed image/label pairs, duplicate risks and provenance |
-| `src/train.py` | Train Ultralytics YOLO11 |
+| `config.yaml` | Current IDs for the 10 classes |
+| `src/prepare.py` | Convert Roboflow exports to review candidates |
+| `src/lvis.py` | Download/verify real LVIS paper-plate photos and boxes |
+| `src/audit.py` | Audit annotation integrity and dataset provenance |
+| `src/train.py` | Build grouped train/validation data and train YOLO11 |
+| `tests/` | Small checks for class conversion, geometry and auditing |
 
-`requirements.txt` has just **Ultralytics, PyYAML, and Pillow**. Everything else uses standard Python. The two files in `tests/` are small automated regression tests. Older dated audit reports are preserved as research evidence, not scripts you need to run.
+Only Ultralytics, PyYAML and Pillow are third-party dependencies.
 
-## The four steps
+## Current object classes
 
-**1. Get candidate images.** Download a Roboflow YOLO export into `data/raw/<source>/`, then run:
+| ID | Class | Images containing class (Oct 10) |
+|---:|---|---:|
+| 0 | food | 467 |
+| 1 | plate | 344 (provisional) |
+| 2 | paper_boat | 0 |
+| 3 | utensil | 155 |
+| 4 | hinged_container | 121 |
+| 5 | napkin | 35 (provisional) |
+| 6 | drink_carton | 1,099 |
+| 7 | condiment_packet | 44 |
+| 8 | wrapper | 33 |
+| 9 | bottle | 168 |
 
-```bash
-python3 src/prepare.py data/raw/school_lunch school_lunch
-```
+Images can contain multiple classes. **2,022 curated/provisional image-label pairs** with **4,721 boxes** are stored as source-specific flat pairs under `data/processed/<source>/images/` and `labels/`. This does *not* mean every image has complete multiclass labeling. Paper boats need data. New natural NHS scenes are required for final testing.
 
-For LVIS disposable paper plates, **one command** downloads the official annotations and the COCO **JPEG photos** referenced by them, validates images, and converts plate boxes (class `1`):
+The school **does not use a compartment container**. That unused class was removed; there were zero curated images of it. Old unfiltered Roboflow export copies were removed from `data/processed`, while source data under `data/raw` and Git history remain.
 
-```bash
-python3 src/lvis.py
-```
+## Important: historical label IDs
 
-If you already have the verified `LVIS_Paper_Plate_Candidate.zip` archive, you can directly integrate its real images into the *local* project (rather than download them again):
+The already-committed `data/processed/` annotations retain their **original 11-class numeric IDs** for provenance. The active **10-class mapping** is defined in `config.yaml`. `src/train.py` converts original IDs **in the generated training copy**; `src/audit.py` uses the same conversion. Do **not** point YOLO directly at the historical raw/processed labels as a 10-class dataset.
 
-```bash
-python3 src/lvis.py --import-archive ~/Downloads/LVIS_Paper_Plate_Candidate.zip
-```
+| Old stored ID | Current model ID |
+|---|---|
+| 0 food | 0 |
+| 1 plate | 1 |
+| 2 paper_boat | 2 |
+| 3 utensil | 3 |
+| 5 hinged_container | 4 |
+| 6 napkin | 5 |
+| 7 drink_carton | 6 |
+| 8 condiment_packet | 7 |
+| 9 wrapper | 8 |
+| 10 bottle | 9 |
 
-This imports **344 provisional plate photos / 834 boxes** to `data/processed/lvis_plate/` and holds **44 flagged photos / 293 boxes** in `data/candidates/lvis_plate/`. Images in `data/processed` are **not yet fully visually reviewed or complete for the other ten classes**; inspect/reannotate before final 11-class training. Large JPEG files remain local and are not tracked in GitHub. A separate plate-addition ZIP is available from the ChatGPT deliverable.
+Original ID 4 is retired. The stored source manifests likewise preserve historical numeric IDs.
 
-The LVIS files are placed at `data/candidates/lvis_plate/images/`, `labels/`, and `review.csv`. The script can reuse archives in `data/raw/lvis/` and existing COCO photos with `--coco-dir /path/to/coco`. Run it again to retry missing downloads. The last verified LVIS candidate count was **388 images and 1,127 plate boxes** (328 train, 60 validation). **44 images have potentially incomplete plate annotations**; see `review.csv` for flags. These candidate images are NOT automatically accepted for model training.
+## Workflows
 
-**2. Review labels and photos.** Only keep NHS-like objects. Inspect *every* candidate for missing plates and other visible target classes. Correct boxes manually before moving an image and its label into the matching `data/processed/<source>/images/` and `labels/` folders. Maintain provenance in `data/manifests/`. Do not mix source train/validation images or nearly identical backgrounds across different evaluation splits. Keep the natural NHS test set completely untouched.
+1. **Import** an export: `python3 src/prepare.py data/raw/school_lunch school_lunch`. It goes into `data/candidates` for review; it is not automatically accepted.
+2. **Add LVIS plates** (if needed): `python3 src/lvis.py`. It fetches real COCO photos referenced by LVIS; 44 flagged candidate images are held for review. The 344 provisionally included plates need a full annotation review for other visible objects.
+3. **Check data**: `python3 -m unittest discover -s tests -v` and `python3 src/audit.py --manifests data/manifests --output data/audits/current`. `data/audits/old_11class_snapshot` keeps the historical report; regenerate `current` locally for the new classes.
+4. **Prepare training data without training**: `python3 src/train.py --build-only`. This builds `data/training/` with converted **10-class** labels and deterministic grouped train/validation splits (80/20 target). Condiment views on the same backdrop stay in training, and TartanHacks video frames are grouped by clip. The generated folder is Git-ignored.
+5. **Train**: `python3 src/train.py` (100 epochs by default), or supply your own already-reviewed `data.yaml` with the exact 10 names/IDs.
 
-**3. Check reviewed data.**
+**Research limitation:** these are provisional public-source training/validation splits. Do not treat them as a trustworthy final NHS generalization estimate: source scenes may be correlated, the condiment group has no independent public-source validation, and some labels lack complete multiclass review. Reserve completely separate natural NHS cafeteria scenes/days for final evaluation.
 
-```bash
-python3 -m unittest discover -s tests -v
-python3 src/audit.py --manifests data/manifests --output data/audits/current
-```
-
-The audit checks data integrity; it **cannot** prove that every visible target object was annotated. It never silently deletes images. Raw and candidate image folders are tracked when added with Git. Trained weights and ZIP archives remain excluded by `.gitignore`.
-
-**4. Train only after review and a proper train/val split.**
-
-```bash
-python3 src/train.py path/to/data.yaml
-```
-
-The final class IDs are: `0 food`, `1 plate`, `2 paper_boat`, `3 utensil`, `4 compartment_container`, `5 hinged_container`, `6 napkin`, `7 drink_carton`, `8 condiment_packet`, `9 wrapper`, `10 bottle`. The model is not ready for a credible 11-class evaluation until missing classes and incomplete annotations are addressed. Use new, separate NHS cafeteria scenes for final testing.
-
-## Upload packaged images to GitHub (one-time)
-
-Download `YOLO_Raw_Images.zip` and `YOLO_Processed_Images.zip` into `~/Downloads`. Then, from your cloned repository, run:
-
-```bash
-git pull
-bash upload_images.sh
-```
-
-The checked-in script extracts the original-photo snapshots under `data/raw/`, the YOLO images/labels under `data/processed/`, and 44 held plate candidates under `data/candidates/`. It checks image counts and matching labels, commits the files and pushes them to `main`. You **must** run it from an authenticated computer with the ZIPs; the script alone cannot put images in GitHub.
-
-The raw images are snapshots of retained/held photos, not the complete unfiltered Roboflow exports. Processed LVIS plates still require visual annotation review. See `data/README.md` for details.
-
-## Newly committed source images (October 10)
-
-The GitHub repository now tracks **62 additional TartanHacks v2 photos** under both `data/raw/tartanhacks/` (unaltered source labels) and `data/processed/tartanhacks/` (YOLO-mapped labels): **35 napkin images / 36 boxes (class 6)** and **27 white disposable utensil images / 27 boxes (class 3)**. Photos were temporally thinned from 7 napkin and 9 utensil video clips; clip groups must not cross evaluation splits. These labels remain provisional until complete multi-class review.
-
-Food Packages v2 was inspected (1,808 photos) but **no images added**: its beige 2/3-compartment packing trays are not the school's clear four-compartment container. See `data/audits/source_screening_2026-10-10.md`.
-
-## Previous corpus audit baseline (October 9–10, 2026)
-
-The **accepted** collection has **1,616 images / 3,824 annotations**; this includes the 44 reviewed condiment photos. The verified LVIS batch is a **separate 388-image candidate set** and does not change the accepted total. Missing accepted classes: **plate, paper_boat, compartment_container, napkin**. See `data/audits/current/summary.json` and `data/audits/lvis_2026-10-10/README.md` for details.
-
-Data origins, licenses, and review scope are listed in `data/datasets.csv`. LVIS annotations are CC BY 4.0; COCO image licenses/rights belong to their respective source images. Source photos are only included in the user's local candidate folder after running the LVIS command.
+Sources, licenses and manifests are in `data/datasets.csv` and `data/manifests/`. Raw original images and historical annotation IDs are maintained as provenance.

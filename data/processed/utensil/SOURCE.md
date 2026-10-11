@@ -10,7 +10,7 @@ Every source image was visually reviewed against the NHS cafeteria object standa
 - Images retained: 128
 - Images scrapped: 337
 - Target class: `3 = utensil`
-- Retained object instances: 242
+- Retained object instances: 244
 - Segmentation polygons converted to detection boxes: 132
 - Native detection boxes retained: 110
 

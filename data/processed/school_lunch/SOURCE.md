@@ -9,7 +9,7 @@ All 1,876 source images were visually reviewed. Only the strict NHS-transfer sub
 - Source images reviewed: 1,876
 - Images retained: 467
 - Images scrapped: 1,409
-- Final project class IDs used in labels: `0 = food`, `7 = drink_carton`
+- Historical stored label IDs: `0 = food`, `7 = drink_carton`. Training IDs: `0` and `6`.
 - Re-upload verified byte-identical to the previously processed Roboflow source
 
 The source train/validation split is recorded in `data/manifests/school_lunch.csv`; processed files are stored flat so the project can create its own final split later.
