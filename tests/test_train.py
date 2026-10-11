@@ -50,7 +50,9 @@ class TrainingPipelineTests(unittest.TestCase):
         result = json.loads((self.output / "split_summary.json").read_text())
         t, v = result["train_originals"], result["val_originals"]
         self.assertEqual(t + v, 45)
+        self.assertEqual((t, v), (36, 9))  # Exact 80/20 originals, not 80/20 of eligible only.
         self.assertEqual(result["train_views"], 10 * t)
+        self.assertEqual(result["test_originals"], 0)
         self.assertGreater(v, 0)
         self.assertEqual(len(list((self.output / "images/train").glob("*.png"))), t * 10)
         self.assertEqual(len(list((self.output / "images/val").glob("*.png"))), v)
@@ -60,6 +62,21 @@ class TrainingPipelineTests(unittest.TestCase):
         original = next(p for p in (self.output / "images/train").iterdir() if "__view" not in p.stem)
         mirrored = original.with_name(original.stem + "__view01" + original.suffix)
         self.assertEqual(os.stat(original).st_ino, os.stat(mirrored).st_ino)
+
+    def test_ratio_applies_to_all_sources_without_leaking_train_only_photos(self):
+        self.populate()
+        for i in range(15):
+            self.add_image("food_american", f"additional_{i:02d}",
+                           (i * 3, 100, 15))
+        train.build_dataset(augment_factor=1, seed=42)
+        result = json.loads((self.output / "split_summary.json").read_text())
+        self.assertEqual(result["original_images"], 60)
+        self.assertEqual(result["target_validation_originals"], 12)
+        self.assertEqual(result["val_originals"], 12)
+        self.assertEqual(result["train_originals"], 48)
+        self.assertEqual(result["test_originals"], 0)
+        self.assertFalse(any(p.name.startswith("food_american__")
+                             for p in (self.output / "images/val").iterdir()))
 
     def test_deterministic_grouped_split(self):
         self.populate()
