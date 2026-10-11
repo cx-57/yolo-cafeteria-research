@@ -60,7 +60,6 @@ class TrainingPipelineTests(unittest.TestCase):
         original = next(p for p in (self.output / "images/train").iterdir() if "__view" not in p.stem)
         mirrored = original.with_name(original.stem + "__view01" + original.suffix)
         self.assertEqual(os.stat(original).st_ino, os.stat(mirrored).st_ino)
-        self.assertEqual(train.class_names(), train.class_names())
 
     def test_deterministic_grouped_split(self):
         self.populate()
@@ -100,6 +99,21 @@ class TrainingPipelineTests(unittest.TestCase):
         self.add_image("food_american", "bad", (100, 200, 100), "0 .95 .5 .4 .4")
         with self.assertRaises(ValueError):
             train.build_dataset()
+
+    def test_roundoff_correction_does_not_edit_source(self):
+        self.populate()
+        original = "0 0.500000 0.502695 1.000000 0.994629"
+        self.add_image("food_american", "rounding", (109, 97, 32), original)
+        train.build_dataset(augment_factor=1)
+        generated = self.output / "labels/train/food_american__rounding.txt"
+        self.assertTrue(generated.exists())  # New imports are train-only.
+        parts = generated.read_text().split()
+        x, y, w, h = map(float, parts[1:])
+        self.assertLessEqual(y + h / 2, 1.000001)
+        self.assertEqual((self.processed / "food_american/labels/rounding.txt").read_text(),
+                         original + "\n")
+        report = json.loads((self.output / "split_summary.json").read_text())
+        self.assertEqual(report["minor_boundary_rounding_clips_in_generated_labels"]["food_american"], 1)
 
     def test_orphan_label_and_missing_image_fail(self):
         self.populate()
