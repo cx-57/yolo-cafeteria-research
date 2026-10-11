@@ -1,116 +1,71 @@
 # YOLO Cafeteria Research
 
-Object detection for Natick High School-style cafeteria items. The model predicts **items**, not whether they belong in recycling, compost or trash; school-specific disposal rules remain a separate step.
+**Goal:** detect 11 cafeteria item types with YOLO11n. The model recognizes objects; NHS recycling/compost/trash rules are a separate step.
 
-## Current state (October 11, 2026)
+## Clean layout
 
-**3,096 processed original image/label pairs** across 12 sources on GitHub. These are public/provisional source images, **not** 3,096 independent NHS cafeteria scenes. Some annotations may omit other visible objects. Do not combine processed images with raw copies or generated training views.
+```text
+config.yaml             # 11 class names and IDs
+data/
+  processed/            # 3,096 original photos + labels (DO NOT edit)
+  raw/                  # historical source archives
+  candidates/           # unreviewed images (not training data)
+  manifests/            # source/provenance CSVs
+  training/             # generated train/validation data (ignored by Git)
+scripts/
+  train.py              # build 80/20 dataset, train, evaluate
+  prepare.py            # convert new Roboflow files into review candidates
+  audit.py              # inspect images, labels and provenance
+  lvis.py               # import/download LVIS plate candidates
+model/
+  weights/              # downloaded pretrained YOLO weights
+  runs/                 # trained best.pt, plots and metrics
+tests/                  # automated checks
+```
 
-The active detection IDs in [config.yaml](config.yaml) are:
+Only `model/README.md` is committed: the model weights and training outputs are created after running training.
 
-| ID | Class | ID | Class |
-|---:|---|---:|---|
-| 0 | food | 6 | drink_carton |
-| 1 | plate | 7 | condiment_packet |
-| 2 | paper_boat | 8 | wrapper |
-| 3 | utensil | 9 | bottle |
-| 4 | hinged_container | 10 | bowl |
-| 5 | napkin | | |
+## Set up and train
 
-**Important limitations:** No curated paper-boat annotations yet. Condiments have only 44 independent originals. Bowl examples and several newly imported sources are training-only because source train/validation examples overlap. Some validation classes will therefore have no measurable AP. This is appropriate: don't manufacture validation performance by leaking related images.
+From your repository folder:
 
-## Next-phase workflow
+```bash
+git pull
+python3 -m pip install -r requirements.txt
+python3 -m unittest discover -s tests -v
+python3 scripts/train.py --build-only
+python3 scripts/train.py data/training/data.yaml --device mps
+```
 
-### 1. Install and check
+Use `--device mps` for Apple Silicon, `--device 0` for an NVIDIA GPU, or omit it for automatic device selection.
 
-Run from the cloned repository:
+**Data split verified:** 2,477 original training images, 619 untouched validation images (80/20), and 0 test images. Only training images get **10× views** (24,770 hardlinked image paths with randomized YOLO training-time augmentation). Neither validation nor test is augmented. The 10× views are *not* extra independently captured photos. Grouped duplicates and correlated video images stay together. Train for up to 100 epochs with early stopping.
 
-    git pull
-    python3 -m venv .venv
-    source .venv/bin/activate
-    python3 -m pip install -r requirements.txt
-    python3 -m unittest discover -s tests -v
-    python3 src/audit.py --manifests data/manifests --output data/audits/current
+Important: some newer sources remain training-only to prevent source leakage, so validation is not representative of every class. Paper boats have no labeled training photos, and paper boats/napkins/condiment packets/bowls lack provisional validation examples. The 344 LVIS plates stay in `data/processed/plate/` and are included provisionally.
 
-The audit is read-only for originals, writes a local report, and may report source-label limitations that need manual review. Inspect it before describing the data as fully clean. You can also check local disk space using `df -h .`.
+## Commands
 
-### 2. Prepare the **10x** dataset without training
+| Task | Command |
+|---|---|
+| Prepare the dataset without training | `python3 scripts/train.py --build-only` |
+| Train a model | `python3 scripts/train.py data/training/data.yaml --device mps` |
+| Train without 10× views (1× comparison) | `python3 scripts/train.py --augment-factor 1 --device mps --name yolo11n-1x` |
+| Resume after interruption | `python3 scripts/train.py --resume model/runs/yolo11n-10x/weights/last.pt` |
+| Evaluate best checkpoint | `python3 scripts/train.py --evaluate model/runs/yolo11n-10x/weights/best.pt --device mps` |
+| Audit source photos | `python3 scripts/audit.py --manifests data/manifests --output data/audits/current` |
+| Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
+| Import additional LVIS candidate plates | `python3 scripts/lvis.py --help` |
 
-    python3 src/train.py --build-only --augment-factor 10
+To evaluate on a **genuine test set**, collect and fully annotate **separate NHS cafeteria photos** from different days/cameras. Copy `data/training/data.yaml` to a new local YAML and add `test: /absolute/path/to/nhs_test/images`, with matching labels in a sibling `labels/` folder. Then:
 
-This validates labels/image decoding, groups Roboflow variants and exact-pixel duplicates, and selects **approximately 80% of ALL original photos for training and 20% for validation** (2,477 / 619 at 3,096 images, if grouping permits). It does **not** apply 80/20 to only the eligible subset. To prevent leakage, condiments, TartanHacks video, and four correlated imports stay **training-only**; validation is selected from the remaining distinct-source groups. The held-out public-source validation set is consequently not fully representative of all classes.
+```bash
+python3 scripts/train.py data/training/data_with_test.yaml --evaluate model/runs/yolo11n-10x/weights/best.pt --split test --device mps
+```
 
-**Precisely what 10x means:** Every training original gets one original file path and **nine additional hardlinked training-view paths**. Each view is independently and randomly augmented by Ultralytics during training (brightness, color, mild geometry, horizontal flipping and mosaic). There are **ten training views per original** but **not ten independently photographed examples**, and not nine synthetic image files stored on disk. Hardlinks save considerable disk space. Validation contains exactly one untouched copy per held-out original and is not augmented. Do **not** commit `data/training/` to GitHub.
+Never use test images to tune the model. Do not report provisional public-source validation scores as real NHS test performance.
 
-Inspect `data/training/split_summary.json` for the actual train/validation counts, original per-class box/image support, and classes absent from validation.
+## Source history
 
-### 3. Train YOLO11n
+The early eight processed sources retain their **old stored class IDs**. `scripts/prepare.py` holds the mapping to the current `config.yaml` IDs. `scripts/train.py` converts IDs **only in the generated training copy**. Newly uploaded food, dry/wet waste and bowl images already use the current IDs. Never point YOLO directly at `data/processed/`; do not change originals.
 
-To use the prepared dataset without rebuilding it:
-
-    python3 src/train.py data/training/data.yaml --device mps --model yolo11n.pt --epochs 100 --batch 8 --name yolo11n-10x
-
-`--device mps` is for **Apple Silicon**. For an NVIDIA/CUDA GPU use `--device 0`. If you lack an accelerator, omit `--device` for auto-detection, but CPU training will be slower. Reduce `--batch` to 4 or 2 if you run out of memory.
-
-Training uses 640-pixel images, reproducible seed 42, early stopping with patience 25, and saves checkpoints and learning curves under `runs/yolo11n-10x/`. After training, the script evaluates `best.pt` against the **unchanged provisional validation** set, saves AP/precision/recall metrics and per-class results (unmeasurable classes are `null`), plus plots. YOLO randomly transforms the hardlinked views; it does not transform validation originals.
-
-To build and train in one command instead, omit the positional data.yaml:
-
-    python3 src/train.py --augment-factor 10 --device mps --name yolo11n-10x
-
-To resume a stopped run (the existing matching `data/training/` must be preserved):
-
-    python3 src/train.py --resume runs/yolo11n-10x/weights/last.pt
-
-To re-evaluate an existing model on the currently prepared validation set:
-
-    python3 src/train.py --evaluate runs/yolo11n-10x/weights/best.pt --device mps
-
-### 4. Examine errors, not only aggregate mAP
-
-Inspect `runs/yolo11n-10x/results.csv`, `confusion_matrix.png`, training/validation example plots and the generated `evaluation/metrics.json`. In particular check false positives from incomplete labels, confusing plastic vs paper objects, occlusion, small packets, distant utensils, the school-specific objects, and class coverage. **A class with no independently held-out validation examples cannot be rated.**
-
-### 5. Compare against a 1x control
-
-A fair research ablation keeps the same seed and original-image group split. Run:
-
-    python3 src/train.py --augment-factor 1 --device mps --name yolo11n-1x
-
-This rebuilds the Git-ignored working dataset with one training view per original. Complete and archive the 10x results before doing so. Both models retain the same **original** validation split; augmentation does **not** change the number of genuinely different original photos. Record run settings, class-wise results, and failure examples for both. Do not conclude that 10x is better without measuring.
-
-### 6. Create a truly independent NHS test set (not included in the 3,096)
-
-The **80/20 split is training/validation**; there is **no test portion of the existing 3,096**. Keep a separate final test set: collect new, naturally occurring NHS cafeteria scenes from independent days/cameras, annotate **every visible target-class instance**, and keep all test photos completely out of training, validation, augmentation and model selection. Recording capture groups, rights/consent and a meaningful number of examples per class matters more than using an arbitrary fixed size. Reserve the final test evaluation until you freeze your model.
-
-The evaluation script accepts a separate YAML containing the 11 unchanged class names and a `test:` image-folder path. For example, copy the generated `data/training/data.yaml` to `data/training/data_with_test.yaml` and add this line (using the **actual** absolute directory of your separately annotated NHS test images):
-
-    test: /absolute/path/to/nhs_test/images
-
-Keep YOLO labels under the corresponding `nhs_test/labels/` directory. Once the independent set has been annotated, run:
-
-    python3 src/train.py data/training/data_with_test.yaml --evaluate runs/yolo11n-10x/weights/best.pt --split test --device mps
-
-The script refuses test evaluation if the provided YAML lacks a `test:` path. Never use test scores to tune hyperparameters; report final per-class precision, recall, mAP50 and mAP50-95 along with support and failure examples. Currently paper boats have no training annotations, and some smaller classes lack meaningful public-source validation.
-
-**No actual model training runs automatically on GitHub:** the repository contains scripts and CPU-only tests. Training requires a local or cloud machine with Python/PyTorch and preferably GPU/MPS acceleration. GitHub Actions checks synthetic preprocessing tests; it is not a GPU trainer.
-
-## Repository structure
-
-- `config.yaml` — active 11 detection classes
-- `src/prepare.py` — Roboflow original-label conversion for review candidates
-- `src/lvis.py` — real LVIS plate image/box candidate importer; flagged photos remain held
-- `src/audit.py` — original-corpus data/provenance and annotation audits
-- `src/train.py` — complete build → 10x views → train → validation pipeline
-- `tests/` — quick synthetic label and leakage tests
-- `data/raw/` — originals and historical source material; not used directly for training
-- `data/processed/` — the 3,096 retained original image/label pairs
-- `data/manifests/` — sources, checksums and image provenance
-- `data/audits/` — historical audit evidence and known caveats
-- `data/training/` — regenerated, ignored training views
-- `runs/` — ignored model checkpoints and evaluation artifacts
-
-## Historical IDs — DO NOT remap the original stored files
-
-Previously stored sources use original 11-class IDs; the training builder converts only its generated labels. Historical IDs 0, 1, 2, 3 stay 0, 1, 2, 3; old 5→4 (hinged_container), 6→5 (napkin), 7→6 (drink_carton), 8→7 (condiment_packet), 9→8 (wrapper), 10→9 (bottle); old 4 is retired. Newly imported training-only sources already use the current IDs, including new 10=bowl. Never blend current-ID and historical-ID labels in the same processed source folder.
-
-See [dataset provenance](data/datasets.csv), [LVIS review](data/audits/lvis_2026-10-10/README.md), [waste detection screening](data/audits/waste_detection_v3_2026-10-10.md), [food additions](data/audits/food_additions_2026-10-11.md) and [raw/processed organization](data/README.md).
+More details: [data organization](data/README.md) · [source licenses](data/datasets.csv) · [audits](data/audits/).
