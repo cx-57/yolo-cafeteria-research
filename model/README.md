@@ -3,8 +3,8 @@
 `scripts/train.py` puts everything about the **trained model** here:
 
 - `weights/yolo11n.pt`: downloaded pretrained starting weights (local; Git-ignored).
-- `runs/yolo11n-10x/weights/best.pt`: best trained checkpoint (local; Git-ignored).
-- `runs/yolo11n-10x/results.csv`: training metrics and plots.
+- `runs/yolo11n-1x/weights/best.pt`: best trained checkpoint (local; Git-ignored).
+- `runs/yolo11n-1x/results.csv`: training metrics and plots.
 - `runs/evaluation_val*/metrics.json`: per-class validation report.
 - `runs/evaluation_test*/metrics.json`: independent NHS test report, once collected.
 
