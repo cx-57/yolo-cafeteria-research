@@ -32,7 +32,7 @@ Run from the cloned repository:
     python3 -m unittest discover -s tests -v
     python3 src/audit.py --manifests data/manifests --output data/audits/current
 
-The audit is read-only for originals, writes a local report, and may report source-label limitations that need manual review. Inspect it before describing the data as fully clean. You can also check local disk space using \`df -h .\`.
+The audit is read-only for originals, writes a local report, and may report source-label limitations that need manual review. Inspect it before describing the data as fully clean. You can also check local disk space using `df -h .`.
 
 ### 2. Prepare the **10x** dataset without training
 
@@ -40,9 +40,9 @@ The audit is read-only for originals, writes a local report, and may report sour
 
 This runs the original-label / image-decoding checks, groups Roboflow variants, keeps exact-pixel duplicates across different sources in one split, and applies a deterministic 80/20 group-level target where independent public-source splits are feasible. Condiments, TartanHacks video and four new potentially correlated imports stay **training-only**.
 
-**Precisely what 10x means:** Every training original gets one original file path and **nine additional hardlinked training-view paths**. Each view is independently and randomly augmented by Ultralytics during training (brightness, color, mild geometry, horizontal flipping and mosaic). There are **ten training views per original** but **not ten independently photographed examples**, and not nine synthetic image files stored on disk. Hardlinks save considerable disk space. Validation contains exactly one untouched copy per held-out original and is not augmented. Do **not** commit \`data/training/\` to GitHub.
+**Precisely what 10x means:** Every training original gets one original file path and **nine additional hardlinked training-view paths**. Each view is independently and randomly augmented by Ultralytics during training (brightness, color, mild geometry, horizontal flipping and mosaic). There are **ten training views per original** but **not ten independently photographed examples**, and not nine synthetic image files stored on disk. Hardlinks save considerable disk space. Validation contains exactly one untouched copy per held-out original and is not augmented. Do **not** commit `data/training/` to GitHub.
 
-Inspect \`data/training/split_summary.json\` for the actual train/validation counts, original per-class box/image support, and classes absent from validation.
+Inspect `data/training/split_summary.json` for the actual train/validation counts, original per-class box/image support, and classes absent from validation.
 
 ### 3. Train YOLO11n
 
@@ -50,15 +50,15 @@ To use the prepared dataset without rebuilding it:
 
     python3 src/train.py data/training/data.yaml --device mps --model yolo11n.pt --epochs 100 --batch 8 --name yolo11n-10x
 
-\`--device mps\` is for **Apple Silicon**. For an NVIDIA/CUDA GPU use \`--device 0\`. If you lack an accelerator, omit \`--device\` for auto-detection, but CPU training will be slower. Reduce \`--batch\` to 4 or 2 if you run out of memory.
+`--device mps` is for **Apple Silicon**. For an NVIDIA/CUDA GPU use `--device 0`. If you lack an accelerator, omit `--device` for auto-detection, but CPU training will be slower. Reduce `--batch` to 4 or 2 if you run out of memory.
 
-Training uses 640-pixel images, reproducible seed 42, early stopping with patience 25, and saves checkpoints and learning curves under \`runs/yolo11n-10x/\`. After training, the script evaluates \`best.pt\` against the **unchanged provisional validation** set, saves AP/precision/recall metrics and per-class results (unmeasurable classes are \`null\`), plus plots. YOLO randomly transforms the hardlinked views; it does not transform validation originals.
+Training uses 640-pixel images, reproducible seed 42, early stopping with patience 25, and saves checkpoints and learning curves under `runs/yolo11n-10x/`. After training, the script evaluates `best.pt` against the **unchanged provisional validation** set, saves AP/precision/recall metrics and per-class results (unmeasurable classes are `null`), plus plots. YOLO randomly transforms the hardlinked views; it does not transform validation originals.
 
 To build and train in one command instead, omit the positional data.yaml:
 
     python3 src/train.py --augment-factor 10 --device mps --name yolo11n-10x
 
-To resume a stopped run (the existing matching \`data/training/\` must be preserved):
+To resume a stopped run (the existing matching `data/training/` must be preserved):
 
     python3 src/train.py --resume runs/yolo11n-10x/weights/last.pt
 
@@ -68,7 +68,7 @@ To re-evaluate an existing model on the currently prepared validation set:
 
 ### 4. Examine errors, not only aggregate mAP
 
-Inspect \`runs/yolo11n-10x/results.csv\`, \`confusion_matrix.png\`, training/validation example plots and the generated \`evaluation/metrics.json\`. In particular check false positives from incomplete labels, confusing plastic vs paper objects, occlusion, small packets, distant utensils, the school-specific objects, and class coverage. **A class with no independently held-out validation examples cannot be rated.**
+Inspect `runs/yolo11n-10x/results.csv`, `confusion_matrix.png`, training/validation example plots and the generated `evaluation/metrics.json`. In particular check false positives from incomplete labels, confusing plastic vs paper objects, occlusion, small packets, distant utensils, the school-specific objects, and class coverage. **A class with no independently held-out validation examples cannot be rated.**
 
 ### 5. Compare against a 1x control
 
@@ -86,18 +86,18 @@ Take and annotate new natural NHS cafeteria scenes from separate days/lighting/c
 
 ## Repository structure
 
-- \`config.yaml\` — active 11 detection classes
-- \`src/prepare.py\` — Roboflow original-label conversion for review candidates
-- \`src/lvis.py\` — real LVIS plate image/box candidate importer; flagged photos remain held
-- \`src/audit.py\` — original-corpus data/provenance and annotation audits
-- \`src/train.py\` — complete build → 10x views → train → validation pipeline
-- \`tests/\` — quick synthetic label and leakage tests
-- \`data/raw/\` — originals and historical source material; not used directly for training
-- \`data/processed/\` — the 3,096 retained original image/label pairs
-- \`data/manifests/\` — sources, checksums and image provenance
-- \`data/audits/\` — historical audit evidence and known caveats
-- \`data/training/\` — regenerated, ignored training views
-- \`runs/\` — ignored model checkpoints and evaluation artifacts
+- `config.yaml` — active 11 detection classes
+- `src/prepare.py` — Roboflow original-label conversion for review candidates
+- `src/lvis.py` — real LVIS plate image/box candidate importer; flagged photos remain held
+- `src/audit.py` — original-corpus data/provenance and annotation audits
+- `src/train.py` — complete build → 10x views → train → validation pipeline
+- `tests/` — quick synthetic label and leakage tests
+- `data/raw/` — originals and historical source material; not used directly for training
+- `data/processed/` — the 3,096 retained original image/label pairs
+- `data/manifests/` — sources, checksums and image provenance
+- `data/audits/` — historical audit evidence and known caveats
+- `data/training/` — regenerated, ignored training views
+- `runs/` — ignored model checkpoints and evaluation artifacts
 
 ## Historical IDs — DO NOT remap the original stored files
 
