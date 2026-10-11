@@ -39,7 +39,7 @@ python3 scripts/train.py data/training/data.yaml --device mps
 
 Use `--device mps` for Apple Silicon, `--device 0` for an NVIDIA GPU, or omit it for automatic device selection.
 
-**Data split verified:** 2,477 original training images, 619 untouched validation images (80/20), and 0 test images. Only training images get **10× views** (24,770 hardlinked image paths with randomized YOLO training-time augmentation). Neither validation nor test is augmented. The 10× views are *not* extra independently captured photos. Grouped duplicates and correlated video images stay together. Train for up to 100 epochs with early stopping.
+**Data split verified:** 2,477 original training images, 619 untouched validation images (80/20), and 0 test images. By default, training uses **1× views** (2,477 original image paths), with **randomized YOLO augmentation during training**. There are no redundant hardlinked views. Neither validation nor test is augmented. Grouped duplicates and correlated video images stay together. Train for up to 100 epochs with early stopping.
 
 Important: some newer sources remain training-only to prevent source leakage, so validation is not representative of every class. Paper boats have no labeled training photos, and paper boats/napkins/condiment packets/bowls lack provisional validation examples. The 344 LVIS plates stay in `data/processed/plate/` and are included provisionally.
 
@@ -49,8 +49,8 @@ Important: some newer sources remain training-only to prevent source leakage, so
 |---|---|
 | Prepare the dataset without training | `python3 scripts/train.py --build-only` |
 | Train a model | `python3 scripts/train.py data/training/data.yaml --device mps` |
-| Train without 10× views (1× comparison) | `python3 scripts/train.py --augment-factor 1 --device mps --name yolo11n-1x` |
-| Resume after interruption | `python3 scripts/train.py --resume model/runs/yolo11n-10x/weights/last.pt` |
+| Train with 1× views (default) | `python3 scripts/train.py --epochs 80 --batch 4 --device mps` |
+| Resume after interruption | `python3 scripts/train.py --resume model/runs/yolo11n-1x/weights/last.pt` |
 | Evaluate best checkpoint | `python3 scripts/train.py --evaluate model/runs/yolo11n-10x/weights/best.pt --device mps` |
 | Audit source photos | `python3 scripts/audit.py --manifests data/manifests --output data/audits/current` |
 | Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
