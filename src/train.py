@@ -62,10 +62,34 @@ def link_or_copy(source, destination):
         shutil.copy2(source, destination)
 
 
+def clip_export_rounding(row):
+    """Clip only sub-0.0001 normalized boundary overshoot from export rounding.
+
+    This is applied to the GENERATED copy, never the original annotations.
+    Materially invalid boxes still fail and must be reviewed.
+    """
+    parts = row.split()
+    cid = parts[0]
+    x, y, w, h = map(float, parts[1:])
+    if not (w > 0 and h > 0):
+        return row, False
+    left, right = x - w / 2, x + w / 2
+    top, bottom = y - h / 2, y + h / 2
+    error = max(0, -left, right - 1, -top, bottom - 1)
+    if error == 0 or error > 0.0001:
+        return row, False
+    left, right = max(0, left), min(1, right)
+    top, bottom = max(0, top), min(1, bottom)
+    if left >= right or top >= bottom:
+        return row, False
+    return (f"{cid} {(left + right) / 2:.9f} {(top + bottom) / 2:.9f} "
+            f"{right - left:.9f} {bottom - top:.9f}"), True
+
+
 def read_labels(label, source, names):
     id_to_name = dict(enumerate(names))
     name_to_id = {name: idx for idx, name in enumerate(names)}
-    rows = []
+    rows, corrections = [], 0
     if not label.is_file():
         raise FileNotFoundError("Missing YOLO annotation: " + str(label))
     for number, line in enumerate(label.read_text().splitlines(), 1):
@@ -75,13 +99,20 @@ def read_labels(label, source, names):
         if len(parts) != 5:
             raise ValueError(f"{label}:{number}: expected 5 YOLO detection values")
         converted = current_label(line, source)
-        valid = remap_label_line(converted, id_to_name, name_to_id, label, number)
+        try:
+            valid = remap_label_line(converted, id_to_name, name_to_id, label, number)
+        except ValueError:
+            corrected, did_clip = clip_export_rounding(converted)
+            if not did_clip:
+                raise
+            valid = remap_label_line(corrected, id_to_name, name_to_id, label, number)
+            corrections += 1
         if valid is None:
             raise ValueError(f"{label}:{number}: unmapped class")
         rows.append(valid)
     if not rows:
         raise ValueError("Empty annotations (unverified negatives are not allowed): " + str(label))
-    return rows
+    return rows, corrections
 
 
 def collect(names):
@@ -89,6 +120,7 @@ def collect(names):
     grouped = defaultdict(list)
     digest_groups = defaultdict(set)
     per_source = Counter()
+    rounded_boxes = Counter()
     for source in sorted(SOURCES):
         image_dir = PROCESSED / source / "images"
         label_dir = PROCESSED / source / "labels"
@@ -98,7 +130,8 @@ def collect(names):
             if image.suffix.lower() not in IMAGE_SUFFIXES:
                 continue
             label = label_dir / (image.stem + ".txt")
-            rows = read_labels(label, source, names)
+            rows, clipped = read_labels(label, source, names)
+            rounded_boxes[source] += clipped
             digest = pixel_digest(image)  # Also checks that the image decodes.
             group = source + ":" + group_for_split(source, image.stem)
             grouped[group].append((source, image, rows))
@@ -133,7 +166,7 @@ def collect(names):
     components = defaultdict(list)
     for key, items in grouped.items():
         components[find(key)].extend(items)
-    return components, dict(per_source), sum(len(keys) > 1 for keys in digest_groups.values())
+    return components, dict(per_source), sum(len(keys) > 1 for keys in digest_groups.values()), dict(rounded_boxes)
 
 
 def build_dataset(augment_factor=10, seed=42):
@@ -141,7 +174,7 @@ def build_dataset(augment_factor=10, seed=42):
     if augment_factor < 1 or augment_factor > 20:
         raise ValueError("--augment-factor must be between 1 and 20")
     names = class_names()
-    groups, source_counts, duplicate_groups = collect(names)
+    groups, source_counts, duplicate_groups, clipped_boxes = collect(names)
     if OUTPUT.exists():
         shutil.rmtree(OUTPUT)  # Generated and Git-ignored, never the source corpus.
 
@@ -197,6 +230,7 @@ def build_dataset(augment_factor=10, seed=42):
         "train_views": counts["train_views"],
         "val_originals": counts["val_originals"],
         "exact_pixel_duplicate_groups_linked": duplicate_groups,
+        "minor_boundary_rounding_clips_in_generated_labels": clipped_boxes,
         "group_counts": dict(groups_by_split),
         "train_class_images_original": {name: class_images["train"][i] for i, name in enumerate(names)},
         "val_class_images_original": {name: class_images["val"][i] for i, name in enumerate(names)},
