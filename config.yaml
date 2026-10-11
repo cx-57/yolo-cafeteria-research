@@ -3,13 +3,12 @@ classes:
   1: plate
   2: paper_boat
   3: utensil
-  4: compartment_container
-  5: hinged_container
-  6: napkin
-  7: drink_carton
-  8: condiment_packet
-  9: wrapper
-  10: bottle
+  4: hinged_container
+  5: napkin
+  6: drink_carton
+  7: condiment_packet
+  8: wrapper
+  9: bottle
 
 # Planning targets for usable NHS-like original images.
 targets:
@@ -17,7 +16,6 @@ targets:
   plate: 400
   paper_boat: 350
   utensil: 500
-  compartment_container: 400
   hinged_container: 450
   napkin: 500
   drink_carton: 350

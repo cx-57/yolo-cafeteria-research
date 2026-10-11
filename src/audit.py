@@ -10,7 +10,7 @@ import sys
 from PIL import Image, ImageOps
 import yaml
 
-from prepare import CLASS_MAPS, IMAGE_SUFFIXES, PROJECT_ROOT, class_names_by_id, remap_label_line
+from prepare import CLASS_MAPS, IMAGE_SUFFIXES, PROJECT_ROOT, class_names_by_id, remap_label_line, current_label
 
 
 def write_csv(path, rows, fields):
@@ -72,7 +72,7 @@ def audit(processed, output, config, raw=None, manifests=None):
                 try:
                     if len(line.split()) != 5:
                         raise ValueError('expected exactly five detection values')
-                    valid = remap_label_line(line, final_names, identity_map, label, line_number)
+                    valid = remap_label_line(current_label(line, source), final_names, identity_map, label, line_number)
                     cid = int(valid.split()[0]); rows.append(valid)
                     class_instances[cid] += 1
                     source_counts[source][f'class_{cid}'] += 1

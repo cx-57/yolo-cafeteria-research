@@ -46,8 +46,17 @@ class PrepareTests(unittest.TestCase):
                 self.fail(str(exc))
             self.assertEqual(count, 1)
             self.assertTrue((output / 'macworx/images/train__a.jpg').exists())
-            self.assertEqual((output / 'macworx/labels/train__a.txt').read_text(), '5 .5 .5 .2 .2\n')
+            self.assertEqual((output / 'macworx/labels/train__a.txt').read_text(), '4 .5 .5 .2 .2\n')
 
+
+
+class LabelMigrationTests(unittest.TestCase):
+    def test_old_class_ids_are_read_using_current_ids(self):
+        self.assertEqual(prepare.current_label('5 .5 .5 .2 .2', 'macworx'), '4 .5 .5 .2 .2')
+        self.assertEqual(prepare.current_label('8 .5 .5 .2 .2', 'condiments'), '7 .5 .5 .2 .2')
+        self.assertEqual(prepare.current_label('4 .5 .5 .2 .2', 'fresh_source'), '4 .5 .5 .2 .2')
+        with self.assertRaises(ValueError):
+            prepare.current_label('4 .5 .5 .2 .2', 'macworx')
 
 
 class LvisTests(unittest.TestCase):

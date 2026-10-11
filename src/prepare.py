@@ -39,18 +39,18 @@ CLASS_MAPS = {
         "sausages": 0,
         "spaghetti": 0,
         "white bread": 0,
-        "milk": 7,
+        "milk": 6,
     },
-    "tetra_pak": {"tetra pak": 7},
-    "container": {"clamshell": 5},
+    "tetra_pak": {"tetra pak": 6},
+    "container": {"clamshell": 4},
     "trash": {
-        "clear plastic bottle": 10,
-        "crisp packet": 9,
+        "clear plastic bottle": 9,
+        "crisp packet": 8,
     },
     "utensils": {"plastic utensil": 3},
     "condiments": {
-        "chili": 8,
-        "tomato": 8,
+        "chili": 7,
+        "tomato": 7,
     },
 }
 
@@ -79,6 +79,29 @@ CLASS_MAPS['macworx'] = CLASS_MAPS['container']
 CLASS_MAPS['utensil'] = CLASS_MAPS['utensils']
 CLASS_MAPS['trash_detection'] = CLASS_MAPS['trash']
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
+
+# Previously committed processed labels use the original 11-class IDs.
+# Keep those source labels unchanged for research provenance; audit/train
+# convert them to the new 10-class IDs when reading them.
+LEGACY_TO_CURRENT = {0: 0, 1: 1, 2: 2, 3: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9}
+LEGACY_SOURCES = {
+    "condiments", "lvis_plate", "macworx", "school_lunch",
+    "tartanhacks", "tetra_pak", "trash_detection", "utensil",
+}
+
+
+def current_label(line, source):
+    """Convert a saved label into the active 10-class scheme."""
+    parts = line.split()
+    if not parts:
+        return ""
+    old_id = int(parts[0])
+    if source in LEGACY_SOURCES:
+        if old_id not in LEGACY_TO_CURRENT:
+            raise ValueError(f"Unsupported old class ID {old_id} in {source}")
+        parts[0] = str(LEGACY_TO_CURRENT[old_id])
+    return " ".join(parts)
+
 
 
 def class_names_by_id(names):
