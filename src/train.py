@@ -16,7 +16,7 @@ CONFIG = PROJECT_ROOT / "config.yaml"
 PROCESSED = PROJECT_ROOT / "data/processed"
 OUTPUT = PROJECT_ROOT / "data/training"
 # New downloads already use current IDs; never remap them as legacy.
-ADDITIONAL_TRAIN_SOURCES = {"waste_detection_v3"}
+ADDITIONAL_TRAIN_SOURCES = {"waste_detection_v3", "dry_wet_waste"}
 
 
 def group_for_split(source, filename):

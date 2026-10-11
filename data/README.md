@@ -14,3 +14,6 @@ Duplicate, unfiltered split directories were removed from `data/processed` for c
 Do not combine `raw`, `processed`, and `training` as one dataset; many entries contain identical images. For reliable results, retain an independent set of natural NHS test scenes from different sessions/days. Data and licenses: `data/datasets.csv`.
 
 Optional reviewed ZIP `Waste_Detection_v3_NHS_Untrimmed_331.zip` adds 331 training-only pairs, including 75 disposable bowls for new class ID 10. These 331 images are committed under `data/processed/waste_detection_v3`; old processed sources remain on their historical label scheme and are remapped only when creating training copies.
+
+
+Optional Dry & Wet Waste import: `Dry_Wet_Waste_NHS_233.zip` contains **233 training-only candidates** (143 bottles, 56 wrappers, 34 napkins). Import with `bash upload_dry_wet_waste.sh`; the other 1,593 source photos are excluded or remain held. Do not place unreviewed exports under `data/processed`. The source images are not necessarily cleared for public redistribution.

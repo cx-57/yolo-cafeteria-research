@@ -81,3 +81,15 @@ bash upload_waste_detection_v3.sh
 The uploader checks image/label matching, 342 valid boxes including 82 bowls, the provenance manifest, and conflicting files before committing to `main`. The original labels are already in the **current 11-class ID format**. The training builder will include these images **only in training**.
 
 **Do not merge with the obsolete 51-image subset**: the 331-image ZIP replaces it, and includes those 51 already. The 331 images and converted YOLO labels are now committed under `data/processed/waste_detection_v3/`. For detailed decisions and limitations see [the updated three-check audit](data/audits/waste_detection_v3_2026-10-10.md).
+
+## Dry & Wet Waste (screened candidates)
+
+A second visual pass over **589** provisional photos retained **233 training-only candidates**: 143 beverage bottles (ID 9), 56 snack wrappers (ID 8), and 34 napkins (ID 5). The other 356 were excluded, including 346 fruit/vegetable/peel photos unsuitable for NHS cafeteria food detection. No similar-photo thinning was performed.
+
+Download `Dry_Wet_Waste_NHS_233.zip` from the ChatGPT audit, save it to `~/Downloads`, and run:
+
+```bash
+bash upload_dry_wet_waste.sh
+```
+
+The script validates all 233 JPEG/label pairs, manifest checksums, YOLO geometry, and counts before committing the dataset to `data/processed/dry_wet_waste/`. This source uses the current **11-class** IDs and is **training-only** to avoid source-split leakage. Do not use the original Roboflow validation/test photos as independent NHS evaluation. The entire 1,826-image dry/wet dataset is **not** imported: only the 233-screened training candidates are. Box tightness, multiclass completeness and individual image licensing remain provisional; some stock photographs in the original source have separate rights restrictions.
