@@ -1,5 +1,5 @@
 # Raw downloads and model outputs
-runs/
+model/runs/
 *.pt
 *.onnx
 *.zip
