@@ -137,8 +137,8 @@ def import_archive(archive_path):
                         x+width/2 <= 1+1e-6 and y+height/2 <= 1+1e-6):
                     raise ValueError(f"Invalid plate geometry: {source_label}")
             flagged = bool(item["non_exhaustive_plate"])
-            destination = (ROOT / "data/candidates/lvis_plate" if flagged
-                           else ROOT / "data/processed/lvis_plate")
+            destination = (ROOT / "data/candidates/plate" if flagged
+                           else ROOT / "data/processed/plate")
             filename = f"{item['split']}__{Path(source_image).name}"
             image_path = destination / "images" / filename
             label_path = destination / "labels" / (Path(filename).stem + ".txt")
@@ -161,8 +161,8 @@ def import_archive(archive_path):
                 held += 1
             else:
                 kept += 1
-    for path, records in ((ROOT / "data/manifests/lvis_plate.csv", kept_rows),
-                          (ROOT / "data/candidates/lvis_plate/flagged_for_review.csv", held_rows)):
+    for path, records in ((ROOT / "data/manifests/plate.csv", kept_rows),
+                          (ROOT / "data/candidates/plate/flagged_for_review.csv", held_rows)):
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=list(records[0]))
@@ -181,7 +181,7 @@ def main():
         import_archive(args.import_archive)
         return
     archives = ROOT / "data/raw/lvis"
-    output = ROOT / "data/candidates/lvis_plate"
+    output = ROOT / "data/candidates/plate"
     failures, review_rows = [], []
     for split in ("train", "val"):
         data = load_annotations(split, archives)

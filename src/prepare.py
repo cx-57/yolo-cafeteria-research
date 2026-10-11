@@ -85,7 +85,7 @@ IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp"}
 # convert them to the new 10-class IDs when reading them.
 LEGACY_TO_CURRENT = {0: 0, 1: 1, 2: 2, 3: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9}
 LEGACY_SOURCES = {
-    "condiments", "lvis_plate", "macworx", "school_lunch",
+    "condiments", "plate", "macworx", "school_lunch",
     "tartanhacks", "tetra_pak", "trash_detection", "utensil",
 }
 

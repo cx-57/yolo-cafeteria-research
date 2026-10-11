@@ -80,4 +80,4 @@ bash upload_waste_detection_v3.sh
 
 The uploader checks image/label matching, 342 valid boxes including 82 bowls, the provenance manifest, and conflicting files before committing to `main`. The original labels are already in the **current 11-class ID format**. The training builder will include these images **only in training**.
 
-**Do not merge with the obsolete 51-image subset**: the 331-image ZIP replaces it, and includes those 51 already. JPEGs and their converted YOLO labels are distributed in the ZIP, not stored on GitHub yet. For detailed decisions and limitations see [the updated three-check audit](data/audits/waste_detection_v3_2026-10-10.md).
+**Do not merge with the obsolete 51-image subset**: the 331-image ZIP replaces it, and includes those 51 already. The 331 images and converted YOLO labels are now committed under `data/processed/waste_detection_v3/`. For detailed decisions and limitations see [the updated three-check audit](data/audits/waste_detection_v3_2026-10-10.md).
