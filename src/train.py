@@ -1,122 +1,356 @@
-"""Train on current NHS object classes; never change source labels."""
+"""Build leakage-aware training views, train YOLO11, and evaluate on untouched validation photos.
+
+10x means 10 training *views* of each original. The views hardlink the same
+image bytes; Ultralytics independently augments each view while training.
+No synthetic images are committed, and validation is never augmented.
+"""
 import argparse
-from collections import defaultdict
+from collections import Counter, defaultdict
 import hashlib
+import json
 import os
 from pathlib import Path
 import re
 import shutil
 
+from PIL import Image
 import yaml
-from ultralytics import YOLO
 
-from prepare import PROJECT_ROOT, IMAGE_SUFFIXES, LEGACY_SOURCES, current_label
+from prepare import (IMAGE_SUFFIXES, LEGACY_SOURCES, PROJECT_ROOT,
+                     current_label, remap_label_line)
 
 CONFIG = PROJECT_ROOT / "config.yaml"
 PROCESSED = PROJECT_ROOT / "data/processed"
 OUTPUT = PROJECT_ROOT / "data/training"
-# New downloads already use current IDs; never remap them as legacy.
-ADDITIONAL_TRAIN_SOURCES = {"waste_detection_v3", "dry_wet_waste", "school_lunch_asian", "food_american"}
+# These new uploads already use current IDs. Do not remap them as legacy.
+TRAIN_ONLY = {
+    "condiments", "tartanhacks", "waste_detection_v3", "dry_wet_waste",
+    "school_lunch_asian", "food_american",
+}
+SOURCES = LEGACY_SOURCES | TRAIN_ONLY
+
+
+def class_names():
+    classes = {int(k): v for k, v in yaml.safe_load(CONFIG.read_text())["classes"].items()}
+    if sorted(classes) != list(range(len(classes))):
+        raise ValueError("config.yaml class IDs must be contiguous, starting at zero")
+    return [classes[i] for i in range(len(classes))]
 
 
 def group_for_split(source, filename):
-    if source == "condiments":
-        return "condiments_same_background"  # Not independent validation images
+    """Keep Roboflow variants of one original together, regardless of split prefix."""
+    stem = re.sub(r"^(train|valid|val|test)__", "", filename)
+    stem = stem.split(".rf.")[0]
     if source == "tartanhacks":
-        match = re.search(r"IMG_\d+", filename)
+        match = re.search(r"IMG_\d+", stem)
         if match:
-            return match.group()  # Video frames from same clip stay together
-    return filename.split(".rf.")[0]  # Group Roboflow augmented variants
+            return match.group()
+    return stem
 
 
-def build_dataset():
-    """Generate contiguous labels and an 80/20 split from curated sources only."""
-    names = yaml.safe_load(CONFIG.read_text())["classes"]
-    names = [names[k] for k in sorted(names)]
-    if OUTPUT.exists():
-        shutil.rmtree(OUTPUT)  # Generated output only; original labels untouched
+def pixel_digest(image):
+    """Match byte-different encodings of the same exact pixels across sources."""
+    with Image.open(image) as opened:
+        rgb = opened.convert("RGB")
+        return hashlib.sha256(str(rgb.size).encode() + rgb.tobytes()).hexdigest()
 
-    groups = defaultdict(list)
-    for source in sorted(LEGACY_SOURCES | ADDITIONAL_TRAIN_SOURCES):
-        images = PROCESSED / source / "images"
-        labels = PROCESSED / source / "labels"
-        if not images.is_dir():
+
+def link_or_copy(source, destination):
+    try:
+        os.link(source, destination)
+    except OSError:
+        shutil.copy2(source, destination)
+
+
+def clip_export_rounding(row):
+    """Clip only sub-0.0001 normalized boundary overshoot from export rounding.
+
+    This is applied to the GENERATED copy, never the original annotations.
+    Materially invalid boxes still fail and must be reviewed.
+    """
+    parts = row.split()
+    cid = parts[0]
+    x, y, w, h = map(float, parts[1:])
+    if not (w > 0 and h > 0):
+        return row, False
+    left, right = x - w / 2, x + w / 2
+    top, bottom = y - h / 2, y + h / 2
+    error = max(0, -left, right - 1, -top, bottom - 1)
+    if error == 0 or error > 0.0001:
+        return row, False
+    left, right = max(0, left), min(1, right)
+    top, bottom = max(0, top), min(1, bottom)
+    if left >= right or top >= bottom:
+        return row, False
+    return (f"{cid} {(left + right) / 2:.9f} {(top + bottom) / 2:.9f} "
+            f"{right - left:.9f} {bottom - top:.9f}"), True
+
+
+def read_labels(label, source, names):
+    id_to_name = dict(enumerate(names))
+    name_to_id = {name: idx for idx, name in enumerate(names)}
+    rows, corrections = [], 0
+    if not label.is_file():
+        raise FileNotFoundError("Missing YOLO annotation: " + str(label))
+    for number, line in enumerate(label.read_text().splitlines(), 1):
+        if not line.strip():
             continue
-        for image in sorted(images.iterdir()):
+        parts = line.split()
+        if len(parts) != 5:
+            raise ValueError(f"{label}:{number}: expected 5 YOLO detection values")
+        converted = current_label(line, source)
+        try:
+            valid = remap_label_line(converted, id_to_name, name_to_id, label, number)
+        except ValueError:
+            corrected, did_clip = clip_export_rounding(converted)
+            if not did_clip:
+                raise
+            valid = remap_label_line(corrected, id_to_name, name_to_id, label, number)
+            corrections += 1
+        if valid is None:
+            raise ValueError(f"{label}:{number}: unmapped class")
+        rows.append(valid)
+    if not rows:
+        raise ValueError("Empty annotations (unverified negatives are not allowed): " + str(label))
+    return rows, corrections
+
+
+def collect(names):
+    """Validate every curated original and keep exact duplicate images in one split."""
+    grouped = defaultdict(list)
+    digest_groups = defaultdict(set)
+    per_source = Counter()
+    rounded_boxes = Counter()
+    for source in sorted(SOURCES):
+        image_dir = PROCESSED / source / "images"
+        label_dir = PROCESSED / source / "labels"
+        if not image_dir.is_dir():
+            continue
+        for image in sorted(image_dir.iterdir()):
             if image.suffix.lower() not in IMAGE_SUFFIXES:
                 continue
-            label = labels / (image.stem + ".txt")
-            if not label.is_file():
-                raise FileNotFoundError(f"Missing label for {image}")
+            label = label_dir / (image.stem + ".txt")
+            rows, clipped = read_labels(label, source, names)
+            rounded_boxes[source] += clipped
+            digest = pixel_digest(image)  # Also checks that the image decodes.
             group = source + ":" + group_for_split(source, image.stem)
-            groups[group].append((source, image, label))
+            grouped[group].append((source, image, rows))
+            digest_groups[digest].add(group)
+            per_source[source] += 1
+        # A label with no image should not silently pass.
+        for label in label_dir.glob("*.txt"):
+            if not any((image_dir / (label.stem + ext)).is_file()
+                       for ext in IMAGE_SUFFIXES):
+                raise ValueError("Orphan annotation: " + str(label))
+    if not grouped:
+        raise ValueError("No images found in curated processed sources")
 
-    if not groups:
-        raise ValueError("No curated processed images found")
+    parent = {group: group for group in grouped}
 
-    counts = {"train": 0, "val": 0}
-    for group, items in sorted(groups.items()):
-        # Deterministic split; same scene/capture-group never crosses splits.
-        fraction = int.from_bytes(hashlib.sha256(group.encode()).digest()[:4], "big") / 2**32
-        split = "train" if group.split(":", 1)[0] in ADDITIONAL_TRAIN_SOURCES or group.startswith("condiments:") or fraction < 0.8 else "val"
+    def find(key):
+        while parent[key] != key:
+            parent[key] = parent[parent[key]]
+            key = parent[key]
+        return key
+
+    def union(a, b):
+        a, b = find(a), find(b)
+        if a != b:
+            parent[max(a, b)] = min(a, b)
+
+    for keys in digest_groups.values():
+        keys = sorted(keys)
+        for key in keys[1:]:
+            union(keys[0], key)
+
+    components = defaultdict(list)
+    for key, items in grouped.items():
+        components[find(key)].extend(items)
+    return components, dict(per_source), sum(len(keys) > 1 for keys in digest_groups.values()), dict(rounded_boxes)
+
+
+def build_dataset(augment_factor=10, seed=42):
+    """Make grouped 80/20 source views; augmented copies are TRAIN-ONLY."""
+    if augment_factor < 1 or augment_factor > 20:
+        raise ValueError("--augment-factor must be between 1 and 20")
+    names = class_names()
+    groups, source_counts, duplicate_groups, clipped_boxes = collect(names)
+    if OUTPUT.exists():
+        shutil.rmtree(OUTPUT)  # Generated and Git-ignored, never the source corpus.
+
+    counts = Counter()
+    class_images = {"train": Counter(), "val": Counter()}
+    class_boxes = {"train": Counter(), "val": Counter()}
+    groups_by_split = Counter()
+    for key, items in sorted(groups.items()):
+        fraction = int.from_bytes(hashlib.sha256((str(seed) + ":" + key).encode()).digest()[:8], "big") / 2**64
+        must_train = any(source in TRAIN_ONLY for source, _, _ in items)
+        split = "train" if must_train or fraction < 0.8 else "val"
+        groups_by_split[split] += 1
         image_dir = OUTPUT / "images" / split
         label_dir = OUTPUT / "labels" / split
         image_dir.mkdir(parents=True, exist_ok=True)
         label_dir.mkdir(parents=True, exist_ok=True)
-        for source, image, label in items:
-            image_dest = image_dir / (source + "__" + image.name)
-            label_dest = label_dir / (source + "__" + label.stem + ".txt")
-            try:
-                os.link(image, image_dest)
-            except OSError:
-                shutil.copy2(image, image_dest)
-            content = [current_label(row, source) for row in label.read_text().splitlines() if row.strip()]
-            if not content:
-                raise ValueError(f"Empty labels in {label}")
-            for row in content:
-                if int(row.split()[0]) not in range(len(names)):
-                    raise ValueError(f"Invalid class ID in {label}")
-            label_dest.write_text("\n".join(content) + "\n")
-            counts[split] += 1
+        for source, image, rows in items:
+            stem = source + "__" + image.stem
+            output_image = image_dir / (stem + image.suffix)
+            output_label = label_dir / (stem + ".txt")
+            if output_image.exists() or output_label.exists():
+                raise ValueError("Destination name collision: " + stem)
+            link_or_copy(image, output_image)
+            output_label.write_text("\n".join(rows) + "\n")
+            counts[split + "_originals"] += 1
+            for idx in set(int(row.split()[0]) for row in rows):
+                class_images[split][idx] += 1
+            for row in rows:
+                class_boxes[split][int(row.split()[0])] += 1
 
-    if not counts["val"]:
-        raise ValueError("No validation images after grouping")
+            # Distinct paths, same bytes/inode. YOLO's random transformations
+            # independently augment every view during each training epoch.
+            if split == "train":
+                for view in range(1, augment_factor):
+                    extra_stem = stem + f"__view{view:02d}"
+                    extra_image = image_dir / (extra_stem + image.suffix)
+                    extra_label = label_dir / (extra_stem + ".txt")
+                    # Hardlink only, so 10x does not multiply disk consumption.
+                    os.link(output_image, extra_image)
+                    os.link(output_label, extra_label)
+                counts["train_views"] += augment_factor
+    if not counts["train_originals"] or not counts["val_originals"]:
+        raise ValueError("Train and validation must each contain original images")
+
     data = {"path": str(OUTPUT.resolve()), "train": "images/train",
             "val": "images/val", "names": names}
-    file = OUTPUT / "data.yaml"
-    file.write_text(yaml.safe_dump(data, sort_keys=False))
-    print(f"Prepared {counts['train']} training and {counts['val']} validation images.")
-    print("These splits are provisional. Final testing requires independent NHS scenes.")
-    return file
+    yaml_path = OUTPUT / "data.yaml"
+    yaml_path.write_text(yaml.safe_dump(data, sort_keys=False))
+    report = {
+        "source_images": source_counts, "original_images": sum(source_counts.values()),
+        "augment_factor": augment_factor, "seed": seed,
+        "train_originals": counts["train_originals"],
+        "train_views": counts["train_views"],
+        "val_originals": counts["val_originals"],
+        "exact_pixel_duplicate_groups_linked": duplicate_groups,
+        "minor_boundary_rounding_clips_in_generated_labels": clipped_boxes,
+        "group_counts": dict(groups_by_split),
+        "train_class_images_original": {name: class_images["train"][i] for i, name in enumerate(names)},
+        "val_class_images_original": {name: class_images["val"][i] for i, name in enumerate(names)},
+        "train_class_boxes_original": {name: class_boxes["train"][i] for i, name in enumerate(names)},
+        "val_class_boxes_original": {name: class_boxes["val"][i] for i, name in enumerate(names)},
+        "missing_train_classes": [name for i, name in enumerate(names) if not class_boxes["train"][i]],
+        "missing_val_classes": [name for i, name in enumerate(names) if not class_boxes["val"][i]],
+        "caveat": "Public-source validation is provisional. Same-scene near-duplicates, "
+                  "incomplete multiclass annotations and domain shift still require review. "
+                  "10x views do not create independent examples. Never report final accuracy "
+                  "without separate, held-out NHS cafeteria scenes.",
+    }
+    (OUTPUT / "split_summary.json").write_text(json.dumps(report, indent=2) + "\n")
+    print(f"Originals: {counts['train_originals']} train / {counts['val_originals']} val; "
+          f"{counts['train_views']} training views ({augment_factor}x); val never augmented.")
+    print("Missing in training:", report["missing_train_classes"])
+    print("Missing in validation:", report["missing_val_classes"])
+    print("Source-independent NHS test scenes are still REQUIRED.")
+    return yaml_path
+
+
+def check_names(data_file):
+    data = yaml.safe_load(Path(data_file).read_text())
+    actual = data["names"]
+    if isinstance(actual, dict):
+        actual = [actual.get(i, actual.get(str(i))) for i in range(len(class_names()))]
+    if actual != class_names():
+        raise ValueError("Dataset names/IDs must exactly match config.yaml (11 classes).")
+
+
+def evaluate(weights, data_file, imgsz=640, device=None):
+    """Evaluate only original validation images; save interpretable per-class results."""
+    from ultralytics import YOLO
+
+    check_names(data_file)
+    model = YOLO(str(weights))
+    run_folder = PROJECT_ROOT / "runs"
+    options = {"data": str(data_file), "split": "val", "imgsz": imgsz,
+               "project": str(run_folder), "name": "evaluation",
+               "plots": True, "exist_ok": False}
+    if device:
+        options["device"] = device
+    metrics = model.val(**options)
+    names = class_names()
+    by_id = {
+        int(idx): {"ap50": float(a50), "map50_95": float(a)}
+        for idx, a50, a in zip(metrics.box.ap_class_index,
+                             metrics.box.ap50, metrics.box.ap)
+    }
+    result = {"precision": float(metrics.box.mp), "recall": float(metrics.box.mr),
+              "map50": float(metrics.box.map50),
+              "map50_95": float(metrics.box.map),
+              "per_class": {name: by_id.get(i) for i, name in enumerate(names)},
+              "note": "null means class not measurable in this provisional validation split; "
+                      "these metrics are NOT independent NHS test performance."}
+    save_folder = Path(metrics.save_dir)
+    (save_folder / "metrics.json").write_text(json.dumps(result, indent=2) + "\n")
+    print("Validation results:", save_folder / "metrics.json")
+    return result
 
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data", nargs="?", type=Path,
-                        help="Optional already prepared 11-class data.yaml")
+                        help="Optional reviewed 11-class data.yaml; bypasses corpus build")
     parser.add_argument("--build-only", action="store_true")
+    parser.add_argument("--augment-factor", type=int, default=10,
+                        help="Training views per original (default 10, validation 1)")
+    parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--model", default="yolo11n.pt")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--imgsz", type=int, default=640)
+    parser.add_argument("--batch", type=int, default=8)
+    parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--device", help="e.g. mps for Apple Silicon, 0 for CUDA, cpu")
+    parser.add_argument("--name", default="yolo11n-10x")
+    parser.add_argument("--evaluate", type=Path, metavar="BEST_PT",
+                        help="Evaluate an existing checkpoint using prepared data.yaml")
+    parser.add_argument("--resume", type=Path, metavar="LAST_PT",
+                        help="Resume a stopped Ultralytics training run")
     args = parser.parse_args()
+    if args.epochs < 1 or args.batch < 1 or args.imgsz < 32:
+        parser.error("epochs, batch and imgsz must be positive")
+    if args.evaluate and args.resume:
+        parser.error("--evaluate and --resume cannot be combined")
 
-    data_file = args.data or build_dataset()
-    expected = yaml.safe_load(CONFIG.read_text())["classes"]
-    expected_names = [expected[k] for k in sorted(expected)]
-    actual = yaml.safe_load(data_file.read_text())["names"]
-    if isinstance(actual, dict):
-        actual = [actual[k] if k in actual else actual[str(k)] for k in range(len(expected_names))]
-    if actual != expected_names:
-        parser.error("Dataset class names/IDs do not match config.yaml (11 classes).")
-    if args.build_only:
-        print(f"Dataset ready: {data_file}")
+    if args.resume:
+        if not (OUTPUT / "data.yaml").exists():
+            parser.error("Missing prepared data; run --build-only with the SAME settings first")
+        from ultralytics import YOLO
+        YOLO(str(args.resume)).train(resume=True)
         return
 
+    if args.evaluate:
+        data_file = args.data or OUTPUT / "data.yaml"
+        evaluate(args.evaluate, data_file, args.imgsz, args.device)
+        return
+
+    data_file = args.data or build_dataset(args.augment_factor, args.seed)
+    check_names(data_file)
+    if args.build_only:
+        print("Prepared:", data_file)
+        return
+
+    from ultralytics import YOLO
     model = YOLO(args.model)
-    model.train(data=str(data_file), epochs=args.epochs, imgsz=args.imgsz,
-                project="runs", degrees=10, translate=0.10, scale=0.25,
-                fliplr=0.5, flipud=0.0, hsv_h=0.01, hsv_s=0.4,
-                hsv_v=0.3, mosaic=0.3, mixup=0.0)
+    settings = dict(data=str(data_file), epochs=args.epochs, imgsz=args.imgsz,
+                    batch=args.batch, workers=args.workers, seed=args.seed,
+                    patience=25, project=str(PROJECT_ROOT / "runs"), name=args.name,
+                    exist_ok=False, plots=True, save=True,
+                    degrees=8, translate=0.10, scale=0.20,
+                    fliplr=0.5, flipud=0, hsv_h=0.015, hsv_s=0.4,
+                    hsv_v=0.3, mosaic=0.3, close_mosaic=10, mixup=0.0)
+    if args.device:
+        settings["device"] = args.device
+    model.train(**settings)
+    best = Path(model.trainer.save_dir) / "weights" / "best.pt"
+    if not best.exists():
+        raise FileNotFoundError("Training finished without best.pt: " + str(best))
+    evaluate(best, data_file, args.imgsz, args.device)
 
 
 if __name__ == "__main__":
