@@ -9,7 +9,7 @@
 - Selected **35** napkin photos across **7 distinct recorded clips**, based on visually reviewed class contact sheets, temporal thinning, and source box validity.
 - Selected **27** additional white disposable utensil photos across **9 distinct clips** (YOLO class 3).
 - Rejected the TartanHacks rigid_plastic_container category (opaque takeout packages, not clear four-cell NHS tray).
-- Rejected Food Packages for ` compartment_container; its beige 2/3-cell meal trays do not match the school product. No files from Food Packages promoted.
+- Rejected Food Packages for `compartment_container` (project class 4); its beige 2/3-cell meal trays do not match the school product. No files from Food Packages promoted.
 - Other classes (cups, straws, small containers, plastic bags, lids) were not silently mapped into unrelated project classes.
 
 ## Critical split policy
