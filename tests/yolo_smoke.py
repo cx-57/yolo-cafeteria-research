@@ -109,6 +109,33 @@ def run_training(data, name, model, manual=False):
     return weights
 
 
+
+
+def smoke_pretrained_loader(data):
+    # Exercise the exact model-load path used by the normal Mac training command.
+    pretrained = train.load_model("yolo11n.pt")
+    saved = ROOT / "model/weights/yolo11n.pt"
+    assert saved.is_file() and saved.stat().st_size > 1_000_000, saved
+    image = next((data.parent / "images/val").glob("*"))
+    result = pretrained.predict(str(image), imgsz=128, device="cpu", verbose=False)
+    assert len(result) == 1
+    print("PASS official pretrained YOLO11n download and prediction", flush=True)
+
+
+def smoke_explicit_evaluation(weights, data):
+    # Exercise the standalone --evaluate command the user runs after interruption.
+    cmd = [
+        sys.executable, str(ROOT / "scripts/train.py"), str(data),
+        "--evaluate", str(weights), "--device", "cpu", "--imgsz", "128",
+        "--workers", "0", "--eval-name", "ci-smoke-explicit-eval",
+    ]
+    subprocess.run(cmd, cwd=ROOT, check=True)
+    run = ROOT / "model/runs/ci-smoke-explicit-eval"
+    assert (run / "metrics.json").is_file()
+    report = json.loads((run / "metrics.json").read_text())
+    assert report["coverage"]["supported_class_count"] >= 1
+    print("PASS standalone --evaluate command", flush=True)
+
 def smoke_inference(weights, data):
     model = YOLO(str(weights))
     assert list(model.names.values()) == train.class_names()
@@ -126,8 +153,10 @@ def smoke_inference(weights, data):
 def main():
     with tempfile.TemporaryDirectory(prefix="yolo-smoke-") as temporary:
         data = build_sample(Path(temporary))
+        smoke_pretrained_loader(data)
         original = run_training(data, "ci-smoke-from-yaml", "yolo11n.yaml")
         smoke_inference(original, data)
+        smoke_explicit_evaluation(original, data)
         tuned = run_training(data, "ci-smoke-adamw-finetune", original, manual=True)
         smoke_inference(tuned, data)
         print("ALL YOLO INTEGRATION SMOKES PASSED", flush=True)
