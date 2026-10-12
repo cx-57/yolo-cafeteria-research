@@ -161,9 +161,11 @@ class UpstreamLossTests(PartialLabelsTests):
         self.standard = v8DetectionLoss
         torch.manual_seed(10)
         self.model = TinyDetector()
+        # The upstream task-aligned assigner selects top-10 candidates, so
+        # a 2x2 (= 4 anchor) synthetic map is invalid. Use 4x4 (= 16 anchors).
         self.preds = {"boxes": torch.randn(2, 16, 4, requires_grad=True),
-                      "scores": torch.randn(2, 11, 4, requires_grad=True),
-                      "feats": [torch.zeros(2, 1, 2, 2)]}
+                      "scores": torch.randn(2, 11, 16, requires_grad=True),
+                      "feats": [torch.zeros(2, 1, 4, 4)]}
         self.batch = {"batch_idx": torch.tensor([0., 1.]), "cls": torch.tensor([[0.], [1.]]),
                       "bboxes": torch.tensor([[.5, .5, .75, .75], [.5, .5, .5, .5]]),
                       "im_file": ["plate__food.jpg", "school_lunch__plate.jpg"]}
