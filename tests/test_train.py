@@ -92,6 +92,26 @@ class TrainingPipelineTests(unittest.TestCase):
                          "train__photo.rf.abc"), train.group_for_split("school_lunch",
                          "valid__photo.rf.xyz"))
 
+    def test_tracked_near_duplicate_audit_is_used_by_default(self):
+        self.populate()
+        train.build_dataset()
+        from_train = next((self.output / "images/train").glob("school_lunch__*.png"))
+        from_val = next((self.output / "images/val").glob("school_lunch__*.png"))
+        def original(path):
+            return "school_lunch/images/" + path.name.removeprefix("school_lunch__")
+        near_file = train.DATA / "audits/day1/near_duplicates.csv"
+        near_file.parent.mkdir(parents=True)
+        near_file.write_text("image_a,image_b\n" + original(from_train) +
+                             "," + original(from_val) + "\n")
+        train.build_dataset()
+        summary = json.loads((self.output / "split_summary.json").read_text())
+        self.assertEqual(summary["group_audit"]["matched_pairs"], 1)
+        self.assertEqual(summary["group_audit"]["merged_groups"], 1)
+        train_names = {p.name for p in (self.output / "images/train").iterdir()}
+        val_names = {p.name for p in (self.output / "images/val").iterdir()}
+        self.assertEqual(from_train.name in train_names, from_val.name in train_names)
+        self.assertEqual(from_train.name in val_names, from_val.name in val_names)
+
     def test_exact_duplicate_cross_source_cannot_enter_validation(self):
         self.populate()
         # New food source is forced train-only. Duplicate pixel with old source
