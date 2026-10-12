@@ -75,5 +75,42 @@ class CachedAnalysisTests(unittest.TestCase):
                             for c in report["candidates"]))
 
 
+class DetailedMatchingTests(unittest.TestCase):
+    def test_max_matching_fixes_overlapping_plate_greedy_error(self):
+        from analyze_cached import assignments
+        first = {"class": 1, "box": [0, 0, 10, 10], "area": 0.02}
+        second = {"class": 1, "box": [6, 0, 16, 10], "area": 0.02}
+        high = prediction(1, 0.9, [2.9, 0, 12.9, 10])
+        low = prediction(1, 0.7, [0, 0, 10, 10])
+        self.assertEqual(len(assignments([first, second], [high, low])), 2)
+
+    def test_class_counts_nonnegative_and_size_report(self):
+        result = evaluate([sample()], "full640")
+        plate = result["classes"]["plate"]
+        self.assertEqual((plate["predictions"], plate["matched"],
+                          plate["unmatched_predictions"]), (1, 1, 0))
+        self.assertEqual(result["sizes"]["large_16pct_plus"]["matched"], 1)
+        self.assertNotIn("unmatched_predictions",
+                         result["sizes"]["large_16pct_plus"])
+
+    def test_roboflow_exports_stay_in_same_partition(self):
+        from analyze_cached import source_group
+        a = "trash_detection__train__000055_jpg.rf.aaaa.jpg"
+        b = "trash_detection__valid__000055_jpg.rf.bbbb.jpg"
+        self.assertEqual(source_group(a), source_group(b))
+        one = sample(name=a)
+        two = sample(name=b)
+        # Only two images in partition cannot guarantee nonempty sides, but
+        # each image deterministically hashes to the same side.
+        self.assertEqual(
+            __import__("hashlib").sha256(("42:" + source_group(a)).encode()).digest(),
+            __import__("hashlib").sha256(("42:" + source_group(b)).encode()).digest())
+
+    def test_wrong_class_overlap_flags_review_candidate(self):
+        item = sample(full=[prediction(8)])
+        candidates = evaluate([item], "full640")["unmatched_review"]
+        self.assertEqual(candidates[0]["review_hint"], "potential_class_confusion")
+
+
 if __name__ == "__main__":
     unittest.main()
