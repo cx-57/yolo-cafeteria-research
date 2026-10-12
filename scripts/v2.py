@@ -347,6 +347,7 @@ def train(args):
             "provisional": summary["provisional"],
             "command": cmd,
         }, indent=2) + "\n")
+    return cmd
 
 
 def report(args):
