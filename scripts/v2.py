@@ -108,6 +108,66 @@ def check_nhs_manifest(manifest, source_files):
     return images
 
 
+def repair_legacy_split_groups(sources):
+    """Plan transitive train/val repairs for V2 copies, without touching V1."""
+    all_photos = [(split, image) for split, items in sources.items() for image in items]
+    parent = list(range(len(all_photos)))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(i, j):
+        parent[find(i)] = find(j)
+
+    groups, hashes = {}, {}
+    for i, (_split, image) in enumerate(all_photos):
+        group, sha = source_group(image.name), digest(image)
+        if group in groups:
+            union(i, groups[group])
+        else:
+            groups[group] = i
+        if sha in hashes:
+            union(i, hashes[sha])
+        else:
+            hashes[sha] = i
+
+    components = {}
+    for i, entry in enumerate(all_photos):
+        components.setdefault(find(i), []).append(entry)
+
+    moved, repairs = set(), []
+    for entries in components.values():
+        splits = {split for split, _image in entries}
+        if len(splits) < 2:
+            continue
+        if "test" in splits:
+            raise ValueError("Legacy test images conflict with other splits: " +
+                             ", ".join(str(p) for _, p in entries))
+        if splits == {"train", "val"}:
+            affected = sorted((p for split, p in entries if split == "val"))
+            moved.update(affected)
+            repairs.append({
+                "reason": "Shared original name or exact photo hash",
+                "component_images": [str(p) for _, p in sorted(entries, key=lambda r: str(r[1]))],
+                "moved_validation_images": [str(p) for p in affected]
+            })
+
+    if moved and len(moved) == len(sources["val"]):
+        raise ValueError("All validation images overlap training; collect a clean validation set")
+    planned = {}
+    for split, items in sources.items():
+        if split == "train":
+            planned[split] = sorted(items + list(moved))
+        elif split == "val":
+            planned[split] = [p for p in items if p not in moved]
+        else:
+            planned[split] = items
+    return planned, moved, repairs
+
+
 def audit_splits(sources, nhs):
     """Catch exact and source-name leakage without altering any source."""
     groups, sha_groups, classes = {}, {}, {}
@@ -207,14 +267,17 @@ def build(args):
                                             for photo in photos]])
     nhs = check_nhs_manifest(args.nhs_manifest, sources)
     overrides = validate_overrides(args.reviewed_overrides, sources)
-    # In strict V2, ALL public-source V1 photos are train-only.
-    # Validation and test must consist solely of independently reviewed NHS captures.
-    audited_sources = sources if args.provisional else {
-        "train": sources["train"] + sources["val"]
-    }
+    # A provisional split can contain duplicated Roboflow originals from V1.
+    # Repair only V2 copies. Strict mode makes ALL legacy images training-only.
+    if args.provisional:
+        audited_sources, moved_validation, split_repairs = repair_legacy_split_groups(sources)
+    else:
+        audited_sources = {"train": sources["train"] + sources["val"]}
+        moved_validation, split_repairs = set(sources["val"]), []
     evidence = audit_splits(audited_sources, nhs)
     for record in overrides:
-        split = record["split"] if args.provisional else "train"
+        split = ("train" if any(p.stem == record["stem"] for p in moved_validation)
+                 else record["split"])
         prior = label_path(next(photo for photo in sources[record["split"]]
                                 if photo.stem == record["stem"]))
         for row in [r for r in prior.read_text().splitlines() if r.strip()]:
@@ -240,19 +303,21 @@ def build(args):
                              + json.dumps(evidence["missing_classes"]))
     # The existing experiment builder validates additive boxes and never edits V1.
     prepare_experiment(source_yaml, dest, label_additions=args.label_additions)
-    if not args.provisional:
-        # V1 public-source validation is NOT a domain-matched V2 evaluation set.
-        # Reassign only V2 COPIES of legacy validation images to training.
-        for image in list((dest / "images/val").iterdir()):
-            target = dest / "images/train" / image.name
-            target_label = dest / "labels/train" / (image.stem + ".txt")
-            old_label = dest / "labels/val" / (image.stem + ".txt")
-            if target.exists() or target_label.exists():
-                raise ValueError(f"V2 copy collision: {image.name}")
-            image.rename(target)
-            old_label.rename(target_label)
+    # Reassign ONLY V2 image and label copies; the existing V1 split is untouched.
+    for image in sorted(moved_validation):
+        original = dest / "images/val" / image.name
+        updated = dest / "images/train" / image.name
+        original_label = dest / "labels/val" / (image.stem + ".txt")
+        updated_label = dest / "labels/train" / (image.stem + ".txt")
+        if not original.is_file() or not original_label.is_file():
+            raise ValueError(f"V2 image/label copy not found: {image.name}")
+        if updated.exists() or updated_label.exists():
+            raise ValueError(f"Duplicate V2 destination: {image.name}")
+        original.rename(updated)
+        original_label.rename(updated_label)
     for record in overrides:
-        output_split = record["split"] if args.provisional else "train"
+        output_split = ("train" if any(p.stem == record["stem"] for p in moved_validation)
+                        else record["split"])
         output_label = dest / "labels" / output_split / (record["stem"] + ".txt")
         if not output_label.is_file():
             raise ValueError(f"Missing V2 label copy: {output_label}")
@@ -286,6 +351,8 @@ def build(args):
     summary = {"provisional": args.provisional, "source_yaml": str(source_yaml),
                "nhs_manifest": str(Path(args.nhs_manifest).resolve()) if args.nhs_manifest else None,
                "nhs_photos": nhs_summary, "source_audit": evidence,
+               "legacy_split_repairs": split_repairs,
+               "legacy_validation_images_moved": len(moved_validation),
                "final_audit": final, "dataset_sha256": dataset_fingerprint(spec_file),
                "annotation_policy": "docs/REDESIGN_V2.md (2026-10-12)",
                "strict_nhs_only_evaluation": not args.provisional,
@@ -300,6 +367,9 @@ def build(args):
     print("V2 dataset:", spec_file)
     print("Provisional:", args.provisional)
     print("Independent test set:", "yes" if has_test else "no (validation only)")
+    if split_repairs:
+        print(f"Resolved {len(split_repairs)} leaking photo groups by moving "
+              f"{len(moved_validation)} validation copies into V2 train")
     print("Missing classes:", final["missing_classes"])
     return spec_file
 
