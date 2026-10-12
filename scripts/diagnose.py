@@ -41,9 +41,10 @@ def inspect_split(dataset, split, names, imgsz):
             coords = list(map(float, parts[1:]))
             if cid not in names or not all(math.isfinite(v) for v in coords):
                 raise ValueError(f"{label}:{number}: invalid class or coordinates")
-            _, _, w, h = coords
-            if w <= 0 or h <= 0:
-                raise ValueError(f"{label}:{number}: nonpositive box")
+            x, y, w, h = coords
+            if (w <= 0 or h <= 0 or x-w/2 < -1e-6 or y-h/2 < -1e-6
+                    or x+w/2 > 1+1e-6 or y+h/2 > 1+1e-6):
+                raise ValueError(f"{label}:{number}: box outside normalized image bounds")
             boxes[cid] += 1
             ids.add(cid)
             sources[source]["instances"] += 1
