@@ -53,6 +53,33 @@ jobs:
           print("REAL DATA SCAN PASSED; unsupported validation classes:", d["missing_val_classes"])
           print("This checks file integrity and box geometry, NOT visual annotation completeness or mAP.")
           PY
+      - name: Verify no audited near-duplicate pair crosses the split
+        run: |
+          python - <<'PY'
+          import csv
+          import json
+          from pathlib import Path
+          root = Path("data/training")
+          summary = json.loads((root / "split_summary.json").read_text())
+          assert summary["group_audit"]["matched_pairs"] > 0, "Known audit was not applied"
+          train = {p.name for p in (root / "images/train").iterdir()}
+          val = {p.name for p in (root / "images/val").iterdir()}
+          checked = 0
+          with Path("data/audits/day1/near_duplicates.csv").open(newline="") as f:
+              for row in csv.DictReader(f):
+                  pair = []
+                  for field in ("image_a", "image_b"):
+                      source, folder, filename = row[field].split("/")
+                      assert folder == "images"
+                      candidate = source + "__" + filename
+                      pair.append(0 if candidate in train else 1 if candidate in val else None)
+                  if None not in pair:
+                      checked += 1
+                      assert pair[0] == pair[1], f"Leaking audit pair: {row['image_a']} / {row['image_b']}"
+          assert checked == summary["group_audit"]["matched_pairs"]
+          print("All", checked, "matched audit pairs remain within one split.")
+          print("Near-duplicate candidates are NOT proof of actual duplicates.")
+          PY
       - name: Preserve real label scan report
         uses: actions/upload-artifact@v4
         with:
