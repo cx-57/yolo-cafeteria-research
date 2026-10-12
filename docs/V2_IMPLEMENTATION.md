@@ -84,9 +84,10 @@ ALL eleven classes has been considered.
 
 All photos from one capture session must use the SAME split. The importer
 rejects session leakage, exact duplicates, missing labels and missing signoff.
-For strict mode, train, NHS val and NHS test must each contain positive
-instances of all eleven categories, with adequate independent variety.
-Counts alone do not guarantee semantic completeness.
+For strict mode, train and NHS validation must each contain positive
+instances of all eleven categories. A test set is **optional**; if you later
+add one, it must likewise contain all eleven classes. Counts alone do not
+guarantee semantic completeness.
 
 ## Step 4 — construct strict V2 (NHS-only evaluation)
 
@@ -97,8 +98,10 @@ Once the reviewed NHS dataset exists:
 Omit the --reviewed-overrides argument if there are no signed-off corrections.
 
 STRICT MODE: legacy public V1 train/validation images become training-only
-COPIES in V2. The new V2 val/test contain ONLY reviewed NHS scenes, grouped by
-capture session. Missing class support blocks the build. All V1 files stay
+COPIES in V2. New V2 validation (and optional test) contains ONLY reviewed
+NHS scenes, grouped by capture session. Missing training/validation class
+support blocks strict builds. Without a test set, V2 reports development
+validation metrics, not independent final test performance. All V1 files stay
 untouched. The new V2 has a complete file fingerprint in v2_build.json.
 It cannot independently certify that reviewers labeled every visible object.
 
@@ -131,12 +134,15 @@ The report verifies identical V2 dataset hashes and class coverage before
 ranking mAP50-95, plus mAP50, precision and recall. Partial class coverage
 fails unless --allow-incomplete is explicitly specified for diagnosis.
 Inspect per-class metrics, wrapper-vs-bottle confusion and Mac latency before
-deployment. Select on NHS validation; use the independent NHS test ONCE for
-the final selected model.
+deployment. Select on NHS validation. A future independent NHS test, if
+collected, should be evaluated ONCE for the final selected model.
 
 ## Limitations
 
 - The current repo has no new reviewed NHS photos or NHS test set.
+- **A test set is not required to start V2 training or validation.** Until
+  NHS validation exists, use --provisional for existing 80/20 data and
+  --allow-provisional only for explicitly exploratory training.
 - No V2 checkpoints have yet been trained.
 - Missing paper boats cannot be fixed with synthetic augmentation alone.
 - Current annotation review queues are candidates, not approved corrections.
