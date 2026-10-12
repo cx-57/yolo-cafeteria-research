@@ -190,6 +190,15 @@ jobs:
         run: |
           python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
           python -m pip install ultralytics==8.4.175 PyYAML Pillow
+      - name: Temporarily package pinned official inference dependencies
+        run: |
+          python -m pip download --no-deps -d /tmp/official-yolo-wheels             ultralytics==8.4.175 ultralytics-thop ultralytics-platform polars polars-runtime-32
+      - name: Upload pinned inference packages for local mini-test
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-yolo-inference-wheels
+          path: /tmp/official-yolo-wheels/
+          retention-days: 1
       - name: Run real upstream partial-label loss and gradient tests
         run: python -m unittest discover -s tests -p "test_partial_labels.py" -v
       - name: One-epoch real-image training-loop smoke (untrained model)
