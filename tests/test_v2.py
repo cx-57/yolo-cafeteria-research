@@ -76,7 +76,7 @@ class V2WorkflowTests(unittest.TestCase):
     def train_args(self, **changes):
         base = dict(data=self.output / "data.yaml", trial="control-n",
                     epochs=2, batch=2, device="cpu", dry_run=True,
-                    allow_provisional=False)
+                    allow_provisional=False, tag=None)
         base.update(changes)
         return argparse.Namespace(**base)
 
@@ -179,11 +179,8 @@ class V2WorkflowTests(unittest.TestCase):
 
     def test_trial_commands_differ_only_in_intended_options(self):
         v2.build(self.args())
-        runs = []
-        for trial in v2.TRIALS:
-            with patch.object(v2.subprocess, "run", side_effect=lambda cmd, **kw: runs.append(cmd)):
-                v2.train(self.train_args(trial=trial, allow_provisional=True,
-                                         dry_run=False))
+        runs = [v2.train(self.train_args(trial=trial, allow_provisional=True))
+                for trial in v2.TRIALS]
         def flags(cmd):
             return {cmd[i]: cmd[i + 1] for i in range(len(cmd) - 1)
                     if cmd[i].startswith("--") and not cmd[i + 1].startswith("--")}
