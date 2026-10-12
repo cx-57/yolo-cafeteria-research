@@ -24,3 +24,8 @@ data/audits/model_plateau_2026-10-11/ablation/
 data/training-revised/
 data/training-ci-revised/
 model/prediction-review*/
+
+# V2 generated data, including private local NHS still photos
+data/nhs/
+data/training-v2/
+data/training-v2-*/
