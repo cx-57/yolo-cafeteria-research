@@ -6,6 +6,7 @@ diagnostics, NOT AP/mAP and NOT independent NHS test performance.
 import argparse
 import csv
 import json
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -23,6 +24,34 @@ def box_iou(a, b):
     area_b = max(0, b[2]-b[0]) * max(0, b[3]-b[1])
     shared = x*y
     return shared/(area_a+area_b-shared) if area_a+area_b>shared else 0.0
+
+
+def area_fraction(box, width, height):
+    if width <= 0 or height <= 0:
+        raise ValueError("Invalid image dimensions")
+    return max(0, box[2] - box[0]) * max(0, box[3] - box[1]) / (width * height)
+
+
+def size_band(fraction):
+    if fraction < 0.01:
+        return "tiny_under_1pct"
+    if fraction < 0.04:
+        return "small_1_to_4pct"
+    if fraction < 0.16:
+        return "medium_4_to_16pct"
+    return "large_16pct_plus"
+
+
+def sample_across_sizes(matches, cls, count):
+    """Inspect tiny and big examples as well as the middle of the size spectrum."""
+    ranked = sorted(matches, key=lambda entry: min(
+        area_fraction(target[1], *entry[2]) for target in entry[1] if target[0] == cls))
+    if len(ranked) <= count:
+        return ranked
+    if count == 1:
+        return [ranked[0]]
+    indices = [round(index * (len(ranked) - 1) / (count - 1)) for index in range(count)]
+    return [ranked[index] for index in indices]
 
 
 def parse_labels(path, width, height):
@@ -99,25 +128,54 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
             continue
         with Image.open(image) as picture:
             targets = parse_labels(label_dir/(image.stem+".txt"), *picture.size)
-        candidates.append((image, targets))
+            dimensions = picture.size
+        candidates.append((image, targets, dimensions))
     picks, seen, support = [], set(), {}
     for name in wanted:
         cls = NAMES.index(name)
-        matches = [(image, targets) for image, targets in candidates
+        matches = [(image, targets, dimensions) for image, targets, dimensions in candidates
                    if any(target[0] == cls for target in targets)]
         support[name] = len(matches)
-        for image, targets in matches[:per_class]:
+        for image, targets, dimensions in sample_across_sizes(matches, cls, per_class):
             if image.name not in seen:
-                picks.append((image, targets))
+                picks.append((image, targets, dimensions))
                 seen.add(image.name)
     output.mkdir(parents=True, exist_ok=True)
     report = []
-    for image, targets in picks:
+    counts = defaultdict(Counter)
+    area_counts = defaultdict(Counter)
+    review_queue = []
+    for image, targets, dimensions in picks:
         prediction = model.predict(str(image), imgsz=640, conf=conf, device=device,
                                    verbose=False)[0]
         boxes = [(int(b.cls.item()), tuple(float(v) for v in b.xyxy[0]),
                   float(b.conf.item())) for b in prediction.boxes]
         matched_gt, matched_pred = match(targets, boxes, iou)
+        width, height = dimensions
+        for index, (cls, bounds, _) in enumerate(targets):
+            name = NAMES[cls]
+            band = size_band(area_fraction(bounds, width, height))
+            counts[name]["targets"] += 1
+            area_counts[(name, band)]["targets"] += 1
+            if index in matched_gt:
+                counts[name]["matched"] += 1
+                area_counts[(name, band)]["matched"] += 1
+            else:
+                review_queue.append({
+                    "image": image.name, "class": name, "issue": "unmatched_label",
+                    "area_fraction": round(area_fraction(bounds, width, height), 6),
+                    "size_band": band, "confidence": "", "box_xyxy": json.dumps(bounds),
+                })
+        for index, (cls, bounds, confidence) in enumerate(boxes):
+            if index not in matched_pred:
+                name = NAMES[cls]
+                counts[name]["unmatched_predictions"] += 1
+                review_queue.append({
+                    "image": image.name, "class": name, "issue": "unmatched_prediction",
+                    "area_fraction": round(area_fraction(bounds, width, height), 6),
+                    "size_band": size_band(area_fraction(bounds, width, height)),
+                    "confidence": round(confidence, 5), "box_xyxy": json.dumps(bounds),
+                })
         with Image.open(image) as original:
             left = draw_boxes(original, targets, "lime")
             right = draw_boxes(original, boxes, "red")
@@ -128,10 +186,33 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
         report.append({"image": image.name, "gt": len(targets), "pred": len(boxes),
                        "matched": len(matched_gt), "unmatched_targets": len(targets)-len(matched_gt),
                        "unmatched_predictions": len(boxes)-len(matched_pred)})
+    with (output/"review_queue.csv").open("w", newline="") as f:
+        fields = ("image", "class", "issue", "area_fraction", "size_band", "confidence", "box_xyxy")
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(sorted(review_queue, key=lambda row: (
+            row["issue"] != "unmatched_label", row["area_fraction"], row["image"])))
     (output/"summary.json").write_text(json.dumps({
         "split": split, "confidence": conf, "iou": iou,
         "images_reviewed": len(picks), "eligible_images_by_class": support,
-        "reviewed": report, "warning": "Unmatched prediction may be a missing ground-truth box; no AP claimed."
+        "reviewed": report,
+        "per_class": {name: {
+            "target_count": counter["targets"],
+            "matched": counter["matched"],
+            "unmatched_targets": counter["targets"] - counter["matched"],
+            "unmatched_predictions": counter["unmatched_predictions"],
+            "recall_at_threshold": (counter["matched"] / counter["targets"]
+                                    if counter["targets"] else None)
+        } for name, counter in sorted(counts.items())},
+        "by_object_area": {name: {band: {
+            "targets": counter["targets"], "matched": counter["matched"],
+            "missed": counter["targets"] - counter["matched"]
+        } for (category, band), counter in area_counts.items() if category == name}
+            for name in sorted(counts)},
+        "size_band_definitions": "Box area divided by entire image area: under 1%; 1-4%; 4-16%; 16%+.",
+        "warning": ("Unmatched predictions may be missing annotations, not false positives. "
+                    "Fixed-threshold matches are NOT mAP or independent NHS test accuracy. "
+                    "Small-box status is NOT proof of occlusion.")
     }, indent=2)+"\n")
     print(f"Saved {len(picks)} side-by-side prediction overlays to {output}")
     print("Eligible target images:", support)
