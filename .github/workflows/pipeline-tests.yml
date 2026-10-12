@@ -140,3 +140,43 @@ jobs:
           python -m pip install ultralytics==8.4.175 PyYAML Pillow
       - name: Run real upstream partial-label loss and gradient tests
         run: python -m unittest discover -s tests -p "test_partial_labels.py" -v
+      - name: One-epoch real-image training-loop smoke (untrained model)
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+          import sys
+          import tempfile
+          import yaml
+          from ultralytics import YOLO
+          sys.path.insert(0, str(Path("scripts").resolve()))
+          from partial_labels import make_trainer
+          from train import class_names
+          with tempfile.TemporaryDirectory() as tmp:
+              root = Path(tmp)
+              ids = ["train__lvis_000000225490", "train__lvis_000000478368"]
+              for split in ("train", "val"):
+                  images, labels = root/"images"/split, root/"labels"/split
+                  images.mkdir(parents=True)
+                  labels.mkdir(parents=True)
+                  for name in (ids if split=="train" else ids[:1]):
+                      source = Path("data/processed/plate")
+                      shutil.copy2(source/"images"/(name+".jpg"),
+                                   images/("plate__"+name+".jpg"))
+                      shutil.copy2(source/"labels"/(name+".txt"),
+                                   labels/("plate__"+name+".txt"))
+              config = root/"data.yaml"
+              config.write_text(yaml.safe_dump({
+                  "path":str(root), "train":"images/train", "val":"images/val",
+                  "names":class_names()}, sort_keys=False))
+              model = YOLO("yolo11n.yaml")
+              model.train(trainer=make_trainer(
+                  "data/audits/model_revisions_2026-10-12/source_coverage.json"),
+                  data=str(config), epochs=1, imgsz=128, batch=2,
+                  device="cpu", workers=0, amp=False, val=False,
+                  optimizer="SGD", plots=False, save=False, project=str(root),
+                  name="loss-smoke", mosaic=0, close_mosaic=0, mixup=0,
+                  cutmix=0, copy_paste=0, cache=False)
+              print("Real photo + masked criterion training loop completed.")
+              print("No trained-checkpoint accuracy or mAP is claimed.")
+          PY
