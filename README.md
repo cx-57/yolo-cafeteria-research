@@ -46,6 +46,11 @@ those NHS validation photos, use the provisional builder on the existing
 
     python3 scripts/v2.py build --provisional
 
+The provisional builder moves Roboflow near-identical source groups or exact
+photo duplicates that cross train/validation into **V2 train copies only**,
+records each change in `v2_build.json`, and leaves V1 untouched. This can
+change V2 validation membership; do not compare its AP directly to V1.
+
 Tests: `python3 -m unittest discover -s tests -p 'test_v2.py' -v`.
 The old checkpoint and dataset remain unchanged. No V2 accuracy improvement
 has been measured.
