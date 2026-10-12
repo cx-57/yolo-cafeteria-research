@@ -160,6 +160,44 @@ def dataset_fingerprint(data_file):
     return sha.hexdigest()
 
 
+
+def validate_overrides(file, sources):
+    """Approve FULL replacement label contents for specific V2 images only."""
+    if file is None:
+        return []
+    raw = json.loads(Path(file).read_text())
+    if not isinstance(raw, list):
+        raise ValueError("Reviewed overrides must be a JSON list")
+    available = {photo.stem: (split, photo) for split, images in sources.items()
+                 for photo in images}
+    result, seen = [], set()
+    for number, record in enumerate(raw, 1):
+        if not isinstance(record, dict):
+            raise ValueError(f"Override {number}: expected object")
+        source, image = record.get("source"), record.get("image")
+        if not isinstance(source, str) or not isinstance(image, str):
+            raise ValueError(f"Override {number}: source and image required")
+        if not re.fullmatch(r"[a-zA-Z0-9_-]+", source) or Path(image).name != image:
+            raise ValueError(f"Override {number}: invalid source/image path")
+        stem = source + "__" + Path(image).stem
+        if stem not in available or stem in seen:
+            raise ValueError(f"Override {number}: missing or duplicate source image {stem}")
+        seen.add(stem)
+        split, photo = available[stem]
+        label = label_path(photo)
+        if record.get("complete") != "yes" or not record.get("reviewer") or not record.get("reason"):
+            raise ValueError(f"Override {number}: requires complete=yes, reviewer and reason")
+        if digest(label) != record.get("expected_label_sha256"):
+            raise ValueError(f"Override {number}: source label changed since manual review")
+        if not isinstance(record.get("rows"), list):
+            raise ValueError(f"Override {number}: rows must contain the COMPLETE approved labels")
+        approved = validate_rows(record["rows"], f"Override {number}", class_names())
+        result.append({"stem": stem, "split": split, "rows": approved,
+                       "reviewer": record["reviewer"], "reason": record["reason"],
+                       "original_sha256": digest(label)})
+    return result
+
+
 def build(args):
     source = Path(args.source).resolve()
     source_yaml = source if source.suffix in (".yaml", ".yml") else source / "data.yaml"
@@ -168,6 +206,7 @@ def build(args):
     check_output(dest, [source_yaml.parent, *[photo.parent for photos in sources.values()
                                             for photo in photos]])
     nhs = check_nhs_manifest(args.nhs_manifest, sources)
+    overrides = validate_overrides(args.reviewed_overrides, sources)
     evidence = audit_splits(sources, nhs)
     if not args.provisional:
         if any(evidence["missing_classes"][split] for split in ("train", "val", "test")):
@@ -178,6 +217,12 @@ def build(args):
             raise ValueError("Final V2 requires an independently collected NHS test split")
     # The existing experiment builder validates additive boxes and never edits V1.
     prepare_experiment(source_yaml, dest, label_additions=args.label_additions)
+    for record in overrides:
+        output_label = dest / "labels" / record["split"] / (record["stem"] + ".txt")
+        if not output_label.is_file():
+            raise ValueError(f"Missing V2 label copy: {output_label}")
+        output_label.write_text("\n".join(record["rows"]) +
+                                ("\n" if record["rows"] else ""))
     spec_file = dest / "data.yaml"
     spec = yaml.safe_load(spec_file.read_text())
     nhs_summary = []
@@ -208,7 +253,8 @@ def build(args):
                "nhs_photos": nhs_summary, "source_audit": evidence,
                "final_audit": final, "dataset_sha256": dataset_fingerprint(spec_file),
                "annotation_policy": "docs/REDESIGN_V2.md (2026-10-12)",
-               "label_additions": str(args.label_additions) if args.label_additions else None}
+               "label_additions": str(args.label_additions) if args.label_additions else None,
+               "reviewed_overrides": overrides}
     (dest / "v2_build.json").write_text(json.dumps(summary, indent=2) + "\n")
     print("V2 dataset:", spec_file)
     print("Provisional:", args.provisional)
@@ -282,6 +328,7 @@ def main():
     building.add_argument("--output", default=str(PROJECT_ROOT / "data/training-v2"))
     building.add_argument("--nhs-manifest", type=Path)
     building.add_argument("--label-additions", type=Path)
+    building.add_argument("--reviewed-overrides", type=Path)
     building.add_argument("--provisional", action="store_true")
     training = commands.add_parser("train", help="Controlled YOLO11n/s trial")
     training.add_argument("--data", default=str(PROJECT_ROOT / "data/training-v2/data.yaml"))
