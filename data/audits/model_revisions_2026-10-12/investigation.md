@@ -51,6 +51,58 @@ Review outputs: `model/runs/crop-diagnostic/cached_analysis.json`, `cached_revie
 - Ultralytics model validation: https://docs.ultralytics.com/modes/val — native AP, PR, mAP size breakdown and confusion matrices.
 - Candidate wrapper/bottle dataset to **inspect, not auto-import**: https://universe.roboflow.com/convert-coco-73sdy/trash_collection_self (569 images; verify annotations and license on its dataset page).
 
+
+## October 12 cached-inference results (55 images, 90 target objects)
+
+User-run `cached_analysis.json` evaluated 25 parameter combinations, partitioning the
+same **provisional** validation cohort into 31 development images (61 targets)
+and 24 diagnostic holdout images (29 targets). This is not an independently
+collected NHS holdout.
+
+At confidence 0.25, ordinary 640px inference matched **45/90** objects with
+**31 unmatched predictions**. Full-image 960px matched **44/90** with 22
+unmatched predictions. Crops with confidence 0.25 and NMS IoU 0.50 matched
+**53/90** with 92 unmatched predictions.
+
+Development-only selection chose crop confidence 0.35, NMS IoU 0.30:
+- Development: **32/61**, vs original 640px **28/61**; unmatched predictions
+  **35 vs 21**.
+- Diagnostic holdout: **17/29**, exactly the baseline's **17/29**; unmatched
+  predictions **14 vs 10**.
+- All images: **49/90 vs 45/90**; unmatched **49 vs 31**.
+
+The selected crop setting recovered one wrapper but lost one plate on the
+diagnostic holdout. NMS IoU 0.30 is aggressive in overlapping-plate scenes:
+changing to IoU 0.50 recovered that plate, but raised the holdout unmatched
+count from 14 to 24. These trade-offs **do not establish better deployed
+precision or NHS generalization**. Notably, **34 of 37 sub-1%-area targets**
+landed in the development split, with only three on the diagnostic holdout;
+tiny-object performance cannot be judged reliably from that holdout alone.
+
+### Confirmed label-to-prediction confusion
+
+Review of actual images on GitHub and the exported prediction locations shows
+at least **three high-confidence bottle predictions** over regions annotated
+as wrappers (IoU with the other class 0.922, 0.934, and 0.874; confidence
+0.635, 0.676, and 0.621). One source image contains a flattened blue food
+packet; another contains discarded orange and green food packets alongside an
+actual beverage bottle. This indicates **wrapper/bottle class confusion**
+rather than solely insufficient image resolution. Correct category definitions
+and difficult cross-class examples should be human reviewed; never rewrite
+annotations just because a model predicts another label.
+
+### Threshold-analysis bug repaired
+
+The initial `scripts/analyze_cached.py` filtered full-frame predictions at
+confidence 0.10-0.20 but then silently matched only predictions at or above
+0.25. As a result, **the initial report's low-confidence recall rows are
+invalid**; they misleadingly showed identical recall at 0.10, 0.15, 0.20 and
+0.25. Commit `ae61c377` removes the second threshold after explicit
+filtering; a regression test was added. Comparisons above at confidence
+0.25 or above are not affected. Re-run the script over the existing JSONL
+cache before selecting confidence thresholds; no model inference or training
+is needed.
+
 ## Stop rules
 
 Do not claim a 90%+ accuracy gain from changing confidence thresholds on an incompletely labeled 55-image proxy. Do not edit original labels or test images based on model guesses; do not mix test data into training. Retain each experiment's pretrained checkpoint, data hashes, train/validation lists, label-policy version, epoch/step budget and per-class metrics. For any claimed improvement, publish paired results on exactly the same fully annotated, independent NHS test set, and latency on target hardware.
