@@ -12,8 +12,13 @@ From the repository directory on the Mac:
     python3 -m pip install -r requirements.txt
     python3 -m unittest discover -s tests -p 'test_v2.py' -v
     python3 -m unittest discover -s tests -p 'test_experiment.py' -v
-    python3 scripts/train.py --build-only
     python3 scripts/v2.py build --source data/training --output data/training-v2 --provisional
+
+Use the EXISTING data/training/data.yaml as your frozen V1 split. Do not run
+train.py --build-only if data/training already exists: that command deletes
+and regenerates the generated V1 split before writing a new one. If the
+source is missing, first back up your V1 split metadata and checkpoint and
+then rebuild it intentionally.
 
 This produces a V2 copy with an auditable JSON summary and support counts.
 Because it contains public-source validation and lacks several classes, it is
