@@ -179,6 +179,7 @@ class UpstreamLossTests(PartialLabelsTests):
         torch.set_num_threads(2)
         model = DetectionModel(cfg="yolo11n.yaml", nc=11, verbose=False)
         model.names = dict(enumerate(NAMES))
+        model.args = SimpleNamespace(box=7.5, cls=.5, dfl=1.5)
         model.train()
         photo = ROOT / "data/processed/plate/images/train__lvis_000000225490.jpg"
         with Image.open(photo) as original:
