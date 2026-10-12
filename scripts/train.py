@@ -465,6 +465,10 @@ def main():
                         default="auto")
     parser.add_argument("--lr0", type=float, help="Initial learning rate; requires a manual optimizer")
     parser.add_argument("--lrf", type=float, help="Final learning rate as a fraction of lr0 (0–1)")
+    parser.add_argument("--cls-pw", type=float, default=None,
+                        help="Optional inverse-frequency class weighting power (0–1)")
+    parser.add_argument("--freeze", type=int, default=None,
+                        help="Optional number of initial layers to freeze during fine-tuning")
     parser.add_argument("--cos-lr", action="store_true", help="Use cosine learning rate decay")
     parser.add_argument("--patience", type=int, default=25)
     parser.add_argument("--mosaic", type=float, default=0.3)
@@ -487,10 +491,12 @@ def main():
         parser.error("patience, close-mosaic and workers must be nonnegative")
     if not math.isfinite(args.warmup_epochs) or args.warmup_epochs < 0:
         parser.error("warmup-epochs must be finite and nonnegative")
-    for option in ("mosaic", "lrf"):
+    for option in ("mosaic", "lrf", "cls_pw"):
         value = getattr(args, option)
         if value is not None and (not math.isfinite(value) or not 0 <= value <= 1):
             parser.error(f"--{option} must be finite and between 0 and 1")
+    if args.freeze is not None and args.freeze < 0:
+        parser.error("--freeze must be a nonnegative integer")
     if args.lr0 is not None:
         if not math.isfinite(args.lr0) or args.lr0 <= 0:
             parser.error("--lr0 must be finite and positive")
@@ -528,6 +534,10 @@ def main():
         degrees=8, translate=0.1, scale=0.2, fliplr=0.5,
         hsv_h=0.015, hsv_s=0.4, hsv_v=0.3, mosaic=args.mosaic,
         close_mosaic=args.close_mosaic, mixup=0.0, cutmix=0.0, copy_paste=0.0)
+    if args.cls_pw is not None:
+        options["cls_pw"] = args.cls_pw
+    if args.freeze is not None:
+        options["freeze"] = args.freeze
     if args.lr0 is not None:
         options["lr0"] = args.lr0
     if args.lrf is not None:
