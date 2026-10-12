@@ -314,9 +314,18 @@ def train(args):
     if dataset_fingerprint(data_file) != summary["dataset_sha256"]:
         raise ValueError("V2 dataset content changed since build; rebuild and re-audit")
     trial = TRIALS[args.trial]
+    tag = args.tag or ("e" + str(args.epochs))
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", tag):
+        raise ValueError("--tag may contain only letters, digits, dashes and underscores")
+    run_name = "v2-" + args.trial + "-" + tag
+    evaluation_name = run_name + "-evaluation"
+    run_dir = PROJECT_ROOT / "model/runs" / run_name
+    evaluation_dir = PROJECT_ROOT / "model/runs" / evaluation_name
+    if not args.dry_run and (run_dir.exists() or evaluation_dir.exists()):
+        raise ValueError(f"Run already exists. Choose another --tag: {run_name}")
     cmd = [sys.executable, str(PROJECT_ROOT / "scripts/train.py"), str(data_file),
-           "--model", trial["model"], "--name", "v2-" + args.trial,
-           "--eval-name", "v2-" + args.trial + "-evaluation",
+           "--model", trial["model"], "--name", run_name,
+           "--eval-name", evaluation_name,
            "--epochs", str(args.epochs), "--batch", str(args.batch),
            "--imgsz", "640", "--seed", "42", "--device", args.device,
            "--optimizer", "AdamW", "--lr0", "0.0007", "--lrf", "0.1",
@@ -327,13 +336,34 @@ def train(args):
     print("Training:", " ".join(cmd), flush=True)
     if not args.dry_run:
         subprocess.run(cmd, check=True)
+        if not run_dir.is_dir():
+            raise ValueError(f"Completed training run directory missing: {run_dir}")
+        (run_dir / "v2_trial.json").write_text(json.dumps({
+            "trial": args.trial, "run_name": run_name,
+            "evaluation_name": evaluation_name,
+            "dataset_sha256": summary["dataset_sha256"],
+            "data": str(data_file), "epochs": args.epochs,
+            "batch": args.batch, "seed": 42, "imgsz": 640,
+            "provisional": summary["provisional"],
+            "command": cmd,
+        }, indent=2) + "\n")
 
 
 def report(args):
     """Compare native Ultralytics metrics only when class support matches."""
     entries = []
+    tag = args.tag or ("e" + str(args.epochs))
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", tag):
+        raise ValueError("Invalid report --tag")
+    signatures = set()
     for trial in args.trials:
-        path = PROJECT_ROOT / "model/runs" / ("v2-" + trial + "-evaluation") / "metrics.json"
+        run_name = "v2-" + trial + "-" + tag
+        recipe = PROJECT_ROOT / "model/runs" / run_name / "v2_trial.json"
+        if not recipe.is_file():
+            raise ValueError(f"Missing training run manifest: {recipe}")
+        trial_info = json.loads(recipe.read_text())
+        signatures.add(trial_info["dataset_sha256"])
+        path = PROJECT_ROOT / "model/runs" / (run_name + "-evaluation") / "metrics.json"
         if not path.is_file():
             raise ValueError(f"Missing evaluated checkpoint: {path}")
         metrics = json.loads(path.read_text())
@@ -344,8 +374,8 @@ def report(args):
                         "map50_95": metrics["map50_95"], "precision": metrics["precision"],
                         "recall": metrics["recall"], "per_class": metrics["per_class"],
                         "coverage": coverage, "data": metrics.get("data")})
-    if len({e["data"] for e in entries}) != 1:
-        raise ValueError("Trials used different data YAML paths")
+    if len({e["data"] for e in entries}) != 1 or len(signatures) != 1:
+        raise ValueError("Trials used different dataset paths or contents")
     for row in sorted(entries, key=lambda r: r["map50_95"], reverse=True):
         print(f"{row['trial']:12s} mAP50-95={row['map50_95']:.3f}, "
               f"mAP50={row['map50']:.3f}, P={row['precision']:.3f}, "
@@ -369,12 +399,15 @@ def main():
     training.add_argument("--epochs", type=int, default=80)
     training.add_argument("--batch", type=int, default=4)
     training.add_argument("--device", default="mps")
+    training.add_argument("--tag", help="Unique trial output tag (default e<epochs>)")
     training.add_argument("--dry-run", action="store_true")
     training.add_argument("--allow-provisional", action="store_true")
     comparison = commands.add_parser("report", help="Compare completed trials")
     comparison.add_argument("--trials", nargs="+", choices=list(TRIALS),
                             default=list(TRIALS))
     comparison.add_argument("--allow-incomplete", action="store_true")
+    comparison.add_argument("--epochs", type=int, default=80)
+    comparison.add_argument("--tag", help="Trial output tag; default e<epochs>")
     args = parser.parse_args()
     try:
         if args.command == "build":
