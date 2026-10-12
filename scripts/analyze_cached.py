@@ -250,10 +250,77 @@ def build_report(rows):
             ]}
 
 
+
+def render_review_overlays(rows, images_dir, output, limit=12):
+    """Draw side-by-side examples; never modify images or training labels."""
+    from PIL import Image, ImageDraw
+    if limit < 1:
+        return 0
+    output.mkdir(parents=True, exist_ok=True)
+
+    def priority(row):
+        found = matched(row["targets"], row["full"])
+        missed = len(row["targets"]) - len(found)
+        tiny = sum(i not in found and t["area"] < .01
+                   for i, t in enumerate(row["targets"]))
+        return tiny * 2 + missed, missed, len(row["targets"])
+
+    picks = sorted(rows, key=priority, reverse=True)[:limit]
+    for row in picks:
+        path = images_dir / row["image"]
+        if not path.is_file():
+            raise FileNotFoundError(f"Missing image for overlay: {path}")
+        with Image.open(path) as image:
+            original = image.convert("RGB")
+        modes = [
+            ("Labels: green=matched, yellow=missed", None),
+            ("Full frame 640px", row["full"]),
+            ("Full frame 960px", row["high"]),
+            ("640px + crops / NMS", detections(row, "640_plus_crops", 0.25, 0.5)),
+        ]
+        panels = []
+        for title, predictions in modes:
+            panel = original.copy()
+            painter = ImageDraw.Draw(panel)
+            if predictions is None:
+                found = matched(row["targets"], row["full"])
+                for i, target in enumerate(row["targets"]):
+                    color = "lime" if i in found else "yellow"
+                    painter.rectangle(target["box"], outline=color, width=3)
+                    painter.text((target["box"][0], max(0, target["box"][1] - 14)),
+                                 CLASSES[target["class"]], fill=color,
+                                 stroke_fill="black", stroke_width=1)
+            else:
+                present = [p for p in predictions if p["conf"] >= 0.25]
+                assigned = set(assignments(row["targets"], present).values())
+                for i, prediction in enumerate(present):
+                    color = "cyan" if i in assigned else "red"
+                    painter.rectangle(prediction["box"], outline=color, width=3)
+                    painter.text((prediction["box"][0], max(0, prediction["box"][1] - 14)),
+                                 f"{CLASSES[prediction['class']]} {prediction['conf']:.2f}",
+                                 fill=color, stroke_fill="black", stroke_width=1)
+            if panel.width > 640:
+                panel = panel.resize((640, round(640 * panel.height / panel.width)))
+            painter = ImageDraw.Draw(panel)
+            painter.rectangle((0, 0, min(panel.width, 500), 20), fill="black")
+            painter.text((5, 4), title, fill="white")
+            panels.append(panel)
+        width = max(panel.width for panel in panels)
+        height = max(panel.height for panel in panels)
+        canvas = Image.new("RGB", (width * 2, height * 2), "black")
+        for i, panel in enumerate(panels):
+            canvas.paste(panel, ((i % 2) * width, (i // 2) * height))
+        canvas.save(output / (Path(row["image"]).stem + "_comparison.jpg"), quality=88)
+    return len(picks)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--input", type=Path, default=Path("model/runs/crop-diagnostic"))
     p.add_argument("--output", type=Path)
+    p.add_argument("--review-overlays", type=int, default=0,
+                   help="Render N hardest development images side by side")
+    p.add_argument("--images-dir", type=Path, default=Path("data/training/images/val"))
     args = p.parse_args()
     output = args.output or args.input / "cached_analysis.json"
     base = read_cache(args.input / "progress.jsonl")
@@ -281,6 +348,11 @@ def main():
             held = item["holdout"]["overall"]
             print(f"Held-out proxy: {held['matched']}/{held['targets']} targets matched, "
                   f"{held['unmatched_predictions']} unmatched predictions")
+    if args.review_overlays:
+        development, _ = partition(join_caches(base, high))
+        count = render_review_overlays(development, args.images_dir,
+                                       output.parent / "cached_review_overlays", args.review_overlays)
+        print(f"Saved {count} four-panel diagnostic JPEGs")
     print("Saved:", output)
 
 
