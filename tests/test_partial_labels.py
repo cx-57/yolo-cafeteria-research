@@ -170,6 +170,34 @@ class UpstreamLossTests(PartialLabelsTests):
                       "bboxes": torch.tensor([[.5, .5, .75, .75], [.5, .5, .5, .5]]),
                       "im_file": ["plate__food.jpg", "school_lunch__plate.jpg"]}
 
+    def test_actual_yolo11n_forward_backward_on_a_real_plate_photo(self):
+        """Real architecture + committed photo, but UNTRAINED weights: runtime smoke only."""
+        import numpy as np
+        from PIL import Image
+        from ultralytics.nn.tasks import DetectionModel
+        torch.manual_seed(42)
+        torch.set_num_threads(2)
+        model = DetectionModel(cfg="yolo11n.yaml", nc=11, verbose=False)
+        model.names = dict(enumerate(NAMES))
+        model.train()
+        photo = ROOT / "data/processed/plate/images/train__lvis_000000225490.jpg"
+        with Image.open(photo) as original:
+            rgb = original.convert("RGB").resize((128, 128))
+            pixels = np.asarray(rgb).copy()
+        image = torch.from_numpy(pixels).permute(2, 0, 1).unsqueeze(0).float() / 255
+        batch = {"batch_idx": torch.tensor([0.]), "cls": torch.tensor([[1.]]),
+                 "bboxes": torch.tensor([[.5, .5, .5, .5]]),
+                 "im_file": ["plate__train__lvis_000000225490.jpg"]}
+        predictions = model(image)
+        criterion = partial.make_criterion(model, self.policy)
+        loss, components = criterion(predictions, batch)
+        self.assertTrue(torch.isfinite(loss).all())
+        self.assertTrue(torch.isfinite(torch.stack(list(components.values()))).all())
+        loss.sum().backward()
+        self.assertTrue(any(p.grad is not None and torch.isfinite(p.grad).all()
+                            for p in model.parameters()))
+        self.assertIsNone(criterion.bce.known_mask)
+
     def test_all_known_full_upstream_detection_loss_is_unchanged(self):
         data = dict(self.policy_data, source_known_classes={
             "plate": list(range(11)), "school_lunch": list(range(11))})
