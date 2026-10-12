@@ -55,6 +55,7 @@ Important: some newer sources remain training-only to prevent source leakage, so
 | Evaluate best checkpoint | `python3 scripts/train.py --evaluate model/runs/yolo11n-1x/weights/best.pt --device mps` |
 | Audit source photos | `python3 scripts/audit.py --manifests data/manifests --output data/audits/current` |
 | Diagnose model/data limits | `python3 scripts/diagnose.py --run model/runs/yolo11n-1x --output data/audits/model_plateau_2026-10-11` |
+| Compare crop vs full-frame detection | `python3 scripts/crop_diagnostic.py --device mps` |
 | Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
 | Import additional LVIS candidate plates | `python3 scripts/lvis.py --help` |
 
