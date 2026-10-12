@@ -37,6 +37,27 @@ jobs:
                 "train,", s["val_originals"], "validation,",
                 s["train_views"], "training views; test is separate")
           PY
+      - name: Check every real generated image/label pair
+        run: |
+          python scripts/diagnose.py --dataset data/training --output /tmp/yolo-ci-diagnostics
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d = json.loads(Path("/tmp/yolo-ci-diagnostics/diagnosis.json").read_text())
+          assert d["support_basis"] == "fresh_generated_label_scan"
+          for split in ("train", "val"):
+              stats = d["splits"][split]
+              assert stats["images"] > 0 and stats["instances"] > 0
+              assert all(row["instances"] is not None for row in stats["classes"].values())
+          assert "paper_boat" in d["missing_train_classes"], "Update this guard after adding genuine paper-boat annotations"
+          print("REAL DATA SCAN PASSED; unsupported validation classes:", d["missing_val_classes"])
+          print("This checks file integrity and box geometry, NOT visual annotation completeness or mAP.")
+          PY
+      - name: Preserve real label scan report
+        uses: actions/upload-artifact@v4
+        with:
+          name: real-label-diagnostics
+          path: /tmp/yolo-ci-diagnostics/
       - name: Preserve split and class counts
         uses: actions/upload-artifact@v4
         with:
