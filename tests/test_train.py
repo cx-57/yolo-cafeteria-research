@@ -428,6 +428,21 @@ class TrainingControlsTests(unittest.TestCase):
         self.assertEqual((validation["imgsz"], validation["batch"], validation["name"]),
                          (960, 4, "fit_validation"))
 
+    def test_reweighting_and_freeze_options_are_opt_in(self):
+        self.run_cli("--cls-pw", "0.25", "--freeze", "10", "--epochs", "3")
+        training = self.models[0].training_options
+        self.assertEqual(training["cls_pw"], 0.25)
+        self.assertEqual(training["freeze"], 10)
+
+    def test_invalid_class_weight_and_freeze_rejected(self):
+        for args in (("--cls-pw", "-0.01"), ("--cls-pw", "1.1"),
+                     ("--cls-pw", "nan"), ("--freeze", "-1")):
+            self.models.clear()
+            with self.subTest(args=args), redirect_stderr(io.StringIO()):
+                with self.assertRaises(SystemExit):
+                    self.run_cli(*args)
+                self.assertEqual(self.models, [])
+
     def test_coverage_aware_training_requires_no_mosaic_and_passes_custom_trainer(self):
         sentinel = object()
         with patch.dict(sys.modules, {"partial_labels": SimpleNamespace(
@@ -459,6 +474,8 @@ class TrainingControlsTests(unittest.TestCase):
                          ("auto", 25, 0.3, 10, 8))
         self.assertNotIn("lr0", options)
         self.assertNotIn("lrf", options)
+        self.assertNotIn("cls_pw", options)
+        self.assertNotIn("freeze", options)
         self.assertEqual(self.models[-1].validation_options["imgsz"], 640)
 
     def test_invalid_and_nonfinite_options_fail_before_loading_a_model(self):
