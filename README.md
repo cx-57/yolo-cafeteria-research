@@ -56,8 +56,11 @@ Important: some newer sources remain training-only to prevent source leakage, so
 | Audit source photos | `python3 scripts/audit.py --manifests data/manifests --output data/audits/current` |
 | Diagnose model/data limits | `python3 scripts/diagnose.py --run model/runs/yolo11n-1x --output data/audits/model_plateau_2026-10-11` |
 | Compare crop vs full-frame detection | `python3 scripts/crop_diagnostic.py --device mps` |
+| Compare 640px vs 960px inference | `python3 scripts/crop_diagnostic.py --device mps --compare-imgsz 960` |
 | Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
 | Import additional LVIS candidate plates | `python3 scripts/lvis.py --help` |
+
+The resolution comparison reuses the same 55 validation images and existing 640px cached predictions in `model/runs/crop-diagnostic/progress.jsonl`. The additional 960px inference resumes from `resolution_960_progress.jsonl` and writes `resolution_960_summary.json`. It reports recall at IoU 0.50, extra unmatched predictions, and the effect of class-aware suppression of overlapping crop boxes. **Unmatched detections are not confirmed false positives** because the annotations are incomplete; no trained checkpoint or images are uploaded to GitHub.
 
 To evaluate on a **genuine test set**, collect and fully annotate **separate NHS cafeteria photos** from different days/cameras. Copy `data/training/data.yaml` to a new local YAML and add `test: /absolute/path/to/nhs_test/images`, with matching labels in a sibling `labels/` folder. Then:
 
