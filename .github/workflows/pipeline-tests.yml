@@ -37,6 +37,32 @@ jobs:
                 "train,", s["val_originals"], "validation,",
                 s["train_views"], "training views; test is separate")
           PY
+      - name: Inspect every generated label and count small boxes at 640px
+        run: |
+          python scripts/diagnose.py --dataset data/training --imgsz 640 --output data/audits/ci-full-diagnosis
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d = json.loads(Path("data/audits/ci-full-diagnosis/diagnosis.json").read_text())
+          for split in ("train", "val"):
+              x = d["splits"][split]
+              print(f"{split}: {x['images']} images, {x['instances']} labeled objects")
+              for name, counts in x["classes"].items():
+                  print(f"  {name}: {counts['images']} images, {counts['instances']} objects, "
+                        f"{counts['short_side_under_32px']} short-side-under-32px")
+          assert d["splits"]["train"]["images"] == 2477
+          assert d["splits"]["val"]["images"] == 619
+          assert d["splits"]["train"]["instances"] > 0
+          assert d["splits"]["val"]["instances"] > 0
+          assert d["support_basis"] == "fresh_generated_label_scan"
+          PY
+      - name: Preserve comprehensive label audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-label-diagnosis
+          path: |
+            data/audits/ci-full-diagnosis/diagnosis.json
+            data/audits/ci-full-diagnosis/class_support.csv
       - name: Preserve split and class counts
         uses: actions/upload-artifact@v4
         with:
