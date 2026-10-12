@@ -253,6 +253,7 @@ class TrainingControlsTests(unittest.TestCase):
             "names": train.class_names(), "val": "images/val"}))
         self.models = []
         self.checkpoint_names = dict(enumerate(train.class_names()))
+        self.metrics_mutation = None
         case = self
 
         class RecordingYOLO:
@@ -280,7 +281,7 @@ class TrainingControlsTests(unittest.TestCase):
                 if "on_val_end" in self.callbacks:
                     self.callbacks["on_val_end"](SimpleNamespace(
                         args=SimpleNamespace(**effective)))
-                return SimpleNamespace(
+                metrics = SimpleNamespace(
                     save_dir=save_dir,
                     box=SimpleNamespace(
                         mp=0.5, mr=0.35, map50=0.55, map=0.375,
@@ -288,6 +289,9 @@ class TrainingControlsTests(unittest.TestCase):
                         p=[0.8, 0.2], r=[0.6, 0.1], f1=[24 / 35, 2 / 15]),
                     nt_per_class=[3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
                     nt_per_image=[2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0])
+                if case.metrics_mutation:
+                    case.metrics_mutation(metrics)
+                return metrics
 
         model_patch = patch.object(train, "MODEL", self.model_dir)
         module_patch = patch.dict(sys.modules, {
@@ -342,6 +346,24 @@ class TrainingControlsTests(unittest.TestCase):
         self.assertEqual(result["coverage"]["supported_class_count"], 2)
         self.assertEqual(result["coverage"]["supported_classes"], ["food", "hinged_container"])
         self.assertEqual(result["coverage"]["unsupported_class_count"], 9)
+        self.assertFalse(result["coverage"]["all_classes_evaluable"])
+        self.assertIn("Provisional validation", result["interpretation"])
+
+    def test_validator_refuses_corrupt_or_misaligned_metrics(self):
+        cases = (
+            ("missing_ap_row", lambda m: setattr(m.box, "ap_class_index", [0]), "AP rows"),
+            ("no_targets", lambda m: setattr(m, "nt_per_class", [0] * 11), "AP rows"),
+            ("wrong_support_length", lambda m: setattr(m, "nt_per_image", [2]), "class support"),
+            ("nan_ap", lambda m: m.box.ap.__setitem__(0, float("nan")), "nonfinite metrics"),
+            ("inflated_macro", lambda m: setattr(m.box, "map50", 0.99), "macro ap50"),
+            ("unsupported_ap", lambda m: m.box.ap_class_index.__setitem__(1, 3), "AP rows"),
+        )
+        for name, mutation, message in cases:
+            with self.subTest(name=name):
+                self.metrics_mutation = mutation
+                with self.assertRaisesRegex(ValueError, message):
+                    train.evaluate("best.pt", self.data_file)
+        self.assertFalse((self.model_dir / "runs/evaluation_val/metrics.json").exists())
 
     def test_checkpoint_class_names_and_ids_are_checked_before_validation(self):
         for names in ({0: "other"}, {1: "food"},
@@ -423,6 +445,33 @@ class TrainingControlsTests(unittest.TestCase):
                 downloaded = train.load_model(filename)
                 self.assertEqual(downloaded.loaded_from, weights.resolve())
                 self.assertEqual(Path.cwd(), original)
+
+
+class VerifiedAnnotationTests(unittest.TestCase):
+    """Real source-label regression checks; catches accidental class remapping."""
+
+    def test_verified_missing_target_repairs_keep_legal_boxes(self):
+        examples = (
+            ("plate", "train__lvis_000000346262.txt", [1, 0, 3]),
+            ("plate", "train__lvis_000000004386.txt", [1, 0, 0]),
+            ("trash_detection",
+             "train__000090_jpg.rf.73d3f6dab3183f7c267d3f62ab8a22c1.txt",
+             [9, 8, 8]),
+        )
+        for source, file, expected in examples:
+            with self.subTest(file=file):
+                path = ROOT / "data/processed" / source / "labels" / file
+                rows, clipped = train.read_labels(path, source, train.class_names())
+                self.assertEqual(clipped, 0)
+                self.assertEqual([int(row.split()[0]) for row in rows], expected)
+                for row in rows:
+                    _, x, y, w, h = map(float, row.split())
+                    self.assertGreater(w, 0)
+                    self.assertGreater(h, 0)
+                    self.assertGreaterEqual(x - w / 2, -1e-6)
+                    self.assertGreaterEqual(y - h / 2, -1e-6)
+                    self.assertLessEqual(x + w / 2, 1 + 1e-6)
+                    self.assertLessEqual(y + h / 2, 1 + 1e-6)
 
 
 if __name__ == "__main__":
