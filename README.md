@@ -7,7 +7,7 @@
 ```text
 config.yaml             # 11 class names and IDs
 data/
-  processed/            # 3,096 original photos + labels (DO NOT edit)
+  processed/            # 3,096 original photos + audited labels (track every label repair in Git)
   raw/                  # historical source archives
   candidates/           # unreviewed images (not training data)
   manifests/            # source/provenance CSVs
@@ -52,7 +52,7 @@ Important: some newer sources remain training-only to prevent source leakage, so
 | Train a model | `python3 scripts/train.py data/training/data.yaml --device mps` |
 | Train with 1× views (default) | `python3 scripts/train.py --epochs 80 --batch 4 --device mps` |
 | Resume after interruption | `python3 scripts/train.py --resume model/runs/yolo11n-1x/weights/last.pt` |
-| Evaluate best checkpoint | `python3 scripts/train.py --evaluate model/runs/yolo11n-10x/weights/best.pt --device mps` |
+| Evaluate best checkpoint | `python3 scripts/train.py --evaluate model/runs/yolo11n-1x/weights/best.pt --device mps` |
 | Audit source photos | `python3 scripts/audit.py --manifests data/manifests --output data/audits/current` |
 | Diagnose model/data limits | `python3 scripts/diagnose.py --run model/runs/yolo11n-1x --output data/audits/model_plateau_2026-10-11` |
 | Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
@@ -61,7 +61,7 @@ Important: some newer sources remain training-only to prevent source leakage, so
 To evaluate on a **genuine test set**, collect and fully annotate **separate NHS cafeteria photos** from different days/cameras. Copy `data/training/data.yaml` to a new local YAML and add `test: /absolute/path/to/nhs_test/images`, with matching labels in a sibling `labels/` folder. Then:
 
 ```bash
-python3 scripts/train.py data/training/data_with_test.yaml --evaluate model/runs/yolo11n-10x/weights/best.pt --split test --device mps
+python3 scripts/train.py data/training/data_with_test.yaml --evaluate model/runs/yolo11n-1x/weights/best.pt --split test --device mps
 ```
 
 Never use test images to tune the model. Do not report provisional public-source validation scores as real NHS test performance.
@@ -82,6 +82,16 @@ python3 scripts/train.py --build-only \
 ```
 
 Use `data/training-grouped/data.yaml` explicitly to train on that new benchmark. Grouping candidates prevents known split risk without deleting photos; the candidates still require visual review.
+
+## Annotation fixes and evaluation integrity
+
+A tracked October 11 review corrected **six visible missing objects in three existing photographs**: two foods and a disposable spoon on LVIS plate scenes, plus two food wrappers in a Trash Detection scene. The preserved plate, food, and bottle annotations remain. The Trash Detection file uses *historical* wrapper class ID 9, which is converted to current ID 8 by the build step. These are manual visual edits, **not** claims that the other images have complete annotations.
+
+**Important:** One corrected image belonged to the previous validation split. The old 73.8% mAP50 figure is **not a comparable baseline for a newly relabeled validation set**. Rebuild the generated split, re-evaluate the *same saved checkpoint* on the updated validation labels, and only then compare a newly trained model against that updated baseline. Never infer an improvement from changing both labels and weights.
+
+GitHub Actions now builds the full original corpus and performs a second fresh label scan. Its checks cover bounding-box geometry, class IDs, source-to-label pairing, split counts and synthetic evaluation edge cases. **Passing those tests does not mean** the annotations are exhaustive or the model detects cafeteria items accurately. Standalone evaluation rejects absent/misaligned AP rows, inconsistent macro averages and NaN scores; unsupported classes are explicitly reported instead of being assigned an invented score.
+
+Run local CPU-level data checks with `python3 -m unittest discover -s tests -v` and `python3 scripts/train.py --build-only`. Running the actual model still requires your local `best.pt` and device; the weights are not in GitHub.
 
 ## Source history
 
