@@ -55,6 +55,21 @@ class DiagnosisTests(unittest.TestCase):
         self.assertEqual(report["missing_val_classes"], ["plate", "paper_boat"])
         self.assertEqual(report["splits"]["train"]["classes"]["food"]["short_side_under_32px"], 1)
 
+    def test_fresh_scan_rejects_out_of_bounds_and_nonfinite_boxes(self):
+        self.add_image("train", "school_lunch__a", "0 .5 .5 .4 .4\n")
+        self.add_image("val", "school_lunch__c", "0 .5 .5 .4 .4\n")
+        file = self.dataset / "labels" / "val" / "school_lunch__c.txt"
+        for invalid in ("0 .95 .5 .4 .4\n", "0 nan .5 .4 .4\n",
+                        "0 .5 .5 0 .4\n"):
+            with self.subTest(invalid=invalid):
+                file.write_text(invalid)
+                result = self.run_diagnosis()
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn("invalid class or coordinates" if "nan" in invalid
+                              else "box outside normalized image bounds",
+                              result.stderr)
+        self.assertFalse((self.output / "diagnosis.json").exists())
+
     def test_ablation_filters_train_without_moving_validation_or_editing_labels(self):
         food = self.add_image("train", "school_lunch__a", "0 .5 .5 .4 .4\n")
         self.add_image("train", "plate__b", "1 .5 .5 .8 .8\n")
