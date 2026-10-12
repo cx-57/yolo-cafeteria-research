@@ -6,6 +6,16 @@ The reported 73.8% is **mAP50**, not classification accuracy. The matching check
 
 The run has not demonstrated a hard learning ceiling: the best localization metric improved at epoch 40, and logging stops at epoch 42 of a planned 80. A CSV cannot establish why training stopped. Checkpoint metadata confirms that both best and last checkpoints retain optimizer state.
 
+## Update: manually verified fixes and stricter checks
+
+The October 11 review branch adds 6 visible target boxes to 3 source labels. The plate sandwich/spoon scene now includes food and utensil; the second plate photo includes sandwich and salad food; the outdoor trash photo includes orange and green wrappers in addition to its preexisting bottle box. The legacy trash source stores wrapper as original ID 9 (current generated class ID 8). The metallic fork in the second plate photo is not automatically relabeled as a disposable utensil.
+
+These corrections address **three specific images**, not 344 LVIS images or the full 3,096-image corpus. Most mixed-source images remain unverified. The previously held 728 Dry & Wet candidates also remain held; no unreviewed images are added by these code changes.
+
+The builder now uses the historical near-duplicate candidate audit for grouping **by default** if that file is present. This is a preventive measure against evaluation leakage, not proof that every flagged pair is truly a duplicate. Both split membership and validation labels can therefore differ from the earlier ungrouped benchmark. The recorded old mAP must **not** be treated as a fixed-split control for future runs without reevaluating the old checkpoint on the rebuilt validation set.
+
+Automated tests now cover source label repairs, malformed/misaligned model metrics, a full freshly generated real-label scan, and a cross-split audit-pair leak check. This checks data/metric integrity, not whether all objects are labeled or whether a YOLO checkpoint is accurate. The GitHub repository does not contain trained `best.pt`; real checkpoint evaluation and fine-tuning still require an available model run.
+
 ## Evidence from the saved training run
 
 | Measure | Best mAP50–95 checkpoint, epoch 40 |
