@@ -38,9 +38,11 @@ imports signed-off NHS photos grouped by session, applies checksum-verified
 human-approved label replacements, fingerprints the build, and launches three
 fixed training trials (YOLO11n, weighted YOLO11n, YOLO11s).
 
-**Strict V2 validation and test are NHS-only.** Without fully reviewed NHS
-images and all-11-class positive support, a strict build is rejected. Run
-the safe provisional builder below only for engineering experiments:
+**Strict V2 validation is NHS-only; a test set is optional.** A strict build
+requires independently reviewed NHS validation photos and all-11-class
+positive support in training and validation (and test, if supplied). Without
+those NHS validation photos, use the provisional builder on the existing
+80/20 split for exploratory training:
 
     python3 scripts/v2.py build --provisional
 
