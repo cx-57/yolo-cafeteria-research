@@ -207,7 +207,27 @@ def build(args):
                                             for photo in photos]])
     nhs = check_nhs_manifest(args.nhs_manifest, sources)
     overrides = validate_overrides(args.reviewed_overrides, sources)
-    evidence = audit_splits(sources, nhs)
+    # In strict V2, ALL public-source V1 photos are train-only.
+    # Validation and test must consist solely of independently reviewed NHS captures.
+    audited_sources = sources if args.provisional else {
+        "train": sources["train"] + sources["val"]
+    }
+    evidence = audit_splits(audited_sources, nhs)
+    for record in overrides:
+        split = record["split"] if args.provisional else "train"
+        prior = label_path(next(photo for photo in sources[record["split"]]
+                                if photo.stem == record["stem"]))
+        for row in [r for r in prior.read_text().splitlines() if r.strip()]:
+            name = class_names()[int(row.split()[0])]
+            evidence["instances"][split][name] -= 1
+        for row in record["rows"]:
+            name = class_names()[int(row.split()[0])]
+            evidence["instances"][split][name] += 1
+    evidence["missing_classes"] = {
+        split: [name for name in class_names()
+                if evidence["instances"].get(split, {}).get(name, 0) == 0]
+        for split in ("train", "val", "test")
+    }
     if not args.provisional:
         if any(evidence["missing_classes"][split] for split in ("train", "val", "test")):
             raise ValueError("V2 class coverage is incomplete. Supply reviewed NHS photos "
@@ -217,8 +237,20 @@ def build(args):
             raise ValueError("Final V2 requires an independently collected NHS test split")
     # The existing experiment builder validates additive boxes and never edits V1.
     prepare_experiment(source_yaml, dest, label_additions=args.label_additions)
+    if not args.provisional:
+        # V1 public-source validation is NOT a domain-matched V2 evaluation set.
+        # Reassign only V2 COPIES of legacy validation images to training.
+        for image in list((dest / "images/val").iterdir()):
+            target = dest / "images/train" / image.name
+            target_label = dest / "labels/train" / (image.stem + ".txt")
+            old_label = dest / "labels/val" / (image.stem + ".txt")
+            if target.exists() or target_label.exists():
+                raise ValueError(f"V2 copy collision: {image.name}")
+            image.rename(target)
+            old_label.rename(target_label)
     for record in overrides:
-        output_label = dest / "labels" / record["split"] / (record["stem"] + ".txt")
+        output_split = record["split"] if args.provisional else "train"
+        output_label = dest / "labels" / output_split / (record["stem"] + ".txt")
         if not output_label.is_file():
             raise ValueError(f"Missing V2 label copy: {output_label}")
         output_label.write_text("\n".join(record["rows"]) +
@@ -253,6 +285,7 @@ def build(args):
                "nhs_photos": nhs_summary, "source_audit": evidence,
                "final_audit": final, "dataset_sha256": dataset_fingerprint(spec_file),
                "annotation_policy": "docs/REDESIGN_V2.md (2026-10-12)",
+               "strict_nhs_only_evaluation": not args.provisional,
                "label_additions": str(args.label_additions) if args.label_additions else None,
                "reviewed_overrides": overrides}
     (dest / "v2_build.json").write_text(json.dumps(summary, indent=2) + "\n")
