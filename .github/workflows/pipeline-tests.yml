@@ -104,7 +104,9 @@ jobs:
               originals = {p.name for p in Path("data/training/images", split).iterdir()}
               revised = {p.name for p in Path("data/training-ci-revised/images", split).iterdir()}
               assert originals <= revised
+          print("LVIS overlay OK; original food support:", a["original_support"]["val"]["food"])
           print("LVIS overlay OK; corrected food support:", a["corrected_support"]["val"]["food"])
+          print("LVIS overlay accepted boxes by split:", a["additions"]["by_split"])
           print("Plate images and every original label retained; experiment is NOT trained.")
           PY
       - name: Upload experiment integrity report
