@@ -19,3 +19,8 @@ venv/
 data/training/
 data/training-grouped/
 data/audits/model_plateau_2026-10-11/ablation/
+
+# Temporary experiments and visual diagnostics (do not commit generated copies)
+data/training-revised/
+data/training-ci-revised/
+model/prediction-review/
