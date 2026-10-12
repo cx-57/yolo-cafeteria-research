@@ -38,7 +38,12 @@ condiment packet, and bowl. No independent NHS test has been performed.
   causes errors is not determined without checkpoint inference.
 - **Napkins**: 121 labeled training images and **zero validation**.
   Manifest counts: Waste Detection v3 **52**, TartanHacks **35** and
-  Dry & Wet Waste **34**. The first two include correlated video frames.
+  Dry & Wet Waste **34**. The 52 Waste Detection napkin frames come from
+  **two video groups** (38 + 14 frames); the 35 TartanHacks napkin frames
+  come from **seven video groups** (five frames each). Thus **87 of the
+  121 napkin images arise from only nine known video capture groups**.
+  The remaining 34 Dry & Wet photos have distinct source-group IDs,
+  not independently verified capture-session independence.
   Treat the 121 as *images*, not 121 independent capture sessions.
 - **Condiments**: 44 photos, all tagged
   `condiments_same_background_batch` in the provenance manifest.
