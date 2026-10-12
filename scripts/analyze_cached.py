@@ -5,8 +5,10 @@ labeled images mean unmatched detections are review candidates, NOT verified FPs
 No training, relabeling, new packages, or changes to the original images.
 """
 import argparse
+import csv
 import hashlib
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -31,20 +33,55 @@ def nms(predictions, threshold=0.5):
     return kept
 
 
-def matched(targets, predictions, confidence=0.25):
-    """Replicate the original experiment's descending-confidence matching."""
-    found = set()
-    for p in sorted(predictions, key=lambda p: -p["conf"]):
-        if p["conf"] < confidence:
+def assignments(targets, predictions, confidence=0.25):
+    """Maximum-cardinality same-class IoU>=0.50 matching.
+
+    Greedy matching can undercount overlapping plates: the highest-confidence
+    prediction may consume the only label a second prediction can match.
+    """
+    edges = {}
+    for j, prediction in enumerate(predictions):
+        if prediction["conf"] < confidence:
             continue
-        choices = [(iou(p["box"], t["box"]), idx)
-                   for idx, t in enumerate(targets)
-                   if idx not in found and p["class"] == t["class"]]
-        if choices:
-            strength, idx = max(choices)
-            if strength >= 0.5:
-                found.add(idx)
-    return found
+        edges[j] = [i for score, i in sorted(
+            ((iou(prediction["box"], target["box"]), i)
+             for i, target in enumerate(targets)
+             if target["class"] == prediction["class"]), reverse=True)
+            if score >= 0.5]
+    by_target = {}
+
+    def augment(j, visited):
+        for i in edges[j]:
+            if i in visited:
+                continue
+            visited.add(i)
+            previous = by_target.get(i)
+            if previous is None or augment(previous, visited):
+                by_target[i] = j
+                return True
+        return False
+
+    for j in sorted(edges, key=lambda j: -predictions[j]["conf"]):
+        augment(j, set())
+    return by_target
+
+
+def matched(targets, predictions, confidence=0.25):
+    return set(assignments(targets, predictions, confidence))
+
+
+def source_group(filename):
+    """Group old split names and alternate Roboflow exports of one photograph."""
+    name = filename.split(".rf.")[0]
+    if "__" not in name:
+        return name
+    source, original = name.split("__", 1)
+    original = re.sub(r"^(train|valid|val|test)__", "", original)
+    if source == "tartanhacks":
+        video_id = re.search(r"IMG_\d+", original)
+        if video_id:
+            original = video_id.group()
+    return source + "__" + original
 
 
 def read_cache(path):
@@ -105,9 +142,14 @@ def evaluate(rows, method, crop_conf=None, nms_iou=None):
     classes = {name: Counter() for name in CLASSES.values()}
     sources = {}
     review = []
+    unmatched_review = []
+    sizes = {name: Counter() for name in
+             ("tiny_under_1pct", "small_1_to_4pct", "medium_4_to_16pct", "large_16pct_plus")}
     for row in rows:
         predictions = detections(row, method, crop_conf, nms_iou)
-        found = matched(row["targets"], predictions)
+        assignments_ = assignments(row["targets"], predictions)
+        found = set(assignments_)
+        used_predictions = set(assignments_.values())
         source = row["image"].split("__", 1)[0]
         if source not in sources:
             sources[source] = Counter()
@@ -116,33 +158,61 @@ def evaluate(rows, method, crop_conf=None, nms_iou=None):
             bucket["predictions"] += len(predictions)
             bucket["matched"] += len(found)
             bucket["targets"] += len(row["targets"])
+        for j, prediction in enumerate(predictions):
+            classes[CLASSES[prediction["class"]]]["predictions"] += 1
+            if j in used_predictions:
+                continue
+            best_overlap = max((iou(prediction["box"], t["box"])
+                                for t in row["targets"]), default=0.)
+            best_other = max((iou(prediction["box"], t["box"])
+                              for t in row["targets"]
+                              if t["class"] != prediction["class"]), default=0.)
+            unmatched_review.append({
+                "image": row["image"], "class": CLASSES[prediction["class"]],
+                "confidence": round(prediction["conf"], 5), "xyxy": prediction["box"],
+                "max_iou_any_label": round(best_overlap, 4),
+                "max_iou_other_class": round(best_other, 4),
+                "review_hint": ("potential_class_confusion" if best_other >= 0.5
+                                else "review_unlabeled_or_duplicate_or_wrong"),
+            })
         for i, target in enumerate(row["targets"]):
             stats = classes[CLASSES[target["class"]]]
+            area = target["area"]
+            size = ("tiny_under_1pct" if area < .01 else
+                    "small_1_to_4pct" if area < .04 else
+                    "medium_4_to_16pct" if area < .16 else "large_16pct_plus")
+            sizes[size]["targets"] += 1
+            sizes[size]["matched"] += (i in found)
             stats["targets"] += 1
             stats["matched"] += (i in found)
-            if target["area"] < 0.01:
+            if area < .01:
                 stats["tiny_targets"] += 1
                 stats["tiny_matched"] += (i in found)
             if i not in found:
                 review.append({"image": row["image"], "class": CLASSES[target["class"]],
-                               "area_fraction": target["area"], "issue": "missed_gt"})
+                               "area_fraction": area, "issue": "missed_gt"})
+
     def summary(counter):
-        return {**dict(counter),
-                "recall": (round(counter["matched"] / counter["targets"], 4)
-                           if counter["targets"] else None),
-                "unmatched_predictions": counter["predictions"] - counter["matched"]}
+        result = {**dict(counter),
+                  "recall": (round(counter["matched"] / counter["targets"], 4)
+                             if counter["targets"] else None)}
+        if "predictions" in counter:
+            result["unmatched_predictions"] = counter["predictions"] - counter["matched"]
+        return result
+
     return {"method": method, "crop_conf": crop_conf, "nms_iou": nms_iou,
             "overall": summary(totals),
             "classes": {name: summary(counts) for name, counts in classes.items()},
             "sources": {name: summary(counts) for name, counts in sources.items()},
-            "missed_gt": review}
+            "sizes": {name: summary(counts) for name, counts in sizes.items()},
+            "missed_gt": review, "unmatched_review": unmatched_review}
 
 
 def partition(rows, seed=42):
     """A fixed development/holdout split; diagnostic only, not independent test."""
     development, holdout = [], []
     for row in rows:
-        image = row["image"].split(".rf.")[0]
+        image = source_group(row["image"])
         value = int.from_bytes(hashlib.sha256(f"{seed}:{image}".encode()).digest()[:8], "big")
         (holdout if value % 10 < 3 else development).append(row)
     if not development or not holdout:
@@ -160,7 +230,7 @@ def build_report(rows):
         evaluated.append({"method": mode, "crop_conf": conf, "nms_iou": nms_iou,
                           "dev": dev, "holdout": test, "all": all_images})
     baseline = next(e for e in evaluated if e["method"] == "full640" and e["crop_conf"] == 0.25)["dev"]["overall"]
-    # The tradeoff budget is user-readable, not a guarantee of verified precision.
+    # The unmatched-prediction budget is a review-load proxy, NOT a precision guarantee.
     def key(entry):
         stats = entry["dev"]["overall"]
         return (-stats["matched"], stats["unmatched_predictions"], stats["predictions"])
@@ -191,6 +261,17 @@ def main():
     report = build_report(join_caches(base, high))
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2) + "\n")
+    chosen = report["selected_on_development_only"]
+    picked = next(item for item in report["candidates"]
+                  if all(item[key] == value for key, value in chosen.items()))
+    with (output.parent / "cached_review_queue.csv").open("w", newline="") as stream:
+        columns = ["image", "class", "confidence", "xyxy", "max_iou_any_label",
+                   "max_iou_other_class", "review_hint"]
+        writer = csv.DictWriter(stream, fieldnames=columns)
+        writer.writeheader()
+        for row in sorted(picked["holdout"]["unmatched_review"],
+                          key=lambda row: -row["confidence"]):
+            writer.writerow(row)
     selected = report["selected_on_development_only"]
     print(f"Analyzed {report['images']} cached images; {report['development_images']} development, "
           f"{report['diagnostic_holdout_images']} diagnostic holdout")
