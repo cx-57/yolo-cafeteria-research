@@ -205,6 +205,12 @@ def build_dataset(augment_factor=1, seed=42, group_audit=None, output=None):
            for photos in groups.values() for source, image, _ in photos
            for source_path in (image, DATA / "processed" / source / "labels" / (image.stem + ".txt"))):
         raise ValueError(f"Unsafe output contains a training source image or label: {output}")
+    # Conservative leakage prevention is the default when the tracked near-
+    # duplicate audit exists. A candidate pair is grouped, never auto-deleted.
+    if group_audit is None:
+        known_candidates = DATA / "audits/day1/near_duplicates.csv"
+        if known_candidates.is_file():
+            group_audit = known_candidates
     groups, grouping = grouped_candidates(groups, group_audit)
     total = sum(source_counts.values())
     target = round(total * 0.20)
