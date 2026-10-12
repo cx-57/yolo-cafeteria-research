@@ -47,6 +47,31 @@ condiment packet, and bowl. No independent NHS test has been performed.
   frames from a small number of source videos; no validation AP.
 - **Paper boats**: zero labeled train and validation photos.
 
+
+### Additional direct visual observations (not yet relabeled)
+
+- `data/processed/plate/images/train__lvis_000000225490.jpg`: multiple pizza
+  slices visibly occupy one of two annotated plates. The stored label file has
+  two **plate** boxes and no **food** boxes. This is another confirmed example
+  of incomplete multi-class supervision; deciding whether to box each slice or
+  the entire portion requires a consistent food annotation policy.
+- `data/processed/plate/images/train__lvis_000000478368.jpg`: seven visible
+  pizza-topped muffin pieces sit on a baking tray. The label contains a tiny
+  **plate** box at the upper-left edge and no food annotations. This scene
+  strongly differs from a conventional cafeteria tray/plate photograph.
+- `data/processed/plate/images/val__lvis_000000557582.jpg`: two visible pizza
+  pieces are being held by people. The sole annotated plate is a thin partially
+  visible strip near the bottom. This image exemplifies severe occlusion and
+  incomplete food annotation **inside the validation set**.
+- `data/processed/plate/images/train__lvis_000000001455.jpg`: four plate
+  boxes overlap within a small stack of paper plates. Overlap may be physically
+  valid because plates are stacked; the geometry is a **review candidate**, not
+  proof of duplicate annotations.
+
+A missing ground-truth food box can cause a correct food prediction to be
+miscounted as a false positive. Fixing such validation labels changes the
+benchmark: do not compare old and new AP as though the dataset was identical.
+
 ### Required next measurements
 
 1. Analyze **actual best.pt predictions** on the frozen grouped validation set.
