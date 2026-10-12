@@ -363,6 +363,8 @@ def report(args):
         if not recipe.is_file():
             raise ValueError(f"Missing training run manifest: {recipe}")
         trial_info = json.loads(recipe.read_text())
+        if trial_info.get("provisional") and not args.allow_incomplete:
+            raise ValueError(f"{trial}: provisional dataset cannot be ranked as strict NHS validation")
         signatures.add(trial_info["dataset_sha256"])
         path = PROJECT_ROOT / "model/runs" / (run_name + "-evaluation") / "metrics.json"
         if not path.is_file():
