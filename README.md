@@ -56,7 +56,7 @@ From your repository folder:
 git pull
 python3 -m pip install -r requirements.txt
 python3 -m unittest discover -s tests -v
-python3 scripts/train.py --build-only
+# Only generate data/training when it does NOT already exist; rebuilding replaces it.
 python3 scripts/train.py data/training/data.yaml --device mps
 ```
 
