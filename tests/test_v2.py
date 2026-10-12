@@ -116,6 +116,32 @@ class V2WorkflowTests(unittest.TestCase):
         self.assertEqual(self.original_labels,
                          {str(p): p.read_bytes() for p in self.source.rglob("*.txt")})
 
+    def test_strict_nhs_validation_does_not_require_test_set(self):
+        manifest = self.manifest([
+            self.add_nhs("train", "day-a", 1),
+            self.add_nhs("val", "day-b", 2),
+        ])
+        path = v2.build(self.args(provisional=False, nhs_manifest=manifest))
+        spec = yaml.safe_load(path.read_text())
+        self.assertNotIn("test", spec)
+        self.assertEqual(len(list(Path(spec["val"]).iterdir())), 1)
+        self.assertTrue(all(p.name.startswith("nhs__")
+                            for p in Path(spec["val"]).iterdir()))
+        metadata = json.loads((self.output / "v2_build.json").read_text())
+        self.assertFalse(metadata["provisional"])
+        self.assertFalse(metadata["independent_test_available"])
+        self.assertIn("No independent test", metadata["evaluation_note"])
+
+    def test_strict_test_when_supplied_needs_class_coverage(self):
+        manifest = self.manifest([
+            self.add_nhs("train", "day-a", 1),
+            self.add_nhs("val", "day-b", 2),
+            self.add_nhs("test", "day-c", 3, full_classes=False),
+        ])
+        with self.assertRaisesRegex(ValueError, "coverage is incomplete"):
+            v2.build(self.args(provisional=False, nhs_manifest=manifest))
+        self.assertFalse(self.output.exists())
+
     def test_nhs_session_leakage_rejected(self):
         manifest = self.manifest([
             self.add_nhs("val", "day-a", 1),
