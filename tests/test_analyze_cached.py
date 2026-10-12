@@ -48,6 +48,13 @@ class CachedAnalysisTests(unittest.TestCase):
         self.assertEqual(evaluate([item], "640_plus_crops", 0.35, 0.5)
                          ["overall"]["unmatched_predictions"], 0)
 
+    def test_low_confidence_threshold_counts_true_matches(self):
+        row = sample(full=[prediction(1, 0.18)], high=[prediction(1, 0.18)])
+        for mode in ("full640", "full960"):
+            self.assertEqual(evaluate([row], mode, 0.15)["overall"]["matched"], 1)
+            self.assertEqual(evaluate([row], mode, 0.25)["overall"]["matched"], 0)
+            self.assertEqual(evaluate([row], mode, 0.15)["overall"]["unmatched_predictions"], 0)
+
     def test_full_frame_confidence_sweep_changes_detections(self):
         item = sample(full=[prediction(1, 0.18)])
         self.assertEqual(len(detections(item, "full640", 0.15)), 1)
