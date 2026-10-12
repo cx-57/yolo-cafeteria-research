@@ -1,0 +1,162 @@
+"""Render actual YOLO detections beside current labels; no training or relabeling.
+
+Use the saved 11-class best.pt. Reports at one confidence/IoU threshold are
+diagnostics, NOT AP/mAP and NOT independent NHS test performance.
+"""
+import argparse
+import csv
+import json
+from pathlib import Path
+
+from PIL import Image, ImageDraw
+import yaml
+
+NAMES = ("food", "plate", "paper_boat", "utensil", "hinged_container",
+         "napkin", "drink_carton", "condiment_packet", "wrapper", "bottle", "bowl")
+EXT = {".jpg", ".jpeg", ".png", ".webp"}
+
+
+def box_iou(a, b):
+    x = max(0, min(a[2], b[2]) - max(a[0], b[0]))
+    y = max(0, min(a[3], b[3]) - max(a[1], b[1]))
+    area_a = max(0, a[2]-a[0]) * max(0, a[3]-a[1])
+    area_b = max(0, b[2]-b[0]) * max(0, b[3]-b[1])
+    shared = x*y
+    return shared/(area_a+area_b-shared) if area_a+area_b>shared else 0.0
+
+
+def parse_labels(path, width, height):
+    if not path.exists():
+        raise ValueError(f"Missing label file: {path}")
+    output = []
+    for line in path.read_text().splitlines():
+        if not line.strip():
+            continue
+        parts = line.split()
+        if len(parts) != 5:
+            raise ValueError(f"Invalid YOLO row in {path}")
+        cls = int(parts[0])
+        x, y, w, h = map(float, parts[1:])
+        if not 0 <= cls < len(NAMES) or w <= 0 or h <= 0:
+            raise ValueError(f"Invalid label class or area in {path}")
+        output.append((cls, ((x-w/2)*width, (y-h/2)*height,
+                             (x+w/2)*width, (y+h/2)*height), None))
+    return output
+
+
+def match(targets, predictions, min_iou=0.5):
+    """One-to-one same-class matches in descending IoU, without inventing labels."""
+    pairs = sorted(((box_iou(a[1], b[1]), i, j)
+                    for i, a in enumerate(targets)
+                    for j, b in enumerate(predictions) if a[0] == b[0]), reverse=True)
+    gt, pred = set(), set()
+    for overlap, i, j in pairs:
+        if overlap < min_iou:
+            break
+        if i not in gt and j not in pred:
+            gt.add(i)
+            pred.add(j)
+    return gt, pred
+
+
+def draw_boxes(image, objects, rgb):
+    picture = image.copy().convert("RGB")
+    painter = ImageDraw.Draw(picture)
+    for cls, coords, score in objects:
+        painter.rectangle(tuple(coords), outline=rgb, width=3)
+        caption = NAMES[cls] + (f" {score:.2f}" if score is not None else "")
+        painter.text((max(0, coords[0]), max(0, coords[1]-13)), caption,
+                     fill=rgb, stroke_width=1, stroke_fill="black")
+    return picture
+
+
+def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, device):
+    from ultralytics import YOLO
+
+    data_path = Path(data_path).resolve()
+    metadata = yaml.safe_load(data_path.read_text())
+    names = metadata["names"]
+    if isinstance(names, dict):
+        names = [names.get(i, names.get(str(i))) for i in range(len(NAMES))]
+    if list(names) != list(NAMES):
+        raise ValueError("Expected the 11-class cafeteria data.yaml")
+    model = YOLO(str(Path(weights).resolve()))
+    names = model.names
+    if isinstance(names, dict):
+        names = [names.get(i, names.get(str(i))) for i in range(len(NAMES))]
+    if list(names) != list(NAMES):
+        raise ValueError("Checkpoint does not use the 11-class cafeteria ontology")
+    root = Path(metadata.get("path") or data_path.parent)
+    if not root.is_absolute():
+        root = data_path.parent / root
+    images_dir = Path(metadata[split])
+    if not images_dir.is_absolute():
+        images_dir = root / images_dir
+    label_dir = images_dir.parent.parent / "labels" / split
+    candidates = []
+    for image in sorted(images_dir.iterdir()):
+        if image.suffix.lower() not in EXT:
+            continue
+        with Image.open(image) as picture:
+            targets = parse_labels(label_dir/(image.stem+".txt"), *picture.size)
+        candidates.append((image, targets))
+    picks, seen, support = [], set(), {}
+    for name in wanted:
+        cls = NAMES.index(name)
+        matches = [(image, targets) for image, targets in candidates
+                   if any(target[0] == cls for target in targets)]
+        support[name] = len(matches)
+        for image, targets in matches[:per_class]:
+            if image.name not in seen:
+                picks.append((image, targets))
+                seen.add(image.name)
+    output.mkdir(parents=True, exist_ok=True)
+    report = []
+    for image, targets in picks:
+        prediction = model.predict(str(image), imgsz=640, conf=conf, device=device,
+                                   verbose=False)[0]
+        boxes = [(int(b.cls.item()), tuple(float(v) for v in b.xyxy[0]),
+                  float(b.conf.item())) for b in prediction.boxes]
+        matched_gt, matched_pred = match(targets, boxes, iou)
+        with Image.open(image) as original:
+            left = draw_boxes(original, targets, "lime")
+            right = draw_boxes(original, boxes, "red")
+        montage = Image.new("RGB", (left.width+right.width, left.height))
+        montage.paste(left, (0, 0))
+        montage.paste(right, (left.width, 0))
+        montage.save(output/(image.stem+".jpg"), quality=85)
+        report.append({"image": image.name, "gt": len(targets), "pred": len(boxes),
+                       "matched": len(matched_gt), "unmatched_targets": len(targets)-len(matched_gt),
+                       "unmatched_predictions": len(boxes)-len(matched_pred)})
+    (output/"summary.json").write_text(json.dumps({
+        "split": split, "confidence": conf, "iou": iou,
+        "images_reviewed": len(picks), "eligible_images_by_class": support,
+        "reviewed": report, "warning": "Unmatched prediction may be a missing ground-truth box; no AP claimed."
+    }, indent=2)+"\n")
+    print(f"Saved {len(picks)} side-by-side prediction overlays to {output}")
+    print("Eligible target images:", support)
+    if split == "train":
+        print("TRAIN predictions are illustrations ONLY; do not use for test performance.")
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--weights", required=True)
+    p.add_argument("--data", default="data/training/data.yaml")
+    p.add_argument("--output", default="model/prediction-review")
+    p.add_argument("--split", choices=("train", "val"), default="val")
+    p.add_argument("--classes", nargs="+", choices=NAMES,
+                   default=["plate", "wrapper", "bottle", "napkin"])
+    p.add_argument("--per-class", type=int, default=4)
+    p.add_argument("--conf", type=float, default=0.10)
+    p.add_argument("--iou", type=float, default=0.50)
+    p.add_argument("--device")
+    a = p.parse_args()
+    if a.per_class < 1 or not 0 < a.conf <= 1 or not 0 < a.iou <= 1:
+        p.error("Invalid limit or confidence/IoU threshold")
+    inspect(a.data, a.weights, Path(a.output), a.split, a.classes,
+            a.per_class, a.conf, a.iou, a.device)
+
+
+if __name__ == "__main__":
+    main()
