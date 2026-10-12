@@ -20,6 +20,18 @@ and regenerates the generated V1 split before writing a new one. If the
 source is missing, first back up your V1 split metadata and checkpoint and
 then rebuild it intentionally.
 
+The V2 builder now checks for legacy Roboflow exports of the SAME source
+photograph across train/validation. If it finds cross-split groups or exact
+image duplicates, it moves the implicated VALIDATION COPIES into V2 training,
+including transitive duplicate groups. It never changes the original V1
+images, labels, or split. Every move appears in v2_build.json under
+legacy_split_repairs and legacy_validation_images_moved. If this would empty
+validation, the builder fails instead of training without validation.
+
+**Important:** these fixes mean the V2 validation split may have FEWER than the
+original 619 photos, and its mAP must not be compared directly to the old V1
+score. Reevaluate/retrain competing models on the same fixed V2 cohort.
+
 This produces a V2 copy with an auditable JSON summary and support counts.
 Because it contains public-source validation and lacks several classes, it is
 NOT a valid NHS evaluation. The developer must not label it as production-ready.
