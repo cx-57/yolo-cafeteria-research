@@ -163,7 +163,7 @@ class UpstreamLossTests(PartialLabelsTests):
         self.model = TinyDetector()
         # The upstream task-aligned assigner selects top-10 candidates, so
         # a 2x2 (= 4 anchor) synthetic map is invalid. Use 4x4 (= 16 anchors).
-        self.preds = {"boxes": torch.randn(2, 16, 4, requires_grad=True),
+        self.preds = {"boxes": torch.randn(2, 16, 16, requires_grad=True),
                       "scores": torch.randn(2, 11, 16, requires_grad=True),
                       "feats": [torch.zeros(2, 1, 4, 4)]}
         self.batch = {"batch_idx": torch.tensor([0., 1.]), "cls": torch.tensor([[0.], [1.]]),
