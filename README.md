@@ -57,8 +57,11 @@ Important: some newer sources remain training-only to prevent source leakage, so
 | Diagnose model/data limits | `python3 scripts/diagnose.py --run model/runs/yolo11n-1x --output data/audits/model_plateau_2026-10-11` |
 | Compare crop vs full-frame detection | `python3 scripts/crop_diagnostic.py --device mps` |
 | Compare 640px vs 960px inference | `python3 scripts/crop_diagnostic.py --device mps --compare-imgsz 960` |
+| Diagnose cached errors + export review overlays | `python3 scripts/analyze_cached.py --review-overlays 15` |
 | Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
 | Import additional LVIS candidate plates | `python3 scripts/lvis.py --help` |
+
+The [October 12 extended investigation](data/audits/model_revisions_2026-10-12/investigation.md) summarizes measured failures, research, and a controlled next-training plan. An audit flagged **60 potentially redundant ingredient boxes in 7 LVIS images** for human inspection ([review queue](data/audits/model_revisions_2026-10-12/ingredient_review.csv)); none have been deleted. `scripts/analyze_cached.py` reuses the existing JSONL inference caches and reports overlap-aware one-to-one recall, per-class/source/size breakdowns, a ranked unmatched-detection CSV and optional four-panel image comparisons. It does not train or relabel. The initial 55-image cohort is not an NHS test set.
 
 The resolution comparison reuses the same 55 validation images and existing 640px cached predictions in `model/runs/crop-diagnostic/progress.jsonl`. The additional 960px inference resumes from `resolution_960_progress.jsonl` and writes `resolution_960_summary.json`. It reports recall at IoU 0.50, extra unmatched predictions, and the effect of class-aware suppression of overlapping crop boxes. **Unmatched detections are not confirmed false positives** because the annotations are incomplete; no trained checkpoint or images are uploaded to GitHub.
 
