@@ -80,6 +80,38 @@ jobs:
           print("All", checked, "matched audit pairs remain within one split.")
           print("Near-duplicate candidates are NOT proof of actual duplicates.")
           PY
+      - name: Build additive LVIS food experiment without deleting occluded plates
+        run: |
+          python scripts/experiment.py --source data/training \
+            --output data/training-ci-revised \
+            --label-additions data/audits/model_revisions_2026-10-12/lvis_food_additions.json \
+            --balance-classes plate wrapper bottle --max-repeat 2
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a = json.loads(Path("data/training-ci-revised/experiment_summary.json").read_text())
+          original = json.loads(Path("data/training/split_summary.json").read_text())
+          counts = a["counts"]
+          assert counts["train_originals"] == original["train_originals"]
+          assert counts["val_originals"] == original["val_originals"]
+          assert counts["val_views"] == original["val_originals"]
+          assert counts["train_views"] >= counts["train_originals"]
+          assert a["additions"]["accepted"] > 0
+          assert a["corrected_support"]["train"]["plate"] == a["original_support"]["train"]["plate"]
+          assert a["corrected_support"]["val"]["plate"] == a["original_support"]["val"]["plate"]
+          assert a["corrected_support"]["val"]["food"]["instances"] > a["original_support"]["val"]["food"]["instances"]
+          for split in ("train", "val"):
+              originals = {p.name for p in Path("data/training/images", split).iterdir()}
+              revised = {p.name for p in Path("data/training-ci-revised/images", split).iterdir()}
+              assert originals <= revised
+          print("LVIS overlay OK; corrected food support:", a["corrected_support"]["val"]["food"])
+          print("Plate images and every original label retained; experiment is NOT trained.")
+          PY
+      - name: Upload experiment integrity report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lvis-experiment-check
+          path: data/training-ci-revised/experiment_summary.json
       - name: Preserve real label scan report
         uses: actions/upload-artifact@v4
         with:
