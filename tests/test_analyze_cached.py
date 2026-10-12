@@ -112,5 +112,22 @@ class DetailedMatchingTests(unittest.TestCase):
         self.assertEqual(candidates[0]["review_hint"], "potential_class_confusion")
 
 
+    def test_render_overlay_writes_review_file_without_modifying_source(self):
+        import tempfile
+        from PIL import Image
+        from analyze_cached import render_review_overlays
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            image = root / "plate__test.jpg"
+            Image.new("RGB", (100, 80), "white").save(image)
+            original = image.read_bytes()
+            item = sample(name=image.name, crops=[prediction(8)])
+            count = render_review_overlays([item], root, root / "review", 1)
+            self.assertEqual(count, 1)
+            self.assertEqual(image.read_bytes(), original)
+            self.assertEqual(len(list((root / "review").glob("*.jpg"))), 1)
+
+
+
 if __name__ == "__main__":
     unittest.main()
