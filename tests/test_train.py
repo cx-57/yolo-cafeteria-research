@@ -274,6 +274,7 @@ class TrainingControlsTests(unittest.TestCase):
         self.models = []
         self.checkpoint_names = dict(enumerate(train.class_names()))
         self.metrics_mutation = None
+        self.legacy_validator_support = False
         case = self
 
         class RecordingYOLO:
@@ -311,6 +312,13 @@ class TrainingControlsTests(unittest.TestCase):
                     nt_per_image=[2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0])
                 if case.metrics_mutation:
                     case.metrics_mutation(metrics)
+                if case.legacy_validator_support:
+                    self.callbacks["on_val_end"](SimpleNamespace(
+                        args=SimpleNamespace(**effective),
+                        nt_per_class=metrics.nt_per_class,
+                        nt_per_image=metrics.nt_per_image))
+                    del metrics.nt_per_class
+                    del metrics.nt_per_image
                 return metrics
 
         model_patch = patch.object(train, "MODEL", self.model_dir)
@@ -338,6 +346,17 @@ class TrainingControlsTests(unittest.TestCase):
         self.assertEqual((result["imgsz"], result["batch"]), (992, 4))
         self.assertEqual(result["weights"], str(Path("best.pt").resolve()))
         self.assertEqual(result["data"], str(self.data_file.resolve()))
+
+    def test_legacy_validator_counts_are_used_when_metrics_lack_support(self):
+        self.legacy_validator_support = True
+        train.evaluate("best.pt", self.data_file)
+        result = self.report("evaluation_val")
+        self.assertEqual(result["per_class"]["food"]["support"], 3)
+        self.assertEqual(result["per_class"]["hinged_container"]["images"], 1)
+
+    def test_fine_tune_can_skip_initial_warmup(self):
+        self.run_cli("--warmup-epochs", "0", "--epochs", "3")
+        self.assertEqual(self.models[0].training_options["warmup_epochs"], 0)
 
     def test_omitted_evaluation_imgsz_uses_checkpoint_size_and_name_is_explicit(self):
         self.run_cli("--evaluate", "best.pt")

@@ -333,18 +333,28 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
     # The validator normalizes image size and may reduce the batch to the
     # dataset size. Record those settings, including checkpoint defaults.
     effective = {}
+    validator_support = {}
 
     def record_settings(validator):
         dataloader = getattr(validator, "dataloader", None)
         effective.update(imgsz=int(validator.args.imgsz), batch=int(
             getattr(dataloader, "batch_size", None) or validator.args.batch))
+        for key in ("nt_per_class", "nt_per_image"):
+            value = getattr(validator, key, None)
+            if value is not None:
+                validator_support[key] = value
 
     model.add_callback("on_val_end", record_settings)
     metrics = model.val(**options)
     # Refuse partial, misaligned, or nonfinite validator output. In particular,
     # zip() alone can silently drop a supported class and inflate a headline mAP.
     names = class_names()
-    support, images = metrics.nt_per_class, metrics.nt_per_image
+    support = getattr(metrics, "nt_per_class", None)
+    images = getattr(metrics, "nt_per_image", None)
+    if support is None:
+        support = validator_support.get("nt_per_class")
+    if images is None:
+        images = validator_support.get("nt_per_image")
     if support is None or images is None or len(support) != len(names) or len(images) != len(names):
         raise ValueError("Validation class support does not match the 11-class ontology")
     if any(int(n) != n or n < 0 for n in [*support, *images]):
@@ -459,6 +469,8 @@ def main():
     parser.add_argument("--patience", type=int, default=25)
     parser.add_argument("--mosaic", type=float, default=0.3)
     parser.add_argument("--close-mosaic", type=int, default=10)
+    parser.add_argument("--warmup-epochs", type=float, default=3.0,
+                        help="Warmup duration; use 0 for a short low-rate fine-tune")
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--resume", type=Path, metavar="LAST_PT")
     parser.add_argument("--evaluate", type=Path, metavar="BEST_PT")
@@ -471,6 +483,8 @@ def main():
         parser.error("epochs, batch and imgsz must be positive")
     if min(args.patience, args.close_mosaic, args.workers) < 0:
         parser.error("patience, close-mosaic and workers must be nonnegative")
+    if not math.isfinite(args.warmup_epochs) or args.warmup_epochs < 0:
+        parser.error("warmup-epochs must be finite and nonnegative")
     for option in ("mosaic", "lrf"):
         value = getattr(args, option)
         if value is not None and (not math.isfinite(value) or not 0 <= value <= 1):
@@ -503,6 +517,7 @@ def main():
         data=str(data_file), project=str(MODEL / "runs"), name=args.name or "yolo11n-1x",
         epochs=args.epochs, batch=args.batch, imgsz=imgsz, seed=args.seed,
         optimizer=args.optimizer, cos_lr=args.cos_lr, workers=args.workers,
+        warmup_epochs=args.warmup_epochs,
         patience=args.patience, plots=True, save=True,
         degrees=8, translate=0.1, scale=0.2, fliplr=0.5,
         hsv_h=0.015, hsv_s=0.4, hsv_v=0.3, mosaic=args.mosaic,
