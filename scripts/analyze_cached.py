@@ -147,7 +147,9 @@ def evaluate(rows, method, crop_conf=None, nms_iou=None):
              ("tiny_under_1pct", "small_1_to_4pct", "medium_4_to_16pct", "large_16pct_plus")}
     for row in rows:
         predictions = detections(row, method, crop_conf, nms_iou)
-        assignments_ = assignments(row["targets"], predictions)
+        # detections() has already applied the requested confidence cutoff.
+        # Do not silently impose a second 0.25 cutoff on 0.10-0.20 sweeps.
+        assignments_ = assignments(row["targets"], predictions, confidence=0.0)
         found = set(assignments_)
         used_predictions = set(assignments_.values())
         source = row["image"].split("__", 1)[0]
