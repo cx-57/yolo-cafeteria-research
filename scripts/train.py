@@ -1,8 +1,10 @@
 """Prepare the 80/20 dataset, train YOLO11, and evaluate the model."""
 import argparse
 from collections import Counter, defaultdict
+import csv
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -116,11 +118,94 @@ def collect_images(names):
     return combined, sources, corrections
 
 
-def build_dataset(augment_factor=1, seed=42):
+def grouped_candidates(groups, audit_file):
+    """Keep audited near-duplicate candidates together without changing originals."""
+    report = {"path": None, "candidate_pairs": 0, "matched_pairs": 0,
+              "out_of_corpus_pairs": 0, "merged_groups": 0}
+    if audit_file is None:
+        return groups, report
+    audit_file = Path(audit_file)
+    report["path"] = str(audit_file.resolve())
+    index = {f"{source}/images/{image.name}": group
+             for group, photos in groups.items() for source, image, _ in photos}
+    parent = {group: group for group in groups}
+
+    def root(group):
+        while group != parent[group]:
+            parent[group] = parent[parent[group]]
+            group = parent[group]
+        return group
+
+    try:
+        with audit_file.open(newline="") as stream:
+            reader = csv.DictReader(stream, strict=True)
+            fields = reader.fieldnames or []
+            if not {"image_a", "image_b"} <= set(fields) or len(fields) != len(set(fields)):
+                raise ValueError("expected image_a and image_b columns")
+            for row in reader:
+                if None in row or any(value is None for value in row.values()):
+                    raise ValueError(f"row {reader.line_num}: wrong number of columns")
+                paths = [row[field].strip() for field in ("image_a", "image_b")]
+                for path in paths:
+                    parts = path.split("/")
+                    if (len(parts) != 3 or parts[1] != "images"
+                            or any(part in {"", ".", ".."} for part in parts)
+                            or any(char in path for char in "\\\n\r\0")
+                            or Path(path).suffix.lower() not in IMAGE_SUFFIXES):
+                        raise ValueError(f"row {reader.line_num}: expected source/images/filename")
+                report["candidate_pairs"] += 1
+                if any(path not in index for path in paths):
+                    report["out_of_corpus_pairs"] += 1
+                    continue
+                report["matched_pairs"] += 1
+                first, second = (root(index[path]) for path in paths)
+                if first != second:
+                    parent[max(first, second)] = min(first, second)
+                    report["merged_groups"] += 1
+    except (OSError, csv.Error, ValueError) as error:
+        raise ValueError(f"Invalid group audit {audit_file}: {error}") from error
+    combined = defaultdict(list)
+    for group, photos in groups.items():
+        combined[root(group)].extend(photos)
+    return combined, report
+
+
+def check_output(output):
+    """Only replace a recognizable generated dataset, never original data."""
+    resolved = output.resolve()
+    protected = ((DATA / "processed").resolve(), (DATA / "raw").resolve(), MODEL.resolve())
+    if any(resolved == source or resolved in source.parents or source in resolved.parents
+           for source in protected) or resolved == PROJECT_ROOT.resolve():
+        raise ValueError(f"Unsafe output path overlaps original data or model files: {output}")
+    if output.is_symlink():
+        raise ValueError(f"Unsafe output symlink: {output}")
+    if not output.exists():
+        return
+    try:
+        metadata = yaml.safe_load((output / "data.yaml").read_text())
+        summary = json.loads((output / "split_summary.json").read_text())
+        if (Path(metadata["path"]).resolve() != resolved
+                or "original_images" not in summary
+                or set(path.name for path in output.iterdir())
+                - {"images", "labels", "data.yaml", "split_summary.json"}):
+            raise ValueError("directory is not a generated training dataset")
+    except (OSError, ValueError, KeyError, TypeError, yaml.YAMLError) as error:
+        raise ValueError(f"Refusing to replace unrelated output directory: {output}") from error
+
+
+def build_dataset(augment_factor=1, seed=42, group_audit=None, output=None):
     if not 1 <= augment_factor <= 20:
         raise ValueError("Augmentation factor must be 1–20")
+    output = Path(output) if output is not None else OUTPUT
+    check_output(output)
     names = class_names()
     groups, source_counts, corrections = collect_images(names)
+    resolved_output = output.resolve()
+    if any(resolved_output in source_path.resolve().parents
+           for photos in groups.values() for source, image, _ in photos
+           for source_path in (image, DATA / "processed" / source / "labels" / (image.stem + ".txt"))):
+        raise ValueError(f"Unsafe output contains a training source image or label: {output}")
+    groups, grouping = grouped_candidates(groups, group_audit)
     total = sum(source_counts.values())
     target = round(total * 0.20)
 
@@ -140,8 +225,8 @@ def build_dataset(augment_factor=1, seed=42):
 
     if not validation:
         raise ValueError("No independent validation photos available")
-    if OUTPUT.exists():
-        shutil.rmtree(OUTPUT)  # Generated copies only; never changes source photos.
+    if output.exists():
+        shutil.rmtree(output)  # Validated generated copies only.
 
     counts = Counter()
     class_counts = {"train": Counter(), "val": Counter()}
@@ -149,8 +234,8 @@ def build_dataset(augment_factor=1, seed=42):
         split = "val" if group in validation else "train"
         for source, image, rows in photos:
             stem = source + "__" + image.stem
-            image_dir = OUTPUT / "images" / split
-            label_dir = OUTPUT / "labels" / split
+            image_dir = output / "images" / split
+            label_dir = output / "labels" / split
             image_dir.mkdir(parents=True, exist_ok=True)
             label_dir.mkdir(parents=True, exist_ok=True)
             output_image = image_dir / (stem + image.suffix)
@@ -175,9 +260,9 @@ def build_dataset(augment_factor=1, seed=42):
 
     if counts["val"] != target:
         print(f"Grouped images prevent exact 80/20: {counts['val']} val, target {target}")
-    data_yaml = OUTPUT / "data.yaml"
+    data_yaml = output / "data.yaml"
     data_yaml.write_text(yaml.safe_dump({
-        "path": str(OUTPUT.resolve()), "train": "images/train",
+        "path": str(output.resolve()), "train": "images/train",
         "val": "images/val", "names": names}, sort_keys=False))
     report = {
         "original_images": total, "train_originals": counts["train"],
@@ -185,6 +270,7 @@ def build_dataset(augment_factor=1, seed=42):
         "target_validation_originals": target,
         "train_views": counts["train"] * augment_factor,
         "augment_factor": augment_factor, "seed": seed,
+        "output": str(output.resolve()), "group_audit": grouping,
         "source_images": dict(source_counts),
         "minor_boundary_rounding_clips_in_generated_labels": dict(corrections),
         "train_class_images_original": {name: class_counts["train"][i] for i, name in enumerate(names)},
@@ -192,61 +278,122 @@ def build_dataset(augment_factor=1, seed=42):
         "missing_train_classes": [name for i, name in enumerate(names) if not class_counts["train"][i]],
         "missing_val_classes": [name for i, name in enumerate(names) if not class_counts["val"][i]],
     }
-    (OUTPUT / "split_summary.json").write_text(json.dumps(report, indent=2) + "\n")
+    (output / "split_summary.json").write_text(json.dumps(report, indent=2) + "\n")
     print(f"{total} originals: {counts['train']} train, {counts['val']} val, "
           f"{report['train_views']} training views ({augment_factor}x)")
     print("No test photos included. Collect independent NHS test photos.")
+    if grouping["path"]:
+        print(f"Conservatively grouped {grouping['matched_pairs']} audited candidate pairs; "
+              f"skipped {grouping['out_of_corpus_pairs']} out-of-corpus pairs. "
+              "Candidate pairs do not prove duplicates.")
+    if report["missing_train_classes"]:
+        print("Missing training classes:", ", ".join(report["missing_train_classes"]))
+    if report["missing_val_classes"]:
+        print("Missing validation classes:", ", ".join(report["missing_val_classes"]))
     return data_yaml
+
+
+def check_names(names, location):
+    expected = class_names()
+    if isinstance(names, dict):
+        if len(names) != len(expected):
+            raise ValueError(f"{location}: wrong class names or IDs")
+        names = [names.get(i, names.get(str(i))) for i in range(len(expected))]
+    if names != expected:
+        raise ValueError(f"{location}: wrong class names or IDs")
 
 
 def check_data(data_file):
     data = yaml.safe_load(Path(data_file).read_text())
-    names = data["names"]
-    if isinstance(names, dict):
-        names = [names.get(i, names.get(str(i))) for i in range(len(class_names()))]
-    if names != class_names():
-        raise ValueError("Wrong class names or IDs in data.yaml")
+    check_names(data["names"], "data.yaml")
     return data
 
 
-def evaluate(weights, data_file, split="val", device=None):
-    from ultralytics import YOLO
+def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
+             workers=8, name=None):
     data = check_data(data_file)
     if split == "test" and not data.get("test"):
         raise ValueError("Add independent test: images/path to your data.yaml first")
+    model = load_model(str(weights))
+    check_names(model.names, "checkpoint")
     options = dict(data=str(data_file), split=split, project=str(MODEL / "runs"),
-                   name="evaluation_" + split, plots=True)
+                   name=name or "evaluation_" + split, plots=True,
+                   batch=batch, workers=workers)
+    if imgsz is not None:
+        options["imgsz"] = imgsz
     if device:
         options["device"] = device
-    metrics = YOLO(str(weights)).val(**options)
-    ap = {int(i): {"ap50": float(a), "map50_95": float(b)} for i, a, b
-          in zip(metrics.box.ap_class_index, metrics.box.ap50, metrics.box.ap)}
+
+    # The validator normalizes image size and may reduce the batch to the
+    # dataset size. Record those settings, including checkpoint defaults.
+    effective = {}
+
+    def record_settings(validator):
+        dataloader = getattr(validator, "dataloader", None)
+        effective.update(imgsz=int(validator.args.imgsz), batch=int(
+            getattr(dataloader, "batch_size", None) or validator.args.batch))
+
+    model.add_callback("on_val_end", record_settings)
+    metrics = model.val(**options)
+    support = metrics.nt_per_class
+    images = metrics.nt_per_image
+    if support is None or images is None:
+        raise ValueError("Validation did not provide per-class target support")
+    measured = {
+        int(i): {"ap50": float(a), "map50_95": float(b),
+                 "precision": float(p), "recall": float(r), "f1": float(f)}
+        for i, a, b, p, r, f in zip(
+            metrics.box.ap_class_index, metrics.box.ap50, metrics.box.ap,
+            metrics.box.p, metrics.box.r, metrics.box.f1)
+    }
+    per_class = {}
+    for i, class_name in enumerate(class_names()):
+        row = dict.fromkeys(("ap50", "map50_95", "precision", "recall", "f1"))
+        count = int(support[i])
+        status = "unsupported"
+        if count:
+            status = "supported" if i in measured else "metrics_unavailable"
+            row.update(measured.get(i, {}))
+        row.update(support=count, images=int(images[i]), status=status)
+        per_class[class_name] = row
+    supported = [class_name for class_name, row in per_class.items() if row["support"]]
+    unsupported = [class_name for class_name, row in per_class.items() if not row["support"]]
     result = {
         "split": split, "precision": float(metrics.box.mp),
         "recall": float(metrics.box.mr), "map50": float(metrics.box.map50),
         "map50_95": float(metrics.box.map),
-        "per_class": {name: ap.get(i) for i, name in enumerate(class_names())},
+        "per_class": per_class,
+        "coverage": {"total_class_count": len(per_class),
+                     "supported_class_count": len(supported),
+                     "unsupported_class_count": len(unsupported),
+                     "supported_classes": supported, "unsupported_classes": unsupported},
+        "weights": str(Path(model.ckpt_path if hasattr(model, "ckpt_path")
+                            else weights).resolve()),
+        "data": str(Path(data_file).resolve()),
+        **effective,
     }
     location = Path(metrics.save_dir) / "metrics.json"
-    location.write_text(json.dumps(result, indent=2) + "\n")
+    location.write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
     print("Results:", location)
+    return result
 
 
 def load_model(name):
     from ultralytics import YOLO
-    if name != "yolo11n.pt":
+    name = str(name)
+    if not re.fullmatch(r"yolo11[^/\\]*\.pt", name):
         return YOLO(name)
     weights = MODEL / "weights"
     weights.mkdir(parents=True, exist_ok=True)
     target = weights / name
     if target.exists():
         return YOLO(str(target))
-    # Ultralytics downloads pretrained YOLO11n into the current directory.
+    # Ultralytics downloads pretrained YOLO11 into the current directory.
     # Download into model/weights/ rather than cluttering the project root.
     original = Path.cwd()
     try:
         os.chdir(weights)
-        return YOLO(name)
+        return YOLO(str(target.resolve()))
     finally:
         os.chdir(original)
 
@@ -255,47 +402,85 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data", nargs="?", type=Path, help="Prepared data.yaml")
     parser.add_argument("--build-only", action="store_true")
+    parser.add_argument("--output", type=Path, help="Directory for a newly built dataset")
+    parser.add_argument("--group-audit", type=Path,
+                        help="Audited near_duplicates.csv; conservatively group candidate pairs")
     parser.add_argument("--augment-factor", type=int, default=1)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--model", default="yolo11n.pt")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--batch", type=int, default=8)
-    parser.add_argument("--imgsz", type=int, default=640)
+    parser.add_argument("--imgsz", type=int,
+                        help="Image size: train defaults to 640; evaluate uses checkpoint size")
     parser.add_argument("--device", help="mps on Apple Silicon; 0 on NVIDIA")
-    parser.add_argument("--name", default="yolo11n-1x")
+    parser.add_argument("--name", help="Training run name; evaluation name with --evaluate")
+    parser.add_argument("--eval-name", help="Name for the evaluation output directory")
+    parser.add_argument("--optimizer", choices=("auto", "AdamW", "Adam", "SGD", "RMSProp"),
+                        default="auto")
+    parser.add_argument("--lr0", type=float, help="Initial learning rate; requires a manual optimizer")
+    parser.add_argument("--lrf", type=float, help="Final learning rate as a fraction of lr0 (0–1)")
+    parser.add_argument("--cos-lr", action="store_true", help="Use cosine learning rate decay")
+    parser.add_argument("--patience", type=int, default=25)
+    parser.add_argument("--mosaic", type=float, default=0.3)
+    parser.add_argument("--close-mosaic", type=int, default=10)
+    parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--resume", type=Path, metavar="LAST_PT")
     parser.add_argument("--evaluate", type=Path, metavar="BEST_PT")
     parser.add_argument("--split", choices=("val", "test"), default="val")
     args = parser.parse_args()
+    if (args.output is not None or args.group_audit is not None) and (
+            args.data is not None or args.evaluate or args.resume):
+        parser.error("Each of --output and --group-audit only applies when building a dataset")
+    if min(args.epochs, args.batch, args.imgsz if args.imgsz is not None else 640) < 1:
+        parser.error("epochs, batch and imgsz must be positive")
+    if min(args.patience, args.close_mosaic, args.workers) < 0:
+        parser.error("patience, close-mosaic and workers must be nonnegative")
+    for option in ("mosaic", "lrf"):
+        value = getattr(args, option)
+        if value is not None and (not math.isfinite(value) or not 0 <= value <= 1):
+            parser.error(f"--{option} must be finite and between 0 and 1")
+    if args.lr0 is not None:
+        if not math.isfinite(args.lr0) or args.lr0 <= 0:
+            parser.error("--lr0 must be finite and positive")
+        if args.optimizer == "auto":
+            parser.error("--lr0 requires an explicit --optimizer because auto ignores lr0")
     if args.resume:
         from ultralytics import YOLO
         YOLO(str(args.resume)).train(resume=True)
         return
     if args.evaluate:
-        evaluate(args.evaluate, args.data or OUTPUT / "data.yaml", args.split, args.device)
+        evaluate(args.evaluate, args.data or OUTPUT / "data.yaml", args.split, args.device,
+                 imgsz=args.imgsz, batch=args.batch, workers=args.workers,
+                 name=args.eval_name or args.name)
         return
     if args.split == "test":
         parser.error("--split test requires --evaluate")
-    if min(args.epochs, args.batch, args.imgsz) < 1:
-        parser.error("epochs, batch and imgsz must be positive")
-    data_file = args.data or build_dataset(args.augment_factor, args.seed)
+    imgsz = args.imgsz if args.imgsz is not None else 640
+    data_file = args.data or build_dataset(args.augment_factor, args.seed,
+                                         group_audit=args.group_audit, output=args.output)
     check_data(data_file)
     if args.build_only:
         return
 
     model = load_model(args.model)
     options = dict(
-        data=str(data_file), project=str(MODEL / "runs"), name=args.name,
-        epochs=args.epochs, batch=args.batch, imgsz=args.imgsz, seed=args.seed,
-        patience=25, plots=True, save=True,
+        data=str(data_file), project=str(MODEL / "runs"), name=args.name or "yolo11n-1x",
+        epochs=args.epochs, batch=args.batch, imgsz=imgsz, seed=args.seed,
+        optimizer=args.optimizer, cos_lr=args.cos_lr, workers=args.workers,
+        patience=args.patience, plots=True, save=True,
         degrees=8, translate=0.1, scale=0.2, fliplr=0.5,
-        hsv_h=0.015, hsv_s=0.4, hsv_v=0.3, mosaic=0.3,
-        close_mosaic=10, mixup=0.0)
+        hsv_h=0.015, hsv_s=0.4, hsv_v=0.3, mosaic=args.mosaic,
+        close_mosaic=args.close_mosaic, mixup=0.0)
+    if args.lr0 is not None:
+        options["lr0"] = args.lr0
+    if args.lrf is not None:
+        options["lrf"] = args.lrf
     if args.device:
         options["device"] = args.device
     model.train(**options)
     evaluate(Path(model.trainer.save_dir) / "weights/best.pt", data_file,
-             device=args.device)
+             device=args.device, imgsz=imgsz, batch=args.batch, workers=args.workers,
+             name=args.eval_name)
 
 
 if __name__ == "__main__":

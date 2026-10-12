@@ -16,6 +16,7 @@ scripts/
   train.py              # build 80/20 dataset, train, evaluate
   prepare.py            # convert new Roboflow files into review candidates
   audit.py              # inspect images, labels and provenance
+  diagnose.py           # class support, training curves, fixed-validation ablations
   lvis.py               # import/download LVIS plate candidates
 model/
   weights/              # downloaded pretrained YOLO weights
@@ -53,6 +54,7 @@ Important: some newer sources remain training-only to prevent source leakage, so
 | Resume after interruption | `python3 scripts/train.py --resume model/runs/yolo11n-1x/weights/last.pt` |
 | Evaluate best checkpoint | `python3 scripts/train.py --evaluate model/runs/yolo11n-10x/weights/best.pt --device mps` |
 | Audit source photos | `python3 scripts/audit.py --manifests data/manifests --output data/audits/current` |
+| Diagnose model/data limits | `python3 scripts/diagnose.py --run model/runs/yolo11n-1x --output data/audits/model_plateau_2026-10-11` |
 | Review new Roboflow export | `python3 scripts/prepare.py data/raw/school_lunch school_lunch` |
 | Import additional LVIS candidate plates | `python3 scripts/lvis.py --help` |
 
@@ -63,6 +65,23 @@ python3 scripts/train.py data/training/data_with_test.yaml --evaluate model/runs
 ```
 
 Never use test images to tune the model. Do not report provisional public-source validation scores as real NHS test performance.
+
+## Investigating the 74% result
+
+The saved best checkpoint at epoch 40 reports **73.8% mAP50, 50.3% mAP50–95, 82.8% precision, and 72.1% recall**. These are detection metrics, not classification accuracy. The run reached epoch 42 of 80 planned, and the best localization score improved at epoch 40.
+
+The [performance investigation](data/audits/model_plateau_2026-10-11/README.md) documents confirmed missing annotations in mixed plate/food scenes, missing validation coverage for four classes, and 28 historical near-duplicate candidate pairs crossing the current split. It includes visual evidence, a review queue, and controlled fine-tuning/source-ablation commands.
+
+Evaluation now writes per-class precision, recall, F1, AP, target support, and explicit unsupported status in `metrics.json`. Use `--imgsz` for a resolution experiment; without it, standalone evaluation uses the checkpoint's size. `--optimizer AdamW --lr0 0.0001 --cos-lr --mosaic 0` enables a low-rate no-mosaic fine-tuning experiment from `--model path/to/best.pt`. These controls enable comparisons; improved performance must be measured.
+
+Keep the original split for comparisons. To prepare a **separate** split that conservatively groups the historical audit candidates:
+
+```bash
+python3 scripts/train.py --build-only \
+  --group-audit data/audits/day1/near_duplicates.csv --output data/training-grouped
+```
+
+Use `data/training-grouped/data.yaml` explicitly to train on that new benchmark. Grouping candidates prevents known split risk without deleting photos; the candidates still require visual review.
 
 ## Source history
 

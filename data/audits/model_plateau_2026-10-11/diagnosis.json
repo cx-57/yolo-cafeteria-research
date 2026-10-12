@@ -1,0 +1,391 @@
+{
+  "dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/training",
+  "imgsz": 640,
+  "support_basis": "saved_split_summary_not_fresh_label_scan",
+  "small_box_definition": "Shorter side <32 pixels after aspect-preserving resize; heuristic, not COCO area metric.",
+  "splits": {
+    "train": {
+      "images": 2477,
+      "instances": null,
+      "class_image_basis": "originals_without_repeated_training_views",
+      "sources": {
+        "condiments": {
+          "images": 44,
+          "instances": null
+        },
+        "dry_wet_waste": {
+          "images": 233,
+          "instances": null
+        },
+        "food_american": {
+          "images": 380,
+          "instances": null
+        },
+        "macworx": {
+          "images": 78,
+          "instances": null
+        },
+        "plate": {
+          "images": 241,
+          "instances": null
+        },
+        "school_lunch": {
+          "images": 309,
+          "instances": null
+        },
+        "school_lunch_asian": {
+          "images": 130,
+          "instances": null
+        },
+        "tartanhacks": {
+          "images": 62,
+          "instances": null
+        },
+        "tetra_pak": {
+          "images": 455,
+          "instances": null
+        },
+        "trash_detection": {
+          "images": 126,
+          "instances": null
+        },
+        "utensil": {
+          "images": 88,
+          "instances": null
+        },
+        "waste_detection_v3": {
+          "images": 331,
+          "instances": null
+        }
+      },
+      "classes": {
+        "food": {
+          "images": 819,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "plate": {
+          "images": 255,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "paper_boat": {
+          "images": 0,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "utensil": {
+          "images": 153,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "hinged_container": {
+          "images": 78,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "napkin": {
+          "images": 121,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "drink_carton": {
+          "images": 871,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "condiment_packet": {
+          "images": 44,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "wrapper": {
+          "images": 180,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "bottle": {
+          "images": 300,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "bowl": {
+          "images": 75,
+          "instances": null,
+          "short_side_under_32px": null
+        }
+      }
+    },
+    "val": {
+      "images": 619,
+      "instances": null,
+      "class_image_basis": "originals_without_repeated_training_views",
+      "sources": {
+        "macworx": {
+          "images": 43,
+          "instances": null
+        },
+        "plate": {
+          "images": 103,
+          "instances": null
+        },
+        "school_lunch": {
+          "images": 158,
+          "instances": null
+        },
+        "tetra_pak": {
+          "images": 204,
+          "instances": null
+        },
+        "trash_detection": {
+          "images": 71,
+          "instances": null
+        },
+        "utensil": {
+          "images": 40,
+          "instances": null
+        }
+      },
+      "classes": {
+        "food": {
+          "images": 158,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "plate": {
+          "images": 103,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "paper_boat": {
+          "images": 0,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "utensil": {
+          "images": 40,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "hinged_container": {
+          "images": 43,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "napkin": {
+          "images": 0,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "drink_carton": {
+          "images": 353,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "condiment_packet": {
+          "images": 0,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "wrapper": {
+          "images": 14,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "bottle": {
+          "images": 58,
+          "instances": null,
+          "short_side_under_32px": null
+        },
+        "bowl": {
+          "images": 0,
+          "instances": null,
+          "short_side_under_32px": null
+        }
+      }
+    }
+  },
+  "missing_train_classes": [
+    "paper_boat"
+  ],
+  "missing_val_classes": [
+    "paper_boat",
+    "napkin",
+    "condiment_packet",
+    "bowl"
+  ],
+  "annotation_completeness": "Counts verify stored labels, not every visible target object.",
+  "run": {
+    "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs/yolo11n-1x",
+    "logged_epochs": 40,
+    "last_epoch": 42,
+    "planned_epochs": 80,
+    "missing_epochs": [
+      36,
+      37
+    ],
+    "best": {
+      "metrics/precision(B)": {
+        "epoch": 27,
+        "value": 0.8353
+      },
+      "metrics/recall(B)": {
+        "epoch": 42,
+        "value": 0.73128
+      },
+      "metrics/mAP50(B)": {
+        "epoch": 31,
+        "value": 0.74013
+      },
+      "metrics/mAP50-95(B)": {
+        "epoch": 40,
+        "value": 0.50323
+      }
+    },
+    "last": {
+      "epoch": 42.0,
+      "time": 12893.6,
+      "train/box_loss": 0.92474,
+      "train/cls_loss": 0.58846,
+      "train/dfl_loss": 1.28124,
+      "metrics/precision(B)": 0.79538,
+      "metrics/recall(B)": 0.73128,
+      "metrics/mAP50(B)": 0.7316,
+      "metrics/mAP50-95(B)": 0.47629,
+      "val/box_loss": 1.07678,
+      "val/cls_loss": 0.77208,
+      "val/dfl_loss": 1.35802,
+      "lr/pg0": 0.000328581,
+      "lr/pg1": 0.000328581,
+      "lr/pg2": 0.000328581
+    },
+    "scheduled_mosaic_close_reached": false,
+    "stop_reason": "Not inferable from CSV; inspect training log/checkpoint.",
+    "training_arguments": {
+      "task": "detect",
+      "mode": "train",
+      "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt",
+      "data": "data/training/data.yaml",
+      "epochs": 80,
+      "time": null,
+      "patience": 25,
+      "batch": 4,
+      "imgsz": 640,
+      "save": true,
+      "save_period": -1,
+      "cache": false,
+      "device": "mps",
+      "workers": 8,
+      "project": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs",
+      "name": "yolo11n-1x",
+      "exist_ok": false,
+      "pretrained": true,
+      "cls_remap": true,
+      "optimizer": "auto",
+      "verbose": true,
+      "seed": 42,
+      "deterministic": true,
+      "single_cls": false,
+      "rect": false,
+      "cos_lr": false,
+      "close_mosaic": 10,
+      "resume": false,
+      "amp": true,
+      "fraction": 1.0,
+      "profile": false,
+      "freeze": null,
+      "multi_scale": 0.0,
+      "compile": false,
+      "channels_last": null,
+      "overlap_mask": true,
+      "mask_ratio": 4,
+      "dropout": 0.0,
+      "val": true,
+      "split": "val",
+      "save_json": false,
+      "conf": null,
+      "iou": 0.7,
+      "max_det": 300,
+      "quantize": null,
+      "dnn": false,
+      "plots": true,
+      "nms": null,
+      "source": null,
+      "vid_stride": 1,
+      "stream_buffer": false,
+      "visualize": false,
+      "augment": false,
+      "agnostic_nms": false,
+      "classes": null,
+      "retina_masks": false,
+      "embed": null,
+      "show": false,
+      "save_frames": false,
+      "save_txt": false,
+      "save_conf": false,
+      "save_crop": false,
+      "show_labels": true,
+      "show_conf": true,
+      "show_boxes": true,
+      "line_width": null,
+      "format": "torchscript",
+      "optimize": false,
+      "dynamic": false,
+      "simplify": true,
+      "opset": null,
+      "workspace": null,
+      "lr0": 0.01,
+      "lrf": 0.01,
+      "momentum": 0.937,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 3.0,
+      "warmup_momentum": 0.8,
+      "warmup_bias_lr": 0.1,
+      "distill_model": null,
+      "dis": 6.0,
+      "box": 7.5,
+      "cls": 0.5,
+      "cls_pw": 0.0,
+      "dfl": 1.5,
+      "pose": 12.0,
+      "kobj": 1.0,
+      "rle": 1.0,
+      "angle": 1.0,
+      "dlog": 1.0,
+      "dgrad": 0.5,
+      "dlam": 1.0,
+      "nbs": 64,
+      "hsv_h": 0.015,
+      "hsv_s": 0.4,
+      "hsv_v": 0.3,
+      "degrees": 8,
+      "translate": 0.1,
+      "scale": 0.2,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "flipud": 0.0,
+      "fliplr": 0.5,
+      "bgr": 0.0,
+      "mosaic": 0.3,
+      "mixup": 0.0,
+      "cutmix": 0.0,
+      "copy_paste": 0.0,
+      "copy_paste_mode": "flip",
+      "auto_augment": "randaugment",
+      "erasing": 0.4,
+      "cfg": null,
+      "tracker": "tracktrack.yaml",
+      "save_dir": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs/yolo11n-1x"
+    }
+  },
+  "ablation": {
+    "data_yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/audits/model_plateau_2026-10-11/ablation/data.yaml",
+    "excluded_sources": [
+      "plate"
+    ],
+    "train_images_before": 2477,
+    "train_images_after": 2236,
+    "validation_unchanged": true,
+    "limitation": "Validation annotation issues remain; source ablation is diagnostic."
+  }
+}

@@ -1,9 +1,12 @@
 """Fast synthetic tests for split integrity, 1x default, optional 10x, and annotation safety."""
 from pathlib import Path
+from contextlib import redirect_stderr, redirect_stdout
+import io
 import json
 import os
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -147,6 +150,279 @@ class TrainingPipelineTests(unittest.TestCase):
         report = json.loads((self.output / "split_summary.json").read_text())
         self.assertEqual(report["augment_factor"], 1)
         self.assertEqual(report["train_originals"], report["train_views"])
+
+    def test_audited_candidate_pairs_stay_in_one_split_in_an_alternate_output(self):
+        self.populate()
+        train.build_dataset()
+        current_summary = (self.output / "split_summary.json").read_bytes()
+        current_validation = sorted(p.name for p in (self.output / "images/val").iterdir())
+        val_name = current_validation[0].removeprefix("school_lunch__")
+        train_name = next((self.output / "images/train").iterdir()).name.removeprefix("school_lunch__")
+        audit = Path(self.tmp.name) / "near_duplicates.csv"
+        audit.write_text("image_a,image_b,status\n"
+                         f"school_lunch/images/{val_name},school_lunch/images/{train_name},review_candidate_do_not_delete\n"
+                         "absent/images/one.png,absent/images/two.png,review_candidate_do_not_delete\n")
+        alternate = Path(self.tmp.name) / "grouped"
+        train.build_dataset(group_audit=audit, output=alternate)
+        split_by_name = {p.name: split for split in ("train", "val")
+                         for p in (alternate / "images" / split).iterdir()}
+        self.assertEqual(split_by_name["school_lunch__" + val_name],
+                         split_by_name["school_lunch__" + train_name])
+        self.assertEqual((self.output / "split_summary.json").read_bytes(), current_summary)
+        self.assertEqual(sorted(p.name for p in (self.output / "images/val").iterdir()),
+                         current_validation)
+        grouping = json.loads((alternate / "split_summary.json").read_text())["group_audit"]
+        self.assertEqual((grouping["candidate_pairs"], grouping["matched_pairs"],
+                          grouping["out_of_corpus_pairs"], grouping["merged_groups"]),
+                         (2, 1, 1, 1))
+        self.assertEqual(grouping["path"], str(audit.resolve()))
+
+    def test_malformed_group_audit_fails_before_replacing_generated_output(self):
+        self.populate()
+        train.build_dataset()
+        original = (self.output / "split_summary.json").read_bytes()
+        audit = Path(self.tmp.name) / "bad.csv"
+        for malformed in ("other,columns\na,b\n", "image_a,image_b\n,foo/images/x.png\n",
+                          "image_a,image_b\n../images/x.png,foo/images/y.png\n",
+                          "image_a,image_b\nfoo/images/x.png,foo/images/y.png,extra\n"):
+            with self.subTest(malformed=malformed):
+                audit.write_text(malformed)
+                with self.assertRaisesRegex(ValueError, "group audit"):
+                    train.build_dataset(group_audit=audit)
+                self.assertEqual((self.output / "split_summary.json").read_bytes(), original)
+
+    def test_missing_class_warnings_are_visible_after_build(self):
+        self.populate()
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            train.build_dataset()
+        self.assertIn("Missing training classes:", stdout.getvalue())
+        self.assertIn("Missing validation classes:", stdout.getvalue())
+        self.assertIn("plate", stdout.getvalue())
+
+    def test_build_refuses_originals_and_unrelated_existing_output_directories(self):
+        self.populate()
+        unrelated = Path(self.tmp.name) / "notes"
+        unrelated.mkdir()
+        sentinel = unrelated / "keep.txt"
+        sentinel.write_text("keep")
+        for output in (train.PROJECT_ROOT, train.DATA, self.processed,
+                       self.processed / "school_lunch", train.DATA / "raw",
+                       train.DATA / "raw/one", train.MODEL, unrelated):
+            with self.subTest(output=output):
+                with self.assertRaisesRegex(ValueError, "output"):
+                    train.build_dataset(output=output)
+        self.assertEqual(sentinel.read_text(), "keep")
+        self.assertTrue((self.processed / "school_lunch/images/food_00.png").exists())
+
+    def test_build_does_not_delete_output_referenced_by_a_source_symlink(self):
+        self.populate()
+        train.build_dataset()
+        generated = next((self.output / "images/train").iterdir())
+        source = self.processed / "school_lunch/images" / generated.name.removeprefix("school_lunch__")
+        source.unlink()
+        source.symlink_to(generated)
+        with self.assertRaisesRegex(ValueError, "output.*source"):
+            train.build_dataset()
+        self.assertTrue(generated.exists())
+
+    def test_build_does_not_delete_output_referenced_by_a_source_label_symlink(self):
+        self.populate()
+        train.build_dataset()
+        generated = next((self.output / "labels/train").iterdir())
+        source = self.processed / "school_lunch/labels" / generated.name.removeprefix("school_lunch__")
+        source.unlink()
+        source.symlink_to(generated)
+        summary = (self.output / "split_summary.json").read_bytes()
+        with self.assertRaisesRegex(ValueError, "output.*source"):
+            train.build_dataset()
+        self.assertTrue(generated.exists())
+        self.assertEqual((self.output / "split_summary.json").read_bytes(), summary)
+
+
+class TrainingControlsTests(unittest.TestCase):
+    """Exercise the CLI/report boundary without downloading or fitting a detector."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.model_dir = self.root / "model"
+        self.data_file = self.root / "data.yaml"
+        self.data_file.write_text(train.yaml.safe_dump({
+            "names": train.class_names(), "val": "images/val"}))
+        self.models = []
+        self.checkpoint_names = dict(enumerate(train.class_names()))
+        case = self
+
+        class RecordingYOLO:
+            def __init__(self, weights):
+                self.weights = weights
+                self.loaded_from = Path.cwd()
+                self.names = case.checkpoint_names
+                self.overrides = {"imgsz": 896, "batch": 16}
+                self.callbacks = {}
+                self.trainer = SimpleNamespace(save_dir=case.model_dir / "fit")
+                case.models.append(self)
+
+            def train(self, **options):
+                self.training_options = options
+
+            def add_callback(self, event, callback):
+                self.callbacks[event] = callback
+
+            def val(self, **options):
+                self.validation_options = options
+                save_dir = Path(options["project"]) / options["name"]
+                save_dir.mkdir(parents=True, exist_ok=True)
+                effective = {**self.overrides, **options}
+                effective["imgsz"] = ((effective["imgsz"] + 31) // 32) * 32
+                if "on_val_end" in self.callbacks:
+                    self.callbacks["on_val_end"](SimpleNamespace(
+                        args=SimpleNamespace(**effective)))
+                return SimpleNamespace(
+                    save_dir=save_dir,
+                    box=SimpleNamespace(
+                        mp=0.5, mr=0.35, map50=0.55, map=0.375,
+                        ap_class_index=[0, 4], ap50=[0.8, 0.3], ap=[0.6, 0.15],
+                        p=[0.8, 0.2], r=[0.6, 0.1], f1=[24 / 35, 2 / 15]),
+                    nt_per_class=[3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+                    nt_per_image=[2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0])
+
+        model_patch = patch.object(train, "MODEL", self.model_dir)
+        module_patch = patch.dict(sys.modules, {
+            "ultralytics": SimpleNamespace(YOLO=RecordingYOLO)})
+        model_patch.start()
+        module_patch.start()
+        self.addCleanup(model_patch.stop)
+        self.addCleanup(module_patch.stop)
+
+    def run_cli(self, *args):
+        with patch.object(sys, "argv", ["train.py", str(self.data_file), *args]):
+            train.main()
+
+    def report(self, name):
+        return json.loads((self.model_dir / "runs" / name / "metrics.json").read_text())
+
+    def test_evaluation_flags_reach_validator_and_report_effective_settings(self):
+        self.run_cli("--evaluate", "best.pt", "--imgsz", "961", "--batch", "4",
+                     "--workers", "2", "--eval-name", "comparison")
+        options = self.models[0].validation_options
+        self.assertEqual((options["imgsz"], options["batch"], options["workers"]),
+                         (961, 4, 2))
+        result = self.report("comparison")
+        self.assertEqual((result["imgsz"], result["batch"]), (992, 4))
+        self.assertEqual(result["weights"], str(Path("best.pt").resolve()))
+        self.assertEqual(result["data"], str(self.data_file.resolve()))
+
+    def test_omitted_evaluation_imgsz_uses_checkpoint_size_and_name_is_explicit(self):
+        self.run_cli("--evaluate", "best.pt")
+        self.assertNotIn("imgsz", self.models[0].validation_options)
+        self.assertEqual(self.report("evaluation_val")["imgsz"], 896)
+        self.run_cli("--evaluate", "best.pt", "--name", "chosen")
+        self.assertEqual(self.models[-1].validation_options["name"], "chosen")
+
+    def test_report_aligns_metrics_and_does_not_invent_ap_for_unsupported_classes(self):
+        train.evaluate("best.pt", self.data_file)
+        result = self.report("evaluation_val")
+        self.assertEqual(result["map50"], 0.55)
+        food = result["per_class"]["food"]
+        self.assertEqual((food["ap50"], food["map50_95"]), (0.8, 0.6))
+        self.assertEqual((food["precision"], food["recall"]), (0.8, 0.6))
+        self.assertAlmostEqual(food["f1"], 24 / 35)
+        self.assertEqual((food["support"], food["images"], food["status"]),
+                         (3, 2, "supported"))
+        container = result["per_class"]["hinged_container"]
+        self.assertEqual((container["ap50"], container["precision"]), (0.3, 0.2))
+        plate = result["per_class"]["plate"]
+        self.assertEqual((plate["support"], plate["images"], plate["status"]),
+                         (0, 0, "unsupported"))
+        for metric in ("ap50", "map50_95", "precision", "recall", "f1"):
+            self.assertIsNone(plate[metric])
+        self.assertEqual(result["coverage"]["supported_class_count"], 2)
+        self.assertEqual(result["coverage"]["supported_classes"], ["food", "hinged_container"])
+        self.assertEqual(result["coverage"]["unsupported_class_count"], 9)
+
+    def test_checkpoint_class_names_and_ids_are_checked_before_validation(self):
+        for names in ({0: "other"}, {1: "food"},
+                      {**dict(enumerate(train.class_names())), 11: "extra"}):
+            with self.subTest(names=names):
+                self.checkpoint_names = names
+                with self.assertRaisesRegex(ValueError, "checkpoint.*class names or IDs"):
+                    train.evaluate("old.pt", self.data_file)
+                self.assertFalse(hasattr(self.models[-1], "validation_options"))
+
+    def test_training_controls_and_matching_final_evaluation_are_forwarded(self):
+        self.run_cli("--epochs", "30", "--imgsz", "960", "--batch", "4",
+                     "--optimizer", "AdamW", "--lr0", "0.001", "--lrf", "0.05",
+                     "--cos-lr", "--patience", "12", "--mosaic", "0.5",
+                     "--close-mosaic", "7", "--workers", "2", "--name", "fit",
+                     "--eval-name", "fit_validation")
+        options = self.models[0].training_options
+        self.assertEqual({key: options[key] for key in (
+            "optimizer", "lr0", "lrf", "cos_lr", "patience", "mosaic", "close_mosaic", "workers")},
+            {"optimizer": "AdamW", "lr0": 0.001, "lrf": 0.05, "cos_lr": True,
+             "patience": 12, "mosaic": 0.5, "close_mosaic": 7, "workers": 2})
+        validation = self.models[-1].validation_options
+        self.assertEqual((validation["imgsz"], validation["batch"], validation["name"]),
+                         (960, 4, "fit_validation"))
+
+    def test_default_training_behavior_is_preserved(self):
+        self.run_cli()
+        options = self.models[0].training_options
+        self.assertEqual((options["imgsz"], options["batch"], options["name"]),
+                         (640, 8, "yolo11n-1x"))
+        self.assertEqual((options["optimizer"], options["patience"], options["mosaic"],
+                          options["close_mosaic"], options["workers"]),
+                         ("auto", 25, 0.3, 10, 8))
+        self.assertNotIn("lr0", options)
+        self.assertNotIn("lrf", options)
+        self.assertEqual(self.models[-1].validation_options["imgsz"], 640)
+
+    def test_invalid_and_nonfinite_options_fail_before_loading_a_model(self):
+        cases = [("--imgsz", "0"), ("--batch", "0"), ("--workers", "-1"),
+                 ("--patience", "-1"), ("--mosaic", "1.1"), ("--mosaic", "nan"),
+                 ("--close-mosaic", "-1"), ("--lrf", "inf"), ("--lrf", "-0.1"),
+                 ("--lrf", "1.1"), ("--optimizer", "AdamW", "--lr0", "nan"),
+                 ("--optimizer", "AdamW", "--lr0", "0")]
+        for arguments in cases:
+            with self.subTest(arguments=arguments), redirect_stderr(io.StringIO()):
+                self.models.clear()
+                with self.assertRaises(SystemExit):
+                    self.run_cli("--evaluate", "best.pt", *arguments)
+                self.assertEqual(self.models, [])
+
+    def test_manual_lr_requires_a_manual_optimizer(self):
+        stderr = io.StringIO()
+        with redirect_stderr(stderr), self.assertRaises(SystemExit):
+            self.run_cli("--lr0", "0.001")
+        self.assertIn("--lr0 requires an explicit --optimizer", stderr.getvalue())
+        self.assertEqual(self.models, [])
+
+    def test_build_options_with_prepared_data_fail_before_loading_model(self):
+        for arguments in (("--output", str(self.root / "alternate")),
+                          ("--group-audit", str(self.root / "near.csv"))):
+            stderr = io.StringIO()
+            with self.subTest(arguments=arguments), redirect_stderr(stderr):
+                with self.assertRaises(SystemExit):
+                    self.run_cli(*arguments)
+                self.assertIn("only applies when building", stderr.getvalue())
+                self.assertEqual(self.models, [])
+
+    def test_all_bare_yolo11_names_load_and_download_inside_weights(self):
+        weights = self.model_dir / "weights"
+        weights.mkdir(parents=True)
+        for filename in ("yolo11n.pt", "yolo11s.pt", "yolo11m.pt", "yolo11x.pt"):
+            with self.subTest(filename=filename):
+                local = weights / filename
+                local.touch()
+                loaded = train.load_model(filename)
+                self.assertEqual(loaded.weights, str(local))
+                local.unlink()
+                original = Path.cwd()
+                downloaded = train.load_model(filename)
+                self.assertEqual(downloaded.loaded_from, weights.resolve())
+                self.assertEqual(Path.cwd(), original)
 
 
 if __name__ == "__main__":
