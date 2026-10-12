@@ -159,13 +159,45 @@ class V2WorkflowTests(unittest.TestCase):
             v2.build(self.args(nhs_manifest=manifest))
         self.assertFalse(self.output.exists())
 
-    def test_v1_roboflow_augmented_export_cross_split_rejected(self):
-        self.add_source("val",
-                        "trash_detection__valid__wrap.rf.123.png",
+    def test_roboflow_cross_split_group_is_repaired_only_in_v2(self):
+        name = "trash_detection__valid__wrap.rf.123.png"
+        self.add_source("val", name, "9 .5 .5 .4 .4\n", (220, 70, 40))
+        originals = {str(p): p.read_bytes()
+                     for p in self.source.rglob("*") if p.is_file()}
+        result = v2.build(self.args())
+        spec = yaml.safe_load(result.read_text())
+        training = {p.name for p in Path(spec["train"]).iterdir()}
+        validation = {p.name for p in Path(spec["val"]).iterdir()}
+        self.assertIn(name, training)
+        self.assertNotIn(name, validation)
+        report = json.loads((self.output / "v2_build.json").read_text())
+        self.assertEqual(report["legacy_validation_images_moved"], 1)
+        self.assertEqual(len(report["legacy_split_repairs"]), 1)
+        self.assertEqual(originals, {str(p): p.read_bytes()
+                                    for p in self.source.rglob("*") if p.is_file()})
+
+    def test_transitive_duplicate_hash_repair_moves_related_images(self):
+        self.add_source("val", "trash_detection__valid__wrap.rf.123.png",
                         "9 .5 .5 .4 .4\n", (220, 70, 40))
-        with self.assertRaisesRegex(ValueError, "crosses splits"):
+        self.add_source("val", "extra__valid__unrelated.png",
+                        "8 .5 .5 .4 .4\n", (220, 70, 40))
+        result = v2.build(self.args())
+        spec = yaml.safe_load(result.read_text())
+        names = {p.name for p in Path(spec["train"]).iterdir()}
+        self.assertIn("trash_detection__valid__wrap.rf.123.png", names)
+        self.assertIn("extra__valid__unrelated.png", names)
+        report = json.loads((self.output / "v2_build.json").read_text())
+        self.assertEqual(report["legacy_validation_images_moved"], 2)
+        self.assertEqual(len(report["legacy_split_repairs"]), 1)
+
+    def test_repair_cannot_empty_validation(self):
+        original = self.source / "images/train/trash_detection__train__wrap.png"
+        val = self.source / "images/val/plate__val__small.png"
+        val.write_bytes(original.read_bytes())
+        with self.assertRaisesRegex(ValueError, "All validation images"):
             v2.build(self.args())
         self.assertFalse(self.output.exists())
+
 
     def test_verified_override_changes_copy_only(self):
         original = self.source / "labels/train/trash_detection__train__wrap.txt"
