@@ -462,7 +462,9 @@ class VerifiedAnnotationTests(unittest.TestCase):
             with self.subTest(file=file):
                 path = ROOT / "data/processed" / source / "labels" / file
                 rows, clipped = train.read_labels(path, source, train.class_names())
-                self.assertEqual(clipped, 0)
+                # The original 346262 plate box exceeds y=1 by ~5e-10,
+                # so read_labels legitimately clips that existing row once.
+                self.assertEqual(clipped, int(file == "train__lvis_000000346262.txt"))
                 self.assertEqual([int(row.split()[0]) for row in rows], expected)
                 for row in rows:
                     _, x, y, w, h = map(float, row.split())
