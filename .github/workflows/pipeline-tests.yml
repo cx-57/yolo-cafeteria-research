@@ -114,6 +114,58 @@ jobs:
         with:
           name: lvis-experiment-check
           path: data/training-ci-revised/experiment_summary.json
+      - name: Export small original-image cohort for temporary model diagnosis
+        run: |
+          python - <<'PY'
+          from collections import Counter
+          from pathlib import Path
+          import json
+          import random
+          import shutil
+          src=Path("data/training")
+          revised=Path("data/training-ci-revised")
+          dst=Path("/tmp/yolo-mini-cohort")
+          picks={}
+          definitions=[
+              ("val", "plate", 1, 20),
+              ("val", "wrapper", 8, 15),
+              ("val", "bottle", 9, 20),
+              ("val", "food", 0, 8),
+              ("val", "utensil", 3, 8),
+              ("train", "napkin", 5, 12),
+              ("train", "condiment_packet", 7, 12),
+              ("train", "bowl", 10, 12),
+          ]
+          for split, name, cls, count in definitions:
+              candidates=[]
+              for label in sorted((src/"labels"/split).glob("*.txt")):
+                  ids={int(line.split()[0]) for line in label.read_text().splitlines() if line.strip()}
+                  if cls in ids:
+                      candidates.append(label)
+              rng=random.Random(20261012+cls)
+              selected=rng.sample(candidates, min(count,len(candidates)))
+              picks[name]={"split":split,"population":len(candidates),"sample":len(selected)}
+              for label in selected:
+                  stem=label.stem
+                  images=list((src/"images"/split).glob(stem+".*"))
+                  if len(images)!=1: raise RuntimeError(f"Ambiguous image: {stem}")
+                  for target,p in [(dst/"images"/split, images[0]), (dst/"labels"/split, label)]:
+                      target.mkdir(parents=True,exist_ok=True)
+                      shutil.copy2(p,target/p.name)
+                  corrected=revised/"labels"/split/(stem+".txt")
+                  if corrected.exists():
+                      output=dst/"corrected_labels"/split
+                      output.mkdir(parents=True,exist_ok=True)
+                      shutil.copy2(corrected,output/(stem+".txt"))
+          (dst/"sample_manifest.json").write_text(json.dumps(picks,indent=2)+"\\n")
+          print(picks)
+          PY
+      - name: Upload temporary untouched-image cohort
+        uses: actions/upload-artifact@v4
+        with:
+          name: baseline-mini-images
+          path: /tmp/yolo-mini-cohort/
+          retention-days: 1
       - name: Preserve real label scan report
         uses: actions/upload-artifact@v4
         with:
