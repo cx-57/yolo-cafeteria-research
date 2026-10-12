@@ -428,6 +428,27 @@ class TrainingControlsTests(unittest.TestCase):
         self.assertEqual((validation["imgsz"], validation["batch"], validation["name"]),
                          (960, 4, "fit_validation"))
 
+    def test_coverage_aware_training_requires_no_mosaic_and_passes_custom_trainer(self):
+        sentinel = object()
+        with patch.dict(sys.modules, {"partial_labels": SimpleNamespace(
+                make_trainer=lambda path: sentinel)}):
+            self.run_cli("--epochs", "2", "--coverage-policy", "policy.json",
+                         "--mosaic", "0", "--batch", "4", "--workers", "0")
+        training = self.models[0].training_options
+        self.assertIs(training["trainer"], sentinel)
+        self.assertEqual((training["mosaic"], training["mixup"],
+                          training["copy_paste"], training["cutmix"]), (0, 0.0, 0.0, 0.0))
+
+    def test_coverage_mask_refuses_mixed_source_training_or_evaluation(self):
+        for argv in (("--coverage-policy", "policy.json"),
+                     ("--coverage-policy", "policy.json", "--evaluate", "best.pt")):
+            self.models.clear()
+            with self.subTest(argv=argv), redirect_stderr(io.StringIO()) as stderr:
+                with self.assertRaises(SystemExit):
+                    self.run_cli(*argv)
+                self.assertIn("--coverage-policy", stderr.getvalue())
+                self.assertEqual(self.models, [])
+
     def test_default_training_behavior_is_preserved(self):
         self.run_cli()
         options = self.models[0].training_options

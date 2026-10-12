@@ -80,6 +80,40 @@ jobs:
           print("All", checked, "matched audit pairs remain within one split.")
           print("Near-duplicate candidates are NOT proof of actual duplicates.")
           PY
+      - name: Build additive LVIS food experiment without deleting occluded plates
+        run: |
+          python scripts/experiment.py --source data/training \
+            --output data/training-ci-revised \
+            --label-additions data/audits/model_revisions_2026-10-12/lvis_food_additions.json \
+            --balance-classes plate wrapper bottle --max-repeat 2
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a = json.loads(Path("data/training-ci-revised/experiment_summary.json").read_text())
+          original = json.loads(Path("data/training/split_summary.json").read_text())
+          counts = a["counts"]
+          assert counts["train_originals"] == original["train_originals"]
+          assert counts["val_originals"] == original["val_originals"]
+          assert counts["val_views"] == original["val_originals"]
+          assert counts["train_views"] >= counts["train_originals"]
+          assert a["additions"]["accepted"] > 0
+          assert a["corrected_support"]["train"]["plate"] == a["original_support"]["train"]["plate"]
+          assert a["corrected_support"]["val"]["plate"] == a["original_support"]["val"]["plate"]
+          assert a["corrected_support"]["val"]["food"]["instances"] > a["original_support"]["val"]["food"]["instances"]
+          for split in ("train", "val"):
+              originals = {p.name for p in Path("data/training/images", split).iterdir()}
+              revised = {p.name for p in Path("data/training-ci-revised/images", split).iterdir()}
+              assert originals <= revised
+          print("LVIS overlay OK; original food support:", a["original_support"]["val"]["food"])
+          print("LVIS overlay OK; corrected food support:", a["corrected_support"]["val"]["food"])
+          print("LVIS overlay accepted boxes by split:", a["additions"]["by_split"])
+          print("Plate images and every original label retained; experiment is NOT trained.")
+          PY
+      - name: Upload experiment integrity report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lvis-experiment-check
+          path: data/training-ci-revised/experiment_summary.json
       - name: Preserve real label scan report
         uses: actions/upload-artifact@v4
         with:
@@ -90,3 +124,59 @@ jobs:
         with:
           name: split-summary
           path: data/training/split_summary.json
+
+  ml-integration:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU torch and pinned Ultralytics
+        run: |
+          python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install ultralytics==8.4.175 PyYAML Pillow
+      - name: Run real upstream partial-label loss and gradient tests
+        run: python -m unittest discover -s tests -p "test_partial_labels.py" -v
+      - name: One-epoch real-image training-loop smoke (untrained model)
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+          import sys
+          import tempfile
+          import yaml
+          from ultralytics import YOLO
+          sys.path.insert(0, str(Path("scripts").resolve()))
+          from partial_labels import make_trainer
+          from train import class_names
+          with tempfile.TemporaryDirectory() as tmp:
+              root = Path(tmp)
+              ids = ["train__lvis_000000225490", "train__lvis_000000478368"]
+              for split in ("train", "val"):
+                  images, labels = root/"images"/split, root/"labels"/split
+                  images.mkdir(parents=True)
+                  labels.mkdir(parents=True)
+                  for name in (ids if split=="train" else ids[:1]):
+                      source = Path("data/processed/plate")
+                      shutil.copy2(source/"images"/(name+".jpg"),
+                                   images/("plate__"+name+".jpg"))
+                      shutil.copy2(source/"labels"/(name+".txt"),
+                                   labels/("plate__"+name+".txt"))
+              config = root/"data.yaml"
+              config.write_text(yaml.safe_dump({
+                  "path":str(root), "train":"images/train", "val":"images/val",
+                  "names":class_names()}, sort_keys=False))
+              model = YOLO("yolo11n.yaml")
+              model.train(trainer=make_trainer(
+                  "data/audits/model_revisions_2026-10-12/source_coverage.json"),
+                  data=str(config), epochs=1, imgsz=128, batch=2,
+                  device="cpu", workers=0, amp=False, val=False,
+                  optimizer="SGD", plots=False, save=False, project=str(root),
+                  name="loss-smoke", mosaic=0, close_mosaic=0, mixup=0,
+                  cutmix=0, copy_paste=0, cache=False)
+              print("Real photo + masked criterion training loop completed.")
+              print("No trained-checkpoint accuracy or mAP is claimed.")
+          PY

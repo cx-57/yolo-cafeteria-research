@@ -93,6 +93,55 @@ GitHub Actions now builds the full original corpus and performs a second fresh l
 
 Run local CPU-level data checks with `python3 -m unittest discover -s tests -v` and `python3 scripts/train.py --build-only`. Running the actual model still requires your local `best.pt` and device; the weights are not in GitHub.
 
+## October 12: corrected annotation experiment and actual prediction review
+
+The newer [source-level diagnosis](data/audits/README.md) identifies poor plate, wrapper and bottle AP, and the absence of napkin, bowl, condiment and paper-boat validation. **Do not delete occluded plates merely because they are difficult.** Their existing boxes are kept; exposure to partly visible objects matters for cafeteria detection.
+
+Codex added `scripts/lvis_food.py`, `scripts/experiment.py` and `scripts/partial_labels.py`. The reviewed official LVIS food overlay proposes 1,364 boxes across 242 plate-source photos; the full GitHub Actions dataset check accepted 1,355 additions and skipped 9 overlapping existing labels. The *experiment* preserves all 2,477 original training and 619 validation photos and all existing plate boxes; with selected 2× class repetition it builds 3,208 training views. Those views are repetitions, not new photos.
+
+To prepare that **separate, non-destructive** dataset:
+
+```bash
+python3 scripts/train.py --build-only
+python3 scripts/experiment.py --source data/training --output data/training-revised \
+  --label-additions data/audits/model_revisions_2026-10-12/lvis_food_additions.json \
+  --balance-classes plate wrapper bottle --max-repeat 2
+```
+
+**Do not compare the earlier 77.9% mAP50 directly against numbers from this experiment.** Correcting 33 validation LVIS photos changes the ground truth. The script keeps the images in the same split, but not the validation labels. The official LVIS food annotations also are not proof of exhaustive 11-class annotations.
+
+### Inspect the saved 100-epoch model on real images (without retraining)
+
+```bash
+python3 scripts/inspect_predictions.py \
+  --weights model/runs/yolo11n-corrected-baseline-100/weights/best.pt \
+  --data data/training/data.yaml --split val \
+  --classes plate wrapper bottle napkin --per-class 4 \
+  --output model/prediction-review
+```
+
+The script creates side-by-side JPEGs (**green: ground truth; red: model predictions**) and `summary.json`, showing model boxes on up to four images per requested class. Napkins have **no** validation targets, so zero will be selected for napkins on `--split val`. To visually inspect napkins from training (not an accuracy estimate), repeat with `--split train --classes napkin --output model/prediction-review-train`.
+
+An unmatched predicted box can be a genuine missed annotation, not necessarily a hallucination. The overlay's fixed confidence threshold and IoU matches are **diagnostics**, not Ultralytics AP or an NHS test. The user's `best.pt` and real validation dataset are local and are not committed to GitHub, so GitHub Actions cannot measure this model's actual error rate.
+
+### Source-aware experimental loss (only after inspection)
+
+Codex's experimental `source_coverage.json` marks which classes each source is expected to annotate. `--coverage-policy` now connects the opt-in loss through `scripts/train.py`. It avoids treating negatives for *unknown* source classes as reliable background, while retaining labeled positive supervision. This is an experimental hypothesis, **not a proven improvement**. It requires Ultralytics **8.4.175** and `--mosaic 0` (also no MixUp/CutMix/copy-paste). Do not resume an ordinary checkpoint into this loss.
+
+When ready for a controlled comparison, train **both** a standard and masked model from the **same pretrained checkpoint**, on `data/training-revised/data.yaml`, with otherwise identical hyperparameters and fixed validation data. Example short preliminary runs:
+
+```bash
+python3 scripts/train.py data/training-revised/data.yaml --model yolo11n.pt \
+  --epochs 10 --batch 4 --device mps --workers 0 --mosaic 0 \
+  --name corrected-standard-test
+python3 scripts/train.py data/training-revised/data.yaml --model yolo11n.pt \
+  --epochs 10 --batch 4 --device mps --workers 0 --mosaic 0 \
+  --coverage-policy data/audits/model_revisions_2026-10-12/source_coverage.json \
+  --name corrected-masked-test
+```
+
+Only run these after model prediction review and after CPU integration tests pass. A 10-epoch comparison is a **smoke/feasibility experiment**, not a definitive performance claim. Neither model has independent NHS validation coverage for all 11 classes; additional capture-group-disjoint labeled scenes and paper boats remain necessary.
+
 ## Source history
 
 The early eight processed sources retain their **old stored class IDs**. `scripts/prepare.py` holds the mapping to the current `config.yaml` IDs. `scripts/train.py` converts IDs **only in the generated training copy**. Newly uploaded food, dry/wet waste and bowl images already use the current IDs. Never point YOLO directly at `data/processed/`; do not change originals.
