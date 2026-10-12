@@ -228,13 +228,16 @@ def build(args):
                 if evidence["instances"].get(split, {}).get(name, 0) == 0]
         for split in ("train", "val", "test")
     }
+    # A test set is desirable for final claims, but not required for training
+    # or development comparison on fully reviewed NHS validation photos.
+    has_test = any(p["split"] == "test" for p in nhs)
+    required_splits = ("train", "val", "test") if has_test else ("train", "val")
     if not args.provisional:
-        if any(evidence["missing_classes"][split] for split in ("train", "val", "test")):
+        if any(evidence["missing_classes"][split] for split in required_splits):
             raise ValueError("V2 class coverage is incomplete. Supply reviewed NHS photos "
-                             "for all 11 classes, or use --provisional for a NONFINAL build. "
+                             "for all classes in train and NHS validation "
+                             "(and test if present), or use --provisional. "
                              + json.dumps(evidence["missing_classes"]))
-        if not any(p["split"] == "test" for p in nhs):
-            raise ValueError("Final V2 requires an independently collected NHS test split")
     # The existing experiment builder validates additive boxes and never edits V1.
     prepare_experiment(source_yaml, dest, label_additions=args.label_additions)
     if not args.provisional:
@@ -278,7 +281,7 @@ def build(args):
     spec_file.write_text(yaml.safe_dump(spec, sort_keys=False))
     final = audit_splits(load_dataset(spec_file), [])
     # Source group enforcement applies to the new final dataset too.
-    if not args.provisional and any(final["missing_classes"][k] for k in ("train", "val", "test")):
+    if not args.provisional and any(final["missing_classes"][k] for k in required_splits):
         raise ValueError("V2 dataset is still incomplete after copying")
     summary = {"provisional": args.provisional, "source_yaml": str(source_yaml),
                "nhs_manifest": str(Path(args.nhs_manifest).resolve()) if args.nhs_manifest else None,
@@ -286,11 +289,17 @@ def build(args):
                "final_audit": final, "dataset_sha256": dataset_fingerprint(spec_file),
                "annotation_policy": "docs/REDESIGN_V2.md (2026-10-12)",
                "strict_nhs_only_evaluation": not args.provisional,
+               "independent_test_available": has_test,
+               "evaluation_note": ("Independent NHS test split available."
+                                   if has_test else
+                                   "No independent test: compare on validation only; "
+                                   "do not claim final unbiased generalization."),
                "label_additions": str(args.label_additions) if args.label_additions else None,
                "reviewed_overrides": overrides}
     (dest / "v2_build.json").write_text(json.dumps(summary, indent=2) + "\n")
     print("V2 dataset:", spec_file)
     print("Provisional:", args.provisional)
+    print("Independent test set:", "yes" if has_test else "no (validation only)")
     print("Missing classes:", final["missing_classes"])
     return spec_file
 
@@ -383,7 +392,7 @@ def report(args):
         print(f"{row['trial']:12s} mAP50-95={row['map50_95']:.3f}, "
               f"mAP50={row['map50']:.3f}, P={row['precision']:.3f}, "
               f"R={row['recall']:.3f}")
-    print("Provisional public-source metrics are NOT independent NHS accuracy.")
+    print("These metrics compare models on validation, not an independent final test.")
 
 
 def main():
