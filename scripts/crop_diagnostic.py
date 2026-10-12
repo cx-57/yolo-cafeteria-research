@@ -105,6 +105,161 @@ def summarize(rows):
     return output
 
 
+
+def suppress_overlaps(detections, threshold=0.5):
+    """Class-aware non-max suppression for merging overlapping crop predictions."""
+    kept = []
+    for detection in sorted(detections, key=lambda row: -row["conf"]):
+        if all(detection["class"] != earlier["class"]
+               or overlap(detection["box"], earlier["box"]) < threshold
+               for earlier in kept):
+            kept.append(detection)
+    return kept
+
+
+def resolution_scores(rows):
+    """Recall and unmatched-prediction counts on an identical annotated cohort."""
+    modes = ("full_640", "combined_640", "combined_640_nms", "full_high")
+    results = {}
+    for confidence in THRESHOLDS:
+        results[str(confidence)] = {}
+        for mode in modes:
+            report = {}
+            total_matches = total_targets = total_predictions = 0
+            total_unmatched = total_small = total_small_matches = 0
+            for class_id, name in CLASSES.items():
+                matches = targets = count_predictions = small = small_matches = 0
+                for row in rows:
+                    predictions_for_class = [
+                        p for p in row[mode]
+                        if p["class"] == class_id and p["conf"] >= confidence
+                    ]
+                    found = matched_targets(row["targets"], row[mode], confidence)
+                    count_predictions += len(predictions_for_class)
+                    for i, target in enumerate(row["targets"]):
+                        if target["class"] != class_id:
+                            continue
+                        targets += 1
+                        matches += i in found
+                        if target["area"] < 0.01:
+                            small += 1
+                            small_matches += i in found
+                report[name] = {
+                    "recall": round(matches / targets, 4) if targets else None,
+                    "matched": matches, "targets": targets,
+                    "predictions": count_predictions,
+                    "unmatched_predictions": count_predictions - matches,
+                    "small_matched": small_matches, "small_targets": small,
+                }
+                total_matches += matches
+                total_targets += targets
+                total_predictions += count_predictions
+                total_unmatched += count_predictions - matches
+                total_small += small
+                total_small_matches += small_matches
+            report["overall"] = {
+                "recall": round(total_matches / total_targets, 4) if total_targets else None,
+                "matched": total_matches, "targets": total_targets,
+                "predictions": total_predictions,
+                "unmatched_predictions": total_unmatched,
+                "small_matched": total_small_matches, "small_targets": total_small,
+            }
+            results[str(confidence)][mode] = report
+    return results
+
+
+def run_resolution_comparison(args, images, baseline, input_signature, settings):
+    """Reuse the exact 640px baseline cohort; only infer the higher-resolution frames."""
+    high = args.compare_imgsz
+    high_settings = dict(settings, compare_imgsz=high)
+    cache = args.output / f"resolution_{high}_progress.jsonl"
+    folder = args.dataset / "images/val"
+    done = {}
+    if cache.is_file():
+        for line in cache.read_text().splitlines():
+            try:
+                row = json.loads(line)
+                image = folder / row["image"]
+                if (row.get("settings") == high_settings and image in images
+                        and row.get("input_signature") == input_signature(image)):
+                    done[row["image"]] = row
+            except (ValueError, KeyError, OSError):
+                continue
+
+    pending = [image for image in images if image.name not in done]
+    if pending:
+        model = YOLO(str(args.weights))
+        with cache.open("a") as stream:
+            for image in pending:
+                with Image.open(image) as source:
+                    rgb = source.convert("RGB")
+                row = {
+                    "image": image.name, "settings": high_settings,
+                    "input_signature": input_signature(image),
+                    "full": predictions(model, rgb, high, args.device),
+                }
+                stream.write(json.dumps(row) + "\n")
+                stream.flush()
+                done[image.name] = row
+                print(f"Resolution {high}: {len(done)}/{len(images)}", flush=True)
+
+    matched_rows = []
+    gains = {"recovered_vs_640_full": [], "missed_vs_640_full": [],
+             "recovered_vs_640_combined_nms": [], "missed_vs_640_combined_nms": []}
+    for image in images:
+        old = baseline[image.name]
+        new = done[image.name]
+        row = {
+            "targets": old["targets"], "full_640": old["full"],
+            "combined_640": old["combined"],
+            "combined_640_nms": suppress_overlaps(old["combined"]),
+            "full_high": new["full"],
+        }
+        matched_rows.append(row)
+        found_high = matched_targets(row["targets"], row["full_high"], 0.25)
+        for mode, suffix in (("full_640", "640_full"),
+                             ("combined_640_nms", "640_combined_nms")):
+            found_old = matched_targets(row["targets"], row[mode], 0.25)
+            for category, indexes in (
+                    ("recovered_vs_" + suffix, found_high - found_old),
+                    ("missed_vs_" + suffix, found_old - found_high)):
+                for index in sorted(indexes):
+                    target = row["targets"][index]
+                    gains[category].append({
+                        "image": image.name, "class": CLASSES[target["class"]],
+                        "area_fraction": round(target["area"], 6),
+                    })
+
+    report = {
+        "settings": high_settings, "images": len(images),
+        "modes": {
+            "full_640": "Original checkpoint on the full image at 640px",
+            "combined_640": "Original full image plus 4 overlapping crops (raw)",
+            "combined_640_nms": "Original full image + crops, class-aware IoU 0.5 NMS",
+            "full_high": f"Full image only at {high}px",
+        },
+        "comparison": resolution_scores(matched_rows),
+        "recovered_examples": gains,
+        "limitations": (
+            "IoU>=0.50 diagnostic on the original, potentially incompletely "
+            "annotated validation cohort. 'Unmatched predictions' are NOT "
+            "confirmed false positives. The 640px combined mode may repeat "
+            "predictions; use combined_640_nms for a more practical comparison. "
+            "This experiment does not measure independent NHS test performance."
+        ),
+    }
+    path = args.output / f"resolution_{high}_summary.json"
+    path.write_text(json.dumps(report, indent=2) + "\n")
+    for conf in ("0.25",):
+        print(f"\nRecall at confidence {conf} (IoU >= 0.50):")
+        for mode, stats in report["comparison"][conf].items():
+            overall = stats["overall"]
+            print(f"{mode}: {overall['matched']}/{overall['targets']} "
+                  f"({overall['recall']:.1%}); "
+                  f"{overall['unmatched_predictions']} unmatched predictions")
+    print(f"Saved resolution comparison: {path}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--weights", type=Path, default=Path(
@@ -113,9 +268,13 @@ def main():
     parser.add_argument("--output", type=Path, default=Path("model/runs/crop-diagnostic"))
     parser.add_argument("--max-images", type=int, default=55)
     parser.add_argument("--imgsz", type=int, default=640)
+    parser.add_argument("--compare-imgsz", type=int, default=None,
+                        help="Compare current baseline with full-image inference at this larger size")
     parser.add_argument("--crop-fraction", type=float, default=0.65)
     parser.add_argument("--device", default="cpu")
     args = parser.parse_args()
+    if args.compare_imgsz is not None and args.compare_imgsz <= args.imgsz:
+        parser.error("--compare-imgsz must be larger than --imgsz")
     if not args.weights.is_file():
         parser.error(f"Checkpoint not found: {args.weights}")
     if not 0.5 <= args.crop_fraction < 1 or args.max_images < 1:
@@ -217,6 +376,8 @@ def main():
     path.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result["comparison"], indent=2))
     print(f"Saved: {path}")
+    if args.compare_imgsz is not None:
+        run_resolution_comparison(args, images, done, input_signature, settings)
 
 
 if __name__ == "__main__":
