@@ -26,6 +26,10 @@ tests/                  # automated checks
 
 Only `model/README.md` is committed: the model weights and training outputs are created after running training.
 
+## V2 redesign (research and experiments)
+
+The [V2 research-backed plan](docs/REDESIGN_V2.md) defines wrapper versus bottle versus condiment labels, a target-domain NHS photo protocol, reproducible class-weighted YOLO11n versus YOLO11s experiments, and validation rules. The existing training pipeline now supports optional `--cls-pw 0.25` and `--freeze 10`; these are **off by default**. No V2 checkpoint has been trained and no NHS test score has been claimed. Retain V1 outputs unchanged.
+
 ## Set up and train
 
 From your repository folder:
