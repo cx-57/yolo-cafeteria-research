@@ -205,6 +205,12 @@ def build_dataset(augment_factor=1, seed=42, group_audit=None, output=None):
            for photos in groups.values() for source, image, _ in photos
            for source_path in (image, DATA / "processed" / source / "labels" / (image.stem + ".txt"))):
         raise ValueError(f"Unsafe output contains a training source image or label: {output}")
+    # Conservative leakage prevention is the default when the tracked near-
+    # duplicate audit exists. A candidate pair is grouped, never auto-deleted.
+    if group_audit is None:
+        known_candidates = DATA / "audits/day1/near_duplicates.csv"
+        if known_candidates.is_file():
+            group_audit = known_candidates
     groups, grouping = grouped_candidates(groups, group_audit)
     total = sum(source_counts.values())
     target = round(total * 0.20)
@@ -335,16 +341,38 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
 
     model.add_callback("on_val_end", record_settings)
     metrics = model.val(**options)
-    support = metrics.nt_per_class
-    images = metrics.nt_per_image
-    if support is None or images is None:
-        raise ValueError("Validation did not provide per-class target support")
+    # Refuse partial, misaligned, or nonfinite validator output. In particular,
+    # zip() alone can silently drop a supported class and inflate a headline mAP.
+    names = class_names()
+    support, images = metrics.nt_per_class, metrics.nt_per_image
+    if support is None or images is None or len(support) != len(names) or len(images) != len(names):
+        raise ValueError("Validation class support does not match the 11-class ontology")
+    if any(int(n) != n or n < 0 for n in [*support, *images]):
+        raise ValueError("Validation contains invalid target counts")
+    indices = [int(i) for i in metrics.box.ap_class_index]
+    vectors = {key: list(getattr(metrics.box, key))
+               for key in ("ap50", "ap", "p", "r", "f1")}
+    if (len(indices) != len(set(indices))
+            or any(len(v) != len(indices) for v in vectors.values())
+            or set(indices) != {i for i, n in enumerate(support) if n > 0}):
+        raise ValueError("Validation AP rows do not exactly match supported classes")
+    scalars = [float(getattr(metrics.box, key))
+               for key in ("mp", "mr", "map50", "map")]
+    values = scalars + [float(n) for vector in vectors.values() for n in vector]
+    if any(not math.isfinite(v) or not 0 <= v <= 1 for v in values):
+        raise ValueError("Validation contains invalid or nonfinite metrics")
+    if not indices:
+        raise ValueError("Validation has no ground-truth targets; AP is undefined")
+    for field, overall in (("ap50", metrics.box.map50), ("ap", metrics.box.map),
+                           ("p", metrics.box.mp), ("r", metrics.box.mr)):
+        mean = sum(float(v) for v in vectors[field]) / len(indices)
+        if not math.isclose(mean, float(overall), abs_tol=0.001):
+            raise ValueError(f"Validation macro {field} disagrees with per-class results")
     measured = {
-        int(i): {"ap50": float(a), "map50_95": float(b),
-                 "precision": float(p), "recall": float(r), "f1": float(f)}
-        for i, a, b, p, r, f in zip(
-            metrics.box.ap_class_index, metrics.box.ap50, metrics.box.ap,
-            metrics.box.p, metrics.box.r, metrics.box.f1)
+        i: {"ap50": float(vectors["ap50"][j]), "map50_95": float(vectors["ap"][j]),
+            "precision": float(vectors["p"][j]), "recall": float(vectors["r"][j]),
+            "f1": float(vectors["f1"][j])}
+        for j, i in enumerate(indices)
     }
     per_class = {}
     for i, class_name in enumerate(class_names()):
@@ -366,7 +394,13 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
         "coverage": {"total_class_count": len(per_class),
                      "supported_class_count": len(supported),
                      "unsupported_class_count": len(unsupported),
+                     "all_classes_evaluable": not unsupported,
                      "supported_classes": supported, "unsupported_classes": unsupported},
+        "interpretation": ("Only classes with ground-truth targets enter macro AP. "
+                           "A test split name does not prove independence."
+                           if split == "test" else
+                           "Provisional validation only; not independent NHS test performance. "
+                           "Classes without targets have undefined AP."),
         "weights": str(Path(model.ckpt_path if hasattr(model, "ckpt_path")
                             else weights).resolve()),
         "data": str(Path(data_file).resolve()),
@@ -375,6 +409,8 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
     location = Path(metrics.save_dir) / "metrics.json"
     location.write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
     print("Results:", location)
+    if unsupported:
+        print("INCOMPLETE CLASS COVERAGE: AP undefined for", ", ".join(unsupported))
     return result
 
 
