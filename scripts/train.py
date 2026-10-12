@@ -471,6 +471,8 @@ def main():
     parser.add_argument("--close-mosaic", type=int, default=10)
     parser.add_argument("--warmup-epochs", type=float, default=3.0,
                         help="Warmup duration; use 0 for a short low-rate fine-tune")
+    parser.add_argument("--coverage-policy", type=Path,
+                        help="Experimental source-coverage loss policy; requires --mosaic 0")
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--resume", type=Path, metavar="LAST_PT")
     parser.add_argument("--evaluate", type=Path, metavar="BEST_PT")
@@ -494,6 +496,10 @@ def main():
             parser.error("--lr0 must be finite and positive")
         if args.optimizer == "auto":
             parser.error("--lr0 requires an explicit --optimizer because auto ignores lr0")
+    if args.coverage_policy and (args.resume or args.evaluate):
+        parser.error("--coverage-policy applies to fresh training only, not resume/evaluation")
+    if args.coverage_policy and args.mosaic != 0:
+        parser.error("--coverage-policy requires --mosaic 0 (no mixed-image augmentation)")
     if args.resume:
         from ultralytics import YOLO
         YOLO(str(args.resume)).train(resume=True)
@@ -521,13 +527,16 @@ def main():
         patience=args.patience, plots=True, save=True,
         degrees=8, translate=0.1, scale=0.2, fliplr=0.5,
         hsv_h=0.015, hsv_s=0.4, hsv_v=0.3, mosaic=args.mosaic,
-        close_mosaic=args.close_mosaic, mixup=0.0)
+        close_mosaic=args.close_mosaic, mixup=0.0, cutmix=0.0, copy_paste=0.0)
     if args.lr0 is not None:
         options["lr0"] = args.lr0
     if args.lrf is not None:
         options["lrf"] = args.lrf
     if args.device:
         options["device"] = args.device
+    if args.coverage_policy:
+        from partial_labels import make_trainer
+        options["trainer"] = make_trainer(args.coverage_policy)
     model.train(**options)
     evaluate(Path(model.trainer.save_dir) / "weights/best.pt", data_file,
              device=args.device, imgsz=imgsz, batch=args.batch, workers=args.workers,
