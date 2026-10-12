@@ -30,6 +30,24 @@ Only `model/README.md` is committed: the model weights and training outputs are 
 
 The [V2 research-backed plan](docs/REDESIGN_V2.md) defines wrapper versus bottle versus condiment labels, a target-domain NHS photo protocol, reproducible class-weighted YOLO11n versus YOLO11s experiments, and validation rules. The existing training pipeline now supports optional `--cls-pw 0.25` and `--freeze 10`; these are **off by default**. No V2 checkpoint has been trained and no NHS test score has been claimed. Retain V1 outputs unchanged.
 
+## Implemented V2 workflow
+
+[Step-by-step V2 commands](docs/V2_IMPLEMENTATION.md) are now available. The
+[single V2 workflow](scripts/v2.py) creates separate audited dataset copies,
+imports signed-off NHS photos grouped by session, applies checksum-verified
+human-approved label replacements, fingerprints the build, and launches three
+fixed training trials (YOLO11n, weighted YOLO11n, YOLO11s).
+
+**Strict V2 validation and test are NHS-only.** Without fully reviewed NHS
+images and all-11-class positive support, a strict build is rejected. Run
+the safe provisional builder below only for engineering experiments:
+
+    python3 scripts/v2.py build --provisional
+
+Tests: `python3 -m unittest discover -s tests -p 'test_v2.py' -v`.
+The old checkpoint and dataset remain unchanged. No V2 accuracy improvement
+has been measured.
+
 ## Set up and train
 
 From your repository folder:
