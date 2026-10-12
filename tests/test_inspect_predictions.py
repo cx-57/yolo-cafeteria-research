@@ -24,6 +24,20 @@ class InspectionTests(unittest.TestCase):
         self.assertEqual(matched_pred, {0})
         self.assertEqual(review.box_iou((0,0,1,1),(2,2,3,3)), 0)
 
+    def test_size_bins_and_stratified_review_keep_occluded_candidates(self):
+        self.assertEqual(review.size_band(.009), "tiny_under_1pct")
+        self.assertEqual(review.size_band(.01), "small_1_to_4pct")
+        self.assertEqual(review.size_band(.04), "medium_4_to_16pct")
+        self.assertEqual(review.size_band(.16), "large_16pct_plus")
+        self.assertAlmostEqual(review.area_fraction((0, 0, 10, 10), 100, 100), .01)
+        samples = [(Path(f"plate_{n}.jpg"),
+                    [(1, (0, 0, (n+1)*2, (n+1)*2), None)], (100, 100))
+                   for n in range(8)]
+        sampled = review.sample_across_sizes(samples[::-1], 1, 3)
+        self.assertEqual([item[0].stem for item in sampled],
+                         ["plate_0", "plate_4", "plate_7"])
+        self.assertEqual(len(review.sample_across_sizes(samples, 1, 100)), 8)
+
     def test_real_image_overlay_files_and_zero_validation_support(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -52,6 +66,10 @@ class InspectionTests(unittest.TestCase):
             self.assertEqual(report["images_reviewed"], 1)
             self.assertEqual(report["eligible_images_by_class"], {"plate":1, "napkin":0})
             self.assertEqual(report["reviewed"][0]["pred"], 1)
+            self.assertEqual(report["per_class"]["plate"]["target_count"], 1)
+            self.assertEqual(report["per_class"]["plate"]["matched"], 1)
+            self.assertEqual(report["by_object_area"]["plate"]["large_16pct_plus"]["matched"], 1)
+            self.assertTrue((root/"output/review_queue.csv").is_file())
             with Image.open(root/"output/plate__partly_hidden.jpg") as im:
                 self.assertEqual(im.size, (320, 120))
 
