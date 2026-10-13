@@ -2157,5 +2157,66 @@
     "rows": [
       "7 0.5767148 0.6878808 0.4584838 0.4685173"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000229233.jpg",
+    "complete": "yes",
+    "reviewer": "Manual original-resolution box overlay visual review 2026-10-13",
+    "reason": "Source image contains a capped plastic Fanta drink bottle and a small food serving on foreground plate, both omitted from food/plate-only annotation.",
+    "expected_label_sha256": "50e826db338d7385df7155017bc04854058a66bd809016527fc7e816bc5b5b7a",
+    "rows": [
+      "1 0.384460937 0.670833333 0.212109375 0.076541667",
+      "1 0.139710937 0.673416667 0.219046875 0.057416667",
+      "1 0.138023438 0.652364583 0.195421875 0.068229167",
+      "9 0.315000000 0.501000000 0.060000000 0.290000000",
+      "0 0.389000000 0.672000000 0.190000000 0.086000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000241408.jpg",
+    "complete": "yes",
+    "reviewer": "Manual original-resolution box overlay visual review 2026-10-13",
+    "reason": "Two large distinct prepared sandwiches and green salad/vegetable side were visible on labeled plates without food annotations.",
+    "expected_label_sha256": "080f59f06875ca8727940df619878a5147ef622126ff99c514fc59996f98ba1e",
+    "rows": [
+      "1 0.817476562 0.560104167 0.302828125 0.102208333",
+      "1 0.571890625 0.713552083 0.623312500 0.219395833",
+      "1 0.264507812 0.596947917 0.378640625 0.118520833",
+      "0 0.555000000 0.525000000 0.354000000 0.479000000",
+      "0 0.299000000 0.455000000 0.267000000 0.364000000",
+      "0 0.755000000 0.390000000 0.143000000 0.080000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000252629.jpg",
+    "complete": "yes",
+    "reviewer": "Manual original-resolution box overlay visual review 2026-10-13",
+    "reason": "A decorated large sheet cake, a slice on the foreground paper plate and a smaller cake serving in the background were absent from food labels.",
+    "expected_label_sha256": "ed738661582324450be85f560fe7e76d8c92e6e8eee46a1230b647f03bad1cab",
+    "rows": [
+      "1 0.266054687 0.123676815 0.200296875 0.098594848",
+      "1 0.171109375 0.149437939 0.084781250 0.082482436",
+      "1 0.675671875 0.191990632 0.236281250 0.200843091",
+      "1 0.510554687 0.596135831 0.611640625 0.691896956",
+      "0 0.226000000 0.557000000 0.450000000 0.870000000",
+      "0 0.491000000 0.462000000 0.357000000 0.478000000",
+      "0 0.658000000 0.185000000 0.158000000 0.163000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000273053.jpg",
+    "complete": "yes",
+    "reviewer": "Manual original-resolution box overlay visual review 2026-10-13",
+    "reason": "Two hotdogs with clearly distinct buns/sausage servings on labeled paper plate were missing food boxes. Nearby drink is a cup, not a bottle.",
+    "expected_label_sha256": "c12bea9ceecc800371fec6047d9f40a4325dbcab95bb9f081f48a2233e06674f",
+    "rows": [
+      "1 0.405054688 0.765269953 0.386734375 0.326596244",
+      "0 0.359000000 0.724000000 0.268000000 0.470000000",
+      "0 0.470000000 0.608000000 0.264000000 0.465000000"
+    ]
   }
 ]
