@@ -13,17 +13,20 @@ Neither the old model nor V1 labels have been overwritten.
 - [ ] **Exhaustive visual sign-off for every object in every image.**
   Contact sheets and exception queues exist. Direct full-resolution
   inspections and four ambiguous images requiring further work are documented
-  in data/audits/v2_review_2026-10-12/image_review.csv. The generated
-  review queue now expects 69 full-image entries, 239 food-only reviews
-  and 2,788 images with no full review (pending confirmation from the newest CI run).
+  in data/audits/v2_review_2026-10-12/image_review.csv. The full-corpus GitHub Actions run confirmed **82 full-image reviewed**, **239
+  food-only reviewed**, and **2,775 not fully reviewed** of 3,096 images.
+  The separate direct-inspection log contains 75 rows. These counts are not
+  interchangeable with exhaustive bounding-box verification.
   This task is NOT complete.
-- [x] **Implement 51 checksum-protected image-level annotation replacements in V2 only.**
+- [x] **Implement 64 checksum-protected image-level annotation replacements in V2 only.**
   Reviewed corrections: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
   The direct-image review includes three corrected LVIS plates, four
   corrected original cafeteria scenes, 20 corrected Asian cafeteria scenes
   with 60 newly annotated divided plates/rice/soup bowls, two additional
   American-food plate/bowl corrections, and two direct bottle/wrapper
-  omission repairs. Earlier fixes include a non-bottle cup,
+  omission repairs. A further 13 full-resolution American-food and
+  school-lunch image fixes add/repair serving plates, soup/rice bowls and a
+  second unlabeled hotdog; 26 new target boxes were created across those images. Earlier fixes include a non-bottle cup,
   duplicated bowls and five false napkins. All original
   V1 images and labels remain untouched. Full dataset visual verification is
   still incomplete.
@@ -71,7 +74,7 @@ Some remain marked `needs_followup` (including overlapping stacked-plate boxes
 and missing flexible-wrapper packages) and are NOT counted as complete.
 The separately tracked 51 full-image replacement-label approvals plus 18
 full-resolution inspected, already-correct labels feed the honest 3,096-photo
-V2 review queue: **69 full-image verified, 239 food-only reviewed, 2,788 not
+V2 review queue: **82 full-image reviewed, 239 food-only reviewed, 2,775 not
 fully verified** (pending latest CI confirmation). Corrections and clean
 unchanged-label reviews are distinct kinds of evidence.
 
@@ -93,6 +96,27 @@ The 44 condiment photos largely repeat the same isolated sauce packet on
 one tabletop, and waste_detection_v3 has many visually similar hand-held
 video-frame backgrounds. Apparent object counts therefore overstate
 independent scene diversity.
+
+
+### Latest targeted full-resolution review
+
+- Added 13 reviewed V2-only full-label replacements across food_american
+  (nine photos) and school_lunch (four photos). These keep existing food and
+  drink-carton boxes while restoring plate/bowl targets and one omitted hotdog.
+- The [image-by-image direct review log](../data/audits/v2_review_2026-10-12/image_review.csv)
+  contains the exact photo stems, decisions and original SHA-256 label
+  fingerprints. It distinguishes corrections from unresolved scene checks.
+- The [five LVIS paper-boat draft reviews](../data/v2_candidates/lvis_trays/paperboat_visual_review_20261012.csv)
+  identify genuine paper food boats but also flag uncertain liners, foil
+  packets and wrap boundaries. These remain **provisional** rather than
+  promoted to strict reviewed labels.
+- All 121 macworx contact-sheet photos mostly depict very similar clear
+  hinged packages; many tetra_pak photos are dissimilar foreign retail cartons.
+  Neither source independently proves NHS cafeteria generalization.
+- GitHub Actions V2 full-corpus build and model smoke tests passed on
+  [run 38340122713](https://github.com/cx-57/yolo-cafeteria-research/actions/runs/38340122713).
+  Follow-on per-image regression assertions should be checked against their
+  exact run result, rather than assumed successful before completion.
 
 ## Confirmed automated tests
 
