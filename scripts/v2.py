@@ -253,8 +253,13 @@ def validate_overrides(file, sources):
         label = label_path(photo)
         if record.get("complete") != "yes" or not record.get("reviewer") or not record.get("reason"):
             raise ValueError(f"Override {number}: requires complete=yes, reviewer and reason")
-        if digest(label) != record.get("expected_label_sha256"):
-            raise ValueError(f"Override {number}: source label changed since manual review")
+        expected_hash = record.get("expected_label_sha256")
+        actual_hash = digest(label)
+        if actual_hash != expected_hash:
+            raise ValueError(
+                f"Override {number} ({stem}): source label changed since manual review; "
+                f"expected={expected_hash}, actual={actual_hash}, "
+                f"source_rows={label.read_text().strip()!r}")
         if not isinstance(record.get("rows"), list):
             raise ValueError(f"Override {number}: rows must contain the COMPLETE approved labels")
         approved = validate_rows(record["rows"], f"Override {number}", class_names())
