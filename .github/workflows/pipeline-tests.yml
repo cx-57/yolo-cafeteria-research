@@ -129,7 +129,7 @@ jobs:
           expected = json.loads(Path(
               "data/audits/v2_review_2026-10-12/reviewed_overrides.json").read_text())
           assert len(report["reviewed_overrides"]) == len(expected)
-          assert len(expected) >= 33
+          assert len(expected) >= 51
           assert summary["additions"]["accepted"] >= 500
           assert report["final_audit"]["image_counts"]["train"] > 2400
           assert report["final_audit"]["image_counts"]["val"] > 0
@@ -177,6 +177,21 @@ jobs:
               assert len(appended) == 3, (stem, appended)
               assert collections.Counter(int(line.split()[0]) for line in appended) == {1:1,10:2}, stem
           print("PASS 14+ actual Asian cafeteria images with 1 plate + 2 bowls each, source food targets preserved")
+          # Genuine full-resolution bottle/wrapper omissions: append one
+          # target class box without disturbing the original V1 label.
+          for stem, added_class in {
+              "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d": 9,
+              "trash_detection__train__000005_JPG.rf.457af049215a7141728329200f838bd8": 8
+          }.items():
+              original = list(Path("data/training/labels").glob("*/" + stem + ".txt"))
+              corrected = list(labels.glob("*/" + stem + ".txt"))
+              assert len(original) == len(corrected) == 1
+              before = original[0].read_text().strip().splitlines()
+              after = corrected[0].read_text().strip().splitlines()
+              assert after[:len(before)] == before
+              assert len(after) == len(before) + 1
+              assert int(after[-1].split()[0]) == added_class
+          print("PASS added green bottle and separate cookie wrapper; original boxes intact")
           # These five photos are visually verified torn sheets of paper,
           # not cafeteria napkins. V2 keeps the photos as negative examples;
           # original V1 class-5 labels remain unchanged.
@@ -212,7 +227,7 @@ jobs:
               rows = list(csv.DictReader(stream))
           counts = Counter(row["review_status"] for row in rows)
           assert len(rows) == 3096
-          assert counts["full_image_verified"] >= 47
+          assert counts["full_image_verified"] >= 69
           assert sum(counts.values()) == 3096
           assert counts["not_verified"] > 0  # no claim of complete audit
           assert all(row["requires_all_11_class_review"] == "yes"
