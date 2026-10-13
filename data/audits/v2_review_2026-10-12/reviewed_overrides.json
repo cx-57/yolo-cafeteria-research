@@ -725,5 +725,30 @@
       "0 0.508993 0.519231 0.737410 0.961538",
       "10 0.545000000 0.510000000 0.810000000 0.980000000"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual audit 2026-10-12",
+    "reason": "Three visible discarded plastic bottles: two crushed bottles in left brush were labeled, but the distinct green upright bottle at the right edge was missing. Retain the two original boxes and add the third bottle.",
+    "expected_label_sha256": "9692d76fd9402140bfa287b93ded174ec3a904938686f767f38f3d6b487a4937",
+    "rows": [
+      "9 0.16000000 0.25548246 0.06200000 0.09758772",
+      "9 0.19687500 0.22395833 0.06125000 0.10471491",
+      "9 0.752734375 0.199218750 0.061718750 0.173437500"
+    ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000005_JPG.rf.457af049215a7141728329200f838bd8.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual audit 2026-10-12",
+    "reason": "Walkers chips wrapper originally labeled. A second distinct flexible cookie packaging sleeve labeled freee chocolate chip cookies on top of other waste was omitted; preserve Walkers wrapper and add separate class-8 package box.",
+    "expected_label_sha256": "47082c061859709b4f07f2973b2c9588a387235de809ad100a4513d902d9c79c",
+    "rows": [
+      "8 0.37173203 0.40563726 0.47385621 0.34007353",
+      "8 0.540625000 0.638281250 0.612500000 0.329687500"
+    ]
   }
 ]
