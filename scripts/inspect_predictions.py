@@ -136,7 +136,8 @@ def draw_boxes(image, objects, rgb):
     return picture
 
 
-def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, device):
+def inspect(data_path, weights, output, split, wanted, per_class, conf, iou,
+            device, all_images=False, save_overlays=True):
     from ultralytics import YOLO
 
     data_path = Path(data_path).resolve()
@@ -177,6 +178,8 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
             if image.name not in seen:
                 picks.append((image, targets, dimensions))
                 seen.add(image.name)
+    if all_images:
+        picks = candidates
     output.mkdir(parents=True, exist_ok=True)
     report = []
     counts = defaultdict(Counter)
@@ -225,13 +228,14 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
                     "size_band": size_band(area_fraction(bounds, width, height)),
                     "confidence": round(confidence, 5), "box_xyxy": json.dumps(bounds),
                 })
-        with Image.open(image) as original:
-            left = draw_boxes(original, targets, "lime")
-            right = draw_boxes(original, boxes, "red")
-        montage = Image.new("RGB", (left.width+right.width, left.height))
-        montage.paste(left, (0, 0))
-        montage.paste(right, (left.width, 0))
-        montage.save(output/(image.stem+".jpg"), quality=85)
+        if save_overlays:
+            with Image.open(image) as original:
+                left = draw_boxes(original, targets, "lime")
+                right = draw_boxes(original, boxes, "red")
+            montage = Image.new("RGB", (left.width+right.width, left.height))
+            montage.paste(left, (0, 0))
+            montage.paste(right, (left.width, 0))
+            montage.save(output/(image.stem+".jpg"), quality=85)
         report.append({"image": image.name, "gt": len(targets), "pred": len(boxes),
                        "matched": len(matched_gt), "unmatched_targets": len(targets)-len(matched_gt),
                        "unmatched_predictions": len(boxes)-len(matched_pred)})
@@ -250,6 +254,8 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
     (output/"summary.json").write_text(json.dumps({
         "split": split, "confidence": conf, "iou": iou,
         "images_reviewed": len(picks), "eligible_images_by_class": support,
+        "selection": ("full_split" if all_images else "stratified_sample"),
+        "overlays_saved": save_overlays,
         "wrong_class_candidates": len(confusion_queue),
         "wrong_class_warning": ("Candidates are overlapping mismatched-class boxes, "
                                 "not adjudicated errors; full-scene review is necessary."),
@@ -272,7 +278,8 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
                     "Fixed-threshold matches are NOT mAP or independent NHS test accuracy. "
                     "Small-box status is NOT proof of occlusion.")
     }, indent=2)+"\n")
-    print(f"Saved {len(picks)} side-by-side prediction overlays to {output}")
+    print(f"Scanned {len(picks)} images; overlay images "
+          f"{'saved' if save_overlays else 'disabled'}: {output}")
     print("Eligible target images:", support)
     print("Possible wrong-class overlaps:", len(confusion_queue),
           "(see wrong_class_candidates.csv)")
@@ -292,11 +299,16 @@ def main():
     p.add_argument("--conf", type=float, default=0.10)
     p.add_argument("--iou", type=float, default=0.50)
     p.add_argument("--device")
+    p.add_argument("--all-images", action="store_true",
+                   help="Analyze entire split rather than select diagnostic images")
+    p.add_argument("--no-overlays", action="store_true",
+                   help="Write CSV/JSON diagnostics without hundreds of overlay JPEGs")
     a = p.parse_args()
     if a.per_class < 1 or not 0 < a.conf <= 1 or not 0 < a.iou <= 1:
         p.error("Invalid limit or confidence/IoU threshold")
     inspect(a.data, a.weights, Path(a.output), a.split, a.classes,
-            a.per_class, a.conf, a.iou, a.device)
+            a.per_class, a.conf, a.iou, a.device,
+            all_images=a.all_images, save_overlays=not a.no_overlays)
 
 
 if __name__ == "__main__":
