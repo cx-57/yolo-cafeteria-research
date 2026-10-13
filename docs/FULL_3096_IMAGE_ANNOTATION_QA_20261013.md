@@ -133,3 +133,32 @@ historical baseline mAP, are the appropriate evidence of safe application.
 Mechanical screening of all image/label pairs is complete; most photos
 still lack exhaustive independent all-11-class visual certification. The
 paper-boat class and missing validation positives remain open data issues.
+
+## Continued original-resolution review — latest batch
+
+**14 additional original-resolution image reviews** have been committed since
+the 170-override checkpoint, yielding **184 unique checksum-locked full-image
+V2 replacements**, and **34 additional object boxes**. The first 14 are
+distributed across V2 train/validation without moving or copying source photos.
+
+Breakdown:
+- 4 photos: one drink bottle and food portions on restaurant paper plates
+  (10 new boxes). Commit `b35391fdb`, repaired source split name in
+  `99a008194` so V2 validation placement is unaffected.
+- 3 photos: cake, drink carton, small capped bottle, utensils and food on
+  plates (9 new boxes). Commit `4ad0c3e58`.
+- 5 photos: folded pizza/calzone, hotdogs, french fries, birthday cake and
+  custard pastry on paper plates (10 new food boxes).
+  Commit `a9581a465`.
+- 2 photos: pizza, edible residual cake/frosting, two black plastic utensils
+  and a metal fork (5 new boxes). Commit `de41f20dd`.
+
+All proposed boxes were drawn against the individual photo at original pixel
+dimensions; each existing plate/source label was retained; each replacement
+stores the original V1 normalized-label SHA-256. No new validation images were
+introduced; existing validation annotations changed, so **old mAP figures are
+not measurements of this corrected validation set**.
+
+**Coverage is still incomplete:** 184 replacements do not constitute 3,096
+independent full-image semantic reviews, and additional images may have omitted
+objects. The check-in count is auditable, not a claim of complete certification.
