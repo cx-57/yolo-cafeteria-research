@@ -433,6 +433,13 @@ TRIALS = {
     "control-n": {"model": "yolo11n.pt"},
     "weighted-n": {"model": "yolo11n.pt", "cls_pw": "0.25"},
     "control-s": {"model": "yolo11s.pt"},
+    # Matched pair to isolate the effect of masking unknown-class negatives.
+    # The coverage loss cannot use mosaic because mixed photos lose provenance.
+    "no-mosaic-n": {"model": "yolo11n.pt", "mosaic": "0"},
+    "coverage-n": {
+        "model": "yolo11n.pt", "mosaic": "0",
+        "coverage_policy": "data/audits/model_revisions_2026-10-12/source_coverage.json",
+    },
 }
 
 
@@ -448,6 +455,18 @@ def train(args):
     if dataset_fingerprint(data_file) != summary["dataset_sha256"]:
         raise ValueError("V2 dataset content changed since build; rebuild and re-audit")
     trial = TRIALS[args.trial]
+    coverage_policy = None
+    if "coverage_policy" in trial:
+        # The provisional policy only covers legacy public data. Never silently
+        # apply it to new NHS images, which require a separately reviewed policy.
+        coverage_policy = PROJECT_ROOT / trial["coverage_policy"]
+        if not coverage_policy.is_file():
+            raise ValueError("Missing coverage policy: " + str(coverage_policy))
+        known_sources = json.loads(coverage_policy.read_text())["source_known_classes"]
+        for photo in load_dataset(data_file)["train"]:
+            source = photo.name.split("__", 1)[0]
+            if source not in known_sources:
+                raise ValueError("No coverage policy for training source " + repr(source))
     tag = args.tag or ("e" + str(args.epochs))
     if not re.fullmatch(r"[A-Za-z0-9_-]+", tag):
         raise ValueError("--tag may contain only letters, digits, dashes and underscores")
@@ -463,10 +482,12 @@ def train(args):
            "--epochs", str(args.epochs), "--batch", str(args.batch),
            "--imgsz", "640", "--seed", "42", "--device", args.device,
            "--optimizer", "AdamW", "--lr0", "0.0007", "--lrf", "0.1",
-           "--cos-lr", "--mosaic", "0.3", "--close-mosaic", "10",
+           "--cos-lr", "--mosaic", trial.get("mosaic", "0.3"), "--close-mosaic", "10",
            "--workers", "0", "--patience", "0"]
     if "cls_pw" in trial:
         cmd.extend(["--cls-pw", trial["cls_pw"]])
+    if coverage_policy is not None:
+        cmd.extend(["--coverage-policy", str(coverage_policy)])
     print("Training:", " ".join(cmd), flush=True)
     if not args.dry_run:
         subprocess.run(cmd, check=True)
@@ -499,7 +520,7 @@ def check_trial_schedules(recipes):
         if recipe.get("completed_epochs", recipe["epochs"]) != recipe["epochs"]:
             raise ValueError("Trial schedule was not completed")
         command = recipe.get("command", [])
-        ignored = {"--model", "--name", "--eval-name", "--cls-pw"}
+        ignored = {"--model", "--name", "--eval-name", "--cls-pw", "--coverage-policy"}
         schedule, i = [], 2
         while i < len(command):
             if command[i] in ignored:
@@ -659,7 +680,7 @@ def main():
     training.add_argument("--allow-provisional", action="store_true")
     comparison = commands.add_parser("report", help="Compare completed trials")
     comparison.add_argument("--trials", nargs="+", choices=list(TRIALS),
-                            default=list(TRIALS))
+                            default=["control-n", "weighted-n", "control-s"])
     comparison.add_argument("--allow-incomplete", action="store_true")
     comparison.add_argument("--epochs", type=int, default=80)
     comparison.add_argument("--tag", help="Trial output tag; default e<epochs>")
