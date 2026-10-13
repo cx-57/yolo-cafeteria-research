@@ -1149,5 +1149,46 @@
     "rows": [
       "8 0.55500000 0.50000000 0.45000000 0.48000000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000004386.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution visual correction 2026-10-13",
+    "reason": "Visible silver fork in person's right hand was not annotated; retain plate, salad and sandwich.",
+    "expected_label_sha256": "6b56cd8fde38ae88ef98ebcf68c730c6cb3b5493e2ed7827d0485453ab9a9d9d",
+    "rows": [
+      "1 0.417283372 0.403296875 0.306744731 0.069687500",
+      "0 0.49297424 0.37812500 0.15690867 0.09062500",
+      "0 0.37236534 0.39531250 0.19203747 0.07187500",
+      "3 0.30400000 0.33600000 0.14100000 0.05000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000009908.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution visual correction 2026-10-13",
+    "reason": "Whole hot dog, paper plate, white plastic fork and a partially visible Heinz ketchup packet were photographed; utensil and packet previously absent.",
+    "expected_label_sha256": "7f84addaf84fc679f677c94f94f84976304f8ecf5b36508ebcb01eaa6189494d",
+    "rows": [
+      "1 0.500117188 0.514041667 0.999765625 0.965291667",
+      "0 0.574358974 0.445392491 0.753846154 0.590443686",
+      "3 0.52300000 0.76600000 0.79100000 0.46900000",
+      "7 0.38600000 0.89800000 0.38300000 0.20400000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000011403.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution visual correction 2026-10-13",
+    "reason": "A large slice of frosted cake and silver fork are clearly visible inside the paper plate; neither had target annotation.",
+    "expected_label_sha256": "a5b9ec65510d8fc8b552ed4b829bb1be178d1107ad440500c0e168cd56dd09fc",
+    "rows": [
+      "1 0.551335937 0.537312500 0.825609375 0.915791667",
+      "0 0.48300000 0.43400000 0.39400000 0.44800000",
+      "3 0.38100000 0.70000000 0.65000000 0.34000000"
+    ]
   }
 ]
