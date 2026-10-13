@@ -55,6 +55,30 @@ Tests: `python3 -m unittest discover -s tests -p 'test_v2.py' -v`.
 The old checkpoint and dataset remain unchanged. No V2 accuracy improvement
 has been measured.
 
+## Codex-reviewed V2 data and tests (October 12)
+
+The [Codex review completion/status audit](docs/V2_CODEX_STATUS_20261012.md)
+records the exact checklist, what passed on the full 3,096-image GitHub
+dataset, and what still needs independent cafeteria photos or human review.
+
+To **actually use** the 11 reviewed label corrections and 242 LVIS food
+review records in a new V2 dataset (without modifying V1):
+
+```bash
+python3 scripts/v2.py build --source data/training \
+  --output data/training-v2-codex-reviewed \
+  --provisional --use-codex-review
+```
+
+Five additional paper-boat candidate images are available with provisional
+AI-assisted boxes but **not human verified**. To use the drafts in
+TRAINING ONLY for a separate research experiment, add:
+`--candidate-manifest data/v2_candidates/lvis_trays/provisional_manifest.csv`
+and select a different output directory. Strict V2 and validation refuse
+unverified candidates. The separate test set remains optional; **four classes
+still lack ordinary V2 public-source validation support**. No model accuracy
+improvement has yet been established by a full controlled training run.
+
 ## Set up and train
 
 From your repository folder:
