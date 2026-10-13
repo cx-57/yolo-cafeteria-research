@@ -65,7 +65,7 @@ def load_dataset(data_file):
     return result
 
 
-def check_nhs_manifest(manifest, source_files):
+def check_nhs_manifest(manifest, source_files, allow_unverified=False):
     """Require human-verified, exhaustive labels and capture-group separation."""
     if manifest is None:
         return []
@@ -81,8 +81,12 @@ def check_nhs_manifest(manifest, source_files):
     for line, record in enumerate(records, 2):
         if record["split"] not in ("train", "val", "test"):
             raise ValueError(f"NHS row {line}: split must be train, val, or test")
-        if record["reviewed"].strip().lower() != "yes" or record["complete"].strip().lower() != "yes":
-            raise ValueError(f"NHS row {line}: reviewed and complete must both equal yes")
+        reviewed = record["reviewed"].strip().lower()
+        complete = record["complete"].strip().lower()
+        required_status = "no" if allow_unverified else "yes"
+        if reviewed != required_status or complete != required_status:
+            raise ValueError(f"NHS row {line}: reviewed and complete must both equal "
+                             f"{required_status}")
         session, reviewer = record["session"].strip(), record["reviewer"].strip()
         if not session or not reviewer:
             raise ValueError(f"NHS row {line}: session and reviewer are required")
@@ -284,6 +288,16 @@ def build(args):
     for record in public:
         record["domain"] = "reviewed_public"
     nhs.extend(public)
+    candidate_manifest = getattr(args, "candidate_manifest", None)
+    if candidate_manifest and not args.provisional:
+        raise ValueError("Unverified candidate photos are allowed only with --provisional")
+    candidates = check_nhs_manifest(candidate_manifest, sources,
+                                    allow_unverified=True)
+    for record in candidates:
+        if record["split"] != "train":
+            raise ValueError("Unverified candidate photos must stay in training")
+        record["domain"] = "unverified_candidate"
+    nhs.extend(candidates)
     if len({r["sha256"] for r in nhs}) != len(nhs):
         raise ValueError("Additional manifests contain duplicate image contents")
     sessions = {}
@@ -357,7 +371,8 @@ def build(args):
     for index, record in enumerate(nhs, 1):
         split = record["split"]
         image = record["image"]
-        namespace = "nhs" if record["domain"] == "nhs" else "reviewed"
+        namespace = {"nhs": "nhs", "reviewed_public": "reviewed",
+                     "unverified_candidate": "candidate"}[record["domain"]]
         name = f"{namespace}__{index:05d}_{image.name}"
         target_image = dest / "images" / split / name
         target_label = dest / "labels" / split / (Path(name).stem + ".txt")
@@ -382,7 +397,9 @@ def build(args):
     summary = {"provisional": args.provisional, "source_yaml": str(source_yaml),
                "nhs_manifest": str(Path(args.nhs_manifest).resolve()) if args.nhs_manifest else None,
                "reviewed_manifest": str(Path(public_manifest).resolve()) if public_manifest else None,
-               "nhs_photos": nhs_summary, "source_audit": evidence,
+               "nhs_photos": nhs_summary,
+               "unverified_candidate_images": len(candidates),
+               "source_audit": evidence,
                "legacy_split_repairs": split_repairs,
                "legacy_validation_images_moved": len(moved_validation),
                "final_audit": final, "dataset_sha256": dataset_fingerprint(spec_file),
@@ -544,6 +561,9 @@ def main():
     building.add_argument("--source", default=str(PROJECT_ROOT / "data/training"))
     building.add_argument("--output", default=str(PROJECT_ROOT / "data/training-v2"))
     building.add_argument("--nhs-manifest", type=Path)
+    building.add_argument("--candidate-manifest", type=Path,
+                          help="Explicit TRAIN-ONLY unverified image/label drafts; "
+                               "requires --provisional and reviewed=no, complete=no")
     building.add_argument("--reviewed-manifest", type=Path,
                           help="Reviewed public/local photos with exhaustive labels and capture sessions; not NHS")
     building.add_argument("--label-additions", type=Path)
