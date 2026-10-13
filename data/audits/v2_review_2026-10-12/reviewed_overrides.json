@@ -2929,5 +2929,80 @@
     "rows": [
       "9 0.57500000 0.55500000 0.51000000 0.89000000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000216265.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image-by-image photo and before/after bbox overlay manual review 2026-10-13",
+    "reason": "Two separate chocolate cake portions in man's paper plate were missing food annotations; small distant plate and foreground plate already labeled.",
+    "expected_label_sha256": "d137e8936685c554caec3891ea51ffaf87cf5b6d982f15f303356a7564565f8e",
+    "rows": [
+      "1 0.671398437 0.823833333 0.196609375 0.148458333",
+      "1 0.596812500 0.336416667 0.036156250 0.025125000",
+      "0 0.639843750 0.827083333 0.079687500 0.095833333",
+      "0 0.711718750 0.819791667 0.085937500 0.118750000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000210404.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image-by-image photo and before/after bbox overlay manual review 2026-10-13",
+    "reason": "Large bear-shaped edible rice-crispie cake and clipped piece of cake on foreground paper plate lacked class-food boxes. Decorations and open drinking cup not mislabeled as utensils or bottles.",
+    "expected_label_sha256": "0e60c092df3398d5a0fc6c99324eccf1beff523d8d7e63aa4b8d61bf11e0a804",
+    "rows": [
+      "1 0.487052083 0.958195313 0.515645833 0.083609375",
+      "0 0.543750000 0.551562500 0.716666667 0.484375000",
+      "0 0.521875000 0.975781250 0.452083333 0.048437500"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000072866.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image-by-image photo and before/after bbox overlay manual review 2026-10-13",
+    "reason": "Unlabeled frosted cake, cutting knife and three capped plastic water bottles on left of countertop were verified by full-resolution and enlarged bottle crop. Existing plate labels retained pending separate stacked-plate adjudication.",
+    "expected_label_sha256": "d8333099017970ad7d6e433e2b9001cf33cc33c7a5e77ff90e7f8431049e4d1b",
+    "rows": [
+      "1 0.182429245 0.889992188 0.333018868 0.112765625",
+      "1 0.187606132 0.898734375 0.332900943 0.112000000",
+      "1 0.190224057 0.865382813 0.269740566 0.118953125",
+      "0 0.264150943 0.717187500 0.367924528 0.168750000",
+      "3 0.378537736 0.643750000 0.257075472 0.103125000",
+      "9 0.020047170 0.617968750 0.040094340 0.157812500",
+      "9 0.062500000 0.611718750 0.054245283 0.160937500",
+      "9 0.108490566 0.617968750 0.066037736 0.148437500"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000042834.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image-by-image photo and before/after bbox overlay manual review 2026-10-13",
+    "reason": "Cooked luncheon-meat pieces on central plate and stack of white paper napkins at right lacked food and napkin annotations; open metal SPAM tin not classified as drink bottle or food wrapper.",
+    "expected_label_sha256": "09860550d68e97df9f13cc5568e4e74852a3cd80216bab4a06ce1980818b13d1",
+    "rows": [
+      "1 0.543437500 0.553070312 0.318166667 0.171734375",
+      "1 0.075083333 0.573039063 0.150166667 0.149953125",
+      "0 0.535416667 0.552343750 0.270833333 0.160937500",
+      "5 0.839583333 0.656250000 0.320833333 0.203125000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000119560.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image-by-image photo and before/after bbox overlay manual review 2026-10-13",
+    "reason": "Two pizza servings on separate birthday plates plus a small rectangular juice drink carton were missing. Party blower in foreground is not a food wrapper.",
+    "expected_label_sha256": "01627240023ff00ae8b8f22f3d882a4aca7f1c9a010d71aaf5fe1d6add9015a5",
+    "rows": [
+      "1 0.163367188 0.476453608 0.170109375 0.069855670",
+      "1 0.228453125 0.793268041 0.414843750 0.237298969",
+      "1 0.128312500 0.340371134 0.137656250 0.034762887",
+      "0 0.256250000 0.775257732 0.321875000 0.235051546",
+      "0 0.170312500 0.481443299 0.168750000 0.080412371",
+      "6 0.285156250 0.485567010 0.079687500 0.175257732"
+    ]
   }
 ]
