@@ -201,3 +201,21 @@ conversation (not added to the private repository).
 queue is a prioritization slice, not proof that every photo contains
 unlabeled food. Checksums/label geometry and any auxiliary detector are not
 a substitute for inspecting target instances in context.
+
+### Additional bottle review: four source photographs
+
+Four more plain-background photos were examined individually with old (cyan)
+and revised (red) boxes: `plastic381`, `plastic167`, `plastic277`,
+and `plastic104`. These include bottles clipped by the image border;
+only the visible bottle and cap are boxed, with no automatic color-only
+masking. Their original label hashes are recorded in
+`reviewed_overrides.json`, bringing the V2 count to **200 unique
+checksum-locked image-level replacements**. In the current turn, **16
+additional images** received review-backed changes: 5 plate scenes
+(10 newly added food/fork boxes) and 11 isolated bottle scenes
+(11 full-bottle box replacements). The review evidence is available as
+`annotation_review_16_new_images.zip` in the conversation.
+
+The 3,096-image structural audit is complete; all-11-class exhaustive visual
+verification is still not complete. Old validation scores are not valid for
+this corrected set without reevaluation.
