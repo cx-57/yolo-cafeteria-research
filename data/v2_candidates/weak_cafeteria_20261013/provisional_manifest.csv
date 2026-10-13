@@ -1,0 +1,10 @@
+image,label,split,session,reviewer,reviewed,complete,source_url,license,attribution
+../commons/commons_3501350.jpg,labels/commons_3501350.txt,train,commons-3501350,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=3501350,Public domain,Commons page 3501350
+../commons/commons_201481455.jpg,labels/commons_201481455.txt,train,commons-201481455,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=201481455,CC BY-SA 4.0,Commons page 201481455
+../commons/commons_191573847.jpg,labels/commons_191573847.txt,train,commons-191573847,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=191573847,CC BY-SA 4.0,Commons page 191573847
+../commons/commons_83765874.jpg,labels/commons_83765874.txt,train,commons-83765874,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=83765874,CC BY-SA 4.0,Commons page 83765874
+../commons/commons_183912352.jpg,labels/commons_183912352.txt,train,commons-183912352,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=183912352,CC0,Commons page 183912352
+../commons_extra/commons_89546615.jpg,labels/commons_89546615.txt,train,commons-89546615,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=89546615,CC BY-SA 4.0,Commons page 89546615
+../commons_extra/commons_191768172.jpg,labels/commons_191768172.txt,train,commons-191768172,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=191768172,CC BY-SA 4.0,Commons page 191768172
+../commons_extra/commons_171470730.jpg,labels/commons_171470730.txt,train,commons-171470730,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=171470730,CC BY-SA 4.0,Commons page 171470730
+../commons_extra/commons_66322484.jpg,labels/commons_66322484.txt,train,commons-66322484,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=66322484,CC BY-SA 4.0,Commons page 66322484
