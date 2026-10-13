@@ -159,7 +159,7 @@ def focus_crop(image, rows, names, focus_classes, view, crop_fraction=0.60,
             b = max(top, (by - bh / 2) * height)
             c = min(right, (bx + bw / 2) * width)
             d = min(bottom, (by + bh / 2) * height)
-            if c - a < 2 or d - b < 2:
+            if c - a < 1 or d - b < 1:
                 continue
             transformed.append(
                 f"{cls} {((a + c) / 2 - left) / crop_w:.9f} "
