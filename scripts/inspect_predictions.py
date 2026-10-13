@@ -182,12 +182,24 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
     counts = defaultdict(Counter)
     area_counts = defaultdict(Counter)
     review_queue = []
+    confusion_queue = []
     for image, targets, dimensions in picks:
         prediction = model.predict(str(image), imgsz=640, conf=conf, device=device,
                                    verbose=False)[0]
         boxes = [(int(b.cls.item()), tuple(float(v) for v in b.xyxy[0]),
                   float(b.conf.item())) for b in prediction.boxes]
         matched_gt, matched_pred = match(targets, boxes, iou)
+        for gi, pj, overlap in wrong_class_candidates(
+                targets, boxes, matched_gt, matched_pred, iou):
+            gt_class, gt_box, _ = targets[gi]
+            pred_class, pred_box, pred_conf = boxes[pj]
+            confusion_queue.append({
+                "image": image.name, "ground_truth_class": NAMES[gt_class],
+                "predicted_class": NAMES[pred_class],
+                "iou": round(overlap, 5), "prediction_confidence": round(pred_conf, 5),
+                "gt_box_xyxy": json.dumps(gt_box),
+                "prediction_box_xyxy": json.dumps(pred_box),
+            })
         width, height = dimensions
         for index, (cls, bounds, _) in enumerate(targets):
             name = NAMES[cls]
@@ -229,9 +241,18 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
         writer.writeheader()
         writer.writerows(sorted(review_queue, key=lambda row: (
             row["issue"] != "unmatched_label", row["area_fraction"], row["image"])))
+    with (output/"wrong_class_candidates.csv").open("w", newline="") as f:
+        fields = ("image", "ground_truth_class", "predicted_class", "iou",
+                  "prediction_confidence", "gt_box_xyxy", "prediction_box_xyxy")
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(sorted(confusion_queue, key=lambda row: -row["iou"]))
     (output/"summary.json").write_text(json.dumps({
         "split": split, "confidence": conf, "iou": iou,
         "images_reviewed": len(picks), "eligible_images_by_class": support,
+        "wrong_class_candidates": len(confusion_queue),
+        "wrong_class_warning": ("Candidates are overlapping mismatched-class boxes, "
+                                "not adjudicated errors; full-scene review is necessary."),
         "reviewed": report,
         "per_class": {name: {
             "target_count": counter["targets"],
@@ -253,6 +274,8 @@ def inspect(data_path, weights, output, split, wanted, per_class, conf, iou, dev
     }, indent=2)+"\n")
     print(f"Saved {len(picks)} side-by-side prediction overlays to {output}")
     print("Eligible target images:", support)
+    print("Possible wrong-class overlaps:", len(confusion_queue),
+          "(see wrong_class_candidates.csv)")
     if split == "train":
         print("TRAIN predictions are illustrations ONLY; do not use for test performance.")
 
