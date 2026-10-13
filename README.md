@@ -74,10 +74,23 @@ Five additional paper-boat candidate images are available with provisional
 AI-assisted boxes but **not human verified**. To use the drafts in
 TRAINING ONLY for a separate research experiment, add:
 `--candidate-manifest data/v2_candidates/lvis_trays/provisional_manifest.csv`
-and select a different output directory. Strict V2 and validation refuse
-unverified candidates. The separate test set remains optional; **four classes
-still lack ordinary V2 public-source validation support**. No model accuracy
+and select a different output directory. For the expanded **16-photo**
+train-only candidate set (5 LVIS paper-boat photos + 11 licensed Commons
+plates, wrappers, bottles, cartons, packets, napkins and bowls), use:
+`--candidate-manifest data/v2_candidates/provisional_train_20261013.csv`.
+The 38 proposed boxes are **AI-assisted and not yet human-verified**.
+GitHub Actions generates a contact sheet for full-resolution annotation review.
+Strict V2 and validation refuse unverified candidates. The separate test
+set remains missing; paper boats, napkins and condiment packets have
+**zero public validation objects**, and bowls have only two. The evaluator
+now warns if any class has under 30 validation instances; it does not
+claim that 30 suffices for research-quality precision. No model accuracy
 improvement has yet been established by a controlled training comparison.
+
+See [38-overlay root-cause audit and fixes](docs/V2_WEAK_CLASS_OVERLAY_AUDIT_20261013.md).
+The `inspect_predictions.py --all-images --no-overlays` mode diagnoses all
+591 validation photos without creating hundreds of JPEGs. Fresh training
+requires pinned Ultralytics 8.4.175 (or explicit `--allow-unpinned`).
 
 **October 13 weak-class experiment:** The existing `scripts/experiment.py`
 now supports `--crop-repeats` for training-only 60% crops centered on small
