@@ -70,8 +70,8 @@ checkpoint or independent NHS test exists.
 | Only 38 selected images reviewed | `--all-images --no-overlays` runs 591-image error scan with compact CSV | Unit test; run on user's actual trained checkpoint |
 | Misleading bowl/wrapper 99% headline | Class support gate: AP for zero objects undefined, below 30 = insufficient support | `metrics.json` includes `coverage.insufficient_support_classes` |
 | Ultralytics 8.4.80 on user's Mac vs tested 8.4.175 | Fresh training refuses mismatched installed version unless `--allow-unpinned` | Unit test |
-| Weak-class training diversity | Nine Commons images (18 **provisional** 11-class boxes); combined with five pre-existing paper-boat images | Train-only optional V2 builder + CI, license/artist metadata preserved |
-| Human-readable candidate review | CI exports a nine-photo labeled contact sheet to facilitate human checking | Pipeline artifact |
+| Weak-class training diversity | Eleven Commons images (31 **provisional** 11-class boxes); combined with five pre-existing paper-boat images | Train-only optional V2 builder + CI, license/artist metadata preserved |
+| Human-readable candidate review | CI exports an eleven-photo labeled contact sheet to facilitate human checking | Pipeline artifact |
 | Val missing paper_boat/napkin/condiment_packet; bowl support 2 | Still open. Cannot add unverified photo/boxes to validation | Source-disjoint NHS or fully reviewed external val is needed |
 | Real cafeteria generalization | Still open. No independent in-domain NHS held-out images or evaluation | Capture labeled images from separate sessions/days |
 
@@ -95,9 +95,9 @@ not a final NHS benchmark.
 
 ### Optional NEW train-only exploratory data (unverified)
 
-The `data/v2_candidates/provisional_train_20261013.csv` contains 14 distinct
+The `data/v2_candidates/provisional_train_20261013.csv` contains 16 distinct
 candidate photos: five earlier LVIS paper-boat draft images with seven
-provisional target boxes, plus nine Wikimedia Commons photos with 18 proposed
+provisional target boxes, plus eleven Wikimedia Commons photos with 31 proposed
 boxes for plates/food, wrappers, bottles, napkins, packets, bowls and utensils.
 File page/licensing/artist metadata are under
 `data/v2_candidates/weak_cafeteria_20261013/SOURCES.json`.
@@ -115,7 +115,7 @@ Review the CI contact sheet and **all original full-resolution photos and all
 11 target classes** before using them for publication-quality experiments.
 Do not put any candidate in `val` or `test`; the build enforces this.
 Existing 2,505 original train / 591 val copies and all historical checkpoints
-remain untouched. The new experimental build should have **2,519 train and
+remain untouched. The new experimental build should have **2,521 train and
 591 val** images. Modest candidate additions cannot establish generalization.
 
 ### Collection and stop rules for actually resolving the open model failures
