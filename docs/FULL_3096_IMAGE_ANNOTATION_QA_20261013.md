@@ -162,3 +162,42 @@ not measurements of this corrected validation set**.
 **Coverage is still incomplete:** 184 replacements do not constitute 3,096
 independent full-image semantic reviews, and additional images may have omitted
 objects. The check-in count is auditable, not a claim of complete certification.
+
+## Continued photo-by-photo review — another 12 images
+
+The next unreviewed review queue was generated from the **actual 3,096-image
+export**, excluding previously approved plate records. Out of 61 remaining
+plate-source photos with only plate annotations, the first **five** clear
+cases were inspected at original resolution and manually augmented:
+
+- `lvis_000000042683`: grilled sausage and baked bun on a paper plate (2 food boxes)
+- `lvis_000000226988`: three barbecue portions on overlapping paper plates (3 food boxes)
+- `lvis_000000201426`: pizza slice and partly cropped bread on separate plates (2 food boxes)
+- `lvis_000000317147`: edible leftover beside cat, on plate (1 food box)
+- `lvis_000000072646`: birthday cake and nearby metal eating utensil on an infant's tray (1 food, 1 utensil)
+
+An additional **seven** white-background source images with isolated *clear
+plastic* bottles were inspected at original resolution:
+`plastic409`, `plastic331`, `plastic234`, `plastic200`,
+`plastic379`, `plastic358`, and `plastic202`. Their overpadded full-bottle
+boxes were manually tightened to include transparent walls and caps.
+A candidate `plastic458` was explicitly **not changed**: its transparent
+right-hand portion could not be bounded confidently.
+
+Across these 12 images, **ten boxes were added** (nine food, one utensil)
+and **seven existing bottle boxes were replaced**. Current override total:
+**196** unique full-image V2 label replacements (previously 184).
+The original V1 images and labels remain unchanged and the frozen validation
+membership is preserved. The validation *labels* do change where reviewed,
+so earlier AP results are not current validation scores.
+
+The source-hash gate identified one transcription error for `lvis_000000042683`
+and the exact original-label SHA-256 was corrected in `3fa9a393` before
+subsequent corrections were committed. Original-resolution proof images
+were saved to `annotations_reviewed_next_12_images.zip` in this
+conversation (not added to the private repository).
+
+**No exhaustive 3,096-image visual sign-off has been made.** The 61 plate-only
+queue is a prioritization slice, not proof that every photo contains
+unlabeled food. Checksums/label geometry and any auxiliary detector are not
+a substitute for inspecting target instances in context.
