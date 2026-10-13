@@ -236,6 +236,54 @@ class FrozenExperimentTests(unittest.TestCase):
         self.assertEqual((self.source / "labels/val/meal__occluded.txt").read_text(),
                          "0 .5 .5 .4 .4\n1 .5 .5 .8 .8\n")
 
+    def test_weak_subset_keeps_full_validation_and_all_labels(self):
+        original = self.source_bytes()
+        dataset = experiment.prepare_weak_subset(
+            self.source, self.output, replay_fraction=0.20)
+        config = yaml.safe_load(dataset.read_text())
+        manifest = Path(config["train"])
+        selected = [Path(s) for s in manifest.read_text().splitlines()]
+        self.assertEqual(len(selected), 4)  # 3 weak originals + 1 of 5 strong-only.
+        self.assertEqual(len(set(selected)), 4)
+        for path in selected:
+            self.assertTrue(path.is_file())
+            self.assertTrue(experiment.label_path(path).is_file())
+        self.assertEqual(Path(config["val"]).resolve(),
+                         (self.source/"images/val").resolve())
+        self.assertEqual(config["names"], train.class_names())
+        self.assertEqual(self.source_bytes(), original)
+        report = json.loads((self.output/"weak_subset.json").read_text())
+        self.assertEqual(report["source_training_views"], 8)
+        self.assertEqual(report["selected_training_views"], 4)
+        self.assertEqual(report["weak_original_groups"], 3)
+        self.assertEqual(report["replay_original_groups"], 1)
+        self.assertTrue(report["all_class_labels_preserved"])
+
+    def test_weak_subset_selects_all_original_and_crop_views_together(self):
+        focus = self.root / "data/focus"
+        experiment.prepare_experiment(
+            self.source, focus, balance_classes=["plate", "wrapper", "bottle"],
+            max_repeat=2, crop_repeats=True)
+        dataset = experiment.prepare_weak_subset(
+            focus, self.output, replay_fraction=0)
+        files = [Path(v) for v in
+                 Path(yaml.safe_load(dataset.read_text())["train"]).read_text().splitlines()]
+        self.assertEqual(len(files), 6)  # Three weak originals, each with 2 views.
+        self.assertTrue(all(p.parent == focus/"images/train" for p in files))
+        for stem in ("meal__plate", "meal__wrapper", "meal__bottle"):
+            self.assertEqual(sum(path.stem.startswith(stem) for path in files), 2)
+        self.assertEqual(
+            json.loads((self.output/"weak_subset.json").read_text())[
+                "selected_training_views"], 6)
+
+    def test_weak_subset_bad_parameters_do_not_write_output(self):
+        for classes, fraction in ((["not_a_class"], .2), (["plate"], -0.1),
+                                  ([], .2), (["wrapper"], 1.1)):
+            with self.subTest(classes=classes, fraction=fraction), self.assertRaises(ValueError):
+                experiment.prepare_weak_subset(
+                    self.source, self.output, classes, fraction)
+            self.assertFalse(self.output.exists())
+
     def test_relative_source_without_yaml_path_resolves_against_the_yaml_directory(self):
         self.source_yaml.write_text(yaml.safe_dump({"train": "images/train", "val": "images/val",
                                                     "names": train.class_names()}))
