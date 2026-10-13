@@ -1,0 +1,126 @@
+[
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic345_jpg.rf.bf1ac00a95ee498c3f8108790bd72246.jpg",
+    "complete": "yes",
+    "reviewer": "Codex full-resolution visual review",
+    "reason": "The object is an open plastic drink cup, not a bottle: visible wide rim, no neck/cap.",
+    "expected_label_sha256": "d9278a53bb8b848bb13c737a6b21322641ec8e47a6a719c7abe089fe036df303",
+    "rows": []
+  },
+  {
+    "source": "utensil",
+    "image": "1236_jpg.rf.34aa336b091ab6f49093dbadfb15a6b1.jpg",
+    "complete": "yes",
+    "reviewer": "Codex full-resolution visual review",
+    "reason": "Add the third visible black spork omitted by the source label.",
+    "expected_label_sha256": "eb21b9b443b88fe6e1916996b7111a3914aeba43560d00b419e7c0e84936ea85",
+    "rows": [
+      "3 0.32421875 0.59033203 0.16015625 0.75878906",
+      "3 0.49023437 0.55712891 0.12500000 0.81738281",
+      "3 0.653906250 0.600781250 0.157812500 0.745312500"
+    ]
+  },
+  {
+    "source": "utensil",
+    "image": "WhatsApp-Image-2022-01-20-at-4-23-13-PM-5-_jpeg_jpg.rf.08f108df446ba7db2147cbb570ade023.jpg",
+    "complete": "yes",
+    "reviewer": "Codex full-resolution visual review",
+    "reason": "Four actual disposable forks are visible; add the two missing forks.",
+    "expected_label_sha256": "766f073143cdecbf6b7b06026bb5cab708dadd699fbad14f924b4c6e4ed3a8e8",
+    "rows": [
+      "3 0.44531250 0.41406250 0.27343750 0.24375000",
+      "3 0.76406250 0.56718750 0.47187500 0.30937500",
+      "3 0.673437500 0.350000000 0.278125000 0.131250000",
+      "3 0.173437500 0.517187500 0.287500000 0.187500000"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-47_000_mov-0005_jpg.rf.982d5958d5d40ae2084c4751735e38c6.jpg",
+    "complete": "yes",
+    "reviewer": "Codex full-resolution visual review",
+    "reason": "One physical paper bowl/tub was boxed twice. Keep the tighter complete bowl box.",
+    "expected_label_sha256": "e491a6094c5a2112936d987cb2e76cdea87017cca36379a0b966ba118258596d",
+    "rows": [
+      "10 0.53489583 0.52222222 0.40520833 0.58518519"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-13-21_000_mov-0002_jpg.rf.b2456461190a8d8d499b46048ba8ced0.jpg",
+    "complete": "yes",
+    "reviewer": "Codex full-resolution visual review",
+    "reason": "One complete fork plus separately boxed handle/head describes one physical object. Keep the complete fork box.",
+    "expected_label_sha256": "cf890694619565bee0479d27c782bde81ee525f430426208eca3bd86baa82e99",
+    "rows": [
+      "3 0.34523438 0.52827778 0.40559896 0.48249074"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-30_000_mov-0002_jpg.rf.504478b2baf4ea02073543cb94cc15b9.jpg",
+    "complete": "yes",
+    "reviewer": "Codex bowl-instance visual review",
+    "reason": "One physical bowl verified in bowl_review overlays; remove duplicate annotations of the same object. Retain full rim/body extent.",
+    "expected_label_sha256": "58ad7a30a7dc984954cb53bd63ccc4510f242fd423c1cdf0e7b079fd3a7d4d3a",
+    "rows": [
+      "10 0.40998437 0.40803704 0.65330208 0.81607407"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-30_000_mov-0003_jpg.rf.17341727efc2c8e2a3bfcab9a2e1b51e.jpg",
+    "complete": "yes",
+    "reviewer": "Codex bowl-instance visual review",
+    "reason": "One physical bowl verified in bowl_review overlays; remove duplicate annotations of the same object. Retain full rim/body extent.",
+    "expected_label_sha256": "4eb20fdacb8dda83e7fe15bf8704902d151a82c93f731de85d714287a2670130",
+    "rows": [
+      "10 0.45947396 0.41408333 0.32751562 0.75202778"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-30_000_mov-0004_jpg.rf.309d322e9e4ad8530323ee86588d0247.jpg",
+    "complete": "yes",
+    "reviewer": "Codex bowl-instance visual review",
+    "reason": "One physical bowl verified in bowl_review overlays; remove duplicate annotations of the same object. Retain full rim/body extent.",
+    "expected_label_sha256": "afba1fe3d4ec663412beca8e08bb72a3978522b3a71bdee56e3a333ca4c605b4",
+    "rows": [
+      "10 0.65628125 0.45944444 0.48385937 0.48677778"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-47_000_mov-0000_jpg.rf.933d121799d6567b7997da2e3908b877.jpg",
+    "complete": "yes",
+    "reviewer": "Codex bowl-instance visual review",
+    "reason": "One physical bowl verified in bowl_review overlays; remove duplicate annotations of the same object. Retain full rim/body extent.",
+    "expected_label_sha256": "e5469b8b789d81522c1e8e2fbb9f6d2aabc1ba96443d383e5a78e6ab7f2c436c",
+    "rows": [
+      "10 0.24829688 0.37181481 0.49311979 0.73745370"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-47_000_mov-0001_jpg.rf.7393910d01a988e90a3d970a7fd824a4.jpg",
+    "complete": "yes",
+    "reviewer": "Codex bowl-instance visual review",
+    "reason": "One physical bowl verified in bowl_review overlays; remove duplicate annotations of the same object. Retain full rim/body extent.",
+    "expected_label_sha256": "b595425f5c1ee5efbc74036c178afea8efda30811a02246e420644c5b8e4986e",
+    "rows": [
+      "10 0.477557290 0.317761573 0.443536460 0.635523145"
+    ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-12-47_000_mov-0003_jpg.rf.05ca2b6e566f5afa0dccf9d60f3e96b2.jpg",
+    "complete": "yes",
+    "reviewer": "Codex bowl-instance visual review",
+    "reason": "One physical bowl verified in bowl_review overlays; remove duplicate annotations of the same object. Retain full rim/body extent.",
+    "expected_label_sha256": "cec8755e837729227a565cad83e867de4ffa8da4cf2e54829201f113cd11000f",
+    "rows": [
+      "10 0.44353125 0.26797222 0.41368229 0.53594444"
+    ]
+  }
+]

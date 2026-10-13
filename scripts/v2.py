@@ -102,7 +102,9 @@ def check_nhs_manifest(manifest, source_files):
         if image_hash in source_hashes:
             raise ValueError(f"NHS image duplicates a legacy source image: {image}")
         images.append({"image": image, "label": label, "split": record["split"],
-                       "session": session, "reviewer": reviewer, "sha256": image_hash})
+                       "session": session, "reviewer": reviewer, "sha256": image_hash,
+                       "source_url": record.get("source_url"), "license": record.get("license"),
+                       "attribution": record.get("attribution")})
     if len({r["sha256"] for r in images}) != len(images):
         raise ValueError("NHS manifest contains duplicate image contents")
     return images
@@ -265,7 +267,21 @@ def build(args):
     dest = Path(args.output).resolve()
     check_output(dest, [source_yaml.parent, *[photo.parent for photos in sources.values()
                                             for photo in photos]])
+    public_manifest = getattr(args, "reviewed_manifest", None)
     nhs = check_nhs_manifest(args.nhs_manifest, sources)
+    for record in nhs:
+        record["domain"] = "nhs"
+    public = check_nhs_manifest(public_manifest, sources)
+    for record in public:
+        record["domain"] = "reviewed_public"
+    nhs.extend(public)
+    if len({r["sha256"] for r in nhs}) != len(nhs):
+        raise ValueError("Additional manifests contain duplicate image contents")
+    sessions = {}
+    for record in nhs:
+        if record["session"] in sessions and sessions[record["session"]] != record["split"]:
+            raise ValueError("Additional capture session crosses splits: " + record["session"])
+        sessions[record["session"]] = record["split"]
     overrides = validate_overrides(args.reviewed_overrides, sources)
     # A provisional split can contain duplicated Roboflow originals from V1.
     # Repair only V2 copies. Strict mode makes ALL legacy images training-only.
@@ -273,7 +289,10 @@ def build(args):
         audited_sources, moved_validation, split_repairs = repair_legacy_split_groups(sources)
     else:
         audited_sources = {"train": sources["train"] + sources["val"]}
-        moved_validation, split_repairs = set(sources["val"]), []
+        moved_validation = set(sources["val"])
+        split_repairs = [{"reason": "Legacy sources are training-only in reviewed V2; "
+                         "this keeps every legacy capture and near-duplicate group in one split.",
+                         "moved_validation_images": [str(p) for p in sources["val"]]}]
     evidence = audit_splits(audited_sources, nhs)
     for record in overrides:
         split = ("train" if any(p.stem == record["stem"] for p in moved_validation)
@@ -297,8 +316,8 @@ def build(args):
     required_splits = ("train", "val", "test") if has_test else ("train", "val")
     if not args.provisional:
         if any(evidence["missing_classes"][split] for split in required_splits):
-            raise ValueError("V2 class coverage is incomplete. Supply reviewed NHS photos "
-                             "for all classes in train and NHS validation "
+            raise ValueError("V2 class coverage is incomplete. Supply reviewed additional photos "
+                             "for all classes in train and validation "
                              "(and test if present), or use --provisional. "
                              + json.dumps(evidence["missing_classes"]))
     # The existing experiment builder validates additive boxes and never edits V1.
@@ -329,7 +348,8 @@ def build(args):
     for index, record in enumerate(nhs, 1):
         split = record["split"]
         image = record["image"]
-        name = f"nhs__{index:05d}_{image.name}"
+        namespace = "nhs" if record["domain"] == "nhs" else "reviewed"
+        name = f"{namespace}__{index:05d}_{image.name}"
         target_image = dest / "images" / split / name
         target_label = dest / "labels" / split / (Path(name).stem + ".txt")
         target_image.parent.mkdir(parents=True, exist_ok=True)
@@ -339,6 +359,8 @@ def build(args):
         shutil.copy2(record["label"], target_label)
         nhs_summary.append({"image": name, "split": split, "session": record["session"],
                             "reviewer": record["reviewer"],
+                            "domain": record["domain"], "source_url": record["source_url"],
+                            "license": record["license"], "attribution": record["attribution"],
                             "source_sha256": record["sha256"],
                             "label_sha256": digest(record["label"])})
     if any(r["split"] == "test" for r in nhs):
@@ -350,12 +372,15 @@ def build(args):
         raise ValueError("V2 dataset is still incomplete after copying")
     summary = {"provisional": args.provisional, "source_yaml": str(source_yaml),
                "nhs_manifest": str(Path(args.nhs_manifest).resolve()) if args.nhs_manifest else None,
+               "reviewed_manifest": str(Path(public_manifest).resolve()) if public_manifest else None,
                "nhs_photos": nhs_summary, "source_audit": evidence,
                "legacy_split_repairs": split_repairs,
                "legacy_validation_images_moved": len(moved_validation),
                "final_audit": final, "dataset_sha256": dataset_fingerprint(spec_file),
                "annotation_policy": "docs/REDESIGN_V2.md (2026-10-12)",
-               "strict_nhs_only_evaluation": not args.provisional,
+               "strict_nhs_only_evaluation": not args.provisional and not public_manifest,
+               "evaluation_domain": ("provisional_legacy" if args.provisional else
+                                     "reviewed_public" if public_manifest else "nhs"),
                "independent_test_available": has_test,
                "evaluation_note": ("Independent NHS test split available."
                                    if has_test else
@@ -409,7 +434,7 @@ def train(args):
            "--imgsz", "640", "--seed", "42", "--device", args.device,
            "--optimizer", "AdamW", "--lr0", "0.0007", "--lrf", "0.1",
            "--cos-lr", "--mosaic", "0.3", "--close-mosaic", "10",
-           "--workers", "0"]
+           "--workers", "0", "--patience", "0"]
     if "cls_pw" in trial:
         cmd.extend(["--cls-pw", trial["cls_pw"]])
     print("Training:", " ".join(cmd), flush=True)
@@ -417,16 +442,44 @@ def train(args):
         subprocess.run(cmd, check=True)
         if not run_dir.is_dir():
             raise ValueError(f"Completed training run directory missing: {run_dir}")
+        with (run_dir / "results.csv").open(newline="") as stream:
+            completed = list(csv.DictReader(stream))
+        if len(completed) != args.epochs:
+            raise ValueError(f"Incomplete trial: {len(completed)} of {args.epochs} epochs")
         (run_dir / "v2_trial.json").write_text(json.dumps({
             "trial": args.trial, "run_name": run_name,
             "evaluation_name": evaluation_name,
             "dataset_sha256": summary["dataset_sha256"],
             "data": str(data_file), "epochs": args.epochs,
             "batch": args.batch, "seed": 42, "imgsz": 640,
+            "completed_epochs": len(completed), "device": args.device,
             "provisional": summary["provisional"],
             "command": cmd,
         }, indent=2) + "\n")
     return cmd
+
+
+def check_trial_schedules(recipes):
+    """Only model size and cls_pw may differ in the controlled comparison."""
+    for field in ("epochs", "batch", "seed", "imgsz", "device", "dataset_sha256"):
+        if len({recipe.get(field) for recipe in recipes}) != 1:
+            raise ValueError("Trial schedule differs: " + field)
+    schedules = []
+    for recipe in recipes:
+        if recipe.get("completed_epochs", recipe["epochs"]) != recipe["epochs"]:
+            raise ValueError("Trial schedule was not completed")
+        command = recipe.get("command", [])
+        ignored = {"--model", "--name", "--eval-name", "--cls-pw"}
+        schedule, i = [], 2
+        while i < len(command):
+            if command[i] in ignored:
+                i += 2
+                continue
+            schedule.append(command[i])
+            i += 1
+        schedules.append(tuple(schedule))
+    if len(set(schedules)) != 1:
+        raise ValueError("Trial command schedule differs")
 
 
 def report(args):
@@ -436,14 +489,16 @@ def report(args):
     if not re.fullmatch(r"[A-Za-z0-9_-]+", tag):
         raise ValueError("Invalid report --tag")
     signatures = set()
+    recipes = []
     for trial in args.trials:
         run_name = "v2-" + trial + "-" + tag
         recipe = PROJECT_ROOT / "model/runs" / run_name / "v2_trial.json"
         if not recipe.is_file():
             raise ValueError(f"Missing training run manifest: {recipe}")
         trial_info = json.loads(recipe.read_text())
+        recipes.append(trial_info)
         if trial_info.get("provisional") and not args.allow_incomplete:
-            raise ValueError(f"{trial}: provisional dataset cannot be ranked as strict NHS validation")
+            raise ValueError(f"{trial}: provisional dataset cannot be ranked as reviewed validation")
         signatures.add(trial_info["dataset_sha256"])
         path = PROJECT_ROOT / "model/runs" / (run_name + "-evaluation") / "metrics.json"
         if not path.is_file():
@@ -458,6 +513,10 @@ def report(args):
                         "coverage": coverage, "data": metrics.get("data")})
     if len({e["data"] for e in entries}) != 1 or len(signatures) != 1:
         raise ValueError("Trials used different dataset paths or contents")
+    check_trial_schedules(recipes)
+    supports = [{name: row["support"] for name, row in e["per_class"].items()} for e in entries]
+    if any(support != supports[0] for support in supports):
+        raise ValueError("Trials evaluated different class support")
     for row in sorted(entries, key=lambda r: r["map50_95"], reverse=True):
         print(f"{row['trial']:12s} mAP50-95={row['map50_95']:.3f}, "
               f"mAP50={row['map50']:.3f}, P={row['precision']:.3f}, "
@@ -472,6 +531,8 @@ def main():
     building.add_argument("--source", default=str(PROJECT_ROOT / "data/training"))
     building.add_argument("--output", default=str(PROJECT_ROOT / "data/training-v2"))
     building.add_argument("--nhs-manifest", type=Path)
+    building.add_argument("--reviewed-manifest", type=Path,
+                          help="Reviewed public/local photos with exhaustive labels and capture sessions; not NHS")
     building.add_argument("--label-additions", type=Path)
     building.add_argument("--reviewed-overrides", type=Path)
     building.add_argument("--provisional", action="store_true")

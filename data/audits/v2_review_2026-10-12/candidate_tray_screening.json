@@ -1,0 +1,68 @@
+{
+  "source": "LVIS official tray-category candidates",
+  "status": "all_154_val_candidates_screened",
+  "reviewed_sheets": [
+    "review_00.jpg",
+    "review_01.jpg",
+    "review_02.jpg",
+    "review_03.jpg",
+    "review_04.jpg"
+  ],
+  "paper_boat_candidates": [
+    {
+      "index": 18,
+      "image_id": 82449,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000082449.jpg"
+    },
+    {
+      "index": 25,
+      "image_id": 112486,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000112486.jpg"
+    },
+    {
+      "index": 43,
+      "image_id": 185623,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000185623.jpg"
+    },
+    {
+      "index": 67,
+      "image_id": 257615,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000257615.jpg"
+    },
+    {
+      "index": 73,
+      "image_id": 276740,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000276740.jpg"
+    },
+    {
+      "index": 97,
+      "image_id": 348519,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000348519.jpg"
+    },
+    {
+      "index": 99,
+      "image_id": 350340,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000350340.jpg"
+    },
+    {
+      "index": 105,
+      "image_id": 377926,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000377926.jpg"
+    },
+    {
+      "index": 107,
+      "image_id": 399001,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000399001.jpg"
+    },
+    {
+      "index": 146,
+      "image_id": 557539,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000557539.jpg"
+    },
+    {
+      "index": 148,
+      "image_id": 562338,
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/v2_candidates/lvis_trays/val__000000562338.jpg"
+    }
+  ]
+}

@@ -15,16 +15,18 @@ Current IDs must stay unchanged for checkpoints using the existing ontology.
 | 0 | food | Edible food portions; do not duplicate one pizza slice as both a portion and every topping. |
 | 1 | plate | Physical serving plate; prioritize NHS-relevant disposable paper plates, keep edge-clipped instances when identifiable. |
 | 2 | paper_boat | Paperboard food boat, zero labeled V1 train examples; requires data. |
-| 3 | utensil | Actual disposable eating utensil, not arbitrary metal kitchenware. |
+| 3 | utensil | Actual eating fork, spoon, spork or table knife, including disposable and reusable cafeteria cutlery. Exclude cooking tools and disconnected object parts. |
 | 4 | hinged_container | Clamshell/takeout container, not a flexible food wrapper. |
 | 5 | napkin | Cafeteria disposable napkin, not cloth napkin or random tissue. |
-| 6 | drink_carton | Small milk/juice carton, not plastic beverage bottle or snack pouch. |
+| 6 | drink_carton | Beverage carton, including small cafeteria milk/juice cartons and larger cartons. Exclude meal boxes, plastic bottles and flexible snack pouches. |
 | 7 | condiment_packet | Individual ketchup/mustard/sauce sachet; do not label it simultaneously as wrapper. |
-| 8 | wrapper | Flexible snack packaging (chip bags, candy wrappers, crumpled/flattened foil or plastic snack pouches). Draw one box around the package, not its printed artwork. |
+| 8 | wrapper | Flexible food packaging (chip bags, candy wrappers, crumpled foil/plastic snack pouches and identifiable sandwich/bread wrapping). Draw one box around the package, not its printed artwork. Generic storage bags without identifiable food use remain ambiguous. |
 | 9 | bottle | Rigid/semi-rigid beverage bottle, including visibly crushed bottles. Do not label flattened snack pouches as bottles. |
 | 10 | bowl | Serving bowl, including disposable cafeteria variants when in scope. |
 
 Flag ambiguous items for adjudication; do not auto-fix labels from model predictions. Use consistent food **portion** boundaries and review the 60 nested LVIS ingredient candidates. Save original images, original labels, correction provenance, and review decisions.
+
+V2 clarification during the complete-corpus review: actual reusable eating cutlery and larger beverage cartons stay in scope. This keeps existing useful examples with a consistent physical-object definition. V1 labels and its historical benchmark are unchanged. Printed menu pictures, clothing artwork, toy food, drink cups, cloth napkins and cooking equipment are not target instances. Identifiable clipped, stacked and food-covered plates remain positive examples.
 
 ## 2. Established diagnostic evidence
 

@@ -250,6 +250,32 @@ class V2WorkflowTests(unittest.TestCase):
         self.assertEqual(a["--imgsz"], c["--imgsz"])
         self.assertEqual(a["--seed"], b["--seed"])
 
+    def test_reviewed_public_validation_is_not_reported_as_nhs(self):
+        manifest = self.manifest([
+            self.add_nhs("train", "public-photo-a", 1),
+            self.add_nhs("val", "public-photo-b", 2),
+        ])
+        path = v2.build(self.args(provisional=False, reviewed_manifest=manifest))
+        meta = json.loads((self.output / "v2_build.json").read_text())
+        self.assertFalse(meta["strict_nhs_only_evaluation"])
+        self.assertEqual(meta["evaluation_domain"], "reviewed_public")
+        self.assertTrue(all(p.name.startswith("reviewed__")
+                            for p in Path(yaml.safe_load(path.read_text())["val"]).iterdir()))
+
+    def test_full_comparison_disables_early_stopping(self):
+        v2.build(self.args())
+        cmd = v2.train(self.train_args(epochs=100, allow_provisional=True))
+        self.assertIn("--patience", cmd)
+        self.assertEqual(cmd[cmd.index("--patience") + 1], "0")
+
+    def test_ranking_rejects_different_training_schedules(self):
+        entries = [dict(trial="control-n", epochs=100, batch=4, seed=42, imgsz=640,
+                        dataset_sha256="frozen"),
+                   dict(trial="control-s", epochs=80, batch=4, seed=42, imgsz=640,
+                        dataset_sha256="frozen")]
+        with self.assertRaisesRegex(ValueError, "schedule"):
+            v2.check_trial_schedules(entries)
+
 
 if __name__ == "__main__":
     unittest.main()
