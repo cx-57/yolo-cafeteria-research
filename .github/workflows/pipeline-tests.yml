@@ -137,6 +137,25 @@ jobs:
           print("Split repairs:", len(report["legacy_split_repairs"]))
           print("Still missing:", report["final_audit"]["missing_classes"])
           PY
+      - name: Build paper-boat draft V2 with new provisional training images
+        run: |
+          python scripts/v2.py build \
+            --source data/training \
+            --output data/training-ci-v2-paperboat-drafts \
+            --provisional --use-codex-review \
+            --candidate-manifest data/v2_candidates/lvis_trays/provisional_manifest.csv
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/training-ci-v2-paperboat-drafts")
+          r = json.loads((p/"v2_build.json").read_text())
+          assert r["provisional"] and r["unverified_candidate_images"] == 5
+          assert r["final_audit"]["instances"]["train"]["paper_boat"] == 7
+          assert "paper_boat" in r["final_audit"]["missing_classes"]["val"]
+          assert r["final_audit"]["image_counts"]["train"] == 2510
+          assert r["final_audit"]["image_counts"]["val"] == 591
+          print("PASS 5 provisional paper-boat photos / 7 boat boxes, TRAIN ONLY")
+          PY
       - name: Preserve Codex-reviewed V2 build report
         uses: actions/upload-artifact@v4
         with:
