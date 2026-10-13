@@ -384,6 +384,9 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
             "f1": float(vectors["f1"][j])}
         for j, i in enumerate(indices)
     }
+    # A single detected item can produce a nearly perfect AP. Requiring a
+    # minimum count does not invent accuracy; it gates public performance claims.
+    minimum_support = 30
     per_class = {}
     for i, class_name in enumerate(class_names()):
         row = dict.fromkeys(("ap50", "map50_95", "precision", "recall", "f1"))
@@ -392,10 +395,15 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
         if count:
             status = "supported" if i in measured else "metrics_unavailable"
             row.update(measured.get(i, {}))
-        row.update(support=count, images=int(images[i]), status=status)
+        row.update(support=count, images=int(images[i]), status=status,
+                   reliability=("absent" if count == 0 else
+                                "insufficient_support" if count < minimum_support else
+                                "measurable_public_validation"))
         per_class[class_name] = row
     supported = [class_name for class_name, row in per_class.items() if row["support"]]
     unsupported = [class_name for class_name, row in per_class.items() if not row["support"]]
+    limited = [class_name for class_name, row in per_class.items()
+               if 0 < row["support"] < minimum_support]
     result = {
         "split": split, "precision": float(metrics.box.mp),
         "recall": float(metrics.box.mr), "map50": float(metrics.box.map50),
@@ -405,6 +413,9 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
                      "supported_class_count": len(supported),
                      "unsupported_class_count": len(unsupported),
                      "all_classes_evaluable": not unsupported,
+                     "minimum_instances_per_class_for_reliable_reporting": minimum_support,
+                     "insufficient_support_classes": limited,
+                     "all_classes_adequately_supported": not unsupported and not limited,
                      "supported_classes": supported, "unsupported_classes": unsupported},
         "interpretation": ("Only classes with ground-truth targets enter macro AP. "
                            "A test split name does not prove independence."
@@ -421,6 +432,8 @@ def evaluate(weights, data_file, split="val", device=None, imgsz=None, batch=8,
     print("Results:", location)
     if unsupported:
         print("INCOMPLETE CLASS COVERAGE: AP undefined for", ", ".join(unsupported))
+    if limited:
+        print("INSUFFICIENT VALIDATION SUPPORT (<30 objects):", ", ".join(limited))
     return result
 
 
@@ -524,6 +537,11 @@ def main():
     if args.build_only:
         return
 
+    import ultralytics
+    if ultralytics.__version__ != "8.4.175":
+        print("WARNING: Ultralytics", ultralytics.__version__,
+              "differs from repository-tested 8.4.175. "
+              "Do not treat this as a controlled comparison.")
     model = load_model(args.model)
     options = dict(
         data=str(data_file), project=str(MODEL / "runs"), name=args.name or "yolo11n-1x",
