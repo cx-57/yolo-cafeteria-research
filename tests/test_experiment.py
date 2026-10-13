@@ -98,7 +98,7 @@ class FrozenExperimentTests(unittest.TestCase):
         # Crop around a small wrapper while preserving both the frozen
         # validation files and the original source dataset byte-for-byte.
         self.add_image("train", "meal__tiny_wrapper",
-                       "8 .3 .3 .08 .08\\n0 .9 .9 .05 .05\\n")
+                       "8 .3 .3 .08 .08\n0 .9 .9 .05 .05\n")
         before = self.source_bytes()
         control = self.root / "data/training-repeat-control"
         experiment.prepare_experiment(
@@ -131,7 +131,7 @@ class FrozenExperimentTests(unittest.TestCase):
 
     def test_partial_objects_in_crop_remain_labeled_and_boundary_valid(self):
         picture = self.add_image("train", "meal__partial",
-                                 "8 .5 .5 .05 .05\\n1 .73 .5 .20 .20\\n")
+                                 "8 .5 .5 .05 .05\n1 .73 .5 .20 .20\n")
         result = experiment.focus_crop(picture, [
             "8 .5 .5 .05 .05", "1 .73 .5 .20 .20"],
             train.class_names(), ["wrapper"], view=1)
