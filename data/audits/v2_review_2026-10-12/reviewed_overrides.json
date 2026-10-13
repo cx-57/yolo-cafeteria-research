@@ -1320,5 +1320,110 @@
       "1 0.545648585 0.849984375 0.656721698 0.228375000",
       "0 0.54650000 0.78900000 0.37100000 0.17800000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000309539.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Two visible pizza portions, including partially cut-off second pizza at top edge, omitted from food labels.",
+    "expected_label_sha256": "64b2fca8ee25a06642c2bb43d2b169cc460513d63caddffa0093967b1c156d90",
+    "rows": [
+      "1 0.493937500 0.579508368 0.804531250 0.840983264",
+      "1 0.166992188 0.111506276 0.333984375 0.223012552",
+      "0 0.49800000 0.49950000 0.85800000 0.77700000",
+      "0 0.16500000 0.07750000 0.33000000 0.15500000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000310121.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Whole carved roast turkey and small bread portion held by child are both visible but unlabeled as food.",
+    "expected_label_sha256": "2a6f5458e51df464a16af00c00155c118057e427e2587c120107e858bc166302",
+    "rows": [
+      "1 0.360429688 0.951448598 0.197265625 0.097102804",
+      "0 0.59450000 0.70600000 0.28300000 0.28600000",
+      "0 0.29050000 0.49450000 0.13100000 0.13900000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000405882.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Clearly visible decorated birthday cake was omitted; original empty paper plate remains labeled.",
+    "expected_label_sha256": "1471c81ca5c16af016063e940389b52f0a02041760f3c26316942436e3c6054c",
+    "rows": [
+      "1 0.338770000 0.731282051 0.339340000 0.322923077",
+      "0 0.44750000 0.33350000 0.39500000 0.32700000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000409708.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Birthday cake centerpiece and two separate smaller food platters on table omitted food labels.",
+    "expected_label_sha256": "c632680aa198055c4a552e817e5f890fef3c8659efb688c7d3381e6a529ff5fb",
+    "rows": [
+      "1 0.674078125 0.806896956 0.163375000 0.055433255",
+      "1 0.657859375 0.871709602 0.185531250 0.084637002",
+      "0 0.48000000 0.78500000 0.33000000 0.18400000",
+      "0 0.11500000 0.85450000 0.21200000 0.14300000",
+      "0 0.71350000 0.82600000 0.17700000 0.08200000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000413971.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Two large hotdog servings on paper plates were mislabeled only as plates.",
+    "expected_label_sha256": "e10c47fe43a59335e4becf17764e181ab75ddc71f25b53f92a518e6a4ef54435",
+    "rows": [
+      "1 0.355742187 0.858658824 0.526078125 0.231011765",
+      "1 0.705671875 0.623623529 0.442437500 0.176141176",
+      "0 0.32700000 0.63750000 0.51000000 0.28900000",
+      "0 0.70750000 0.45900000 0.47500000 0.33800000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000495269.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Large multicolored birthday cake slice had plate label but no food box.",
+    "expected_label_sha256": "6bd0dbb3b55ff1bc172119bd0f102fa351b53cd5af798db926db6525db4a4301",
+    "rows": [
+      "1 0.472500000 0.579640625 0.934330544 0.837437500",
+      "0 0.49100000 0.55000000 0.67000000 0.74400000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000535602.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Leftover pizza slice on inside of open pizza box was missing food target box.",
+    "expected_label_sha256": "786698fdfed2dca0b0e2d3576891030401b973389394b10a744c8144062edd5c",
+    "rows": [
+      "1 0.139730000 0.723293333 0.199220000 0.116240000",
+      "1 0.714400000 0.916720000 0.286800000 0.166560000",
+      "0 0.47250000 0.58250000 0.27900000 0.14500000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000539717.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual correction 2026-10-13",
+    "reason": "Food serving on lap-held white plate omitted entirely from class food.",
+    "expected_label_sha256": "7e4e38892b94d65bb95b083aa72b3fdff2a2f19f6b861c845484e6f1e2df28a7",
+    "rows": [
+      "1 0.730200000 0.873110000 0.488346667 0.135660000",
+      "0 0.68000000 0.83400000 0.37400000 0.13200000"
+    ]
   }
 ]
