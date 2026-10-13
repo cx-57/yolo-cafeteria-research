@@ -569,6 +569,7 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
     # Manually inspected images with already-correct labels need no override.
     # Do not count thumbnail-only, ambiguous, or needs_followup decisions.
     review_csv = review_root / "image_review.csv"
+    unchanged_hashes = {}
     if review_csv.is_file():
         with review_csv.open(newline="") as stream:
             for record in csv.DictReader(stream):
@@ -577,7 +578,14 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
                     source, filename = record.get("source", ""), record.get("image", "")
                     if not re.fullmatch(r"[a-zA-Z0-9_-]+", source) or Path(filename).name != filename:
                         raise ValueError("Invalid direct visual-review record: " + str(record))
-                    full_names.add(source + "__" + Path(filename).stem)
+                    fingerprint = record.get("label_sha256", "")
+                    if not re.fullmatch(r"[a-f0-9]{64}", fingerprint):
+                        raise ValueError("Checked-unchanged review requires original label SHA256")
+                    stem = source + "__" + Path(filename).stem
+                    if stem in unchanged_hashes and fingerprint != unchanged_hashes[stem]:
+                        raise ValueError("Conflicting verified label hashes: " + stem)
+                    unchanged_hashes[stem] = fingerprint
+                    full_names.add(stem)
     food_names = {r["source"] + "__" + Path(r["image"]).stem for r in food}
     rows = []
     counts = {"full_image_verified": 0, "food_only_verified": 0, "not_verified": 0}
@@ -590,6 +598,9 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
             lines = [line for line in label.read_text().splitlines() if line.strip()]
             ids = sorted({int(row.split()[0])
                           for row in validate_rows(lines, label, names)})
+            if photo.stem in unchanged_hashes and digest(label) != unchanged_hashes[photo.stem]:
+                raise ValueError("Visually verified unchanged label has changed; re-review: "
+                                 + str(label))
             if photo.stem in full_names:
                 status = "full_image_verified"
             elif photo.stem in food_names:
