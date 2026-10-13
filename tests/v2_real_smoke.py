@@ -74,10 +74,12 @@ def make_cohort(v2_data, target):
     return yaml_path
 
 
-def smoke(data_file, weighted):
-    name = "ci-v2-weighted-n" if weighted else "ci-v2-control-n"
+def smoke(data_file, weighted, model_size="n"):
+    name = ("ci-v2-control-s" if model_size == "s" else
+            "ci-v2-weighted-n" if weighted else "ci-v2-control-n")
+    weights = "yolo11s.pt" if model_size == "s" else "yolo11n.pt"
     cmd = [sys.executable, str(ROOT / "scripts/train.py"), str(data_file),
-           "--model", "yolo11n.pt", "--name", name, "--eval-name", name + "-evaluation",
+           "--model", weights, "--name", name, "--eval-name", name + "-evaluation",
            "--epochs", "1", "--imgsz", "128", "--batch", "2",
            "--device", "cpu", "--workers", "0", "--seed", "42",
            "--optimizer", "AdamW", "--lr0", "0.0007", "--lrf", "0.1",
@@ -114,7 +116,8 @@ def main():
         data = make_cohort(v2_data, Path(tmp))
         smoke(data, weighted=False)
         smoke(data, weighted=True)
-    print("ALL V2 END-TO-END CPU TRAINING SMOKES PASSED", flush=True)
+        smoke(data, weighted=False, model_size="s")
+    print("ALL THREE V2 END-TO-END CPU TRAINING SMOKES PASSED", flush=True)
 
 
 if __name__ == "__main__":
