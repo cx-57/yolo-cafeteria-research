@@ -1425,5 +1425,121 @@
       "1 0.730200000 0.873110000 0.488346667 0.135660000",
       "0 0.68000000 0.83400000 0.37400000 0.13200000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000550645.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Single sandwich/hotdog portion held in man's hand was missing class food.",
+    "expected_label_sha256": "4f7861a8e6719438d216a15dd9c5516b458c20d558816bf46628cc90d1e8e73b",
+    "rows": [
+      "1 0.829156250 0.903976562 0.121187500 0.038265625",
+      "1 0.333177083 0.737351563 0.072604167 0.044171875",
+      "0 0.40750000 0.62900000 0.13500000 0.12600000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000580685.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Loaded hotdog serving was missing food label on paper plate.",
+    "expected_label_sha256": "f52d0f2b259fb24dcc5bcc239d59c5bb32a43559791348d3ce0fcbc51aa4bd0a",
+    "rows": [
+      "1 0.462203125 0.584683099 0.626218750 0.455751174",
+      "0 0.50050000 0.51650000 0.46100000 0.38100000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000179839.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Rice/meat serving and eating spoon in hand were missing class food and utensil.",
+    "expected_label_sha256": "035c67bf37da3704841dec26174541fcc352db54303637e0137c4e3fb5039b0c",
+    "rows": [
+      "1 0.493280000 0.753613333 0.446640000 0.283813333",
+      "0 0.52400000 0.71600000 0.34000000 0.21200000",
+      "3 0.36750000 0.43000000 0.39500000 0.57000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000327780.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Large cake slice and fork penetrating cake were visible but unlabeled.",
+    "expected_label_sha256": "06782b966a1285e4448dd0f178e94cb85c2f221ef840f769cc47551b196fec81",
+    "rows": [
+      "1 0.500000000 0.500000000 1.000000000 1.000000000",
+      "0 0.38900000 0.54500000 0.76400000 0.85000000",
+      "3 0.51900000 0.41000000 0.28800000 0.82000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000334417.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Sandwich held near face had no corresponding food box.",
+    "expected_label_sha256": "9dbc9f71826b88a8a473440e5aeccd34f68393095c2583e34efead4af2994ffd",
+    "rows": [
+      "1 0.437093750 0.920354610 0.224375000 0.159290780",
+      "0 0.53350000 0.55650000 0.22300000 0.13900000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000356276.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Entire large hot dog in bun was missing food class.",
+    "expected_label_sha256": "4238d7c08f6006f059f0143eb158464d2b2067d9a433bcf85ab8bcfec203a17c",
+    "rows": [
+      "1 0.575820000 0.556173333 0.845920000 0.513626667",
+      "0 0.53450000 0.33050000 0.87900000 0.35900000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000483837.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Rice and sliced roast meat serving, white plastic fork and white napkin absent from labels.",
+    "expected_label_sha256": "d7f4675367811e65447a554f55c298a67a3093129770f6027f9822991d939065",
+    "rows": [
+      "1 0.408820312 0.683957845 0.772578125 0.632084309",
+      "0 0.38900000 0.64350000 0.62200000 0.58500000",
+      "3 0.79050000 0.65300000 0.13300000 0.45600000",
+      "5 0.89050000 0.68000000 0.21900000 0.61000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000530975.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Loaded hot dog, pile of fries and brand-printed chips wrapper bag were omitted.",
+    "expected_label_sha256": "6b4490f10d9c55b0effa6336e87dffe396fe5ec4538f421ed036cea32dc5881d",
+    "rows": [
+      "1 0.406250000 0.904041667 0.606312500 0.188166667",
+      "0 0.55900000 0.74800000 0.37000000 0.23000000",
+      "0 0.38950000 0.67600000 0.36500000 0.23600000",
+      "8 0.86050000 0.78500000 0.24500000 0.17000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000540059.jpg",
+    "complete": "yes",
+    "reviewer": "Per-image original-resolution semantic correction Oct 13 2026",
+    "reason": "Food roll held near mouth and second sandwich on lap-held plate were unlabeled.",
+    "expected_label_sha256": "1104670a641c464243e989e7320f547ca9578470c5a85373cdee3e3937f847e8",
+    "rows": [
+      "1 0.559635417 0.784484375 0.319270833 0.149156250",
+      "0 0.54050000 0.40750000 0.15100000 0.11500000",
+      "0 0.61200000 0.83450000 0.25000000 0.09900000"
+    ]
   }
 ]
