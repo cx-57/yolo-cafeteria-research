@@ -227,6 +227,18 @@ jobs:
           print("Split repairs:", len(report["legacy_split_repairs"]))
           print("Still missing:", report["final_audit"]["missing_classes"])
           PY
+      - name: Upload complete 3096-image V2 annotation audit corpus
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-v2-image-label-audit
+          path: |
+            data/training-ci-v2-reviewed/images/
+            data/training-ci-v2-reviewed/labels/
+            data/training-ci-v2-reviewed/data.yaml
+            data/training-ci-v2-reviewed/v2_build.json
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error
       - name: Verify train-only small-object crop experiment on full reviewed corpus
         run: |
           python scripts/experiment.py \
