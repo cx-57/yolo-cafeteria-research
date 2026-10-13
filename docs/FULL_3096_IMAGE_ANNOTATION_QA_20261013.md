@@ -103,3 +103,33 @@ corrected annotations.
 
 **Do not mark 3,096/3,096 fully reviewed in documentation or college research
 descriptions until all individual images have actually passed that step.**
+
+## Updated manual annotations — 2026-10-13 later pass
+
+The original **64** V2 full-image label replacements were followed by **62**
+additional individually visualized image-level replacements, for **126** total
+unique checksum-locked V2 overrides. No raw V1 label file was edited.
+
+Recent incremental correction groups:
+- **20** `dry_wet_waste` snack-wrapper photos: shrink oversized class-8
+  boxes on white backgrounds without cropping the actual packaging.
+- **12** `dry_wet_waste` clear drink-bottle photos: tighten class-9 boxes
+  to the transparent plastic outline rather than label color.
+- **30** `plate` source photos: add food, eating utensils, condiment
+  sachets, napkins and wrappers that were visibly present but not labeled.
+  This includes three initial plate scenes and 27 following corrections.
+
+The later 27 plate-photo corrections add **44** previously omitted boxes.
+The 12 bottle fixes are replacements of existing boxes, not fabricated new
+bottles. All proposals were checked against image/label overlays and validated
+for normalized YOLO box geometry.
+
+GitHub CI checks V2 application and exact V1 label SHA-256 match on every
+override. A mismatch or out-of-frame box makes the build fail; both failure
+types were found and corrected during this review. Fresh CI results, not
+historical baseline mAP, are the appropriate evidence of safe application.
+
+**Full semantic review of all 3,096 images is still NOT finished.**
+Mechanical screening of all image/label pairs is complete; most photos
+still lack exhaustive independent all-11-class visual certification. The
+paper-boat class and missing validation positives remain open data issues.
