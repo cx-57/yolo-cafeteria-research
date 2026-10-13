@@ -14,15 +14,16 @@ Neither the old model nor V1 labels have been overwritten.
   Contact sheets and exception queues exist. Direct full-resolution
   inspections and four ambiguous images requiring further work are documented
   in data/audits/v2_review_2026-10-12/image_review.csv. The generated
-  review queue now expects 64 full-image entries, 239 food-only reviews
-  and 2,793 images with no full review (pending confirmation from the newest CI run).
+  review queue now expects 69 full-image entries, 239 food-only reviews
+  and 2,788 images with no full review (pending confirmation from the newest CI run).
   This task is NOT complete.
-- [x] **Implement 49 checksum-protected image-level annotation replacements in V2 only.**
+- [x] **Implement 51 checksum-protected image-level annotation replacements in V2 only.**
   Reviewed corrections: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
   The direct-image review includes three corrected LVIS plates, four
   corrected original cafeteria scenes, 20 corrected Asian cafeteria scenes
-  with 60 newly annotated divided plates/rice/soup bowls, and two additional
-  American-food plate/bowl corrections. Earlier fixes include a non-bottle cup,
+  with 60 newly annotated divided plates/rice/soup bowls, two additional
+  American-food plate/bowl corrections, and two direct bottle/wrapper
+  omission repairs. Earlier fixes include a non-bottle cup,
   duplicated bowls and five false napkins. All original
   V1 images and labels remain untouched. Full dataset visual verification is
   still incomplete.
@@ -65,12 +66,12 @@ Neither the old model nor V1 labels have been overwritten.
 
 The file
 [data/audits/v2_review_2026-10-12/image_review.csv](../data/audits/v2_review_2026-10-12/image_review.csv)
-now contains **56 full-resolution inspected image records**.
+now contains **62 full-resolution inspected image records**.
 Some remain marked `needs_followup` (including overlapping stacked-plate boxes
 and missing flexible-wrapper packages) and are NOT counted as complete.
-The separately tracked 49 full-image replacement-label approvals plus 15
+The separately tracked 51 full-image replacement-label approvals plus 18
 full-resolution inspected, already-correct labels feed the honest 3,096-photo
-V2 review queue: **64 full-image verified, 239 food-only reviewed, 2,793 not
+V2 review queue: **69 full-image verified, 239 food-only reviewed, 2,788 not
 fully verified** (pending latest CI confirmation). Corrections and clean
 unchanged-label reviews are distinct kinds of evidence.
 
@@ -127,7 +128,7 @@ not been regenerated:
       --output data/training-v2-codex-reviewed \
       --provisional --use-codex-review
 
-This uses all 49 reviewed image-level replacement records plus the 242 reviewed LVIS records.
+This uses all 51 reviewed image-level replacement records plus the 242 reviewed LVIS records.
 It does NOT add new photos. To also add the **unverified provisional
 paper-boat drafts** to training ONLY, select a DIFFERENT new output directory:
 
