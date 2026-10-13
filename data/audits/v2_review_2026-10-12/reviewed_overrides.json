@@ -799,5 +799,65 @@
       "0 0.523333 0.500000 0.853333 1.000000",
       "10 0.500000 0.500000 0.913333 1.000000"
     ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__download_jpg.rf.f6973be9c209ba7a2d7446775795e4ec.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "White shallow salad plate visible, food label is already present",
+    "expected_label_sha256": "9e875c8467634ec4b9f0a38e3433be39dc60488d0ed1c0bd359b67d8b46b502b",
+    "rows": [
+      "0 0.501818 0.486339 0.640000 0.972678",
+      "1 0.500000 0.505000 0.890000 0.980000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__images_jpg.rf.0fd69d3922f8cdaa5407c3d0b508d39c.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "Flat black plate under fries omitted; preserve original class 0",
+    "expected_label_sha256": "fed539747eb12c01d89ec75fa1a1562faa216b85d238e991533997d075db13b6",
+    "rows": [
+      "0 0.524444 0.497778 0.853333 0.897778",
+      "1 0.500000 0.500000 0.950000 0.960000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__images_jpg.rf.138836a52138e46a6afff40a31fadac3.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "Deep ribbed black serving bowl holding fries is unlabeled",
+    "expected_label_sha256": "4a276f4639dd5b7a852319b89b3ad27f8568155b1218d016523cfecc4db6bd26",
+    "rows": [
+      "0 0.500000 0.388889 1.000000 0.777778",
+      "10 0.500000 0.590000 0.840000 0.720000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__images_jpg.rf.4339270eba128c4719f0e51a1f21b002.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "White deep salad bowl below leaves is visible and unlabeled",
+    "expected_label_sha256": "d9ce4ebef6a889621183650553c01c65e991777d8ec26c3406e159a7cea3af3f",
+    "rows": [
+      "0 0.485507 0.450820 0.695652 0.617486",
+      "10 0.500000 0.680000 0.730000 0.540000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__images_jpg.rf.464f72a9d4e66d46a5d3dd58b0b40a3a.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "White shallow salad plate missed from labels",
+    "expected_label_sha256": "caf67f6257ae9c646b35123b00a8d45ce74078f18be8cb9653a78cf5be148ed0",
+    "rows": [
+      "0 0.534545 0.442623 0.581818 0.699454",
+      "1 0.500000 0.500000 0.920000 0.960000"
+    ]
   }
 ]
