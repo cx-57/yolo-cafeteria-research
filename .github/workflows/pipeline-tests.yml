@@ -237,8 +237,10 @@ jobs:
           from pathlib import Path
           import json
           import hashlib
-          from scripts.experiment import validate_rows
-          from scripts.train import class_names
+          import sys
+          sys.path.insert(0, str(Path('scripts').resolve()))
+          from experiment import validate_rows
+          from train import class_names
           before = Path("data/training-ci-v2-reviewed")
           after = Path("data/training-ci-v2-focus")
           report = json.loads((after / "experiment_summary.json").read_text())
