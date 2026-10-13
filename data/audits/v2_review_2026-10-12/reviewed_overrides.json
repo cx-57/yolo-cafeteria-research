@@ -192,5 +192,43 @@
       "0 0.41538462 0.39948454 0.39230769 0.48969072",
       "0 0.68461538 0.46391753 0.46153846 0.55670103"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000354530.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution image audit 2026-10-12",
+    "reason": "Original plate class bbox spans entire frame despite plate edge not independently localizable under two foreground hotdogs. Remove spurious plate box; preserve two manually reviewed LVIS food-portion boxes.",
+    "expected_label_sha256": "06782b966a1285e4448dd0f178e94cb85c2f221ef840f769cc47551b196fec81",
+    "rows": [
+      "0 0.444920000 0.543422819 0.827320000 0.901946309",
+      "0 0.745710000 0.442097315 0.500900000 0.870906040"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000125242.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution image audit 2026-10-12",
+    "reason": "Original plate bbox encloses central pizza and omits substantial white paper plate perimeter. Enlarge paper-plate box to visible extent, retain the approved separate pizza food portions.",
+    "expected_label_sha256": "51d7b2bd8ed9f910a109f4839bf490eb6d57587dc1c6b203946b1df98d3a9bf2",
+    "rows": [
+      "1 0.468750000 0.444964871 0.562500000 0.777517564",
+      "0 0.501625000 0.580094118 0.413062500 0.627435294",
+      "0 0.463867188 0.350717647 0.461578125 0.463647059"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000323499.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution image audit 2026-10-12",
+    "reason": "Original plate rectangle overlaps chocolate cake rather than paper-plate extent; add visible fork, preserve approved cake food bbox.",
+    "expected_label_sha256": "ab54ecbd05dff23ab410f47cabd906563283cdaef76349453536ae6bc3a83a8e",
+    "rows": [
+      "1 0.562000000 0.560000000 0.468000000 0.432000000",
+      "0 0.524990000 0.518666667 0.458900000 0.377813333",
+      "3 0.391000000 0.810666667 0.554000000 0.208000000"
+    ]
   }
 ]
