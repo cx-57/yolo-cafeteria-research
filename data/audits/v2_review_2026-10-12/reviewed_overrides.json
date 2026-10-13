@@ -750,5 +750,54 @@
       "8 0.37173203 0.40563726 0.47385621 0.34007353",
       "8 0.540625000 0.638281250 0.612500000 0.329687500"
     ]
+  },
+  {
+    "source": "food_american",
+    "image": "test__download_jpg.rf.5c6383bb584eb0d354c44cf2ba48a6db.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual inspection 2026-10-12",
+    "reason": "White rounded salad serving bowl is clearly visible behind lettuce; add bowl class 10 while preserving full salad class 0.",
+    "expected_label_sha256": "b93e0d3618caf934490bbfd4eba7f19c957931cd726a2c5ae4425bec2ac4f5e7",
+    "rows": [
+      "0 0.526667 0.526667 0.911111 0.875556",
+      "10 0.550000 0.505000 0.880000 0.955000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "test__download_jpg.rf.efc6e770783c171650906f9ca480f946.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual inspection 2026-10-12",
+    "reason": "Original single food box omits a second complete hotdog and a clearly visible orange circular plate; preserve left hotdog label, add food and plate.",
+    "expected_label_sha256": "dfca3051cad13b30ced7125ff3d0b71612c6f16ee4c44d2b99382d9fa437e7e6",
+    "rows": [
+      "0 0.378378 0.510309 0.254826 0.680412",
+      "0 0.575000 0.520000 0.220000 0.745000",
+      "1 0.480000 0.510000 0.730000 0.960000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__66917eb04126ff19e85ed243-korean-samyang-hot-spicy-noodle-fire_jpg.rf.51e9633f36454dd5e292a6af13c82c95.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual inspection 2026-10-12",
+    "reason": "Noodles are served on an explicitly visible shallow white ceramic dinner plate; retain original food label and add plate class.",
+    "expected_label_sha256": "9333f946ad8b184ca34142e33a7ca4c74f3130d2b87b9a03f95ef17a9704e0e3",
+    "rows": [
+      "0 0.513075 0.504800 0.674686 0.788800",
+      "1 0.535000 0.515000 0.890000 0.960000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__download_jpg.rf.338119416af2ab7f5a4777f3aa6fcd3e.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual inspection 2026-10-12",
+    "reason": "Greek salad food label covers ingredients but omits surrounding visible round serving bowl; add bowl class 10.",
+    "expected_label_sha256": "3a35e5e3a486576bc2b3a1047cdb442db9120bd61f8964d5b75c93becb380a08",
+    "rows": [
+      "0 0.523333 0.500000 0.853333 1.000000",
+      "10 0.500000 0.500000 0.913333 1.000000"
+    ]
   }
 ]
