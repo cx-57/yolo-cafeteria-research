@@ -267,6 +267,15 @@ def build(args):
     dest = Path(args.output).resolve()
     check_output(dest, [source_yaml.parent, *[photo.parent for photos in sources.values()
                                             for photo in photos]])
+    reviewed_audit = bool(getattr(args, "use_codex_review", False))
+    if reviewed_audit and (args.label_additions or args.reviewed_overrides):
+        raise ValueError("--use-codex-review already supplies both approved files; "
+                         "do not combine it with explicit overrides/additions")
+    audit_root = PROJECT_ROOT / "data/audits/v2_review_2026-10-12"
+    label_additions = (audit_root / "lvis_food_approved.json" if reviewed_audit
+                       else args.label_additions)
+    reviewed_overrides = (audit_root / "reviewed_overrides.json" if reviewed_audit
+                          else args.reviewed_overrides)
     public_manifest = getattr(args, "reviewed_manifest", None)
     nhs = check_nhs_manifest(args.nhs_manifest, sources)
     for record in nhs:
@@ -282,7 +291,7 @@ def build(args):
         if record["session"] in sessions and sessions[record["session"]] != record["split"]:
             raise ValueError("Additional capture session crosses splits: " + record["session"])
         sessions[record["session"]] = record["split"]
-    overrides = validate_overrides(args.reviewed_overrides, sources)
+    overrides = validate_overrides(reviewed_overrides, sources)
     # A provisional split can contain duplicated Roboflow originals from V1.
     # Repair only V2 copies. Strict mode makes ALL legacy images training-only.
     if args.provisional:
@@ -321,7 +330,7 @@ def build(args):
                              "(and test if present), or use --provisional. "
                              + json.dumps(evidence["missing_classes"]))
     # The existing experiment builder validates additive boxes and never edits V1.
-    prepare_experiment(source_yaml, dest, label_additions=args.label_additions)
+    prepare_experiment(source_yaml, dest, label_additions=label_additions)
     # Reassign ONLY V2 image and label copies; the existing V1 split is untouched.
     for image in sorted(moved_validation):
         original = dest / "images/val" / image.name
@@ -386,11 +395,15 @@ def build(args):
                                    if has_test else
                                    "No independent test: compare on validation only; "
                                    "do not claim final unbiased generalization."),
-               "label_additions": str(args.label_additions) if args.label_additions else None,
+               "label_additions": str(label_additions) if label_additions else None,
+               "reviewed_audit_applied": reviewed_audit,
                "reviewed_overrides": overrides}
     (dest / "v2_build.json").write_text(json.dumps(summary, indent=2) + "\n")
     print("V2 dataset:", spec_file)
     print("Provisional:", args.provisional)
+    if reviewed_audit:
+        print(f"Codex-reviewed food additions and {len(overrides)} reviewed "
+              "replacement annotation files applied to V2 copies")
     print("Independent test set:", "yes" if has_test else "no (validation only)")
     if split_repairs:
         print(f"Resolved {len(split_repairs)} leaking photo groups by moving "
@@ -535,6 +548,9 @@ def main():
                           help="Reviewed public/local photos with exhaustive labels and capture sessions; not NHS")
     building.add_argument("--label-additions", type=Path)
     building.add_argument("--reviewed-overrides", type=Path)
+    building.add_argument("--use-codex-review", action="store_true",
+                          help="Apply the 242 reviewed LVIS food overlays and approved "
+                               "V2-only full-label replacements from 2026-10-12")
     building.add_argument("--provisional", action="store_true")
     training = commands.add_parser("train", help="Controlled YOLO11n/s trial")
     training.add_argument("--data", default=str(PROJECT_ROOT / "data/training-v2/data.yaml"))
