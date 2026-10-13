@@ -2365,7 +2365,7 @@
     "complete": "yes",
     "reviewer": "Original-resolution individual image-plus-label visual review 2026-10-13",
     "reason": "One baked bun and separate grilled sausage on a blue paper plate were present without food labels.",
-    "expected_label_sha256": "aa6e32fb675fc6bc5807ffe0901561256417ceb871c709583369e4c3b7ec29",
+    "expected_label_sha256": "aa6e32fb675fc6bc5807ffe0901561256417ceb871c709583369e4e3c9b7ec29",
     "rows": [
       "1 0.497459150 0.583627451 0.779428105 0.358039216",
       "0 0.35000000 0.57500000 0.36000000 0.30000000",
