@@ -267,9 +267,9 @@ class V2WorkflowTests(unittest.TestCase):
         review_root = self.root / "data/audits/v2_review_2026-10-12"
         review_root.mkdir(parents=True)
         (review_root / "image_review.csv").write_text(
-            "source,image,review_scope,decision\\n"
-            "trash_detection,train__wrap.png,full_resolution,checked_existing\\n"
-            "plate,val__small.png,full_resolution,needs_followup\\n"
+            "source,image,review_scope,decision\n"
+            "trash_detection,train__wrap.png,full_resolution,checked_existing\n"
+            "plate,val__small.png,full_resolution,needs_followup\n"
         )
         empty = self.root / "empty_reviews.json"
         empty.write_text("[]")
