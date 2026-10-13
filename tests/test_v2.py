@@ -142,6 +142,37 @@ class V2WorkflowTests(unittest.TestCase):
             v2.build(self.args(provisional=False, nhs_manifest=manifest))
         self.assertFalse(self.output.exists())
 
+    def test_unverified_candidate_train_only_and_explicit(self):
+        item = self.add_nhs("train", "lvis-source-1", 1)
+        item["reviewed"] = "no"
+        item["complete"] = "no"
+        manifest = self.manifest([item])
+        result = v2.build(self.args(candidate_manifest=manifest))
+        config = yaml.safe_load(result.read_text())
+        self.assertEqual(
+            len([p for p in Path(config["train"]).iterdir()
+                 if p.name.startswith("candidate__")]), 1)
+        self.assertEqual(
+            len([p for p in Path(config["val"]).iterdir()
+                 if p.name.startswith("candidate__")]), 0)
+        report = json.loads((self.output / "v2_build.json").read_text())
+        self.assertEqual(report["unverified_candidate_images"], 1)
+        self.assertTrue(report["provisional"])
+
+    def test_unverified_candidates_refused_in_strict_or_validation(self):
+        item = self.add_nhs("train", "lvis-source-1", 1)
+        item["reviewed"] = "no"
+        item["complete"] = "no"
+        manifest = self.manifest([item])
+        with self.assertRaisesRegex(ValueError, "only with --provisional"):
+            v2.build(self.args(candidate_manifest=manifest, provisional=False))
+        self.assertFalse(self.output.exists())
+        item["split"] = "val"
+        manifest = self.manifest([item])
+        with self.assertRaisesRegex(ValueError, "stay in training"):
+            v2.build(self.args(candidate_manifest=manifest))
+        self.assertFalse(self.output.exists())
+
     def test_nhs_session_leakage_rejected(self):
         manifest = self.manifest([
             self.add_nhs("val", "day-a", 1),
