@@ -286,6 +286,17 @@ class V2WorkflowTests(unittest.TestCase):
                 v2.make_review_queue(
                     self.source_yaml, self.root / "stale_review_queue.csv",
                     overrides_file=empty, food_file=empty)
+        # An explicitly reviewed replacement takes precedence over the
+        # earlier record marking the old label as checked-unchanged.
+        replacement = self.root / "new_corrections.json"
+        replacement.write_text(json.dumps([{
+            "source": "trash_detection", "image": "train__wrap.png",
+        }]))
+        with patch.object(v2, "PROJECT_ROOT", self.root):
+            checked = v2.make_review_queue(
+                self.source_yaml, self.root / "superseded_review.csv",
+                overrides_file=replacement, food_file=empty)
+        self.assertEqual(checked["full_image_verified"], 1)
 
     def test_codex_review_preset_applies_both_approved_sources(self):
         audit = self.root / "data/audits/v2_review_2026-10-12"
