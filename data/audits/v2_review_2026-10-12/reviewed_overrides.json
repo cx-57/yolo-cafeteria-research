@@ -327,5 +327,118 @@
       "0 0.488889 0.506667 0.693333 0.684444",
       "10 0.500000000 0.500000000 0.980000000 0.980000000"
     ]
+  },
+  {
+    "source": "school_lunch_asian",
+    "image": "010020000_jpg.rf.d779bcde36c5c67ac8a11f7790548b76.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual review 2026-10-12",
+    "reason": "Divided cafeteria plate and both distinct rice/soup bowls are visible and absent from original source annotations. Preserve all original food and milk-carton boxes; add the three omitted container boxes.",
+    "expected_label_sha256": "2363decf72a31f6b24a78608d0e9743f11ecc0f36d456840ed8a5892cc6b808e",
+    "rows": [
+      "0 0.257812 0.730655 0.493304 0.473214",
+      "0 0.771205 0.738095 0.453125 0.511905",
+      "0 0.552455 0.366071 0.220982 0.202381",
+      "0 0.330357 0.236607 0.232143 0.300595",
+      "0 0.610491 0.147321 0.194196 0.235119",
+      "6 0.839286 0.111607 0.263393 0.223214",
+      "1 0.447544643 0.260416667 0.622767857 0.520833333",
+      "10 0.258928571 0.742559524 0.517857143 0.514880952",
+      "10 0.753348214 0.726190476 0.479910714 0.547619048"
+    ]
+  },
+  {
+    "source": "school_lunch_asian",
+    "image": "010050001_jpg.rf.87a8a83af8d38fb9d23b92a6b6470c1f.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual review 2026-10-12",
+    "reason": "Divided cafeteria plate and both distinct rice/soup bowls are visible and absent from original source annotations. Preserve all original food and milk-carton boxes; add the three omitted container boxes.",
+    "expected_label_sha256": "4efa22e39da2befbb4d8bf29a0d56a26c3b2eb6ad5e9caede3977411a1577cb4",
+    "rows": [
+      "0 0.264509 0.742560 0.435268 0.502976",
+      "0 0.717634 0.741071 0.430804 0.488095",
+      "0 0.310268 0.290179 0.245536 0.294643",
+      "6 0.809152 0.139881 0.247768 0.279762",
+      "0 0.585938 0.169643 0.216518 0.178571",
+      "0 0.572545 0.376488 0.274554 0.276786",
+      "1 0.438616071 0.291666667 0.604910714 0.505952381",
+      "10 0.241071429 0.735119048 0.482142857 0.529761905",
+      "10 0.726562500 0.747023810 0.475446429 0.505952381"
+    ]
+  },
+  {
+    "source": "school_lunch_asian",
+    "image": "010082001_jpg.rf.86dde1bfd428f1231c7bad0689598b0d.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual review 2026-10-12",
+    "reason": "Divided cafeteria plate and both distinct rice/soup bowls are visible and absent from original source annotations. Preserve all original food and milk-carton boxes; add the three omitted container boxes.",
+    "expected_label_sha256": "68dfe73c168327065b08c71aaea8df5012152a51c50432e498f2a3038033d353",
+    "rows": [
+      "0 0.286830 0.745536 0.466518 0.491071",
+      "0 0.760045 0.729167 0.462054 0.535714",
+      "0 0.327009 0.299107 0.229911 0.282738",
+      "0 0.563616 0.354167 0.207589 0.238095",
+      "6 0.824777 0.104167 0.252232 0.208333",
+      "0 0.853795 0.288690 0.158482 0.208333",
+      "1 0.449776786 0.285714286 0.631696429 0.500000000",
+      "10 0.277901786 0.744047619 0.488839286 0.511904762",
+      "10 0.756696429 0.723214286 0.482142857 0.553571429"
+    ]
+  },
+  {
+    "source": "school_lunch_asian",
+    "image": "010087001_jpg.rf.d37e466442f63cca5745f167150b9fc2.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual review 2026-10-12",
+    "reason": "Divided cafeteria plate and both distinct rice/soup bowls are visible and absent from original source annotations. Preserve all original food and milk-carton boxes; add the three omitted container boxes.",
+    "expected_label_sha256": "c398f062e6e1042de1912e1a18d2390bdccdc95d2362d84fbabada4738d4385b",
+    "rows": [
+      "0 0.242188 0.711310 0.466518 0.559524",
+      "0 0.744420 0.721726 0.417411 0.514881",
+      "0 0.540179 0.340774 0.294643 0.193452",
+      "6 0.827009 0.142857 0.261161 0.285714",
+      "0 0.282366 0.241071 0.270089 0.250000",
+      "0 0.588170 0.133929 0.207589 0.226190",
+      "1 0.420758929 0.282738095 0.671875000 0.511904762",
+      "10 0.238839286 0.718750000 0.477678571 0.562500000",
+      "10 0.729910714 0.706845238 0.491071429 0.586309524"
+    ]
+  },
+  {
+    "source": "school_lunch_asian",
+    "image": "010102001_jpg.rf.3cef8fa8ac291fce7b172ee08eff0ded.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual review 2026-10-12",
+    "reason": "Divided cafeteria plate and both distinct rice/soup bowls are visible and absent from original source annotations. Preserve all original food and milk-carton boxes; add the three omitted container boxes.",
+    "expected_label_sha256": "bff6d8ff8679a0a03d14ae643eb4ce637fb86c0e4a0f47ae9331145edc4d52f9",
+    "rows": [
+      "0 0.233259 0.758929 0.430804 0.476190",
+      "0 0.688616 0.760417 0.408482 0.449405",
+      "0 0.592634 0.357143 0.243304 0.297619",
+      "0 0.338170 0.351190 0.247768 0.273810",
+      "6 0.768973 0.096726 0.220982 0.193452",
+      "1 0.487723214 0.306547619 0.604910714 0.517857143",
+      "10 0.232142857 0.758928571 0.464285714 0.482142857",
+      "10 0.716517857 0.741071429 0.500000000 0.517857143"
+    ]
+  },
+  {
+    "source": "school_lunch_asian",
+    "image": "010108001_jpg.rf.2d4e28798ee61c47313e994bdd53bcf0.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT full-resolution visual review 2026-10-12",
+    "reason": "Divided cafeteria plate and both distinct rice/soup bowls are visible and absent from original source annotations. Preserve all original food and milk-carton boxes; add the three omitted container boxes.",
+    "expected_label_sha256": "edeeb537f355402411ed587131f6990f6030425ef2302addc9c97b88c1b86062",
+    "rows": [
+      "0 0.268973 0.752976 0.448661 0.488095",
+      "0 0.729911 0.748512 0.464286 0.497024",
+      "0 0.319196 0.275298 0.263393 0.312500",
+      "0 0.594866 0.318452 0.225446 0.220238",
+      "0 0.622768 0.119048 0.218750 0.166667",
+      "6 0.848214 0.150298 0.263393 0.294643",
+      "1 0.452008929 0.270833333 0.595982143 0.535714286",
+      "10 0.250000000 0.745535714 0.500000000 0.508928571",
+      "10 0.739955357 0.744047619 0.475446429 0.511904762"
+    ]
   }
 ]
