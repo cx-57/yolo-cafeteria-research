@@ -213,6 +213,38 @@ class V2WorkflowTests(unittest.TestCase):
         corrected = self.output / "labels/train/trash_detection__train__wrap.txt"
         self.assertEqual(corrected.read_text(), "8 .5 .5 .4 .4\n")
 
+    def test_codex_review_preset_applies_both_approved_sources(self):
+        audit = self.root / "data/audits/v2_review_2026-10-12"
+        audit.mkdir(parents=True)
+        (audit / "lvis_food_approved.json").write_text(json.dumps([{
+            "source": "plate", "image": "val__small.png",
+            "rows": ["0 .2 .2 .1 .1"], "provenance": {"reviewed": "yes"}
+        }]))
+        original = self.source / "labels/train/trash_detection__train__wrap.txt"
+        (audit / "reviewed_overrides.json").write_text(json.dumps([{
+            "source": "trash_detection", "image": "train__wrap.png",
+            "rows": ["8 .5 .5 .4 .4"], "complete": "yes",
+            "reviewer": "reviewer", "reason": "Manually verified wrapper",
+            "expected_label_sha256": v2.digest(original)
+        }]))
+        with patch.object(v2, "PROJECT_ROOT", self.root):
+            v2.build(self.args(use_codex_review=True))
+        self.assertEqual(
+            (self.output / "labels/train/trash_detection__train__wrap.txt").read_text(),
+            "8 .5 .5 .4 .4\\n")
+        self.assertIn("0 .2 .2 .1 .1",
+                      (self.output / "labels/val/plate__val__small.txt").read_text())
+        report = json.loads((self.output / "v2_build.json").read_text())
+        self.assertTrue(report["reviewed_audit_applied"])
+        self.assertEqual(report["legacy_validation_images_moved"], 0)
+        self.assertEqual(original.read_text(), "9 .5 .5 .4 .4\\n")
+
+    def test_codex_review_preset_rejects_ambiguous_explicit_files(self):
+        with self.assertRaisesRegex(ValueError, "do not combine"):
+            v2.build(self.args(use_codex_review=True,
+                               reviewed_overrides=self.root / "another.json"))
+        self.assertFalse(self.output.exists())
+
     def test_unverified_override_and_stale_sha_rejected(self):
         path = self.root / "bad.json"
         path.write_text(json.dumps([{
