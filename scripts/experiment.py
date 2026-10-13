@@ -9,6 +9,7 @@ from pathlib import Path
 import shutil
 
 import yaml
+from PIL import Image
 
 from prepare import IMAGE_SUFFIXES, PROJECT_ROOT, remap_label_line
 from train import check_names, class_names
@@ -124,7 +125,53 @@ def apply_additions(samples, additions_file, names):
     return report
 
 
-def prepare_experiment(source, output, label_additions=None, balance_classes=(), max_repeat=3):
+def focus_crop(image, rows, names, focus_classes, view, crop_fraction=0.60,
+               small_area=0.04):
+    """Make a label-preserving crop around a genuinely small weak-class box.
+
+    Returns None if no safe crop target exists. Other partially visible
+    labeled objects are clipped and carried forward, not silently erased.
+    """
+    wanted = {names.index(name) for name in focus_classes}
+    candidates = []
+    for row in rows:
+        cls, x, y, w, h = map(float, row.split())
+        if (int(cls) in wanted and w * h < small_area
+                and w <= crop_fraction * 0.95 and h <= crop_fraction * 0.95):
+            candidates.append((w * h, int(cls), x, y, w, h))
+    if not candidates:
+        return None
+    candidates.sort()
+    _, _, x, y, _, _ = candidates[(view - 1) % len(candidates)]
+    with Image.open(image) as picture:
+        width, height = picture.size
+        crop_w = max(2, round(width * crop_fraction))
+        crop_h = max(2, round(height * crop_fraction))
+        left = max(0, min(width - crop_w, round(x * width - crop_w / 2)))
+        top = max(0, min(height - crop_h, round(y * height - crop_h / 2)))
+        right, bottom = left + crop_w, top + crop_h
+        transformed = []
+        for row in rows:
+            parts = row.split()
+            cls = int(parts[0])
+            bx, by, bw, bh = map(float, parts[1:])
+            a = max(left, (bx - bw / 2) * width)
+            b = max(top, (by - bh / 2) * height)
+            c = min(right, (bx + bw / 2) * width)
+            d = min(bottom, (by + bh / 2) * height)
+            if c - a < 2 or d - b < 2:
+                continue
+            transformed.append(
+                f"{cls} {((a + c) / 2 - left) / crop_w:.9f} "
+                f"{((b + d) / 2 - top) / crop_h:.9f} "
+                f"{(c - a) / crop_w:.9f} {(d - b) / crop_h:.9f}")
+        if not transformed:
+            return None
+        return picture.crop((left, top, right, bottom)).convert("RGB"), transformed
+
+
+def prepare_experiment(source, output, label_additions=None, balance_classes=(),
+                       max_repeat=3, crop_repeats=False):
     """Create a new dataset; retain all fixed source images and every original box."""
     source, output = Path(source).resolve(), Path(output)
     source_yaml = source if source.suffix in {".yaml", ".yml"} else source / "data.yaml"
@@ -141,6 +188,8 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
         raise ValueError("Unknown balancing classes: " + ", ".join(sorted(set(classes) - set(names))))
     if isinstance(max_repeat, bool) or not isinstance(max_repeat, int) or not 1 <= max_repeat <= 3:
         raise ValueError("max-repeat must be an integer between 1 and 3")
+    if crop_repeats and (not classes or max_repeat < 2):
+        raise ValueError("--crop-repeats needs weak classes and max-repeat at least 2")
 
     samples = []
     splits = ["train", "val"] + (["test"] if data.get("test") else [])
@@ -183,6 +232,7 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
     # Complete validation before creating the new output; existing directories
     # are never removed, and original labels are never linked to writable copies.
     output.mkdir(parents=True)
+    cropped_views = 0
     for sample in samples:
         label_bytes = sample["raw_label"]
         if sample["added_rows"]:
@@ -195,11 +245,25 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
             image_dir.mkdir(parents=True, exist_ok=True)
             labels_dir.mkdir(parents=True, exist_ok=True)
             target_image = image_dir / (stem + sample["image"].suffix)
-            try:
-                os.link(sample["image"].resolve(), target_image)
-            except OSError:
-                shutil.copy2(sample["image"], target_image)
-            (labels_dir / (stem + ".txt")).write_bytes(label_bytes)
+            crop = (focus_crop(sample["image"], sample["rows"], names, classes, view)
+                    if crop_repeats and sample["split"] == "train" and view else None)
+            if crop is None:
+                try:
+                    os.link(sample["image"].resolve(), target_image)
+                except OSError:
+                    shutil.copy2(sample["image"], target_image)
+                (labels_dir / (stem + ".txt")).write_bytes(label_bytes)
+            else:
+                picture, cropped_rows = crop
+                # Lossless PNG keeps the small target visible; extension must
+                # reflect actual encoded bytes for the image loader.
+                target_image = target_image.with_suffix(".png")
+                if target_image.exists():
+                    raise ValueError(f"Crop output collision: {target_image}")
+                picture.save(target_image, format="PNG")
+                (labels_dir / (stem + ".txt")).write_text(
+                    "\n".join(validate_rows(cropped_rows, target_image, names)) + "\n")
+                cropped_views += 1
 
     data_file = output / "data.yaml"
     data_file.write_text(yaml.safe_dump({"path": str(output.resolve()), "names": names,
@@ -213,6 +277,9 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
         "output": str(output.resolve()), "counts": counts, "additions": additions,
         "balance": {"classes": classes, "target_image_count": target, "max_repeat": max_repeat,
                     "class_repeat_factors": factors},
+        "focus_crops": {"enabled": crop_repeats, "cropped_train_views": cropped_views,
+                        "crop_fraction": 0.60, "max_target_area": 0.04,
+                        "validation_unchanged": True},
         "original_support": class_support(samples, names, original=True),
         "corrected_support": corrected_support, "view_support": class_support(samples, names, repeated=True),
         "source_image_paths": {split: sorted(str(sample["image"].resolve()) for sample in samples
@@ -239,9 +306,12 @@ def main():
     parser.add_argument("--label-additions", type=Path, help="Reviewed additive boxes and their provenance in JSON")
     parser.add_argument("--balance-classes", nargs="*", default=[], help="Classes receiving extra training views")
     parser.add_argument("--max-repeat", type=int, default=3, help="Maximum views per training original (1–3)")
+    parser.add_argument("--crop-repeats", action="store_true",
+                        help="Replace repeated train-only weak-class views with 60%% focus crops")
     args = parser.parse_args()
     try:
-        prepare_experiment(args.source, args.output, args.label_additions, args.balance_classes, args.max_repeat)
+        prepare_experiment(args.source, args.output, args.label_additions,
+                           args.balance_classes, args.max_repeat, args.crop_repeats)
     except (OSError, KeyError, TypeError, ValueError, yaml.YAMLError) as error:
         parser.error(str(error))
 
