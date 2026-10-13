@@ -158,7 +158,7 @@ jobs:
   ml-integration:
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -210,3 +210,24 @@ jobs:
               print("Real photo + masked criterion training loop completed.")
               print("No trained-checkpoint accuracy or mAP is claimed.")
           PY
+      - name: Build Codex-reviewed dataset for full train-evaluate-predict smoke
+        run: |
+          python scripts/train.py --build-only
+          python scripts/v2.py build \
+            --source data/training --output data/training-ci-v2-reviewed \
+            --provisional --use-codex-review
+      - name: Train and validate normal and class-weighted pretrained YOLO11n
+        env:
+          YOLO_CONFIG_DIR: /tmp/yolo-v2-real-smoke-config
+          OMP_NUM_THREADS: '2'
+          MKL_NUM_THREADS: '2'
+        run: python tests/v2_real_smoke.py
+      - name: Save V2 reviewed training smoke results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v2-reviewed-real-training-smoke
+          path: |
+            model/runs/ci-v2-*/results.csv
+            model/runs/ci-v2-*-evaluation/metrics.json
+          if-no-files-found: ignore
