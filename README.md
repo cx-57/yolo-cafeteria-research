@@ -61,7 +61,7 @@ The [Codex review completion/status audit](docs/V2_CODEX_STATUS_20261012.md)
 records the exact checklist, what passed on the full 3,096-image GitHub
 dataset, and what still needs independent cafeteria photos or human review.
 
-To **actually use** the 11 reviewed label corrections and 242 LVIS food
+To **actually use** the 64 reviewed image-level label replacements and 242 LVIS food
 review records in a new V2 dataset (without modifying V1):
 
 ```bash
@@ -77,7 +77,16 @@ TRAINING ONLY for a separate research experiment, add:
 and select a different output directory. Strict V2 and validation refuse
 unverified candidates. The separate test set remains optional; **four classes
 still lack ordinary V2 public-source validation support**. No model accuracy
-improvement has yet been established by a full controlled training run.
+improvement has yet been established by a controlled training comparison.
+
+**October 13 weak-class experiment:** The existing `scripts/experiment.py`
+now supports `--crop-repeats` for training-only 60% crops centered on small
+plate/wrapper/bottle targets. Use the frozen reviewed V2 source and compare
+a bounded 2× repeat control to the same-size crop arm on the *same*
+591-image validation split. Crops remap all intersecting annotations;
+GitHub CI validates the full real-corpus build and unchanged validation bytes.
+See [paired commands and evaluation rules](docs/V2_IMPLEMENTATION.md#weak-class-small-object-intervention-october-13-matched-ab-test).
+This remains experimental: no claim of 80% recall or an NHS test score.
 
 ## Set up and train
 
