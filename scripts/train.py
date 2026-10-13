@@ -538,8 +538,9 @@ def main():
         return
 
     import ultralytics
-    if ultralytics.__version__ != "8.4.175":
-        print("WARNING: Ultralytics", ultralytics.__version__,
+    version = getattr(ultralytics, "__version__", "unknown")
+    if version != "8.4.175":
+        print("WARNING: Ultralytics", version,
               "differs from repository-tested 8.4.175. "
               "Do not treat this as a controlled comparison.")
     model = load_model(args.model)
