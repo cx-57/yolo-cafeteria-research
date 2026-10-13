@@ -167,5 +167,30 @@
     "reason": "Remove the false napkin label from V2 copies: Torn paper sheet with ragged edge, not a verified cafeteria napkin. No configured paper class; retain photo as an exhaustively reviewed background negative.",
     "expected_label_sha256": "5ede96312470ec0dfe161a1b1d83759096882bf0c62af3e00b215563b7265fb5",
     "rows": []
+  },
+  {
+    "source": "food_american",
+    "image": "train__download_jpg.rf.69af084c6f657aae6cb53fb448c69dfd.jpg",
+    "complete": "yes",
+    "reviewer": "AI-assisted direct original-resolution visual review",
+    "reason": "Original 225x225 photograph contains three distinct fried chicken drumsticks. Existing annotation covers only the center one; add separately visible left and right drumsticks. No other target classes in scene.",
+    "expected_label_sha256": "5c72331a07260a25b3e988f73560b755895e7569a06e3c1b1780f35b9f588b0c",
+    "rows": [
+      "0 0.500000 0.384444 0.315556 0.582222",
+      "0 0.21111111 0.63555556 0.28888889 0.56000000",
+      "0 0.83333333 0.61777778 0.32444444 0.62222222"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__images_jpg.rf.27e5ce52d5650e34e6dfff7f3452c2fa.jpg",
+    "complete": "yes",
+    "reviewer": "AI-assisted direct original-resolution visual review",
+    "reason": "Original 260x194 photograph shows two separate burgers. Existing single box encloses both. Replace with one box per burger; no other target-class item confidently identifiable.",
+    "expected_label_sha256": "4ac749eecd5a1d7cb31230a0004a20a49dffa06fd0211c97b9d955b6b2e9e2d4",
+    "rows": [
+      "0 0.41538462 0.39948454 0.39230769 0.48969072",
+      "0 0.68461538 0.46391753 0.46153846 0.55670103"
+    ]
   }
 ]
