@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import os
+import re
 from pathlib import Path
 import shutil
 
@@ -352,7 +353,7 @@ def prepare_weak_subset(source, output, weak_classes=("plate", "wrapper", "bottl
         rows = validate_rows([r for r in label.read_text().splitlines() if r.strip()],
                              label, names)
         # Keep original plus every __balanced view in the SAME group.
-        key = __import__("re").sub(r"__balanced\d+$", "", image.stem)
+        key = re.sub(r"__balanced\d+$", "", image.stem)
         group = groups.setdefault(key, {"images": [], "class_ids": set()})
         group["images"].append(image)
         group["class_ids"].update(int(row.split()[0]) for row in rows)
