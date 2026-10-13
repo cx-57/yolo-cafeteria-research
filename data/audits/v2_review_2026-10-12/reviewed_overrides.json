@@ -2264,5 +2264,72 @@
       "3 0.68000000 0.20700000 0.18400000 0.41200000",
       "0 0.89400000 0.30500000 0.21200000 0.23300000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000562906.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual overlay review 2026-10-13",
+    "reason": "Large folded calzone/pizza wedge covers the white paper plate, but V2 originally labeled only the plate.",
+    "expected_label_sha256": "29e27d42ee0ce1966954cf62aa32ce3dd6c77d6bfa81edca68487d24268db9ed",
+    "rows": [
+      "1 0.515312500 0.556197917 0.712812500 0.884312500",
+      "0 0.53200000 0.52000000 0.69200000 0.90000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000569001.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual overlay review 2026-10-13",
+    "reason": "Three distinct loaded hot dogs and a large french-fry portion on cafeteria-style red tray were completely missing food annotations; red-tray plates already labeled.",
+    "expected_label_sha256": "45026e2814d81d4e41eab505e592c618cb928b343d9a42bf86c5bcc1e84c643f",
+    "rows": [
+      "1 0.621320312 0.761843750 0.405359375 0.476312500",
+      "1 0.256664062 0.698125000 0.374390625 0.490916667",
+      "1 0.477281250 0.353687500 0.365500000 0.412833333",
+      "0 0.49500000 0.30000000 0.27000000 0.32700000",
+      "0 0.23100000 0.66200000 0.21200000 0.28300000",
+      "0 0.31700000 0.72900000 0.25300000 0.31300000",
+      "0 0.71300000 0.68800000 0.25500000 0.42500000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000180101.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual overlay review 2026-10-13",
+    "reason": "Chocolate birthday cake and separate sandwich/pizza serving on a small side plate were visibly present but omitted from food annotations.",
+    "expected_label_sha256": "ce186ed3c3da22488100e165fbe5d0c386195951e7e6323fc0a10c826eefe074",
+    "rows": [
+      "1 0.176273437 0.504958333 0.206609375 0.165833333",
+      "0 0.39500000 0.56000000 0.28500000 0.26700000",
+      "0 0.21300000 0.48700000 0.16500000 0.13800000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000283113.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual overlay review 2026-10-13",
+    "reason": "Two large distinct cheese-topped hot dog servings on labeled paper plate had no food boxes.",
+    "expected_label_sha256": "61a6909716f1229dbf9acdce7db4f181c95729634a4070e86a31f5285c10ecab",
+    "rows": [
+      "1 0.500000000 0.586773437 1.000000000 0.826453125",
+      "0 0.29500000 0.47400000 0.59000000 0.63700000",
+      "0 0.80900000 0.41000000 0.38200000 0.46900000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000380525.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visual overlay review 2026-10-13",
+    "reason": "Cat sniffing a large sliced custard-filled pastry on a labeled plate; pastry food class was entirely absent.",
+    "expected_label_sha256": "98f66d158d50b5eeb1a11b89c0ae43f2ba430864565d653f112f8d46ac5f3b84",
+    "rows": [
+      "1 0.498664717 0.896507813 0.996081871 0.206984375",
+      "0 0.49700000 0.77900000 0.94700000 0.35800000"
+    ]
   }
 ]
