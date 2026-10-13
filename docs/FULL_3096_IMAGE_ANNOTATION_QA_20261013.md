@@ -271,3 +271,22 @@ Previous transient GitHub Actions failures were investigated: one earlier
 run failed on an exact source SHA-256 typo for `plastic189` and was repaired
 in the subsequent successful run; integrity checks remain enabled.
 Neither new label edits nor ledger changes imply improved model accuracy.
+
+## Original-resolution all-11-class audit checkpoint — 2026-10-13
+
+The durable 3,096-row status ledger now records **258 fully reviewed photos**:
+**240** corrected V2-only label sets with exact source-label SHA-256 locks and
+**18** individually inspected photos whose complete labels required no change.
+**2,838** photos remain without full 11-class sign-off. A further **17**
+food_american photos were examined at native resolution in this pass:
+12 were fully verified (11 unchanged and one corrected with fries and plate
+boxes); five more simple photographs were subsequently verified unchanged.
+Additional ambiguous food, utensil, serving-plate, pan and parchment scenes
+were explicitly left `pending_followup` in the ledger rather than counted.
+The final 3,096-image structural scan is not a semantic certification.
+
+The new corrected photo is `test__images_jpg.rf.2e1375c3d05007414011f60f20dd3797.jpg`.
+Its original 201x251 pixels and proposed overlay were inspected. The burger
+box was retained and separate food/fries and plate-rim boxes were added.
+The source-label checksum gate passed the full reviewed build. Earlier
+model accuracy and AP figures are not reevaluations of this corrected data.
