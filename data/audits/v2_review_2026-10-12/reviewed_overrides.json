@@ -1541,5 +1541,137 @@
       "0 0.54050000 0.40750000 0.15100000 0.11500000",
       "0 0.61200000 0.83450000 0.25000000 0.09900000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic7_jpg.rf.44517347594a785ef39cb3ed37b930ae.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "5715b97ecb9f2d9058fa109d5511ff9377ea4fa11a8b8a16fa66e4c6063ac445",
+    "rows": [
+      "9 0.34650000 0.48500000 0.52100000 0.51600000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic60_jpg.rf.6c10d5ddbcc8a67559f20cefeda2ad87.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "de7016303d84c4eccbc3a51a148f1b29238596a8eea82ce7fc2b7cc02374653e",
+    "rows": [
+      "9 0.45800000 0.48400000 0.73600000 0.28400000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic122_jpg.rf.4047fe93c9204c88ddc7c45d678e0e1c.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "6a658f5b9fa6e0b54ddb17bfa41859581665257c0466d5b99da6a7b9abf082f8",
+    "rows": [
+      "9 0.53800000 0.42000000 0.27800000 0.84000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic129_jpg.rf.a5678d8c6a779dd06c90691fddb57c2c.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "c15b4a67e4a9310b25ae0d2b353478ce565e765179786cf1855c6010f9710a30",
+    "rows": [
+      "9 0.40650000 0.57000000 0.57100000 0.36000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic49_jpg.rf.c959fb2f61241bcce2195a03cf11154b.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "4b238aa414f497558a9db2d0357754b99da4da2a28e0b506132af171d9160039",
+    "rows": [
+      "9 0.48600000 0.48550000 0.85200000 0.35900000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic135_jpg.rf.dfcb56d5e2bfe1ca7fd043c9f9d0b6ff.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "ad77baf728d461052f52d8129f0686d24e6b3c710c59fce4ffd7ef5334f20311",
+    "rows": [
+      "9 0.49600000 0.50400000 0.36800000 0.47200000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic353_jpg.rf.10b406ece3b9567ddd6011111d381ff8.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "265fd3e421b25259a40563994b50c5eb4e6cc028dbcdc103bd9b4209c1f50b0f",
+    "rows": [
+      "9 0.54000000 0.41750000 0.59000000 0.33100000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic295_jpg.rf.70d75b232171e59e028b926576c3849e.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "e436ba5cdb056f1e97457c66b5641003d2558c715416ef5058ee3c78eab389e7",
+    "rows": [
+      "9 0.49450000 0.58500000 0.41300000 0.83000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic138_jpg.rf.8c75984b5d56b95ea2b2b0d3b8af11b9.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "8e37826a17358b1c7ed3860fa2b17cc7cd1b6515f7d23b417e0b345f7bbf9012",
+    "rows": [
+      "9 0.45750000 0.45450000 0.46500000 0.37700000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic276_jpg.rf.c1a2702c46c5595a5bc9736a5f727b13.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "ffdc21d853bd7bc58c768d713c2530554a59527664190796185a0919c60f44ba",
+    "rows": [
+      "9 0.50150000 0.59500000 0.35700000 0.81000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic5_jpg.rf.310fd9b000b0286c83ea76ac544323b1.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "63c2bb64f87d191efd722301aed6769ed146e12342af641b49b2431a19668526",
+    "rows": [
+      "9 0.45200000 0.52300000 0.26800000 0.70400000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic378_jpg.rf.184fb8e7472fa086d1f9d2c187288eeb.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution transparent-bottle visual box adjudication 2026-10-13",
+    "reason": "Original bbox contained large empty white background. Manually box the entire visible clear plastic bottle, including neck, cap, label and transparent walls, not just label color.",
+    "expected_label_sha256": "27549e1041bac315aec5a60633c7fc28bb5fe8275638e824bd508924448391c0",
+    "rows": [
+      "9 0.63350000 0.51100000 0.31300000 0.92800000"
+    ]
   }
 ]
