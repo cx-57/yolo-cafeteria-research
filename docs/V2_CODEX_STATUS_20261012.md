@@ -14,13 +14,16 @@ Neither the old model nor V1 labels have been overwritten.
   Contact sheets and exception queues exist. Direct full-resolution
   inspections and four ambiguous images requiring further work are documented
   in data/audits/v2_review_2026-10-12/image_review.csv. The generated
-  review queue currently counts 41 full-image entries, 239 food-only reviews
-  and 2,816 images with no full review. This task is NOT complete.
-- [x] **Implement 27 checksum-protected image-level annotation replacements in V2 only.**
+  review queue now expects 64 full-image entries, 239 food-only reviews
+  and 2,793 images with no full review (pending confirmation from the newest CI run).
+  This task is NOT complete.
+- [x] **Implement 49 checksum-protected image-level annotation replacements in V2 only.**
   Reviewed corrections: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
-  The additional visual pass corrected three incorrectly boxed LVIS plates and
-  four cafeteria scenes missing bowls/plates/utensils; existing fixes include
-  a non-bottle cup, duplicated bowls and five false napkins. All original
+  The direct-image review includes three corrected LVIS plates, four
+  corrected original cafeteria scenes, 20 corrected Asian cafeteria scenes
+  with 60 newly annotated divided plates/rice/soup bowls, and two additional
+  American-food plate/bowl corrections. Earlier fixes include a non-bottle cup,
+  duplicated bowls and five false napkins. All original
   V1 images and labels remain untouched. Full dataset visual verification is
   still incomplete.
 - [x] **Review the 242 LVIS food-overlay records.** Codex reduced the original
@@ -62,19 +65,21 @@ Neither the old model nor V1 labels have been overwritten.
 
 The file
 [data/audits/v2_review_2026-10-12/image_review.csv](../data/audits/v2_review_2026-10-12/image_review.csv)
-now contains **32 full-resolution inspected image records**.
+now contains **56 full-resolution inspected image records**.
 Some remain marked `needs_followup` (including overlapping stacked-plate boxes
 and missing flexible-wrapper packages) and are NOT counted as complete.
-The separately tracked 27 full-image replacement-label approvals plus 14
+The separately tracked 49 full-image replacement-label approvals plus 15
 full-resolution inspected, already-correct labels feed the honest 3,096-photo
-V2 review queue: **41 full-image verified, 239 food-only reviewed, 2,816 not
-fully verified**. These counts do not imply all 39 were newly corrected.
+V2 review queue: **64 full-image verified, 239 food-only reviewed, 2,793 not
+fully verified** (pending latest CI confirmation). Corrections and clean
+unchanged-label reviews are distinct kinds of evidence.
 
 Visual review revealed a systematic annotation policy gap in the school-lunch
-source: visible physical soup bowls, divided disposable plates and sometimes
-utensils had no corresponding target-class boxes. Four fully examined scenes
-were amended to include these containers/utensils while preserving their food
-and carton boxes. This is NOT an automatic correction of the remaining
+sources: visible physical soup bowls, divided disposable plates and sometimes
+utensils had no corresponding target-class boxes. Four source school-lunch
+images and 20 Asian cafeteria scenes have been individually reviewed and
+corrected, preserving their existing food and milk-carton annotations.
+Two American food photos gained clear serving plate/bowl boxes. This is NOT an automatic correction of the remaining
 school-lunch photos; they need individual review before training accuracy can
 be treated as a reliable measurement.
 
@@ -122,7 +127,7 @@ not been regenerated:
       --output data/training-v2-codex-reviewed \
       --provisional --use-codex-review
 
-This uses all 27 reviewed image-level replacement records plus the 242 reviewed LVIS records.
+This uses all 49 reviewed image-level replacement records plus the 242 reviewed LVIS records.
 It does NOT add new photos. To also add the **unverified provisional
 paper-boat drafts** to training ONLY, select a DIFFERENT new output directory:
 
