@@ -374,6 +374,35 @@ class V2WorkflowTests(unittest.TestCase):
         self.assertIn("--patience", cmd)
         self.assertEqual(cmd[cmd.index("--patience") + 1], "0")
 
+    def test_partial_label_trials_match_except_loss_and_disable_mosaic(self):
+        # Unknown-class background penalties can be masked only when the photo's
+        # source survives augmentation. This is a paired experimental comparison.
+        v2.build(self.args())
+        plain = v2.train(self.train_args(
+            trial="no-mosaic-n", epochs=10, allow_provisional=True))
+        masked = v2.train(self.train_args(
+            trial="coverage-n", epochs=10, allow_provisional=True))
+
+        self.assertEqual(plain[plain.index("--mosaic") + 1], "0")
+        self.assertEqual(masked[masked.index("--mosaic") + 1], "0")
+        self.assertNotIn("--coverage-policy", plain)
+        self.assertIn("--coverage-policy", masked)
+        self.assertTrue(masked[masked.index("--coverage-policy") + 1].endswith(
+            "data/audits/model_revisions_2026-10-12/source_coverage.json"))
+        self.assertEqual(
+            masked[:masked.index("--coverage-policy")], plain)
+        shared = dict(epochs=10, batch=2, seed=42, imgsz=640, device="cpu",
+                      dataset_sha256="identical", completed_epochs=10)
+        v2.check_trial_schedules([
+            dict(shared, command=plain), dict(shared, command=masked)])
+
+    def test_partial_label_trial_rejects_unknown_training_source(self):
+        self.add_source("train", "unregistered__photo.png", "1 .5 .5 .4 .4\\n",
+                        (11, 22, 33))
+        v2.build(self.args())
+        with self.assertRaisesRegex(ValueError, "No coverage policy"):
+            v2.train(self.train_args(trial="coverage-n", allow_provisional=True))
+
     def test_ranking_rejects_different_training_schedules(self):
         entries = [dict(trial="control-n", epochs=100, batch=4, seed=42, imgsz=640,
                         dataset_sha256="frozen"),
