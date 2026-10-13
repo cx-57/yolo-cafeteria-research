@@ -14,12 +14,12 @@ Neither the old model nor V1 labels have been overwritten.
   Contact sheets and exception queues exist. Direct full-resolution
   inspections and four ambiguous images requiring further work are documented
   in data/audits/v2_review_2026-10-12/image_review.csv. The generated
-  review queue currently counts 23 full-image entries, 239 food-only reviews
-  and 2,834 images with no full review. This task is NOT complete.
-- [x] **Implement 23 checksum-protected image-level annotation replacements in V2 only.**
+  review queue currently counts 39 full-image entries, 239 food-only reviews
+  and 2,818 images with no full review. This task is NOT complete.
+- [x] **Implement 25 checksum-protected image-level annotation replacements in V2 only.**
   Reviewed corrections: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
   The additional visual pass corrected three incorrectly boxed LVIS plates and
-  two cafeteria scenes missing bowls/plates/utensils; existing fixes include
+  four cafeteria scenes missing bowls/plates/utensils; existing fixes include
   a non-bottle cup, duplicated bowls and five false napkins. All original
   V1 images and labels remain untouched. Full dataset visual verification is
   still incomplete.
@@ -58,6 +58,31 @@ Neither the old model nor V1 labels have been overwritten.
   Requires complete training and fixed, sufficiently covered validation.
   No improved real-world accuracy is claimed.
 
+## Direct image/box audit extension
+
+The file
+[data/audits/v2_review_2026-10-12/image_review.csv](../data/audits/v2_review_2026-10-12/image_review.csv)
+now contains **30 full-resolution inspected image records**.
+Some remain marked `needs_followup` (including overlapping stacked-plate boxes
+and missing flexible-wrapper packages) and are NOT counted as complete.
+The separately tracked 25 full-image replacement-label approvals plus 14
+full-resolution inspected, already-correct labels feed the honest 3,096-photo
+V2 review queue: **39 full-image verified, 239 food-only reviewed, 2,818 not
+fully verified**. These counts do not imply all 39 were newly corrected.
+
+Visual review revealed a systematic annotation policy gap in the school-lunch
+source: visible physical soup bowls, divided disposable plates and sometimes
+utensils had no corresponding target-class boxes. Four fully examined scenes
+were amended to include these containers/utensils while preserving their food
+and carton boxes. This is NOT an automatic correction of the remaining
+school-lunch photos; they need individual review before training accuracy can
+be treated as a reliable measurement.
+
+The 44 condiment photos largely repeat the same isolated sauce packet on
+one tabletop, and waste_detection_v3 has many visually similar hand-held
+video-frame backgrounds. Apparent object counts therefore overstate
+independent scene diversity.
+
 ## Confirmed automated tests
 
 - [GitHub V2 test workflow](https://github.com/cx-57/yolo-cafeteria-research/actions/workflows/v2-tests.yml):
@@ -92,7 +117,7 @@ not been regenerated:
       --output data/training-v2-codex-reviewed \
       --provisional --use-codex-review
 
-This uses all 23 reviewed image-level replacement records plus the 242 reviewed LVIS records.
+This uses all 25 reviewed image-level replacement records plus the 242 reviewed LVIS records.
 It does NOT add new photos. To also add the **unverified provisional
 paper-boat drafts** to training ONLY, select a DIFFERENT new output directory:
 
