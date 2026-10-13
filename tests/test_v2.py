@@ -263,6 +263,23 @@ class V2WorkflowTests(unittest.TestCase):
         self.assertEqual(food_only["requires_all_11_class_review"], "yes")
         self.assertEqual(len(food_only["label_sha256"]), 64)
 
+    def test_full_resolution_unchanged_labels_count_but_flags_do_not(self):
+        review_root = self.root / "data/audits/v2_review_2026-10-12"
+        review_root.mkdir(parents=True)
+        (review_root / "image_review.csv").write_text(
+            "source,image,review_scope,decision\\n"
+            "trash_detection,train__wrap.png,full_resolution,checked_existing\\n"
+            "plate,val__small.png,full_resolution,needs_followup\\n"
+        )
+        empty = self.root / "empty_reviews.json"
+        empty.write_text("[]")
+        with patch.object(v2, "PROJECT_ROOT", self.root):
+            counts = v2.make_review_queue(
+                self.source_yaml, self.root / "review_log_queue.csv",
+                overrides_file=empty, food_file=empty)
+        self.assertEqual(counts, {"full_image_verified": 1,
+                                  "food_only_verified": 0, "not_verified": 1})
+
     def test_codex_review_preset_applies_both_approved_sources(self):
         audit = self.root / "data/audits/v2_review_2026-10-12"
         audit.mkdir(parents=True)
