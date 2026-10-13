@@ -266,10 +266,11 @@ class V2WorkflowTests(unittest.TestCase):
     def test_full_resolution_unchanged_labels_count_but_flags_do_not(self):
         review_root = self.root / "data/audits/v2_review_2026-10-12"
         review_root.mkdir(parents=True)
+        prior_label = self.source / "labels/train/trash_detection__train__wrap.txt"
         (review_root / "image_review.csv").write_text(
-            "source,image,review_scope,decision\n"
-            "trash_detection,train__wrap.png,full_resolution,checked_existing\n"
-            "plate,val__small.png,full_resolution,needs_followup\n"
+            "source,image,review_scope,decision,label_sha256\n"
+            f"trash_detection,train__wrap.png,full_resolution,checked_existing,{v2.digest(prior_label)}\n"
+            "plate,val__small.png,full_resolution,needs_followup,\n"
         )
         empty = self.root / "empty_reviews.json"
         empty.write_text("[]")
@@ -279,6 +280,12 @@ class V2WorkflowTests(unittest.TestCase):
                 overrides_file=empty, food_file=empty)
         self.assertEqual(counts, {"full_image_verified": 1,
                                   "food_only_verified": 0, "not_verified": 1})
+        prior_label.write_text("8 .5 .5 .4 .4\n")
+        with patch.object(v2, "PROJECT_ROOT", self.root):
+            with self.assertRaisesRegex(ValueError, "re-review"):
+                v2.make_review_queue(
+                    self.source_yaml, self.root / "stale_review_queue.csv",
+                    overrides_file=empty, food_file=empty)
 
     def test_codex_review_preset_applies_both_approved_sources(self):
         audit = self.root / "data/audits/v2_review_2026-10-12"
