@@ -2428,5 +2428,82 @@
       "0 0.36000000 0.76000000 0.30000000 0.21000000",
       "3 0.49000000 0.88500000 0.18000000 0.06500000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic409_jpg.rf.154f6f02c9be6048fa2577f2006aad43.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "75f0f8e9eb6d3e57ed547b8f42cb4376c794c8b321b5c3db49fcccf660345daf",
+    "rows": [
+      "9 0.54500000 0.49500000 0.71000000 0.47000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic331_jpg.rf.12f02077358cc5284756a1555e26beb2.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "cdc603fe22d37ef3ffdea679ecf304155e054f5def9023f5a7a2ad27e476c8cb",
+    "rows": [
+      "9 0.57500000 0.52000000 0.67000000 0.42000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic234_jpg.rf.5d441a8a52fe06bd533fd3d59f8b0bad.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "63466a9684e8f8476decf23d824ac5b360f9ae84df7905c09fdaf5b0e8518b92",
+    "rows": [
+      "9 0.52000000 0.52000000 0.88000000 0.54000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic200_jpg.rf.ab8576986916bad9d74424fdc0f3ebe5.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "515d784014bf4c8171845819e24e26938e5b5e3731db090516d9e000754ec015",
+    "rows": [
+      "9 0.57500000 0.61500000 0.35000000 0.77000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic379_jpg.rf.f099ac8a65d638545e22e569bd006d81.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "933695d9ca22192b1ebc6a0b21c3410ca04320120c0e950eceebfdb86b30f61b",
+    "rows": [
+      "9 0.53500000 0.50500000 0.71000000 0.47000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic358_jpg.rf.cd468b4d3c566bdbcc7408da94109973.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "bf2c60b313a644e06ee8524c011adb73592191d8e654eef72a420554dc2d2485",
+    "rows": [
+      "9 0.50000000 0.58000000 0.88000000 0.34000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic202_jpg.rf.40701d2f10a27a30d9904a6576d29c0a.jpg",
+    "complete": "yes",
+    "reviewer": "Per-photo full-resolution manual bounding-box review 2026-10-13",
+    "reason": "Single partially transparent or crushed plastic beverage bottle on plain background; tightened oversized full-object bounding box, including transparent wall and cap, without clipping visible bottle.",
+    "expected_label_sha256": "912b7af753535ae70b8fb2dd618765688a40cf960e528e0684834002ede9f771",
+    "rows": [
+      "9 0.52000000 0.45000000 0.80000000 0.44000000"
+    ]
   }
 ]
