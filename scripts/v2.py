@@ -566,6 +566,18 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
     if not isinstance(overrides, list) or not isinstance(food, list):
         raise ValueError("Review files must contain lists")
     full_names = {r["source"] + "__" + Path(r["image"]).stem for r in overrides}
+    # Manually inspected images with already-correct labels need no override.
+    # Do not count thumbnail-only, ambiguous, or needs_followup decisions.
+    review_csv = review_root / "image_review.csv"
+    if review_csv.is_file():
+        with review_csv.open(newline="") as stream:
+            for record in csv.DictReader(stream):
+                if (record.get("review_scope") == "full_resolution"
+                        and record.get("decision") == "checked_existing"):
+                    source, filename = record.get("source", ""), record.get("image", "")
+                    if not re.fullmatch(r"[a-zA-Z0-9_-]+", source) or Path(filename).name != filename:
+                        raise ValueError("Invalid direct visual-review record: " + str(record))
+                    full_names.add(source + "__" + Path(filename).stem)
     food_names = {r["source"] + "__" + Path(r["image"]).stem for r in food}
     rows = []
     counts = {"full_image_verified": 0, "food_only_verified": 0, "not_verified": 0}
