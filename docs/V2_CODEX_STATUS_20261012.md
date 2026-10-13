@@ -11,12 +11,18 @@ Neither the old model nor V1 labels have been overwritten.
   inventories 6,493 pre-revision labeled boxes and class coverage. This checks
   file/label structure, not visual completeness of 3,096 photographs.
 - [ ] **Exhaustive visual sign-off for every object in every image.**
-  Contact sheets and exception queues exist, but the review log
-  data/audits/v2_review_2026-10-12/image_review.csv is empty; this task
-  CANNOT truthfully be marked complete yet.
-- [x] **Implement 16 reviewed image-level annotation corrections in V2 only.**
-  Codex correction file: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
-  This includes a non-bottle cup, missing utensils, duplicated bowls, and five visually confirmed false napkins that are actually torn sheets of paper. The five repaired image copies remain as negative examples while every V1 label is retained.
+  Contact sheets and exception queues exist. Direct full-resolution
+  inspections and four ambiguous images requiring further work are documented
+  in data/audits/v2_review_2026-10-12/image_review.csv. The generated
+  review queue currently counts 23 full-image entries, 239 food-only reviews
+  and 2,834 images with no full review. This task is NOT complete.
+- [x] **Implement 23 checksum-protected image-level annotation replacements in V2 only.**
+  Reviewed corrections: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
+  The additional visual pass corrected three incorrectly boxed LVIS plates and
+  two cafeteria scenes missing bowls/plates/utensils; existing fixes include
+  a non-bottle cup, duplicated bowls and five false napkins. All original
+  V1 images and labels remain untouched. Full dataset visual verification is
+  still incomplete.
 - [x] **Review the 242 LVIS food-overlay records.** Codex reduced the original
   1,364 suggested boxes to 605 approved boxes through portion-level review,
   including the nested-ingredient conflicts; actual full 3,096-image CI build
@@ -86,7 +92,7 @@ not been regenerated:
       --output data/training-v2-codex-reviewed \
       --provisional --use-codex-review
 
-This uses all 11 approved label overrides plus the 242 reviewed LVIS records.
+This uses all 23 reviewed image-level replacement records plus the 242 reviewed LVIS records.
 It does NOT add new photos. To also add the **unverified provisional
 paper-boat drafts** to training ONLY, select a DIFFERENT new output directory:
 
