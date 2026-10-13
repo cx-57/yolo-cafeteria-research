@@ -181,6 +181,59 @@ validation split still lacks four classes and is not an NHS test set. If
 performance is unchanged/worse, use actual held-out prediction reviews and
 new verified NHS images rather than repeating an unsuccessful training recipe.
 
+### Weak-class small-object intervention (October 13; matched A/B test)
+
+The prior 55-photo diagnostic matched **6/26 plates** and **3/20 bottles**
+whose box area was under 1% of the image (confidence .25, IoU >= .50).
+It also recorded high-confidence bottle/wrapper class confusion. Enlarging
+small object views is a **training hypothesis**, not a measured improvement.
+
+Use the latest **already reviewed** V2 directory as source so no outdated
+annotations are cropped. These two builds use the same originals and byte-
+identical validation images/labels. Both add at most one extra training view
+for a training photo containing plate, wrapper or bottle; the first repeats
+the full image and the second crops around a small target when feasible.
+The same 2× cap applies to BOTH. All original train photos stay.
+
+```bash
+git pull
+python3 scripts/experiment.py --source data/training-v2-codex-reviewed \
+  --output data/training-v2-repeat-control \
+  --balance-classes wrapper bottle plate --max-repeat 2
+python3 scripts/experiment.py --source data/training-v2-codex-reviewed \
+  --output data/training-v2-weak-focus \
+  --balance-classes wrapper bottle plate --max-repeat 2 --crop-repeats
+```
+
+From the same existing **full V2 pretrained-finetuned checkpoint** (edit the
+weights path if your run used another tag), use an equal 15-epoch budget and
+otherwise identical training settings. The new images use 60% crops when a
+target occupies under 4% of the original; all labels are clipped/remapped.
+If an image lacks a valid crop target, its extra view remains a full-image
+repeat, so the experiment does not fabricate new data.
+
+```bash
+WEIGHTS=model/runs/v2-control-n-reviewed-baseline/weights/best.pt
+python3 scripts/train.py data/training-v2-repeat-control/data.yaml \
+  --model "$WEIGHTS" --name v2-repeat-ft15 --eval-name v2-repeat-ft15-eval \
+  --epochs 15 --batch 4 --device mps --imgsz 640 --workers 0 \
+  --optimizer AdamW --lr0 0.0001 --lrf 0.1 --cos-lr \
+  --mosaic 0 --warmup-epochs 0 --patience 0
+
+python3 scripts/train.py data/training-v2-weak-focus/data.yaml \
+  --model "$WEIGHTS" --name v2-focus-ft15 --eval-name v2-focus-ft15-eval \
+  --epochs 15 --batch 4 --device mps --imgsz 640 --workers 0 \
+  --optimizer AdamW --lr0 0.0001 --lrf 0.1 --cos-lr \
+  --mosaic 0 --warmup-epochs 0 --patience 0
+```
+
+Read per-class `recall`, `ap50`, `map50_95` and `support` from
+`model/runs/v2-{repeat,focus}-ft15-eval/metrics.json`. Evaluate wrapper,
+bottle and plate alongside food/carton regressions. A brief fine-tune is a
+diagnostic, not a conclusive final benchmark. The training corpus still lacks
+new independent NHS wrapper/plate/bottle photos. If this comparison fails,
+more repetitions or arbitrary larger input size are **not** justified.
+
 ## Step 6 — compare
 
     python3 scripts/v2.py report --trials control-n weighted-n control-s --epochs 80
