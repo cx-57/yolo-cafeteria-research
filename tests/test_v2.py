@@ -244,6 +244,25 @@ class V2WorkflowTests(unittest.TestCase):
         corrected = self.output / "labels/train/trash_detection__train__wrap.txt"
         self.assertEqual(corrected.read_text(), "8 .5 .5 .4 .4\n")
 
+    def test_review_queue_does_not_confuse_food_only_with_full_review(self):
+        full = self.root / "verified_full.json"
+        food = self.root / "verified_food_only.json"
+        full.write_text(json.dumps([{"source": "trash_detection", "image": "train__wrap.png"}]))
+        food.write_text(json.dumps([{"source": "plate", "image": "val__small.png"}]))
+        output = self.root / "generated_review_queue.csv"
+        counts = v2.make_review_queue(self.source_yaml, output, full, food)
+        self.assertEqual(counts, {"full_image_verified": 1,
+                                  "food_only_verified": 1, "not_verified": 0})
+        with output.open(newline="") as stream:
+            rows = list(csv.DictReader(stream))
+        self.assertEqual(len(rows), 2)
+        self.assertEqual({row["review_status"] for row in rows},
+                         {"full_image_verified", "food_only_verified"})
+        food_only = next(row for row in rows
+                         if row["review_status"] == "food_only_verified")
+        self.assertEqual(food_only["requires_all_11_class_review"], "yes")
+        self.assertEqual(len(food_only["label_sha256"]), 64)
+
     def test_codex_review_preset_applies_both_approved_sources(self):
         audit = self.root / "data/audits/v2_review_2026-10-12"
         audit.mkdir(parents=True)
