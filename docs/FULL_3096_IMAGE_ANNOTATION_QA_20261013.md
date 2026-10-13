@@ -219,3 +219,26 @@ additional images** received review-backed changes: 5 plate scenes
 The 3,096-image structural audit is complete; all-11-class exhaustive visual
 verification is still not complete. Old validation scores are not valid for
 this corrected set without reevaluation.
+
+## Ongoing October 13 verification: corrected plate-only labels
+
+Six additional previously unreviewed plate images were visually checked at
+original photo resolution, with **13 missing boxes** added (food and eating
+utensils): LVIS `144065`, `167520`, `212248`, `351608`,
+`371950`, `478407`. Four more original-resolution reviews
+added **9 boxes**: LVIS `143143`, `384981`, `479350`, `499705`.
+They preserve every pre-existing plate box, source checksums, image
+split membership, and all raw V1 labels. The total V2 reviewed override count
+is now **210**. These images are a subset of the full unreviewed corpus,
+not a claim that all 3,096 annotations have been signed off.
+
+A visually tempting candidate `lvis_196888` was *not* annotated as food:
+the dark object on the plate is a bird. The crowded `lvis_506011`
+remains flagged for further human review because the tabletop contains
+ambiguous small decorations and multiple eating objects. The original
+photos were checked to avoid using a pretrained detection as ground truth.
+
+**Additional semantic cross-check requested:** a pretrained COCO-only object
+detector scan of all 3,096 final V2 images with separate exported candidate
+queue. Its proposals must remain *unverified*, and its COCO ontology
+cannot resolve plates, wrappers, napkins or packets.
