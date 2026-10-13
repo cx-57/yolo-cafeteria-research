@@ -1,0 +1,6 @@
+image,reviewed_by,image_inspected,class_2_paperboat_count,annotation_review_status,notes
+val__000000082449.jpg,ChatGPT visual audit,yes,1,provisional_needs_boundaries_review,Close-cropped hotdog in folded paper holder; paper-boat extent vs flexible paper wrap remains ambiguous. Fries clipped at image edge.
+val__000000112486.jpg,ChatGPT visual audit,yes,1,provisional_needs_all_classes_review,Red checkered shallow fries boat visibly fits class 2; hotdog and fries foods visible. Large yellow tray liner may require napkin policy.
+val__000000185623.jpg,ChatGPT visual audit,yes,1,provisional_condiment_uncertain,White food boat clearly holds hotdog; right plastic soda bottle fits bottle. Left green packet inside transparent packaging needs class 7 assessment.
+val__000000348519.jpg,ChatGPT visual audit,yes,1,strong_paperboat_draft,Clearly formed white paperboard serving boat with visible slaw pork sandwich and plastic fork; review box tightly at high resolution before approving full 11-class label.
+val__000000557539.jpg,ChatGPT visual audit,yes,3,provisional_napkin_uncertain,Three separate white paperboard trays appear beneath fries corn dog and hotdog. White paper liner under corndog may require additional napkin label.
