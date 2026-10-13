@@ -586,7 +586,8 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
     food = json.loads(food_file.read_text())
     if not isinstance(overrides, list) or not isinstance(food, list):
         raise ValueError("Review files must contain lists")
-    full_names = {r["source"] + "__" + Path(r["image"]).stem for r in overrides}
+    override_names = {r["source"] + "__" + Path(r["image"]).stem for r in overrides}
+    full_names = set(override_names)
     # Manually inspected images with already-correct labels need no override.
     # Do not count thumbnail-only, ambiguous, or needs_followup decisions.
     review_csv = review_root / "image_review.csv"
@@ -619,7 +620,10 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
             lines = [line for line in label.read_text().splitlines() if line.strip()]
             ids = sorted({int(row.split()[0])
                           for row in validate_rows(lines, label, names)})
-            if photo.stem in unchanged_hashes and digest(label) != unchanged_hashes[photo.stem]:
+            # A later human-approved override supersedes an earlier decision
+            # that the original label was already correct. Its hash must change.
+            if (photo.stem in unchanged_hashes and photo.stem not in override_names
+                    and digest(label) != unchanged_hashes[photo.stem]):
                 raise ValueError("Visually verified unchanged label has changed; re-review: "
                                  + str(label))
             if photo.stem in full_names:
