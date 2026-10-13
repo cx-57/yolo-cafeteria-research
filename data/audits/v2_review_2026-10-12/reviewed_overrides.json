@@ -1170,9 +1170,9 @@
     "complete": "yes",
     "reviewer": "Full-resolution visual correction 2026-10-13",
     "reason": "Whole hot dog, paper plate, white plastic fork and a partially visible Heinz ketchup packet were photographed; utensil and packet previously absent.",
-    "expected_label_sha256": "7f84addaf84fc679f677c94f94f84976304f8ecf5b36508ebcb01eaa6189494d",
+    "expected_label_sha256": "5f7ad9881947c517856332c35ca8278a8f1c64965282e800e6bc52cefb83fb1f",
     "rows": [
-      "1 0.500117188 0.514041667 0.999765625 0.965291667",
+      "1 0.500117188 0.514041667 0.999765624 0.965291667",
       "0 0.574358974 0.445392491 0.753846154 0.590443686",
       "3 0.52300000 0.76600000 0.79100000 0.46900000",
       "7 0.38600000 0.89800000 0.38300000 0.20400000"
