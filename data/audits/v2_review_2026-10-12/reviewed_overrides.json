@@ -2716,7 +2716,7 @@
     "complete": "yes",
     "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
     "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
-    "expected_label_sha256": "3a8a31a4a7b0064b3b15d7d1b4c4f75bd90aadf4896832e512839b74381b98",
+    "expected_label_sha256": "3a8a31a4a7b0064b3b8b15d7d1b4c4f75bd90aadf4896832e512839b74381b98",
     "rows": [
       "9 0.5100000 0.5200000 0.8600000 0.6800000"
     ]
