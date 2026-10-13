@@ -1,0 +1,15 @@
+image,label,split,session,reviewer,reviewed,complete,source_url,license,attribution
+lvis_trays/val__000000082449.jpg,lvis_trays/provisional_labels/val__000000082449.txt,train,lvis-tray-82449,AI-assisted-photo-review,no,no,,,
+lvis_trays/val__000000112486.jpg,lvis_trays/provisional_labels/val__000000112486.txt,train,lvis-tray-112486,AI-assisted-photo-review,no,no,,,
+lvis_trays/val__000000185623.jpg,lvis_trays/provisional_labels/val__000000185623.txt,train,lvis-tray-185623,AI-assisted-photo-review,no,no,,,
+lvis_trays/val__000000348519.jpg,lvis_trays/provisional_labels/val__000000348519.txt,train,lvis-tray-348519,AI-assisted-photo-review,no,no,,,
+lvis_trays/val__000000557539.jpg,lvis_trays/provisional_labels/val__000000557539.txt,train,lvis-tray-557539,AI-assisted-photo-review,no,no,,,
+weak_cafeteria_20261013/../commons/commons_3501350.jpg,weak_cafeteria_20261013/labels/commons_3501350.txt,train,commons-3501350,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=3501350,Public domain,Commons page 3501350
+weak_cafeteria_20261013/../commons/commons_201481455.jpg,weak_cafeteria_20261013/labels/commons_201481455.txt,train,commons-201481455,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=201481455,CC BY-SA 4.0,Commons page 201481455
+weak_cafeteria_20261013/../commons/commons_191573847.jpg,weak_cafeteria_20261013/labels/commons_191573847.txt,train,commons-191573847,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=191573847,CC BY-SA 4.0,Commons page 191573847
+weak_cafeteria_20261013/../commons/commons_83765874.jpg,weak_cafeteria_20261013/labels/commons_83765874.txt,train,commons-83765874,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=83765874,CC BY-SA 4.0,Commons page 83765874
+weak_cafeteria_20261013/../commons/commons_183912352.jpg,weak_cafeteria_20261013/labels/commons_183912352.txt,train,commons-183912352,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=183912352,CC0,Commons page 183912352
+weak_cafeteria_20261013/../commons_extra/commons_89546615.jpg,weak_cafeteria_20261013/labels/commons_89546615.txt,train,commons-89546615,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=89546615,CC BY-SA 4.0,Commons page 89546615
+weak_cafeteria_20261013/../commons_extra/commons_191768172.jpg,weak_cafeteria_20261013/labels/commons_191768172.txt,train,commons-191768172,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=191768172,CC BY-SA 4.0,Commons page 191768172
+weak_cafeteria_20261013/../commons_extra/commons_171470730.jpg,weak_cafeteria_20261013/labels/commons_171470730.txt,train,commons-171470730,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=171470730,CC BY-SA 4.0,Commons page 171470730
+weak_cafeteria_20261013/../commons_extra/commons_66322484.jpg,weak_cafeteria_20261013/labels/commons_66322484.txt,train,commons-66322484,AI-assisted-provisional,no,no,https://commons.wikimedia.org/?curid=66322484,CC BY-SA 4.0,Commons page 66322484
