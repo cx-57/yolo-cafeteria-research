@@ -231,13 +231,13 @@ class V2WorkflowTests(unittest.TestCase):
             v2.build(self.args(use_codex_review=True))
         self.assertEqual(
             (self.output / "labels/train/trash_detection__train__wrap.txt").read_text(),
-            "8 .5 .5 .4 .4\\n")
+            "8 .5 .5 .4 .4\n")
         self.assertIn("0 .2 .2 .1 .1",
                       (self.output / "labels/val/plate__val__small.txt").read_text())
         report = json.loads((self.output / "v2_build.json").read_text())
         self.assertTrue(report["reviewed_audit_applied"])
         self.assertEqual(report["legacy_validation_images_moved"], 0)
-        self.assertEqual(original.read_text(), "9 .5 .5 .4 .4\\n")
+        self.assertEqual(original.read_text(), "9 .5 .5 .4 .4\n")
 
     def test_codex_review_preset_rejects_ambiguous_explicit_files(self):
         with self.assertRaisesRegex(ValueError, "do not combine"):
