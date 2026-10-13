@@ -1,0 +1,58 @@
+# October 13 V2 weak-class prediction review (38 original validation images)
+
+## Evidence / reproducibility
+The user supplied `v2-weak-fast10-review.zip` (SHA-256 `02b39e4e9b038ad356a87920946ab7d404f43e019eaf14c5f0140f84238b3d76`), containing 38 side-by-side source/YOLO prediction overlays, `summary.json` and 99 queued unmatched GT/prediction rows in `review_queue.csv`. The ZIP and trained `best.pt` live outside this repository. This report is derived from the actual overlays/CSV, not inferred from logs or an unperformed model run.
+
+Inference: `v2-weak-fast10/weights/best.pt`, 640-pixel inference, confidence **0.20**, matching IoU **0.50**. The 38 images were **selected**, not a random benchmark sample: 15 LVIS plate-source images and 23 Trash Detection images, 591 total images in the underlying unchanged public-source V2 validation split. Image names containing `train__` or `valid__` retain **original source-split identifiers**; every image in this ZIP was drawn from the new `val` directory. No independent NHS cafeteria test was run.
+
+## Measured errors (selected 38-image diagnostic ONLY)
+
+| Target | Ground-truth objects | Same-class matches | Selected-cohort recall |
+| --- | ---: | ---: | ---: |
+| Plate | 32 | 16 | 50.0% |
+| Wrapper | 9 | 1 | 11.1% |
+| Bottle | 26 | 13 | 50.0% |
+
+The 38-image diagnostic also includes 27 labeled food objects (13 matched). The selection mechanism is concentrated on difficult objects. These counts **do not replace** Ultralytics AP50 or its per-class `recall` (which uses its own metric operating point). The initial viewer used greedy IoU matching, which can undercount crowded plates; the later viewer code uses maximum-cardinality same-class matching. These original observed numbers have **not** been silently recalculated or modified.
+
+### Object area is a strong failure mode
+
+- **Plates occupying <1% of frame:** 3/12 matched. **Plates >=16% of frame:** 6/7 matched.
+- **Bottles occupying <1%:** 3/15 matched. **Bottles 1–4%:** 8/8 matched.
+- Source scenes include tiny edge-clipped/background plates, large/occluded food over plates, and bottles lost among vegetation or trash. Larger input alone and naive sliced inference had already failed separate diagnostic tests. New in-context small-object **training coverage** is a stronger next hypothesis than another untuned image-size increase.
+
+### Directly observed wrong-class overlaps (not label certification)
+
+Comparison of the uploaded *unmatched-label* and *unmatched-prediction* box coordinates finds:
+
+| Source image (short) | Actual labeled class | Predicted class | Box IoU | Predicted conf |
+| --- | --- | --- | ---: | ---: |
+| `trash_detection__train__000055_jpg.rf.29daca…` | wrapper | bottle | **0.883** | 0.211 |
+| `trash_detection__train__IMG_5041_JPG.rf.901be…` | wrapper | condiment_packet | **0.744** | 0.362 |
+| `plate__train__lvis_000000274804` | food | plate | 0.543 | 0.545 |
+| `plate__train__lvis_000000515662` | plate | food | 0.541 | 0.240 |
+
+The first two are visually supported wrapper-vs-other-class confusions: flattened snack packet on outdoor ground, and a Lay's snack bag. Plate/food overlap often occurs because both physical objects occupy the same pixels, so the other two are *review candidates* rather than certified misclassifications.
+
+### Domain mismatch is visible, not merely inferred
+
+- Trash Detection images show packaging and bottles on **roadsides, in gravel, on grass, beside fences and buried in litter** rather than resting on cafeteria trays. Example: `trash_detection__train__000085_JPG.rf.d198…` has seven missed tiny bottle boxes amid plants and discarded items.
+- LVIS plate scenes include people dining far away, nearly hidden plate rims under food, a tiny distant plate in a livestock/stable setting, and a cat/pastry scene with only a thin visible plate edge.
+- `trash_detection__valid__000082_JPG.rf.7a7…`: small crumpled outdoor wrapper, no detection at 0.20.
+- `plate__train__lvis_000000022411`: distant crowded dining scene with eight unmatched plate labels and five unmatched plate predictions.
+
+Do **not** auto-delete such challenging samples or assume their original boxes are wrong. They expose the current model's weaknesses, but public-source AP is not NHS cafeteria AP.
+
+## Actions / constraints
+
+1. **Hold training now.** The last 10-epoch weak-class fine-tune changed the classification/recall trade-off without achieving strong AP: wrapper AP50 0.298, plate AP50 0.444, bottle AP50 0.477; overall AP50 0.736.
+2. **Add source-domain matched, diverse still photos**: cafeteria trays, wrapper/bottle side-by-side hard negatives, crushed snack packaging, partially food-covered plates, realistic object scale and varying lighting/backgrounds. Use separate capture sessions/days and *all 11* target labels on mixed scenes. More repetitions of the same outdoor litter will not substitute for this.
+3. **Visually adjudicate the highest-priority images** with the original full-resolution labels before accepting any box correction; only add audited changes to V2 copies with source hashes. Keep immutable V1 labels and frozen validation membership. Do not relabel wrappers as bottles based on the model's opinion.
+4. **Keep exact independent NHS scenes for the final held-out test.** V2 lacks positive validation for paper_boat, napkin, condiment_packet; bowl has only two objects, insufficient to claim reliability.
+5. **Retain matched controls** for future experiments (same images, training budget, seed, augmentation, validation). Candidate source-aware loss is a hypothesis, not a demonstrated fix. The current Mac reported Ultralytics 8.4.80 whereas repo pins 8.4.175; align the environment before API-dependent loss comparisons.
+
+## Engineering fix to diagnostics
+
+`scripts/inspect_predictions.py` now does maximum-cardinality distinct same-class matches instead of greedy pair selection (avoids undercounting overlapping plates). It also writes `wrong_class_candidates.csv` recording candidate high-IoU overlaps, explicitly marked as **potential confusions** rather than adjudicated relabeling. These changes improve error accounting; **they have no effect on trained weights or official Ultralytics AP**.
+
+**Next evidence needed:** verified NHS in-domain training/validation images and rerun of actual predictions on an independently labeled cohort. Do not assert a new percentage improvement until measured.
