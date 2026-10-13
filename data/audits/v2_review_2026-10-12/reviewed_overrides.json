@@ -2358,5 +2358,75 @@
       "0 0.65700000 0.86500000 0.35300000 0.26900000",
       "3 0.28700000 0.75000000 0.57400000 0.14800000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000042683.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution individual image-plus-label visual review 2026-10-13",
+    "reason": "One baked bun and separate grilled sausage on a blue paper plate were present without food labels.",
+    "expected_label_sha256": "aa6e32fb675fc6bc5807ffe0901561256417ceb871c709583369e4c3b7ec29",
+    "rows": [
+      "1 0.497459150 0.583627451 0.779428105 0.358039216",
+      "0 0.35000000 0.57500000 0.36000000 0.30000000",
+      "0 0.55000000 0.58000000 0.20000000 0.25000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000226988.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution individual image-plus-label visual review 2026-10-13",
+    "reason": "Three distinct barbecue/grilled meat portions were present on overlapping white plates without class-food annotations.",
+    "expected_label_sha256": "3bb084c9bbc89ec8a308d79903cee06488c97eaf67f7945fd5ddec36fa75954b",
+    "rows": [
+      "1 0.502986667 0.869510000 0.698453333 0.257180000",
+      "1 0.241706667 0.706260000 0.333173333 0.221400000",
+      "1 0.645026667 0.689240000 0.522533333 0.279440000",
+      "0 0.34000000 0.57000000 0.27000000 0.17000000",
+      "0 0.59000000 0.62000000 0.41000000 0.26000000",
+      "0 0.47000000 0.80000000 0.29000000 0.16000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000201426.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution individual image-plus-label visual review 2026-10-13",
+    "reason": "Large cheese pizza slice and separate partly cropped piece of bread on two labeled plates were missing food boxes.",
+    "expected_label_sha256": "01b22b1937dc7d35be9cbe4de577048afd267da9b583d22069bb416d5429b639",
+    "rows": [
+      "1 0.944882813 0.763020408 0.110234375 0.110979592",
+      "1 0.515671875 0.855581633 0.437343750 0.181367347",
+      "0 0.51000000 0.81000000 0.40000000 0.13000000",
+      "0 0.95000000 0.79000000 0.10000000 0.13000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000317147.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution individual image-plus-label visual review 2026-10-13",
+    "reason": "Visible piece of leftover cooked food on paper plate beside cat was unlabeled class food.",
+    "expected_label_sha256": "8817a9820467f5fed0c35582b4ff4c3ef9282c9f078e1cc66320fefdf4122891",
+    "rows": [
+      "1 0.595822917 0.702382813 0.808354167 0.291984375",
+      "0 0.56000000 0.67000000 0.22000000 0.16000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000072646.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution individual image-plus-label visual review 2026-10-13",
+    "reason": "Single birthday cake and metal fork on infant's high-chair tray were missing food/utensil boxes; background disposable plate labels preserved.",
+    "expected_label_sha256": "1df39a878d7a34029156c4d1e1fd836d7beb84b97cd60e991f33108c37ed0f5d",
+    "rows": [
+      "1 0.359187500 0.515398126 0.091250000 0.076697892",
+      "1 0.404515625 0.844742389 0.338968750 0.132060890",
+      "1 0.320671875 0.464964871 0.145281250 0.068618267",
+      "0 0.36000000 0.76000000 0.30000000 0.21000000",
+      "3 0.49000000 0.88500000 0.18000000 0.06500000"
+    ]
   }
 ]
