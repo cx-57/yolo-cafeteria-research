@@ -3029,5 +3029,18 @@
       "0 0.07812500 0.45000000 0.15625000 0.34814815",
       "0 0.85156250 0.44861111 0.29687500 0.34722222"
     ]
+  },
+  {
+    "source": "food_american",
+    "image": "test__images_jpg.rf.2e1375c3d05007414011f60f20dd3797.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 native-resolution original photograph and existing/proposed box overlay manual 11-class review 2026-10-13",
+    "reason": "Original 201x251 image shows a separately identifiable burger (existing box retained), a surrounding serving of french fries, and a cropped gray serving plate visible along bottom. Added food box for fries and plate box for visible rim. No drink carton, napkin, utensil, bottle, bowl, packet, paper boat, hinged container or wrapper.",
+    "expected_label_sha256": "5bdc61a8380f80ca896b694b43fd46dcd7088d6c3a96b5e916cec06c534cd813",
+    "rows": [
+      "0 0.601990 0.430279 0.656716 0.541833",
+      "0 0.50000000 0.63745020 1.00000000 0.63745020",
+      "1 0.50000000 0.94820717 1.00000000 0.10358566"
+    ]
   }
 ]
