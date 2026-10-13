@@ -24,6 +24,32 @@ class InspectionTests(unittest.TestCase):
         self.assertEqual(matched_pred, {0})
         self.assertEqual(review.box_iou((0,0,1,1),(2,2,3,3)), 0)
 
+    def test_overlapping_objects_use_maximum_number_of_distinct_matches(self):
+        # Greedy IoU matching picks A->1 and loses B. Augmenting paths
+        # should reassign A->2 so that B->1 is also correctly counted.
+        targets = [(1, (0,), None), (1, (1,), None)]
+        predictions = [(1, (0,), .8), (1, (1,), .7)]
+        weights = {(0, 0): .95, (0, 1): .8,
+                   (1, 0): .8, (1, 1): .1}
+        with patch.object(review, "box_iou",
+                          side_effect=lambda a, b: weights[(a[0], b[0])]):
+            matched_gt, matched_pred = review.match(targets, predictions, 0.5)
+        self.assertEqual(matched_gt, {0, 1})
+        self.assertEqual(matched_pred, {0, 1})
+
+    def test_wrong_class_overlap_is_explicitly_flagged_not_reclassified(self):
+        targets = [(8, (0, 0, 100, 100), None)]
+        preds = [(9, (2, 2, 98, 98), .73),
+                 (8, (200, 200, 250, 250), .61)]
+        matched_gt, matched_pred = review.match(targets, preds, .5)
+        self.assertEqual((matched_gt, matched_pred), (set(), set()))
+        conflicts = review.wrong_class_candidates(
+            targets, preds, matched_gt, matched_pred, .5)
+        self.assertEqual(len(conflicts), 1)
+        self.assertEqual(conflicts[0][:2], (0, 0))
+        self.assertGreater(conflicts[0][2], .9)
+        self.assertEqual(targets[0][0], 8)  # Never rewrite ground truth.
+
     def test_size_bins_and_stratified_review_keep_occluded_candidates(self):
         self.assertEqual(review.size_band(.009), "tiny_under_1pct")
         self.assertEqual(review.size_band(.01), "small_1_to_4pct")
@@ -70,6 +96,7 @@ class InspectionTests(unittest.TestCase):
             self.assertEqual(report["per_class"]["plate"]["matched"], 1)
             self.assertEqual(report["by_object_area"]["plate"]["large_16pct_plus"]["matched"], 1)
             self.assertTrue((root/"output/review_queue.csv").is_file())
+            self.assertTrue((root/"output/wrong_class_candidates.csv").is_file())
             with Image.open(root/"output/plate__partly_hidden.jpg") as im:
                 self.assertEqual(im.size, (320, 120))
 
