@@ -126,11 +126,27 @@ jobs:
           report = json.loads(Path("data/training-ci-v2-reviewed/v2_build.json").read_text())
           summary = json.loads(Path("data/training-ci-v2-reviewed/experiment_summary.json").read_text())
           assert report["reviewed_audit_applied"] is True
-          assert len(report["reviewed_overrides"]) == 11
+          assert len(report["reviewed_overrides"]) == 16
           assert summary["additions"]["accepted"] >= 500
           assert report["final_audit"]["image_counts"]["train"] > 2400
           assert report["final_audit"]["image_counts"]["val"] > 0
           assert report["dataset_sha256"]
+          # These five photos are visually verified torn sheets of paper,
+          # not cafeteria napkins. V2 keeps the photos as negative examples;
+          # original V1 class-5 labels remain unchanged.
+          negatives = (
+              "test__paper60_jpg.rf.73d291a8166688bf2c5608b92092418f",
+              "train__paper191_jpg.rf.a2f073f30f0e628c0f1cb3405c90077f",
+              "train__paper528_jpg.rf.671a8f48554d5bdc824dfb5e9a7562e5",
+              "train__paper538_jpg.rf.c3d5b8043687ba0f72e92a82e44b39aa",
+              "train__paper63_jpg.rf.d5f2acae59c3188321f106cb261a9d53",
+          )
+          for name in negatives:
+              output = Path("data/training-ci-v2-reviewed/labels/train") / ("dry_wet_waste__" + name + ".txt")
+              original = Path("data/training/labels/train") / ("dry_wet_waste__" + name + ".txt")
+              assert output.is_file() and not output.read_text().strip(), output
+              assert original.is_file() and original.read_text().startswith("5 "), original
+          print("Five corrected false-napkin negatives in V2 only; V1 labels unchanged")
           print("FULL V2 REVIEWED DATASET SMOKE PASS")
           print("Image counts:", report["final_audit"]["image_counts"])
           print("Approved food boxes accepted:", summary["additions"]["accepted"])
