@@ -352,7 +352,7 @@ def prepare_weak_subset(source, output, weak_classes=("plate", "wrapper", "bottl
         rows = validate_rows([r for r in label.read_text().splitlines() if r.strip()],
                              label, names)
         # Keep original plus every __balanced view in the SAME group.
-        key = __import__("re").sub(r"__balanced\\d+$", "", image.stem)
+        key = __import__("re").sub(r"__balanced\d+$", "", image.stem)
         group = groups.setdefault(key, {"images": [], "class_ids": set()})
         group["images"].append(image)
         group["class_ids"].update(int(row.split()[0]) for row in rows)
@@ -375,7 +375,7 @@ def prepare_weak_subset(source, output, weak_classes=("plate", "wrapper", "bottl
         raise ValueError("Weak subset lost a required class")
     output.mkdir(parents=True)
     manifest = output / "train.txt"
-    manifest.write_text("".join(str(image) + "\\n" for image in chosen))
+    manifest.write_text("".join(str(image) + "\n" for image in chosen))
     result = dict(data)
     result["path"] = str(root.resolve())
     result["train"] = str(manifest.resolve())
@@ -398,7 +398,7 @@ def prepare_weak_subset(source, output, weak_classes=("plate", "wrapper", "bottl
         "validation_unchanged": True,
         "all_class_labels_preserved": True,
     }
-    (output / "weak_subset.json").write_text(json.dumps(details, indent=2) + "\\n")
+    (output / "weak_subset.json").write_text(json.dumps(details, indent=2) + "\n")
     print(f"Weak-class fast subset: {len(chosen)} of {len(images)} training views "
           f"({len(chosen) / len(images):.1%}).")
     print(f"Selected {len(selected_weak)} weak original groups + "
