@@ -554,6 +554,59 @@ def report(args):
     print("These metrics compare models on validation, not an independent final test.")
 
 
+
+def make_review_queue(data_file, output, overrides_file=None, food_file=None):
+    """List all images and explicitly distinguish partial from full visual sign-off."""
+    dataset = load_dataset(data_file)
+    review_root = PROJECT_ROOT / "data/audits/v2_review_2026-10-12"
+    overrides_file = Path(overrides_file or review_root / "reviewed_overrides.json")
+    food_file = Path(food_file or review_root / "lvis_food_approved.json")
+    overrides = json.loads(overrides_file.read_text())
+    food = json.loads(food_file.read_text())
+    if not isinstance(overrides, list) or not isinstance(food, list):
+        raise ValueError("Review files must contain lists")
+    full_names = {r["source"] + "__" + Path(r["image"]).stem for r in overrides}
+    food_names = {r["source"] + "__" + Path(r["image"]).stem for r in food}
+    rows = []
+    counts = {"full_image_verified": 0, "food_only_verified": 0, "not_verified": 0}
+    names = class_names()
+    for split, photos in dataset.items():
+        for photo in photos:
+            label = label_path(photo)
+            if not label.is_file():
+                raise ValueError("Missing review-queue label: " + str(label))
+            lines = [line for line in label.read_text().splitlines() if line.strip()]
+            ids = sorted({int(row.split()[0])
+                          for row in validate_rows(lines, label, names)})
+            if photo.stem in full_names:
+                status = "full_image_verified"
+            elif photo.stem in food_names:
+                status = "food_only_verified"
+            else:
+                status = "not_verified"
+            counts[status] += 1
+            rows.append({
+                "split": split, "image": str(photo),
+                "source_group": source_group(photo.name),
+                "classes": "|".join(names[i] for i in ids),
+                "instances": len(lines), "review_status": status,
+                "requires_all_11_class_review": (
+                    "no" if status == "full_image_verified" else "yes"),
+                "label_sha256": digest(label)
+            })
+    output = Path(output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", newline="") as stream:
+        fields = ("split", "image", "source_group", "classes", "instances",
+                  "review_status", "requires_all_11_class_review", "label_sha256")
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+    print("V2 image-level review queue:", output)
+    print("Review counts:", counts, "total", len(rows))
+    return counts
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -587,6 +640,11 @@ def main():
     comparison.add_argument("--allow-incomplete", action="store_true")
     comparison.add_argument("--epochs", type=int, default=80)
     comparison.add_argument("--tag", help="Trial output tag; default e<epochs>")
+    queue = commands.add_parser("review-queue", help="Generate per-photo 11-class review register")
+    queue.add_argument("--data", default=str(PROJECT_ROOT / "data/training/data.yaml"))
+    queue.add_argument("--output", default=str(PROJECT_ROOT / "data/audits/v2_review_2026-10-12/review_queue_generated.csv"))
+    queue.add_argument("--reviewed-overrides", type=Path)
+    queue.add_argument("--food-reviews", type=Path)
     args = parser.parse_args()
     try:
         if args.command == "build":
@@ -595,6 +653,9 @@ def main():
             if args.epochs < 1 or args.batch < 1:
                 raise ValueError("--epochs and --batch must be positive")
             train(args)
+        elif args.command == "review-queue":
+            make_review_queue(args.data, args.output, args.reviewed_overrides,
+                              args.food_reviews)
         else:
             report(args)
     except (OSError, ValueError, yaml.YAMLError, subprocess.CalledProcessError) as error:
