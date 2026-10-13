@@ -1190,5 +1190,135 @@
       "0 0.48300000 0.43400000 0.39400000 0.44800000",
       "3 0.38100000 0.70000000 0.65000000 0.34000000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000052494.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Two distinct hot dogs on an otherwise correctly labeled paper plate were missing food boxes.",
+    "expected_label_sha256": "8ada97b52ad1b59635f8aaa73e751a0c582e065c4ce4855630b320139c7e8f43",
+    "rows": [
+      "1 0.517187500 0.493536896 0.641875000 0.911348601",
+      "0 0.51250000 0.24100000 0.39500000 0.31200000",
+      "0 0.48750000 0.55100000 0.45500000 0.29000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000075628.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Visible large baked pizza/quiche was not labeled food; retain small distant plate boxes.",
+    "expected_label_sha256": "00c0d6e391b253d465443a0407d02ccb0b168f483399bdfa21b430c998deffe7",
+    "rows": [
+      "1 0.961000000 0.010992991 0.035125000 0.021985981",
+      "1 0.716460937 0.068948598 0.300421875 0.128598131",
+      "1 0.031625000 0.327394860 0.059937500 0.253574766",
+      "0 0.49400000 0.49300000 0.72600000 0.73400000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000096048.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Partially frame-clipped pizza serving on foreground paper plate had no food box.",
+    "expected_label_sha256": "8b37d707cd9f038553703b0d7e733f708501dbdd2301e917e2464f4ec0d2ab01",
+    "rows": [
+      "1 0.730335937 0.864906250 0.539328125 0.270187500",
+      "0 0.72250000 0.94650000 0.34500000 0.10700000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000113905.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Three separately visible hot dogs on plate were entirely unlabeled as food.",
+    "expected_label_sha256": "cf6935e6d2a227ea4c90efc0a1176e8835972aafd230b4a08d6e3544704d2cda",
+    "rows": [
+      "1 0.496023438 0.566416667 0.464703125 0.508625000",
+      "0 0.55400000 0.34350000 0.23200000 0.11700000",
+      "0 0.40850000 0.49250000 0.25300000 0.18900000",
+      "0 0.50900000 0.62600000 0.28800000 0.20200000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000123946.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Two hot dogs and separate sealed green relish packet on the same paper plate were not labeled.",
+    "expected_label_sha256": "85682ddb4a51ce7beb7c4fc27ba45a529af23cd890db4e3c269d60cd49b46653",
+    "rows": [
+      "1 0.499760417 0.637109375 0.998937500 0.723968750",
+      "0 0.39750000 0.51300000 0.33900000 0.37400000",
+      "0 0.58900000 0.56350000 0.33600000 0.43700000",
+      "7 0.56300000 0.81200000 0.32600000 0.11000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000133722.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Pizza slice in front of diner's mouth was missing food bounding box; small paper plate already labeled.",
+    "expected_label_sha256": "bd5223f0d8c2000f6dccbbc57fbd5fc3192a77f4cdbfa1ac9e489a0bd3ee59f3",
+    "rows": [
+      "1 0.600484375 0.732798595 0.422250000 0.132201405",
+      "0 0.71700000 0.56100000 0.43000000 0.32800000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000144275.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Large slice of layered chocolate cake on the plate was unlabeled as food.",
+    "expected_label_sha256": "4b926479da9a93750ec723633fe409f9e82a06ecfa9f3c9132b9c9bc05aa90e4",
+    "rows": [
+      "1 0.500000000 0.651159251 1.000000000 0.697681499",
+      "0 0.51400000 0.50000000 0.70000000 0.63000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000190177.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Single chocolate cake slice on white plate was unlabeled as food.",
+    "expected_label_sha256": "013e5218f096a81db4c05726aa2d1a6bbed606f2986ba227ffcc78c7b36e7037",
+    "rows": [
+      "1 0.504070000 0.561666667 0.986660000 0.872826667",
+      "0 0.49450000 0.49750000 0.85300000 0.79300000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000236626.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Small red cake portion on the foreground plate was unlabeled as food.",
+    "expected_label_sha256": "572ea385d082b5cdbb1b294f04e67200012e9f741ab4290c4b6328edfb73745b",
+    "rows": [
+      "1 0.822328125 0.903629977 0.142156250 0.192740047",
+      "1 0.686609375 0.895761124 0.355031250 0.199156909",
+      "1 0.882054688 0.479028103 0.070421875 0.025644028",
+      "1 0.966187500 0.924203747 0.067625000 0.151592506",
+      "0 0.70950000 0.86800000 0.27300000 0.17400000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000254454.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution visible-object review 2026-10-13",
+    "reason": "Single triangular pizza slice on paper plate below child's hands was unlabeled as food.",
+    "expected_label_sha256": "66a4867e63e182031e306a4a9bdd94c22099c65b380f0c477d420f2b8ee497fd",
+    "rows": [
+      "1 0.545648585 0.849984375 0.656721698 0.228375000",
+      "0 0.54650000 0.78900000 0.37100000 0.17800000"
+    ]
   }
 ]
