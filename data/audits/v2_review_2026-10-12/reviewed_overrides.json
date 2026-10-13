@@ -701,5 +701,29 @@
       "10 0.254464286 0.706845238 0.450892857 0.586309524",
       "10 0.728794643 0.724702381 0.493303571 0.550595238"
     ]
+  },
+  {
+    "source": "food_american",
+    "image": "test__images_jpg.rf.973a4d3b990e21abc41dac7e505aa01c.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "White shallow oval serving plate is clearly visible around mixed vegetables/chicken. Preserve source food box; add missing plate class 1 on its exterior.",
+    "expected_label_sha256": "58701d5332ea99a38e269f5d7a7d9e5214df37440cb5c9208505ae31506f0523",
+    "rows": [
+      "0 0.527027 0.497423 0.814672 0.809278",
+      "1 0.505000000 0.512500000 0.870000000 0.915000000"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "test__images_jpg.rf.bf08e877a83399f5dc79acec8f19877a.jpg",
+    "complete": "yes",
+    "reviewer": "ChatGPT direct full-resolution visual inspection 2026-10-12",
+    "reason": "Large white circular salad bowl with visible rim; existing food detection covers salad contents only. Preserve food box and add the white bowl class 10.",
+    "expected_label_sha256": "f4f42aaf164a68e898f5cbc23343e681ab749b9d5cc91e1abcec5249e61426a8",
+    "rows": [
+      "0 0.508993 0.519231 0.737410 0.961538",
+      "10 0.545000000 0.510000000 0.810000000 0.980000000"
+    ]
   }
 ]
