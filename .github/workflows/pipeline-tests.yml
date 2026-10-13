@@ -357,6 +357,50 @@ jobs:
                      for x in (p/"images/val").iterdir())
           print("PASS 14 distinct PROVISIONAL training photos, unchanged 591 validation")
           PY
+      - name: Create contact sheet for provisional candidate box review
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw
+          import json
+          root = Path("data/v2_candidates")
+          records = json.loads((root/"weak_cafeteria_20261013/SOURCES.json").read_text())["images"]
+          names = ["food", "plate", "paper_boat", "utensil", "hinged_container",
+                   "napkin", "drink_carton", "condiment_packet", "wrapper", "bottle", "bowl"]
+          contact = Image.new("RGB", (3*440, 3*325), "white")
+          canvas = ImageDraw.Draw(contact)
+          for i, record in enumerate(records):
+              stem = f"commons_{record['id']}"
+              paths = list((root/"commons").glob(stem+".jpg")) + list(
+                  (root/"commons_extra").glob(stem+".jpg"))
+              assert len(paths) == 1, record
+              with Image.open(paths[0]) as raw:
+                  image = raw.convert("RGB")
+              width, height = image.size
+              painter = ImageDraw.Draw(image)
+              rows = (root/"weak_cafeteria_20261013/labels"/(stem+".txt")).read_text().splitlines()
+              for row in rows:
+                  parts = row.split()
+                  klass = int(parts[0])
+                  x,y,w,h = map(float, parts[1:])
+                  box = ((x-w/2)*width, (y-h/2)*height,
+                         (x+w/2)*width, (y+h/2)*height)
+                  painter.rectangle(box, outline="lime", width=max(2,width//220))
+                  painter.text((box[0], max(0,box[1]-14)), names[klass], fill="yellow",
+                               stroke_width=1, stroke_fill="black")
+              image.thumbnail((420, 270))
+              col, row = i%3, i//3
+              contact.paste(image, (col*440+10, row*325+35))
+              canvas.text((col*440+10, row*325+12),
+                          stem + "  (PROVISIONAL)", fill="black")
+          contact.save("/tmp/weak-class-provisional-review.jpg", quality=90)
+          print("Created 9-photo contact sheet for manual label approval")
+          PY
+      - name: Upload weak-class candidate review contact sheet
+        uses: actions/upload-artifact@v4
+        with:
+          name: weak-class-provisional-review
+          path: /tmp/weak-class-provisional-review.jpg
       - name: Preserve Codex-reviewed V2 build report
         uses: actions/upload-artifact@v4
         with:
