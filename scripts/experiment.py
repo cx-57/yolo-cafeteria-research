@@ -304,6 +304,109 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
     return data_file
 
 
+
+def prepare_weak_subset(source, output, weak_classes=("plate", "wrapper", "bottle"),
+                        replay_fraction=0.15, seed=42):
+    """Make small train-only manifest; preserve ALL 11 labels and the full validation.
+
+    Original and focus-crop views of one source photo are selected together.
+    Strong-only replay guards against catastrophic forgetting during fine-tuning.
+    This operation creates just train.txt, data.yaml and a short JSON report.
+    """
+    source = Path(source).resolve()
+    source_yaml = source if source.suffix in {".yaml", ".yml"} else source / "data.yaml"
+    data = yaml.safe_load(source_yaml.read_text())
+    names = class_names()
+    check_names(data["names"], "source data.yaml")
+    weak_classes = tuple(dict.fromkeys(weak_classes))
+    if not weak_classes or set(weak_classes) - set(names):
+        raise ValueError("Weak classes must be nonempty valid class names")
+    if (isinstance(replay_fraction, bool) or
+            not isinstance(replay_fraction, (int, float)) or
+            not math.isfinite(replay_fraction) or not 0 <= replay_fraction <= 1):
+        raise ValueError("Replay fraction must be between 0 and 1")
+    if isinstance(seed, bool) or not isinstance(seed, int):
+        raise ValueError("Seed must be an integer")
+    root = Path(data.get("path") or source_yaml.parent)
+    if not root.is_absolute():
+        root = source_yaml.parent / root
+    train_dir = Path(data["train"])
+    val_dir = Path(data["val"])
+    if not train_dir.is_absolute():
+        train_dir = root / train_dir
+    if not val_dir.is_absolute():
+        val_dir = root / val_dir
+    train_dir, val_dir = train_dir.resolve(), val_dir.resolve()
+    if not train_dir.is_dir() or not val_dir.is_dir():
+        raise ValueError("Weak subset needs existing train/validation image directories")
+    output = Path(output).resolve()
+    check_output(output, [root, source_yaml.parent, train_dir, val_dir])
+    images = sorted(p for p in train_dir.iterdir() if p.suffix.lower() in IMAGE_SUFFIXES)
+    if not images:
+        raise ValueError("Source has no training photos")
+    groups = {}
+    for image in images:
+        label = label_path(image)
+        if not label.is_file():
+            raise ValueError("Missing training label: " + str(label))
+        rows = validate_rows([r for r in label.read_text().splitlines() if r.strip()],
+                             label, names)
+        # Keep original plus every __balanced view in the SAME group.
+        key = __import__("re").sub(r"__balanced\\d+$", "", image.stem)
+        group = groups.setdefault(key, {"images": [], "class_ids": set()})
+        group["images"].append(image)
+        group["class_ids"].update(int(row.split()[0]) for row in rows)
+    selected_ids = {names.index(name) for name in weak_classes}
+    selected_weak = {key for key, group in groups.items()
+                     if group["class_ids"] & selected_ids}
+    if not selected_weak:
+        raise ValueError("No training images contain selected weak classes")
+    replay_keys = sorted(
+        (key for key in groups if key not in selected_weak),
+        key=lambda key: hashlib.sha256(f"{seed}:{key}".encode()).digest())
+    replay_n = math.ceil(len(replay_keys) * replay_fraction)
+    selected = selected_weak | set(replay_keys[:replay_n])
+    chosen = sorted(image.resolve()
+                    for key in selected for image in groups[key]["images"])
+    support = Counter()
+    for key in selected:
+        support.update(groups[key]["class_ids"])
+    if any(support[cls] == 0 for cls in selected_ids):
+        raise ValueError("Weak subset lost a required class")
+    output.mkdir(parents=True)
+    manifest = output / "train.txt"
+    manifest.write_text("".join(str(image) + "\\n" for image in chosen))
+    result = dict(data)
+    result["path"] = str(root.resolve())
+    result["train"] = str(manifest.resolve())
+    result["val"] = str(val_dir)
+    # Keep the existing public validation and independent test, if any, untouched.
+    if data.get("test"):
+        test_dir = Path(data["test"])
+        result["test"] = str((test_dir if test_dir.is_absolute()
+                              else root / test_dir).resolve())
+    (output / "data.yaml").write_text(yaml.safe_dump(result, sort_keys=False))
+    details = {
+        "weak_classes": list(weak_classes), "replay_fraction": replay_fraction,
+        "seed": seed, "source": str(source_yaml), "source_training_views": len(images),
+        "selected_training_views": len(chosen),
+        "weak_original_groups": len(selected_weak),
+        "strong_only_groups_in_source": len(replay_keys),
+        "replay_original_groups": replay_n,
+        "selected_class_group_support": {name: support[i] for i, name in enumerate(names)},
+        "validation_path": str(val_dir),
+        "validation_unchanged": True,
+        "all_class_labels_preserved": True,
+    }
+    (output / "weak_subset.json").write_text(json.dumps(details, indent=2) + "\\n")
+    print(f"Weak-class fast subset: {len(chosen)} of {len(images)} training views "
+          f"({len(chosen) / len(images):.1%}).")
+    print(f"Selected {len(selected_weak)} weak original groups + "
+          f"{replay_n} strong-class replay groups. Validation unchanged.")
+    print("Prepared subset:", output / "data.yaml")
+    return output / "data.yaml"
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=PROJECT_ROOT / "data/training")
@@ -312,11 +415,24 @@ def main():
     parser.add_argument("--balance-classes", nargs="*", default=[], help="Classes receiving extra training views")
     parser.add_argument("--max-repeat", type=int, default=3, help="Maximum views per training original (1–3)")
     parser.add_argument("--crop-repeats", action="store_true",
-                        help="Replace repeated train-only weak-class views with 60%% focus crops")
+                        help="Replace repeated train-only weak-class views with 60% focus crops")
+    parser.add_argument("--weak-subset", action="store_true",
+                        help="Create a fast weak-class training list without copying photos")
+    parser.add_argument("--weak-classes", nargs="+",
+                        default=["plate", "wrapper", "bottle"])
+    parser.add_argument("--replay-fraction", type=float, default=0.15,
+                        help="Fraction of strong-only original photos to retain (default 0.15)")
     args = parser.parse_args()
     try:
-        prepare_experiment(args.source, args.output, args.label_additions,
-                           args.balance_classes, args.max_repeat, args.crop_repeats)
+        if args.weak_subset:
+            if args.label_additions or args.crop_repeats or args.balance_classes:
+                raise ValueError("Weak-subset mode takes an existing prepared dataset; "
+                                 "run label/crop experiments separately first")
+            prepare_weak_subset(args.source, args.output,
+                                args.weak_classes, args.replay_fraction)
+        else:
+            prepare_experiment(args.source, args.output, args.label_additions,
+                               args.balance_classes, args.max_repeat, args.crop_repeats)
     except (OSError, KeyError, TypeError, ValueError, yaml.YAMLError) as error:
         parser.error(str(error))
 
