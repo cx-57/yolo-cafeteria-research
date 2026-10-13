@@ -419,6 +419,18 @@ class TrainingControlsTests(unittest.TestCase):
                     train.evaluate("old.pt", self.data_file)
                 self.assertFalse(hasattr(self.models[-1], "validation_options"))
 
+    def test_training_requires_pinned_ultralytics_version_for_comparability(self):
+        fake_module = sys.modules["ultralytics"]
+        with patch.object(fake_module, "__version__", "8.4.80", create=True):
+            with self.assertRaises(SystemExit) as caught:
+                with redirect_stderr(io.StringIO()) as errors:
+                    self.run_cli("--epochs", "2")
+            self.assertEqual(caught.exception.code, 2)
+            self.assertIn("pip install -r requirements.txt", errors.getvalue())
+            self.assertEqual(len(self.models), 0)
+            self.run_cli("--epochs", "2", "--allow-unpinned")
+            self.assertTrue(self.models)
+
     def test_training_controls_and_matching_final_evaluation_are_forwarded(self):
         self.run_cli("--epochs", "30", "--imgsz", "960", "--batch", "4",
                      "--optimizer", "AdamW", "--lr0", "0.001", "--lrf", "0.05",
