@@ -1673,5 +1673,489 @@
     "rows": [
       "9 0.63350000 0.51100000 0.31300000 0.92800000"
     ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464122_0_jpg.rf.962d58608576425f97087f8885069bc1.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "d61ab9131cc6e811b24c174111c0204b838b6cee9dd812dcc488024724dba2de",
+    "rows": [
+      "7 0.4810469 0.6198375 0.3519856 0.4150305"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464124_0_jpg.rf.ec4732df5eb1dc7ca418cfec31745303.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "28f70a9bee35f070bbde3e7bf8d6b949fae27cc90dfdc090602234c04f301605",
+    "rows": [
+      "7 0.2937726 0.6780636 0.5658845 0.3459716"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464125_0_jpg.rf.7d749e15f00eac7ac568f58785d1f3f8.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "98b5ab2f073ef4f976300344094fb738f9096e55a5847b97d50509064138cb9c",
+    "rows": [
+      "7 0.3370939 0.5988490 0.5658845 0.3039946"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464126_0_jpg.rf.a93df2b5afecb1d6e064f418705c2420.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "94a74f1a763d498e94f6cd002bb8c67f70ff43cd142d8272913734aad4d36efd",
+    "rows": [
+      "7 0.3434116 0.5176032 0.5821300 0.3716994"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464127_0_jpg.rf.65ce9eec1bacc8c806e8318aa23d14fe.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "63a94e5978096cd17a2c4b8e541bc66ad3cc271b299680e36d74e102ef66122f",
+    "rows": [
+      "7 0.4345668 0.6018957 0.5460289 0.4184157"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464128_0_jpg.rf.014bb9e0fbd87f44a88f713501796243.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "ca520117bd3b9125d36aee5f605274cd39966eea3f87d7f34a67167616b06e54",
+    "rows": [
+      "7 0.4747292 0.5961408 0.5270758 0.4529452"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464129_0_jpg.rf.d1926d9e21e18079c8c84e9b853fc621.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "90ff910533033f050ad8f27b4514144001b1856be6e4b4df2f0dd5be963d1975",
+    "rows": [
+      "7 0.4490072 0.6046039 0.4846570 0.4617468"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464130_0_jpg.rf.1004a294f6a799582ab9e71d5abfee08.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "31ca2688a813006a8e6b4227c75ba7730f9a533df12e5a1b4469c8c32db861eb",
+    "rows": [
+      "7 0.5288809 0.6218687 0.3411552 0.4448206"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464132_0_jpg.rf.fd84493b639f79f3604289c95279aa1e.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "a830d0440b5004db261dde1fa902a82e67c3c16c7a3c52256e626211b9f82f9f",
+    "rows": [
+      "7 0.4661552 0.4326337 0.5225632 0.4576845"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464133_0_jpg.rf.46ab44e52ff52a9d0da14d6092ebd575.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "1fd2442fa72333fa424d0e2586162330736332317243ac80b34ae84e823acdef",
+    "rows": [
+      "7 0.5045126 0.5450237 0.5018051 0.3737305"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464134_0_jpg.rf.a773f4901e140a1c0274c74a2378cefd.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "416e52497bf6ab16da45ca904cfd1817b192629542b85bde22c1e1755450a100",
+    "rows": [
+      "7 0.4923285 0.4881517 0.5911552 0.3967502"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464135_0_jpg.rf.80b04f20d76ae39d9bbf30410e97b251.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "61516072a3e707c4536b1b24885400c5f11a04a2a2f63c2b8e91a0a0bb9b3131",
+    "rows": [
+      "7 0.3465704 0.5761679 0.3339350 0.4820582"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464136_0_jpg.rf.7ba2c6dd2e67f009313e1ee90bfe98e3.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "e9646b09310599c273e851e7d3c0b2636fb834deb7e9383decb9890445b0bc0f",
+    "rows": [
+      "7 0.3384477 0.5243737 0.6768953 0.4922139"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464138_0_jpg.rf.cb7f3995b7cdf4bb7ede91cac89c876e.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "dabd68e30b8acded6d18a2a6834def90fcc715279b423745ebf4a671d308b75d",
+    "rows": [
+      "7 0.4787906 0.5318213 0.4052347 0.4732566"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464140_0_jpg.rf.16b189ccab5ac0cae253b55468cab928.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "da3b8ec4a2b7793dc8f79ca6365b620e1957cccb7e4ddef0ee9fa3e080454ef2",
+    "rows": [
+      "7 0.4684116 0.5145565 0.4061372 0.4400812"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464141_0_jpg.rf.9e898de98b2fd3e9c227a75bd74547c9.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "f98b129c4a2d1384340847421f96272afd1f443b575f336d3b66c0f0c5a8d325",
+    "rows": [
+      "7 0.5126354 0.4708869 0.4638989 0.4556534"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464142_0_jpg.rf.5205a723090775ebd283d8310ee63963.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "6401d3e9245a21c48756aa698811c579d9c07c078002198c48de978e91b706f8",
+    "rows": [
+      "7 0.5789711 0.6140826 0.7048736 0.5199729"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464143_0_jpg.rf.d6a0a23686c6a6dbad7639c7e1b4becd.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "a0edc15c6a659d3d13181dde8059c11b4445171e313fdef6d2e3393910442146",
+    "rows": [
+      "7 0.5365523 0.6157752 0.4864621 0.4881517"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464144_0_jpg.rf.67a8fb60f13f18efdfefd27589bd8476.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "bed800988c550f3411b46b830d60cb687d41574ad3fcddae601e695de621a0b0",
+    "rows": [
+      "7 0.4535199 0.5883548 0.4918773 0.3872715"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464145_0_jpg.rf.9081577227e63e5c02a6e70d54aff444.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "6f8337a708c16c21154c497fbcbb7d1c093b86e53a04bd49d0362664549bdac6",
+    "rows": [
+      "7 0.3601083 0.4830738 0.5722022 0.3987813"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464147_0_jpg.rf.5cf99c67fcac6f3795b41d8503dd2841.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "b4626a2b80f77fb4aba7df6c85d1ae4c20ab40d63328eb8f0fded26ccd022d41",
+    "rows": [
+      "7 0.4453971 0.4634394 0.4936823 0.4312796"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464148_0_jpg.rf.c0bd0088d5eebbe7b724909eea7941b3.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "a73407536c278c2ee4ac256d680e8f1acdc780cbf92becc01b4f99983b172cf0",
+    "rows": [
+      "7 0.5126354 0.5223426 0.2599278 0.4055518"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464149_0_jpg.rf.fb7e14494d41256dc203012eec2846b4.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "0cc557bfa451ef352ae4ed1dd4474e5d48d5c3078e1839d18a80707cfc019c58",
+    "rows": [
+      "7 0.6019856 0.5514557 0.3646209 0.4258632"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464150_0_jpg.rf.03fbcbfa725bd40a14578f0393a83e8c.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "8546db99d61093191b7375fada0c75bc0b8aabdef7fd334881c04743abaad2c8",
+    "rows": [
+      "7 0.5690433 0.5859851 0.3907942 0.4204469"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464152_0_jpg.rf.95b874ccec66385e2bbc3c6bed938cc7.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "8c4ca268534ea4d5b8e0bef4b7105242df88c88cc392d0b67ecfd70e7f099fb1",
+    "rows": [
+      "7 0.4729242 0.6289777 0.2797834 0.3994584"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464153_0_jpg.rf.0909d96821f6b8a75ef05297fdf76218.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "a5f77cd3f1ecd0373b061c33491f72b430ab3f0dcc192c476759d7415337ef1d",
+    "rows": [
+      "7 0.4174188 0.6154367 0.2572202 0.3953961"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464156_0_jpg.rf.8bece950f78c750eae6b44efa8587a45.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "b3735780f0b7cfaa54e824b12f48006d69f7226b652072c10ea1f50f71cf292a",
+    "rows": [
+      "7 0.3953069 0.5761679 0.3303249 0.4062288"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464157_0_jpg.rf.60e14f33bbe0b2923c1b401afc4d1e0b.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "c8621aa975b29867cb5c68cc8b22557bc964f558f46e50078583d70e95fe437e",
+    "rows": [
+      "7 0.3533394 0.6002031 0.2734657 0.3581584"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464158_0_jpg.rf.4b15b051bc55fab71a0b8810705e598b.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "610dc96eb3dfe963447e881a424117092ce15ffc24b07efc4e5e408311f8faff",
+    "rows": [
+      "7 0.4462996 0.4742722 0.3005415 0.4014895"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464160_0_jpg.rf.c5ceb42bbb18a91e97e8fc628436b3f7.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "1bf08799272bb21f06054fb853b669314d4eb2a4b0d9958b906156a6b68fc78b",
+    "rows": [
+      "7 0.3574007 0.6330399 0.3844765 0.4373731"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464162_0_jpg.rf.419c8e90c2377cac2ebcf2e222848bbb.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "9bc7a01aea0e494b33d24ee709643324b8355a7df87691b22dec7500cd6b721d",
+    "rows": [
+      "7 0.3646209 0.6787407 0.3574007 0.4258632"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464163_0_jpg.rf.6b2ee407a9cdcb57cbb56f598dc4216f.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "abc2ceb299884db8f412720242d973d2440bc1a6bc68c6ba578f4afa266b4854",
+    "rows": [
+      "7 0.4941336 0.5108328 0.6092058 0.4935680"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464164_0_jpg.rf.f81a3dbf58354bc704c546aa21fbd291.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "2bb9a8c5077e43127cb804fa87d402a3d0d22b98f0bbee99dfcd0c564f35216b",
+    "rows": [
+      "7 0.3822202 0.6249154 0.4720217 0.5470548"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "train__464165_0_jpg.rf.1f80632d22648fc8f12b23b855c51fcd.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "45fc7260ddfa5f22e4b5b7b1caf82f218ba7e514e63749875b5e63c39b483820",
+    "rows": [
+      "7 0.4711191 0.5836154 0.2833935 0.3696682"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464121_0_jpg.rf.89ba9bc337a30804ab8689bd8757ca82.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "42a6ee0f68500c9005b836e4a53a99964df55a9c1fb7f80059e7089266ed23f8",
+    "rows": [
+      "7 0.4517148 0.4627624 0.4666065 0.4258632"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464123_0_jpg.rf.9ecbdec92a10d988ad80cb6925d7f792.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "49eed1d78354215f637655d71f972fd49c9a6e7384811bbc4113ac66c039de35",
+    "rows": [
+      "7 0.4485560 0.6306703 0.4494585 0.4218009"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464131_0_jpg.rf.9942f0d299459b9e0cbc8fe9dcab0c22.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "24d1b96c10e6a8d32126bb423f7aae40aa9001775f9391560c76932be6cd5280",
+    "rows": [
+      "7 0.5712996 0.4776574 0.4440433 0.4637779"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464137_0_jpg.rf.48c208afe5a44303b115bc6103b716f8.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "f67125e73118895edd892012cb3cbec404bb9ac1f9ddbc4ae8b0f0bf07c27099",
+    "rows": [
+      "7 0.5487365 0.4989844 0.5631769 0.4671632"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464139_0_jpg.rf.0bfa2fdf258df1d212c049995b350ba8.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "75c73fa51083df8dec5dc21142972f8e5279a69bff0531ee6eb3a86c72464108",
+    "rows": [
+      "7 0.4783394 0.5450237 0.3231047 0.4292485"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464151_0_jpg.rf.0c4411c124196eb54092031f19c521f2.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "6da5efa2c1ede47a62322078d95fe1e31c4e1f4f5e8c4d76097bc3e98a05c282",
+    "rows": [
+      "7 0.2468412 0.6645227 0.2518051 0.3906567"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464154_0_jpg.rf.1a89d3678064302e4cd10fa28aeee899.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "cdf3569eeb75388e426d8ebff042c52852939479a37f9cfac93791e7ca609d12",
+    "rows": [
+      "7 0.5185018 0.6106974 0.2842960 0.4116452"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464155_0_jpg.rf.b0aa0caee027f4072f1f07fb6e0e77cb.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "ab638613ffd3b0fe5998bcd3f2164445f54a9c58c1922f414dab17ea4b25a524",
+    "rows": [
+      "7 0.5311372 0.5870007 0.2933213 0.3764387"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464159_0_jpg.rf.edd2d8dbbf6d06b89e9a78c0bf5b6359.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "2a51a62d7883de179d2f90a12290bd6dca8fa4032361b4a51b06a50763c9ced2",
+    "rows": [
+      "7 0.5311372 0.5412999 0.3546931 0.4136764"
+    ]
+  },
+  {
+    "source": "condiments",
+    "image": "valid__464161_0_jpg.rf.4a614ec1409421f983f4e75fc04b05e3.jpg",
+    "complete": "yes",
+    "reviewer": "Original-photo and four contact-sheet visual review 2026-10-13",
+    "reason": "Single condiment sachet on wood table; manually checked tighter full-packet bounds against source photo and original overpadded V2 box. Preserve mapped class 7 (condiment_packet).",
+    "expected_label_sha256": "1e88577e4a5a1b8e15b68f11cec230226841f79a23c5a88ac7d548746852b2ae",
+    "rows": [
+      "7 0.5767148 0.6878808 0.4584838 0.4685173"
+    ]
   }
 ]
