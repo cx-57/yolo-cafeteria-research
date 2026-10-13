@@ -61,7 +61,7 @@ The [Codex review completion/status audit](docs/V2_CODEX_STATUS_20261012.md)
 records the exact checklist, what passed on the full 3,096-image GitHub
 dataset, and what still needs independent cafeteria photos or human review.
 
-To **actually use** the 64 reviewed image-level label replacements and 242 LVIS food
+To **actually use** the 84 reviewed image-level label replacements (including 20 tightened wrapper boxes verified Oct 13) and 242 LVIS food
 review records in a new V2 dataset (without modifying V1):
 
 ```bash
