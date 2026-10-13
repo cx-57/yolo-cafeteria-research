@@ -166,9 +166,9 @@ jobs:
               rows = list(csv.DictReader(stream))
           counts = Counter(row["review_status"] for row in rows)
           assert len(rows) == 3096
-          assert counts["full_image_verified"] == 19
+          assert counts["full_image_verified"] == 21
           assert counts["food_only_verified"] == 239
-          assert counts["not_verified"] == 2838
+          assert counts["not_verified"] == 2836
           assert all(row["requires_all_11_class_review"] == "yes"
                      for row in rows if row["review_status"] != "full_image_verified")
           print("V2 PHOTO REVIEW REGISTER PASS:", counts)
