@@ -99,6 +99,16 @@ class InspectionTests(unittest.TestCase):
             self.assertTrue((root/"output/wrong_class_candidates.csv").is_file())
             with Image.open(root/"output/plate__partly_hidden.jpg") as im:
                 self.assertEqual(im.size, (320, 120))
+            with patch.dict(sys.modules, {"ultralytics": SimpleNamespace(YOLO=FakeYOLO)}):
+                review.inspect(yml, "fake.pt", root/"full-report", "val",
+                               ["plate"], 1, .1, .5, None,
+                               all_images=True, save_overlays=False)
+            full = json.loads((root/"full-report/summary.json").read_text())
+            self.assertEqual(full["selection"], "full_split")
+            self.assertEqual(full["images_reviewed"], 1)
+            self.assertFalse(full["overlays_saved"])
+            self.assertFalse((root/"full-report/plate__partly_hidden.jpg").exists())
+            self.assertTrue((root/"full-report/wrong_class_candidates.csv").exists())
 
     def test_bad_checkpoint_ontology_is_rejected_before_predictions(self):
         class FakeYOLO:
