@@ -2549,5 +2549,87 @@
     "rows": [
       "9 0.56000000 0.58500000 0.38000000 0.83000000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000144065.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image and bounding-box overlay checked 2026-10-13",
+    "reason": "Whole yellow-and-blue frosted birthday cake on tray and small white plastic utensil on child's blue plate were visible but unlabeled; existing plate box preserved.",
+    "expected_label_sha256": "8560dcd26dd13b1d2b986ff8c42dcbc91c90bf22d5932e21aac6c59f8268a340",
+    "rows": [
+      "1 0.514742188 0.759110070 0.189859375 0.114894614",
+      "0 0.75000000 0.59200000 0.31900000 0.22500000",
+      "3 0.47500000 0.75400000 0.13000000 0.05100000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000167520.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image and bounding-box overlay checked 2026-10-13",
+    "reason": "Large pizza portion in takeout box and two distinct pizza pieces on foreground paper plates lacked food labels; retain all three plate annotations.",
+    "expected_label_sha256": "b4cd9329c327a01cd43dec6c226e5e067fdce05c7b80d696e3f6c6d2d6e8689f",
+    "rows": [
+      "1 0.108421875 0.946642259 0.197687500 0.089769874",
+      "1 0.123304687 0.857426778 0.231140625 0.092970711",
+      "1 0.315031250 0.977405858 0.241312500 0.041338912",
+      "0 0.66600000 0.85500000 0.46300000 0.14500000",
+      "0 0.13000000 0.86400000 0.24000000 0.05700000",
+      "0 0.09700000 0.94000000 0.19400000 0.08000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000212248.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image and bounding-box overlay checked 2026-10-13",
+    "reason": "Clear hot dog in bun held over previously labeled disposable paper plate was missing food annotation.",
+    "expected_label_sha256": "5e8800e96bdb20b00c3fba0c6035aaccf0dc0a4fc8360879d3a96103f78dc443",
+    "rows": [
+      "1 0.187750000 0.514429688 0.375500000 0.261234375",
+      "0 0.16000000 0.52000000 0.25000000 0.15500000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000351608.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image and bounding-box overlay checked 2026-10-13",
+    "reason": "Large decorated sheet cake clipped by bottom image edge lacked food box; paper plate stack retains existing plate label.",
+    "expected_label_sha256": "91d24be4b826f9c64188532d2f742df023d6ff372a3867916ff595e82816b865",
+    "rows": [
+      "1 0.101614583 0.881281250 0.203229167 0.084625000",
+      "0 0.57100000 0.90700000 0.70400000 0.18600000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000371950.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image and bounding-box overlay checked 2026-10-13",
+    "reason": "Two distinct large round baked flatbreads and one cooked puffed rice serving were missing food annotations; non-food foil/empty dishes excluded.",
+    "expected_label_sha256": "57dae912a443ac4c322aef5a09ebdb482dab42efa9eedfffa3415c49dfb490f7",
+    "rows": [
+      "1 0.741351563 0.039666667 0.314796875 0.079333333",
+      "0 0.25800000 0.11000000 0.41000000 0.22000000",
+      "0 0.10700000 0.38500000 0.21400000 0.42000000",
+      "0 0.58400000 0.36900000 0.18300000 0.17600000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000478407.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution image and bounding-box overlay checked 2026-10-13",
+    "reason": "Food serving on front white plate, bread/sandwich in man's hand, and metal fork held above foreground plate were omitted; drinking glasses and clear mixing bowl outside selected classes.",
+    "expected_label_sha256": "2a4b1d9a1a6c4976b3ea70e02e46be85a42c0ed668e74cc653e08cab922b8947",
+    "rows": [
+      "1 0.479500000 0.715893333 0.238080000 0.067200000",
+      "1 0.288360000 0.779786667 0.317880000 0.110453333",
+      "0 0.29100000 0.75900000 0.32000000 0.13300000",
+      "0 0.50200000 0.55100000 0.21900000 0.16000000",
+      "3 0.29400000 0.61700000 0.08500000 0.21100000"
+    ]
   }
 ]
