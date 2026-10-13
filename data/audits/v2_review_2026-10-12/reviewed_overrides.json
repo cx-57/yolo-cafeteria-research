@@ -122,5 +122,50 @@
     "rows": [
       "10 0.44353125 0.26797222 0.41368229 0.53594444"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__paper60_jpg.rf.73d291a8166688bf2c5608b92092418f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 direct full-image visual review (2026-10-12)",
+    "reason": "Remove the false napkin label from V2 copies: Torn paper with perforated/notebook-like edge, not an identifiable cafeteria napkin. No configured paper class; retain photo as an exhaustively reviewed background negative.",
+    "expected_label_sha256": "e0e9990b08f546512c4194424657e95f2eefee6e369210edec957bd0055dcff4",
+    "rows": []
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__paper191_jpg.rf.a2f073f30f0e628c0f1cb3405c90077f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 direct full-image visual review (2026-10-12)",
+    "reason": "Remove the false napkin label from V2 copies: Torn paper sheet with a straight fold/edge and no credible napkin identity. No configured paper class; retain photo as an exhaustively reviewed background negative.",
+    "expected_label_sha256": "93521eb15efe4260b5f6e8831ecf84da8995adcc436d70f9e55decf970c2001b",
+    "rows": []
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__paper528_jpg.rf.671a8f48554d5bdc824dfb5e9a7562e5.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 direct full-image visual review (2026-10-12)",
+    "reason": "Remove the false napkin label from V2 copies: Torn/crumpled white paper with fibrous ripped edge, not identifiable cafeteria napkin. No configured paper class; retain photo as an exhaustively reviewed background negative.",
+    "expected_label_sha256": "d2ab83745143561b091a0f4caf977bb7f4bce51a18134d3afc3aed3ee61026ad",
+    "rows": []
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__paper538_jpg.rf.c3d5b8043687ba0f72e92a82e44b39aa.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 direct full-image visual review (2026-10-12)",
+    "reason": "Remove the false napkin label from V2 copies: Crumpled and torn paper sheet; does not match a folded or unfolded disposable cafeteria napkin. No configured paper class; retain photo as an exhaustively reviewed background negative.",
+    "expected_label_sha256": "b41d3edc195556ebb8d7dbfb05002d61235704ee70c507eb79da24bb98da6cb4",
+    "rows": []
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__paper63_jpg.rf.d5f2acae59c3188321f106cb261a9d53.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 direct full-image visual review (2026-10-12)",
+    "reason": "Remove the false napkin label from V2 copies: Torn paper sheet with ragged edge, not a verified cafeteria napkin. No configured paper class; retain photo as an exhaustively reviewed background negative.",
+    "expected_label_sha256": "5ede96312470ec0dfe161a1b1d83759096882bf0c62af3e00b215563b7265fb5",
+    "rows": []
   }
 ]
