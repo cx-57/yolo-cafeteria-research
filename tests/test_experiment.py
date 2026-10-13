@@ -111,6 +111,9 @@ class FrozenExperimentTests(unittest.TestCase):
         cropped_report = self.summary()
         self.assertEqual(control_report["counts"], cropped_report["counts"])
         self.assertGreater(cropped_report["focus_crops"]["cropped_train_views"], 0)
+        self.assertLess(
+            cropped_report["view_support"]["train"]["food"]["instances"],
+            control_report["view_support"]["train"]["food"]["instances"])
         for img in (self.source/"images/val").iterdir():
             for root in (control, self.output):
                 self.assertEqual((root/"images/val"/img.name).read_bytes(), img.read_bytes())
