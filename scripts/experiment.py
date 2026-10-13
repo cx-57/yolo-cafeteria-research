@@ -233,6 +233,7 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
     # are never removed, and original labels are never linked to writable copies.
     output.mkdir(parents=True)
     cropped_views = 0
+    actual_views = []
     for sample in samples:
         label_bytes = sample["raw_label"]
         if sample["added_rows"]:
@@ -253,6 +254,7 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
                 except OSError:
                     shutil.copy2(sample["image"], target_image)
                 (labels_dir / (stem + ".txt")).write_bytes(label_bytes)
+                view_rows = sample["rows"]
             else:
                 picture, cropped_rows = crop
                 # Lossless PNG keeps the small target visible; extension must
@@ -264,6 +266,9 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
                 (labels_dir / (stem + ".txt")).write_text(
                     "\n".join(validate_rows(cropped_rows, target_image, names)) + "\n")
                 cropped_views += 1
+                view_rows = cropped_rows
+            actual_views.append({"split": sample["split"], "rows": view_rows,
+                                 "repeat": 1})
 
     data_file = output / "data.yaml"
     data_file.write_text(yaml.safe_dump({"path": str(output.resolve()), "names": names,
@@ -281,7 +286,7 @@ def prepare_experiment(source, output, label_additions=None, balance_classes=(),
                         "crop_fraction": 0.60, "max_target_area": 0.04,
                         "validation_unchanged": True},
         "original_support": class_support(samples, names, original=True),
-        "corrected_support": corrected_support, "view_support": class_support(samples, names, repeated=True),
+        "corrected_support": corrected_support, "view_support": class_support(actual_views, names),
         "source_image_paths": {split: sorted(str(sample["image"].resolve()) for sample in samples
                                               if sample["split"] == split) for split in splits},
         "evaluation_cohorts": {split: {name: sorted(str(sample["image"].resolve()) for sample in samples
