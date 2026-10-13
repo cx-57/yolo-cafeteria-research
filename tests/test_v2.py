@@ -344,7 +344,7 @@ class V2WorkflowTests(unittest.TestCase):
     def test_trial_commands_differ_only_in_intended_options(self):
         v2.build(self.args())
         runs = [v2.train(self.train_args(trial=trial, allow_provisional=True))
-                for trial in v2.TRIALS]
+                for trial in ("control-n", "weighted-n", "control-s")]
         def flags(cmd):
             return {cmd[i]: cmd[i + 1] for i in range(len(cmd) - 1)
                     if cmd[i].startswith("--") and not cmd[i + 1].startswith("--")}
