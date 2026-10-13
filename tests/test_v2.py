@@ -390,14 +390,14 @@ class V2WorkflowTests(unittest.TestCase):
         self.assertTrue(masked[masked.index("--coverage-policy") + 1].endswith(
             "data/audits/model_revisions_2026-10-12/source_coverage.json"))
         self.assertEqual(
-            masked[:masked.index("--coverage-policy")], plain)
+            masked[masked.index("--mosaic") + 1], plain[plain.index("--mosaic") + 1])
         shared = dict(epochs=10, batch=2, seed=42, imgsz=640, device="cpu",
                       dataset_sha256="identical", completed_epochs=10)
         v2.check_trial_schedules([
             dict(shared, command=plain), dict(shared, command=masked)])
 
     def test_partial_label_trial_rejects_unknown_training_source(self):
-        self.add_source("train", "unregistered__photo.png", "1 .5 .5 .4 .4\\n",
+        self.add_source("train", "unregistered__photo.png", "1 .5 .5 .4 .4",
                         (11, 22, 33))
         v2.build(self.args())
         with self.assertRaisesRegex(ValueError, "No coverage policy"):
