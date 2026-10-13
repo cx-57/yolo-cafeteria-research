@@ -74,18 +74,55 @@ def parse_labels(path, width, height):
 
 
 def match(targets, predictions, min_iou=0.5):
-    """One-to-one same-class matches in descending IoU, without inventing labels."""
-    pairs = sorted(((box_iou(a[1], b[1]), i, j)
-                    for i, a in enumerate(targets)
-                    for j, b in enumerate(predictions) if a[0] == b[0]), reverse=True)
-    gt, pred = set(), set()
-    for overlap, i, j in pairs:
-        if overlap < min_iou:
-            break
-        if i not in gt and j not in pred:
-            gt.add(i)
-            pred.add(j)
-    return gt, pred
+    """Maximum-cardinality one-to-one same-class matches at fixed IoU.
+
+    Highest-IoU-first greedy matching can undercount stacked/overlapping
+    plates. Augmenting paths preserve the maximum number of valid matches.
+    """
+    neighbors = []
+    for target in targets:
+        options = [(box_iou(target[1], prediction[1]), j)
+                   for j, prediction in enumerate(predictions)
+                   if target[0] == prediction[0]]
+        neighbors.append([j for overlap, j in sorted(options, reverse=True)
+                          if overlap >= min_iou])
+    assigned = {}  # prediction index -> target index
+
+    def augment(i, visited):
+        for j in neighbors[i]:
+            if j in visited:
+                continue
+            visited.add(j)
+            if j not in assigned or augment(assigned[j], visited):
+                assigned[j] = i
+                return True
+        return False
+
+    for i in range(len(targets)):
+        augment(i, set())
+    return set(assigned.values()), set(assigned)
+
+
+def wrong_class_candidates(targets, predictions, matched_gt, matched_pred, min_iou):
+    """Rank *possible* class confusions; overlapping categories can coexist."""
+    candidates = []
+    for i, target in enumerate(targets):
+        if i in matched_gt:
+            continue
+        for j, prediction in enumerate(predictions):
+            if j in matched_pred or target[0] == prediction[0]:
+                continue
+            overlap = box_iou(target[1], prediction[1])
+            if overlap >= min_iou:
+                candidates.append((overlap, i, j))
+    # Each GT and prediction appears at most once in the review queue.
+    chosen, gt_used, pred_used = [], set(), set()
+    for overlap, i, j in sorted(candidates, reverse=True):
+        if i not in gt_used and j not in pred_used:
+            chosen.append((i, j, overlap))
+            gt_used.add(i)
+            pred_used.add(j)
+    return chosen
 
 
 def draw_boxes(image, objects, rgb):
