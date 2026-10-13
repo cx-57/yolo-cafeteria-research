@@ -2208,7 +2208,7 @@
   },
   {
     "source": "plate",
-    "image": "val__lvis_000000273053.jpg",
+    "image": "train__lvis_000000273053.jpg",
     "complete": "yes",
     "reviewer": "Manual original-resolution box overlay visual review 2026-10-13",
     "reason": "Two hotdogs with clearly distinct buns/sausage servings on labeled paper plate were missing food boxes. Nearby drink is a cup, not a bottle.",
