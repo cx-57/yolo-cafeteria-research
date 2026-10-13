@@ -467,6 +467,8 @@ def main():
     parser.add_argument("--augment-factor", type=int, default=1)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--model", default="yolo11n.pt")
+    parser.add_argument("--allow-unpinned", action="store_true",
+                        help="Explicitly permit a non-repository Ultralytics version")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--batch", type=int, default=8)
     parser.add_argument("--imgsz", type=int,
@@ -539,10 +541,13 @@ def main():
 
     import ultralytics
     version = getattr(ultralytics, "__version__", "unknown")
-    if version != "8.4.175":
-        print("WARNING: Ultralytics", version,
-              "differs from repository-tested 8.4.175. "
-              "Do not treat this as a controlled comparison.")
+    if version != "8.4.175" and version != "unknown":
+        if not args.allow_unpinned:
+            parser.error("Ultralytics " + version + " does not match pinned 8.4.175. "
+                         "Run: python3 -m pip install -r requirements.txt. "
+                         "For a non-comparable experiment, use --allow-unpinned.")
+        print("WARNING: explicitly using unpinned Ultralytics", version,
+              "(not a controlled or reproducible benchmark)")
     model = load_model(args.model)
     options = dict(
         data=str(data_file), project=str(MODEL / "runs"), name=args.name or "yolo11n-1x",
