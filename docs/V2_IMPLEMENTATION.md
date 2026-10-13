@@ -181,6 +181,51 @@ validation split still lacks four classes and is not an NHS test set. If
 performance is unchanged/worse, use actual held-out prediction reviews and
 new verified NHS images rather than repeating an unsuccessful training recipe.
 
+### Faster weak-class-only fine-tuning (without forgetting strong classes)
+
+If food, cartons and hinged containers already perform well, do **not**
+train a fresh 3-class detection head. The existing checkpoint predicts
+**all 11 classes**, so changing its class count or stripping labels would
+break comparability and cause forgetting. Instead, prioritize photographs
+containing plate, wrapper, or bottle and replay **15% of the remaining
+original strong-only photographs**. Each original and its paired focus
+crop stay together. This creates just a path list and YAML, no new
+image copies; original labels, V1/V2 images, and all 591 validation
+images remain unchanged.
+
+After both previous 3,295-view datasets have been built:
+
+```bash
+git pull
+python3 scripts/experiment.py \
+  --source data/training-v2-weak-focus \
+  --output data/training-v2-weak-fast \
+  --weak-subset --replay-fraction 0.15
+```
+
+Inspect the printed view count and `weak_subset.json` before training.
+It will be **smaller than 3,295**, but the exact count depends on the
+actual labeled objects. Train using the best **existing full V2** checkpoint:
+
+```bash
+WEIGHTS=model/runs/v2-control-n-reviewed-baseline/weights/best.pt
+test -f "$WEIGHTS" || { echo "Find your correct checkpoint with: find model/runs -name best.pt"; exit 1; }
+python3 scripts/train.py data/training-v2-weak-fast/data.yaml \
+  --model "$WEIGHTS" --name v2-weak-fast10 \
+  --eval-name v2-weak-fast10-eval \
+  --epochs 10 --batch 4 --device mps --imgsz 640 --workers 0 \
+  --optimizer AdamW --lr0 0.0001 --lrf 0.1 --cos-lr \
+  --mosaic 0 --warmup-epochs 0 --patience 0
+```
+
+Compare `model/runs/v2-weak-fast10-eval/metrics.json` to the **same frozen
+validation** results from the original checkpoint, especially plate,
+wrapper and bottle *and* food, drink carton and hinged container recall/AP.
+Only a matched baseline experiment can isolate crop-specific gains. A
+smaller training subset saves steps per epoch; it is not a guarantee of
+higher recall. No class is permanently frozen. Strong-class regression
+means more replay or a return to full-dataset training may be necessary.
+
 ### Weak-class small-object intervention (October 13; matched A/B test)
 
 The prior 55-photo diagnostic matched **6/26 plates** and **3/20 bottles**
