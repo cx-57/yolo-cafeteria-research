@@ -14,9 +14,9 @@ Neither the old model nor V1 labels have been overwritten.
   Contact sheets and exception queues exist, but the review log
   data/audits/v2_review_2026-10-12/image_review.csv is empty; this task
   CANNOT truthfully be marked complete yet.
-- [x] **Implement 11 reviewed image-level annotation corrections in V2 only.**
+- [x] **Implement 16 reviewed image-level annotation corrections in V2 only.**
   Codex correction file: data/audits/v2_review_2026-10-12/reviewed_overrides.json.
-  This includes a non-bottle cup, missing utensils, and duplicated bowls.
+  This includes a non-bottle cup, missing utensils, duplicated bowls, and five visually confirmed false napkins that are actually torn sheets of paper. The five repaired image copies remain as negative examples while every V1 label is retained.
 - [x] **Review the 242 LVIS food-overlay records.** Codex reduced the original
   1,364 suggested boxes to 605 approved boxes through portion-level review,
   including the nested-ingredient conflicts; actual full 3,096-image CI build
@@ -58,7 +58,8 @@ Neither the old model nor V1 labels have been overwritten.
   real 19+ synthetic V2 unit/integration tests have passed on GitHub.
 - [Full-corpus build with reviewed labels](https://github.com/cx-57/yolo-cafeteria-research/actions/runs/38325972020):
   the 3,096-image Codex-reviewed V2 builder passed, with 603 added LVIS food
-  boxes, 11 reviewed replacement labels, and leakage repairs.
+  boxes, reviewed replacement labels, and leakage repairs. A newer full-data
+  run additionally verifies the five false-napkin corrections.
 - [Real end-to-end YOLO smokes](https://github.com/cx-57/yolo-cafeteria-research/actions/runs/38326190504):
   pinned Ultralytics CPU successfully fit pretrained YOLO11n with and without
   cls_pw, generated validation metrics, saved and reopened checkpoints,
@@ -68,6 +69,11 @@ Neither the old model nor V1 labels have been overwritten.
 - Additional full-corpus candidate import and YOLO11s smoke checks live in
   .github/workflows/pipeline-tests.yml; consult the actual workflow run
   conclusion rather than assuming pending jobs passed.
+
+### Additional Codex research recovered
+
+- [Previous full-checkpoint mini-test](../data/audits/model_revisions_2026-10-12/checkpoint_mini_test.md) established the previous 100-epoch model's stable validation and wrapper/bottle confusion, without presenting reconstructed preview predictions as real accuracy.
+- [Prior direct napkin source review](../data/audits/model_plateau_2026-10-11/direct_image_review.md) flagged the same five torn-paper scenes. The current review confirmed their contents and prepared five checksum-protected removal overrides.
 
 ## Build a genuinely changed, experimental V2 dataset NOW
 
