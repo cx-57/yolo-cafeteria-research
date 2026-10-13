@@ -2819,5 +2819,115 @@
     "rows": [
       "9 0.5850000 0.4700000 0.6300000 0.9400000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic191_jpg.rf.85140e4b4dcad9fbe821f1101892e8fa.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "3f852c7d0263fbb67bb19f03bd280507a7b17f8557443a866c9faddff0738017",
+    "rows": [
+      "9 0.66000000 0.63500000 0.68000000 0.53000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic73_jpg.rf.5b3ef79109aa9f61160db453a83ef14f.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "0ae1501d238f294cfd6c1f8e980a0b5a0e7254efbd01a555c58f5b8a1709ed1d",
+    "rows": [
+      "9 0.50500000 0.55000000 0.33000000 0.88000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic325_jpg.rf.7fd3cebdbf41ea7d522f910c3011d970.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "a52255657a25e2e6f190aa5c2c65d455a773c4f198ce72c6ba2931199ad95399",
+    "rows": [
+      "9 0.45000000 0.57500000 0.48000000 0.85000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "1f84ee3735fabf0ffdcb4aeb5c6b302d6d49725bef0e4736badbfc113c60dd80",
+    "rows": [
+      "9 0.66000000 0.50500000 0.68000000 0.91000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic380_jpg.rf.a0dd0438888cd4db97871e63dda881a7.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "81ee695401fe12c3494aba7c563aea83b0c13e90cbbdbcffda4314d7ac0a7bb3",
+    "rows": [
+      "9 0.46500000 0.50500000 0.69000000 0.65000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic406_jpg.rf.3f85c1a60a2024a6c2ac168fee82411b.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "ae5a252f124676e4be42fc8c9091b086f7f7a4826da2b432f5d008f21a0e702e",
+    "rows": [
+      "9 0.53000000 0.67500000 0.54000000 0.65000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic127_jpg.rf.3b5a03cf08d180fbefc631549b3c5c0d.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "574643cc44c9cd1fa67c2f856777b0690ed0966b0431b105a9aa74009405bb88",
+    "rows": [
+      "9 0.63500000 0.51500000 0.61000000 0.65000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic309_jpg.rf.8e4e7628a42ed125b3e9cebba7d2b7b2.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "1dea85e5c54ef3570b9ca3ef19272206ea140c50772f6962434d05491ae2ed81",
+    "rows": [
+      "9 0.71500000 0.61000000 0.57000000 0.78000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic278_jpg.rf.5be1a8212748f4788e8465dcebfc7697.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "2f10c34980bd8cd63028ae85ae6db6812128e3147809e60c8dce22b84bee1bdc",
+    "rows": [
+      "9 0.56000000 0.62000000 0.44000000 0.76000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic350_jpg.rf.7a05808b4dfda0329cb6e4ec6da07323.jpg",
+    "complete": "yes",
+    "reviewer": "Full-photo transparent drink bottle and old-versus-new box overlay audit 2026-10-13",
+    "reason": "Overpadded plastic bottle box reduced after visual checking original clear plastic walls, cap, attached label and all clipped boundaries; preserved beverage bottle class and source image.",
+    "expected_label_sha256": "5628c07ab011d09c78a25748e25e0043f342cd00fa7222e0d6f0951fbd139424",
+    "rows": [
+      "9 0.57500000 0.55500000 0.51000000 0.89000000"
+    ]
   }
 ]
