@@ -94,6 +94,60 @@ class FrozenExperimentTests(unittest.TestCase):
         self.assertEqual(report["source_image_paths"]["val"], sorted(
             str(path.resolve()) for path in (self.source / "images/val").iterdir()))
 
+    def test_focus_crops_only_train_and_matches_repeat_control(self):
+        # Crop around a small wrapper while preserving both the frozen
+        # validation files and the original source dataset byte-for-byte.
+        self.add_image("train", "meal__tiny_wrapper",
+                       "8 .3 .3 .08 .08\\n0 .9 .9 .05 .05\\n")
+        before = self.source_bytes()
+        control = self.root / "data/training-repeat-control"
+        experiment.prepare_experiment(
+            self.source, control, balance_classes=["wrapper"], max_repeat=2)
+        experiment.prepare_experiment(
+            self.source, self.output, balance_classes=["wrapper"],
+            max_repeat=2, crop_repeats=True)
+        self.assertEqual(self.source_bytes(), before)
+        control_report = json.loads((control/"experiment_summary.json").read_text())
+        cropped_report = self.summary()
+        self.assertEqual(control_report["counts"], cropped_report["counts"])
+        self.assertGreater(cropped_report["focus_crops"]["cropped_train_views"], 0)
+        for img in (self.source/"images/val").iterdir():
+            for root in (control, self.output):
+                self.assertEqual((root/"images/val"/img.name).read_bytes(), img.read_bytes())
+                self.assertEqual((root/"labels/val"/(img.stem+".txt")).read_bytes(),
+                                 (self.source/"labels/val"/(img.stem+".txt")).read_bytes())
+        original = self.output/"images/train/meal__tiny_wrapper.png"
+        cropped = self.output/"images/train/meal__tiny_wrapper__balanced01.png"
+        self.assertEqual(original.read_bytes(),
+                         (self.source/"images/train/meal__tiny_wrapper.png").read_bytes())
+        with Image.open(cropped) as picture:
+            self.assertLess(picture.width, 57)
+            self.assertLess(picture.height, 31)
+        rows = (self.output/"labels/train/meal__tiny_wrapper__balanced01.txt").read_text().splitlines()
+        self.assertIn(8, {int(row.split()[0]) for row in rows})
+        experiment.validate_rows(rows, cropped, train.class_names())
+        width = float(next(row.split()[3] for row in rows if row.startswith("8 ")))
+        self.assertGreater(width, 0.08)
+
+    def test_partial_objects_in_crop_remain_labeled_and_boundary_valid(self):
+        picture = self.add_image("train", "meal__partial",
+                                 "8 .5 .5 .05 .05\\n1 .73 .5 .20 .20\\n")
+        result = experiment.focus_crop(picture, [
+            "8 .5 .5 .05 .05", "1 .73 .5 .20 .20"],
+            train.class_names(), ["wrapper"], view=1)
+        self.assertIsNotNone(result)
+        _, rows = result
+        self.assertEqual({int(row.split()[0]) for row in rows}, {1, 8})
+        experiment.validate_rows(rows, "crop", train.class_names())
+
+    def test_crop_requires_selected_weak_classes_and_repeat_budget(self):
+        for choices, repeats in (([], 2), (["wrapper"], 1)):
+            with self.subTest(choices=choices, repeats=repeats):
+                with self.assertRaises(ValueError):
+                    experiment.prepare_experiment(self.source, self.output,
+                        balance_classes=choices, max_repeat=repeats, crop_repeats=True)
+                self.assertFalse(self.output.exists())
+
     def test_a_mixed_rare_class_image_uses_the_maximum_repeat_not_a_sum(self):
         self.add_image("train", "meal__mixed", "1 .5 .5 .8 .8\n8 .2 .2 .2 .2\n9 .8 .8 .2 .2\n")
         experiment.prepare_experiment(self.source, self.output,
