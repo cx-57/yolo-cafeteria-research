@@ -386,6 +386,12 @@ class TrainingControlsTests(unittest.TestCase):
         self.assertEqual(result["coverage"]["supported_classes"], ["food", "hinged_container"])
         self.assertEqual(result["coverage"]["unsupported_class_count"], 9)
         self.assertFalse(result["coverage"]["all_classes_evaluable"])
+        self.assertEqual(result["coverage"]["minimum_instances_per_class_for_reliable_reporting"], 30)
+        self.assertEqual(result["per_class"]["food"]["reliability"], "insufficient_support")
+        self.assertEqual(result["per_class"]["plate"]["reliability"], "absent")
+        self.assertFalse(result["coverage"]["all_classes_adequately_supported"])
+        self.assertEqual(result["coverage"]["insufficient_support_classes"],
+                         ["food", "hinged_container"])
         self.assertIn("Provisional validation", result["interpretation"])
 
     def test_validator_refuses_corrupt_or_misaligned_metrics(self):
