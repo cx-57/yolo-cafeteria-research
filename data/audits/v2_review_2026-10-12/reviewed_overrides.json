@@ -2631,5 +2631,61 @@
       "0 0.50200000 0.55100000 0.21900000 0.16000000",
       "3 0.29400000 0.61700000 0.08500000 0.21100000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000143143.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution photo and revised-box overlay visual review 2026-10-13",
+    "reason": "Visible partially unwrapped sandwich/burrito held on paper plate by standing man had no food box; existing plate box remains.",
+    "expected_label_sha256": "d6fb496cb2cd09f7a8f2ccea966799f97d7f337b228e8a158716538e95b6e377",
+    "rows": [
+      "1 0.615152225 0.794250000 0.249882904 0.044343750",
+      "0 0.588 0.761 0.300 0.111"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000384981.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution photo and revised-box overlay visual review 2026-10-13",
+    "reason": "Clearly visible decorated children's birthday cake on blue party table was omitted from food class; separate empty orange plate already annotated.",
+    "expected_label_sha256": "3cc23ef616406fdf128697e15db119a5afdbed3dac67b81e5e9150a098517ac1",
+    "rows": [
+      "1 0.465750000 0.749864583 0.154468750 0.088520833",
+      "1 0.465734375 0.676958333 0.162937500 0.216458333",
+      "0 0.462 0.450 0.276 0.291"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000479350.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution photo and revised-box overlay visual review 2026-10-13",
+    "reason": "Two distinct cake servings/leftovers and three visible hand-held eating utensils on three labeled plates were missing; empty paper cups not targets.",
+    "expected_label_sha256": "d4917d7dec240d01ca11f19a415c619ffa0a3d2ded964ed86c38d35e5d4a94a4",
+    "rows": [
+      "1 0.075531250 0.797877358 0.096343750 0.056556604",
+      "1 0.885351563 0.874304245 0.215765625 0.064363208",
+      "1 0.423710937 0.839233491 0.197984375 0.060966981",
+      "0 0.433 0.807 0.122 0.096",
+      "0 0.909 0.865 0.120 0.056",
+      "3 0.165 0.432 0.078 0.085",
+      "3 0.367 0.432 0.122 0.161",
+      "3 0.797 0.727 0.142 0.184"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000499705.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution photo and revised-box overlay visual review 2026-10-13",
+    "reason": "Cake/food on bottom-clipped paper plate and spoon lifted to man's mouth had no food or utensil boxes; retain original plate label.",
+    "expected_label_sha256": "92aead51baf6bcd7c0bb6c1f075ed617872640e6831a2fee5b755ba1c4db235d",
+    "rows": [
+      "1 0.727304687 0.961759259 0.353265625 0.076481481",
+      "0 0.737 0.956 0.260 0.083",
+      "3 0.712 0.683 0.141 0.109"
+    ]
   }
 ]
