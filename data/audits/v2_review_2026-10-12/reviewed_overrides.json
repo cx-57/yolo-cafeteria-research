@@ -2505,5 +2505,49 @@
     "rows": [
       "9 0.52000000 0.45000000 0.80000000 0.44000000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic381_jpg.rf.6afbdf9c806cee211520e1734681124f.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution manual photo and YOLO bounding-box overlay review 2026-10-13",
+    "reason": "Tighten oversized class-9 box around entire visible plastic bottle, including transparent sides and cap; clip bounds only at original image boundary.",
+    "expected_label_sha256": "d3bd894807da3497e2d10136efc7bc8c598e3a8df7b90bbdc31c730149b016a2",
+    "rows": [
+      "9 0.50500000 0.48000000 0.81000000 0.48000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic167_jpg.rf.7bc25d24288e263fa0350c2501e0a5ab.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution manual photo and YOLO bounding-box overlay review 2026-10-13",
+    "reason": "Tighten oversized class-9 box around entire visible plastic bottle, including transparent sides and cap; clip bounds only at original image boundary.",
+    "expected_label_sha256": "ed3261c848d6c49070351a8320984fadd1c46a2da052ed8d98fedaa273bfe720",
+    "rows": [
+      "9 0.48000000 0.47250000 0.38000000 0.87500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic277_jpg.rf.6cc4705e230b3150aea142f3bccfe110.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution manual photo and YOLO bounding-box overlay review 2026-10-13",
+    "reason": "Tighten oversized class-9 box around entire visible plastic bottle, including transparent sides and cap; clip bounds only at original image boundary.",
+    "expected_label_sha256": "a434bbc3863115604c742f110b2e3aa0baab862d05e3ba11592dedb58959722a",
+    "rows": [
+      "9 0.52000000 0.36000000 0.52000000 0.72000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic104_jpg.rf.3bb0ac2296fef5d91defa165da38eecb.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution manual photo and YOLO bounding-box overlay review 2026-10-13",
+    "reason": "Tighten oversized class-9 box around entire visible plastic bottle, including transparent sides and cap; clip bounds only at original image boundary.",
+    "expected_label_sha256": "7ad48b6072db71dfe0d6fbacca43b4f4a918b51ad597acd22ee66e16158dcd2a",
+    "rows": [
+      "9 0.56000000 0.58500000 0.38000000 0.83000000"
+    ]
   }
 ]
