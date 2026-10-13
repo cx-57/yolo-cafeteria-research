@@ -227,6 +227,41 @@ jobs:
           print("Split repairs:", len(report["legacy_split_repairs"]))
           print("Still missing:", report["final_audit"]["missing_classes"])
           PY
+      - name: Verify train-only small-object crop experiment on full reviewed corpus
+        run: |
+          python scripts/experiment.py \
+            --source data/training-ci-v2-reviewed \
+            --output data/training-ci-v2-focus \
+            --balance-classes wrapper bottle plate --max-repeat 2 --crop-repeats
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          import hashlib
+          from scripts.experiment import validate_rows
+          from scripts.train import class_names
+          before = Path("data/training-ci-v2-reviewed")
+          after = Path("data/training-ci-v2-focus")
+          report = json.loads((after / "experiment_summary.json").read_text())
+          assert report["focus_crops"]["cropped_train_views"] > 0, report["focus_crops"]
+          assert report["counts"]["train_views"] > report["counts"]["train_originals"]
+          assert report["counts"]["val_originals"] == report["counts"]["val_views"] == 591
+          for category in ("images", "labels"):
+              a = before / category / "val"
+              b = after / category / "val"
+              assert {p.name for p in a.iterdir()} == {p.name for p in b.iterdir()}
+              for file in a.iterdir():
+                  assert hashlib.sha256(file.read_bytes()).digest() == hashlib.sha256(
+                      (b/file.name).read_bytes()).digest(), file
+          verified = 0
+          for path in (after/"images/train").iterdir():
+              rows = (after/"labels/train"/(path.stem+".txt")).read_text().splitlines()
+              validate_rows(rows, path, class_names())
+              verified += 1
+          assert verified == report["counts"]["train_views"]
+          assert report["focus_crops"]["validation_unchanged"]
+          print("FOCUS CROP INTEGRITY PASS: ", report["focus_crops"],
+                "train views:", verified, "untouched validation:", 591)
+          PY
       - name: Generate complete 3096-image visual review register
         run: |
           python scripts/v2.py review-queue \
