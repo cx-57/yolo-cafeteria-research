@@ -242,3 +242,32 @@ photos were checked to avoid using a pretrained detection as ground truth.
 detector scan of all 3,096 final V2 images with separate exported candidate
 queue. Its proposals must remain *unverified*, and its COCO ontology
 cannot resolve plates, wrappers, napkins or packets.
+
+## Native-resolution source review and durable 3,096-row ledger (October 13, 2026)
+
+A new per-image status ledger is stored at `data/audits/v2_review_2026-10-12/full_11_class_review_ledger.csv`.
+It includes exactly **3,096 source image keys** and distinguishes accepted
+full-image reviews from thumbnail screening, prior partial reviews and
+pending cases. The ledger is rebuilt from the exact existing review records,
+not by pretending a contact sheet constitutes 11-class verification.
+
+At this checkpoint **241 / 3,096** image records have an accepted
+complete visual-review record: **239** checksum-locked
+complete label overrides and **2** directly inspected,
+unchanged full-image annotations. **2855** images are not
+fully signed off, including explicitly flagged follow-ups.
+
+This native-resolution batch inspected four new `food_american` photos:
+`test__images_jpg.rf.8725f085ad0ededab7494a40cdf72491` (add missing fries),
+`train__3-16_png.rf.dac88c9539225132ee07b229eeb92204` (correct
+central burger and add two edge-clipped burgers), plus two unchanged
+single-food photographs `f08c83f04657` and `f3c0e618c95`.
+The two corrected images each retain exact source-label SHA-256 gates;
+source image hashes and reviewer notes are stored in the ledger.
+Two additional food photographs (`2e1375c3`, `8a509a19`) remain
+explicitly pending because grouping/plate boundaries are ambiguous.
+
+Previous transient GitHub Actions failures were investigated: one earlier
+run failed on an exact source SHA-256 typo for `plastic189` and was repaired
+in the subsequent successful run; integrity checks remain enabled.
+Neither new label edits nor ledger changes imply improved model accuracy.

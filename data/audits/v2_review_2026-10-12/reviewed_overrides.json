@@ -3004,5 +3004,30 @@
       "0 0.170312500 0.481443299 0.168750000 0.080412371",
       "6 0.285156250 0.485567010 0.079687500 0.175257732"
     ]
+  },
+  {
+    "source": "food_american",
+    "image": "test__images_jpg.rf.8725f085ad0ededab7494a40cdf72491.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution all-11-class visual audit 2026-10-13",
+    "reason": "Burger already correctly labeled. Distinct visible serving of fries to its left had no food box; original 275x183 photograph checked at native resolution, brown paper holder not independently labeled as a condiment packet or paper boat.",
+    "expected_label_sha256": "0969b687581b64811289b975b327717b7eda17640a816954bad3efc0a0cca63f",
+    "rows": [
+      "0 0.676364 0.573770 0.458182 0.612022",
+      "0 0.27272727 0.66393443 0.40000000 0.43169399"
+    ]
+  },
+  {
+    "source": "food_american",
+    "image": "train__3-16_png.rf.dac88c9539225132ee07b229eeb92204.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution all-11-class visual audit 2026-10-13",
+    "reason": "Original 1920x1080 graphic depicts three separate burgers. Old central food box extended well beyond burger to the right and bottom, while clipping its left edge; corrected central box and added two visible edge-clipped burgers. No other 11-class target objects.",
+    "expected_label_sha256": "1bbc86c8a4474b3a7554c312feaeba6446eb164147512ec3b79df966f143c935",
+    "rows": [
+      "0 0.43203125 0.45370370 0.45364583 0.55555556",
+      "0 0.07812500 0.45000000 0.15625000 0.34814815",
+      "0 0.85156250 0.44861111 0.29687500 0.34722222"
+    ]
   }
 ]
