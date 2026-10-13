@@ -56,3 +56,97 @@ Do **not** auto-delete such challenging samples or assume their original boxes a
 `scripts/inspect_predictions.py` now does maximum-cardinality distinct same-class matches instead of greedy pair selection (avoids undercounting overlapping plates). It also writes `wrong_class_candidates.csv` recording candidate high-IoU overlaps, explicitly marked as **potential confusions** rather than adjudicated relabeling. These changes improve error accounting; **they have no effect on trained weights or official Ultralytics AP**.
 
 **Next evidence needed:** verified NHS in-domain training/validation images and rerun of actual predictions on an independently labeled cohort. Do not assert a new percentage improvement until measured.
+
+## October 13 remediation implementation (post-audit)
+
+The following changes address measurable **software/data-integrity** issues. They do
+**not** certify that weak-class recognition is fixed, because no new 80%-recall
+checkpoint or independent NHS test exists.
+
+| Issue | Change | Verification |
+| --- | --- | --- |
+| Image review undercounts crowded matching | Maximum-cardinality 1:1 IoU matching in `inspect_predictions.py` | Unit tests and CI |
+| Wrapper confused with bottle/condiment | New `wrong_class_candidates.csv` from overlapping unmatched GT/predicted classes | Unit tests; must visually adjudicate candidate errors |
+| Only 38 selected images reviewed | `--all-images --no-overlays` runs 591-image error scan with compact CSV | Unit test; run on user's actual trained checkpoint |
+| Misleading bowl/wrapper 99% headline | Class support gate: AP for zero objects undefined, below 30 = insufficient support | `metrics.json` includes `coverage.insufficient_support_classes` |
+| Ultralytics 8.4.80 on user's Mac vs tested 8.4.175 | Fresh training refuses mismatched installed version unless `--allow-unpinned` | Unit test |
+| Weak-class training diversity | Nine Commons images (18 **provisional** 11-class boxes); combined with five pre-existing paper-boat images | Train-only optional V2 builder + CI, license/artist metadata preserved |
+| Human-readable candidate review | CI exports a nine-photo labeled contact sheet to facilitate human checking | Pipeline artifact |
+| Val missing paper_boat/napkin/condiment_packet; bowl support 2 | Still open. Cannot add unverified photo/boxes to validation | Source-disjoint NHS or fully reviewed external val is needed |
+| Real cafeteria generalization | Still open. No independent in-domain NHS held-out images or evaluation | Capture labeled images from separate sessions/days |
+
+### Run a COMPLETE error scan on the existing checkpoint (no retraining)
+
+```bash
+git pull
+python3 scripts/inspect_predictions.py \
+  --weights model/runs/v2-weak-fast10/weights/best.pt \
+  --data data/training-v2-weak-focus/data.yaml \
+  --split val --all-images --no-overlays \
+  --conf 0.20 --iou 0.50 --device mps \
+  --output model/v2-weak-fast10-full591
+```
+
+This creates `summary.json`, `review_queue.csv`, and
+`wrong_class_candidates.csv`; the CSV rows are **review candidates**, not
+certified false positives or verified errors. AP is computed separately by
+Ultralytics, and the full split is still public-source development validation,
+not a final NHS benchmark.
+
+### Optional NEW train-only exploratory data (unverified)
+
+The `data/v2_candidates/provisional_train_20261013.csv` contains 14 distinct
+candidate photos: five earlier LVIS paper-boat draft images with seven
+provisional target boxes, plus nine Wikimedia Commons photos with 18 proposed
+boxes for plates/food, wrappers, bottles, napkins, packets, bowls and utensils.
+File page/licensing/artist metadata are under
+`data/v2_candidates/weak_cafeteria_20261013/SOURCES.json`.
+
+```bash
+python3 scripts/v2.py build \
+  --source data/training \
+  --output data/training-v2-weak-exploratory-20261013 \
+  --provisional --use-codex-review \
+  --candidate-manifest data/v2_candidates/provisional_train_20261013.csv
+```
+
+**Do not treat these provisional AI-assisted annotations as human-verified.**
+Review the CI contact sheet and **all original full-resolution photos and all
+11 target classes** before using them for publication-quality experiments.
+Do not put any candidate in `val` or `test`; the build enforces this.
+Existing 2,505 original train / 591 val copies and all historical checkpoints
+remain untouched. The new experimental build should have **2,519 train and
+591 val** images. Modest candidate additions cannot establish generalization.
+
+### Collection and stop rules for actually resolving the open model failures
+
+Collect real **still photos, not video**: discarded or uneaten food packaging on
+NHS tables/trays, empty and food-covered plates, clear/crushed drink bottles,
+condiment sachets versus snack wrappers side by side, napkins, paper boats,
+bowls and clamshells. Vary scale, occlusion, clutter, lighting and days.
+Exclude identifiable bystanders; keep source/permission and day/session metadata.
+
+Use session-disjoint splits: at minimum one set of *complete* 11-class
+annotations for training, one separate group/day for development validation,
+and another unseen group/day for the final test. Aim for **at least 30 verified
+objects of EACH of the 11 classes in validation**, with many more for stable
+performance estimates (30 is a reporting gate, not a statistical guarantee).
+Do not move 591 legacy public validation photos into training as a quick fix,
+or silently rename public images as independent NHS data.
+
+Acceptance requires **measured** wrapper, bottle and plate precision/recall/AP
+on the same valid split, no regressions to food/carton/container, plus a separate
+NHS evaluation; the target of >=80% class recall/mAP50 is an engineering goal,
+not a measured fact. A code commit, new candidate image, or 10-epoch training
+log alone cannot close a model-performance issue.
+
+### Reproducibility safeguard
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 -c 'import ultralytics; print(ultralytics.__version__)'
+```
+
+Expected `8.4.175`; your earlier `8.4.80` model metrics should retain their
+original version provenance. Never rewrite past metrics or imply historical
+model output was produced with a later pinned library.
