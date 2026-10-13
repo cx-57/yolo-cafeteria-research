@@ -2687,5 +2687,137 @@
       "0 0.737 0.956 0.260 0.083",
       "3 0.712 0.683 0.141 0.109"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic425_jpg.rf.c977b4083cd5cea9cdf641976b4bf886.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "8336836b19a1047d6f937510fb422ba434b4c592be34bf0e675d923410a27fe6",
+    "rows": [
+      "9 0.5350000 0.5050000 0.7100000 0.7500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic100_jpg.rf.55810c99a726e4b68a6937f090d394a8.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "a9bc2e3c427a4ccc670c3c8bd39542d7de05dc7d220cea3dc3f44c010bd47324",
+    "rows": [
+      "9 0.5750000 0.5250000 0.5100000 0.9500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic189_jpg.rf.4e593aca243ea929b0ad9f6429c457b4.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "3a8a31a4a7b0064b3b15d7d1b4c4f75bd90aadf4896832e512839b74381b98",
+    "rows": [
+      "9 0.5100000 0.5200000 0.8600000 0.6800000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic274_jpg.rf.56505da74375ac32a7b90757a52651f1.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "287a33068921327985e9dab6df105ad92af376b2101f67dad02892bffeb39df6",
+    "rows": [
+      "9 0.5400000 0.5350000 0.3600000 0.9300000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic373_jpg.rf.61d141119a20cdf839bd252b8bafd360.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "d4ba835b1f7e2e28c05f9f9ba69499c946e4659b3ddaddfaaf81b57ea4d6681f",
+    "rows": [
+      "9 0.5000000 0.4650000 0.7800000 0.8900000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic105_jpg.rf.a41d4509977e15cb6afd315e203ce6a4.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "2183676ad3669d1d9452546f7fca164c58c3aa988cb77f9ff526713edf699f87",
+    "rows": [
+      "9 0.5900000 0.5500000 0.4600000 0.9000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic269_jpg.rf.79354b240599f7c4f5439b90d872762b.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "09c07987b9822e6570afa6dc6de60da4a686a36c78da04892a943bf792521d23",
+    "rows": [
+      "9 0.5400000 0.5150000 0.7000000 0.6500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic472_jpg.rf.cf1bc8778b28b680e9f38dba1776c817.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "3af3915dd577daa4cc2dafc170d872c5a482903f9437419b659af70abcc1e690",
+    "rows": [
+      "9 0.4850000 0.5650000 0.9300000 0.8100000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic266_jpg.rf.035f5cdbc092eb06cb79754a5c480aee.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "fbbf77afaafaa3d2d6fea1631f1fad83e3a8c87cfacb486f7b5a90901d0feef3",
+    "rows": [
+      "9 0.5100000 0.4750000 0.7200000 0.5100000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic342_jpg.rf.84fb4fb41acd1e62162d029be3f8587c.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "bfbc99e90cdacdd027588418ebc5329f53b625f15b43509dbaae45281255133c",
+    "rows": [
+      "9 0.5900000 0.5800000 0.7000000 0.8400000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic75_jpg.rf.5ae89799f7d9cab8bcc44030b60cbbeb.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "f2f51826b926173798cf1803b84bc3c89d75058bc19bbccef78d0d0fe0df9782",
+    "rows": [
+      "9 0.5750000 0.4550000 0.6500000 0.8700000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic293_jpg.rf.c859295e0065431235db91067a8dc723.jpg",
+    "complete": "yes",
+    "reviewer": "Original-resolution bottle and transparent-wall box overlay visual audit 2026-10-13",
+    "reason": "Original bottle box overpadded; whole clear/colored plastic drink bottle, including cap, neck, base and clipped image-edge parts, was manually inspected and tightly bounded. No color-only mask copied.",
+    "expected_label_sha256": "c1439d0792fcd4381dd1e1ec96f1d9d9b958708550c4f7a7a22605d336d07e33",
+    "rows": [
+      "9 0.5850000 0.4700000 0.6300000 0.9400000"
+    ]
   }
 ]
