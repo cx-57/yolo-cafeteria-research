@@ -492,6 +492,24 @@ jobs:
           python scripts/v2.py build \
             --source data/training --output data/training-ci-v2-reviewed \
             --provisional --use-codex-review
+      - name: Scan every final V2 image with an independent COCO detector
+        if: contains(github.event.head_commit.message, '[full-audit]')
+        env:
+          YOLO_CONFIG_DIR: /tmp/yolo-independent-label-audit
+          OMP_NUM_THREADS: '2'
+          MKL_NUM_THREADS: '2'
+        run: |
+          python scripts/audit_coco_v2.py \
+            --data data/training-ci-v2-reviewed/data.yaml \
+            --output /tmp/yolo-v2-all-image-crosscheck
+      - name: Upload independent 3096-image semantic discrepancy register
+        if: contains(github.event.head_commit.message, '[full-audit]')
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-v2-independent-coco-screening
+          path: /tmp/yolo-v2-all-image-crosscheck/
+          retention-days: 7
+          if-no-files-found: error
       - name: Train and validate normal and class-weighted pretrained YOLO11n
         env:
           YOLO_CONFIG_DIR: /tmp/yolo-v2-real-smoke-config
