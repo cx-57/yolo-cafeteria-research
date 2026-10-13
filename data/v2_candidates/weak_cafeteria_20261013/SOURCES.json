@@ -99,6 +99,28 @@
       "artist_provenance": "Ceeseven",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "description_url": "https://commons.wikimedia.org/wiki/File:Curry_Lamb_in_Paper_Bowl.jpg"
+    },
+    {
+      "id": 116039392,
+      "title": "File:A school tray showing a reimbursable school breakfast for grades Kindergarten through 12 - MyPlate 20210805-FNS-UNC-0023.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_school_tray_showing_a_reimbursable_school_breakfast_for_grades_Kindergarten_through_12_-_MyPlate_20210805-FNS-UNC-0023.jpg",
+      "license": "Public domain",
+      "provisional_box_count": 7,
+      "annotation_note": "USDA cafeteria-like school breakfast on a green compartment tray (food, napkin, utensil, milk); provisional boxes",
+      "artist_provenance": "U.S. Department of Agriculture",
+      "license_url": null,
+      "description_url": "https://commons.wikimedia.org/wiki/File:A_school_tray_showing_a_reimbursable_school_breakfast_for_grades_Kindergarten_through_12_-_MyPlate_20210805-FNS-UNC-0023.jpg"
+    },
+    {
+      "id": 116039478,
+      "title": "File:A school tray showing a reimbursable school breakfast for grades Kindergarten through 12 - MyPlate 20210727-FNS-UNC-0004.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_school_tray_showing_a_reimbursable_school_breakfast_for_grades_Kindergarten_through_12_-_MyPlate_20210727-FNS-UNC-0004.jpg",
+      "license": "Public domain",
+      "provisional_box_count": 6,
+      "annotation_note": "USDA school breakfast tray with milk carton, paper napkin, spoon, berries, cooked food and sandwich",
+      "artist_provenance": "U.S. Department of Agriculture",
+      "license_url": null,
+      "description_url": "https://commons.wikimedia.org/wiki/File:A_school_tray_showing_a_reimbursable_school_breakfast_for_grades_Kindergarten_through_12_-_MyPlate_20210727-FNS-UNC-0004.jpg"
     }
   ]
 }
