@@ -26,7 +26,7 @@ Neither the old model nor V1 labels have been overwritten.
   American-food plate/bowl corrections, and two direct bottle/wrapper
   omission repairs. A further 13 full-resolution American-food and
   school-lunch image fixes add/repair serving plates, soup/rice bowls and a
-  second unlabeled hotdog; 26 new target boxes were created across those images. Earlier fixes include a non-bottle cup,
+  second unlabeled hotdog; 18 new target boxes were created across those images. Earlier fixes include a non-bottle cup,
   duplicated bowls and five false napkins. All original
   V1 images and labels remain untouched. Full dataset visual verification is
   still incomplete.
