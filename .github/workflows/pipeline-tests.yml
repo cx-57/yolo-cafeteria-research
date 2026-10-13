@@ -153,6 +153,31 @@ jobs:
           print("Split repairs:", len(report["legacy_split_repairs"]))
           print("Still missing:", report["final_audit"]["missing_classes"])
           PY
+      - name: Generate complete 3096-image visual review register
+        run: |
+          python scripts/v2.py review-queue \
+            --data data/training-ci-v2-reviewed/data.yaml \
+            --output /tmp/v2_review_queue.csv
+          python - <<'PY'
+          import csv
+          from collections import Counter
+          from pathlib import Path
+          with Path("/tmp/v2_review_queue.csv").open(newline="") as stream:
+              rows = list(csv.DictReader(stream))
+          counts = Counter(row["review_status"] for row in rows)
+          assert len(rows) == 3096
+          assert counts["full_image_verified"] == 16
+          assert counts["food_only_verified"] == 242
+          assert counts["not_verified"] == 2838
+          assert all(row["requires_all_11_class_review"] == "yes"
+                     for row in rows if row["review_status"] != "full_image_verified")
+          print("V2 PHOTO REVIEW REGISTER PASS:", counts)
+          PY
+      - name: Upload full per-image V2 review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: v2-per-image-review-queue
+          path: /tmp/v2_review_queue.csv
       - name: Build paper-boat draft V2 with new provisional training images
         run: |
           python scripts/v2.py build \
