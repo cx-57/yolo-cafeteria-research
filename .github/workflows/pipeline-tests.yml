@@ -159,6 +159,24 @@ jobs:
               actual = {int(row.split()[0]) for row in candidates[0].read_text().splitlines()}
               assert actual == classes, (stem,actual,classes)
           print("PASS direct visual correction class coverage: plate, food, soup bowls and utensils")
+          # For every newly reviewed Asian-lunch image, verify original food
+          # targets are unchanged and exactly three missing container boxes
+          # were appended: one plate and two independently visible bowls.
+          import collections
+          fixes = [r for r in expected if r["source"] == "school_lunch_asian"]
+          assert len(fixes) >= 14, len(fixes)
+          for item in fixes:
+              stem = "school_lunch_asian__" + Path(item["image"]).stem
+              produced = list(labels.glob("*/" + stem + ".txt"))
+              original = list(Path("data/training/labels").glob("*/" + stem + ".txt"))
+              assert len(produced) == len(original) == 1, (stem, produced, original)
+              source_lines = original[0].read_text().strip().splitlines()
+              actual_lines = produced[0].read_text().strip().splitlines()
+              assert actual_lines[:len(source_lines)] == source_lines, stem
+              appended = actual_lines[len(source_lines):]
+              assert len(appended) == 3, (stem, appended)
+              assert collections.Counter(int(line.split()[0]) for line in appended) == {1:1,10:2}, stem
+          print("PASS 14+ actual Asian cafeteria images with 1 plate + 2 bowls each, source food targets preserved")
           # These five photos are visually verified torn sheets of paper,
           # not cafeteria napkins. V2 keeps the photos as negative examples;
           # original V1 class-5 labels remain unchanged.
