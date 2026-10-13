@@ -2331,5 +2331,32 @@
       "1 0.498664717 0.896507813 0.996081871 0.206984375",
       "0 0.49700000 0.77900000 0.94700000 0.35800000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000282143.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution photo + labelled overlay manual review 2026-10-13",
+    "reason": "Large cheesy pizza slice on plate and two black plastic eating utensils on nearby tray were absent from plate-only source annotations; adjacent drinking vessel is an open cup, not target bottle.",
+    "expected_label_sha256": "1497dfbd7b917a34b8eb47d0de5fd0d9f7966769f593545f8cae99fabcb90b9f",
+    "rows": [
+      "1 0.274180000 0.819946667 0.485080000 0.267413333",
+      "0 0.35100000 0.78000000 0.52600000 0.29700000",
+      "3 0.67000000 0.87500000 0.09000000 0.24800000",
+      "3 0.73500000 0.90800000 0.13000000 0.17600000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000345432.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution photo + labelled overlay manual review 2026-10-13",
+    "reason": "Residual edible whipped/frosted cake portion and large metal fork remain on labeled white paper plate but were not annotated; animal is out of ontology.",
+    "expected_label_sha256": "ca3f2351d6fd999ee4cf95ebdb29b8e19e8d70bea296b39970da59b06bbee434",
+    "rows": [
+      "1 0.422352941 0.741380719 0.844705882 0.517238562",
+      "0 0.65700000 0.86500000 0.35300000 0.26900000",
+      "3 0.28700000 0.75000000 0.57400000 0.14800000"
+    ]
   }
 ]
