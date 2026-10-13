@@ -264,6 +264,32 @@ jobs:
           print("FOCUS CROP INTEGRITY PASS: ", report["focus_crops"],
                 "train views:", verified, "untouched validation:", 591)
           PY
+      - name: Check fast weak-class subset over real reviewed V2
+        run: |
+          python scripts/experiment.py \
+            --source data/training-ci-v2-focus \
+            --output data/training-ci-v2-weak-fast \
+            --weak-subset --replay-fraction 0.15
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+          spec = yaml.safe_load(Path("data/training-ci-v2-weak-fast/data.yaml").read_text())
+          details = json.loads(Path("data/training-ci-v2-weak-fast/weak_subset.json").read_text())
+          paths = [Path(line) for line in Path(spec["train"]).read_text().splitlines()]
+          assert 0 < len(paths) < 3295
+          assert len(paths) == len(set(paths))
+          assert all(p.is_file() for p in paths)
+          assert all("training-ci-v2-focus/images/train" in str(p) for p in paths)
+          assert details["weak_original_groups"] > 0
+          assert details["replay_original_groups"] > 0
+          assert details["selected_training_views"] == len(paths)
+          assert Path(spec["val"]).resolve() == Path("data/training-ci-v2-focus/images/val").resolve()
+          assert len(list(Path(spec["val"]).iterdir())) == 591
+          assert len(spec["names"]) == 11
+          print("WEAK FAST SUBSET PASS", details["selected_training_views"],
+                "views from", details["source_training_views"])
+          PY
       - name: Generate complete 3096-image visual review register
         run: |
           python scripts/v2.py review-queue \
