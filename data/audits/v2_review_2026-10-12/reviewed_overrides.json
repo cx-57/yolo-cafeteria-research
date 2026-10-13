@@ -929,5 +929,225 @@
       "1 0.493000000 0.367000000 0.597000000 0.460000000",
       "10 0.220000000 0.747000000 0.440000000 0.500000000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic459_jpg.rf.b33f8e37ba2c0219a565dd8c73a21ad2.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "955a6519337c233d60379756f73d5d462c729857c669437d7f00b29590b154b1",
+    "rows": [
+      "8 0.43945312 0.52994792 0.51875000 0.84427083"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic462_jpg.rf.d21cb8c8ee5e22380b0030f7c84bb8db.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "8c8804569aabd2e7cb3be953ac100ed4f08950c4300a12dbe36ecef2928a863f",
+    "rows": [
+      "8 0.47949219 0.64192708 0.65742188 0.50572917"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic463_jpg.rf.cff69e0781d9a0179913eba8db95dca5.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "8b3f299cd50273ad2697d99570b09cd365784c3727ed4ab38d1aebe9ab72f7f8",
+    "rows": [
+      "8 0.54882812 0.67239583 0.44453125 0.65520833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic465_jpg.rf.995d67e52de48882f92cdf03c45dd9f8.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "64e0d5af704ee210353f0717d44d8a8613eb3800f75c77a8ad390016aecffa45",
+    "rows": [
+      "8 0.53000000 0.38500000 0.53000000 0.77000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic466_jpg.rf.f5e6ce396ba52df4ab47babf2306b8cb.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "7678e4d33ad471be230fcfd7a81e3d7afb9ef16488e6bb6eff20e6a8a7051ad0",
+    "rows": [
+      "8 0.48339844 0.61979167 0.43085938 0.57083333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic467_jpg.rf.cd70f0fe4ccb77e0f4da356647532b87.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "17e5c184a8192df28e73e02fc27115d7b3bfce548d78cfbf918e86a065efbaea",
+    "rows": [
+      "8 0.53515625 0.28984375 0.42500000 0.57968750"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic477_jpg.rf.21b1763fa29727be50fdd56085abe20d.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "bee2895914ac505366e139565867f15a2f0c82bc351d3f8985f6519a90c06f77",
+    "rows": [
+      "8 0.48925781 0.48307292 0.61835938 0.55260417"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic478_jpg.rf.fa26dec306072e9cee5d68b2b9ae8b4d.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "8ed6822b6a384103c8f6a38c27ecbde67486bd5ed2f2742f798805e56ba0e591",
+    "rows": [
+      "8 0.50097656 0.48046875 0.49335938 0.82864583"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash109_jpg.rf.0f12a67a0e44021d5e8bee2554251254.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "0af236661986c51cd15f1922f1ecbbb3c800c52b3a3ee5c73f5f0a749bd250f2",
+    "rows": [
+      "8 0.41699219 0.54557292 0.55976563 0.78177083"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash114_jpg.rf.622feb74f87acd2da9c2a5ac1f8150a9.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "19fa252a80417d5763c5c32d0b6722fe7df5778573e23c38d99acf5f428622c0",
+    "rows": [
+      "8 0.40039062 0.49348958 0.37031250 0.62552083"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash115_jpg.rf.23209a9fb24d879693e2b4322a520e3c.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "fadff509c9db96c74eecad0af44003d93a2d8fb0477ab38cf2a2837ab39c746d",
+    "rows": [
+      "8 0.60742188 0.43619792 0.55781250 0.80260417"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash117_jpg.rf.6dc66cc257cb070d8b6139e75b162106.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "2410fb6594c65acb042a45e7b23e2e1c35d0f5afb31f6e69c19b3412964c5312",
+    "rows": [
+      "8 0.46484375 0.52864583 0.63593750 0.51875000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash22_jpg.rf.968b286c5d8bb6aded578b3f37a53ae1.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "8619872f306dd74566ac5e5be2879e6ea606738c4f1f98ec6504287f248fbec8",
+    "rows": [
+      "8 0.53500000 0.45500000 0.35000000 0.67000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash27_jpg.rf.71da4643f33aeb7a8d04fd33418ce2b3.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "418ea7c750135f186af7802ee5e3065db295de86aa270da3b0e1626358196372",
+    "rows": [
+      "8 0.54000000 0.54000000 0.64000000 0.30000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__trash51_jpg.rf.6306647b523a62b59849fbd5b0fda898.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "08d751cd992cf4a150a8c3a9fa22a1433894c760d581e25b18a37ac977f74dbe",
+    "rows": [
+      "8 0.60253906 0.56822917 0.32148438 0.86354167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash64_jpg.rf.74614e331b4ce9484d6727943ec280a6.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "9563baeb0d9f5b255066c6ba7c31cfd09597ab65eea622f8ba42474d41e59b82",
+    "rows": [
+      "8 0.64250000 0.46500000 0.39500000 0.81000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash71_jpg.rf.12d3e7b5f97abe87f4fea73a79741646.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "c05642e88acc29ed121af745e8ff923bf95aa55c68b75cf50fd535886d4bf7aa",
+    "rows": [
+      "8 0.55566406 0.51171875 0.55976563 0.80781250"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash75_jpg.rf.6ae4e2856760c35137d21522b27093c6.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "0410847943bae79f5ffb0c988d4321f53c8ae5337aee4cc5c6586619bc1580df",
+    "rows": [
+      "8 0.50000000 0.47000000 0.54000000 0.58000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash83_jpg.rf.2e1990d139f9a52a5dbe4ecaa05ea897.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "9e3e68a215b66249710b6669f710bbfa18118f791e30069df01efe74d137e15b",
+    "rows": [
+      "8 0.53500000 0.45500000 0.41000000 0.55000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash85_jpg.rf.2c9c592337316895dac9073d3dc366b6.jpg",
+    "complete": "yes",
+    "reviewer": "Full-resolution image-by-image box review 2026-10-13",
+    "reason": "Verified wrapper box was overpadded around a single visible snack package; replace with tight visible-object bounds. All other 11 target classes checked in this simple white-background scene.",
+    "expected_label_sha256": "12390ad19fed30c6da92c50b2157080c608d1f6548b0b25a0901221bcbcc1083",
+    "rows": [
+      "8 0.55500000 0.50000000 0.45000000 0.48000000"
+    ]
   }
 ]
