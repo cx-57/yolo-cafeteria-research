@@ -334,7 +334,7 @@ jobs:
           assert r["final_audit"]["image_counts"]["val"] == 591
           print("PASS 5 provisional paper-boat photos / 7 boat boxes, TRAIN ONLY")
           PY
-      - name: Audit 14 provisional new-class and cafeteria-context candidates
+      - name: Audit 16 provisional new-class and cafeteria-context candidates
         run: |
           python scripts/v2.py build \
             --source data/training \
@@ -347,15 +347,15 @@ jobs:
           p = Path("data/training-ci-v2-provisional-expanded")
           s = json.loads((p/"v2_build.json").read_text())
           assert s["provisional"]
-          assert s["unverified_candidate_images"] == 14
-          assert s["final_audit"]["image_counts"]["train"] == 2519
+          assert s["unverified_candidate_images"] == 16
+          assert s["final_audit"]["image_counts"]["train"] == 2521
           assert s["final_audit"]["image_counts"]["val"] == 591
           for cls in ("paper_boat", "napkin", "condiment_packet", "wrapper", "bottle", "bowl"):
               assert s["final_audit"]["instances"]["train"][cls] > 0, cls
           assert s["final_audit"]["instances"]["train"]["paper_boat"] == 7
           assert all("candidate__" not in x.name
                      for x in (p/"images/val").iterdir())
-          print("PASS 14 distinct PROVISIONAL training photos, unchanged 591 validation")
+          print("PASS 16 distinct PROVISIONAL training photos, unchanged 591 validation")
           PY
       - name: Create contact sheet for provisional candidate box review
         run: |
@@ -367,7 +367,7 @@ jobs:
           records = json.loads((root/"weak_cafeteria_20261013/SOURCES.json").read_text())["images"]
           names = ["food", "plate", "paper_boat", "utensil", "hinged_container",
                    "napkin", "drink_carton", "condiment_packet", "wrapper", "bottle", "bowl"]
-          contact = Image.new("RGB", (3*440, 3*325), "white")
+          contact = Image.new("RGB", (3*440, ((len(records)+2)//3)*325), "white")
           canvas = ImageDraw.Draw(contact)
           for i, record in enumerate(records):
               stem = f"commons_{record['id']}"
@@ -394,7 +394,7 @@ jobs:
               canvas.text((col*440+10, row*325+12),
                           stem + "  (PROVISIONAL)", fill="black")
           contact.save("/tmp/weak-class-provisional-review.jpg", quality=90)
-          print("Created 9-photo contact sheet for manual label approval")
+          print(f"Created {len(records)}-photo contact sheet for manual label approval")
           PY
       - name: Upload weak-class candidate review contact sheet
         uses: actions/upload-artifact@v4
