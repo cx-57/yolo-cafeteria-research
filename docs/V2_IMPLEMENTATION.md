@@ -138,6 +138,49 @@ commands without launching Ultralytics. Build fingerprint is checked each run.
 Only for NONFINAL exploratory model experiments on the earlier provisional
 data, explicitly add --allow-provisional.
 
+### Investigate missing-label suppression (paired trial; optional)
+
+Some source datasets label only one or two of the 11 classes. Normal YOLO loss
+penalizes detections of real, **unlabeled** classes as background. V2 now
+exposes a **paired experiment** to test whether suppressing *unknown-class
+negative classification loss* improves plate / bottle / wrapper recall.
+
+Both commands use the **same frozen V2 dataset, pretrained YOLO11n model,
+training settings, 1× image views, and zero mosaic**. Only the experimental
+loss differs. Keep the 80-epoch ordinary `control-n` run intact.
+
+```bash
+python3 scripts/v2.py train \
+  --data data/training-v2-codex-reviewed/data.yaml \
+  --trial no-mosaic-n --epochs 80 --batch 4 --device mps \
+  --allow-provisional --tag coverage-comparison
+
+python3 scripts/v2.py train \
+  --data data/training-v2-codex-reviewed/data.yaml \
+  --trial coverage-n --epochs 80 --batch 4 --device mps \
+  --allow-provisional --tag coverage-comparison
+
+python3 scripts/v2.py report \
+  --trials no-mosaic-n coverage-n --epochs 80 \
+  --tag coverage-comparison --allow-incomplete
+```
+
+For a quick integration run before committing to 80 epochs, use a new tag
+and `--epochs 2` for **both** trials. This tests feasibility, not accuracy.
+The source coverage policy is in
+`data/audits/model_revisions_2026-10-12/source_coverage.json`. Trials reject
+unknown training sources instead of silently assigning wrong supervision.
+The masked loss uses pinned Ultralytics 8.4.175; mosaic, MixUp, CutMix and
+copy-paste must remain disabled to preserve photo provenance. The standard
+training recipes are unchanged.
+
+**Limitations:** Source-level coverage flags are provisional. Even a known
+class may have missing instances. This experiment cannot add missing boxes,
+generate paper-boat photographs, or guarantee an AP improvement. The public
+validation split still lacks four classes and is not an NHS test set. If
+performance is unchanged/worse, use actual held-out prediction reviews and
+new verified NHS images rather than repeating an unsuccessful training recipe.
+
 ## Step 6 — compare
 
     python3 scripts/v2.py report --trials control-n weighted-n control-s --epochs 80
