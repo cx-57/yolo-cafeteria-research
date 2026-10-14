@@ -4106,5 +4106,135 @@
     "rows": [
       "8 0.525390625 0.515625000 0.558593750 0.635416667"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash41_jpg.rf.6c63f090c1ac7af9e5553c95bfd57fd0.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One chocolate-bar snack wrapper, shrink broad background margins.",
+    "expected_label_sha256": "3883bf755680919bc456185095fa5cf75d7e6a50598a099d12d909a7e480c9aa",
+    "rows": [
+      "8 0.473632813 0.507812500 0.478515625 0.703125000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash47_jpg.rf.d0ce11d95e20af3ae08990515277fd73.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One torn printed food foil packet, including detached-looking but connected upper flap.",
+    "expected_label_sha256": "6f43174441f4c0182954bbaf067fe6c8c47fe7a9c7f0f78d668778d5ce702fdd",
+    "rows": [
+      "8 0.469726563 0.477864583 0.580078125 0.955729167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash88_jpg.rf.ad622b5e17a57d26a64353030cb3691b.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. Source wrapper label is wrong: transparent reusable zip-top storage bag, not food/snack packaging. Remove class-8 false positive and keep negative photo.",
+    "expected_label_sha256": "067f1775b8fdb2d0cfc2f17fa59666da720fe2ef5cd20e9948bec2a4f29af353",
+    "rows": []
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__trash91_jpg.rf.4b7fc565dcf3d16bb45ed05f31e87b83.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One oversized white potato-chip bag clipped at left/top/bottom photo edges.",
+    "expected_label_sha256": "ab3178e21a5984d6ffd7e925921ceed729647b2136785127fb4805c5a8dc468e",
+    "rows": [
+      "8 0.457031250 0.498697917 0.914062500 0.997395833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash9_jpg.rf.e6572a6c588a57c72bf00845f723be18.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One crumpled red snack packet, visibly isolated on background.",
+    "expected_label_sha256": "0e090e8f71c39985863f59a9e4c8916bbda227440e8fbe1a73fb01945330ac59",
+    "rows": [
+      "8 0.517578125 0.468750000 0.507812500 0.546875000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__trash66_jpg.rf.945cb64fcdbbb04d3fa9fd3454e2a4ab.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One torn crumpled metallic food/snack package; include red corners.",
+    "expected_label_sha256": "917b10f17bd977018e8c121f4e33ba38806bf0082bc536a6c0a6f11158be234e",
+    "rows": [
+      "8 0.503906250 0.484375000 0.773437500 0.848958333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash78_jpg.rf.026912093349feb882c6968746a44e23.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One crushed blue Oreo cookie packet on plain background.",
+    "expected_label_sha256": "d01fa82d336b3bb2f81b82932ef7a0f734a9e29c820a0f3fbb2096cdfea4ac14",
+    "rows": [
+      "8 0.495117188 0.523437500 0.685546875 0.541666667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash99_jpg.rf.334e26d7fba0fcb387107db1deecd3e7.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One individual wrapped Nutrigrain snack bar on blank table.",
+    "expected_label_sha256": "522d12cad9569ede8a08ac313c1cc5c6fa4ee4bf15dd668100a252a4165f09f4",
+    "rows": [
+      "8 0.500976563 0.505208333 0.255859375 0.750000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash19_jpg.rf.b52ad14b061cb60308c941d8e810771d.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One opened blue-and-orange flexible food wrapper with connected folded flaps.",
+    "expected_label_sha256": "60f662b04382e1e42842f72e4afc6c3365a6c589d3d5081920419144cbf738e1",
+    "rows": [
+      "8 0.563476563 0.475260417 0.404296875 0.664062500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash15_jpg.rf.c0d4b775c32e8f00db60f4b5a014d1b5.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One whole yellow packaged snack biscuit wrapper, source box padded.",
+    "expected_label_sha256": "4924e92384fead6dde2f88d70258b6da144dd4a17d38ba92ac6676a3f06abfbe",
+    "rows": [
+      "8 0.518554688 0.479166667 0.439453125 0.473958333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash21_jpg.rf.aef239d6e75018d88da78529cbe13ec8.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One opened blue Oreo snack wrapper with large hanging silver foil bottom.",
+    "expected_label_sha256": "33fe0dd8fa344e8187108f0742d8b02d551fa96e5ccae681eaf45823c19613a6",
+    "rows": [
+      "8 0.463867188 0.412760417 0.638671875 0.403645833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash32_jpg.rf.5660f4e23208e6ef9a696ea1e6baa51e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo full-frame review, 2026-10-13",
+    "reason": "Visually checked all visible objects in this isolated source photo. One narrow torn red/white/silver food wrapper angled across blue-white background.",
+    "expected_label_sha256": "da188727583146361c8a699822f97a370d565f8c61fe61e5f9c2addf2264718b",
+    "rows": [
+      "8 0.458984375 0.480468750 0.386718750 0.674479167"
+    ]
   }
 ]
