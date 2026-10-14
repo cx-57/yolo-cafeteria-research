@@ -3042,5 +3042,57 @@
       "0 0.50000000 0.63745020 1.00000000 0.63745020",
       "1 0.50000000 0.94820717 1.00000000 0.10358566"
     ]
+  },
+  {
+    "source": "utensil",
+    "image": "IMG_20231109_141023_jpg.rf.6e80fc64956f4574a1c389f224fcce9d.jpg",
+    "complete": "yes",
+    "reviewer": "Full 640px original-resolution visual annotation review 2026-10-13",
+    "reason": "Original 640px cafeteria tray photo shows two separate eating utensils, one white fork and one white spoon. The fork was labeled but the spoon was missing. Receipt is excluded; small torn paper in upper margin is too ambiguous to certify as a napkin.",
+    "expected_label_sha256": "066fd03c8d3f56c2844b11786c69f8d6a84238ce497e8035544b024b87887e29",
+    "rows": [
+      "3 0.49902344 0.51953125 0.07226562 0.55468750",
+      "3 0.655468750 0.521093750 0.114062500 0.579687500"
+    ]
+  },
+  {
+    "source": "utensil",
+    "image": "1217_jpg.rf.04447ef0499e84e7b7d462591bea29b6.jpg",
+    "complete": "yes",
+    "reviewer": "Full 640px original-resolution visual annotation review 2026-10-13",
+    "reason": "640px cutlery-kit product photo contains three large black utensils in lower half already labeled, and three separate black utensils in a top plastic-wrapped kit plus a folded white napkin on the lower right. Boxed the visible top utensils and napkin; ignore condiment packet since it is not a cafeteria condiment sachet.",
+    "expected_label_sha256": "ecaa93146430e45763b88a76977cdd2ede364c8f3fce79f71a3c978a6109fec6",
+    "rows": [
+      "3 0.10889209 0.63232422 0.09845038 0.58886719",
+      "3 0.30579284 0.65527344 0.12828382 0.58789062",
+      "3 0.49821858 0.72656250 0.16706731 0.51562500",
+      "3 0.268750000 0.167187500 0.303125000 0.200000000",
+      "3 0.424218750 0.253125000 0.426562500 0.196875000",
+      "3 0.561718750 0.167187500 0.785937500 0.309375000",
+      "5 0.797656250 0.740625000 0.320312500 0.503125000"
+    ]
+  },
+  {
+    "source": "utensil",
+    "image": "1244_jpg.rf.2f12e3a054ca32c565ab312f7596a7cc.jpg",
+    "complete": "yes",
+    "reviewer": "Full 640px original-resolution visual annotation review 2026-10-13",
+    "reason": "On 640px orange-background array of plastic utensils, nine existing full-object labels missed four visibly identifiable edge-clipped spoons/forks/handles at lower right, lower left, upper right, and mid-left. New boxes are clipped to the image boundary while preserving nine existing ones.",
+    "expected_label_sha256": "320ad7b24b6cd4cbb43767dcff75c4fb6bb2fe859d002d3950ea506aed04131d",
+    "rows": [
+      "3 0.39648438 0.16803012 0.25390625 0.32432014",
+      "3 0.68115234 0.27809351 0.29199218 0.35073535",
+      "3 0.75488281 0.61121873 0.25195312 0.33606023",
+      "3 0.12597656 0.13280983 0.24414062 0.26561966",
+      "3 0.19140625 0.49968782 0.25390625 0.33019019",
+      "3 0.50976563 0.54811571 0.29296875 0.37421555",
+      "3 0.28613281 0.84822191 0.25195312 0.29937244",
+      "3 0.50488281 0.91205868 0.15820312 0.17463392",
+      "3 0.89355469 0.26341840 0.21289062 0.26268464",
+      "3 0.832031250 0.917968750 0.176562500 0.164062500",
+      "3 0.085937500 0.834375000 0.171875000 0.306250000",
+      "3 0.953906250 0.064062500 0.092187500 0.128125000",
+      "3 0.028906250 0.546093750 0.057812500 0.114062500"
+    ]
   }
 ]
