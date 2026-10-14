@@ -3270,5 +3270,115 @@
     "rows": [
       "9 0.313476563 0.497395833 0.572265625 0.526041667"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic188_jpg.rf.68d213840ff262854681e2082863af07.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear drinking water bottle lying on its side; reduce empty white margins.",
+    "expected_label_sha256": "45b93d88b1a429212c3dfb3c2058cfad7fe7f4855f29834f994085c154a1dced",
+    "rows": [
+      "9 0.401367188 0.513020833 0.595703125 0.557291667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic208_jpg.rf.52f9f35cf76598901f6379bcb58bed24.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Orange-cap clear drinking bottle clipped by right frame; remove sky above and below.",
+    "expected_label_sha256": "04e633d84662824d6959097f57f3bac4276da524491041e577fd930af725c028",
+    "rows": [
+      "9 0.594726563 0.597656250 0.810546875 0.591145833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic209_jpg.rf.1fe36e927fc50e4e320e31ee011d699f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Blue-label bottle, body partly outside lower frame; trim unused upper/side space.",
+    "expected_label_sha256": "d1970354545afc2425b941c26dd61b5b38bbee25b8e43c02e5233715fe2ea5e9",
+    "rows": [
+      "9 0.541992188 0.562500000 0.595703125 0.875000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic21_jpg.rf.b5e6d212eb36a6d32c9c8f116f30eccf.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Orange-cap clear beverage bottle with right side off frame, correct vertical extent.",
+    "expected_label_sha256": "145a7adb3f721059ca82670b300c4d0138bbbc22f063d009b82a274f2341938a",
+    "rows": [
+      "9 0.575195313 0.514322917 0.849609375 0.523437500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic224_jpg.rf.4694efa59295e4b56b1357cff2cda6db.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Full diagonal water bottle including cap and tail; original far end truncated.",
+    "expected_label_sha256": "e5ac7d217f425c28809b57bf59b1a614a9d9b8ccca288f29402cfb25519d08ef",
+    "rows": [
+      "9 0.496093750 0.449218750 0.875000000 0.757812500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic227_jpg.rf.b4a27cf978a5b7489f1d69cae11166de.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed branded water bottle diagonally with both ends visible; correct side margins.",
+    "expected_label_sha256": "2eb1db7ee710f821ee977d148fa8c655d090140b931ccc6d4694c97e57650ad7",
+    "rows": [
+      "9 0.542968750 0.414062500 0.835937500 0.770833333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic241_jpg.rf.02e622e0f97dcf416daa4e9ed7d4db45.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Large transparent drink bottle extends to left photo boundary; correct left clipping.",
+    "expected_label_sha256": "3bcc38a92120a3716361566afa53cbac0738a448cc7421dda761f47779639688",
+    "rows": [
+      "9 0.470703125 0.475260417 0.941406250 0.669270833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic251_jpg.rf.7e5c47b5e6a2f61be5b6bd0877011c12.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Horizontal clear water bottle; remove very large top/bottom blank margins.",
+    "expected_label_sha256": "025b54c931aed353b3f676cf38202be371f7523ca4672f674c0d49450df412d5",
+    "rows": [
+      "9 0.473632813 0.384114583 0.947265625 0.414062500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic262_jpg.rf.8bafdd432981c9c274d9623c053f9439.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Diagonal blue-label water bottle clipped at lower edge; correct upper/side padding.",
+    "expected_label_sha256": "e755216385ce5bb4ba5b4386130715256956740f45ed2d7b6b27a3760dc07d6d",
+    "rows": [
+      "9 0.604492188 0.593750000 0.607421875 0.812500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic265_jpg.rf.f1f93d316ff29dbef5c3d79c0410d624.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear partially cropped water bottle with cap out of frame; tighten broad side margins.",
+    "expected_label_sha256": "cb4f4cb8c2fd40a40d4e4ca357c10abc8b1cead7059e172fe1219d78781f3f83",
+    "rows": [
+      "9 0.480468750 0.324218750 0.375000000 0.648437500"
+    ]
   }
 ]
