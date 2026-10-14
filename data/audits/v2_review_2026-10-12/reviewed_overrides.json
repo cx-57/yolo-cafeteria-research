@@ -4906,5 +4906,14 @@
       "8 0.083593750 0.665625000 0.167187500 0.065625000",
       "8 0.056250000 0.836718750 0.112500000 0.092187500"
     ]
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-17-36_000_mov-0028_jpg.rf.5523e7d063a48b78463abbb2f7c53357.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 native-resolution full-image three-class visual audit 2026-10-13",
+    "reason": "Close-up foreground object is an orange printed metallic aluminum beverage can with a rolled can rim, not flexible food/snack wrapper. The photo contains no plate, plastic beverage bottle or food wrapper, and no other detectable class-positive item; remove the sole false-positive class 8 box. Preserve V1 image and label.",
+    "expected_label_sha256": "9eeae4fbc487ef93ea13c3ff1b820a5becab05e8e563e2c3a55341fb2451fe9e",
+    "rows": []
   }
 ]
