@@ -4767,7 +4767,7 @@
     "complete": "three_class",
     "reviewer": "GPT-6 full-source-photo scoped object review, 2026-10-13",
     "reason": "Three distinct capped plastic drinking-water bottles in right foreground of conference table omitted from plate-only labels; tiny background drink containers remain for separate adjudication.",
-    "expected_label_sha256": "93550318201bc6e5a136ed659434442d5ebfd3d9e0a23db5753c9378e7e1550c",
+    "expected_label_sha256": "9e777b415b0d41e2001bfc45fa06ca9a64b0d9a6a5ffce3e3e98a41cd1ac0954",
     "rows": [
       "9 0.745833333 0.705468750 0.091666667 0.173437500",
       "9 0.862500000 0.678125000 0.100000000 0.190625000",
