@@ -283,7 +283,7 @@
 "plate","train__lvis_000000009908.jpg","verified_corrected","yes","yes_prior_complete_override","5f7ad9881947c517856332c35ca8278a8f1c64965282e800e6bc52cefb83fb1f","","Full-resolution visual correction 2026-10-13","Whole hot dog, paper plate, white plastic fork and a partially visible Heinz ketchup packet were photographed; utensil and packet previously absent."
 "plate","train__lvis_000000011042.jpg","pending","no","no","","","",""
 "plate","train__lvis_000000011403.jpg","verified_corrected","yes","yes_prior_complete_override","a5b9ec65510d8fc8b552ed4b829bb1be178d1107ad440500c0e168cd56dd09fc","","Full-resolution visual correction 2026-10-13","A large slice of frosted cake and silver fork are clearly visible inside the paper plate; neither had target annotation."
-"plate","train__lvis_000000014402.jpg","pending","no","no","","","",""
+"plate","train__lvis_000000014402.jpg","verified_corrected","yes","yes_prior_complete_override","af04fd33a87efe1c011fc3d53050b2af46874b21c31f64dc0a7e35ab988dc198","92a80be2e33ad973589b54bda977171da3cddf030db0a6be16ca962b184ae431","GPT-6 native full-photo review 2026-10-13","Add omitted cake food box; retain two original disposable plate boxes and exclude napkin from cake box."
 "plate","train__lvis_000000018299.jpg","pending","no","no","","","",""
 "plate","train__lvis_000000019838.jpg","pending","no","no","","","",""
 "plate","train__lvis_000000019957.jpg","pending","no","no","","","",""
