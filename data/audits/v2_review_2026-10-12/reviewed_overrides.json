@@ -4915,5 +4915,16 @@
     "reason": "Close-up foreground object is an orange printed metallic aluminum beverage can with a rolled can rim, not flexible food/snack wrapper. The photo contains no plate, plastic beverage bottle or food wrapper, and no other detectable class-positive item; remove the sole false-positive class 8 box. Preserve V1 image and label. Original processed label uses 8-digit decimal coordinates while V2 build normalizes to nine decimals; expected checksum updated to exact normalized V2 source label reported by CI (8 0.693651040 0.641979168 0.597786460 0.716041665).",
     "expected_label_sha256": "a04587d4f75e928911fb5180bd8524ac205fd3e02cbf408d88734ac7b301fb76",
     "rows": []
+  },
+  {
+    "source": "waste_detection_v3",
+    "image": "train__2024-02-05_12-14-51_000_mov-0004_jpg.rf.2e24c1588d123a9b0e7233b4edf4a534.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 individual original-resolution visual review 2026-10-13",
+    "reason": "One white disposable serving plate viewed from below/side in a person's hand. The prior class-1 plate box extends well below the physical plate; revised box tightly bounds the white plate from x493-1233 and y303-558 in the original 1920x1080 frame. Checked for all other 11 target objects; none visible. Preserve all V1 data.",
+    "expected_label_sha256": "944799359f841845f39215d7a968a89149a46f6b2e84b7b5ac61a0fce7943ed2",
+    "rows": [
+      "1 0.449479167 0.398611111 0.385416667 0.236111111"
+    ]
   }
 ]
