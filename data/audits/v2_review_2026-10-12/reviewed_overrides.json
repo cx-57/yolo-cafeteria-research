@@ -4556,5 +4556,17 @@
     "rows": [
       "9 0.586914063 0.606770833 0.373046875 0.786458333"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000095062.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-photo plate-wrapper-bottle visual review 2026-10-13",
+    "reason": "A second purported plate box covers a thin section of the existing same physical paper plate. Remove that duplicate; retain the full first plate box. A clearly visible Sparkling ICE pink plastic beverage bottle at upper right was unlabeled; add class-9 bottle including its top-clipped body.",
+    "expected_label_sha256": "48aa8f8582556cc57c648f995dc9dd7216e7bd0f5ab56e239754371c4a802e7c",
+    "rows": [
+      "1 0.386265625 0.761125000 0.730875000 0.477750000",
+      "9 0.828906250 0.272916667 0.189062500 0.545833333"
+    ]
   }
 ]
