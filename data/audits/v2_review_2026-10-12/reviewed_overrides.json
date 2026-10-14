@@ -4944,5 +4944,16 @@
       "9 0.532031250 0.498694517 0.042187500 0.140992167",
       "9 0.526562500 0.808093995 0.050000000 0.180156658"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "test__000023_jpg.rf.b16a9fb7e7d6693f7fd46f1d6063f56f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original resolution review 2026-10-13",
+    "reason": "Only one target plastic beverage bottle in the scene. Manually tighten the original clear bottle box to the object's full visible extent, eliminating excess grass at right and including the lower cap. All other 11-class targets absent.",
+    "expected_label_sha256": "0611fff3d0dafab9e64dc3174586092a6c03d41d09441e51f72ebc2c7eb9124b",
+    "rows": [
+      "9 0.425781250 0.589843750 0.551562500 0.467187500"
+    ]
   }
 ]
