@@ -4018,5 +4018,93 @@
     "rows": [
       "9 0.620117188 0.550781250 0.634765625 0.898437500"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash10_jpg.rf.6f9626e789bbf1939dbd44e5a1a661b1.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One small sealed snack/candy wrapper on white table; remove surrounding blank background.",
+    "expected_label_sha256": "b66c8989962a27e2bf82099310d9951241c29bd8d07c2090fc2ddfce60f4c568",
+    "rows": [
+      "8 0.465820313 0.444010417 0.306640625 0.622395833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash111_jpg.rf.dc24fedc9b84e2ad9318f5eb54c899ba.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One crumpled Funyuns snack wrapper; source label includes large blank background.",
+    "expected_label_sha256": "400b6c1cee7dc935eaf0eff10b6b8865524c49df3ed9219aa16b88054d84747f",
+    "rows": [
+      "8 0.407226563 0.591145833 0.572265625 0.651041667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash110_jpg.rf.37bf490fa47b34ab325091a4a9f7cbf4.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One yellow snack wrapper laid diagonally; shrink vertical and side bounds.",
+    "expected_label_sha256": "a92e9b126d7cd3289b46790d047d1f754dbcc09fd95895355d9eba2df87535ec",
+    "rows": [
+      "8 0.588867188 0.613281250 0.650390625 0.622395833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash112_jpg.rf.b19a91dfe5db88f812a31ff0f8a42dab.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. Single opened metallic foil snack wrapper with a hanging barcode flap; retain all foil.",
+    "expected_label_sha256": "2bf55e4ca5109d17cfecd2a31e168f0c1021925e92da7af64f1812badeb32cd6",
+    "rows": [
+      "8 0.465820313 0.588541667 0.755859375 0.802083333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash113_jpg.rf.b737265d0d67d58769e0397f0473005f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One opened yellow Funyuns wrapper, including crumpled folded left wing.",
+    "expected_label_sha256": "5817b87b84931415f7b6a892877642a9fca4824a5b658637b9bab207cf6d8973",
+    "rows": [
+      "8 0.363281250 0.539062500 0.578125000 0.755208333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__trash116_jpg.rf.5ec9aac2041a3ac239eb60b1926a4b45.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. Single flattened metallic snack wrapper with red paper edge; tighten exterior bounds.",
+    "expected_label_sha256": "99ea3212aa5bbf745deee82187feca5b01cb453da977a6a59441f536dd36bc4c",
+    "rows": [
+      "8 0.509765625 0.483072917 0.703125000 0.679687500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__trash105_jpg.rf.d6efe710ee42f3d04a11a847a372cb33.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One long blue-backed empty snack wrapper; exclude surrounding tabletop.",
+    "expected_label_sha256": "9ea301df6133b1f42e061f6c874bc5656688bf342f7a9a44765edf12b84e39c7",
+    "rows": [
+      "8 0.498046875 0.433593750 0.558593750 0.460937500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash40_jpg.rf.2f8ed8a92ef100de218f6c873efb2383.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
+    "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. Single folded metallic snack wrapper with red heat-seal edge; trim excess background.",
+    "expected_label_sha256": "ee46997fc18397fe0d9a30fd9fa0ebc16aa56c1c0136187da1392710d20b38a7",
+    "rows": [
+      "8 0.525390625 0.515625000 0.558593750 0.635416667"
+    ]
   }
 ]
