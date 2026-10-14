@@ -273,7 +273,7 @@
     "image": "010017001_jpg.rf.ac34e128d803349b8217d73abfb771eb.jpg",
     "complete": "yes",
     "reviewer": "ChatGPT direct full-resolution image audit 2026-10-12",
-    "reason": "Add unlabeled divided cafeteria plate and soup bowl; preserve existing individual meal and milk-carton targets.",
+    "reason": "Add unlabeled divided cafeteria plate and soup bowl; preserve existing individual meal and milk-carton targets. Additional native-image review identified a separate clear flexible food/bread packaging wrapper around the roll, now boxed as class 8; original source food/carton labels and previously verified plate/bowl boxes preserved.",
     "expected_label_sha256": "79cdc47ea9959d47c16215e3993a5dfa27e6668a4c19fbc48a2833a9046883e9",
     "rows": [
       "0 0.23995535714285715 0.7351190476190477 0.43526785714285715 0.48214285714285715",
@@ -283,7 +283,8 @@
       "0 0.5546875 0.15476190476190477 0.18973214285714285 0.20833333333333334",
       "6 0.7790178571428571 0.12202380952380952 0.24107142857142858 0.23809523809523808",
       "1 0.414062500 0.290178571 0.595982143 0.502976190",
-      "10 0.747767857 0.724702381 0.491071429 0.544642857"
+      "10 0.747767857 0.724702381 0.491071429 0.544642857",
+      "8 0.253348214 0.754464286 0.497767857 0.491071429"
     ]
   },
   {
@@ -291,7 +292,7 @@
     "image": "010136001_jpg.rf.8a9132053805dd903b77f69216f27b0a.jpg",
     "complete": "yes",
     "reviewer": "ChatGPT direct full-resolution image audit 2026-10-12",
-    "reason": "Add unlabeled shallow two-compartment white plate and soup bowl; retain existing food portions and drink-carton annotations; bowl will be evaluated on an originally held-out validation photo if its split is unchanged.",
+    "reason": "Add unlabeled shallow two-compartment white plate and soup bowl; retain existing food portions and drink-carton annotations; bowl will be evaluated on an originally held-out validation photo if its split is unchanged. Additional native-image review identified a separate clear flexible food/bread packaging wrapper around the roll, now boxed as class 8; original source food/carton labels and previously verified plate/bowl boxes preserved.",
     "expected_label_sha256": "f32412f6d7264d435ac5ef5405c89f723f651a89aed89d932266d672bc161c78",
     "rows": [
       "0 0.2578125 0.7619047619047619 0.46651785714285715 0.47023809523809523",
@@ -301,7 +302,8 @@
       "0 0.6328125 0.09226190476190477 0.171875 0.18452380952380953",
       "6 0.8225446428571429 0.08928571428571429 0.24330357142857142 0.17857142857142858",
       "1 0.439732143 0.248511905 0.633928571 0.461309524",
-      "10 0.733258929 0.730654762 0.524553571 0.532738095"
+      "10 0.733258929 0.730654762 0.524553571 0.532738095",
+      "8 0.274553571 0.752976190 0.549107143 0.494047619"
     ]
   },
   {
@@ -865,7 +867,7 @@
     "image": "010037000_jpg.rf.df39e985a18dc633b7b3f30202d416f3.jpg",
     "complete": "yes",
     "reviewer": "ChatGPT full-resolution visual inspection 2026-10-12",
-    "reason": "Divided white plate and white/metal serving bowl are clearly visible but unlabeled; retain original food and drink-carton boxes.",
+    "reason": "Divided white plate and white/metal serving bowl are clearly visible but unlabeled; retain original food and drink-carton boxes. Additional native-image review identified a separate clear flexible food/bread packaging wrapper around the roll, now boxed as class 8; original source food/carton labels and previously verified plate/bowl boxes preserved.",
     "expected_label_sha256": "7390be759e5a63c48a26b803953ae0e836fd01417fb66d1ce888bc801165bc0b",
     "rows": [
       "0 0.2857142857142857 0.7842261904761905 0.41517857142857145 0.41964285714285715",
@@ -875,7 +877,8 @@
       "0 0.5926339285714286 0.20238095238095238 0.16741071428571427 0.19642857142857142",
       "0 0.35267857142857145 0.31398809523809523 0.21428571428571427 0.28869047619047616",
       "1 0.469000000 0.355000000 0.550000000 0.450000000",
-      "10 0.760000000 0.749000000 0.470000000 0.490000000"
+      "10 0.760000000 0.749000000 0.470000000 0.490000000",
+      "8 0.245535714 0.779761905 0.491071429 0.440476190"
     ]
   },
   {
@@ -883,7 +886,7 @@
     "image": "010069000_jpg.rf.89148db6509d73cda216904a95a6786b.jpg",
     "complete": "yes",
     "reviewer": "ChatGPT full-resolution visual inspection 2026-10-12",
-    "reason": "Divided white plate and white/metal serving bowl are clearly visible but unlabeled; retain original food and drink-carton boxes.",
+    "reason": "Divided white plate and white/metal serving bowl are clearly visible but unlabeled; retain original food and drink-carton boxes. Additional native-image review identified a separate clear flexible food/bread packaging wrapper around the roll, now boxed as class 8; original source food/carton labels and previously verified plate/bowl boxes preserved.",
     "expected_label_sha256": "bd7f9cac0155f48bb9bcb475bbd31e4542a2942fadd5acc8b1adab064139af01",
     "rows": [
       "0 0.22433035714285715 0.7619047619047619 0.43526785714285715 0.4583333333333333",
@@ -893,7 +896,8 @@
       "0 0.5714285714285714 0.3125 0.19642857142857142 0.23809523809523808",
       "0 0.20424107142857142 0.08928571428571429 0.15401785714285715 0.17857142857142858",
       "1 0.466000000 0.334000000 0.610000000 0.510000000",
-      "10 0.745000000 0.719000000 0.505000000 0.540000000"
+      "10 0.745000000 0.719000000 0.505000000 0.540000000",
+      "8 0.250000000 0.752976190 0.500000000 0.494047619"
     ]
   },
   {
