@@ -4959,5 +4959,119 @@
     "rows": [
       "9 0.425781250 0.589843750 0.551562500 0.467187500"
     ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010093001_jpg.rf.f993399ce190d7c228b2f14a12b043af.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
+    "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
+    "expected_label_sha256": "db66d3ef4d4fe851aa98c44a617679fd15cbb0cc62fca9b43f2bfebc9b541a24",
+    "rows": [
+      "0 0.2779017857142857 0.7589285714285714 0.3861607142857143 0.47619047619047616",
+      "0 0.7008928571428571 0.7470238095238095 0.375 0.4583333333333333",
+      "0 0.5859375 0.3705357142857143 0.21205357142857142 0.22321428571428573",
+      "0 0.35044642857142855 0.2544642857142857 0.22767857142857142 0.21726190476190477",
+      "0 0.5892857142857143 0.16815476190476192 0.17857142857142858 0.18154761904761904",
+      "6 0.7868303571428571 0.1056547619047619 0.19866071428571427 0.20535714285714285",
+      "1 0.466517857 0.291666667 0.584821429 0.464285714",
+      "8 0.309151786 0.750000000 0.497767857 0.500000000",
+      "10 0.709821429 0.744047619 0.441964286 0.511904762"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010112000_jpg.rf.68580b7a74a0b4d3058804fdb0031e34.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
+    "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
+    "expected_label_sha256": "4db8340ac1e1031b163a1c1f56cbc68a0293a8a72f51e30e8cde379967f1785d",
+    "rows": [
+      "0 0.5412946428571429 0.24851190476190477 0.27455357142857145 0.44345238095238093",
+      "0 0.33035714285714285 0.7767857142857143 0.4375 0.44047619047619047",
+      "0 0.7433035714285714 0.7827380952380952 0.3794642857142857 0.42857142857142855",
+      "0 0.30357142857142855 0.25595238095238093 0.21428571428571427 0.32142857142857145",
+      "0 0.6004464285714286 0.12648809523809523 0.17857142857142858 0.22321428571428573",
+      "6 0.8180803571428571 0.10863095238095238 0.2611607142857143 0.21726190476190477",
+      "1 0.456473214 0.267857143 0.569196429 0.535714286",
+      "8 0.324776786 0.761904762 0.453125000 0.476190476",
+      "10 0.743303571 0.769345238 0.392857143 0.461309524"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010136000_jpg.rf.8393d70ce4e2e817f57324fcde13c99c.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
+    "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
+    "expected_label_sha256": "bb62f947fb0f7ed2de567ece2a3c197e4670c80c279ba7cb6ab4e07bc7a94bb5",
+    "rows": [
+      "0 0.7154017857142857 0.7395833333333334 0.46205357142857145 0.49107142857142855",
+      "0 0.578125 0.34375 0.26785714285714285 0.23511904761904762",
+      "0 0.3325892857142857 0.2693452380952381 0.24553571428571427 0.28273809523809523",
+      "6 0.8158482142857143 0.12202380952380952 0.2611607142857143 0.23809523809523808",
+      "0 0.27232142857142855 0.7544642857142857 0.44642857142857145 0.46726190476190477",
+      "0 0.6183035714285714 0.12797619047619047 0.16071428571428573 0.18452380952380953",
+      "1 0.457589286 0.294642857 0.589285714 0.500000000",
+      "8 0.252232143 0.754464286 0.504464286 0.491071429",
+      "10 0.712053571 0.739583333 0.468750000 0.520833333"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010157000_jpg.rf.de455afea45a6f3bac04643816174dc3.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
+    "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
+    "expected_label_sha256": "c5e0f95db06b0e2b95993c187532739b073ff65b804e1b1e014b8f99fa68e8fd",
+    "rows": [
+      "0 0.25669642857142855 0.7425595238095238 0.45535714285714285 0.49702380952380953",
+      "0 0.7611607142857143 0.7142857142857143 0.4732142857142857 0.5476190476190477",
+      "0 0.6171875 0.38095238095238093 0.3325892857142857 0.19642857142857142",
+      "0 0.3158482142857143 0.31101190476190477 0.20758928571428573 0.21726190476190477",
+      "0 0.6238839285714286 0.19196428571428573 0.19866071428571427 0.17559523809523808",
+      "6 0.8125 0.11607142857142858 0.19642857142857142 0.23214285714285715",
+      "1 0.489955357 0.311011905 0.609375000 0.455357143",
+      "8 0.295758929 0.712797619 0.591517857 0.574404762",
+      "10 0.762276786 0.712797619 0.475446429 0.574404762"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010167001_jpg.rf.a1db6df4ccadb8b1d51210131bcaf101.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
+    "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
+    "expected_label_sha256": "9e3688a9d0ba9561ede96afbe3573023f655068e0417adf8862b91fa5d875388",
+    "rows": [
+      "0 0.31026785714285715 0.7455357142857143 0.5446428571428571 0.4791666666666667",
+      "0 0.7790178571428571 0.7306547619047619 0.4330357142857143 0.5208333333333334",
+      "0 0.33482142857142855 0.22767857142857142 0.22767857142857142 0.2767857142857143",
+      "0 0.5959821428571429 0.3705357142857143 0.22767857142857142 0.23511904761904762",
+      "0 0.5870535714285714 0.10119047619047619 0.19196428571428573 0.18452380952380953",
+      "6 0.8392857142857143 0.125 0.24553571428571427 0.25",
+      "1 0.445312500 0.297619048 0.595982143 0.565476190",
+      "8 0.294642857 0.782738095 0.589285714 0.434523810",
+      "10 0.742187500 0.720238095 0.502232143 0.559523810"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010177000_jpg.rf.7b8442cb4d7f17bb2cfe04d7b5b7de40.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
+    "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
+    "expected_label_sha256": "60f9ffdec31fdbf412f2a9a4299699b5fdfc3266f3504d88f1ca450a47dcce85",
+    "rows": [
+      "0 0.29575892857142855 0.7991071428571429 0.43526785714285715 0.3958333333333333",
+      "0 0.7924107142857143 0.7485119047619048 0.40625 0.49107142857142855",
+      "0 0.5814732142857143 0.33482142857142855 0.2611607142857143 0.3125",
+      "0 0.6149553571428571 0.11011904761904762 0.23883928571428573 0.16071428571428573",
+      "0 0.31138392857142855 0.2544642857142857 0.23883928571428573 0.31845238095238093",
+      "6 0.8482142857142857 0.10119047619047619 0.24553571428571427 0.20238095238095238",
+      "1 0.466517857 0.290178571 0.598214286 0.526785714",
+      "8 0.284598214 0.755952381 0.569196429 0.488095238",
+      "10 0.770089286 0.738095238 0.441964286 0.523809524"
+    ]
   }
 ]
