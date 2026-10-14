@@ -4391,5 +4391,170 @@
       "8 0.69728916 0.51713102 0.49431057 0.31174699",
       "8 0.355468750 0.446875000 0.382812500 0.293750000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic335_jpg.rf.6df08e60a7e2598aaa9fb829945a123d.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "de50e8431ec3bfa58026053c9ab401320051599ca83598ce32e893799e00c072",
+    "rows": [
+      "9 0.632812500 0.578125000 0.734375000 0.843750000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic346_jpg.rf.a9fded85911b5d31e257648899896af0.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "48ee9f8169a0bc2ae4f56fdec64940062b09a5b212a1a0e8fccf6f3a80b27390",
+    "rows": [
+      "9 0.477539063 0.511718750 0.826171875 0.414062500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic360_jpg.rf.e72ec8cd3faa3d61dc235aeba1b9051a.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "bb05f33d2df03e7c5cba5b84e4c076216f44a6398f073500b7ba280a4786f6a5",
+    "rows": [
+      "9 0.499023438 0.459635417 0.587890625 0.414062500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic370_jpg.rf.37366034d575ab3bf53ba39a227660f7.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "69e3bd6e60433c4c8011452a0fa0276dba9d9e895011a9a967ab24bbbdf24248",
+    "rows": [
+      "9 0.510742188 0.506510417 0.763671875 0.408854167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic395_jpg.rf.5648a21ab54cdc897492cf0870841d72.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "a5e91f2ec69bc1b57cae4176d64743150b7dc596606556ccab6847c975b7d562",
+    "rows": [
+      "9 0.536132813 0.343750000 0.876953125 0.572916667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic383_jpg.rf.ff4eeb5ff98efe4c87e3d6438bdfed18.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "8e15d8e8d2bdbcb42bb1327120cb0e33c967fb45b76f7a33845cf738454e2e7c",
+    "rows": [
+      "9 0.554687500 0.515625000 0.675781250 0.348958333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic394_jpg.rf.da72dbbf9d0acb665486b7b4dfd73c06.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "024a8d273803c08805b83700ca0270b4b42eb9581dd911c41390340e2e51bf98",
+    "rows": [
+      "9 0.483398438 0.371093750 0.361328125 0.742187500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic62_jpg.rf.e328f8da462a3a863b6d14eff01e309f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "c18d939df98fdc83c68f299a6ffe915475a764d205a0abafe98fb7bcdd4eaa4b",
+    "rows": [
+      "9 0.509765625 0.535156250 0.550781250 0.929687500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic96_jpg.rf.cac70bf1dd345c9d8a308bb2519a2d70.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "6bdb1e12051d9cb71fdba0802b91f7d194a6dd2847f23a21729544fa6ead1bce",
+    "rows": [
+      "9 0.558593750 0.466145833 0.656250000 0.526041667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic8_jpg.rf.ffc21e7648c4123d9547e3991525ee3d.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "4d79af5c3c8fb0f54ce7c21d5cf72eab327043cff785fe5a650f3927a646d750",
+    "rows": [
+      "9 0.550781250 0.502604167 0.570312500 0.734375000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic420_jpg.rf.cdca2f4ade05d8772b5ffcaf96c6b111.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "1d82b0841ca6715f785d0054785bbb545714894ead33684fa3faf480fe0db2ef",
+    "rows": [
+      "9 0.770507813 0.602864583 0.388671875 0.794270833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic447_jpg.rf.6c34b61fc5abd8fe7ede23f520e6c450.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "9fc53da88bc0aba8758c0d8f84d7b5eb7c129ebaf18cfde71dee6a3a31f1afb2",
+    "rows": [
+      "9 0.527343750 0.464843750 0.644531250 0.460937500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic445_jpg.rf.29b98e397d7dd39a388fb7d2084fb4b4.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "104562605294fbd933ea9aea02fa019efd9006969b6c7bd954d551722bca8221",
+    "rows": [
+      "9 0.571289063 0.677083333 0.572265625 0.645833333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic440_jpg.rf.c2bc0ff935ea0b06292ad9a0bb86d4c0.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "e2c8b359ee4c7e498a069c4f97816cc5e28bb7ea6d9a53005a1a02cda89fdc02",
+    "rows": [
+      "9 0.613281250 0.587239583 0.722656250 0.825520833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic439_jpg.rf.a3a17f443f2ee5a0da08a8154f20dbe2.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visual annotation review, 2026-10-13",
+    "reason": "One true beverage bottle, no other visible three-class targets. Trim excess background while retaining the cap, transparent bottle plastic, and any edge-clipped body.",
+    "expected_label_sha256": "77931270af6de5cee9ecee4ec41e988015681ed7638b8daaf695c6d58221a94e",
+    "rows": [
+      "9 0.586914063 0.606770833 0.373046875 0.786458333"
+    ]
   }
 ]
