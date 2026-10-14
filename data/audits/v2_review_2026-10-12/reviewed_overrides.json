@@ -3490,5 +3490,115 @@
     "rows": [
       "9 0.482421875 0.510416667 0.675781250 0.354166667"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic36_jpg.rf.434605a3a2cae78796d162a2751cfce0.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear Sprite bottle with orange cap; include all visible body, trim far-right blank area.",
+    "expected_label_sha256": "ccdc84392ded5b8b41ca60057f02ddb1ff9aa915e30e23158d3f07d9766d8080",
+    "rows": [
+      "9 0.493164063 0.520833333 0.873046875 0.791666667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic371_jpg.rf.159cc9994548b5064eb304d2fd050127.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear branded beverage bottle at steep diagonal clipped by top and bottom boundaries.",
+    "expected_label_sha256": "40c8ba13f73f0c0fedd9e01525747e831bf64743cfbcb3f2a704cee48183888b",
+    "rows": [
+      "9 0.562500000 0.500000000 0.644531250 1.000000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic374_jpg.rf.06602ac12c16b5df9d4aa6a15bf96c93.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed Pepsi beverage bottle; existing label includes excessive top and bottom whitespace.",
+    "expected_label_sha256": "a46de2064e8003cffdb4bc6a7abf844115fb0aaeb9c09e40873938050af4a2ab",
+    "rows": [
+      "9 0.507812500 0.445312500 0.734375000 0.348958333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic375_jpg.rf.80644f97a4654fbda1582470608b39ed.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-cap Kirkland bottled water lying diagonally; tighten vertical/side borders.",
+    "expected_label_sha256": "f034033b063eb9828522072fb668dd2f9e232f2789a20b5a0c2974a3bce53bdb",
+    "rows": [
+      "9 0.495117188 0.598958333 0.697265625 0.489583333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic376_jpg.rf.f8b4543e7cbc03c93221a78318ce2e46.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Blue-label beverage bottle extends to bottom frame; correct very broad original bound.",
+    "expected_label_sha256": "743e5ee11d56cb8712dc7dd82ca9eef030d9b784407bcc71092c0ca32512576b",
+    "rows": [
+      "9 0.512695313 0.596354167 0.849609375 0.807291667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic37_jpg.rf.71022d3fefcd5c7821290e8f0df38271.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Large clear water bottle clipped left and right; exclude top shadow and bottom blank area.",
+    "expected_label_sha256": "6c15f169ba0f89475e2477e4582d7e2b66d5cdefc12d02eb5dca1768bb1c3a0c",
+    "rows": [
+      "9 0.500000000 0.468750000 1.000000000 0.833333333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic384_jpg.rf.c8c251c7f550fa986902ca6b4329c1bf.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Dasani bottle cut off by top image border; tighten left/right empty space.",
+    "expected_label_sha256": "503f769bb2f23d997c78108c800de605fdfcd4d442e0ac502f91241a42e92306",
+    "rows": [
+      "9 0.547851563 0.458333333 0.556640625 0.916666667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic386_jpg.rf.ff9c5395664203a25ee95c751045eb16.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Small horizontal drinking water bottle; oversized source background removed.",
+    "expected_label_sha256": "72930a2aaefc8b2c1c4fd83e8a9564cbc7553cfab9f2b958d491f680454516bb",
+    "rows": [
+      "9 0.524414063 0.470052083 0.568359375 0.372395833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic38_jpg.rf.f6aa890d1b39383437df26e2327d9dae.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear bottled water partly outside right and bottom; preserve white cap and visible plastic.",
+    "expected_label_sha256": "3fa21d255565a6b392648453e24e01fab9550d8fa9809adb474a25cea6dd0664",
+    "rows": [
+      "9 0.630859375 0.602864583 0.738281250 0.794270833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic393_jpg.rf.7ae1a084d97c7e2fb5c18c464d9ce049.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Horizontal green-cap Dasani water bottle; remove broad top/bottom whitespace.",
+    "expected_label_sha256": "1fbd5581683200f2df5ba7ee4ccbece9193db31da7829d777e8d9e0618926b29",
+    "rows": [
+      "9 0.456054688 0.567708333 0.783203125 0.375000000"
+    ]
   }
 ]
