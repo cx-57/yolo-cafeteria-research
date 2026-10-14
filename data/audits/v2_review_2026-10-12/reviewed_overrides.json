@@ -4880,5 +4880,18 @@
     "reason": "Source class-9 plastic bottle label is a false positive on a discarded gray shoe sole/tread in bare dirt. The object has shoe-tread pattern and no bottle neck/cap, and no other target classes are present. Remove the single bottle box; keep original V1 image and label unchanged.",
     "expected_label_sha256": "a33568d55231bf3c6409d86cf5e04020ec5be1a83cdd33f6133f0ea85d90786f",
     "rows": []
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original resolution scoped photo review 2026-10-13",
+    "reason": "Three distinct plastic drink bottles visible beside wire fence: original purple-labeled bottle at upper middle already annotated, two additional transparent crushed bottles in lower-left and lower-center/right omitted. Append just those two bottle boxes, preserve all original labels. Other classes not certified.",
+    "expected_label_sha256": "514fdb6e10be2988087c1c47ddcc6ad23983dcef0525cbd438e7deca61bd1dd3",
+    "rows": [
+      "9 0.389000000 0.644000000 0.214000000 0.167000000",
+      "9 0.567000000 0.840000000 0.190000000 0.148000000"
+    ]
   }
 ]
