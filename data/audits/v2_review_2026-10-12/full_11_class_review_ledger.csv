@@ -485,7 +485,7 @@
 "plate","train__lvis_000000419586.jpg","pending","no","no","","","",""
 "plate","train__lvis_000000420610.jpg","pending","no","no","","","",""
 "plate","train__lvis_000000421639.jpg","pending","no","no","","","",""
-"plate","train__lvis_000000422040.jpg","pending_prior_partial","yes_partial","no","93550318201bc6e5a136ed659434442d5ebfd3d9e0a23db5753c9378e7e1550c","","GPT-6 scoped visual audit 2026-10-13","Three distinct capped plastic drinking-water bottles in right foreground of conference table omitted from plate-only labels; tiny background drink containers remain for separate adjudication. Non-three-class categories still require full-image adjudication."
+"plate","train__lvis_000000422040.jpg","pending_prior_partial","yes_partial","no","9e777b415b0d41e2001bfc45fa06ca9a64b0d9a6a5ffce3e3e98a41cd1ac0954","","GPT-6 scoped visual audit 2026-10-13","Three distinct capped plastic drinking-water bottles in right foreground of conference table omitted from plate-only labels; tiny background drink containers remain for separate adjudication. Non-three-class categories still require full-image adjudication."
 "plate","train__lvis_000000425177.jpg","pending","no","no","","","",""
 "plate","train__lvis_000000434623.jpg","verified_corrected","yes","yes_prior_complete_override","60a0bf5e855ae00cb0fbcc7f3e89a93ab899fb56debe0d2cc3af795584d33f66","","Original-size photo and per-box visual overlay review 2026-10-13","Rainbow cake slice on foreground paper plate and separate out-of-focus cake in upper-left background were missing food annotations."
 "plate","train__lvis_000000435583.jpg","pending","no","no","","","",""
