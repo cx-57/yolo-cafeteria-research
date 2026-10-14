@@ -4672,5 +4672,53 @@
     "rows": [
       "9 0.430468750 0.453906250 0.289062500 0.257812500"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000168422.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original-resolution target-class review 2026-10-13",
+    "reason": "The capped Smartwater plastic beverage bottle is partially clipped by the upper-left image border. Add only this missing class-9 bottle; leave plate, food, visible paper napkin and all other classes unchanged pending separate review.",
+    "expected_label_sha256": "e973b0b6f8384f67b69465556d5c6958dbfc65d074556371277d335fff09e1cd",
+    "rows": [
+      "9 0.115625000 0.249218750 0.231250000 0.498437500"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000305152.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original-resolution target-class review 2026-10-13",
+    "reason": "The small capped clear water bottle at upper center is omitted from plate-source labels. Append its class-9 box only; preserve all existing V2 labels.",
+    "expected_label_sha256": "210ca29580eac9aef22c4891c6d488d66f8ef321719c57e623da61feb5470dd4",
+    "rows": [
+      "9 0.557031250 0.111924686 0.157812500 0.223849372"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000384671.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original-resolution target-class review 2026-10-13",
+    "reason": "The clear Aquafina plastic water bottle next to foreground pizza is unlabeled. Add one class-9 bottle without modifying plate/food/other labels.",
+    "expected_label_sha256": "a7f8a546a33b7922f0bd702dff612510f044ac94c0e7afa8b877c9d47830ad5a",
+    "rows": [
+      "9 0.480093677 0.446093750 0.187353630 0.304687500"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000358770.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original-resolution target-class review 2026-10-13",
+    "reason": "The capped plastic water bottle sits on rear-right chair/table; append class-9 bottle only. Existing green paper plate and separate drink carton remain unchanged and are NOT fully all-11-class certified.",
+    "expected_label_sha256": "7c8dfd2f6e4dab30e5423024713690e0e0c87fbf30e3a997bbb8c550d216f38f",
+    "rows": [
+      "9 0.732812500 0.257009346 0.078125000 0.205607477"
+    ]
   }
 ]
