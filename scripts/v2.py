@@ -612,7 +612,7 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
     if not isinstance(overrides, list) or not isinstance(food, list):
         raise ValueError("Review files must contain lists")
     override_names = {r["source"] + "__" + Path(r["image"]).stem
-                      for r in overrides if r.get("complete") == "yes"}
+                      for r in overrides if r.get("mode") != "append_three_classes"}
     full_names = set(override_names)
     # Manually inspected images with already-correct labels need no override.
     # Do not count thumbnail-only, ambiguous, or needs_followup decisions.
