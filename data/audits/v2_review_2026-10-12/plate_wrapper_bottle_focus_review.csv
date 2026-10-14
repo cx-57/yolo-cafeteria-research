@@ -7,7 +7,7 @@ source,image,review_result,evidence_and_remaining_work,scope,image_viewed,full_1
 "dry_wet_waste","test__plastic130_jpg.rf.0a9555e4b796eeae4d96cfbc343e0d4f.jpg","corrected_and_signed_off","Single capped drink bottle; full transparent outline corrected and override committed","plate|wrapper|bottle","yes","yes"
 "dry_wet_waste","test__plastic217_jpg.rf.c15ab8102fb9e673135213b518706873.jpg","corrected_and_signed_off","Clipped drink bottle box tightened and V2 override committed","plate|wrapper|bottle","yes","yes"
 "trash_detection","test__000017_jpg.rf.fe29771db49c1aacd3097f751409a173.jpg","verified_unchanged","Single drink bottle on grass; source detection matches visible extent","plate|wrapper|bottle","yes","yes"
-"trash_detection","test__000023_jpg.rf.b16a9fb7e7d6693f7fd46f1d6063f56f.jpg","needs_correction","Lying bottle box includes excess grass below the visible base; refine full outline","plate|wrapper|bottle","yes","no"
+"trash_detection","test__000023_jpg.rf.b16a9fb7e7d6693f7fd46f1d6063f56f.jpg","corrected_and_signed_off","Single capped drink bottle; verified geometry tightened to exclude background and include complete cap.","plate|wrapper|bottle","yes","yes"
 "plate","train__lvis_000000021280.jpg","focus_verified","Foreground ceramic plate at bottom edge boxed; other food/utensil labels not adjudicated here","plate|wrapper|bottle","yes","no"
 "plate","train__lvis_000000021364.jpg","needs_adjudication","Stack of white plates has 16 highly overlapping boxes; prior ledger already flags grouping policy","plate|wrapper|bottle","yes","no"
 "plate","train__lvis_000000022411.jpg","needs_adjudication","Multiple tiny distant dinner plates require native-size assessment before removing boxes","plate|wrapper|bottle","yes","no"
