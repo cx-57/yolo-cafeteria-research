@@ -3162,5 +3162,113 @@
     "rows": [
       "9 0.684570313 0.302083333 0.630859375 0.604166667"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic44_jpg.rf.839815ede61bbfb9f038a25c317afd88.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Transparent crushed bottle diagonally across white background; eliminate broad empty side margins.",
+    "expected_label_sha256": "bf3e5d9f837e8daa9160668a44085673234070c3233be58bd358432a667ba8ed",
+    "rows": [
+      "9 0.561523438 0.485677083 0.556640625 0.877604167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic65_jpg.rf.8938da263e9911cdb4f3da90ad66db49.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Partly clipped blue-label drink bottle; cap/base clear plastic bounded to lower frame.",
+    "expected_label_sha256": "69cdcafe221efd625699389fc815bec818249b3d95b2ac9e775ee02d38cbe3fe",
+    "rows": [
+      "9 0.411132813 0.643229167 0.423828125 0.713541667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic116_jpg.rf.30d28f2eac5ecd7785e325ac162393f0.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Large clear bottle clipped on right; tighten vertical limits around plastic walls.",
+    "expected_label_sha256": "5dccac265ee0f33f26c1ac066e996f97074dc28cdec2a1315c6e6896f0b07ef8",
+    "rows": [
+      "9 0.554687500 0.486979167 0.890625000 0.812500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic126_jpg.rf.ffe594e4250f5abc1ab792f177a668c7.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Blue-capped clear drink bottle with huge white margins in original label.",
+    "expected_label_sha256": "dce5e5304f792284833206d6c17c1ec9e99d7cd95fae7ba040f1fd9f6f9dbab6",
+    "rows": [
+      "9 0.614257813 0.407552083 0.431640625 0.789062500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic134_jpg.rf.544ee7f2df4947fa08f3ee040a668f4e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Yellow-cap juice bottle side view; top and bottom background removed.",
+    "expected_label_sha256": "8177cc6475b691908305e786cfd45a9fc2141dfe7f3d5e3846d025095caaebf7",
+    "rows": [
+      "9 0.549804688 0.490885417 0.845703125 0.580729167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic142_jpg.rf.f5cb330e8b8a075830a027f060589627.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crystal Geyser water bottle clipped by upper frame; tighten left/right edges.",
+    "expected_label_sha256": "07d1185414eb5a3a13ee025f1448d3a1bf780f0e4d77f2d8f560de9f57ceb319",
+    "rows": [
+      "9 0.424804688 0.479166667 0.447265625 0.958333333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic145_jpg.rf.dbb90ea58ec02e96ec51ff122d74e091.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Opaque squeeze-shaped household/personal-care bottle, not a plastic beverage bottle under 11-class ontology; remove incorrect positive and keep negative image.",
+    "expected_label_sha256": "675cc3d8501b778fcab78149906d894ed88d643ac206a70746a01561d9169c0d",
+    "rows": []
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic157_jpg.rf.e5317d14e41802870a8420b9d3508943.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-cap clear drink bottle partly clipped at right and bottom; remove top-left blank area.",
+    "expected_label_sha256": "a2e4dd0cd58e42b2bd4e7cc642e44792f701ac3d7dda89def6b8ba2aaea3ea66",
+    "rows": [
+      "9 0.660156250 0.597656250 0.679687500 0.804687500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic185_jpg.rf.56a258ad73ce2baed76f7afbd489ed72.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Single standing clear beverage bottle; severe original left/right padding fixed.",
+    "expected_label_sha256": "9369d6cf98842f195615677beb497b850d32578ab3e04b0b33a748f50fdbe5b7",
+    "rows": [
+      "9 0.436523438 0.427083333 0.220703125 0.729166667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic187_jpg.rf.f3eb16b757cd8d5de73a533ffdd42127.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "White-cap drink bottle on blank background; refine top and bottom around body.",
+    "expected_label_sha256": "c13ba296d1e13bc6262e2b3e8cda71d87d6e1e1a33b2c8ee906411b169f5a9fc",
+    "rows": [
+      "9 0.313476563 0.497395833 0.572265625 0.526041667"
+    ]
   }
 ]
