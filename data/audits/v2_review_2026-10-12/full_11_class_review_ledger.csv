@@ -709,7 +709,7 @@
 "trash_detection","train__000017_JPG.rf.15b6f964392c5e850271d1b8ccb3a918.jpg","pending","no","no","","","",""
 "trash_detection","train__000017_JPG.rf.2ef5d5bff01d16eae905931dc40e84c1.jpg","pending_followup","yes_partial","no","","","prior image_review.csv","Two bottles correctly boxed; right-side flattened food-package bag lacks wrapper annotation; left Almond packaging requires category decision"
 "trash_detection","train__000017_jpg.rf.0bb92ce85e66dd870f942208930de8d0.jpg","pending","no","no","","","",""
-"trash_detection","train__000019_JPG.rf.edbc6173eb926c767a507e52d9595e8c.jpg","pending","no","no","","","",""
+"trash_detection","train__000019_JPG.rf.edbc6173eb926c767a507e52d9595e8c.jpg","verified_corrected","yes","yes","106496d6d75a54bf280aa868d4ab1ba2dc332afcdadd2adbf492e52170a02596","","GPT-6 native-resolution visual QA 2026-10-13","One physical clear plastic beverage bottle on weeds. Source has two class-9 rectangles covering separate overlapping parts of the same bottle; replace with a single full bottle box including cap and entire body, not two objects. No other target categories visible."
 "trash_detection","train__000019_jpg.rf.6de21bca11b588ea1f499948e8dc2b56.jpg","pending","no","no","","","",""
 "trash_detection","train__000019_jpg.rf.91b7ec1f763f6b9fc99b8a3c5ef4d87f.jpg","pending","no","no","","","",""
 "trash_detection","train__000019_jpg.rf.9dcedb932b3c042b7f0604d8eeec2bfb.jpg","pending","no","no","","","",""
