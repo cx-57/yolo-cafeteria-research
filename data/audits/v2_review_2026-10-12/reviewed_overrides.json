@@ -4661,5 +4661,16 @@
     "reason": "The only class-9 plastic drink bottle box falls on an aluminum beverage can among numerous cans in a brick planter. No plastic bottles, snack wrappers or plates visible; remove false plastic-bottle label, keep original photo as background negative.",
     "expected_label_sha256": "f44c8c0ab16c4e06fc5883f76db41e1b7c5d6e03bd705999e0403796823fd257",
     "rows": []
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000019_JPG.rf.edbc6173eb926c767a507e52d9595e8c.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution object-level adjudication 2026-10-13",
+    "reason": "One physical clear plastic beverage bottle on weeds. Source has two class-9 rectangles covering separate overlapping parts of the same bottle; replace with a single full bottle box including cap and entire body, not two objects. No other target categories visible.",
+    "expected_label_sha256": "106496d6d75a54bf280aa868d4ab1ba2dc332afcdadd2adbf492e52170a02596",
+    "rows": [
+      "9 0.430468750 0.453906250 0.289062500 0.257812500"
+    ]
   }
 ]
