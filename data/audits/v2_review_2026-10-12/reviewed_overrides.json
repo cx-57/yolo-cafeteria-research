@@ -4568,5 +4568,29 @@
       "1 0.386265625 0.761125000 0.730875000 0.477750000",
       "9 0.828906250 0.272916667 0.189062500 0.545833333"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000482706.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution manual visual review 2026-10-13",
+    "reason": "Only plate box wrongly encloses a cartoon orange clownfish on wall above adult and infant; no plate or other 11-class target visible. Remove false target entirely.",
+    "expected_label_sha256": "68ca5a90e17a0b45e8c34b9a8a1e8f559ae473188c050bc93a6193dd27ce4e7f",
+    "rows": []
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000341271.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution manual visual review 2026-10-13",
+    "reason": "Preserve the two existing disposable paper-plate labels and two existing previously approved pizza food labels; add missing upright 20-fl-oz plastic Diet Coke bottle at right, including cap and base. No other target categories visible.",
+    "expected_label_sha256": "ea6b022ad3e602836fa64aa25699f7608425fb4c4d114e23841a5c85d8d9abf9",
+    "rows": [
+      "1 0.570580065 0.822132353 0.196225490 0.279428105",
+      "1 0.363799020 0.825498366 0.241781046 0.272990196",
+      "0 0.259142157 0.766266340 0.443251634 0.386748366",
+      "0 0.739787582 0.772426471 0.446633987 0.379950980",
+      "9 0.880718954 0.331699346 0.166666667 0.529411765"
+    ]
   }
 ]
