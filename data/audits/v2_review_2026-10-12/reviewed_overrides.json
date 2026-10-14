@@ -3107,5 +3107,60 @@
       "1 0.734566745 0.978312500 0.426932084 0.043375000",
       "0 0.312646370 0.738281250 0.189695550 0.154687500"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic130_jpg.rf.0a9555e4b796eeae4d96cfbc343e0d4f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit, 2026-10-13",
+    "reason": "One clear plastic drink bottle, no other target objects visible. Tightly box cap, neck, label, transparent walls; preserve original V1.",
+    "expected_label_sha256": "6c6e1a3a61c8eb5e4b4135821cdc8fd530a47e1ea3f8775600e4772bdf2e9f42",
+    "rows": [
+      "9 0.472656250 0.548177083 0.574218750 0.565104167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic217_jpg.rf.c15ab8102fb9e673135213b518706873.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit, 2026-10-13",
+    "reason": "One clear plastic drink bottle, no other target objects visible. Tightly box cap, neck, label, transparent walls and visible clipped edge; preserve original V1.",
+    "expected_label_sha256": "a46c9d2d02b91b2412ffda09c1a88d5b0ae4110bb89efb45ca8a11704c311ee3",
+    "rows": [
+      "9 0.749023438 0.574218750 0.501953125 0.346354167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic230_jpg.rf.a91d91b8d28c05b2a7f85754c6fe95cb.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit, 2026-10-13",
+    "reason": "One clear plastic drink bottle, no other target objects visible. Tightly box cap, neck, label, transparent walls; preserve original V1.",
+    "expected_label_sha256": "f8c013a96b598fa1d81828c41798a8af728a1f5a05b8fec63ad312195bbcb4fc",
+    "rows": [
+      "9 0.433593750 0.515625000 0.707031250 0.473958333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic287_jpg.rf.b591f319473433954dbe29b39509e404.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit, 2026-10-13",
+    "reason": "One clear plastic drink bottle, no other target objects visible. Tightly box cap, neck, label, transparent walls; preserve original V1.",
+    "expected_label_sha256": "6b317c366ff95f10f042b35d4d71f9623c7cac4b385226f5b068834eaf65368a",
+    "rows": [
+      "9 0.506835938 0.454427083 0.755859375 0.414062500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__plastic362_jpg.rf.e583de5a152c31dc3b2a51a889d0eb9c.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit, 2026-10-13",
+    "reason": "One clear plastic drink bottle, no other target objects visible. Tightly box cap, neck, label, transparent walls and visible clipped edge; preserve original V1.",
+    "expected_label_sha256": "f3e906530da95f553ab3b96726d995d51827c3f8bbe12548d94e93667902c55b",
+    "rows": [
+      "9 0.684570313 0.302083333 0.630859375 0.604166667"
+    ]
   }
 ]
