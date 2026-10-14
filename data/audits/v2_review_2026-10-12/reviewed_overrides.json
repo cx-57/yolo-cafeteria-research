@@ -4847,5 +4847,29 @@
     "rows": [
       "1 0.742187500 0.765625000 0.187500000 0.143750000"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original image scoped visual QA 2026-10-13",
+    "reason": "One distinct capped clear plastic drinking bottle toward right-center of source photo is unlabeled. Keep existing left-bottom bottle and add only second bottle. Plate/wrapper/bottle scope; other classes not certified.",
+    "expected_label_sha256": "d8b083109ece63e2f1bf1dbc5c21c38dbe6191a2e34040b9a3d2dddb396b53c1",
+    "rows": [
+      "9 0.708333333 0.576000000 0.142156863 0.171568627"
+    ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000057_jpg.rf.87ed1455d9cee55fb697118d664f83f7.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 original image scoped visual QA 2026-10-13",
+    "reason": "An additional flattened capped plastic beverage bottle is visible in top-center grass above the existing white food wrapper. Preserve existing class-8 wrapper and append a class-9 bottle; only three target classes assessed.",
+    "expected_label_sha256": "efc258102d2bd24226d42a1a23570c97c26d9d27c94bcf33f5ce8343893dcb33",
+    "rows": [
+      "9 0.511438000 0.104575000 0.194444000 0.071895000"
+    ]
   }
 ]
