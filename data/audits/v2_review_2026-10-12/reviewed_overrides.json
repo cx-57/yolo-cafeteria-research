@@ -4926,5 +4926,23 @@
     "rows": [
       "1 0.449479167 0.398611111 0.385416667 0.236111111"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000379820.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 visually inspected original 640x383 image (plate-wrapper-bottle audit, 2026-10-13)",
+    "reason": "Add seven distinct capped plastic beverage bottles around the family picnic table, including the yellow capped foreground bottle. Preserve all five existing source plate labels; only plate, wrapper and bottle categories scoped in this review. Some distant/crowded objects remain potential followups.",
+    "expected_label_sha256": "dce3592f1f31d16e5ff1fd11a3b40397413a02cc6b950baa203924bdcc854726",
+    "rows": [
+      "9 0.221875000 0.583550914 0.043750000 0.143603133",
+      "9 0.363281250 0.524804178 0.042187500 0.161879896",
+      "9 0.391406250 0.567885117 0.042187500 0.169712794",
+      "9 0.449218750 0.520887728 0.039062500 0.143603133",
+      "9 0.485156250 0.505221932 0.039062500 0.127937337",
+      "9 0.532031250 0.498694517 0.042187500 0.140992167",
+      "9 0.526562500 0.808093995 0.050000000 0.180156658"
+    ]
   }
 ]
