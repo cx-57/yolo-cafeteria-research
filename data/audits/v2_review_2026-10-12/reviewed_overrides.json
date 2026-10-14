@@ -3908,5 +3908,115 @@
     "rows": [
       "9 0.487304688 0.549479167 0.974609375 0.541666667"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic136_jpg.rf.a696443cfbeced1bf66adc7e208be9ee.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear Ocean Spray beverage bottle angled on plain background; original includes too much top and left background.",
+    "expected_label_sha256": "674dc4c288967e0e6d24587f1ab81ccaba6c2a5cb2e12ea071f9873edc8c929a",
+    "rows": [
+      "9 0.418945313 0.533854167 0.341796875 0.526041667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic14_jpg.rf.33461bb3a7cd6ed10f022373090cb204.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Dasani clear drink bottle diagonal; original validation box includes extra bottom/right blank area.",
+    "expected_label_sha256": "0ccf1c2bf73779a8b84c6117b3a739dcc48842c3aaacdf9a5554796016cf86db",
+    "rows": [
+      "9 0.483398438 0.397135417 0.767578125 0.794270833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic184_jpg.rf.9a46227c3da0c27eb23b5fcf3389a84e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Ocean Spray Light drink bottle diagonal; tighten broad original side margins.",
+    "expected_label_sha256": "8b8d55cde38166a8669561ba82cabfa19d05e9f917215c30f6364b6ac32f42a2",
+    "rows": [
+      "9 0.528320313 0.510416667 0.505859375 0.671875000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic235_jpg.rf.6901775015649d1d8ae2b4448cee2d30.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Partly clipped water bottle diagonal; original excludes none but includes excessive empty left/lower area.",
+    "expected_label_sha256": "ab47ae1e6bea3b0fd2dcc5d25c9aaeeb8af63d49822e567081e37dd234e1a16a",
+    "rows": [
+      "9 0.544921875 0.467447917 0.910156250 0.934895833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic24_jpg.rf.062607466b67f6e4bc07b64bd3ab3f26.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Arrowhead drink bottle cropped at upper and right photo borders; original far too low/left.",
+    "expected_label_sha256": "b2aeb6de943a261adcabb1c92ed09e9aa7d70b8db8a608e28c55c278be4a23a0",
+    "rows": [
+      "9 0.704101563 0.248697917 0.591796875 0.497395833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic286_jpg.rf.b7ae4884b91fab4cdebaba8e93d9cd07.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed transparent bottle cropped at bottom; correct full-photo-sized original box.",
+    "expected_label_sha256": "6c0e8958671c8e19cf8956905336858fd42e45b6d4188ad20632eaf3087d642a",
+    "rows": [
+      "9 0.516601563 0.546875000 0.669921875 0.906250000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic292_jpg.rf.96c468968beba3c354384af63e5573df.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-cap Dasani bottle diagonal; original cuts right plastic and adds upper/left background.",
+    "expected_label_sha256": "bea097f4f551d3f06c4dff61203ba75b0b4d7e894e36dde2c964b671da4b56c8",
+    "rows": [
+      "9 0.537109375 0.436197917 0.761718750 0.580729167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic304_jpg.rf.42f68026df1ad5e3432face92b811e28.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Blue-label beverage bottle cropped heavily by left edge; original extends right into empty field.",
+    "expected_label_sha256": "c3d3d983abc95a22ada630f265c56fa753ae70d5bf23bc3cbe3484c77a2cbe3b",
+    "rows": [
+      "9 0.161132813 0.545572917 0.322265625 0.908854167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic313_jpg.rf.508c40df4dc688600dde90fedcd1a80e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed green soda bottle on background; correct side and upper bounds.",
+    "expected_label_sha256": "00e8f0c3632b86a69165d5e15610f3e447e34a3af50b1f87ed64eb235b4a85f4",
+    "rows": [
+      "9 0.516601563 0.447916667 0.654296875 0.562500000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic324_jpg.rf.cb589363379eba7d7608b2e6180afb55.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Orange-cap Gatorade drink bottle cropped at bottom; large original left padding removed.",
+    "expected_label_sha256": "f9ea90e4778d1f85ff8dec5f43445785e4e4ed1d45848c2d0408a489646f02dd",
+    "rows": [
+      "9 0.620117188 0.550781250 0.634765625 0.898437500"
+    ]
   }
 ]
