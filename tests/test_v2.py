@@ -230,6 +230,44 @@ class V2WorkflowTests(unittest.TestCase):
         self.assertFalse(self.output.exists())
 
 
+    def test_three_class_append_preserves_other_labels_and_v1(self):
+        original = self.source / "labels/train/trash_detection__train__wrap.txt"
+        corrections = self.root / "partial_three_class.json"
+        record = {
+            "source": "trash_detection", "image": "train__wrap.png",
+            "rows": ["8 .2 .2 .1 .1"], "complete": "three_class",
+            "mode": "append_three_classes", "reviewer": "reviewer_a",
+            "reason": "add visually verified food wrapper only",
+            "expected_label_sha256": v2.digest(original),
+        }
+        corrections.write_text(json.dumps([record]))
+        v2.build(self.args(reviewed_overrides=corrections))
+        corrected = self.output / "labels/train/trash_detection__train__wrap.txt"
+        self.assertEqual(corrected.read_text(), "9 .5 .5 .4 .4\n8 .2 .2 .1 .1\n")
+        self.assertEqual(original.read_text(), "9 .5 .5 .4 .4\n")
+        self.assertEqual(self.original_labels,
+                         {str(p): p.read_bytes() for p in self.source.rglob("*.txt")})
+
+    def test_three_class_append_rejects_other_classes_and_unreviewed(self):
+        original = self.source / "labels/train/trash_detection__train__wrap.txt"
+        corrections = self.root / "invalid_partial.json"
+        record = {
+            "source": "trash_detection", "image": "train__wrap.png",
+            "rows": ["0 .2 .2 .1 .1"], "complete": "three_class",
+            "mode": "append_three_classes", "reviewer": "reviewer_a",
+            "reason": "partial review", "expected_label_sha256": v2.digest(original),
+        }
+        corrections.write_text(json.dumps([record]))
+        with self.assertRaisesRegex(ValueError, "plate/wrapper/bottle"):
+            v2.build(self.args(reviewed_overrides=corrections))
+        self.assertFalse(self.output.exists())
+        record["rows"] = ["8 .2 .2 .1 .1"]
+        record["complete"] = "no"
+        corrections.write_text(json.dumps([record]))
+        with self.assertRaisesRegex(ValueError, "complete=three_class"):
+            v2.build(self.args(reviewed_overrides=corrections))
+        self.assertFalse(self.output.exists())
+
     def test_verified_override_changes_copy_only(self):
         original = self.source / "labels/train/trash_detection__train__wrap.txt"
         corrections = self.root / "overrides.json"
