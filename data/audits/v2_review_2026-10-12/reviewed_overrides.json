@@ -3094,5 +3094,18 @@
       "3 0.953906250 0.064062500 0.092187500 0.128125000",
       "3 0.028906250 0.546093750 0.057812500 0.114062500"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000014402.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original 427px full-resolution photo+YOLO overlay audit 2026-10-13",
+    "reason": "Child eating a large piece of cake on colorful disposable plate; existing plate boxes retained. New cake food box deliberately excludes the white napkin and orange frosting debris on plate.",
+    "expected_label_sha256": "af04fd33a87efe1c011fc3d53050b2af46874b21c31f64dc0a7e35ab988dc198",
+    "rows": [
+      "1 0.299543326 0.780515625 0.511124122 0.170531250",
+      "1 0.734566745 0.978312500 0.426932084 0.043375000",
+      "0 0.312646370 0.738281250 0.189695550 0.154687500"
+    ]
   }
 ]
