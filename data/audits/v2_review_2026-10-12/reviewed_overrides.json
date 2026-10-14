@@ -4652,5 +4652,14 @@
       "0 0.647435897 0.490347490 0.243589744 0.308880309",
       "9 0.721093750 0.107058824 0.104687500 0.214117647"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 native-size photographic target annotation review, 2026-10-13",
+    "reason": "The only class-9 plastic drink bottle box falls on an aluminum beverage can among numerous cans in a brick planter. No plastic bottles, snack wrappers or plates visible; remove false plastic-bottle label, keep original photo as background negative.",
+    "expected_label_sha256": "f44c8c0ab16c4e06fc5883f76db41e1b7c5d6e03bd705999e0403796823fd257",
+    "rows": []
   }
 ]
