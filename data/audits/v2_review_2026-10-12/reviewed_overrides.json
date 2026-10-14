@@ -4893,5 +4893,18 @@
       "9 0.389000000 0.644000000 0.214000000 0.167000000",
       "9 0.567000000 0.840000000 0.190000000 0.148000000"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "valid__000062_JPG.rf.c43c0fd28133e29f9e7cba2953c55ae0.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 full-resolution image visual review 2026-10-13",
+    "reason": "Two separately visible blue snack-chip foil wrappers in the lower-left brush are missing from this outdoor mixed waste photo: one partially clipped at left near y420, another partly clipped at left near y530. Preserve original white plastic beverage bottle and all other source annotations. Only plate/wrapper/bottle scope reviewed; no all-class certification.",
+    "expected_label_sha256": "be623f04a1910424cf07743c73c6f9016c0e40d20b63e36586abb64431e41c57",
+    "rows": [
+      "8 0.083593750 0.665625000 0.167187500 0.065625000",
+      "8 0.056250000 0.836718750 0.112500000 0.092187500"
+    ]
   }
 ]
