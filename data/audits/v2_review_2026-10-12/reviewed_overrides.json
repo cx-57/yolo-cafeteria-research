@@ -4379,5 +4379,17 @@
     "rows": [
       "8 0.459960938 0.503906250 0.525390625 0.992187500"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 full-image visual review 2026-10-13",
+    "reason": "Two distinct food wrappers are visible among brush. Preserve original orange snack packaging bbox (source historical class 9 maps to V2 class 8) and add missed blue/yellow chip packet at left. No bottle/plate target in image.",
+    "expected_label_sha256": "24221315faf81dbece912bb5e7312d9255cca94357e3f9ea1a5bb35ea7dcc00b",
+    "rows": [
+      "8 0.69728916 0.51713102 0.49431057 0.31174699",
+      "8 0.355468750 0.446875000 0.382812500 0.293750000"
+    ]
   }
 ]
