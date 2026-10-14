@@ -4966,7 +4966,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
     "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
-    "expected_label_sha256": "db66d3ef4d4fe851aa98c44a617679fd15cbb0cc62fca9b43f2bfebc9b541a24",
+    "expected_label_sha256": "89753652d99f481157eb71af40689e8fd170d46606a537925f628f84bf70cadb",
     "rows": [
       "0 0.2779017857142857 0.7589285714285714 0.3861607142857143 0.47619047619047616",
       "0 0.7008928571428571 0.7470238095238095 0.375 0.4583333333333333",
@@ -4985,7 +4985,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
     "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
-    "expected_label_sha256": "4db8340ac1e1031b163a1c1f56cbc68a0293a8a72f51e30e8cde379967f1785d",
+    "expected_label_sha256": "a0ce55a15f460344fb704c54893defe12674f853852408328e44ed2f51c416a3",
     "rows": [
       "0 0.5412946428571429 0.24851190476190477 0.27455357142857145 0.44345238095238093",
       "0 0.33035714285714285 0.7767857142857143 0.4375 0.44047619047619047",
@@ -5004,7 +5004,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
     "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
-    "expected_label_sha256": "bb62f947fb0f7ed2de567ece2a3c197e4670c80c279ba7cb6ab4e07bc7a94bb5",
+    "expected_label_sha256": "767166f0d1166fbd59a403fd091e75283f937fca13058a93bc1b9edb5d47340e",
     "rows": [
       "0 0.7154017857142857 0.7395833333333334 0.46205357142857145 0.49107142857142855",
       "0 0.578125 0.34375 0.26785714285714285 0.23511904761904762",
@@ -5023,7 +5023,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
     "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
-    "expected_label_sha256": "c5e0f95db06b0e2b95993c187532739b073ff65b804e1b1e014b8f99fa68e8fd",
+    "expected_label_sha256": "4fcbec9d1a81656fa596ab0363192ecea297a3a7d37229b751e7bb35862a9ffc",
     "rows": [
       "0 0.25669642857142855 0.7425595238095238 0.45535714285714285 0.49702380952380953",
       "0 0.7611607142857143 0.7142857142857143 0.4732142857142857 0.5476190476190477",
@@ -5042,7 +5042,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
     "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
-    "expected_label_sha256": "9e3688a9d0ba9561ede96afbe3573023f655068e0417adf8862b91fa5d875388",
+    "expected_label_sha256": "3f0b364a8e8c49c901056b9ccc695d0ad501eb52ce8c43ebbcd342ea5effc1ac",
     "rows": [
       "0 0.31026785714285715 0.7455357142857143 0.5446428571428571 0.4791666666666667",
       "0 0.7790178571428571 0.7306547619047619 0.4330357142857143 0.5208333333333334",
@@ -5061,7 +5061,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 original-resolution cafeteria photo review 2026-10-13",
     "reason": "Previously unlabeled compartment serving plate and separate clear food/bread wrapper corrected. Existing food and beverage-carton labels preserved, and visible soup/rice serving bowl also annotated to prevent false background in exhaustive 11-class ground truth. All visible target classes checked; original V1 untouched.",
-    "expected_label_sha256": "60f9ffdec31fdbf412f2a9a4299699b5fdfc3266f3504d88f1ca450a47dcce85",
+    "expected_label_sha256": "199de47d02bd244c502a805467dbec3fa9b0f5cd08f440a306034f575d567488",
     "rows": [
       "0 0.29575892857142855 0.7991071428571429 0.43526785714285715 0.3958333333333333",
       "0 0.7924107142857143 0.7485119047619048 0.40625 0.49107142857142855",
