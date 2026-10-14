@@ -3699,5 +3699,104 @@
     "rows": [
       "9 0.521484375 0.503906250 0.625000000 0.539062500"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic460_jpg.rf.d3dd847f8c803777e9761be888f556ff.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Red packaged lychee gummy candy wrapper: trim broad side and top margins.",
+    "expected_label_sha256": "660a1834ffc78015801764d7af12ef7cf80edc56a2a2d380b0a154ee1246a650",
+    "rows": [
+      "8 0.333984375 0.613281250 0.464843750 0.773437500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic461_jpg.rf.109bee31f7c7d59b48266a97131d0594.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crumpled lychee gummy snack packet: source box includes background and slightly truncates lower edge.",
+    "expected_label_sha256": "21cc42dbc1cfcf0cfc1ba5f845d836f5fcadf5513ff4f90fecdfe7d346053a62",
+    "rows": [
+      "8 0.385742188 0.575520833 0.517578125 0.692708333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic468_jpg.rf.f0f546159020d87b9a3558767576891e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Horizontal green Sprite bottle: correct empty top/bottom original margins.",
+    "expected_label_sha256": "dde7581e7e4fa4ddf68a4ff2343d1eaeb608f747ded915e253eb0cb25ac9ce0e",
+    "rows": [
+      "9 0.498046875 0.458333333 0.878906250 0.401041667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic470_jpg.rf.dbbd8326a4e6a546c455de6a7e2b517f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed green beverage bottle: source box contains too much right and lower background.",
+    "expected_label_sha256": "690e8ec024286f8b3bf179c670563837374427db20ff93b68ec2f1e5996139c1",
+    "rows": [
+      "9 0.418945313 0.466145833 0.587890625 0.723958333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic471_jpg.rf.bde2fa877aacab2d53d9df4e4dae496b.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed green Sprite bottle diagonal; bound transparent right edge and cap.",
+    "expected_label_sha256": "944c706ce52b01c1c3eb254a461011522e16ad43cffd817bf9c4eb793d65aea5",
+    "rows": [
+      "9 0.440429688 0.471354167 0.583984375 0.885416667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic473_jpg.rf.4605f454086ff37ada2c8be479ac8ef2.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Upside-down clear drinking bottle with blue cap: source has excessive left/right margins.",
+    "expected_label_sha256": "c250ae728d044fb7b145ded8cf2590ddaf5d6bf10b38f6c70aa0ca6396be0245",
+    "rows": [
+      "9 0.630859375 0.514322917 0.363281250 0.861979167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic475_jpg.rf.c53c105c6110dc50fe1b871119b33fce.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Evian clear bottle clipped at lower boundary: tighten transparent outline.",
+    "expected_label_sha256": "034065da0636ee20acadb41d0b96171709e51e94cc56f9aea746621771a5010c",
+    "rows": [
+      "9 0.333984375 0.623697917 0.253906250 0.752604167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic476_jpg.rf.c49b871154b7ae0b1b07a0782a6e335e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Small isolated Evian bottle: dramatic oversized original box corrected.",
+    "expected_label_sha256": "0f9030390a4077010e113c2c43e0dabf500477d2d975b4a1ffa551598140837b",
+    "rows": [
+      "9 0.472656250 0.501302083 0.140625000 0.544270833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic47_jpg.rf.a773f24aa13c89c0a6889ce91374d69a.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Horizontal water bottle with cap: remove blank table area.",
+    "expected_label_sha256": "46c24a8dcdebca5ff625451460b0eadbdbcc1bb85bc9e9306b967577d1431a1f",
+    "rows": [
+      "9 0.479492188 0.463541667 0.537109375 0.260416667"
+    ]
   }
 ]
