@@ -4954,8 +4954,8 @@
     "image": "test__000023_jpg.rf.b16a9fb7e7d6693f7fd46f1d6063f56f.jpg",
     "complete": "yes",
     "reviewer": "GPT-6 original resolution review 2026-10-13",
-    "reason": "Only one target plastic beverage bottle in the scene. Manually tighten the original clear bottle box to the object's full visible extent, eliminating excess grass at right and including the lower cap. All other 11-class targets absent.",
-    "expected_label_sha256": "0611fff3d0dafab9e64dc3174586092a6c03d41d09441e51f72ebc2c7eb9124b",
+    "reason": "Only one target plastic beverage bottle in the scene. Manually tighten the original clear bottle box to the object's full visible extent, eliminating excess grass at right and including the lower cap. All other 11-class targets absent. Training-copy source SHA-256 verified against V2 builder, not the original pre-remap Roboflow label.",
+    "expected_label_sha256": "a2b434a354545cca1ea3828ea61971b70df7ec00c2d39d6e288780a7591fa394",
     "rows": [
       "9 0.425781250 0.589843750 0.551562500 0.467187500"
     ]
