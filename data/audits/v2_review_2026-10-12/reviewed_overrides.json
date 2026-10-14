@@ -4809,5 +4809,43 @@
     "rows": [
       "1 0.729687500 0.640625000 0.365625000 0.493750000"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000453552.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 native-size plate/bottle object review 2026-10-13",
+    "reason": "Three individual clear capped plastic water bottles are clustered at left beside cake; add these bottle positives only. Existing overlapping paper-plate labels at foreground are NOT resolved by this partial edit.",
+    "expected_label_sha256": "ea433091bb33b476ff4aa6cbda3f9cdb674e5868a2c803250fdf3f619f7f4407",
+    "rows": [
+      "9 0.020047170 0.635937500 0.040094340 0.146875000",
+      "9 0.070754717 0.644531250 0.056603774 0.167187500",
+      "9 0.122641509 0.638281250 0.056603774 0.151562500"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000379508.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 native-size plate/bottle object review 2026-10-13",
+    "reason": "Add distinct white shallow physical serving plate beneath small white stuffed animal on computer tower, above existing separately labeled foreground white paper plate.",
+    "expected_label_sha256": "47cb055791ddf15666d692fd45b008b01374942f10933459110f4628fd745f07",
+    "rows": [
+      "1 0.283000000 0.416000000 0.138000000 0.090666667"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000559891.jpg",
+    "mode": "append_three_classes",
+    "complete": "three_class",
+    "reviewer": "GPT-6 native-size plate/bottle object review 2026-10-13",
+    "reason": "Second plate is black circular serving platter carrying the cake held at right. Existing left handheld disposable plate remains untouched.",
+    "expected_label_sha256": "8eec4bacbb0890fa4c2e6191fc9cfc6e36ea7f2bae28515b3d28ad200a60018e",
+    "rows": [
+      "1 0.742187500 0.765625000 0.187500000 0.143750000"
+    ]
   }
 ]
