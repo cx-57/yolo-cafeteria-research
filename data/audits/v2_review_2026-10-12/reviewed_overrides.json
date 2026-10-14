@@ -4592,5 +4592,32 @@
       "0 0.739787582 0.772426471 0.446633987 0.379950980",
       "9 0.880718954 0.331699346 0.166666667 0.529411765"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000001455.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution three-class audit 2026-10-13",
+    "reason": "Four near-identical source class-1 boxes redundantly describe a single right-hand white disposable paper plate. Replace with one complete plate box; retain both previously approved LVIS food rows. No target wrapper or plastic beverage bottle visible.",
+    "expected_label_sha256": "f2f1024923fbd6c7e7a6eab2a879b2b10c4eede0210fb8d67124001b3006d7cf",
+    "rows": [
+      "1 0.869000000 0.578666667 0.214000000 0.192000000",
+      "0 0.465270000 0.590133333 0.124660000 0.113173333",
+      "0 0.796540000 0.201973333 0.250240000 0.309120000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "val__lvis_000000238795.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution three-class audit 2026-10-13",
+    "reason": "Two left-edge LVIS bounding boxes overlap the same single partly visible paper plate; retain its wider bounding box and the complete foreground paper plate, remove duplicate. Preserve two previously approved food instances. Glass wine bottle is not class-9 plastic drink bottle.",
+    "expected_label_sha256": "29357a7ca0ce6c0f3dd57c0100439fb9c771d1591e4fc0c238b6fff35cb04f40",
+    "rows": [
+      "1 0.038273438 0.172166667 0.076546875 0.207958333",
+      "1 0.272117188 0.709093750 0.543296875 0.577479167",
+      "0 0.294871795 0.665529010 0.410256410 0.559726962",
+      "0 0.130769231 0.617747440 0.241025641 0.232081911"
+    ]
   }
 ]
