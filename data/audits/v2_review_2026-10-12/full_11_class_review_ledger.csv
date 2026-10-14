@@ -819,7 +819,7 @@
 "trash_detection","train__000100_JPG.rf.0cb3669d5133eec48582ce72acbbc8d3.jpg","pending","no","no","","","",""
 "trash_detection","train__000104_JPG.rf.34c828534c535f976e2765ac029f054d.jpg","pending","no","no","","","",""
 "trash_detection","train__000109_JPG.rf.883573bc1f470d443105c15e0aadfbb8.jpg","pending","no","no","","","",""
-"trash_detection","train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg","pending","no","no","","","",""
+"trash_detection","train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg","pending_prior_partial","yes_partial","no","514fdb6e10be2988087c1c47ddcc6ad23983dcef0525cbd438e7deca61bd1dd3","","GPT-6 plate-wrapper-bottle original photo review 2026-10-13","Two previously unannotated crushed clear plastic drinking bottles appended to V2 while retaining source one. Full 11-class certification remains open."
 "trash_detection","train__000125_JPG.rf.2462e602d0c04a4da73c6b7f41604469.jpg","pending","no","no","","","",""
 "trash_detection","train__000135_JPG.rf.a62714a7a78e37b7ffa7bcd395c217c3.jpg","pending","no","no","","","",""
 "trash_detection","train__IMG_4948_JPG.rf.fb1a2f26b685e0b6b5c6bddc0638dc06.jpg","pending","no","no","","","",""
