@@ -4912,8 +4912,8 @@
     "image": "train__2024-02-05_12-17-36_000_mov-0028_jpg.rf.5523e7d063a48b78463abbb2f7c53357.jpg",
     "complete": "yes",
     "reviewer": "GPT-6 native-resolution full-image three-class visual audit 2026-10-13",
-    "reason": "Close-up foreground object is an orange printed metallic aluminum beverage can with a rolled can rim, not flexible food/snack wrapper. The photo contains no plate, plastic beverage bottle or food wrapper, and no other detectable class-positive item; remove the sole false-positive class 8 box. Preserve V1 image and label.",
-    "expected_label_sha256": "9eeae4fbc487ef93ea13c3ff1b820a5becab05e8e563e2c3a55341fb2451fe9e",
+    "reason": "Close-up foreground object is an orange printed metallic aluminum beverage can with a rolled can rim, not flexible food/snack wrapper. The photo contains no plate, plastic beverage bottle or food wrapper, and no other detectable class-positive item; remove the sole false-positive class 8 box. Preserve V1 image and label. Original processed label uses 8-digit decimal coordinates while V2 build normalizes to nine decimals; expected checksum updated to exact normalized V2 source label reported by CI (8 0.693651040 0.641979168 0.597786460 0.716041665).",
+    "expected_label_sha256": "a04587d4f75e928911fb5180bd8524ac205fd3e02cbf408d88734ac7b301fb76",
     "rows": []
   }
 ]
