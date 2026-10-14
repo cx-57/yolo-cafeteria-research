@@ -4025,7 +4025,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One small sealed snack/candy wrapper on white table; remove surrounding blank background.",
-    "expected_label_sha256": "b66c8989962a27e2bf82099310d9951241c29bd8d07c2090fc2ddfce60f4c568",
+    "expected_label_sha256": "9cccb4ad2a06fa3f27347f523a187b99b4cf8c67c54905884dc414b3ac8bb593",
     "rows": [
       "8 0.465820313 0.444010417 0.306640625 0.622395833"
     ]
@@ -4036,7 +4036,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One crumpled Funyuns snack wrapper; source label includes large blank background.",
-    "expected_label_sha256": "400b6c1cee7dc935eaf0eff10b6b8865524c49df3ed9219aa16b88054d84747f",
+    "expected_label_sha256": "3a866298744877f02cf1b7d4541dbf08d3db60cfa447bcb81221b8cc4a9f9675",
     "rows": [
       "8 0.407226563 0.591145833 0.572265625 0.651041667"
     ]
@@ -4047,7 +4047,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One yellow snack wrapper laid diagonally; shrink vertical and side bounds.",
-    "expected_label_sha256": "a92e9b126d7cd3289b46790d047d1f754dbcc09fd95895355d9eba2df87535ec",
+    "expected_label_sha256": "ec4358423275a323c3b869df7b723857ffc54d1fbd023884dfae8763c84b188f",
     "rows": [
       "8 0.588867188 0.613281250 0.650390625 0.622395833"
     ]
@@ -4058,7 +4058,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. Single opened metallic foil snack wrapper with a hanging barcode flap; retain all foil.",
-    "expected_label_sha256": "2bf55e4ca5109d17cfecd2a31e168f0c1021925e92da7af64f1812badeb32cd6",
+    "expected_label_sha256": "60440b3d4925f498a0bb17d2fd4368c7968cb3e88c6270d440a4b89eee6e4912",
     "rows": [
       "8 0.465820313 0.588541667 0.755859375 0.802083333"
     ]
@@ -4069,7 +4069,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One opened yellow Funyuns wrapper, including crumpled folded left wing.",
-    "expected_label_sha256": "5817b87b84931415f7b6a892877642a9fca4824a5b658637b9bab207cf6d8973",
+    "expected_label_sha256": "37505325302df37782f562cb8bf315d566804646da60a9a51a559b1205efb1c0",
     "rows": [
       "8 0.363281250 0.539062500 0.578125000 0.755208333"
     ]
@@ -4080,7 +4080,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. Single flattened metallic snack wrapper with red paper edge; tighten exterior bounds.",
-    "expected_label_sha256": "99ea3212aa5bbf745deee82187feca5b01cb453da977a6a59441f536dd36bc4c",
+    "expected_label_sha256": "d6916a3ee56a671ba8f5f9af3c7f0e6cbe1b0327d9b5a02d9cead8c3fdad9778",
     "rows": [
       "8 0.509765625 0.483072917 0.703125000 0.679687500"
     ]
@@ -4091,7 +4091,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. One long blue-backed empty snack wrapper; exclude surrounding tabletop.",
-    "expected_label_sha256": "9ea301df6133b1f42e061f6c874bc5656688bf342f7a9a44765edf12b84e39c7",
+    "expected_label_sha256": "71c77c68cdae58e13561934aca22ffaaf69a52e270a011c1856bc0693332118e",
     "rows": [
       "8 0.498046875 0.433593750 0.558593750 0.460937500"
     ]
@@ -4102,7 +4102,7 @@
     "complete": "yes",
     "reviewer": "GPT-6 image-by-image original photo annotation review 2026-10-13",
     "reason": "All plate, wrapper, bottle targets inspected; only this wrapper visible. Single folded metallic snack wrapper with red heat-seal edge; trim excess background.",
-    "expected_label_sha256": "ee46997fc18397fe0d9a30fd9fa0ebc16aa56c1c0136187da1392710d20b38a7",
+    "expected_label_sha256": "23903d079120be05645910c8402bc8202ae2b0b788b260c3bed0ed7b45eaf0e8",
     "rows": [
       "8 0.525390625 0.515625000 0.558593750 0.635416667"
     ]
