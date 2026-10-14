@@ -703,7 +703,7 @@
 "trash_detection","train__000013_jpg.rf.3f4f202e740e7cfdf27bf6d7c3acf143.jpg","pending","no","no","","","",""
 "trash_detection","train__000013_jpg.rf.701084107509924dcc64ebff471ad3bb.jpg","pending","no","no","","","",""
 "trash_detection","train__000013_jpg.rf.affdbd92fbde0a1cf4a0d1bd70f6c7f7.jpg","pending","no","no","","","",""
-"trash_detection","train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg","pending","no","no","","","",""
+"trash_detection","train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg","verified_corrected","yes","yes","f44c8c0ab16c4e06fc5883f76db41e1b7c5d6e03bd705999e0403796823fd257","","GPT-6 original-size visual 2026-10-13","The only class-9 plastic drink bottle box falls on an aluminum beverage can among numerous cans in a brick planter. No plastic bottles, snack wrappers or plates visible; remove false plastic-bottle label, keep original photo as background negative."
 "trash_detection","train__000016_JPG.rf.6a36c0567a53d01e53a958e26c42cfd5.jpg","pending","no","no","","","",""
 "trash_detection","train__000016_JPG.rf.ecc4b4f26f1754062e51d8798202a49f.jpg","pending","no","no","","","",""
 "trash_detection","train__000017_JPG.rf.15b6f964392c5e850271d1b8ccb3a918.jpg","pending","no","no","","","",""
