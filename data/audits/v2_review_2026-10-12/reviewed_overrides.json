@@ -5167,5 +5167,57 @@
       "8 0.334821429 0.752976190 0.486607143 0.494047619",
       "10 0.753348214 0.724702381 0.484375000 0.550595238"
     ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010373000_jpg.rf.220ca0b46c113475f47be65b397d0058.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 native-resolution cafeteria three-class target inspection 2026-10-13",
+    "reason": "Correct unannotated white compartment cafeteria serving plate; retain food and carton boxes, and annotate visible soup/rice serving bowl for complete image labeling. Separately box transparent bread packaging as wrapper where present. No bottle present. Preserve V1.",
+    "expected_label_sha256": "16fbbd4ee666711261021d44cbf69e70711bffce041dc53d052082e1da335648",
+    "rows": [
+      "0 0.27901785714285715 0.7291666666666666 0.42410714285714285 0.5178571428571429",
+      "0 0.7667410714285714 0.7425595238095238 0.46205357142857145 0.5089285714285714",
+      "0 0.3515625 0.23065476190476192 0.25669642857142855 0.3125",
+      "0 0.6339285714285714 0.2916666666666667 0.22321428571428573 0.25595238095238093",
+      "0 0.6439732142857143 0.10119047619047619 0.19866071428571427 0.15476190476190477",
+      "1 0.487723214 0.242559524 0.560267857 0.485119048",
+      "8 0.305803571 0.694940476 0.535714286 0.610119048",
+      "10 0.757812500 0.724702381 0.435267857 0.550595238"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010375000_jpg.rf.1adf80370e3d33759c50d7d3ca42b104.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 native-resolution cafeteria three-class target inspection 2026-10-13",
+    "reason": "Correct unannotated white compartment cafeteria serving plate; retain food and carton boxes, and annotate visible soup/rice serving bowl for complete image labeling. Separately box transparent bread packaging as wrapper where present. No bottle present. Preserve V1.",
+    "expected_label_sha256": "ad5c90dde5a3b81444062ecfe9d9f19b3ebcef4e79f5bd851a3d03551fda9cbc",
+    "rows": [
+      "6 0.265625 0.12351190476190477 0.2544642857142857 0.24702380952380953",
+      "0 0.23102678571428573 0.6770833333333334 0.4575892857142857 0.6101190476190477",
+      "0 0.8459821428571429 0.49404761904761907 0.24553571428571427 0.35714285714285715",
+      "0 0.8415178571428571 0.21428571428571427 0.26339285714285715 0.22023809523809523",
+      "0 0.5435267857142857 0.32142857142857145 0.2924107142857143 0.39285714285714285",
+      "1 0.690848214 0.398809524 0.618303571 0.625000000",
+      "10 0.235491071 0.697916667 0.470982143 0.604166667"
+    ]
+  },
+  {
+    "source": "school_lunch",
+    "image": "010375001_jpg.rf.faac20846bf8f8d26b97151ffac97ebc.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 native-resolution cafeteria three-class target inspection 2026-10-13",
+    "reason": "Correct unannotated white compartment cafeteria serving plate; retain food and carton boxes, and annotate visible soup/rice serving bowl for complete image labeling. Separately box transparent bread packaging as wrapper where present. No bottle present. Preserve V1.",
+    "expected_label_sha256": "f5a9c3876f8f96e23775988ba1cd8d5d893b595080eade549c49d29e71514eb9",
+    "rows": [
+      "6 0.296875 0.13095238095238096 0.17410714285714285 0.2619047619047619",
+      "0 0.8828125 0.5997023809523809 0.22991071428571427 0.28869047619047616",
+      "0 0.8783482142857143 0.35267857142857145 0.23883928571428573 0.21726190476190477",
+      "0 0.5580357142857143 0.5089285714285714 0.2544642857142857 0.39285714285714285",
+      "0 0.19977678571428573 0.7008928571428571 0.390625 0.5922619047619048",
+      "1 0.690848214 0.549107143 0.618303571 0.741071429",
+      "10 0.202008929 0.703869048 0.404017857 0.592261905"
+    ]
   }
 ]
