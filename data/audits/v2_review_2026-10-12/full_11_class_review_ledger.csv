@@ -775,7 +775,7 @@
 "trash_detection","train__000070_JPG.rf.adbf70d8edc66e1e5fe35c6855ae27e7.jpg","pending","no","no","","","",""
 "trash_detection","train__000070_jpg.rf.4d3d66d496ea41fbef2a2fdcec3b78c9.jpg","pending","no","no","","","",""
 "trash_detection","train__000070_jpg.rf.6e398d00faf9d54fe95814d1023fd052.jpg","pending","no","no","","","",""
-"trash_detection","train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg","pending","no","no","","","",""
+"trash_detection","train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg","verified_corrected","yes","yes","a33568d55231bf3c6409d86cf5e04020ec5be1a83cdd33f6133f0ea85d90786f","","GPT-6 full-image original-resolution review 2026-10-13","Original image shows one shoe sole/tread on dirt, not a plastic drink bottle; no other 11 configured target categories visible. Source mislabeled class-9 bottle removed in V2 only."
 "trash_detection","train__000071_jpg.rf.4ee8c06b5ac736bc10deb1b48be779d6.jpg","pending","no","no","","","",""
 "trash_detection","train__000071_jpg.rf.ba6e0977d749c644e4bc31d839603460.jpg","pending","no","no","","","",""
 "trash_detection","train__000072_JPG.rf.2580e9e025b226e4744dc84a933daab4.jpg","pending","no","no","","","",""
