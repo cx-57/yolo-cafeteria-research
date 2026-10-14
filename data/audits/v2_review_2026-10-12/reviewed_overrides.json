@@ -3600,5 +3600,104 @@
     "rows": [
       "9 0.456054688 0.567708333 0.783203125 0.375000000"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic397_jpg.rf.c8be460d43cc1d143b2656193980d8bd.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Single crushed clear water bottle; original bounding box includes broad overhead/side empty area.",
+    "expected_label_sha256": "ea6e2310af71f2948a1ea7bdf638d662e69ec0b42183c09fe90f7cb9f88bcbc5",
+    "rows": [
+      "9 0.482421875 0.464843750 0.589843750 0.544270833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic401_jpg.rf.903f762cf85ded1b26512970a4a87e8f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed water bottle with blue label; original source box cuts visible right-hand base and adds empty upper space.",
+    "expected_label_sha256": "dba16ed8bc37d048b0ac8b9ef7ee0ff2b7219bdc49fae87923b2cac35b29319e",
+    "rows": [
+      "9 0.492187500 0.514322917 0.609375000 0.325520833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic407_jpg.rf.2ee92e3fc3d25ff2541313bbdfab7138.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Upside-down partly clipped clear drink bottle; tighten sides while retaining top and bottom clipping.",
+    "expected_label_sha256": "900a23561f3285582e7f894ba950f3f16b543e63e65e22ae08d1ca2e9b07b38d",
+    "rows": [
+      "9 0.564453125 0.500000000 0.640625000 1.000000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic411_jpg.rf.85235c890ce5e0e4f1664c78a2f80c48.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Blue-label clear bottle entering from right edge; source box contains too much left/top blank area.",
+    "expected_label_sha256": "10e7fdd7ca2e402d6ce103dd4d8e099f00600a32c472f60020fc6c835980c5b4",
+    "rows": [
+      "9 0.686523438 0.605468750 0.626953125 0.638020833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic414_jpg.rf.19da171c4b67e8c9c719e93ce62e5a32.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Branded clear bottle clipped by bottom frame; correct broad source label padding.",
+    "expected_label_sha256": "ff773f00bcffd65cad05724d4dff3701ca0fbc76b8ef1db4ceb021c2b0fbb7d3",
+    "rows": [
+      "9 0.432617188 0.635416667 0.572265625 0.729166667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic419_jpg.rf.f9fe942cb8bac112271a2efcb5dca480.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear drink bottle with white cap at bottom; source box cuts cap and pads sides.",
+    "expected_label_sha256": "178b8d090a88e3d0b65a844c57615e5b2dc65edf36eb9c6ee8a29b0d9ba147a0",
+    "rows": [
+      "9 0.564453125 0.442708333 0.425781250 0.885416667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic421_jpg.rf.8cbf143cab3b4bfdd8817819a989b1b1.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green plastic drink bottle horizontal; source label extends well into white tabletop.",
+    "expected_label_sha256": "73ff62ec861f4bb2651332d568938c254d8e9cfe2102810d16d5a07cec9c3535",
+    "rows": [
+      "9 0.488281250 0.514322917 0.683593750 0.445312500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic428_jpg.rf.4afdcafb1b8bcd0333671e51d16c2ccf.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Red-cap clear drinking bottle lying diagonally; excess blank background trimmed.",
+    "expected_label_sha256": "1ef1dbe7ddc65dfdc4317f59c47ec89ecd8276f9eff6fed01a9f205ef88390d2",
+    "rows": [
+      "9 0.467773438 0.502604167 0.681640625 0.619791667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic433_jpg.rf.84a6471e3734ca157f37771701b97a24.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed blue-label beverage bottle; tightened bound includes all transparent plastic.",
+    "expected_label_sha256": "67e462d16b5f8c8c2dba9a50b6d6e551639194c0a6a06f9fbe72ae54fe4f3dc5",
+    "rows": [
+      "9 0.521484375 0.503906250 0.625000000 0.539062500"
+    ]
   }
 ]
