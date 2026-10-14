@@ -251,8 +251,13 @@ def validate_overrides(file, sources):
         seen.add(stem)
         split, photo = available[stem]
         label = label_path(photo)
-        if record.get("complete") != "yes" or not record.get("reviewer") or not record.get("reason"):
-            raise ValueError(f"Override {number}: requires complete=yes, reviewer and reason")
+        mode = record.get("mode", "replace")
+        if mode not in ("replace", "append_three_classes"):
+            raise ValueError(f"Override {number}: unsupported annotation mode")
+        expected_complete = "yes" if mode == "replace" else "three_class"
+        if (record.get("complete") != expected_complete or not record.get("reviewer")
+                or not record.get("reason")):
+            raise ValueError(f"Override {number}: requires complete={expected_complete}, reviewer and reason")
         expected_hash = record.get("expected_label_sha256")
         actual_hash = digest(label)
         if actual_hash != expected_hash:
@@ -263,9 +268,12 @@ def validate_overrides(file, sources):
         if not isinstance(record.get("rows"), list):
             raise ValueError(f"Override {number}: rows must contain the COMPLETE approved labels")
         approved = validate_rows(record["rows"], f"Override {number}", class_names())
+        if mode == "append_three_classes" and (
+                not approved or any(int(row.split()[0]) not in (1, 8, 9) for row in approved)):
+            raise ValueError(f"Override {number}: scoped edits require new plate/wrapper/bottle boxes only")
         result.append({"stem": stem, "split": split, "rows": approved,
-                       "reviewer": record["reviewer"], "reason": record["reason"],
-                       "original_sha256": digest(label)})
+                       "mode": mode, "reviewer": record["reviewer"],
+                       "reason": record["reason"], "original_sha256": digest(label)})
     return result
 
 
@@ -327,9 +335,10 @@ def build(args):
                  else record["split"])
         prior = label_path(next(photo for photo in sources[record["split"]]
                                 if photo.stem == record["stem"]))
-        for row in [r for r in prior.read_text().splitlines() if r.strip()]:
-            name = class_names()[int(row.split()[0])]
-            evidence["instances"][split][name] -= 1
+        if record.get("mode") != "append_three_classes":
+            for row in [r for r in prior.read_text().splitlines() if r.strip()]:
+                name = class_names()[int(row.split()[0])]
+                evidence["instances"][split][name] -= 1
         for row in record["rows"]:
             name = class_names()[int(row.split()[0])]
             evidence["instances"][split][name] += 1
@@ -368,8 +377,19 @@ def build(args):
         output_label = dest / "labels" / output_split / (record["stem"] + ".txt")
         if not output_label.is_file():
             raise ValueError(f"Missing V2 label copy: {output_label}")
-        output_label.write_text("\n".join(record["rows"]) +
-                                ("\n" if record["rows"] else ""))
+        if record.get("mode") == "append_three_classes":
+            retained = [x for x in output_label.read_text().splitlines() if x.strip()]
+            for addition in record["rows"]:
+                parsed = [float(v) for v in addition.split()]
+                if any(len(existing.split()) == 5 and all(
+                        abs(a - float(b)) < 1e-6 for a, b in zip(parsed, existing.split()))
+                       for existing in retained):
+                    raise ValueError(f"Duplicate scoped box in {record['stem']}: {addition}")
+                retained.append(addition)
+            output_label.write_text("\n".join(retained) + "\n")
+        else:
+            output_label.write_text("\n".join(record["rows"]) +
+                                    ("\n" if record["rows"] else ""))
     spec_file = dest / "data.yaml"
     spec = yaml.safe_load(spec_file.read_text())
     nhs_summary = []
@@ -591,7 +611,8 @@ def make_review_queue(data_file, output, overrides_file=None, food_file=None):
     food = json.loads(food_file.read_text())
     if not isinstance(overrides, list) or not isinstance(food, list):
         raise ValueError("Review files must contain lists")
-    override_names = {r["source"] + "__" + Path(r["image"]).stem for r in overrides}
+    override_names = {r["source"] + "__" + Path(r["image"]).stem
+                      for r in overrides if r.get("complete") == "yes"}
     full_names = set(override_names)
     # Manually inspected images with already-correct labels need no override.
     # Do not count thumbnail-only, ambiguous, or needs_followup decisions.
