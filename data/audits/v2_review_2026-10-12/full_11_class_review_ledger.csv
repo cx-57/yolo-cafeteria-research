@@ -693,7 +693,7 @@
 "trash_detection","train__000005_jpg.rf.1b745f64a55edd7dc3e11b40196cf81e.jpg","pending","no","no","","","",""
 "trash_detection","train__000005_jpg.rf.8ec14faaa2d63050935736de74198798.jpg","pending","no","no","","","",""
 "trash_detection","train__000006_JPG.rf.b664f6e8233a4c41037b336f43acb389.jpg","pending","no","no","","","",""
-"trash_detection","train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg","pending","no","no","","","",""
+"trash_detection","train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg","verified_corrected","yes","yes","24221315faf81dbece912bb5e7312d9255cca94357e3f9ea1a5bb35ea7dcc00b","","GPT-6 original image reviewed 2026-10-13","Preserve orange wrapper and add previously omitted blue food wrapper; V2 correction manifest stores both mapped wrapper boxes."
 "trash_detection","train__000007_jpg.rf.7ac6bee13d2d7412de80f2a64e3fd22e.jpg","pending_followup","yes_partial","no","","","prior image_review.csv","Six historical bottle boxes overlap a pile of several plastic bottles; review multiplicity and individual bounding extents"
 "trash_detection","train__000008_JPG.rf.6fc1dbc1870d889bef94d53d2c8637ee.jpg","pending","no","no","","","",""
 "trash_detection","train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg","pending","no","no","","","",""
