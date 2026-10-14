@@ -4236,5 +4236,148 @@
     "rows": [
       "8 0.458984375 0.480468750 0.386718750 0.674479167"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash28_jpg.rf.f8fddedef795a9a0932192068c04cd18.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Crumpled Pirate's Booty snack bag; narrow wide source bounds.",
+    "expected_label_sha256": "86d59ec0a9387abc96572786a1aaf74b573a75ac2b008eb7bf65e93afe63398a",
+    "rows": [
+      "8 0.518554688 0.548177083 0.591796875 0.809895833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash82_jpg.rf.2b9cf918905df737bbe4d09a64456ffd.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Crumpled white and gold snack bag, clipped at image top.",
+    "expected_label_sha256": "0410847943bae79f5ffb0c988d4321f53c8ae5337aee4cc5c6586619bc1580df",
+    "rows": [
+      "8 0.413085938 0.497395833 0.560546875 0.994791667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash118_jpg.rf.4c6b6932d99cbf6a0affd6d0db83c9a1.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Crumpled Subway food takeaway paper wrapper.",
+    "expected_label_sha256": "7ef8729144b26b581ec2ac42ee92803617cd7ddcf1965553977ff40a73263113",
+    "rows": [
+      "8 0.533203125 0.515625000 0.671875000 0.822916667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash52_jpg.rf.dc76b4337b681e8d8811967969433d75.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Long empty snack foil package clipped at frame right.",
+    "expected_label_sha256": "dd0c5f672fc4d1969ad93bcfc90b21e05d2fedfba3ae6a16e1d73bb6af90e05e",
+    "rows": [
+      "8 0.527343750 0.557291667 0.945312500 0.791666667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash44_jpg.rf.cec65b5ebf81fe2c71ffff972f27bf4e.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Narrow crumpled gold and silver candy-wrapper packet.",
+    "expected_label_sha256": "2a147308ca2360aff8ebbf2d1f00fec7919d8af0db0bb27722a840957929cf21",
+    "rows": [
+      "8 0.526367188 0.502604167 0.404296875 0.625000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash57_jpg.rf.ea2e9e35416a03a977a10b19ea96aa72.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Torn green and white food product package with folded top tab.",
+    "expected_label_sha256": "3d3bba7e3c6575670e4a079a00f1ce0734de524b2722e0f54cdd6687e62aa15e",
+    "rows": [
+      "8 0.441406250 0.511718750 0.550781250 0.674479167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash43_jpg.rf.0d7de4f31e8f60fe726c964d088d65bd.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. One shiny gold individual snack wrapper.",
+    "expected_label_sha256": "e6af233a660a4f4b6f179cb3b7a769a6d9cc7ce5e0fcf8c93342aba975f688af",
+    "rows": [
+      "8 0.484375000 0.524739583 0.417968750 0.335937500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash68_jpg.rf.ef1f15f62b0db9498c9bd385a3e70766.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. One Mott's fruit snack pouch.",
+    "expected_label_sha256": "464fcb6c5c7ec0e447e2ad81aeed8c677666f45f225e770e339f271b1c2c172b",
+    "rows": [
+      "8 0.566406250 0.529947917 0.308593750 0.570312500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__trash108_jpg.rf.68756299209a2c34ffbc94d097e143b0.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Opened printed food packaging bag partly outside lower edge.",
+    "expected_label_sha256": "be530798ac3fbc80246cf5a9a837f5a48cd2cbdb5de9c9b7f77ea1646ed71820",
+    "rows": [
+      "8 0.480468750 0.563802083 0.714843750 0.872395833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash94_jpg.rf.144a960db77e147b3466443f2b7dfeda.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. One torn small blue snack package.",
+    "expected_label_sha256": "c0a06ffea79892d68ed056debc67eb8fb03692ca7603492326632cf71235854d",
+    "rows": [
+      "8 0.564453125 0.503906250 0.402343750 0.575520833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "test__trash62_jpg.rf.32e4d9473cfd0ef2c663fe2696b77641.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. One shiny silver individual food packet with striped seal.",
+    "expected_label_sha256": "86a51592beb1ca788bb7586f55a4421fdfec8eceee7f03a83f3fa738df8209fc",
+    "rows": [
+      "8 0.483398438 0.506510417 0.310546875 0.502604167"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash79_jpg.rf.e88961bee6487c8c275c5f1be06e9699.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Green Tree Top fruit snack pouch.",
+    "expected_label_sha256": "0d55017537724c85e2ef8976454594d366ae3f9ea3e8a5fec73002224cd1114a",
+    "rows": [
+      "8 0.492187500 0.486979167 0.421875000 0.630208333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__trash73_jpg.rf.08a8ad38e75e6de5bc29ad1deac4d482.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original photo visually inspected 2026-10-13",
+    "reason": "One food wrapper, no other class present. Fiber One snack bar packet partly cropped at lower edge.",
+    "expected_label_sha256": "5e564edcc88c83441bd8b612d117a2b1c55c69930c1fc168a6e0631355d8d6a7",
+    "rows": [
+      "8 0.459960938 0.503906250 0.525390625 0.992187500"
+    ]
   }
 ]
