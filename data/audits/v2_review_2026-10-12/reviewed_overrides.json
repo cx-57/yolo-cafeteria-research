@@ -4619,5 +4619,38 @@
       "0 0.294871795 0.665529010 0.410256410 0.559726962",
       "0 0.130769231 0.617747440 0.241025641 0.232081911"
     ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000488363.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution three-class manual visual QA 2026-10-13",
+    "reason": "Add single child-held yellow plastic Nesquik beverage bottle, including cap, body and lower end; preserve existing disposable paper plate and approved donut food box.",
+    "expected_label_sha256": "912cc2580bbc011cc4f44a8af07138257916b2cee58ff72713095e59231b4e0a",
+    "rows": [
+      "1 0.214656250 0.856750000 0.426062500 0.282583333",
+      "0 0.256093750 0.871385417 0.224500000 0.252520833",
+      "9 0.254687500 0.553000000 0.168750000 0.346000000"
+    ]
+  },
+  {
+    "source": "plate",
+    "image": "train__lvis_000000363727.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution three-class manual visual QA 2026-10-13",
+    "reason": "Add one clear plastic capped drinking-water bottle at top-right edge of buffet table; preserve four decorated food plates and five previously approved food portion boxes.",
+    "expected_label_sha256": "0b780189b3a16e37fbadf398affbf7a8331240e33c9ba77e5303ebba2d917764",
+    "rows": [
+      "1 0.431148437 0.360811765 0.287265625 0.313482353",
+      "1 0.411750000 0.754894118 0.362062500 0.490211765",
+      "1 0.476898438 0.097129412 0.235671875 0.188941176",
+      "1 0.664539062 0.492800000 0.330796875 0.397035294",
+      "0 0.470512821 0.110038610 0.212820513 0.150579151",
+      "0 0.438461538 0.347490347 0.251282051 0.231660232",
+      "0 0.342307692 0.691119691 0.125641026 0.247104247",
+      "0 0.482051282 0.756756757 0.097435897 0.347490347",
+      "0 0.647435897 0.490347490 0.243589744 0.308880309",
+      "9 0.721093750 0.107058824 0.104687500 0.214117647"
+    ]
   }
 ]
