@@ -3798,5 +3798,115 @@
     "rows": [
       "9 0.479492188 0.463541667 0.537109375 0.260416667"
     ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic51_jpg.rf.6a332b86eccf64176d57189fc956d31c.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Partially clipped green-cap clear drink bottle; remove large right-hand original padding.",
+    "expected_label_sha256": "3eb7326e54f702b14779bacc1072415e4e5ef9e78a5543c33f7057e558f9efa5",
+    "rows": [
+      "9 0.356445313 0.587239583 0.576171875 0.825520833"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic57_jpg.rf.b904e8469d373ffdebec32884674a5dd.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-cap Dasani drinking bottle clipped by lower/right edges; fix source bbox.",
+    "expected_label_sha256": "00a0f330e2d1d92e5adeda3210817df77653fbb548abafc0114b6dfbc7aa9491",
+    "rows": [
+      "9 0.630859375 0.591145833 0.605468750 0.817708333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic64_jpg.rf.7f1c2971f989e63b2e79c65c07d06c05.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-label beverage bottle lying diagonally; source box extends far below bottle.",
+    "expected_label_sha256": "f5a64b826ec8258704f1dafdd2d8f1fe1c0c0f567881f20bb24658a129999987",
+    "rows": [
+      "9 0.474609375 0.427083333 0.660156250 0.609375000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic69_jpg.rf.88ac5c322147b6babd61c115b5ab602f.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Kirkland red-cap drinking bottle; tighten top and right boundaries.",
+    "expected_label_sha256": "5b4ae2cc839790696e14713f4eaabaa485786cdf7e2c7e29d8276aa84b492986",
+    "rows": [
+      "9 0.447265625 0.399739583 0.820312500 0.601562500"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic74_jpg.rf.fe90a055b78a282d3fd79ad43e5ef65b.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-label bottle diagonal clipped by photo edges; correct right boundary.",
+    "expected_label_sha256": "fd1eb14263568f67896d8bd0d705e038dce2a9a6000734fcc321c81a8e17a523",
+    "rows": [
+      "9 0.564453125 0.500000000 0.718750000 1.000000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic80_jpg.rf.1b806c1c140e066de60915a53218b438.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Crushed Arrowhead drinking bottle: source cuts the right end and includes excessive left blank.",
+    "expected_label_sha256": "c3207a280484da24f10ba06b28a6096fb21aadc0ac862420d15e0f4e75b68825",
+    "rows": [
+      "9 0.531250000 0.565104167 0.816406250 0.718750000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic88_jpg.rf.2911dff609768de74587bb9344cefd03.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-label bottle diagonal clipped at top and bottom; tighten left/right.",
+    "expected_label_sha256": "94b511f0e5e6cc5f356b8be53dfc5e0605035d7e45f25f59223bebcf47ab30fd",
+    "rows": [
+      "9 0.581054688 0.500000000 0.720703125 1.000000000"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic91_jpg.rf.fa1e0705163fa4472fb4bbc0ef2e2ef8.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Vertical crushed clear bottle partly clipped at bottom; original overpadded sides.",
+    "expected_label_sha256": "8ac8877dd5b3f76dab66b86124be3eb300d81a7d79f9f7b51c7708ad7bd91e06",
+    "rows": [
+      "9 0.585937500 0.549479167 0.371093750 0.901041667"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "train__plastic94_jpg.rf.14292840cad9bf9a4b0d177733e45396.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Clear plastic beverage bottle with green cap horizontal; remove vast white padding.",
+    "expected_label_sha256": "0c9bda47acf8a217b2976bf70f42af9af9ab13b21d2372207af7705f060f41eb",
+    "rows": [
+      "9 0.514648438 0.526041667 0.748046875 0.411458333"
+    ]
+  },
+  {
+    "source": "dry_wet_waste",
+    "image": "valid__plastic106_jpg.rf.39936f70d1bac12066c61539fcbf5921.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-image visual audit 2026-10-13",
+    "reason": "Green-cap horizontal beverage bottle cropped at left; preserve far-right transparent plastic in validation.",
+    "expected_label_sha256": "1593ebb4b7d55ccf9a169efadeacde10305769d62bb17a64a62916d0331491ce",
+    "rows": [
+      "9 0.487304688 0.549479167 0.974609375 0.541666667"
+    ]
   }
 ]
