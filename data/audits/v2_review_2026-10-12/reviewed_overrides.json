@@ -4871,5 +4871,14 @@
     "rows": [
       "9 0.511438000 0.104575000 0.194444000 0.071895000"
     ]
+  },
+  {
+    "source": "trash_detection",
+    "image": "train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg",
+    "complete": "yes",
+    "reviewer": "GPT-6 original-resolution full-scene semantic review 2026-10-13",
+    "reason": "Source class-9 plastic bottle label is a false positive on a discarded gray shoe sole/tread in bare dirt. The object has shoe-tread pattern and no bottle neck/cap, and no other target classes are present. Remove the single bottle box; keep original V1 image and label unchanged.",
+    "expected_label_sha256": "a33568d55231bf3c6409d86cf5e04020ec5be1a83cdd33f6133f0ea85d90786f",
+    "rows": []
   }
 ]
