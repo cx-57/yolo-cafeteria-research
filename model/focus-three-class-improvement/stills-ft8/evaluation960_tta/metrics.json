@@ -1,0 +1,37 @@
+{
+  "overall": {
+    "precision": 0.6025718748833566,
+    "recall": 0.6629547921333131,
+    "AP50": 0.6706836891929709,
+    "AP50_95": 0.5106387555773559
+  },
+  "per_class": {
+    "plate": {
+      "precision": 0.7472671351897883,
+      "recall": 0.6853932584269663,
+      "AP50": 0.7215021558562648,
+      "AP50_95": 0.5313365068592617,
+      "objects": 89
+    },
+    "wrapper": {
+      "precision": 0.4790400024952225,
+      "recall": 0.6923600068618619,
+      "AP50": 0.6846969696969698,
+      "AP50_95": 0.5560575757575759,
+      "objects": 8
+    },
+    "bottle": {
+      "precision": 0.5814084869650591,
+      "recall": 0.6111111111111112,
+      "AP50": 0.6058519420256783,
+      "AP50_95": 0.4445221841152301,
+      "objects": 36
+    }
+  },
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/stills-ft8/train/weights/best.pt",
+  "weights_sha256": "2eb62ec6ba44559d0a8e65e59e88ebf3480debebd34ac7afa6079be5e1b3809c",
+  "dataset_fingerprint": "e24889633a3490e8b1f1afcd84e8ab01f9a58d633a313c55bd937028cba767d2",
+  "imgsz": 960,
+  "augment": true,
+  "interpretation": "Reviewed public validation; no independent test or improvement claim."
+}

@@ -1,0 +1,13 @@
+{
+  "metric": "AP50",
+  "minimum_per_class": 0.8,
+  "classes": [
+    "plate",
+    "wrapper",
+    "bottle"
+  ],
+  "bottle_policy": "plastic beverage bottles only",
+  "local_run_limit_seconds": 300,
+  "longer_training": "User executes supplied commands; each proposed run has a nine-minute native training budget.",
+  "validation_images": 92
+}

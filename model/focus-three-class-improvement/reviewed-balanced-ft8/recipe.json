@@ -1,0 +1,63 @@
+{
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/gentle-ft10/train/weights/best.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/reviewed-619/data-balanced.yaml",
+    "epochs": 8,
+    "batch": 4,
+    "nbs": 4,
+    "imgsz": 640,
+    "device": "mps",
+    "optimizer": "AdamW",
+    "lr0": 0.0002,
+    "lrf": 0.1,
+    "mosaic": 0,
+    "workers": 0,
+    "patience": 0,
+    "seed": 42,
+    "warmup_epochs": 1,
+    "warmup_bias_lr": 0.0,
+    "project": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/reviewed-balanced-ft8",
+    "name": "train"
+  },
+  "dataset_fingerprint": "e24889633a3490e8b1f1afcd84e8ab01f9a58d633a313c55bd937028cba767d2",
+  "initial_weights_sha256": "7378f1437fec9446fea451d031864283c4960caacf5c4422c396b5faa84d0b07",
+  "sampling": {
+    "unique_training_images": 527,
+    "training_views": 667,
+    "validation_images": 92,
+    "repeat_policy": "Three training views for wrapper-containing still photos; one for video-source photos and all other images. No validation repetition.",
+    "weighted_support": {
+      "train": {
+        "plate": {
+          "images": 163,
+          "instances": 249
+        },
+        "wrapper": {
+          "images": 300,
+          "instances": 318
+        },
+        "bottle": {
+          "images": 259,
+          "instances": 287
+        }
+      },
+      "val": {
+        "plate": {
+          "images": 63,
+          "instances": 89
+        },
+        "wrapper": {
+          "images": 8,
+          "instances": 8
+        },
+        "bottle": {
+          "images": 29,
+          "instances": 36
+        }
+      }
+    },
+    "train_list_sha256": "5ca22970b97d87972106950792d4b42e742daccecb9130777931d6dc30b465c5",
+    "yaml_sha256": "dbe38eb815b5008f9528cc3ab7dfa768bf1060e8aed898f3af5e210c22a559a7"
+  },
+  "purpose": "Test higher update frequency and more exposure to diverse wrappers, including six reviewed cafeteria photos, against frozen validation."
+}
