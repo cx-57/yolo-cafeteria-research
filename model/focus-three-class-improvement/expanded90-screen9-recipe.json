@@ -1,0 +1,19 @@
+{
+  "target_min_ap50": 0.9,
+  "acceptable_fallback_min_ap50": 0.85,
+  "bottle_policy": "plastic beverage bottles only",
+  "purpose": "Fresh COCO-pretrained YOLO11n on all signed-off V2 target examples and verified negatives, one training view per image, standard Ultralytics augmentation; no inherited focus checkpoints. Nine-minute screening variant; not equivalent to completing 80 epochs.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack/data.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "imgsz": 640,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0,
+    "time": 0.15
+  },
+  "plate_stack_policy": "one box per entire stack",
+  "dataset_fingerprint": "2f089e1570c5d6d0438760c55fe92dc6a641006c9f5d9fdd7a80e1dd3a080893"
+}

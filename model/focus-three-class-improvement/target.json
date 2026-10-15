@@ -1,6 +1,6 @@
 {
   "metric": "AP50",
-  "minimum_per_class": 0.8,
+  "minimum_per_class": 0.9,
   "classes": [
     "plate",
     "wrapper",
@@ -9,5 +9,11 @@
   "bottle_policy": "plastic beverage bottles only",
   "local_run_limit_seconds": 300,
   "longer_training": "User executes supplied commands; each proposed run has a nine-minute native training budget.",
-  "validation_images": 92
+  "validation_images": 126,
+  "acceptable_fallback_per_class": 0.85,
+  "scope": "All available V2 target candidates inventoried; all signed-off examples eligible; unresolved annotation semantics held explicitly.",
+  "dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
+  "dataset_images": 900,
+  "plate_stack_policy": "one box per entire stack",
+  "comparison_validation_images": 92
 }

@@ -1,0 +1,2183 @@
+[
+  {
+    "name": "plate__train__lvis_000000018299.jpg",
+    "status": "corrected",
+    "reason": "Added clearly visible central black serving plate beneath grilled sausages (pixel bounds 243,169 to 422,222); four original plates retained. Bowls and cup excluded; no target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "849a83afd6fc57f2ee0c6a7465c2e996e7b931c3d911928c05b66fe3ccef0903",
+    "input_rows_sha256": "0b108a096a5260edf162c186576822e40043af79e17198bd954e5237b34c6475",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.899156250 0.351288056 0.201687500 0.114238876",
+      "0 0.250390625 0.616346604 0.306312500 0.106791569",
+      "0 0.525125000 0.237505855 0.226281250 0.088548009",
+      "0 0.220250000 0.357213115 0.251406250 0.111522248",
+      "0 0.519531250 0.457845433 0.279687500 0.124121780"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000021364.jpg",
+    "status": "corrected",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy. One entire clipped stack of white disposable plates beside grill; condiment bottle excluded. No additional target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "d39fe43fe91fb34520f0f231a413e8fa2da706556f1cbf9b8d9f5f673249c193",
+    "input_rows_sha256": "04e0d94fde0761ed1d672ce5e7d2c26858fc39f0c6e61bb87882cf132d3df618",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.907750000 0.769250586 0.184500000 0.461498829"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000031922.jpg",
+    "status": "verified_unchanged",
+    "reason": "Three plates confirmed, including cropped lower-left plate; no target wrapper or plastic beverage bottle visible.",
+    "image_sha256": "dbf60ae9df9e17c380d5bf912e5c4fbd32f55af6c7ea5c4fc27ed644c080c1c7",
+    "input_rows_sha256": "bfe10084dc2004eb2c28ac70376e714107f73aa80c6c5b7406b5b6bcbd1b8678",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.119320312 0.706489583 0.208859375 0.051604167",
+      "0 0.290453125 0.891458333 0.241906250 0.109500000",
+      "0 0.025593750 0.969875000 0.051187500 0.060250000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000044839.jpg",
+    "status": "verified_unchanged",
+    "reason": "Seven eating plates confirmed across foreground and clipped/background positions; no additional clear target objects.",
+    "image_sha256": "f990176dc3afd8eaff736ca93d03dd41ec707d07cf0321d137cd1d1dba87bd45",
+    "input_rows_sha256": "56fcb6c13a8b6fa22d03b834e1810e843beb68e7ba797d0c0381630c731e2422",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.458601563 0.924716981 0.137578125 0.034952830",
+      "0 0.796398437 0.920707547 0.140921875 0.034433962",
+      "0 0.200484375 0.917311321 0.111562500 0.032924528",
+      "0 0.979656250 0.371273585 0.040093750 0.013537736",
+      "0 0.648265625 0.446792453 0.074187500 0.020377358",
+      "0 0.058585937 0.980259434 0.117171874 0.039481132",
+      "0 0.562882813 0.334929245 0.032890625 0.015235849"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000047285.jpg",
+    "status": "unresolved",
+    "reason": "Small distant annotations may refer to pizza cartons; plate identities and exhaustive coverage unresolved.",
+    "image_sha256": "1fc17a6de671be17c34d4e0791d10fa9d0edecfdd239b7bcdeec75075c7b0b56",
+    "input_rows_sha256": "960460876e9f21a385569458d8b403e30dde7940deb309d86bd74f52ea829448",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000047658.jpg",
+    "status": "unresolved",
+    "reason": "Paper pizza carrier has tray/boat geometry; plate versus paper boat policy unresolved.",
+    "image_sha256": "0f0b9d8eb8975ec85f720b4d246bda0f0fa47ebc84e6e4f9a1eeffc0b32902d4",
+    "input_rows_sha256": "1605d20963a2d70a5131327a123999f82dab8d7a39b3dc6aba7c4775aa11fe69",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000051335.jpg",
+    "status": "unresolved",
+    "reason": "Clear purple snack wrapper at lower left is missing, but foreground labeled dish is a paper boat; complete corrected plate/wrapper interpretation unresolved.",
+    "image_sha256": "68d44a2a6b755cc4eb81716b1542583465ed96e4fdc919cbfe3e793d3de9c918",
+    "input_rows_sha256": "3d77f5f15c0caf3ad1ef8318b9a8c3e1ce8cbfb44d8a007666b8f2864132205c",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000067537.jpg",
+    "status": "unresolved",
+    "reason": "Crowded event contains multiple small occluded plates; completeness and individual box matching uncertain.",
+    "image_sha256": "299b76e258600c851f92b23ba811cb5cf44b56fa8fbc247ca034c4b375b67d9b",
+    "input_rows_sha256": "9b7a8cf235af204c35f7f3f974586c79025b0ed44c6440001d222dc4790d6c8d",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000071136.jpg",
+    "status": "unresolved",
+    "reason": "Margin dishes appear deep bowls; plate versus bowl identity unresolved.",
+    "image_sha256": "5f6566fc869ade4c3e337dae576809fd50068969eb009c6003f2bf1c1129ab9b",
+    "input_rows_sha256": "4ed1bdac3638ec0380ba869c90e617de7c53ad4d30803a71a8f58cb47847245d",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000075339.jpg",
+    "status": "unresolved",
+    "reason": "Multiple tiny distant plates and possible additional rear-table dishes prevent exhaustive certification.",
+    "image_sha256": "55312bd603a153d99a1c0093dda36e8a868d7b996ac907c49353c6ad33db8ab4",
+    "input_rows_sha256": "aca44f3e15238da54036a6adeacc86e4a8fb0dd058af048657593afdc71a102c",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000084415.jpg",
+    "status": "unresolved",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy; Stacked disposable plates and cake supports require instance grouping and missing-support adjudication.",
+    "image_sha256": "b5c7d32236c0c1a3978c6add4c43c0b222b8fcd882a0fbd95e63b20ba6b4a2f3",
+    "input_rows_sha256": "a275449a0fe0a4663042cbe344d170c00af38928d7b4ad87ba97c2d97f202b3f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000089725.jpg",
+    "status": "unresolved",
+    "reason": "Second label corresponds to ambiguous yellow paper surface beside pastry tray; class identity uncertain.",
+    "image_sha256": "f0cf1205e994747bc1af85e14e6d13f23baecabf35e67d39430203afea19b0f7",
+    "input_rows_sha256": "758b6deb8e6dc6135b606bd7a0fde48c623d248850e73311b096d8bf0380065b",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000106272.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.391601562 0.929355972 0.185578125 0.133512881",
+      "0 0.619179687 0.781814988 0.157828125 0.085550351",
+      "0 0.655382812 0.710679157 0.135015625 0.076018735",
+      "0 0.293695313 0.654578454 0.074203125 0.069625293",
+      "0 0.568023437 0.644718970 0.103765625 0.064754098",
+      "0 0.331765625 0.776756440 0.145750000 0.095433255",
+      "0 0.720773437 0.953606557 0.207109375 0.092786885",
+      "0 0.445718750 0.553747073 0.104093750 0.050491803"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "4d858894c996edbef123530bb8fb5c5a8431565239107532e023acdc0ce839b9",
+    "input_rows_sha256": "8ac8a3edb127c088722d684c6466f09dd1ef933c3b582eb3564ec801e629eafd",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000123389.jpg",
+    "status": "unresolved",
+    "reason": "Central pizza support may be serving tray/cardboard rather than eating plate; extent and target identity unresolved.",
+    "image_sha256": "ee91769e241d893902b744c068e7a3035b1f519baa0ec17a752c8d980cc9e11f",
+    "input_rows_sha256": "b509cdc418ee7636b0eb9515b790441ff85195d81f4b03c9f1d520e65acd3c02",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000141952.jpg",
+    "status": "unresolved",
+    "reason": "Small occluded dishes at outdoor meal cannot all be confidently identified.",
+    "image_sha256": "71a3c44ad988ebf433309ee0bf2bfeb4a0f88d4346ae77ce253f6f2768c9b44d",
+    "input_rows_sha256": "659d06843743af80dfd65177ebfd08c9c1af1a81a8208ea5be4f06302c70b9d2",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000142413.jpg",
+    "status": "unresolved",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy; Overlapping plates atop refrigerator and wrapped dishes cannot be resolved into individual instances.",
+    "image_sha256": "3dae0391d00738a6766418f19568231d95b5346a981d696bd597f466fc6ace4f",
+    "input_rows_sha256": "fc0146ab9915621e732fe96042691fd1f75124276f148a84532a7b696aabf3a8",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000150703.jpg",
+    "status": "unresolved",
+    "reason": "Existing plate row encloses hot-dog paper wrapper/boat; target class and underlying support unresolved.",
+    "image_sha256": "3b92d2c42ffcaa0cb855d8ebde28d2b45974f181ed4cf6cc65164d83ed451ff7",
+    "input_rows_sha256": "3cf8bef7fc073794a93f8e6b4ece828d054c2f30288a9c5b3fa8ece08be8bdb5",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000157586.jpg",
+    "status": "verified_unchanged",
+    "reason": "Foreground pizza plate and partially occluded background plate confirmed; no additional target objects.",
+    "image_sha256": "51ee07b60d9c4a55227189577abeef1b1d4b4af66fcad0d0103c3d6c5e8d3c5a",
+    "input_rows_sha256": "39ae0d33a44c7b8b89cdd528d9f4c19d005cbde5878fc8dd94b20f8c53dd1ba2",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.438632813 0.622640187 0.502734375 0.467336449",
+      "0 0.110351562 0.614112150 0.158234375 0.079158879"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000174526.jpg",
+    "status": "unresolved",
+    "reason": "Dense small dessert plates and gold food packages require further instance review for wrapper coverage.",
+    "image_sha256": "4066c2a89be1eb9e20362f335c9f396f95ff121e6b53f8d1c4f82b17b0a41f44",
+    "input_rows_sha256": "15a6732f05195df4e712081edae3cec1f4468634f0997f2fefeae4bcf293cbe7",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000182406.jpg",
+    "status": "unresolved",
+    "reason": "Picnic contains missing clear plastic beverage bottle near center and multiple ambiguous food packages; exhaustive wrapper/bottle coverage unresolved.",
+    "image_sha256": "00d1021eed31d04fb89108602b6bd6781422ee94f119b17ff546fbc8ca3745ea",
+    "input_rows_sha256": "aa3935b841be158c16340fbe9b9776a5d4237fe9f25ebb29313447015eaf6b4f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000196888.jpg",
+    "status": "corrected",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy. Rear central nested plate stack consolidated; three spatially distinct eating plates retained. No additional target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "b6fb7c46921e44f4a4780a37d03b502bae6008f9124a89ad0d4c08ac995aa355",
+    "input_rows_sha256": "8dc783e97da6e2a9df80c46c22b813876f19c53525974982ea10c672b25e933e",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.467000000 0.650010417 0.281312500 0.040562500",
+      "0 0.216257813 0.643135417 0.265359375 0.052187500",
+      "0 0.977054688 0.634208333 0.045890625 0.051041667",
+      "0 0.615085938 0.632208333 0.227328125 0.078166666"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000211282.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.783989247 0.552648438 0.361870968 0.100671875",
+      "0 0.452645161 0.769125000 0.775741935 0.349187500",
+      "0 0.421763441 0.327992187 0.768172043 0.309078125",
+      "0 0.491430108 0.068484375 0.411462366 0.068218750",
+      "0 0.824892473 0.099742187 0.279763441 0.131796875"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "78934c2e5fa640b8c58deae96017aaca3d82392c316d13fc9da551874fa00b94",
+    "input_rows_sha256": "ef703c27f5c20b5e75aac7a4ce3a8cd819ff7fc1f7db87602c7aebcdc54b210c",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000232663.jpg",
+    "status": "unresolved",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy; Cake supports and stacked plates have ambiguous instance counts and plate identity.",
+    "image_sha256": "e11a8ab38796b37c138db54d7a327de297b184f736b0897e3915e35208790467",
+    "input_rows_sha256": "1b7a134d19ce7cc3d9fd29fb82fcd1b2ddbb598b64546f0980d52cb5b99aa712",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000245806.jpg",
+    "status": "unresolved",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy; Small grill-top labeled objects and overlapping stacked plates require class and instance adjudication.",
+    "image_sha256": "529111216ed2b5b80b5d8f15a1afde7d225a2fe076a75e9339ca317dbb0ab675",
+    "input_rows_sha256": "3ca4ac46eea80b1deaa1730f0d8182a08043ee107f61c94f02a76687027d47aa",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000251578.jpg",
+    "status": "unresolved",
+    "reason": "Missing blue/yellow flexible food packages visible, but six partly occluded plate candidates and package separation unresolved.",
+    "image_sha256": "93391d964d2d69ec38e498894739464eb58a9228b901a682254a851a40f409c3",
+    "input_rows_sha256": "1c9bb055bed1aab7d5cbb795d8c3741e401d729ac83d9aea078363bd15c7b278",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000251872.jpg",
+    "status": "corrected",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy. Clipped left-edge paper plate stack consolidated; separate foreground, held, and background eating plates retained. No additional target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "fd281a50a79ece2b08ce29c5be6df13e685036ce7cdcb8b1bacb0c1f3fd2fcee",
+    "input_rows_sha256": "804d60a1f33b5dce5b2201b0446b9740c274ad5ebac4d5ba4dd5f5fe193cac64",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.231986111 0.632335938 0.223361111 0.033890625",
+      "0 0.273666667 0.392414062 0.114777778 0.022890625",
+      "0 0.449555556 0.904039063 0.367666667 0.074203125",
+      "0 0.075333333 0.548679687 0.115111112 0.031109375"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000255124.jpg",
+    "status": "unresolved",
+    "reason": "Upper-left small white/metal object under pan may be plate or lid; cannot certify second source row.",
+    "image_sha256": "fd511aad6bfca8bd4e97177f14ec0c72f7e21d46f7f0edb4bcb2349a0d3bc92e",
+    "input_rows_sha256": "5e12c0312ac29ce18e9300a02ee54df7f7f09478cccd9778ac2ed8150946b114",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000286176.jpg",
+    "status": "unresolved",
+    "reason": "Three pizza carriers show paper boat/tray geometry; plate class boundary unresolved.",
+    "image_sha256": "4f5ab1fc34063f2bf79ed80e1eb5fded036a9234e7fe34e43f25b96b9cf3f39d",
+    "input_rows_sha256": "a5f18b7745204a78bd8a5caa05abc1c1e0a1dab20f86da0fbf962ccf1a0a9fd3",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000296843.jpg",
+    "status": "corrected",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy. Entire clipped left-edge stack consolidated; four spatially distinct meal plates retained. Metal beverage can excluded. No additional target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "b44ce06ee834dcf18eaf43d5958481b8881f7f3893014cfdb1d2f096147a94d8",
+    "input_rows_sha256": "6572f807af6d3def0a8467346f7ec646655d977d2839bca8ae97c617d31ad490",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.533906250 0.369041667 0.235218750 0.212916667",
+      "0 0.505117188 0.803895833 0.310015625 0.353541667",
+      "0 0.333437500 0.540010417 0.261781250 0.251687500",
+      "0 0.730539063 0.604895833 0.272828125 0.277500000",
+      "0 0.068578125 0.537395833 0.137156251 0.290791666"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000309386.jpg",
+    "status": "unresolved",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy; Tiny rear-table plate candidates and overlapping dish edges remain uncertain despite clear exclusion of glass beverage bottles.",
+    "image_sha256": "d959e595126a61a7a9702ab4448f95b02a5fddb8f613403cef1b14eb60506781",
+    "input_rows_sha256": "2e76aa9308af181c2556f8aa64edd3110f4c8d60ad319f338c4a293f38ae87e1",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000312785.jpg",
+    "status": "verified_unchanged",
+    "reason": "Four cake activity plates confirmed, including tiny upper-left background plate; no additional target objects.",
+    "image_sha256": "23c3eb18305de2d1dca0a6fd632d6d8cab0253dea39f6c675d731f64e6d44927",
+    "input_rows_sha256": "1deb56f83c84895367bdb0b7cb6a1c29ea8093b485dbfd8b07d3aeeb464b5d13",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.863125000 0.434531250 0.133906250 0.078812500",
+      "0 0.617679688 0.401031250 0.077890625 0.065645833",
+      "0 0.038218750 0.040572917 0.050843750 0.014229167",
+      "0 0.681484375 0.774625000 0.216468750 0.214500000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000321390.jpg",
+    "status": "unresolved",
+    "reason": "Foreground cake plate clear; rear-table white candidate partly obscured by toys and cups remains uncertain.",
+    "image_sha256": "2296d989343861818962c5970f3cfcb11153831241ed4944c5dbf818fbf91e9f",
+    "input_rows_sha256": "718d1f5436fca8c566343a6b71c27d32ca4217b80f3034db9409e7048dd7086a",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000321940.jpg",
+    "status": "corrected",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy. Entire clipped stack of paper plates at right of cake consolidated; cake boards excluded. No additional target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "080ecfac15ae996ecc531715d5117cc5ad1fc2b3e7873257d71ac0a5c9515be9",
+    "input_rows_sha256": "40cdc441e792990b5178e8aa7b05e9666f2d3535c7c57e0546d1f9e3e24fe9ab",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.926229167 0.861671875 0.147541667 0.096156250"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000336954.jpg",
+    "status": "corrected",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy. Entire clipped foreground paper plate stack consolidated; pizza baking pans and glass shakers excluded. No additional target wrappers or plastic beverage bottles visible.",
+    "image_sha256": "fa4159ef635a614b9aa60cd39e1b25f8ba7d51db6dd4f87b37c7a6188725e882",
+    "input_rows_sha256": "be04486f141057ea170855028410e77c027dd02f126b5ef610ce58baee1a1cbf",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.190250000 0.807757813 0.380500000 0.384484374"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000371092.jpg",
+    "status": "unresolved",
+    "reason": "Crowded distant plates partly obscured; full box matching and exhaustive target coverage uncertain.",
+    "image_sha256": "11a4fdd0a55791092d6f6486075c392b64b630657c2c9c445f04abf76117b161",
+    "input_rows_sha256": "879f3990d893c3f15e198ecdec88bd702b1e7d04e626dc0e8ce19c41f46caefd",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000376209.jpg",
+    "status": "unresolved",
+    "reason": "Native image re-viewed under one-box-per-entire-physical-stack policy; Overlapping plates and tall green beverage containers have uncertain instance/material identity; full target coverage unresolved.",
+    "image_sha256": "7d214e0763b686fc27533a226d518e72fdd27bcc596ebedafe654d0c18ac7573",
+    "input_rows_sha256": "329b2b03c3b754d2a8df42f88b69e67ccf1c16a9026e7a0b79efa75771d7e1ae",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000376502.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Left paper plate beneath pizza slice correct; right-hand very shallow support looks like cardboard/tray, not definitively plate.",
+    "image_sha256": "cc3b20f9fe6656fea9eb344cd56917e31908699cc65d8bb10ff28442daf9508e",
+    "input_rows_sha256": "c8b62dfc4468657d0be903a14437c815f8c59efdcde88e25940735575b88c559",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000379508.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.451940000 0.848946667 0.161360000 0.157413333",
+      "0 0.283000000 0.416000000 0.138000000 0.090666667"
+    ],
+    "reason": "Two background plate boxes describe the same plate; consolidated union. Foreground stack already has one full-stack box. Preserved prior accepted correction.",
+    "image_sha256": "e7069257854a6520908d3f93e82fa02328c1e540d1429e7d38d5c7c96c0d25fe",
+    "input_rows_sha256": "27f339f6d1575c1082db07bd597fa364ecf9cf16b1cc403c9202a68a23528aff",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000392878.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four tiny labeled plates in crowded family picnic. Several small bottles and dishes are partly hidden; full-resolution object-by-object review needed.",
+    "image_sha256": "fd53a87a85adcfad0caf2f63752281b02efe71a48aad5a684d20cdef72fdc564",
+    "input_rows_sha256": "2f41d187af057c28f13b74cec499e12568e38dde8146ced87e36b19f4fd414c9",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000419232.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Crowded arcade meal with eleven small plate labels; some pizza on black serving trays and tiny background dishes require source-resolution verification.",
+    "image_sha256": "2ce039ced88b523d0b876a6d050df58157fc55367bef40a4162d06c50f219a35",
+    "input_rows_sha256": "637ebe9188d8b9a69633a4c658c7bbb126c4deddbd158f86da57bbe24c5b7d12",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000420610.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Two source plate labels near left edge of buffet, partly covered by large red-blue bowls/plates; need careful plate versus bowl and stacked-instance review.",
+    "image_sha256": "41c5ec6b4b7f8d633ae8692968da5fee9939013bb19335ebf5079b190158c66a",
+    "input_rows_sha256": "23927e7100963d81d2e1daf2ba4056f547d77e9bcc55e6b1fd1be68aa4cde83c",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000425177.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. Stack grouping is now resolved, but large white cake support remains uncertain as plate versus cake board; transparent flexible material behind stack also needs wrapper adjudication.",
+    "image_sha256": "96e8585a441efebf16ec86157b777304200125e1764aeddbbe82792d6e3f1450",
+    "input_rows_sha256": "7e10cbbf5c455e82174342c30970996643ef27c99e657c36aa6ecaca74f4dce6",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000435583.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Only small pale circular object behind cat in blue chest is labeled plate; could be rounded lid/container rather than cafeteria plate. Validate source instance.",
+    "image_sha256": "a25dcc42a4085a07ba6d01d0e27820903318d693644d43a9a1faf94e1543aae0",
+    "input_rows_sha256": "81b810a8d4fb180bfd422ec7f026d0d9633292cdce5c01a1e01df59a493261f7",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000437944.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. Left plate-stack grouping resolved; large yellow snack bag lacks wrapper box and right background plate/serving-tray identity remains uncertain.",
+    "image_sha256": "498230e318ea339c00bfc9bccb3eecea7f4df97d8f5c686a426323119849c70b",
+    "input_rows_sha256": "5c447c614e06ac4b93313d5db14da2bbec70dae5b17e84c6e3dbaf00a05cb883",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000442231.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Foreground white plate correct, but two very small source annotations at upper right require independent plate-versus-background review.",
+    "image_sha256": "efb32ca68cae0f38be4cef6a2496902b2be7781e54f532aa2948b3207830b33a",
+    "input_rows_sha256": "d4fef9205a00087c28eeb44cba94cfe5cefc38cdb0715ac43c85921d552bee35",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000453552.jpg",
+    "status": "corrected",
+    "reason": "Native re-review under one-box-per-entire-physical-stack policy. Consolidated nested round/square party-plate stack at lower left into one union box covering the complete stack; preserved all three plastic water-bottle boxes. Cake rests on a cake board, excluded from plate class; no flexible wrapper visible.",
+    "image_sha256": "4bcf2783a6f028ca647128a6f0695ce157cd82de2ae65e4dd349ed1064ba5491",
+    "input_rows_sha256": "322ee0d1997311a90b47b1dfb1af23f57450956eb7045dbbab3e84ba2fa50122",
+    "reviewer": "native review 2026-10-15",
+    "rows": [
+      "0 0.152264151 0.908234375 0.304528302 0.147250000",
+      "2 0.020047170 0.635937500 0.040094340 0.146875000",
+      "2 0.070754717 0.644531250 0.056603774 0.167187500",
+      "2 0.122641509 0.638281250 0.056603774 0.151562500"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000482998.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four small white plate annotations in outdoor pizza distribution scene, some near left person's hand and right edge; image-depth ambiguity, check zoom.",
+    "image_sha256": "3aa6bd7d2cabd83195b6bbeea0d1015f4f1a4a615bdf5a0e2f52aadca579e1e6",
+    "input_rows_sha256": "a34c5376ed7a9a474897855e736a79dbcddb0a0368dc50d64e63776c57aca902",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000483769.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. Plate stack can be consolidated, but plastic beverage bottle at far right is missing and clear/white packaging beside stack requires wrapper adjudication before complete signoff.",
+    "image_sha256": "59dc933b4e77b0229b80412bf95869d753512511babbeea1b404e738bc4e78a9",
+    "input_rows_sha256": "7bc3fa43f44a10b44d26b3f7e31859d22d1885681425131b7d439e808b9f7541",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000485954.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. One small white paper plate held by woman at left correctly labeled; right-hand dark cake platter may not be disposable plate class.",
+    "image_sha256": "04c60a9a231f9e91df3cf3b92750b37a8fe5e905c47cac7635d22656776a0f5f",
+    "input_rows_sha256": "f521a7b2cb4780d4a9ae2784014294c38ab3dd4b19373fa73fb820152f098403",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000489879.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Large white pizza plate correctly labeled; very small second label at upper left may be distant partial plate and needs native crop adjudication.",
+    "image_sha256": "db4c13235338dab625f2ec3ab55f2567dfe65885d7308fd7a8cbcaa58492e28c",
+    "input_rows_sha256": "0f15776ee0bc962ac056d366a98e9f944763834189289b28ae2510829d97e2a1",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000494887.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four tight plate annotations are on pizza slices and cardboard packaging, not clearly serving plates; source class-label error possible. Needs native overlay adjudication.",
+    "image_sha256": "1fbc2ea713762aa0ce50ee9ac9cc35351d65123eed143cf9c2d3491823dd09a2",
+    "input_rows_sha256": "95af5b675a6b64da4051a70fb597f3e86cb2128c0dcb4f68debb141283591c00",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000501491.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Three source plate boxes at image edges; central large circular base under soccer cake may be a cake board or serving plate; needs plate-vs-cake-board adjudication.",
+    "image_sha256": "6b0b84db1a988427eca01a88576037b3e8a988a4c0f728ea8b481f156bcf9467",
+    "input_rows_sha256": "49584589f38582391ff67eeaa910bc316a782b844634491980e31a9e8710a047",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000506011.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four plate-source boxes among several green/white party plates. Crowded lower edge and partly clipped plate rims require per-instance crop/overlap check.",
+    "image_sha256": "5f878a24889501d6d7da5865f365d6545f2118df5bf6510d7c227b2c2c7ea705",
+    "input_rows_sha256": "b6ccf28411d6d2244a2e781ab6ae53c104015faa9b662569f831efd9202f59f3",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000507744.jpg",
+    "status": "corrected",
+    "reason": "Native re-review under one-box-per-entire-physical-stack policy. Consolidated both overlapping boxes into the complete visible white plate stack behind cake. Cake board is excluded; beverage is a metal can; no flexible wrapper or plastic beverage bottle visible.",
+    "image_sha256": "611e0a661ae9f8b2802cb95cde7160abaeaca23939a0073161ca548c2caaad67",
+    "input_rows_sha256": "199f22a431b2b6be5e41f207ebba3267fd32a74877cbf8e51f68d9500a522072",
+    "reviewer": "native review 2026-10-15",
+    "rows": [
+      "0 0.294171875 0.642950820 0.105812500 0.096674473"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000534191.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Primary class-1 source box spans literally 100% of frame though visible large white plate has narrower extent. Tiny top-right cropped plate may be separately boxed; needs source rectangle correction.",
+    "image_sha256": "bdb8df437e204005e4df8531dd4d2a3155bca1819a15289bbe2923036eff071e",
+    "input_rows_sha256": "5d497357a3c9d452e65bf9a01b5f84e3d7fb3750f8987a5bd5990042e955f8aa",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000548913.jpg",
+    "status": "corrected",
+    "reason": "Native review: tightened single disposable plate to visible extent approximately x51\u2013612 y273\u2013399 in 640\u00d7426 image. No other plate, wrapper or plastic beverage bottle visible.",
+    "image_sha256": "1184a1c519bced1a71eecb1a19dfec79c7a654dc02ed69b10c622d079ea7061e",
+    "input_rows_sha256": "efb248810b4ae942b77ac0a25bb7d51aeab89788c05e9d0e670c64ede71575e2",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.517968750 0.788732394 0.876562500 0.295774648"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000557283.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native review: single close-up white paper plate extends to all four image edges; full-frame box matches visible truncation. No wrapper or plastic beverage bottle visible.",
+    "image_sha256": "13f1b89086295cc0213b6301163cf152b96271cc7666414e0df498a07d674c00",
+    "input_rows_sha256": "553bb359e9c9578bed4949a802a30a97f44ca16053f2d1a6a2ba1bd9afb4d36c",
+    "reviewer": "native review 2026-10-14",
+    "rows": [
+      "0 0.500000000 0.500000000 1.000000000 1.000000000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000559891.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Woman's handheld white plate appears correctly boxed; another black round platter beneath cake held at right edge appears unlabeled serving plate, pending plate-vs-cake-board policy.",
+    "image_sha256": "f3332875b2e69b28e229ef3bfeeab5e825ae68909d5e62980c215740f01a4e04",
+    "input_rows_sha256": "94b9ba37d9e247ac12d21fbff41552e0e5a13757e582440e6c2d71f48f61f029",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000569052.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Tiny partial white plate at left edge plausible; large labeled plate under pizza at bottom right may be disposable sheet/round tray; require original-image adjudication.",
+    "image_sha256": "9b5093707025e20f22461010767c167db37edd940d47c5e452d6f49c587c8ea9",
+    "input_rows_sha256": "eaa19bd47779b6ce2b97b3a0361b6d87edfcfcd82be17950a572a7d704320672",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000570094.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Seven plates in pizza/salad party table scene; some small/distant bowls versus plates and edge truncations require verification.",
+    "image_sha256": "4abffc18aa621dedd18c67a2d306953987d31a235d68e97d7f7510f3a714b9e5",
+    "input_rows_sha256": "67c4314301a945bbf03e59e5f0a29370212b3a351c8b9b74050f6ff3c66262a7",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000004108.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Sixteen plate annotations scattered across a crowded buffet and stacks; inspect tiny objects and overlapping candidates individually; no complete sign-off.",
+    "image_sha256": "9f8ef24dcfcb3d49008c65ab99118e7e67623328aa7abf9cb58433bfbe96e334",
+    "input_rows_sha256": "706b382074e66fa03b1da0e7271a6f4765940402badfe8820bf9ef8737d0a676",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000095674.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. One large white plate partially obscured by salad, near-full-frame source box. Original-resolution rim versus upper pizza tray requires a tighter contour decision.",
+    "image_sha256": "8d5effff261025071bbc7e374964807a996b2785e1079cb23835b22d61447bf2",
+    "input_rows_sha256": "83c52edcf7a254caa30757e2b0749df9eca39f6b7d2d7606b3aaf757faa368c1",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000108238.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Eleven tiny white plates in classroom meal scene; several perspective-occluded and clustered, review source matches and possible omissions.",
+    "image_sha256": "950460f86238bea640084d651777abf576fe10a650d54acf13ad6ac5898e0a5e",
+    "input_rows_sha256": "f1c28a0501cb68e0adaf24941e6e063e9b3795f4fb909fecc21bd76e6eaa82b2",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000118739.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Two pizza rounds on white paper liners; must distinguish physical serving plates/trays versus disposable paper liners before retaining class-1 labels.",
+    "image_sha256": "3ac2939e2cc8503d9d9d7fdda48b44dac596e2a971a7642a52dd28afecb49f44",
+    "input_rows_sha256": "05948c741c89a0ead5736632e9a1f3d9f6fad96ee9e4a2df0d391d6797ea1958",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000122962.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Nineteen colorful disposable plates at large children's pizza party; crowded tiny/overlapping plate boxes require per-object enlargement.",
+    "image_sha256": "cbe230270c69febc336549d68fccd0ca50f6754d58d8fe917b210c8c5f8ddf59",
+    "input_rows_sha256": "64bb7e44f62ae375c40baa1db02df8fbf409d3184c4c2c91480fe83553bf5371",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000211527.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Three source party plates around donuts and birthday paperware; third far-lower-right annotation may cover plastic cups/bag rather than serving plate, requires close crop.",
+    "image_sha256": "439c4df11bdb519f91a1fc2600faa0f8e9a100a0eed37d41fbbbe4baf1f49a82",
+    "input_rows_sha256": "fcfe060f80c3e912ea1977cd587e1326d24f2a22ef640beeaa97d9c36f02bcb0",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000268378.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Six small plates around family party table with occluded views; individual source boxes need closer overlap/source review.",
+    "image_sha256": "c8d28db19ef226195811e86b5c41ab6635d16c8e9d375a1d4fb841fcb038b68a",
+    "input_rows_sha256": "734d7b15f203ad22a4f114403d307eb6234e62f21db5efdd9b17e91f7e28bbdf",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000334483.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Nine separate plate annotations across crowded children's cake party, including edge-clipped plates; per-object/overlap zoom pending.",
+    "image_sha256": "25b008f452e77d8618bb1cfb9380eb3c7d2dd43fe5c92c5cbcd949b3d4f9ce4b",
+    "input_rows_sha256": "c11d568b6f51838024ed8d40a94afb8416eaf1d430db8feb616b9a5bc2495038",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000358300.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Ten small plates in crowded indoor pizza scouting activity; exact occluded instances and class label locations need cropped adjudication.",
+    "image_sha256": "a95c3e4481ed41c7dd879aea4e6c46c60ab5a576eea5b3ea6f1c7ec0f0074c61",
+    "input_rows_sha256": "68c2f89c7bc198a44403f58b5daa4a0fbc11cb85c49c978a1181ad822366823a",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000455720.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four plate-source labels near cake-serving birthday-table scene, several distant/cropped/occluded, need individual localization check.",
+    "image_sha256": "79c547709d1fb801cf62a7645b731d3daebed12fb416efe313bb8a043666927d",
+    "input_rows_sha256": "9697c132e6ab64b8ec45e2228fab19a5b3cd94fb48fec0462ae2116ff54ee01b",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000538859.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Six source plate annotations around takeout pizza tray; some overlapping white disposable plates and tiny partly occluded plate sections need individual zoom checks.",
+    "image_sha256": "05bffbd4c38ac6c4d2a52afbbf5e199bdbc0671a9b9af508e9cb35b153c252e9",
+    "input_rows_sha256": "b9dc00341504ed108726f839bc0cd54bd3c47f8fb15c69cfb2e0e6ddb000ea17",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000009270.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Foreground blue cake plate correct; second extremely small distant plate candidate needs zoom review",
+    "image_sha256": "f09f21975851d2b443e5a7462a5de5560c82430e06c75b7db02ae69b56a46d6d",
+    "input_rows_sha256": "a292716cfd402c324369412388724b4412dca4e000cd3e3ebb15d436aefa2013",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000022411.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Multiple tiny distant dinner plates require native-size assessment before removing boxes",
+    "image_sha256": "b153620366929ca8334db0a4f50e2d8b26b00e21670ace598a655af5c7c76735",
+    "input_rows_sha256": "60ba38db1104cfa89e2b3911417c118e629f01fa1dc65572f50e6e8bd71ff375",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000034785.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Upper black plate is valid; lower source plate box encloses fried food on apparent disposable tray rather than plate. Class boundary needs closer visual assessment.",
+    "image_sha256": "1998f0dbf194f739c7d9cdfaabd37a4d1add2a4f252c01a8240a8b3c430b851d",
+    "input_rows_sha256": "b9e4448886fca9b6ed1da4391e9998af8363efe7feef31d37a479dace3e646be",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000104368.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Five plate annotations in crowded convention dining scene; distant tiny instances need higher zoom for exhaustive plate identity.",
+    "image_sha256": "0ac5cb81a8259377a95637092c2c3cbe7375e4244cbb2521159d4247d87eea0a",
+    "input_rows_sha256": "71d7772b3000eaf48487a4dfa95d697f5a5484f5c26c44b823cef74f924101c6",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000123147.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. Stack grouping resolved; tiny distant object near x342 y150 still needs plate identity adjudication.",
+    "image_sha256": "98301c064674bb4d3b040ee9b6c57fca349b417da0b20dafebf555a0e0325343",
+    "input_rows_sha256": "e60dc2c847a95b78165992a3cbb06dcb456b91e2c66aac3a6c347ef8a99c5f42",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000145722.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Fluted long disposable container under hot dog resembles a paper boat, not a round plate; keep unapproved pending ontology decision.",
+    "image_sha256": "f4bfa215bdc23fca5c4b2dcb88467ed8d125e0f1596bd89bafb8e37d39d28187",
+    "input_rows_sha256": "914e9c603009a5e8d2cb51f1fe7303da907fa3eeb7c94ced2fcb338786d65516",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000170525.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. One-box stack policy does not settle whether small deep white round object left of cake is plates or bowls.",
+    "image_sha256": "42e90ae1c4b552fca764cf00771ee5302003c169c22f7cd3bcfaaa692dedb610",
+    "input_rows_sha256": "22f56ab90341614cc293fb386dffa6eab5d1f9b122d3ca49bd63632b500d3ce7",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000184205.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Very small labeled plate behind kitchen island appears partly hidden by counter clutter; verify original-size target.",
+    "image_sha256": "dfd4c02534070292200310736a069be02728856ba4cd475a154918c7f1cab78f",
+    "input_rows_sha256": "d5090556b3ea4e04ec2f5629e4d36288524f750c55f4189ad9b36ea590b7674f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000197739.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Three correctly located disposable picnic plates; cooler at upper left contains drink containers possibly plastic bottles, requiring independent zoom.",
+    "image_sha256": "4a1e8881d80c6e205c1ebedd71fa022a679b25d780c67a4d90ce384ba2834b6d",
+    "input_rows_sha256": "8e14d6b3c04ec9bc84577ad2ad32f9534aaa7a09c3aaf5994c7811d2ded994c2",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000236295.jpg",
+    "status": "corrected",
+    "reason": "Native review: original tiny plate box is on gray irregular scrap lying on pen floor, without a dining plate rim or dish shape. Removed clear false positive; no wrapper or plastic beverage bottle visible.",
+    "image_sha256": "f4c15aeeb72697e3c85cd7620264fb1a8d7ddc92915aa0924fb2d370adf737d1",
+    "input_rows_sha256": "1a7b1b5c4c49128d2238cd5480eb9f392b37357932ed27e531a505199501cdd8",
+    "reviewer": "native review 2026-10-14",
+    "rows": []
+  },
+  {
+    "name": "plate__train__lvis_000000269364.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. Stack policy resolved, but multiple distant plates supporting snacks at rear-left appear omitted; completeness requires further adjudication.",
+    "image_sha256": "5cc74626116775d2f28b0e6abf8872598ca020149c8ad6ff68a936cb277b56c0",
+    "input_rows_sha256": "c97460044ecf432b48404f8c04ad983f0c1292c58c83b76699fcc65678f466e7",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000286953.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Cake scene with small white round target at right of cake-box; source class-1 box possibly foam bowls/lids rather than paper plate.",
+    "image_sha256": "6cf7d10b2b415465056f8a29f053c0d05759a35b1f56aef0653dfa040d7d6521",
+    "input_rows_sha256": "37460e40b02301cce9d7ef5df0c2098dab01fe7a6cce2f610c7a4098574fc7c7",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000309260.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Two white paper plates carrying pizza correctly boxed; a third extremely narrow partial white plate appears at bottom-right image edge, requiring small-object review.",
+    "image_sha256": "58f4e19c63b6d04dd723344902adfcc3d6bc715fe893b2ee6b9511a17da37ad2",
+    "input_rows_sha256": "7438073a90b33dce5977b72200626974fcf9f28068dec7d54f1e156e3e3ac0dd",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000318475.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Three source plate boxes on pizza carton; central paper plate clear but right-edge boxes may be box liners or other objects, so require adjudication.",
+    "image_sha256": "0f1f783d2b2d6ff8213083c045f848e87ef517cc25edfe2374fb85637e488cd8",
+    "input_rows_sha256": "83efcbad61f3ab3d5320f21b20e3c638c26e087d4bd9f71078eb8ec30888a6dd",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000324638.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Three small white plates at left edge of outdoor food table; possible overlaps/partial stacks, require full-resolution check.",
+    "image_sha256": "e09535e69b918820df377d3a0490682c29381f8bcdadc30b680997bdef050b55",
+    "input_rows_sha256": "e30b1db649529aba33b48dd08e29a7f2827aade83eb80f5c44de8226639bf28d",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000335722.jpg",
+    "status": "unresolved",
+    "reason": "Native re-review under one-box-per-physical-stack policy. Stack can be consolidated, but several round and rectangular food-serving platters behind it are missing; plate versus serving-container classification needs adjudication.",
+    "image_sha256": "71489a678ee6f7f925dbc4cc5c8e3bc8d296669e085b28fe75522b385b833594",
+    "input_rows_sha256": "c2cbe557480fe1660be517ecdf833edf9deb2f2b99e41c412b6d5379fb21b7fb",
+    "reviewer": "native review 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000346089.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four source labels for small plates and cake boards in crowded dessert table; decide plate versus cake board and zoom small cases.",
+    "image_sha256": "758277bbe7da0a6e3e025505f718bae9d2965f3e31aa2f1b68e1165f25758e5c",
+    "input_rows_sha256": "8ad72a63f635a7c804eb9fe4b5d12c6628bd6d69419d83ce7b69ec032c9beac6",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000372233.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. One white hamburger serving plate and another shallow/stacked white plate at right; right-hand label may represent plates stack versus disposable container.",
+    "image_sha256": "8f0d370aaf52afe922d67cd4271f58f1426ff5c35750c11db167c93be288e595",
+    "input_rows_sha256": "211e9da79fcda2921be417b525409864e54701a1e2e590b6097c4a4560c67cba",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000419586.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Four labeled paper plates on pizza buffet table; three foreground correspond clearly but a fourth near stacked pizza box requires plate-versus-tray review.",
+    "image_sha256": "a5e7c48067086a1b3504d41fc8702b52a22e63d63f16312c875be542fa6225e1",
+    "input_rows_sha256": "f79872fb143b60405fbcf960e4b6657578b725841496859d85b260ef7962f193",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000439175.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Eight class-1 plate boxes scattered in crowded restaurant, several small or partially occluded; need higher-resolution adjudication.",
+    "image_sha256": "ac7f4942cbe6f3216633e7ec86c00a0ada043e1c1cfc87fb6d4f1eb590653ca6",
+    "input_rows_sha256": "1e77e67956d4d9f30ed7325b785259976fd7b9669d81581fd4a1606f991e1f88",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000454225.jpg",
+    "status": "corrected",
+    "reason": "Native re-review under one-box-per-entire-physical-stack policy. Consolidated front-right plate stack and rear-right overlapping plate/stack boxes separately; retained left stack and rear boy's separate plate. Four physical plate instances/stacks total. No wrapper or plastic beverage bottle visible.",
+    "image_sha256": "38a479fd6b1bef4847a4bf7fdbe29b7c8322f893bfb868df4509bc1c650cf365",
+    "input_rows_sha256": "7a4cdfbeffda50eb15a6a40a64a019ab3325f6c90407bd2106909529f0cb80b9",
+    "reviewer": "native review 2026-10-15",
+    "rows": [
+      "0 0.318312500 0.715683962 0.140250000 0.102735849",
+      "0 0.523992188 0.726804245 0.138890626 0.134976414",
+      "0 0.550734375 0.515613208 0.118812500 0.086603773",
+      "0 0.520851562 0.459327830 0.086734375 0.042334906"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000492729.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Two upper round plates correct; third lower bounding box surrounds narrow corn-on-cob cardboard paper food boat. Not a round plate; verify ontology before removing class-1 label.",
+    "image_sha256": "a8859df3d9542bff014dc996edbb0c35218542c618f3450e44588e056d7238b7",
+    "input_rows_sha256": "ca5687b9f3d21a5a20da262cd1220e650d3eb2c70461186a64866359ef720675",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__train__lvis_000000534543.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native re-review under one-box-per-physical-stack policy: six distinct plate instances/stacks, including white stack near center-left and partly occluded distant plates, already have one box each. Clear plastic object at left is a rigid lid, not flexible wrapper. No plastic beverage bottle visible.",
+    "image_sha256": "1fb01194a4402f43ec0a7773fddb8d2901df9ba15b805e1cf35546c04547ffbe",
+    "input_rows_sha256": "57f481c65270690e68747fc541085008d3d0c62def6bd7ff2c25930f33d186e8",
+    "reviewer": "native review 2026-10-15",
+    "rows": [
+      "0 0.220201754 0.394500000 0.267526316 0.079093750",
+      "0 0.372692982 0.888312500 0.453245614 0.198843750",
+      "0 0.076307018 0.097703125 0.138228070 0.024093750",
+      "0 0.173447368 0.265804687 0.214122807 0.049140625",
+      "0 0.138149123 0.146953125 0.072543860 0.034375000",
+      "0 0.244307018 0.597523437 0.345000000 0.119453125"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000552467.jpg",
+    "status": "corrected",
+    "reason": "Native re-review under one-box-per-entire-physical-stack policy. Consolidated three nested boxes covering blue plate stack at lower left into one union box covering all rims; retained distinct handheld and edge-clipped plates. No wrapper or plastic beverage bottle visible.",
+    "image_sha256": "02ebaeb24a7fc27bfb27a5f3a9023677aebd88cb87f7da6c6fb01eab6f903f10",
+    "input_rows_sha256": "c0d98490171748ab122f760b5e0ee2bbf0a5ac31301c3fe073334a9aae6b67ab",
+    "reviewer": "native review 2026-10-15",
+    "rows": [
+      "0 0.380710938 0.541635992 0.123078125 0.024621677",
+      "0 0.714906250 0.632044990 0.139250000 0.061022495",
+      "0 0.058070312 0.975429448 0.046421875 0.047177914",
+      "0 0.335265625 0.386666667 0.099687500 0.030756646",
+      "0 0.100156250 0.994856851 0.085156250 0.010286299",
+      "0 0.052210937 0.893190184 0.104421874 0.053006135",
+      "0 0.333875000 0.479100204 0.103812500 0.020490798",
+      "0 0.158007813 0.861595092 0.114484374 0.074846626"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000236412.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. One source plate bbox covers only narrow right edge of large shallow white baking dish under pizza instead of full object; class/instance shape requires correction.",
+    "image_sha256": "437f364f15b29caa27ba255d8a25776f01e2e0d3e4fba3c5aea93e017650a179",
+    "input_rows_sha256": "d5590c3208a8ba7ebfabba42fd488b3f77a0e18e51e0429afd3fd9f517b8c7da",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "plate__val__lvis_000000303893.jpg",
+    "status": "unresolved",
+    "reason": "Native image reviewed. Two handheld rectangular folded paper food boats labeled class-1 plate; may belong to paper_boat class 2 instead. Preserve until taxonomy adjudicated.",
+    "image_sha256": "e809831e253ff07b4f8f810445c39cab27eab15e1d2a86f90189e35084538468",
+    "input_rows_sha256": "8cdc76246811d93e903af1241caf1a87087b669dbdb9222f490092cca27b477b",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000005_jpg.rf.8ec14faaa2d63050935736de74198798.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled green beverage bottle appears glass; additional clear objects near center cannot be confidently classified as beverage bottles versus plastic bags.",
+    "image_sha256": "87b8e4f9a6ba8bea9212d67fe49b1368bda1711d9ec12fd999cedd3352b48d12",
+    "input_rows_sha256": "4e3bef6304f059586a3fb07a1ec49aa9ff329d68efb932ecc8b8a1b2491663a1",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000017_JPG.rf.2ef5d5bff01d16eae905931dc40e84c1.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Left labeled bottle is glass and must be excluded; food-pouch versus rigid tray/sleeve and foil coverage needs adjudication before complete rows can be signed.",
+    "image_sha256": "834e8073b3b0ea55bc36507947f963b7b32c741a183c1d420dc895bcce308d65",
+    "input_rows_sha256": "deaf7ce44d84495f12e1e7c5316dcd54fbce58074984ced202a5a6def3e88afa",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000019_jpg.rf.6de21bca11b588ea1f499948e8dc2b56.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.33447266 0.52799479 0.09472656 0.05338542",
+      "2 0.41210938 0.45475260 0.04492188 0.04752604",
+      "2 0.95019531 0.61881510 0.09863281 0.07617188"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "76c9ae2bcc5ae4223893f33a0ad29b5c21692718ac1d322f2ea0b22607291e6f",
+    "input_rows_sha256": "740676c02a644aa62490382b30d31441b2b6b305754372f33f46016a06486469",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000026_JPG.rf.288355f859c1888da73624859c4f6d29.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Additional small packages at center and clipped right edge may be omitted flexible wrappers; exact wrapper identity/extent uncertain.",
+    "image_sha256": "ade7413f8a0fc2dddd1c376595a59decaf082761bb15616004a94149185ff1ff",
+    "input_rows_sha256": "39ebd87be96f5514adaae1f1a7584ff4eea8dde7464424fdc2d393c27a06111b",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000033_jpg.rf.ac11513c396d4c58e8b5121258e1fed2.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.41544118 0.25000000 0.10539216 0.06495098"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "d5886b6e0375e9bb3fee7d65b4677dc98f6baf3b41cf580017fcbddf17feb8ea",
+    "input_rows_sha256": "7b703f33c10b2e484c4fc01b9240f6fa76a84b3b77f079ab424a2bd47dcf7adf",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000034_jpg.rf.2caa61f4d36835a34cad2e49e9c90b1f.jpg",
+    "status": "corrected",
+    "rows": [
+      "2 0.39909639 0.18665286 0.18975904 0.09770331",
+      "1 0.52031250 0.48515625 0.06875000 0.06093750"
+    ],
+    "reason": "Added clearly visible orange flexible food wrapper on bank; retained plastic beverage bottle.",
+    "image_sha256": "9657a5ef367ea54838e498f20b701d6cdfda1a312564c7e70fd66d1373b604de",
+    "input_rows_sha256": "f091d43042bfa8f22a8b9040ce203e42f68c3a156f001d5d390b7ab8068257cf",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000041_jpg.rf.aa91806ee29b745d0f22aba0ea907316.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled object is an opaque handled container/jug; beverage use cannot be established.",
+    "image_sha256": "fdcfbb97072a499fa488c05ab9fae5bd067637193411bd28ed195c67909ed24c",
+    "input_rows_sha256": "9694598377fda6fb9a681402eda971f026ac284989130923c5d606556c5486e7",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000043_jpg.rf.a569d2743086fbec8dff80866dfbf3c8.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled object is an opaque flattened jug/container; beverage use cannot be established.",
+    "image_sha256": "8e63d5edc6a05dccb7035c6a61ee6d216f78ba82f91bc595ef1c65dc610e0d17",
+    "input_rows_sha256": "58fd528004860178adf83fc21316df84d422517cbeea43f49dfc433692a307f9",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000056_JPG.rf.181b6cc7ffa54bd9a93852dc18adc7d6.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "One labeled bottle is glass; foil balls and food tray/sleeve need wrapper adjudication for complete target coverage.",
+    "image_sha256": "09fefd2b688a2c6a9654b213d535b1d73b5307c36956a0d65337f53f5f22519d",
+    "input_rows_sha256": "980298ca710d299cecb80304d2a628723a75450381d90ab4588ff9e3c1b96917",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000056_jpg.rf.8f2b9cd06892aba10b4c45d39b811e98.jpg",
+    "status": "corrected",
+    "rows": [
+      "2 0.44345238 0.22854663 0.41997355 0.21999008",
+      "1 0.46875000 0.71718750 0.22656250 0.18437500",
+      "1 0.35781250 0.88281250 0.10312500 0.17812500"
+    ],
+    "reason": "Added two omitted flexible printed food packages below plastic bottle.",
+    "image_sha256": "4f2a815d950476c70ab224e4233684fbca2b5db040426a4351738eaa1fce11a8",
+    "input_rows_sha256": "8464a130aaef28e77b58ba69f23ac678bf7f2471603212db8dfda5bddd3924f0",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000059_jpg.rf.94578b6e0384495e22dab4fb5805e430.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Several small discarded packages along top gutter may be missing wrappers; identity uncertain.",
+    "image_sha256": "7d45270494142cdec82cb965b2998d1251b552bc1b404b8acf972f31d4243f88",
+    "input_rows_sha256": "288bf5154675a17de927a91f72e6340f37690bb510077c7e7f5370ccf92ac86f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000062_jpg.rf.226c7bc5d39e99df1e575e5896b62c9c.jpg",
+    "status": "corrected",
+    "rows": [
+      "2 0.38378906 0.10904948 0.15820312 0.06054688",
+      "1 0.68750000 0.81953125 0.28750000 0.36093750"
+    ],
+    "reason": "Added omitted branded flexible bread/food bag at lower right; retained beverage bottle.",
+    "image_sha256": "113fbf04bb175b75ea6f97415482a6374584426230379ee97aa3cb3ca46f06cb",
+    "input_rows_sha256": "179cbf397e2641014f5d73a1f9e98e51d8726fd16eb47bda9dbad4164551f65a",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000065_JPG.rf.e8f094809b383b1d6e1154daf88ae932.jpg",
+    "status": "corrected",
+    "rows": [],
+    "reason": "Both bottle boxes are condiment bottles with red dispensing caps; excluded. Carrier shopping bag is outside flexible food-wrapper target.",
+    "image_sha256": "a7a1fc1fd07bac5dedc6edca43e771615ff9244b4a8ea6261227212028d13a6e",
+    "input_rows_sha256": "c8118af45b63f7b6bf538e599a5d2f8f2ae18c4a79e6e2975d1409559e492480",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000067_JPG.rf.16a96d2fbdcd0eb80958cdeb9989d9f3.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Flattened clear labeled vessel material and beverage identity uncertain.",
+    "image_sha256": "232eb54094e6f57a147c280800197b8932cf98a286879164fb8a87576ffc344b",
+    "input_rows_sha256": "712dbab439f3d14bba0b2f082b2fde5004b029cda5b149d0785b5fd1a9e0f1b7",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000067_jpg.rf.6f31a350125f51753d58424bfa47d1ba.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Additional silver elongated packaging at left may be omitted food wrapper; exact identity uncertain.",
+    "image_sha256": "7c7d229077344daf539fcc8a5cd99a2c1fa9f8aa60c2ae7cf4de2a7802158f8f",
+    "input_rows_sha256": "c73fbdb39bed03a3be9a1c9061aacc0e311fdfc9b8b970db0f133a725a9f367a",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000071_jpg.rf.4ee8c06b5ac736bc10deb1b48be779d6.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.64473684 0.67887500 0.10197368 0.12275000"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "713051724797c2f697dde50b9c8c5383781fde85f4cc39666371ebbfcebd4762",
+    "input_rows_sha256": "3febdeafe4f357cb78ca676fdef8da1433b13973d00ba896535af676461c8640",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000072_JPG.rf.2580e9e025b226e4744dc84a933daab4.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled flattened opaque handled jug has uncertain beverage use.",
+    "image_sha256": "98987af6661adfa18a4273f8ce319dee91509f908e4943afa29c8ae501bce0ef",
+    "input_rows_sha256": "d6716b75fdc3d1ecd6353ac66d31eca37d82c1e0184dd599d6cd4aadc2ddef88",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.jpg",
+    "status": "corrected",
+    "rows": [],
+    "reason": "Removed both glass beverage bottles; cartons and carrier bag are outside the three target classes.",
+    "image_sha256": "eb005f2026f7542af0b15f802a9c6c832331051972f1b4e38c94ec198b443f1b",
+    "input_rows_sha256": "0394f238e8ef9bf930f55e7987c0588f758aad1f0a1c36d8aa2c7cd89d25bebf",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000090_jpg.rf.2f13d0b8f4b67c6280c58d7a352b8ac3.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.60444079 0.66900000 0.29331140 0.10450000"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "d17a739261f640ca014fd0d4d06743b69ba6f3996b3f9bc9aceb7faf532cf1f6",
+    "input_rows_sha256": "86c1b6d61208371924100eb6c928d9ba80d6e13bcc0382802bffb49f21ac7f81",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000094_jpg.rf.2af3983058971553897e7d109da73dfd.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled clear object is heavily occluded and may be a bag/container rather than beverage bottle.",
+    "image_sha256": "b9acbbd5270e39248dac035bd9d6648449607d0d3839279380e31755dc66402d",
+    "input_rows_sha256": "591c352271a839042e18742f49c66d86846ae2a99a7cb7439a6aaa2f8bcbc43f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000095_JPG.rf.3a7da6521cf540b9540a4036122bc3a6.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "1 0.56188725 0.39991830 0.14031863 0.21895425"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "ac5cca44563759c07807dfed1ae0587b4be4d78c0491e93381166c62dfe9e7a4",
+    "input_rows_sha256": "4eec166992b60ae92a73a31f659b7b69d87ea876a8f92caec6aa96deaea7398b",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000098_JPG.rf.1cb9e0a69b28f446c77751a722fbadce.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Small purple packaging below bottle is a possible omitted wrapper; blue bottle material also needs adjudication.",
+    "image_sha256": "091422f972fb4a12c1c7867bae585b9bff8021d023b70f7b35fc8c7c4bfae1f9",
+    "input_rows_sha256": "f24251a43e23fba3f580c053d696e9760350e18db81a064cce16cc80cfe3a865",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__IMG_4948_JPG.rf.fb1a2f26b685e0b6b5c6bddc0638dc06.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Small dark/blue labeled container material is uncertain and additional packaging is partially occluded.",
+    "image_sha256": "07b3a2ccf0595a31033347f92b4e95f85cc25260a40a3eefe0e33ad59fb18f3f",
+    "input_rows_sha256": "83ce3283d128641e6b36cf15a7c0d454aadba6d742a0b4ce4ea759edd7fabb43",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000008_jpg.rf.e477a13a8700a9a87d54aa441ffe486f.jpg",
+    "status": "corrected",
+    "rows": [
+      "2 0.15706699 0.41299020 0.24632353 0.08149510",
+      "2 0.03186275 0.36366422 0.06372549 0.03553922",
+      "2 0.02614379 0.60585172 0.05147059 0.25949755",
+      "2 0.58671875 0.44687500 0.25156250 0.15312500"
+    ],
+    "reason": "Added omitted plastic milk beverage jug at center-right; retained three visible plastic bottle boxes.",
+    "image_sha256": "5b72455eae324c52d741c7e3dfd058cde80ebad06d9e1a180c4867a1bfd7dac3",
+    "input_rows_sha256": "65aa0b7d673d61bf87841eac852b7692e56e2be0529377418356bd68478a6d73",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000011_jpg.rf.c8bc2f9b2d93fed104bb191731ed8fb5.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled item on table is uncertain nonfood/food sleeve; all visible tall bottles are glass.",
+    "image_sha256": "28a725292028ca389a53eb96d06673ffedc4fdfc9977e674155673518c1b8fb3",
+    "input_rows_sha256": "e499533adaffe9f2902ad65e8028f7a40a4b40202432938351847da27ed1268c",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000013_JPG.rf.a17ef3ec6b485e730d7f67c7ee004bdb.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Red rectangular target may be card/paper packaging rather than flexible food wrapper.",
+    "image_sha256": "e1e1621e2127cf533a79daa346254ab6f0045d04c8035f4fc0106f45734abb3e",
+    "input_rows_sha256": "9921f5f7a680e71f0215aa7113cded819431cf55b57df8e660d5e31c7713f525",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000019_jpg.rf.90d4c4925c911a76d7ccc15c41d19343.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Left plastic bottle is clear; right partly obscured beverage bottle material cannot be confidently established as plastic versus glass.",
+    "image_sha256": "6747d7df51db679f75fa118bb02d7644cf1b800d6b286a08ba67b731828b1345",
+    "input_rows_sha256": "111e07544d08fe6dc336c92b2e01f35d2f1358fb0b3fcdbdff4534f76b373c53",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+    "status": "corrected",
+    "rows": [],
+    "reason": "Removed two glass beverage bottles incorrectly mapped to plastic bottle; other visible beverage containers are metal cans/glass.",
+    "image_sha256": "4809d665a107fd22c17da5abe69ad0bf4036d667f022306af9341bd7aac38638",
+    "input_rows_sha256": "5330110e1b4c9fb466ea9921c69ffa31826e8b8511eb5682dd8537409e3c0ce3",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000029_jpg.rf.164c529bd3b291e1f8c99d8c1914af36.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.46107456 0.55212500 0.33004386 0.14025000"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "9586c850db5f7bce09dda3f0997bc9282e3e262f4247d0617cb088b9809645e3",
+    "input_rows_sha256": "6ee6d6cc5b360ec7ed611dceabe86ce1084d2bd0ebcaed8cf20ec631ad9cc8d3",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000048_jpg.rf.8b47e21a7c1acfcecbb2cf013e5b1ad7.jpg",
+    "status": "corrected",
+    "rows": [
+      "2 0.85859375 0.62734375 0.18906250 0.66406250"
+    ],
+    "reason": "Removed glass juice bottle target and added omitted plastic milk beverage jug at right. Wine bottle and cartons excluded.",
+    "image_sha256": "0efac495e5b6637488471c829e5824fa5ed5b4e16300902547ca720ff98d66b7",
+    "input_rows_sha256": "1a0bfd6e5395748ec12f3c89c53ab025d42397f0369d1ce7b03fd80984a64d04",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000051_jpg.rf.d2218d60b06934d6ed99be0aeb7f2fb7.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Small distant blue/white litter may contain omitted wrappers; incomplete target coverage cannot be ruled out.",
+    "image_sha256": "809bf697c12bd992f5a081bbfc1331b36b448f0dd6efdea3221c73a4cd017dba",
+    "input_rows_sha256": "abd00deae73c9f1047fd6827d1c000a351c9931a4dd3f09233e3ccc0711599d5",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000053_jpg.rf.0f6006c7b1bb628cb5fdcd967dc40a2f.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled juice vessel appears glass; food bag at upper left needs wrapper extent adjudication.",
+    "image_sha256": "98d0c80077d63ca96397920e6b3c6918bac6d26732fe32f5a8fff563684f8bb3",
+    "input_rows_sha256": "2c09607884bcd30049313413d543d2da99b20a700cd5e5b93b4ed66f7b4d38af",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000084_jpg.rf.7d1de5da6c9fe2cb4b1efb6329aad588.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Additional clear bottle at right is omitted and existing center target identity/occluded extent needs adjudication.",
+    "image_sha256": "1e434d68898a8f895e7902b9b8c031ac7c80491f179598dbef2aae4a9fa3dd96",
+    "input_rows_sha256": "597a3a2624af7e72cf34e4a14b1da8537432eefd02fdc3c696ef4ab19a347e8f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000091_jpg.rf.abc29c401353f715233b8438f36e85f6.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled occluded opaque container has uncertain beverage use.",
+    "image_sha256": "4341aafafb5c28ba0b6c70ba8146055d6d5c6216d15ca17bd3d77a0d00a9b9c7",
+    "input_rows_sha256": "209faff524f5e553eaa48074a45a2bc25594467b76c2ec052a8bf7abced690c1",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000000_jpg.rf.60001464ff00fb29b29f601c72ceca33.jpg",
+    "status": "corrected",
+    "rows": [],
+    "reason": "Existing bottle box covers a long narrow wooden stick/board on bank, not a beverage bottle.",
+    "image_sha256": "f0dc51ba688c38cdc089db6c25f61bae37f42c1c7552f49a09c92f717bcf1a16",
+    "input_rows_sha256": "76ab87a7564b32975734bd1141bdef89a73d29982d63077189b11bd29f7dbf19",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.07475962 0.68317308 0.09278846 0.35352564"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "f2ed62aa1c8dd4005bed289875c91a74f5d9fc8f7e710510af944d43ec79f392",
+    "input_rows_sha256": "5f983136cca258db7ac7653c328b21aabf6a27924d46c010b73725be19f1f2a0",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000012_jpg.rf.a9afee671774b7c67ce14cb2a0cbc20f.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.44210174 0.41782756 0.42771084 0.39213102"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "16bfccd96db338d1a139908dc005ffbb3b6b3d4c58d5d7465c718e519de779f1",
+    "input_rows_sha256": "a4cf49dd48c634ddd3ccbe1f9e28e68fa18e48a520716675bd61b0655529a3b8",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000061_jpg.rf.117e656e6b299552886e34301975690a.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Many clearly omitted flexible food wrappers throughout trash pile; instance boundaries/overlap require detailed adjudication.",
+    "image_sha256": "57bc118a99954bcd118e6d6f19a13466b4249699ceeb57f30fbde58023ab7d3c",
+    "input_rows_sha256": "080f7ce45af4d58068fcd47521506a4713abae21669820ac73ee89883595106f",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000069_jpg.rf.67345b37ace85805ecff343785ce6179.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Strongly occluded vessel material/identity uncertain.",
+    "image_sha256": "8a0f9bf78581cd940ecb55896f4b950b887d612a726e4cd90c207f073de2bf10",
+    "input_rows_sha256": "553e3eb16f1be806765ca84614b9034d1799214c7636e3ef94ad074adb661915",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000082_JPG.rf.3a23b667c9bbb6a3f1cbe22d29df40d1.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "At least one additional clear plastic bottle at lower right is omitted; occluded bottle instances and boundaries need adjudication.",
+    "image_sha256": "6de2fa45d5a63efe98d99a54b761443aab8b9cebfb3a4143cac3086295cf9c06",
+    "input_rows_sha256": "f8b55828f8cbbb00c8518d1829742fc39731f6365f3ec6d2f5423035a22fe4d9",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000085_JPG.rf.d198d9e8601130b6c9ad5c066b598dd3.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Several additional small wrapper fragments may be omitted; top-edge tiny labeled bottle objects need detailed verification.",
+    "image_sha256": "230d465ef695b07e63c7dbf1c2d02e04b05914d4b0d6405495b3ac1fc362fa00",
+    "input_rows_sha256": "ef3d56d80d42aefd008006bbf8a90cc1d453e3328277b0e3d6d2cbd8bc8d6792",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__000099_JPG.rf.2bafa08b9727f0b4046e7cd9bf9cbb01.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Labeled shoreline containers include uncertain glass/plastic bottle material; metal can excluded.",
+    "image_sha256": "96f9552d267fd75dd309700044637a5069f49bd556cd70d1f0b7231b8e64ad47",
+    "input_rows_sha256": "7f144daa565eff8245cbb03e5f1833c86c8014de9c436d503474455e2cba191a",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__IMG_4963_JPG.rf.849f57ec37fe47311355bf15c581fbf8.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Floating tan container appears bottle-shaped but material and beverage use uncertain.",
+    "image_sha256": "35d367f9ee7e9cb30511ce7c29d2b748ee03cbd51b2aa523142224ef3819ee75",
+    "input_rows_sha256": "4151c806abea71f5d9b0e4b00173a1a170494f619e46f62776f09a7a35cec5fe",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__train__IMG_5053_JPG.rf.8964f94d6aa1f48d8ed3d624b0bb7331.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.98141340 0.21124387 0.03717320 0.17310049"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "3107c4ed3983f51a8c4ac19c7c2a7984bbb954e831156ade2e8ab79bf3e66703",
+    "input_rows_sha256": "ce2de4af473655578e133bd6d3df81a76ea5ca0b3cb9b512174d1c55690ab248",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000012_jpg.rf.75c5fdec27471daa465f28785b93ecc1.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.47549020 0.43367034 0.16339869 0.09895833"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "3fa3f4effb34c0098528131bb0ad9585ca768fb02d22102b1cd95c003b36674a",
+    "input_rows_sha256": "75f1f8402938a6d49e4b691f27e28f1c486141fc2f7833564b5fe9cd4d7b6c9a",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "1 0.50183824 0.50291054 0.21446078 0.14859069"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "ecdfaff72f908dac322e8e2766d1187c33a967527be04d4637961933b8ee6821",
+    "input_rows_sha256": "083650071251c8eb03f4842eb376934fe6665ed6ef05668e536c20e8fe2f96fc",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__000115_JPG.rf.ed87a8b811064104ead06d7b00f30d3c.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "2 0.21752451 0.28002451 0.21384804 0.13521242"
+    ],
+    "reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+    "image_sha256": "cafd213431543e575b60a4ac46089565c68e231031b874fa847c023e6efdc961",
+    "input_rows_sha256": "92c734abb9cb2aab375367225780b872669d10d429b3663314b5f0932fbad933",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "trash_detection__valid__IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.jpg",
+    "status": "corrected",
+    "rows": [
+      "1 0.42749183 0.48728554 0.43096405 0.22334559",
+      "1 0.73281250 0.57109375 0.20937500 0.10156250"
+    ],
+    "reason": "Added omitted detached printed flexible food-package section at right of large crisp bag.",
+    "image_sha256": "628ab3998f122146cf21845c22adcd0c980baf09ac0339e00fcb93c8f8452e87",
+    "input_rows_sha256": "5fe1ef82034a4e65d66d0169da712dc4a68e3c861c7fcc1039267de563072bc0",
+    "reviewer": "native review 2026-10-14"
+  },
+  {
+    "name": "dry_wet_waste__train__plastic458_jpg.rf.c1518f1697317d3eb896fc6084b19af5.jpg",
+    "status": "corrected",
+    "reason": "Native full image inspected: one clear blue-capped plastic drinking-water bottle. Replace oversized source bounds spanning background and cast shadow with visible cap/body extents x116..352,y126..260 in 512x384 image. No plate or food wrapper.",
+    "image_sha256": "1bac9d75550551aa591d5c7cb136283cea796c2052cd42a65f664822698d0933",
+    "input_rows_sha256": "a71cb6e47b6243d908bba37844d974b640a598babe70133e5c69b2c448e1e7db",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "2 0.457031250 0.502604167 0.460937500 0.348958333"
+    ]
+  },
+  {
+    "name": "school_lunch__010093001_jpg.rf.f993399ce190d7c228b2f14a12b043af.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "601f9a8479bfedefbed2756da3a0630bde43b4541665619f73ff53863da428e2",
+    "input_rows_sha256": "676092445e18861d6136fe7f6f47ac41eed336e83218ac8291c798c8fdce2736",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.466517857 0.291666667 0.584821429 0.464285714",
+      "1 0.309151786 0.750000000 0.497767857 0.500000000"
+    ]
+  },
+  {
+    "name": "school_lunch__010112000_jpg.rf.68580b7a74a0b4d3058804fdb0031e34.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "bc1cf29cb0d24dabb9a92610754fdc6a542be41ab50958223c4214fad3a1620b",
+    "input_rows_sha256": "b5430984dff637aa8ce427fe9199fc06ea00f422470e6159319e60f47838b940",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.456473214 0.267857143 0.569196429 0.535714286",
+      "1 0.324776786 0.761904762 0.453125000 0.476190476"
+    ]
+  },
+  {
+    "name": "school_lunch__010136000_jpg.rf.8393d70ce4e2e817f57324fcde13c99c.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "8428afb23b33e1cb7d627fc1b5e45ecf7d7b5020123ef25c2795f2ea926b9788",
+    "input_rows_sha256": "2db4905ceac8ecf18e6547b1ea921cee7c65733d59b59b0d7cf48f552bbae0b1",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.457589286 0.294642857 0.589285714 0.500000000",
+      "1 0.252232143 0.754464286 0.504464286 0.491071429"
+    ]
+  },
+  {
+    "name": "school_lunch__010157000_jpg.rf.de455afea45a6f3bac04643816174dc3.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "a041f7a8f5bead80c0aa7849486c2bd106f3dd1251ba9ccf4f7387aa25f77032",
+    "input_rows_sha256": "30c511d3202a75bbbc0c801798a1ea61e3768793577eff8c6b8e073e1bf80384",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.489955357 0.311011905 0.609375000 0.455357143",
+      "1 0.295758929 0.712797619 0.591517857 0.574404762"
+    ]
+  },
+  {
+    "name": "school_lunch__010167001_jpg.rf.a1db6df4ccadb8b1d51210131bcaf101.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "5150c6f25fe9ca0b9f8f4fa97708ab2dd45749dd6420ce87ec69be14a0247db4",
+    "input_rows_sha256": "ca3d8d19ff730bac6d5f7d04b885e98e018f3a9072b0ec5642b3dd118b679408",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.445312500 0.297619048 0.595982143 0.565476190",
+      "1 0.294642857 0.782738095 0.589285714 0.434523810"
+    ]
+  },
+  {
+    "name": "school_lunch__010187001_jpg.rf.644dc905fe37491355d06c83f74cdb04.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "963c4e3904d24f29f989cce70fbc610e010883e9f03bce0bc7e7fff9943aebde",
+    "input_rows_sha256": "323a0f07ac14e24e77af385da28b2def023a11eab9975d6558d2d7616a885a18",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.418526786 0.290178571 0.564732143 0.550595238",
+      "1 0.272321429 0.779761905 0.477678571 0.440476190"
+    ]
+  },
+  {
+    "name": "school_lunch__010261000_jpg.rf.584af80ad5af6e4fbe3b094b229712f6.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "14e98c79817ce397ab9c0eacd0cc36441a8544d73c2ce2ed321813171f177228",
+    "input_rows_sha256": "61f387d6b30a16f79ea7464b71cee2bb8dc36081c2dd42fe541e6e9ea37d630f",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.447544643 0.383928571 0.515625000 0.404761905",
+      "1 0.344866071 0.769345238 0.453125000 0.461309524"
+    ]
+  },
+  {
+    "name": "school_lunch__010375000_jpg.rf.1adf80370e3d33759c50d7d3ca42b104.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "b149aa8b02dbf1ae9abf35dd04e561a5cb9a485e77e173c8be597b37cc525584",
+    "input_rows_sha256": "6a6cbcbee96e9f3cbffe16e70ca683d2a4634a80f4421116c8d546397f2b18f5",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.690848214 0.398809524 0.618303571 0.625000000"
+    ]
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-14-51_000_mov-0005_jpg.rf.08773fe50093971bbedd41b7cc76f6de.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "5954192a838884074bae9f2dac473579a1b84e525b6095cbb0da55acf41ffc1a",
+    "input_rows_sha256": "73d7ce312d85da51da26c5dbe66d8fb40033dea2488082fa5dc3bc03c8b95db1",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-17-53_000_mov-0000_jpg.rf.e65b087df226e7cac7cbc95666c5fcc3.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "1e8c03a858a0b99e59b01cbc6913950e485ae3fd72a026df1523d9d6fd4e511c",
+    "input_rows_sha256": "4370c77bb9632ed3d4de3f59b86940de63f36d5f12bde719ed65d3914c0ca0d2",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-17-53_000_mov-0009_jpg.rf.b4ca8919b6bf91d20d626d423802a5d2.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "767fafc1d2bb2f03064e2133d64fa0f48bc8d585683c6ab3ae355bf63d6410ab",
+    "input_rows_sha256": "7585630a5e6bbf52f4313d9671b747b2f7017a67d72ce76ea5e387b26d31393c",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-18-11_000_mov-0005_jpg.rf.5df768ac78bb4e4a612aab0a276fe06c.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "e4ba27a3a52c3c74f1feea05b39ef7782b66631711343988ed7890a85d325402",
+    "input_rows_sha256": "f3aa563c084f49c8ad6c317d2f0f361d5099bfd228a0aa6b9c281cc40f1be26f",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-20-26_000_mov-0004_jpg.rf.d2ac9a4bacb976992ee2cd6db8900fb6.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "972972ba1cf7831798d14be7c7db7a84ff8283dfc33880e9bf2ca411cbdcdbd8",
+    "input_rows_sha256": "9f36b9a5db449d9046aa4cd99a5bef7782e05c283885b6c087a29189c7fb6fea",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-23-22_000_mov-0004_jpg.rf.fdea1a2f69692dcc0131d65fa04d5e8a.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "705febfd797e45c8040e09b131177badc98d8f64d2c2eff5a9f2ee47927784d7",
+    "input_rows_sha256": "aad2acf5543c6b2ce1b08edec5f03cf195ead5cc384f544b8c9ceb2b6575d782",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-23-37_000_mov-0005_jpg.rf.0c2ea023050c291cd911ab0725cc3d62.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "8903fa642eeba57afe94edf963520e237dd20248e2dcb051040bcac76f5e1d34",
+    "input_rows_sha256": "a49a4ba50becbe09a707646e0df2eb36416bc9ba1137e7e50e983383a70bfa77",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-23-53_000_mov-0003_jpg.rf.b71a34c34ed5fb0f03e16ab0b4b4a887.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "602abe05210c1834e587fe698282f8e2146d1b1d0e1f2839b30851d94c8cb0ef",
+    "input_rows_sha256": "34259a71d98f3d0890a8f38291a15af79b680a2f02013d9e8c241bccbf05c479",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__2024-02-05_12-24-19_000_mov-0004_jpg.rf.28a19ef831e15c851bb8142f093cbfc4.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "d56cc882645cc770ab3a2d4a1cf19f7d40dc477eed4252b5934ac305c99fa723",
+    "input_rows_sha256": "3e4955068133909974c68a24dcb007680b52ba087241433f980a879c470fc1be",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0037_jpg.rf.a49d06c7d798bb6503b26d18ed86de76.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "9dd6c902da842ee83a748ba8db147a1634dcc9e27f2ea92b66cca7309f360512",
+    "input_rows_sha256": "a5e9d36e75ae638d79c62a25d5986af39c0ed0205847a28e392fd5faee071f5a",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0043_jpg.rf.b981bbfe532483475523c117a0967e37.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "2a140574877ef512193e4a9734ec43e75fea2c1c788dab976b58bf4a69bce319",
+    "input_rows_sha256": "ac8e44ddc3546f4b647793497971e3af5cde1f34fa52dd163409caf54f30ad91",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0051_jpg.rf.feeda2c00cbb2ec6df6e91752ef58e54.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "fa2c3516897c016c3e00ddb2417cc12e4d0c8784a8e493a388e621c57a3d9783",
+    "input_rows_sha256": "e2fcb47574bdab7a4e6b9bcf0ebc3c9e54c8bd4ae8f100546a2537af4efc7374",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0069_jpg.rf.5fe434e305e4ee052424e44900cff2dd.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "624c0e8240702bb53cfaaab2ee143c9ab1f123aab275d597bc7c1cffa08dee4f",
+    "input_rows_sha256": "83bf325184b75e0405e10a9425c6375d74674b5a5805ba28f329e8ead565deed",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0084_jpg.rf.3182365924882129238558edb8961765.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "670971f302244a546dca6a1c0a70d8ab3d1b1605fe7ba4ba2b7f28183240360b",
+    "input_rows_sha256": "0d19af55fbd47ce16f73a36375c2adcc7044f4dc04bc1b4ff56c695c8821eabe",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0090_jpg.rf.3748e5874b1c1bbbbc0d892cc13d8e04.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "3fa8c64bba7dc202fb3f4df300237fa5f172f45e3c95b22cd5d313c82679cc3d",
+    "input_rows_sha256": "39ceb6dfd3248ae1963d36c1523f2a5b03a2a964184237b874d672b153b05649",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0097_jpg.rf.8b301ff5cd2a8d88501e56f632196a47.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "bc90d09eb15a133bc9da1a6a5bfd9dbd7898a633a4122d078a3096370412d982",
+    "input_rows_sha256": "bf83de24cf9235b3d020789459f5daf6f83eb6674dc23e5f4f227648f67a378d",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0155_jpg.rf.af5ac5231a6fd26efbed0733279aa7e9.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "f068843ec8169c8f7351d5d989072c534d297dea3d42b00dc52d04d2441ec625",
+    "input_rows_sha256": "50995a17942f90bc4015c5b6e32168b2413207bc5dd867ce466f21823fe59222",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0160_jpg.rf.49494f294044aa48c7ab2fe25fba18b1.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "6b1fb65375ac1e6a7a0b72c8485d070737c149b2aecee626e8e90f9c2193777e",
+    "input_rows_sha256": "50c662890ea1b3088fedcae19a2e107f039d2dda437c037c9b96d5da7e1bd10f",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0162_jpg.rf.87910538d502156d1174671188755a96.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "012100393f8de3b40ad2973a854ba79b2bb4c067bd57cb3bc954c907680d3238",
+    "input_rows_sha256": "1c2e373e5aeb15cb99f6247b09ce2ee2dfa6ce50b09d89da191260daf3179c59",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0186_jpg.rf.6e6aee3c3f628cbbaadeb4078ddbb08c.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "b1a996cac65b2b8cd98991d2ad27ec388abc6d654ab450df01d82382dc4fbd1e",
+    "input_rows_sha256": "14355ac940b0044dab75d96bcda4a9ee825b5bb1614626800ab4cb70dde0defe",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0187_jpg.rf.2eef976fa0a0234cf7ffcb4273fc5161.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "e04d395393e1e30332d46d100106d013359ae62b5c0eceaf4b33b4273b7e1a5f",
+    "input_rows_sha256": "6d162500f066a6e515a3480a2bf43860c05e915f9322029c41938e2023981e4c",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__valid__Untitled-video-Made-with-Clipchamp_mp4-0075_jpg.rf.474bcce7931772fc3a0f878d546f5a11.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "b6ed65e1b15f32a9117d1d66273e2daf499f9e7473b3e0c8ee0879f76bc87c60",
+    "input_rows_sha256": "9ef5a8057376581c2382b9d2393d89a424e05dc7c065cce44611a7fbb0a09b42",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__valid__Untitled-video-Made-with-Clipchamp_mp4-0086_jpg.rf.1ff45933f3687bbf200645bf1c13f7a0.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "49e4388637f92141432586368e99f5a63304de4f53c620c2ca242e8d00af4544",
+    "input_rows_sha256": "1b7284dd00a04205f7258b326c88ade7779a113a66a2707ada75da460a4a920e",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__valid__Untitled-video-Made-with-Clipchamp_mp4-0094_jpg.rf.462e05383789e49b2602ddee3929d530.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "0a994a210f8a27af3266fdbac04919af0753b26b1857b12432694f5e28b39a7d",
+    "input_rows_sha256": "3c9de7498752e4b5d397fd8e3abf9484bdfbcbd4cd2e98c33754e9fc6eb5afcd",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "waste_detection_v3__valid__Untitled-video-Made-with-Clipchamp_mp4-0176_jpg.rf.2ad57c45340250e2c6f8e257f6307561.jpg",
+    "status": "unresolved",
+    "reason": "Native image inspected. Held object class is identifiable, but severe motion blur/clipping prevents a confident complete-object bounding-box sign-off; source extents retained only for adjudication.",
+    "image_sha256": "28bd830e6dc9b558d9d923de132311a4b086d28229c78d1764a126ede5323ae6",
+    "input_rows_sha256": "ea93d73679588764c3d9c6e80e2a8fb1198ed3d0f87289013453d6f2965fc821",
+    "reviewer": "Codex native three-class review 2026-10-15"
+  },
+  {
+    "name": "school_lunch__010177000_jpg.rf.7b8442cb4d7f17bb2cfe04d7b5b7de40.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "8bd83ac77e9d72e517b69b04931e882a2611d0de66499668f45b49dc6265cfe3",
+    "input_rows_sha256": "3a16c5ecd553a0d6b58232d3a39ab39d67504ab17cdc41db2f1a5bc898cb8986",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.466517857 0.290178571 0.598214286 0.526785714",
+      "1 0.284598214 0.755952381 0.569196429 0.488095238"
+    ]
+  },
+  {
+    "name": "school_lunch__010199000_jpg.rf.f27ba0e74fa976f2d4253300eb31bc8e.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "fbd4ebcca0ad785ad7f2b03f50b26d866919a1753a7bc35c931d387919c68460",
+    "input_rows_sha256": "c58dc6025cadea8fcf6c68c49fbf9ee77ed729a5f7fa155b4459b385f4eabb9e",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.431919643 0.327380952 0.511160714 0.500000000",
+      "1 0.309151786 0.778273810 0.435267857 0.443452381"
+    ]
+  },
+  {
+    "name": "school_lunch__010243000_jpg.rf.0e4d466a0001b4a4438e973cfa1d76d8.jpg",
+    "status": "corrected",
+    "reason": "Native whole-image review: preserve divided plate and clear bread wrapper. Add separate printed almond/bean snack food pouch at upper right, previously missing. Soup bowl/carton excluded; no bottle visible.",
+    "image_sha256": "e38631658bc5dc1f2d6f9feb3d252d7987ea8088c2b9ac3f8eb21de346918c98",
+    "input_rows_sha256": "bc9cffadc3075bcc7e76162c74b4d3b9b6c61a84f494d8d2faa16f6099e58137",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.469866071 0.284226190 0.515625000 0.383928571",
+      "1 0.275669643 0.723214286 0.551339286 0.553571429",
+      "1 0.802455357 0.385416667 0.185267857 0.282738095"
+    ]
+  },
+  {
+    "name": "school_lunch__010261001_jpg.rf.b4167ca47daa172fdb53cec73400ae6a.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "cd68436ef495352c8eec30ec6974a6af59262c7b6a75bbfec084cd509f3ff421",
+    "input_rows_sha256": "efdafbf2a83322efec5356efaed8cff1bfda300bfbd09b707dd6bc297cbfeca2",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.419642857 0.309523810 0.544642857 0.380952381",
+      "1 0.334821429 0.752976190 0.486607143 0.494047619"
+    ]
+  },
+  {
+    "name": "school_lunch__010373000_jpg.rf.220ca0b46c113475f47be65b397d0058.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "60d36695669e4c64b9192c5bf72e36dd0f64a32d2a299f552b4332e64fa0b264",
+    "input_rows_sha256": "0c9d021f2a8430e666628e3ad4db65d6fe0d11d175e243a423bffa00872bde6d",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.487723214 0.242559524 0.560267857 0.485119048",
+      "1 0.305803571 0.694940476 0.535714286 0.610119048"
+    ]
+  },
+  {
+    "name": "school_lunch__010375001_jpg.rf.faac20846bf8f8d26b97151ffac97ebc.jpg",
+    "status": "verified_unchanged",
+    "reason": "Native whole image and current plate/bread-package extents inspected. Divided eating plate retained; clear bread food wrapper retained when present. Soup/rice bowls, tray, carton and rigid yogurt cup are outside these three classes. No plastic beverage bottle visible.",
+    "image_sha256": "494c466b824167f401eced535538c9e4538200f6f46d15d1f38a339621003b2b",
+    "input_rows_sha256": "b971ed9dbe0e5594d30f9ac56fcf73dc785fde74b7a8cf3e1ba8670630bb7ee9",
+    "reviewer": "Codex native three-class review 2026-10-15",
+    "rows": [
+      "0 0.690848214 0.549107143 0.618303571 0.741071429"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000026676.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.472851562 0.537177986 0.669859375 0.784379391",
+      "0 0.117812500 0.733805621 0.235625000 0.532388759"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2395ef91051c9b46ef5badc7e7abf1f2b591ef8912a5185fc4bc7055ead12a09",
+    "input_rows_sha256": "de51e7b478774abe59dd6baf2c97059ca72952a255505f6fb108aef752e68b10",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000049128.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Buffet foreground contains overlapping paper-plate rims/possible adjacent stacks near frame edge; cannot confidently assign every box to physical stack without ambiguous grouping.",
+    "image_sha256": "4ba001ff4f80a211cc2b740dd9e6699838201930e2be51476829370cd5581fd8",
+    "input_rows_sha256": "5cb40135913dce820ed9528f9d01ef81e2e30f5686735d0b43641962cb691ed0",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000072866.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.184988207 0.880320313 0.338136793 0.148828125",
+      "2 0.020047170 0.617968750 0.040094340 0.157812500",
+      "2 0.062500000 0.611718750 0.054245283 0.160937500",
+      "2 0.108490566 0.617968750 0.066037736 0.148437500"
+    ],
+    "reason": "Three overlapping boxes describe one nested paper-plate stack in front of cake; consolidated to union enclosing full stack.",
+    "image_sha256": "c81551ce82c1cab28c3fd42d37cd0914109d8fa0c27d62dcbe0924529b94d566",
+    "input_rows_sha256": "7574f30c923ba64d89f17a4dcf828b41b14eb33107e49c7621a71daf7a6277de",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000125597.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.736578125 0.466564706 0.354781250 0.311200000",
+      "0 0.392500000 0.627082353 0.491468750 0.376847059"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "68288f26327bfd7c9e5ad322a3aac270b120642e246b31c59c37761242a5c47a",
+    "input_rows_sha256": "c9c9c089956803d014f4cd132b6322da5fafc80afc083ecce2a39e5f535f1ce4",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000167520.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.108421875 0.946642259 0.197687500 0.089769874",
+      "0 0.123304687 0.857426778 0.231140625 0.092970711",
+      "0 0.315031250 0.977405858 0.241312500 0.041338912"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "4e2beca9bc47b68f92806730334da0726a298f1e13d15703b4b2ca9fabcc8cb3",
+    "input_rows_sha256": "068d5774995c475ea394f01feaf4b80a8d976de033766cb80c38e5356d82219b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000202767.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.376906250 0.718635417 0.127000000 0.052312500",
+      "0 0.683398437 0.392041667 0.064046875 0.013333333",
+      "0 0.407273437 0.785343750 0.170390625 0.137770833"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "44713f48e962f3ecf6fb916e84c12a697ce15e737b55424773428435a1715302",
+    "input_rows_sha256": "866540e3dee57cc710fcd2fea5a74bd70d8559b6878e0add27eef60a08b736a3",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000226988.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Three offset paper plates beneath pizza overlap strongly, but whether lower plate is part of a physical support stack or separate plate cannot be confidently determined.",
+    "image_sha256": "e54d029fe6655aab21fb399ac0a307cec821fbc9fe5beea9c6f2bcdf7ca8883c",
+    "input_rows_sha256": "09c458644ff4775188833b448a859aa80f563c93ed1283999cb0a76b690460d8",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000229233.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.384460937 0.670833333 0.212109375 0.076541667",
+      "0 0.139710937 0.660187500 0.219046875 0.083875001",
+      "2 0.315000000 0.501000000 0.060000000 0.290000000"
+    ],
+    "reason": "Two left boxes describe one nested plate stack; consolidated full stack union. Separate right eating plate and accepted beverage bottle preserved.",
+    "image_sha256": "c05e87e67e57e04740d8e725dca8b547ce88c608d4b5d0d3af804620ad4d59c9",
+    "input_rows_sha256": "e7fed07810c204267dd449c6830c59880e77fb1f3ca526eeeb1148f8022ff42b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000236626.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.701250000 0.898091335 0.384312500 0.203817331",
+      "0 0.882054688 0.479028103 0.070421875 0.025644028",
+      "0 0.966187500 0.924203747 0.067625000 0.151592506"
+    ],
+    "reason": "Two overlapping foreground cake-plate boxes describe the same plate; consolidated union. Separate right-edge and background plates preserved.",
+    "image_sha256": "43d398aa2cb7f5193b502929d7200a6c995d67ffa4ca1948aadb31599bb7a8ac",
+    "input_rows_sha256": "abd2d193f86c2f5c50e41d5f13df3d142730c3da0cc7a7c33c2ccc6d573736ad",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000241408.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.817476562 0.560104167 0.302828125 0.102208333",
+      "0 0.571890625 0.713552083 0.623312500 0.219395833",
+      "0 0.264507812 0.596947917 0.378640625 0.118520833"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "04040107bae7675a2ce9ed128521a01a09a06c52a5de7e7b3822803790ce08cc",
+    "input_rows_sha256": "e92f0062b89f245b5fa81236a3a47e4af7f11c53eb4e437d58f58d8b81908e3e",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000252629.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.247460937 0.132529274 0.237484375 0.116299766",
+      "0 0.675671875 0.191990632 0.236281250 0.200843091",
+      "0 0.510554687 0.596135831 0.611640625 0.691896956"
+    ],
+    "reason": "Two upper-left pink plate boxes describe one plate/stack behind cake; consolidated union. Other pink plates preserved.",
+    "image_sha256": "4f549a2ea14f73bd82f4be6279caff64c262223cd2131b819e2f2aa61c44e62f",
+    "input_rows_sha256": "1dc33859b8fb31230eec073627053ba8527426876336ebc828d396c332b2211c",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000309539.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.493937500 0.579508368 0.804531250 0.840983264",
+      "0 0.166992188 0.111506276 0.333984375 0.223012552"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "f85d29cca1008481afb3dbe8b19c8509bdded534aed7597ef361e04aaade6dd7",
+    "input_rows_sha256": "90baf5cb980f34503d9da704bda4989a2bd31a7575fa52f2363b5e7b51f2ccc1",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000326265.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.350690000 0.809320000 0.497340000 0.381360000",
+      "0 0.498280000 0.438986667 0.316120000 0.433013333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "b46d6d582b105a7e088869264129f4724f1f7041a7c4ca44e6f2f675ee6a1e37",
+    "input_rows_sha256": "c7e70f74c1bd19d9a7edebd0b804c68251df565eed67529b043544d8d7bc7ba8",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000363727.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.431148437 0.360811765 0.287265625 0.313482353",
+      "0 0.411750000 0.754894118 0.362062500 0.490211765",
+      "0 0.476898438 0.097129412 0.235671875 0.188941176",
+      "0 0.664539062 0.492800000 0.330796875 0.397035294",
+      "2 0.721093750 0.107058824 0.104687500 0.214117647"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "123b13035515f0cda4b813d70a7aa7f5e594d92f9d7f619b845906ef26e89929",
+    "input_rows_sha256": "8e98f6457a4988c365f8030716977869b3de79a9cb1b3e0c031b24f0eb1f3238",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000386009.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.475914062 0.718782201 0.827484375 0.322014052",
+      "0 0.096046875 0.923196721 0.186187500 0.149859485"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ddcd06e2ec9a2d2a04288716699efa7a559b5a6c907cdfa86f076d8e685cf8c2",
+    "input_rows_sha256": "327ed64c93ba6a06927071027c1465764eb99c61bd97779ac2b980d6eb9f0c48",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000409708.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.674078125 0.806896956 0.163375000 0.055433255",
+      "0 0.657859375 0.871709602 0.185531250 0.084637002"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2e28dd8fb53424fb5523ce50489266cd1d95928e77db83d3a5a7b17810e1ecb9",
+    "input_rows_sha256": "0ef3f4c7d3c66b12e9053d41b638d12e7ba67a31a8d7c6f4b25cd3c0d5f16dd0",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000451800.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.756578125 0.712895833 0.486843750 0.476791667",
+      "0 0.336304687 0.622406250 0.504046875 0.550729167",
+      "2 0.528906250 0.139583333 0.167187500 0.279166667"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "c9c23635056b153cdb9f70d5c486b9547f636d402f6323fede7e485c4770960f",
+    "input_rows_sha256": "e9aa43219d01c7daac960d03f182982fc342e12f0a9030d02e4f6f72c26fb013",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000518495.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.289210937 0.633895833 0.578421875 0.732208333",
+      "0 0.729687500 0.640625000 0.365625000 0.493750000"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "255596f4a537758cb69788ad5f19391345494d0249b23987e64bf26ada3b5bfd",
+    "input_rows_sha256": "851feae8f7633453f0736db573176cdded79330b90f2838ed3a795810d313ddd",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000530259.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.810335937 0.500479167 0.376796875 0.578166667",
+      "0 0.339335937 0.577875000 0.671421875 0.843458333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ad35a3ad6c16d6d49af08db886ad8c824740212b3fb9bc2ec98aa80d90cc8421",
+    "input_rows_sha256": "46640209c6ebbdccbf27cac9612a933c68f8a5962e38e6cd74ccbe82cadf9eeb",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000538368.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.382747642 0.045000000 0.289316038 0.090000000",
+      "0 0.514882075 0.658186620 0.446462264 0.591302817",
+      "0 0.182452830 0.277676056 0.363349057 0.423380282",
+      "0 0.789091981 0.158433099 0.292806604 0.312147887"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "d06424c046b197dc61f4d5bd86eb23402538f6182ed462d2e2c3d4b36542e6a7",
+    "input_rows_sha256": "87a0e5c063da943b1d3c04d713aee9056ef36a91774876f9482cae3eb7d26ca8",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000567079.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Two plates supporting the same pizza are held at different angles; uncertain whether they form one physical stack or remain separate plates.",
+    "image_sha256": "c9603ff1d5b238e139cecd5162b06cf5d34b25a65b56c035408c665e92fb37f2",
+    "input_rows_sha256": "38c8eacada9948c5e9c6e303f545f1b2fec2739644556a58e5207b018815688b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000341271.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.570580065 0.822132353 0.196225490 0.279428105",
+      "0 0.363799020 0.825498366 0.241781046 0.272990196",
+      "2 0.880718954 0.331699346 0.166666667 0.529411765"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "0cb9be1a4c2b5880b6f75db9afa3952f2ab0d48646e3f12d9d86fdcf81ec0d6d",
+    "input_rows_sha256": "ba83c75fadb8996166c404b908157706d55720e7e7c5006435bfd5b093e4473b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000345361.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.049770000 0.569692737 0.099540000 0.042737430",
+      "0 0.114860000 0.606466480 0.104200000 0.042262570",
+      "0 0.255580000 0.674245810 0.149920000 0.066424581",
+      "0 0.334330000 0.744385475 0.139580000 0.076368715"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2444d5e254c43f64175fb611d93fc19de85ab9eb389148e92687cd445c63095e",
+    "input_rows_sha256": "6d8dca645c5e19410a56b68a2d7071cf176508b7ea4ac88223491cdf0a8d9952",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000478407.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.479500000 0.715893333 0.238080000 0.067200000",
+      "0 0.288360000 0.779786667 0.317880000 0.110453333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "64256c7b83d59a30b5776b40017fb09bda83c809124de8bbf2c567212b21dd42",
+    "input_rows_sha256": "18b546909fb074f3de310d3ac5ea5503dbaa859588a20adac7ab811efd4c89a5",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000072646.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.359187500 0.515398126 0.091250000 0.076697892",
+      "0 0.404515625 0.844742389 0.338968750 0.132060890",
+      "0 0.320671875 0.464964871 0.145281250 0.068618267"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "f7a1e36e3e78c917594a117bcccffd834a5cd633fdd754ddc3f61cdfb3cb12a7",
+    "input_rows_sha256": "ff3cd7f15593be0bbdafb2ba5034a02cacfd3b4509f8156a847e3113b5a22c2a",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000107770.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.928990610 0.555437500 0.142018779 0.267250000",
+      "0 0.545070423 0.737609375 0.909859155 0.442093750"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ba76a1c7e9e4cdb8e83d8e1423dbecf4f8ee2920ca61278d0331d4c2d7d69892",
+    "input_rows_sha256": "4b4885db57b228980d3ce6c99f7f72468bea4386cf5128cc68c141009fad27b9",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000147983.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.415835937 0.151010417 0.368859375 0.235812500",
+      "0 0.710140625 0.586947917 0.579718750 0.665812500"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "205d922de82b559cd5556faa799ea53d5eab2a37addf07eff63a3ea8755acd3a",
+    "input_rows_sha256": "86eec2347dda77b601844ee02ce042ef80372a384d4fc2635f211860930eb9b6",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000249839.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.760234375 0.821020833 0.358375000 0.164208333",
+      "0 0.594328125 0.695052083 0.222343750 0.127812500"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "e71b4b9ecd0ca98e8af74fd4a8bcba69690d4ccb5b67d95e43b6b77882d47f62",
+    "input_rows_sha256": "ef91ea4df78bdc8bd23d4f00d9ec332a362acf0410895dc49391a07ce631f2da",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000384981.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.465734375 0.681427083 0.162937500 0.225395833"
+    ],
+    "reason": "Two foreground orange/green plate boxes describe one nested multicolor stack; consolidated full-stack union.",
+    "image_sha256": "092a23b9e9aac59d0b899b670db417f5076ddffddd08a86d10d5ca211722c14c",
+    "input_rows_sha256": "30edd7f77074856c3f9fccffde69f4ba12945dbd884ed6f145447484b7eb986a",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000471842.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.535398438 0.644240654 0.897921875 0.419228972",
+      "0 0.856046875 0.361074766 0.287906250 0.283925234"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2786a541e950b11b57aa0c94cc8237add3e91c04de9ef8447a0eba08179abb4e",
+    "input_rows_sha256": "df0fe5b6604b732a6732299c5007279bcb87c4ee1240648dada3bb02db4c76b6",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000515662.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.813078125 0.731635417 0.336281250 0.445895833",
+      "0 0.813640625 0.379229167 0.325968750 0.285125000"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "efad1d43e0d5e7863799d09069bf46ca646168f3a8edb2def3d26c1be1cd76c1",
+    "input_rows_sha256": "da9e7e1a76a6820fc40018ff83a801cf3ddc01a2bb0777052ad6b4913d046b0d",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000523370.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.568153595 0.686985294 0.815424837 0.626029412",
+      "0 0.548480392 0.241388889 0.565816993 0.324346405"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ad457c68fd17431856e9c859d5f7f41a53c128bdd8dda00b555af33c5775012f",
+    "input_rows_sha256": "038c464bceed56de4238e431c67a6b303ad77d08bf3ab53c798f3f46f20fefe6",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000529929.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.740523438 0.451281250 0.518953125 0.609229167",
+      "0 0.304531250 0.648875000 0.580250000 0.702250000"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "66260b92dab0d4004ac39cb602f27ec2201cf64019363bfb557a08b6f6026d73",
+    "input_rows_sha256": "0c3444225252644950d2fbee8667deb2c667d0e97f1bc6752a0d82b43a0fba0a",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000569001.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.621320312 0.761843750 0.405359375 0.476312500",
+      "0 0.256664062 0.698125000 0.374390625 0.490916667",
+      "0 0.477281250 0.353687500 0.365500000 0.412833333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "59080bb87c5a1229a9830c79372fc694755e54128c382df4d6563159fd4f19b6",
+    "input_rows_sha256": "3cd88f9cde558b68e329cfcab67ee04b57411425e8f72f2a22002c659274eb3e",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000145680.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.706789216 0.813259804 0.581715686 0.373480392",
+      "0 0.336004902 0.552156863 0.672009804 0.318921569"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "aaf1bfe58736fb0c10dced9e8c9b09227773597167b81961b6f5efe38eb6c4b9",
+    "input_rows_sha256": "e1b29cc9bd70bc9bdc02be64c585abe3dda61d1aa32a12f2bbf98e9d0245c811",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  }
+]

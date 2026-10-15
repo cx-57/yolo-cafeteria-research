@@ -1,0 +1,12 @@
+{
+  "epoch": 1,
+  "per_class_AP50": {
+    "plate": 0.0894531024600807,
+    "wrapper": 0.0027154661925489236,
+    "bottle": 0.008338156504337276
+  },
+  "minimum_AP50": 0.0027154661925489236,
+  "target_AP50": 0.9,
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/expanded90-smoke1/train/weights/best_min_ap50.pt",
+  "weights_sha256": "05bfbc371488c096c015231f65a01b965fe98e85404ccd22571cb96f0bd5342a"
+}

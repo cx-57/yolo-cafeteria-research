@@ -1,0 +1,25 @@
+{
+  "training_args": {
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed/data.yaml",
+    "epochs": 1,
+    "batch": 4,
+    "imgsz": 640,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0,
+    "device": "mps",
+    "project": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/expanded90-smoke1",
+    "name": "train",
+    "exist_ok": false,
+    "save": true,
+    "resume": false,
+    "single_cls": false,
+    "classes": null,
+    "val": true,
+    "split": "val",
+    "cfg": null,
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt"
+  },
+  "target_min_ap50": 0.9,
+  "dataset_fingerprint": "ebbdd34f4dacc10be2e400eafaf0c6117ec6b5cbe463de7467ba426338e28208"
+}

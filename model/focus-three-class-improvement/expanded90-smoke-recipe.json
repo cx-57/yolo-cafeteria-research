@@ -1,0 +1,16 @@
+{
+  "target_min_ap50": 0.9,
+  "acceptable_fallback_min_ap50": 0.85,
+  "bottle_policy": "plastic beverage bottles only",
+  "purpose": "One-epoch engineering smoke check; not an accuracy fix.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed/data.yaml",
+    "epochs": 1,
+    "batch": 4,
+    "imgsz": 640,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0
+  }
+}

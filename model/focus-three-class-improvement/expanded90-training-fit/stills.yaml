@@ -1,0 +1,7 @@
+names:
+- plate
+- wrapper
+- bottle
+path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack
+train: /Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/expanded90-training-fit/still-images.txt
+val: images/val

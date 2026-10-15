@@ -1,3 +1,5 @@
+Current instructions: see [EXPANDED_EXPERIMENT.md](EXPANDED_EXPERIMENT.md), which supersedes the older training recipes below.
+
 # Three-class experiment: next run
 
 Target: AP50 >= 0.80 individually for plate, wrapper, and plastic beverage bottles. This is an object-detection metric, not classification accuracy. Target not yet achieved.

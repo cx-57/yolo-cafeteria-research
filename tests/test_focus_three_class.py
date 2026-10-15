@@ -2,15 +2,166 @@ import sys
 import unittest
 import json
 import tempfile
+import hashlib
+from unittest.mock import patch
 from types import SimpleNamespace
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from focus_three_class import target_rows, repair_groups, audit, fingerprint, minimum_class_callback, profile_options
+from focus_three_class import capture_group, apply_manual_reviews, validate_anchors, continuation_checkpoint, continuation_output
 import yaml
 
 
 class FocusTests(unittest.TestCase):
+    def test_continuation_output_is_new_direct_child_of_improvement_root(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            improvement = root / 'model/focus-three-class-improvement'
+            improvement.mkdir(parents=True)
+            source = improvement / 'source'
+            source.mkdir()
+            with patch('focus_three_class.PROJECT_ROOT', root):
+                continuation_output(improvement / 'new-run', source)
+                for output in (source, root / 'model/weights', source / 'nested',
+                               improvement / 'source/../source'):
+                    with self.assertRaises(ValueError):
+                        continuation_output(output, source)
+                linked = improvement / 'linked'
+                linked.symlink_to(improvement / 'missing')
+                with self.assertRaises(ValueError):
+                    continuation_output(linked, source)
+
+    def test_continuation_clone_preserves_source_and_rejects_stripped(self):
+        original = dict(epoch=6, optimizer={'state': {}}, train_args={'epochs': 7, 'time': .15})
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            clone = continuation_checkpoint(original, root, root / 'data', 80)
+            self.assertEqual(original['train_args'], {'epochs': 7, 'time': .15})
+            self.assertEqual(clone['train_args']['epochs'], 80)
+            self.assertIsNone(clone['train_args']['time'])
+            self.assertEqual(clone['train_args']['save_dir'], str(root / 'train'))
+            for change in ({'optimizer': None}, {'epoch': -1}, {'epoch': 79}):
+                with self.assertRaises(ValueError):
+                    continuation_checkpoint({**original, **change}, root, root / 'data', 80)
+
+    def test_continuation_wall_limit_latest_guard_and_inherited_best(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            history, last = root / 'results.csv', root / 'last.pt'
+            history.write_text('epoch\n8\n')
+            last.write_bytes(b'epoch-eight')
+            trainer = SimpleNamespace(epoch=7, csv=history, last=last, stop=False,
+                                      epochs=80, args=SimpleNamespace(time=None),
+                                      validator=SimpleNamespace(metrics=SimpleNamespace(
+                                          nt_per_class=[1, 1, 1], box=SimpleNamespace(
+                                              ap_class_index=[0, 1, 2], ap50=[.8, .8, .8]))))
+            inherited_best = root / 'train/weights/best_min_ap50.pt'
+            inherited_best.parent.mkdir(parents=True)
+            inherited_best.write_bytes(b'better-parent')
+            selection = root / 'minimum_class_selection.json'
+            selection.write_text('{"minimum_AP50": 0.85}')
+            callback = minimum_class_callback(root, [1, 1, 1], .9, initial_score=.85,
+                                               minutes=1, preserve_resume=True)
+            with patch('focus_three_class.time.monotonic', return_value=0):
+                callback.start(trainer)
+            with patch('focus_three_class.time.monotonic', return_value=61):
+                callback(trainer)
+            self.assertTrue(trainer.stop)
+            self.assertEqual(trainer.epochs, 80)
+            self.assertIsNone(trainer.args.time)
+            latest = root / 'train/weights/last_resume.pt'
+            self.assertEqual(latest.read_bytes(), b'epoch-eight')
+            self.assertEqual(inherited_best.read_bytes(), b'better-parent')
+            self.assertEqual(json.loads(selection.read_text())['minimum_AP50'], .85)
+            trainer.epoch = 8
+            last.write_bytes(b'final-stripped')
+            callback(trainer)
+            self.assertEqual(latest.read_bytes(), b'epoch-eight')
+
+    def test_frozen_anchor_rejects_changed_image_with_same_name_and_rows(self):
+        anchor = dict(name='same.jpg', split='val', sha='original', pixels='original-pixels',
+                      rows=['0 0.5 0.5 0.2 0.2'])
+        baseline = dict(records=[anchor])
+        validate_anchors([anchor.copy()], baseline)
+        for field in ('sha', 'pixels', 'rows'):
+            changed = {**anchor, field: [] if field == 'rows' else 'changed'}
+            with self.assertRaisesRegex(ValueError, 'Frozen validation evidence changed'):
+                validate_anchors([changed], baseline)
+
+    def test_stack_policy_allows_only_plate_relabel_on_same_frozen_image(self):
+        plate = '0 0.5 0.5 0.2 0.2'
+        wrapper = '1 0.4 0.4 0.1 0.1'
+        bottle = '2 0.3 0.3 0.1 0.1'
+        anchor = dict(name='anchor.jpg', split='val', sha='same', pixels='same-pixels',
+                      rows=[plate, wrapper, bottle])
+        changed = {**anchor, 'rows': ['0 0.5 0.5 0.4 0.4', wrapper, bottle]}
+        baseline = dict(records=[anchor])
+        with self.assertRaisesRegex(ValueError, 'Frozen validation evidence changed'):
+            validate_anchors([changed], baseline)
+        self.assertEqual(validate_anchors([changed], baseline, allow_plate_relabel=True),
+                         [dict(name='anchor.jpg', original_rows=anchor['rows'], new_rows=changed['rows'])])
+        for rows in ([plate, bottle], [plate, wrapper],
+                     [plate, wrapper, '2 0.6 0.6 0.1 0.1']):
+            with self.assertRaisesRegex(ValueError, 'Frozen validation evidence changed'):
+                validate_anchors([{**anchor, 'rows': rows}], baseline, allow_plate_relabel=True)
+        for key in ('sha', 'pixels'):
+            with self.assertRaisesRegex(ValueError, 'Frozen validation evidence changed'):
+                validate_anchors([{**changed, key: 'different'}], baseline, allow_plate_relabel=True)
+
+    def test_manual_review_hashes_duplicates_and_rows(self):
+        rows = ['0 0.5 0.5 0.2 0.2']
+        record = dict(name='a.jpg', sha='image', rows=rows)
+        review = dict(name='a.jpg', status='verified_unchanged', rows=rows,
+                      image_sha256='image', input_rows_sha256=hashlib.sha256(
+                          json.dumps(rows, sort_keys=True).encode()).hexdigest(),
+                      reviewer='native', reason='inspected')
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'review.json'
+            for changes, error in [({'image_sha256': 'stale'}, 'hash'),
+                                   ({'input_rows_sha256': 'stale'}, 'hash'),
+                                   ({'rows': ['3 0.5 0.5 0.2 0.2']}, 'class')]:
+                path.write_text(json.dumps([{**review, **changes}]))
+                with self.assertRaisesRegex(ValueError, error):
+                    apply_manual_reviews([record.copy()], [path])
+            path.write_text(json.dumps([review, review]))
+            with self.assertRaisesRegex(ValueError, 'Duplicate'):
+                apply_manual_reviews([record.copy()], [path])
+
+    def test_capture_groups_transitive_and_frozen_validation(self):
+        first = capture_group('school_lunch__train__010136000.jpg')
+        self.assertEqual(first, capture_group('school_lunch__val__010136001.jpg'))
+        self.assertNotEqual(first, capture_group('school_lunch__train__010137000.jpg'))
+        self.assertEqual(capture_group('waste_detection_v3__train__video-one-0001_jpg.rf.abc.jpg'),
+                         capture_group('waste_detection_v3__val__video-one-0009_jpg.rf.def.jpg'))
+        records = [dict(name=str(i), split='train', group=str(i), sha=str(i),
+                        pixels=str(i), capture=first) for i in range(3)]
+        records[2]['frozen_val'] = True
+        repair_groups(records)
+        self.assertEqual([r['split'] for r in records], ['val'] * 3)
+
+    def test_capture_leakage_is_rejected(self):
+        rows = [f'{i} 0.5 0.5 0.2 0.2' for i in range(3)]
+        records = [dict(name=str(i), split=split, group=str(i), sha=str(i),
+                        pixels=str(i), capture='meal', rows=rows,
+                        verified_absence=False) for i, split in enumerate(('train', 'val'))]
+        with self.assertRaisesRegex(ValueError, 'capture'):
+            audit(records, expected_count=2)
+        records[0]['frozen_val'] = True
+        records[1]['capture'] = 'other'
+        records.append(dict(records[1], name='third', group='third', sha='third',
+                            pixels=records[0]['pixels'], capture='other'))
+        repair_groups(records)
+        self.assertEqual([r['split'] for r in records], ['val'] * 3)
+
+    def test_optional_capture_fingerprint_keeps_original_encoding(self):
+        record = dict(name='a', split='train', sha='s', rows=[], group='g', pixels='p',
+                      verified_absence=True, review_status='ok', original_split='train',
+                      input_label_sha256='l', override_applied=False)
+        expected = hashlib.sha256(json.dumps(record, sort_keys=True).encode()).hexdigest()
+        self.assertEqual(fingerprint([record]), expected)
+        self.assertNotEqual(fingerprint([{**record, 'capture': 'meal'}]), expected)
+
     def test_remap_preserves_coordinates_and_all_boxes(self):
         rows = ['1 0.5 0.5 0.2 0.2', '8 0.4 0.4 0.1 0.1',
                 '9 0.3 0.3 0.2 0.2', '0 0.5 0.5 0.1 0.1']

@@ -1,0 +1,476 @@
+[
+  {
+    "name": "plate__train__lvis_000000026676.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.472851562 0.537177986 0.669859375 0.784379391",
+      "0 0.117812500 0.733805621 0.235625000 0.532388759"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2395ef91051c9b46ef5badc7e7abf1f2b591ef8912a5185fc4bc7055ead12a09",
+    "input_rows_sha256": "de51e7b478774abe59dd6baf2c97059ca72952a255505f6fb108aef752e68b10",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000049128.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Buffet foreground contains overlapping paper-plate rims/possible adjacent stacks near frame edge; cannot confidently assign every box to physical stack without ambiguous grouping.",
+    "image_sha256": "4ba001ff4f80a211cc2b740dd9e6699838201930e2be51476829370cd5581fd8",
+    "input_rows_sha256": "5cb40135913dce820ed9528f9d01ef81e2e30f5686735d0b43641962cb691ed0",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000072866.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.184988207 0.880320313 0.338136793 0.148828125",
+      "2 0.020047170 0.617968750 0.040094340 0.157812500",
+      "2 0.062500000 0.611718750 0.054245283 0.160937500",
+      "2 0.108490566 0.617968750 0.066037736 0.148437500"
+    ],
+    "reason": "Three overlapping boxes describe one nested paper-plate stack in front of cake; consolidated to union enclosing full stack.",
+    "image_sha256": "c81551ce82c1cab28c3fd42d37cd0914109d8fa0c27d62dcbe0924529b94d566",
+    "input_rows_sha256": "7574f30c923ba64d89f17a4dcf828b41b14eb33107e49c7621a71daf7a6277de",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000106272.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.391601562 0.929355972 0.185578125 0.133512881",
+      "0 0.619179687 0.781814988 0.157828125 0.085550351",
+      "0 0.655382812 0.710679157 0.135015625 0.076018735",
+      "0 0.293695313 0.654578454 0.074203125 0.069625293",
+      "0 0.568023437 0.644718970 0.103765625 0.064754098",
+      "0 0.331765625 0.776756440 0.145750000 0.095433255",
+      "0 0.720773437 0.953606557 0.207109375 0.092786885",
+      "0 0.445718750 0.553747073 0.104093750 0.050491803"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "4d858894c996edbef123530bb8fb5c5a8431565239107532e023acdc0ce839b9",
+    "input_rows_sha256": "8ac8a3edb127c088722d684c6466f09dd1ef933c3b582eb3564ec801e629eafd",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000125597.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.736578125 0.466564706 0.354781250 0.311200000",
+      "0 0.392500000 0.627082353 0.491468750 0.376847059"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "68288f26327bfd7c9e5ad322a3aac270b120642e246b31c59c37761242a5c47a",
+    "input_rows_sha256": "c9c9c089956803d014f4cd132b6322da5fafc80afc083ecce2a39e5f535f1ce4",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000167520.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.108421875 0.946642259 0.197687500 0.089769874",
+      "0 0.123304687 0.857426778 0.231140625 0.092970711",
+      "0 0.315031250 0.977405858 0.241312500 0.041338912"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "4e2beca9bc47b68f92806730334da0726a298f1e13d15703b4b2ca9fabcc8cb3",
+    "input_rows_sha256": "068d5774995c475ea394f01feaf4b80a8d976de033766cb80c38e5356d82219b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000202767.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.376906250 0.718635417 0.127000000 0.052312500",
+      "0 0.683398437 0.392041667 0.064046875 0.013333333",
+      "0 0.407273437 0.785343750 0.170390625 0.137770833"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "44713f48e962f3ecf6fb916e84c12a697ce15e737b55424773428435a1715302",
+    "input_rows_sha256": "866540e3dee57cc710fcd2fea5a74bd70d8559b6878e0add27eef60a08b736a3",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000211282.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.783989247 0.552648438 0.361870968 0.100671875",
+      "0 0.452645161 0.769125000 0.775741935 0.349187500",
+      "0 0.421763441 0.327992187 0.768172043 0.309078125",
+      "0 0.491430108 0.068484375 0.411462366 0.068218750",
+      "0 0.824892473 0.099742187 0.279763441 0.131796875"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "78934c2e5fa640b8c58deae96017aaca3d82392c316d13fc9da551874fa00b94",
+    "input_rows_sha256": "ef703c27f5c20b5e75aac7a4ce3a8cd819ff7fc1f7db87602c7aebcdc54b210c",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000226988.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Three offset paper plates beneath pizza overlap strongly, but whether lower plate is part of a physical support stack or separate plate cannot be confidently determined.",
+    "image_sha256": "e54d029fe6655aab21fb399ac0a307cec821fbc9fe5beea9c6f2bcdf7ca8883c",
+    "input_rows_sha256": "09c458644ff4775188833b448a859aa80f563c93ed1283999cb0a76b690460d8",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000229233.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.384460937 0.670833333 0.212109375 0.076541667",
+      "0 0.139710937 0.660187500 0.219046875 0.083875001",
+      "2 0.315000000 0.501000000 0.060000000 0.290000000"
+    ],
+    "reason": "Two left boxes describe one nested plate stack; consolidated full stack union. Separate right eating plate and accepted beverage bottle preserved.",
+    "image_sha256": "c05e87e67e57e04740d8e725dca8b547ce88c608d4b5d0d3af804620ad4d59c9",
+    "input_rows_sha256": "e7fed07810c204267dd449c6830c59880e77fb1f3ca526eeeb1148f8022ff42b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000236626.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.701250000 0.898091335 0.384312500 0.203817331",
+      "0 0.882054688 0.479028103 0.070421875 0.025644028",
+      "0 0.966187500 0.924203747 0.067625000 0.151592506"
+    ],
+    "reason": "Two overlapping foreground cake-plate boxes describe the same plate; consolidated union. Separate right-edge and background plates preserved.",
+    "image_sha256": "43d398aa2cb7f5193b502929d7200a6c995d67ffa4ca1948aadb31599bb7a8ac",
+    "input_rows_sha256": "abd2d193f86c2f5c50e41d5f13df3d142730c3da0cc7a7c33c2ccc6d573736ad",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000241408.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.817476562 0.560104167 0.302828125 0.102208333",
+      "0 0.571890625 0.713552083 0.623312500 0.219395833",
+      "0 0.264507812 0.596947917 0.378640625 0.118520833"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "04040107bae7675a2ce9ed128521a01a09a06c52a5de7e7b3822803790ce08cc",
+    "input_rows_sha256": "e92f0062b89f245b5fa81236a3a47e4af7f11c53eb4e437d58f58d8b81908e3e",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000252629.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.247460937 0.132529274 0.237484375 0.116299766",
+      "0 0.675671875 0.191990632 0.236281250 0.200843091",
+      "0 0.510554687 0.596135831 0.611640625 0.691896956"
+    ],
+    "reason": "Two upper-left pink plate boxes describe one plate/stack behind cake; consolidated union. Other pink plates preserved.",
+    "image_sha256": "4f549a2ea14f73bd82f4be6279caff64c262223cd2131b819e2f2aa61c44e62f",
+    "input_rows_sha256": "1dc33859b8fb31230eec073627053ba8527426876336ebc828d396c332b2211c",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000309539.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.493937500 0.579508368 0.804531250 0.840983264",
+      "0 0.166992188 0.111506276 0.333984375 0.223012552"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "f85d29cca1008481afb3dbe8b19c8509bdded534aed7597ef361e04aaade6dd7",
+    "input_rows_sha256": "90baf5cb980f34503d9da704bda4989a2bd31a7575fa52f2363b5e7b51f2ccc1",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000326265.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.350690000 0.809320000 0.497340000 0.381360000",
+      "0 0.498280000 0.438986667 0.316120000 0.433013333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "b46d6d582b105a7e088869264129f4724f1f7041a7c4ca44e6f2f675ee6a1e37",
+    "input_rows_sha256": "c7e70f74c1bd19d9a7edebd0b804c68251df565eed67529b043544d8d7bc7ba8",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000363727.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.431148437 0.360811765 0.287265625 0.313482353",
+      "0 0.411750000 0.754894118 0.362062500 0.490211765",
+      "0 0.476898438 0.097129412 0.235671875 0.188941176",
+      "0 0.664539062 0.492800000 0.330796875 0.397035294",
+      "2 0.721093750 0.107058824 0.104687500 0.214117647"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "123b13035515f0cda4b813d70a7aa7f5e594d92f9d7f619b845906ef26e89929",
+    "input_rows_sha256": "8e98f6457a4988c365f8030716977869b3de79a9cb1b3e0c031b24f0eb1f3238",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000379508.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.451940000 0.848946667 0.161360000 0.157413333",
+      "0 0.283000000 0.416000000 0.138000000 0.090666667"
+    ],
+    "reason": "Two background plate boxes describe the same plate; consolidated union. Foreground stack already has one full-stack box. Preserved prior accepted correction.",
+    "image_sha256": "e7069257854a6520908d3f93e82fa02328c1e540d1429e7d38d5c7c96c0d25fe",
+    "input_rows_sha256": "27f339f6d1575c1082db07bd597fa364ecf9cf16b1cc403c9202a68a23528aff",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000386009.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.475914062 0.718782201 0.827484375 0.322014052",
+      "0 0.096046875 0.923196721 0.186187500 0.149859485"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ddcd06e2ec9a2d2a04288716699efa7a559b5a6c907cdfa86f076d8e685cf8c2",
+    "input_rows_sha256": "327ed64c93ba6a06927071027c1465764eb99c61bd97779ac2b980d6eb9f0c48",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000409708.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.674078125 0.806896956 0.163375000 0.055433255",
+      "0 0.657859375 0.871709602 0.185531250 0.084637002"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2e28dd8fb53424fb5523ce50489266cd1d95928e77db83d3a5a7b17810e1ecb9",
+    "input_rows_sha256": "0ef3f4c7d3c66b12e9053d41b638d12e7ba67a31a8d7c6f4b25cd3c0d5f16dd0",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000451800.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.756578125 0.712895833 0.486843750 0.476791667",
+      "0 0.336304687 0.622406250 0.504046875 0.550729167",
+      "2 0.528906250 0.139583333 0.167187500 0.279166667"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "c9c23635056b153cdb9f70d5c486b9547f636d402f6323fede7e485c4770960f",
+    "input_rows_sha256": "e9aa43219d01c7daac960d03f182982fc342e12f0a9030d02e4f6f72c26fb013",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000518495.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.289210937 0.633895833 0.578421875 0.732208333",
+      "0 0.729687500 0.640625000 0.365625000 0.493750000"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "255596f4a537758cb69788ad5f19391345494d0249b23987e64bf26ada3b5bfd",
+    "input_rows_sha256": "851feae8f7633453f0736db573176cdded79330b90f2838ed3a795810d313ddd",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000530259.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.810335937 0.500479167 0.376796875 0.578166667",
+      "0 0.339335937 0.577875000 0.671421875 0.843458333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ad35a3ad6c16d6d49af08db886ad8c824740212b3fb9bc2ec98aa80d90cc8421",
+    "input_rows_sha256": "46640209c6ebbdccbf27cac9612a933c68f8a5962e38e6cd74ccbe82cadf9eeb",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000538368.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.382747642 0.045000000 0.289316038 0.090000000",
+      "0 0.514882075 0.658186620 0.446462264 0.591302817",
+      "0 0.182452830 0.277676056 0.363349057 0.423380282",
+      "0 0.789091981 0.158433099 0.292806604 0.312147887"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "d06424c046b197dc61f4d5bd86eb23402538f6182ed462d2e2c3d4b36542e6a7",
+    "input_rows_sha256": "87a0e5c063da943b1d3c04d713aee9056ef36a91774876f9482cae3eb7d26ca8",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000567079.jpg",
+    "status": "unresolved",
+    "rows": [],
+    "reason": "Two plates supporting the same pizza are held at different angles; uncertain whether they form one physical stack or remain separate plates.",
+    "image_sha256": "c9603ff1d5b238e139cecd5162b06cf5d34b25a65b56c035408c665e92fb37f2",
+    "input_rows_sha256": "38c8eacada9948c5e9c6e303f545f1b2fec2739644556a58e5207b018815688b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000341271.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.570580065 0.822132353 0.196225490 0.279428105",
+      "0 0.363799020 0.825498366 0.241781046 0.272990196",
+      "2 0.880718954 0.331699346 0.166666667 0.529411765"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "0cb9be1a4c2b5880b6f75db9afa3952f2ab0d48646e3f12d9d86fdcf81ec0d6d",
+    "input_rows_sha256": "ba83c75fadb8996166c404b908157706d55720e7e7c5006435bfd5b093e4473b",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000345361.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.049770000 0.569692737 0.099540000 0.042737430",
+      "0 0.114860000 0.606466480 0.104200000 0.042262570",
+      "0 0.255580000 0.674245810 0.149920000 0.066424581",
+      "0 0.334330000 0.744385475 0.139580000 0.076368715"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2444d5e254c43f64175fb611d93fc19de85ab9eb389148e92687cd445c63095e",
+    "input_rows_sha256": "6d8dca645c5e19410a56b68a2d7071cf176508b7ea4ac88223491cdf0a8d9952",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000478407.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.479500000 0.715893333 0.238080000 0.067200000",
+      "0 0.288360000 0.779786667 0.317880000 0.110453333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "64256c7b83d59a30b5776b40017fb09bda83c809124de8bbf2c567212b21dd42",
+    "input_rows_sha256": "18b546909fb074f3de310d3ac5ea5503dbaa859588a20adac7ab811efd4c89a5",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000072646.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.359187500 0.515398126 0.091250000 0.076697892",
+      "0 0.404515625 0.844742389 0.338968750 0.132060890",
+      "0 0.320671875 0.464964871 0.145281250 0.068618267"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "f7a1e36e3e78c917594a117bcccffd834a5cd633fdd754ddc3f61cdfb3cb12a7",
+    "input_rows_sha256": "ff3cd7f15593be0bbdafb2ba5034a02cacfd3b4509f8156a847e3113b5a22c2a",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000107770.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.928990610 0.555437500 0.142018779 0.267250000",
+      "0 0.545070423 0.737609375 0.909859155 0.442093750"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ba76a1c7e9e4cdb8e83d8e1423dbecf4f8ee2920ca61278d0331d4c2d7d69892",
+    "input_rows_sha256": "4b4885db57b228980d3ce6c99f7f72468bea4386cf5128cc68c141009fad27b9",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000147983.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.415835937 0.151010417 0.368859375 0.235812500",
+      "0 0.710140625 0.586947917 0.579718750 0.665812500"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "205d922de82b559cd5556faa799ea53d5eab2a37addf07eff63a3ea8755acd3a",
+    "input_rows_sha256": "86eec2347dda77b601844ee02ce042ef80372a384d4fc2635f211860930eb9b6",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000249839.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.760234375 0.821020833 0.358375000 0.164208333",
+      "0 0.594328125 0.695052083 0.222343750 0.127812500"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "e71b4b9ecd0ca98e8af74fd4a8bcba69690d4ccb5b67d95e43b6b77882d47f62",
+    "input_rows_sha256": "ef91ea4df78bdc8bd23d4f00d9ec332a362acf0410895dc49391a07ce631f2da",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000384981.jpg",
+    "status": "corrected",
+    "rows": [
+      "0 0.465734375 0.681427083 0.162937500 0.225395833"
+    ],
+    "reason": "Two foreground orange/green plate boxes describe one nested multicolor stack; consolidated full-stack union.",
+    "image_sha256": "092a23b9e9aac59d0b899b670db417f5076ddffddd08a86d10d5ca211722c14c",
+    "input_rows_sha256": "30edd7f77074856c3f9fccffde69f4ba12945dbd884ed6f145447484b7eb986a",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000471842.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.535398438 0.644240654 0.897921875 0.419228972",
+      "0 0.856046875 0.361074766 0.287906250 0.283925234"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "2786a541e950b11b57aa0c94cc8237add3e91c04de9ef8447a0eba08179abb4e",
+    "input_rows_sha256": "df0fe5b6604b732a6732299c5007279bcb87c4ee1240648dada3bb02db4c76b6",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000515662.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.813078125 0.731635417 0.336281250 0.445895833",
+      "0 0.813640625 0.379229167 0.325968750 0.285125000"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "efad1d43e0d5e7863799d09069bf46ca646168f3a8edb2def3d26c1be1cd76c1",
+    "input_rows_sha256": "da9e7e1a76a6820fc40018ff83a801cf3ddc01a2bb0777052ad6b4913d046b0d",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000523370.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.568153595 0.686985294 0.815424837 0.626029412",
+      "0 0.548480392 0.241388889 0.565816993 0.324346405"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "ad457c68fd17431856e9c859d5f7f41a53c128bdd8dda00b555af33c5775012f",
+    "input_rows_sha256": "038c464bceed56de4238e431c67a6b303ad77d08bf3ab53c798f3f46f20fefe6",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000529929.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.740523438 0.451281250 0.518953125 0.609229167",
+      "0 0.304531250 0.648875000 0.580250000 0.702250000"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "66260b92dab0d4004ac39cb602f27ec2201cf64019363bfb557a08b6f6026d73",
+    "input_rows_sha256": "0c3444225252644950d2fbee8667deb2c667d0e97f1bc6752a0d82b43a0fba0a",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__train__lvis_000000569001.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.621320312 0.761843750 0.405359375 0.476312500",
+      "0 0.256664062 0.698125000 0.374390625 0.490916667",
+      "0 0.477281250 0.353687500 0.365500000 0.412833333"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "59080bb87c5a1229a9830c79372fc694755e54128c382df4d6563159fd4f19b6",
+    "input_rows_sha256": "3cd88f9cde558b68e329cfcab67ee04b57411425e8f72f2a22002c659274eb3e",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  },
+  {
+    "name": "plate__val__lvis_000000145680.jpg",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.706789216 0.813259804 0.581715686 0.373480392",
+      "0 0.336004902 0.552156863 0.672009804 0.318921569"
+    ],
+    "reason": "Native image confirms overlapping boxes belong to distinct plates in separate positions; any visible nested rims already covered by a single box. Preserved all accepted target rows.",
+    "image_sha256": "aaf1bfe58736fb0c10dced9e8c9b09227773597167b81961b6f5efe38eb6c4b9",
+    "input_rows_sha256": "e1b29cc9bd70bc9bdc02be64c585abe3dda61d1aa32a12f2bbf98e9d0245c811",
+    "reviewer": "Codex review_all_trash native stack-policy audit 2026-10-15"
+  }
+]
