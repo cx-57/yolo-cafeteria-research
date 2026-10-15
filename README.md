@@ -1,5 +1,34 @@
 # YOLO Cafeteria Research
 
+## Current focused experiment: plates and plastic beverage bottles only
+
+**Wrapper has been removed from the new focused training task.** The active two-class labels are:
+`0 = plate` and `1 = bottle` (plastic beverage bottles only). This does **not**
+change the original 11-class project or overwrite any historical three-class
+datasets, manifests, checkpoints, or results.
+
+Build the new dataset from the 900 fully reviewed three-class images (774 train
+and 126 validation). Every reviewed photo is kept in its existing split:
+wrapper annotation boxes are discarded, old bottle ID `2` becomes ID `1`,
+and wrapper-only photos become **background/negative images** for the remaining
+two classes. The builder checks the original signed-off dataset, exact image
+bytes, label conversion, and group-safe split before and after the build.
+
+```bash
+python3 scripts/focus_two_class.py build
+python3 scripts/focus_two_class.py verify
+python3 scripts/focus_two_class.py train --epochs 80 --device mps
+python3 scripts/focus_two_class.py evaluate --device mps
+```
+
+The output is `data/focus-two-class-900/`; model results are written separately
+to `model/focus-two-class-900/`. Both are locally generated and Git-ignored.
+Training starts from **pretrained YOLO11n** rather than a three-class checkpoint.
+The evaluator reports **two separate class AP50 scores** and never reuses the
+obsolete wrapper score. The existing historical experimental AP50 numbers
+are *not* scores for this untrained plate/bottle-only model. No independent
+NHS test performance has been established.
+
 **Goal:** detect 11 cafeteria item types with YOLO11n. The model recognizes objects; NHS recycling/compost/trash rules are a separate step.
 
 ## Clean layout
