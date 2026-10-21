@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 import re
 import shutil
+import tempfile
 import time
 
 from PIL import Image
@@ -36,6 +37,8 @@ def target_rows(rows):
 def capture_group(name):
     """Bind adjacent meal views and every frame from a waste source video."""
     source, original = name.split('__', 1)
+    if source == 'external_bottle':
+        return source + '__' + original.split('__', 1)[0]
     original = re.sub(r'^(train|val|valid|test)__', '', original)
     original = original.split('.rf.')[0]
     if source == 'school_lunch':
@@ -87,6 +90,43 @@ def apply_manual_reviews(records, files):
     return records
 
 
+def scene_reviews(records, reviews, apply=False):
+    """Bind manually identified related captures to exact reviewed image bytes."""
+    index = {r['name']: r for r in records}
+    expected, scenes = {}, set()
+    for review in reviews:
+        scene = review['scene_id']
+        if (not re.fullmatch(r'[A-Za-z0-9_-]+', scene) or scene in scenes or
+                not review.get('reviewer') or not review.get('reason') or len(review['members']) < 2):
+            raise ValueError('Invalid scene review')
+        scenes.add(scene)
+        for member in review['members']:
+            name = member['name']
+            if name not in index or member.get('image_sha256') != index[name]['sha']:
+                raise ValueError('Scene review image hash mismatch: ' + name)
+            if name in expected:
+                raise ValueError('Duplicate scene review membership: ' + name)
+            expected[name] = scene
+    if apply:
+        for name, scene in expected.items():
+            index[name]['scene_group'] = scene
+    actual = {r['name']: r['scene_group'] for r in records if 'scene_group' in r}
+    if actual != expected:
+        raise ValueError('Scene review membership changed')
+
+
+def validate_clean_source(manifest, weights, experiment=None):
+    """Rebased capture splits cannot validate checkpoints trained on old assignments."""
+    protocol = manifest.get('validation_protocol')
+    if protocol is None:
+        return
+    if experiment is not None:
+        if experiment.get('validation_protocol') != protocol:
+            raise ValueError('Checkpoint validation protocol mismatch; use a clean-source run')
+    elif Path(weights).resolve() != (PROJECT_ROOT / 'model/weights/yolo11n.pt').resolve():
+        raise ValueError('Rebased splits require fresh pretrained yolo11n.pt; use continue_train thereafter')
+
+
 def repair_groups(records):
     """Unite original-photo, byte and decoded-pixel groups; minimize moves."""
     parent = list(range(len(records)))
@@ -97,7 +137,7 @@ def repair_groups(records):
             i = parent[i]
         return i
 
-    for field in ('group', 'sha', 'pixels', 'capture'):
+    for field in ('group', 'sha', 'pixels', 'capture', 'scene_group'):
         seen = {}
         for i, record in enumerate(records):
             key = record.get(field)
@@ -112,7 +152,10 @@ def repair_groups(records):
     moves = []
     for members in components.values():
         counts = Counter(r['split'] for r in members)
+        if any(r.get('frozen_train') for r in members) and any(r.get('frozen_val') for r in members):
+            raise ValueError('Conflicting frozen capture assignments')
         chosen = ('val' if any(r.get('frozen_val') for r in members) else
+                  'train' if any(r.get('frozen_train') for r in members) else
                   max(('train', 'val'), key=lambda s: (counts[s], s == 'train')))
         for record in members:
             if record['split'] != chosen:
@@ -121,10 +164,11 @@ def repair_groups(records):
     return moves
 
 
-def audit(records, expected_count=613):
-    summary = {s: dict(images=0, negatives=0, objects=dict.fromkeys(NAMES, 0),
-                       class_images=dict.fromkeys(NAMES, 0)) for s in ('train', 'val')}
-    seen = {field: {} for field in ('group', 'sha', 'pixels', 'capture')}
+def audit(records, expected_count=613, names=None):
+    names = NAMES if names is None else names
+    summary = {s: dict(images=0, negatives=0, objects=dict.fromkeys(names, 0),
+                       class_images=dict.fromkeys(names, 0)) for s in ('train', 'val')}
+    seen = {field: {} for field in ('group', 'sha', 'pixels', 'capture', 'scene_group')}
     for r in records:
         for field in seen:
             key = r.get(field)
@@ -135,7 +179,9 @@ def audit(records, expected_count=613):
                 raise ValueError(f"Split leakage ({field}): {r['name']}")
         if r.get('frozen_val') and r['split'] != 'val':
             raise ValueError('Frozen validation anchor moved: ' + r['name'])
-        rows = validate_rows(r['rows'], r['name'], NAMES)
+        if r.get('frozen_train') and r['split'] != 'train':
+            raise ValueError('Previously trained image moved into validation: ' + r['name'])
+        rows = validate_rows(r['rows'], r['name'], names)
         if rows != r['rows']:
             raise ValueError('Unexpected annotation normalization')
         if not rows and not r['verified_absence']:
@@ -144,13 +190,13 @@ def audit(records, expected_count=613):
         stats['images'] += 1
         stats['negatives'] += not rows
         ids = [int(row.split()[0]) for row in rows]
-        for i, name in enumerate(NAMES):
+        for i, name in enumerate(names):
             stats['objects'][name] += ids.count(i)
             stats['class_images'][name] += i in ids
     if len(records) != expected_count or len({r['name'] for r in records}) != expected_count:
         raise ValueError(f'Expected exactly {expected_count} unique accepted images')
     if any(not stats['images'] or not all(stats['objects'].values()) for stats in summary.values()):
-        raise ValueError('Each split must contain all three classes')
+        raise ValueError('Each split must contain all target classes')
     return summary
 
 
@@ -160,13 +206,25 @@ def pixels(image):
         return hashlib.sha256(str(rgb.size).encode() + rgb.tobytes()).hexdigest()
 
 
+def validate_image_file(image):
+    """Reject JPEGs Ultralytics would silently rewrite, even if PIL can decode them."""
+    with Image.open(image) as opened:
+        jpeg = opened.format == 'JPEG'
+        opened.verify()
+    if jpeg:
+        with image.open('rb') as stream:
+            stream.seek(-2, 2)
+            if stream.read() != b'\xff\xd9':
+                raise ValueError('JPEG requires explicit normalization before training: ' + str(image))
+
+
 def fingerprint(records):
     sha = hashlib.sha256()
     for r in sorted(records, key=lambda r: r['name']):
         evidence = {k: r[k] for k in (
             'name', 'split', 'sha', 'rows', 'group', 'pixels', 'verified_absence',
             'review_status', 'original_split', 'input_label_sha256', 'override_applied')}
-        for key in ('capture', 'frozen_val'):
+        for key in ('capture', 'frozen_val', 'frozen_train', 'scene_group'):
             if key in r:
                 evidence[key] = r[key]
         sha.update(json.dumps(evidence, sort_keys=True).encode())
@@ -278,7 +336,7 @@ def build_all(args):
     source, output = args.source.resolve(), args.data.resolve()
     if source != (PROJECT_ROOT / 'data/training-v2/data.yaml').resolve():
         raise ValueError('build_all requires original data/training-v2/data.yaml')
-    check_output(output, [source.parent, PROJECT_ROOT / 'data/training', DATA])
+    check_output(output, [source.parent, PROJECT_ROOT / 'data/training', DATA, args.frozen_data])
     sources = load_dataset(source)
     overrides = {r['stem']: r for r in validate_overrides(REVIEW / 'reviewed_overrides.json', sources)}
     focus = {r['source'] + '__' + r['image']: r for r in csv.DictReader(
@@ -286,11 +344,12 @@ def build_all(args):
     unchanged = {r['source'] + '__' + r['image']: r for r in csv.DictReader(
         (REVIEW / 'image_review.csv').open()) if r.get('decision') == 'checked_existing'
         and r.get('review_scope') == 'full_resolution'}
-    baseline = verify(DATA)
+    baseline = verify(args.frozen_data.resolve())
     anchor_rows = {r['name']: r['rows'] for r in baseline['records'] if r['split'] == 'val'}
     anchors = set(anchor_rows)
-    if len(anchors) != 92:
-        raise ValueError('Expected 92 frozen baseline validation anchors')
+    if not anchors or len(anchors) != baseline['counts']['val']['images']:
+        raise ValueError('Frozen baseline validation membership mismatch')
+    baseline_train = {r['name'] for r in baseline['records'] if r['split'] == 'train'}
     records = []
     for split, images in sources.items():
         for image in images:
@@ -326,6 +385,8 @@ def build_all(args):
                           override_applied=bool(override), accepted=accepted,
                           capture=capture_group(image.name), frozen_val=image.name in anchors)
             records.append(record)
+            if args.frozen_data.resolve() != DATA.resolve():
+                record['frozen_train'] = image.name in baseline_train
     apply_manual_reviews(records, args.review_files)
     selected = [r for r in records if r['accepted']]
     pending = [r for r in records if not r['accepted']]
@@ -342,6 +403,7 @@ def build_all(args):
                     overrides_sha256=digest(REVIEW / 'reviewed_overrides.json'),
                     manual_review_files=[dict(path=str(p.resolve()), sha256=digest(p)) for p in args.review_files],
                     frozen_validation_anchors=sorted(anchors), counts=summary, split_moves=moves,
+                    frozen_validation_count=len(anchors), frozen_dataset=str(args.frozen_data.resolve()),
                     records=selected, fingerprint=fingerprint(selected),
                     leakage='passed: original, byte, decoded-pixel and capture groups',
                     negative_policy='Complete visual target review required; unresolved photos held')
@@ -366,15 +428,150 @@ def build_all(args):
     print(f'Held unresolved: {len(pending)} photos ({sum(bool(r["rows"]) for r in pending)} target-positive).')
 
 
+def external_record(review, candidate, known_sha, known_pixels):
+    """Admit a staged positive only after complete, image-bound visual review."""
+    image = PROJECT_ROOT / candidate['path']
+    validate_image_file(image)
+    if (candidate['status'] != 'pending_full_three_class_review' or
+            review.get('candidate_id') != candidate['id'] or
+            review.get('image_sha256') != candidate['sha256'] or digest(image) != candidate['sha256']):
+        raise ValueError('External image is held or its review hash changed')
+    if (review.get('full_three_class_review') is not True or
+            review.get('duplicate_reviewed') is not True or
+            not review.get('reason') or not review.get('reviewer') or not candidate.get('url')):
+        raise ValueError('External image requires complete annotation and duplicate review')
+    session = review.get('session', '')
+    if not re.fullmatch(r'[A-Za-z0-9_-]+', session) or not re.fullmatch(r'[A-Za-z0-9_-]+', candidate['id']):
+        raise ValueError('Invalid external session or image identity')
+    name = f"external_bottle__{session}__{candidate['id']}.jpg"
+    rows = validate_rows(review.get('rows', []), name, NAMES)
+    if (rows != review.get('rows') or len(rows) != len(set(rows)) or
+            not any(row.split()[0] == '2' for row in rows)):
+        raise ValueError('External bottle supplement needs valid complete positive labels')
+    pixel_hash = pixels(image)
+    if candidate['sha256'] in known_sha or pixel_hash in known_pixels:
+        raise ValueError('External image duplicates an existing photograph')
+    return dict(name=name, split='train', original_split='external',
+                group='external_bottle__' + group_for_split('external_bottle', name.split('__', 1)[1]).lower(),
+                sha=candidate['sha256'], pixels=pixel_hash, rows=rows, verified_absence=False,
+                review_status='external_signed_off', review_reason=review['reason'],
+                image=str(image), input_label_sha256=hashlib.sha256(json.dumps(review, sort_keys=True).encode()).hexdigest(),
+                override_applied=False, capture=capture_group(name), frozen_val=False, frozen_train=True,
+                source_url=candidate['url'], reviewer=review['reviewer'])
+
+
+def build_external(args):
+    """Keep an audited pool intact and add explicitly reviewed external training photos."""
+    baseline = verify(args.frozen_data.resolve())
+    check_output(args.data, [args.frozen_data.resolve(), DATA, PROJECT_ROOT / 'data/training-v2'])
+    staging = PROJECT_ROOT / 'data/focus-three-class-improvement/bottle-candidates'
+    candidates = {r['id']: r for r in json.loads((staging / 'candidates.json').read_text())}
+    if not args.review_files:
+        raise ValueError('build_external requires --review-files')
+    records = []
+    for r in baseline['records']:
+        records.append({**r, 'image': str(args.frozen_data.resolve() / 'images' / r['split'] / r['name']),
+                        'frozen_train': r['split'] == 'train', 'frozen_val': r['split'] == 'val'})
+    evidence = list(records)
+    pending = args.frozen_data / 'pending_review.json'
+    if pending.is_file():
+        evidence += json.loads(pending.read_text())
+    known_sha, known_pixels = {r['sha'] for r in evidence}, {r['pixels'] for r in evidence}
+    for path in args.review_files:
+        for review in json.loads(path.read_text()):
+            record = external_record(review, candidates[review['candidate_id']], known_sha, known_pixels)
+            records.append(record)
+            known_sha.add(record['sha'])
+            known_pixels.add(record['pixels'])
+    if len(records) == len(baseline['records']):
+        raise ValueError('No external images selected')
+    validate_anchors(records, baseline)
+    counts = audit(records, expected_count=len(records))
+    print(json.dumps(counts, indent=2), flush=True)
+    manifest = dict(selected=len(records), counts=counts, records=records,
+                    build_mode='reviewed_external_training_supplement', frozen_dataset=str(args.frozen_data),
+                    source=baseline['source'], baseline_fingerprint=baseline['fingerprint'],
+                    external_candidates_sha256=digest(staging / 'candidates.json'),
+                    manual_review_files=[dict(path=str(p.resolve()), sha256=digest(p)) for p in args.review_files],
+                    frozen_validation_anchors=sorted(r['name'] for r in records if r['split'] == 'val'),
+                    frozen_validation_count=counts['val']['images'], fingerprint=fingerprint(records),
+                    negative_policy='Existing reviewed negatives only; external supplement is positive-only')
+    for key in ('scene_reviews', 'validation_protocol'):
+        if key in baseline:
+            manifest[key] = baseline[key]
+    for split in ('train', 'val'):
+        (args.data / 'images' / split).mkdir(parents=True)
+        (args.data / 'labels' / split).mkdir(parents=True)
+    baseline_names = {r['name'] for r in baseline['records']}
+    for r in records:
+        shutil.copy2(r['image'], args.data / 'images' / r['split'] / r['name'])
+        label = args.data / 'labels' / r['split'] / Path(r['name']).with_suffix('.txt')
+        if r['name'] in baseline_names:
+            shutil.copy2(label_path(Path(r['image'])), label)
+        else:
+            label.write_text('\n'.join(r['rows']) + '\n')
+    (args.data / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    (args.data / 'data.yaml').write_text(yaml.safe_dump(dict(path=str(args.data), train='images/train',
+                                                          val='images/val', names=NAMES), sort_keys=False))
+    verify(args.data)
+
+
+def regroup(args):
+    """Preserve labels and validation anchors while grouping reviewed related captures."""
+    baseline = verify(args.frozen_data.resolve())
+    check_output(args.data, [args.frozen_data.resolve(), DATA, PROJECT_ROOT / 'data/training-v2'])
+    if not args.review_files:
+        raise ValueError('regroup requires --review-files with hash-bound scene reviews')
+    records = [dict(r) for r in baseline['records']]
+    reviews = list(baseline.get('scene_reviews', []))
+    for path in args.review_files:
+        reviews.extend(json.loads(path.read_text()))
+    scene_reviews(records, reviews, apply=True)
+    # This is a new cold-start benchmark, never a continuation of the old split.
+    for r in records:
+        r['frozen_train'] = False
+        r['frozen_val'] = r['split'] == 'val'
+    moves = repair_groups(records)
+    for r in records:
+        r['frozen_val'] = r['split'] == 'val'
+        r['frozen_train'] = r['split'] == 'train'
+    validate_anchors(records, baseline)
+    counts = audit(records, len(records))
+    print(json.dumps(dict(counts=counts, moves=moves), indent=2), flush=True)
+    manifest = {**baseline, 'records': records, 'counts': counts,
+                'fingerprint': fingerprint(records), 'scene_reviews': reviews,
+                'validation_protocol': fingerprint([r for r in records if r['split'] == 'val']),
+                'build_mode': 'capture_regroup_requires_fresh_pretrained_start',
+                'baseline_fingerprint': baseline['fingerprint'], 'split_repairs': moves,
+                'frozen_validation_anchors': sorted(r['name'] for r in records if r['split'] == 'val'),
+                'frozen_validation_count': counts['val']['images']}
+    old = {r['name']: r['split'] for r in baseline['records']}
+    for r in records:
+        for kind, suffix in [('images', Path(r['name']).suffix), ('labels', '.txt')]:
+            relative = Path(r['name']).with_suffix(suffix)
+            target = args.data / kind / r['split'] / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(args.frozen_data / kind / old[r['name']] / relative, target)
+    (args.data / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    (args.data / 'data.yaml').write_text(yaml.safe_dump(dict(path=str(args.data), train='images/train',
+                                                          val='images/val', names=NAMES), sort_keys=False))
+    verify(args.data)
+
+
 def verify(data):
     manifest = json.loads((data / 'manifest.json').read_text())
     spec = yaml.safe_load((data / 'data.yaml').read_text())
     if spec != dict(path=str(data.resolve()), train='images/train', val='images/val', names=NAMES):
         raise ValueError('Dataset YAML changed')
     records = manifest['records']
+    scene_reviews(records, manifest.get('scene_reviews', []))
+    if ('validation_protocol' in manifest and manifest['validation_protocol'] !=
+            fingerprint([r for r in records if r['split'] == 'val'])):
+        raise ValueError('Validation protocol changed')
     if 'frozen_validation_anchors' in manifest:
         anchors = {r['name'] for r in records if r.get('frozen_val')}
-        if anchors != set(manifest['frozen_validation_anchors']) or len(anchors) != 92:
+        if (anchors != set(manifest['frozen_validation_anchors']) or
+                len(anchors) != manifest.get('frozen_validation_count', 92)):
             raise ValueError('Frozen validation anchor membership changed')
     for split in ('train', 'val'):
         expected = {r['name'] for r in records if r['split'] == split}
@@ -384,6 +581,7 @@ def verify(data):
             raise ValueError('Dataset image/label membership changed')
     for r in records:
         image = data / 'images' / r['split'] / r['name']
+        validate_image_file(image)
         rows = label_path(image).read_text().splitlines()
         if digest(image) != r['sha'] or rows != r['rows']:
             raise ValueError('Dataset changed after build: ' + r['name'])
@@ -396,15 +594,30 @@ def verify(data):
     if (fingerprint(records) != manifest['fingerprint'] or
             audit(records, expected_count=manifest['selected']) != manifest['counts']):
         raise ValueError('Dataset manifest integrity failure')
-    print(f"Integrity passed: {manifest['selected']} images, validated boxes, verified negatives, no split leakage.", flush=True)
+    print(f"Integrity passed: {manifest['selected']} images, validated boxes, verified negatives; "
+          'no overlap in recorded hashes, originals, captures and reviewed scenes. '
+          'Unreviewed related captures may remain.', flush=True)
     print(json.dumps(manifest['counts'], indent=2), flush=True)
     return manifest
 
 
+def atomic_checkpoint_copy(source, destination):
+    """Preserve the previous checkpoint if a new copy is interrupted."""
+    with tempfile.NamedTemporaryFile(dir=destination.parent, prefix=destination.name + '.',
+                                     suffix='.tmp', delete=False) as stream:
+        temporary = Path(stream.name)
+    try:
+        shutil.copy2(source, temporary)
+        temporary.replace(destination)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
 def minimum_class_callback(output, expected_counts, target, initial_score=-1.0,
-                           minutes=None, preserve_resume=False):
+                           minutes=None, preserve_resume=False, names=None):
     """Keep the strongest weakest class, binding each score to that epoch's EMA."""
     best = initial_score
+    names = NAMES if names is None else names
     started = None
 
     def start(trainer):
@@ -421,7 +634,7 @@ def minimum_class_callback(output, expected_counts, target, initial_score=-1.0,
         if preserve_resume:
             latest = output / 'train/weights/last_resume.pt'
             latest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(trainer.last, latest)
+            atomic_checkpoint_copy(trainer.last, latest)
         if minutes is not None:
             if started is None:
                 start(trainer)
@@ -429,17 +642,17 @@ def minimum_class_callback(output, expected_counts, target, initial_score=-1.0,
                 trainer.stop = True
         metrics = trainer.validator.metrics
         indices = [int(i) for i in metrics.box.ap_class_index]
-        if (set(indices) != set(range(3)) or len(indices) != 3 or
+        if (set(indices) != set(range(len(names))) or len(indices) != len(names) or
                 list(map(int, metrics.nt_per_class)) != expected_counts):
             raise ValueError('Per-class checkpoint selection has incorrect validation support')
-        scores = {NAMES[c]: float(metrics.box.ap50[j]) for j, c in enumerate(indices)}
+        scores = {names[c]: float(metrics.box.ap50[j]) for j, c in enumerate(indices)}
         if any(not math.isfinite(v) or not 0 <= v <= 1 for v in scores.values()):
             raise ValueError('Invalid per-class checkpoint metrics')
         score = min(scores.values())
         if score > best:
             location = output / 'train/weights/best_min_ap50.pt'
             location.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(trainer.last, location)
+            atomic_checkpoint_copy(trainer.last, location)
             best = score
             (output / 'minimum_class_selection.json').write_text(json.dumps(dict(
                 epoch=trainer.epoch + 1, per_class_AP50=scores, minimum_AP50=score,
@@ -453,6 +666,25 @@ def minimum_class_callback(output, expected_counts, target, initial_score=-1.0,
     return select
 
 
+def validate_training_config(config, data, manifest, require_all=False):
+    """Require audited training membership and the unchanged validation split."""
+    config = Path(config).resolve()
+    spec = yaml.safe_load(config.read_text())
+    if (spec['names'] != NAMES or Path(spec['path']).resolve() != data or
+            (data / spec['val']).resolve() != data / 'images/val'):
+        raise ValueError('Recipe must use audited classes and unchanged validation')
+    training = (data / spec['train']).resolve()
+    if training.is_file():
+        known = {data / 'images/train' / r['name'] for r in manifest['records'] if r['split'] == 'train'}
+        paths = [Path(row).resolve() for row in training.read_text().splitlines() if row.strip()]
+        if not paths or set(paths) - known:
+            raise ValueError('Recipe contains unknown or validation training images')
+        if require_all and set(paths) != known:
+            raise ValueError('Replay must retain every audited training image')
+    elif training != data / 'images/train':
+        raise ValueError('Recipe training folder is outside the audited pool')
+
+
 def profile_options(path, data, manifest):
     """Validate a recipe's training subset against the audited image pool."""
     recipe = json.loads(path.read_text())
@@ -464,19 +696,7 @@ def profile_options(path, data, manifest):
         raise ValueError('Recipe resume could overwrite an earlier run; use a fresh experiment')
     options.pop('save_dir', None)  # Only the new CLI --model directory may receive writes.
     weights = options.pop('model')
-    config = Path(options['data']).resolve()
-    spec = yaml.safe_load(config.read_text())
-    if (spec['names'] != NAMES or Path(spec['path']).resolve() != data or
-            (data / spec['val']).resolve() != data / 'images/val'):
-        raise ValueError('Recipe must use audited classes and unchanged validation')
-    training = (data / spec['train']).resolve()
-    if training.is_file():
-        known = {data / 'images/train' / r['name'] for r in manifest['records'] if r['split'] == 'train'}
-        paths = [Path(row).resolve() for row in training.read_text().splitlines() if row.strip()]
-        if not paths or set(paths) - known:
-            raise ValueError('Recipe contains unknown or validation training images')
-    elif training != data / 'images/train':
-        raise ValueError('Recipe training folder is outside the audited pool')
+    validate_training_config(options['data'], data, manifest)
     if (options.get('single_cls', False) or options.get('classes') is not None or
             options.get('split', 'val') != 'val' or options.get('val', True) is not True):
         raise ValueError('Recipe must evaluate all three classes on validation')
@@ -500,19 +720,35 @@ def train(args):
     options = dict(data=str(args.data / 'data.yaml'), epochs=args.epochs, batch=4,
                    imgsz=640, workers=0, seed=42, patience=0)
     target = None
+    wall_minutes = None
     if args.recipe:
         weights, options, target = profile_options(args.recipe, args.data, manifest)
+        wall_minutes = json.loads(args.recipe.read_text()).get('wall_limit_minutes')
+        if wall_minutes is not None:
+            if (not math.isfinite(wall_minutes) or wall_minutes <= 0 or
+                    options.get('time') is not None):
+                raise ValueError('Epoch-complete wall budget must be positive and cannot use native time')
+            options['time'] = None
     options.update(device='mps', project=str(args.model), name='train', exist_ok=False, save=True,
                    resume=False, single_cls=False, classes=None, val=True, split='val', cfg=None)
+    validate_clean_source(manifest, weights)
+    if manifest.get('validation_protocol') and target is None:
+        target = .8
     model = YOLO(weights)
     if target is not None:
         args.model.mkdir(parents=True)
         (args.model / 'experiment.json').write_text(json.dumps(dict(
             training_args={**options, 'model': weights}, target_min_ap50=target,
-            dataset_fingerprint=manifest['fingerprint']), indent=2) + '\n')
-        model.add_callback('on_fit_epoch_end', minimum_class_callback(
-            args.model, [manifest['counts']['val']['objects'][n] for n in NAMES], target))
+            dataset_fingerprint=manifest['fingerprint'], validation_protocol=manifest.get('validation_protocol'),
+            wall_limit_minutes=wall_minutes), indent=2) + '\n')
+        callback = minimum_class_callback(
+            args.model, [manifest['counts']['val']['objects'][n] for n in NAMES], target,
+            minutes=wall_minutes, preserve_resume=wall_minutes is not None)
+        if wall_minutes is not None:
+            model.add_callback('on_train_start', callback.start)
+        model.add_callback('on_fit_epoch_end', callback)
     model.train(**options)
+    verify(args.data)  # A loader must not silently change audited image bytes.
     completed = list(csv.DictReader((args.model / 'train/results.csv').open()))
     if not completed:
         raise ValueError('No training epoch completed')
@@ -531,7 +767,7 @@ def continuation_output(output, source_experiment):
         raise ValueError('Continuation output must be a new direct child of ' + str(allowed))
 
 
-def continuation_checkpoint(checkpoint, output, data, epochs):
+def continuation_checkpoint(checkpoint, output, data, epochs, training_config=None, manifest=None):
     """Change only the cloned checkpoint's run arguments, retaining optimizer state."""
     epoch = checkpoint.get('epoch')
     if (not isinstance(checkpoint.get('optimizer'), dict) or not isinstance(epoch, int)
@@ -539,13 +775,30 @@ def continuation_checkpoint(checkpoint, output, data, epochs):
         raise ValueError('Continuation needs an unstripped optimizer and unfinished total epoch horizon')
     if not isinstance(checkpoint.get('train_args'), dict):
         raise ValueError('Continuation checkpoint lacks training arguments')
+    if checkpoint['train_args'].get('epochs') != epochs:
+        raise ValueError('Continuation must preserve the existing epoch horizon to avoid a learning-rate jump')
     clone = dict(checkpoint)
     clone['train_args'] = {**checkpoint['train_args'], 'epochs': epochs, 'time': None,
-                          'data': str(data / 'data.yaml'), 'project': str(output), 'name': 'train',
+                          'data': checkpoint['train_args'].get('data', str(data / 'data.yaml')), 'project': str(output), 'name': 'train',
                           'save_dir': str(output / 'train'), 'device': 'mps',
                           'resume': str(output / 'incoming.pt'), 'single_cls': False,
                           'classes': None, 'val': True, 'split': 'val', 'cfg': None}
+    if training_config is not None:
+        if manifest is None:
+            raise ValueError('Replay configuration requires the audited manifest')
+        validate_training_config(training_config, data, manifest, require_all=True)
+        clone['train_args']['data'] = str(training_config.resolve())
     return clone
+
+
+def validate_resume_epoch(source, checkpoint):
+    """Reject a stale latest-resume copy; explicit older branches remain possible."""
+    if source.name != 'last_resume.pt':
+        return
+    with (source.parent.parent / 'results.csv').open() as stream:
+        history = list(csv.DictReader(stream))
+    if not history or int(history[-1]['epoch']) != checkpoint['epoch'] + 1:
+        raise ValueError('Latest resume epoch mismatch: inspect the saved last.pt before continuing')
 
 
 def continue_train(args):
@@ -558,6 +811,7 @@ def continue_train(args):
     if source.parent != parent / 'train/weights' or not source.is_file():
         raise ValueError('Continuation checkpoint must be inside source experiment/train/weights')
     experiment = json.loads((parent / 'experiment.json').read_text())
+    validate_clean_source(manifest, source, experiment)
     if experiment.get('dataset_fingerprint') != manifest['fingerprint']:
         raise ValueError('Continuation source dataset fingerprint mismatch')
     continuation_output(args.model, parent)
@@ -572,7 +826,10 @@ def continue_train(args):
     names = getattr(model, 'names', None)
     if (list(names.values()) if isinstance(names, dict) else names) != NAMES:
         raise ValueError('Continuation checkpoint class names mismatch')
-    clone = continuation_checkpoint(checkpoint, args.model, args.data, args.epochs)
+    clone = continuation_checkpoint(checkpoint, args.model, args.data, args.epochs,
+                                    training_config=args.training_config, manifest=manifest)
+    validate_resume_epoch(source, checkpoint)
+    validate_training_config(clone['train_args']['data'], args.data, manifest)
     # Validate inherited best before creating any output or launching a trainer.
     selection_path = parent / 'minimum_class_selection.json'
     inherited = None
@@ -591,17 +848,18 @@ def continue_train(args):
         location = args.model / 'train/weights/best_min_ap50.pt'
         location.parent.mkdir(parents=True)
         shutil.copy2(best, location)
-        inherited.update(weights=str(location), weights_sha256=digest(location), target_AP50=.9)
+        inherited.update(weights=str(location), weights_sha256=digest(location), target_AP50=args.target_min_ap50)
         (args.model / 'minimum_class_selection.json').write_text(json.dumps(inherited, indent=2) + '\n')
     (args.model / 'experiment.json').write_text(json.dumps(dict(
-        dataset_fingerprint=manifest['fingerprint'], source_checkpoint=str(source),
+        dataset_fingerprint=manifest['fingerprint'], validation_protocol=manifest.get('validation_protocol'),
+        source_checkpoint=str(source),
         source_checkpoint_sha256=digest(source), source_epoch=checkpoint['epoch'],
         original_args=checkpoint['train_args'], training_args=clone['train_args'],
-        total_epoch_horizon=args.epochs, wall_limit_minutes=args.minutes, target_min_ap50=.9,
+        total_epoch_horizon=args.epochs, wall_limit_minutes=args.minutes, target_min_ap50=args.target_min_ap50,
         continuation_note='Retains optimizer learning; earlier time-compressed epochs are not an exact uninterrupted 80-epoch run.'
     ), indent=2) + '\n')
     callback = minimum_class_callback(args.model,
-        [manifest['counts']['val']['objects'][n] for n in NAMES], .9,
+        [manifest['counts']['val']['objects'][n] for n in NAMES], args.target_min_ap50,
         initial_score=inherited['minimum_AP50'] if inherited else -1,
         minutes=args.minutes, preserve_resume=True)
     continued = YOLO(str(incoming))
@@ -610,13 +868,19 @@ def continue_train(args):
     # Installed check_resume restores checkpoint args; cloned save_dir/project/name
     # therefore isolate writes, and its allowlist accepts save_dir and time again.
     continued.train(resume=str(incoming), time=None, save_dir=str(args.model / 'train'),
-                    data=str(args.data / 'data.yaml'), device='mps')
+                    data=clone['train_args']['data'], device='mps')
+    verify(args.data)
 
 
 def evaluate(args):
     manifest = verify(args.data)
     from ultralytics import YOLO
     weights = args.eval_weights or args.model / 'train/weights/best.pt'
+    if manifest.get('validation_protocol'):
+        origin = weights.resolve().parent.parent.parent / 'experiment.json'
+        if not origin.is_file():
+            raise ValueError('Clean validation requires checkpoint experiment provenance')
+        validate_clean_source(manifest, weights, json.loads(origin.read_text()))
     if (args.model / args.eval_name).exists():
         raise ValueError('Evaluation output already exists')
     model = YOLO(str(weights))
@@ -641,7 +905,11 @@ def evaluate(args):
         raise ValueError('Invalid evaluation metrics')
     result = dict(overall=overall, per_class=per_class, weights=str(weights),
                   weights_sha256=digest(weights), dataset_fingerprint=manifest['fingerprint'],
+                  validation_protocol=manifest.get('validation_protocol'),
                   imgsz=args.eval_imgsz, augment=args.eval_augment,
+                  target_min_ap50=args.target_min_ap50,
+                  minimum_class_AP50=min(r['AP50'] for r in per_class.values()),
+                  all_classes_meet_target=all(r['AP50'] >= args.target_min_ap50 for r in per_class.values()),
                   interpretation='Reviewed public validation; no independent test or improvement claim.')
     (args.model / args.eval_name / 'metrics.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
     print(json.dumps(result, indent=2))
@@ -649,10 +917,15 @@ def evaluate(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['build', 'build_all', 'train', 'continue_train', 'evaluate'])
+    parser.add_argument('command', choices=['build', 'build_all', 'build_external', 'regroup', 'train', 'continue_train', 'evaluate'])
+    parser.add_argument('--target-min-ap50', type=float, default=.8, help='Per-class AP50 stopping target for continuation')
     parser.add_argument('--continue-from', type=Path, help='Unstripped checkpoint in an earlier experiment')
+    parser.add_argument('--training-config', type=Path,
+                        help='Continuation replay YAML: retain every training image and unchanged validation')
     parser.add_argument('--minutes', type=float, default=9, help='Continuation wall limit checked after complete epochs')
     parser.add_argument('--source', type=Path, default=PROJECT_ROOT / 'data/training-v2/data.yaml')
+    parser.add_argument('--frozen-data', type=Path, default=DATA,
+                        help='build_all: preserve this earlier dataset train/validation assignments')
     parser.add_argument('--data', type=Path, default=None)
     parser.add_argument('--one-box-per-stack', action='store_true',
                         help='build_all: allow documented plate-only validation relabeling; requires rebaseline')
@@ -674,6 +947,8 @@ def main():
                              if args.command == 'build_all' else DATA)).resolve()
     args.model = args.model.resolve()
     try:
+        if not math.isfinite(args.target_min_ap50) or not 0 < args.target_min_ap50 <= 1:
+            raise ValueError('--target-min-ap50 must be in (0, 1]')
         if not math.isfinite(args.minutes) or args.minutes <= 0:
             raise ValueError('--minutes must be positive and finite')
         if args.epochs < 1:

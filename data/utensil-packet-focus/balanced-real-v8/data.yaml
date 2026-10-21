@@ -1,0 +1,6 @@
+names:
+- utensil
+- condiment_packet
+path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/balanced-real-v8
+train: images/train
+val: images/val

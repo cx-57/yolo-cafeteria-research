@@ -1,0 +1,64 @@
+[
+  {
+    "name": "plate__train__lvis_000000354530.jpg",
+    "image_sha256": "87f22f998c6580c8036e75304c2bab720efe04a12a12e369525d5550282e69b3",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "status": "corrected",
+    "rows": [
+      "0 0.500000000 0.500000000 1.000000000 1.000000000"
+    ],
+    "scope": [
+      "plate",
+      "wrapper"
+    ],
+    "reviewer": "codex_native_image_visual_review_2026-10-18",
+    "reason": "Visible printed paper plate remains present beneath the hotdogs. Its visible rim reaches every image boundary. Occlusion is not verified absence; restore one clipped whole-image plate box."
+  },
+  {
+    "name": "plate__val__lvis_000000356276.jpg",
+    "image_sha256": "92e0c405f3afcc6663dc6b91fd90969b51d409285183190a0de0b2d7a787c7a1",
+    "input_rows_sha256": "29b545c419f8984806be53b3f45087c9127297e7efd1afa1293b8648b40d9c53",
+    "status": "corrected",
+    "rows": [
+      "1 0.500000000 0.729333333 1.000000000 0.541333333"
+    ],
+    "scope": [
+      "plate",
+      "wrapper"
+    ],
+    "reviewer": "codex_native_image_visual_review_2026-10-18",
+    "reason": "The blue rigid paperboard hotdog holder is paper_boat, excluded from the plate/wrapper scope. Remove its plate label. The identifiable flexible printed food package underneath is wrapper; box its full visible extent, including clipped edges and the portion behind the hand."
+  },
+  {
+    "name": "plate__train__lvis_000000310121.jpg",
+    "image_sha256": "cf7902d0031fa5009f84831bbae4bba5cacb4b1897a1be84deebbb3b2838f2ac",
+    "input_rows_sha256": "2b235e6bf0d99493ed9206df2ffa869b56c21986811b78ebe42169ade42774f5",
+    "status": "corrected",
+    "rows": [
+      "0 0.360429688 0.951448598 0.197265625 0.097102804",
+      "0 0.579687500 0.804906542 0.290625000 0.273364486"
+    ],
+    "scope": [
+      "plate",
+      "wrapper"
+    ],
+    "reviewer": "codex_native_image_visual_review_2026-10-18",
+    "reason": "Retain the foreground clipped paper plate. Add the separate visible oval serving platter under the roast turkey; food occlusion does not make the physical serving plate absent."
+  },
+  {
+    "name": "plate__val__lvis_000000530975.jpg",
+    "image_sha256": "5643aadb0049998a1f1e2a418af7be084c40d5ff5ac7eadf17b38cb5c61c0117",
+    "input_rows_sha256": "ff3c10ee7b530314ecd064a02a8c2873c2400e73f8c0080a335bbc637f296c32",
+    "status": "corrected",
+    "rows": [
+      "0 0.407812500 0.862500000 0.612500000 0.275000000",
+      "1 0.835937500 0.810416667 0.328125000 0.379166667"
+    ],
+    "scope": [
+      "plate",
+      "wrapper"
+    ],
+    "reviewer": "codex_native_image_visual_review_2026-10-18",
+    "reason": "Retain one paper serving plate beneath the separate paper food boat and expand its box to the identifiable plate extent. Expand the chip-wrapper box from the printed logo area to the whole visible flexible package, including clipped right/bottom edges."
+  }
+]

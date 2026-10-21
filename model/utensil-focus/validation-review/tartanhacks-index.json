@@ -1,0 +1,871 @@
+[
+  {
+    "name": "tartanhacks__orig_IMG_0810_frame_004_jpg.rf.c5d03c6fab85ef691b0bf5e94b68390a.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "57c4901b037bff6a6e627bdad5044cbb50f98ab99f176bdb97c3b92f23087200",
+    "pixels": "8e21b258af3720a0c44286945b70e2bf2fb648e5e7ddc8dc8851ec307b72aaf9",
+    "group": "tartanhacks__orig_img_0810_frame_004_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.44435185185185183 0.5824895833333333 0.682962962962963 0.4561458333333333"
+    ],
+    "input_label_sha256": "cac46893523890729a5e21df5d222ba32e53c84282ff42cb41856d4d9c99bede",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0810_frame_012_jpg.rf.7f361bcbb3dd1a5e814d3d90cb4bb018.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "319af807c00ff6a0e1679a083a4c13d3013baa955a3f150f3677ce908bc58987",
+    "pixels": "065ebb7c6bbbae5f4ce0d5bf8b7b9d5958cb1051d59d036b168229044206edf7",
+    "group": "tartanhacks__orig_img_0810_frame_012_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.6102037037037037 0.5751197916666667 0.30745370370370373 0.4341770833333333"
+    ],
+    "input_label_sha256": "7c9702484e45f33f854036c2fe45d0b3b96c1c041a42cf75862b489d68bde3f5",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0810_frame_020_jpg.rf.1b7ff14e5373843e39921af63c26ab71.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "2b13a83191bd8affeb320438deb4e8adc8060e61406ddb06591d1299787d41b9",
+    "pixels": "bb8acbbda054910319a5047c0ea2fd385295e9ff5d2801d788cac71ecc29e7a1",
+    "group": "tartanhacks__orig_img_0810_frame_020_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.5545185185185185 0.5024375 0.44232407407407404 0.5876822916666666"
+    ],
+    "input_label_sha256": "7483a98fd24ee2ef98f6625f97912e3e300f47a491b31d19b49554d053773e30",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0811_frame_005_jpg.rf.e4062b8b7fb741a702d013a4d3d9b513.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "a3a6ba4e2f465e147a14e1b8ac91fe2d790658955ce4cd20a23e04d2cdbb4a7b",
+    "pixels": "1d5316c2f02ff9978375896d9ac5e47cf1ec8c910ae197ece591864017c2d330",
+    "group": "tartanhacks__orig_img_0811_frame_005_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.6161944444444445 0.6627395833333334 0.6023240740740741 0.674515625"
+    ],
+    "input_label_sha256": "faaf9943569f7761060ac0c54fac5036465cc2d3bebc73f86a22410df73f22f5",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0811_frame_015_jpg.rf.67b100a567da834ac15ffa5d18336cf1.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "926993ac06db84ada5bc21078fb34df7f31709245da1cfb4cb3d86da7abdad55",
+    "pixels": "c4065ca9c94c408e7c5a1661e5da8016855266289157625f17ededc91b04ec40",
+    "group": "tartanhacks__orig_img_0811_frame_015_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.49016666666666664 0.6967447916666667 0.35064814814814815 0.6065104166666667"
+    ],
+    "input_label_sha256": "d09560eb34f66d3d15d7e02e3d8e1aa767a1a4e51ff257701621a91f70164e1b",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0811_frame_025_jpg.rf.9b56dad21029be6f64188d10dff8724a.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "aae02db9929bee54b3cbe343e409e0a987614ecb668a31a27d59cf1e6ff70b46",
+    "pixels": "1f6e8957caf42322167cce5c9b7f1e2e0ed32d342d3d79c63524009b868fff10",
+    "group": "tartanhacks__orig_img_0811_frame_025_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.5287314814814814 0.45710416666666664 0.7148148148148148 0.8668020833333333"
+    ],
+    "input_label_sha256": "be6d7d6c3e63aa80d6f463b14be7f596fe160fea8d54b048bf0d408a714eb0ca",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0815_frame_005_jpg.rf.37633afa58b3e17d04abae059508dd98.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "ed1ce836b87b8ff3873edef4ca962120e35c663d080cfc13d6756b77cbe73006",
+    "pixels": "750c40021768f48bae1d7c56f620af7a8e6b22ffed0f266afe74881fc6b4d557",
+    "group": "tartanhacks__orig_img_0815_frame_005_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.6236944444444444 0.5416666666666666 0.4603055555555556 0.5203072916666667"
+    ],
+    "input_label_sha256": "093434754b68e9f6c812c58758ada2a507cda45df247acdc238a707ae120f77e",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0815_frame_016_jpg.rf.13102c474670891830116d3961bac6cc.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "a2cdf3f6c307d0603e2246ab367533ddfca840fe5b457714093e46001701b3b3",
+    "pixels": "29485c6fc9bc92b7b9951f5f7823330e689a97f6050a3b1a0c80610f5d05b4cc",
+    "group": "tartanhacks__orig_img_0815_frame_016_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.38772222222222225 0.5268020833333333 0.599462962962963 0.40724479166666666"
+    ],
+    "input_label_sha256": "229e274a2ec96fe4463a6244a5d5f3f8ac2a2c6410ee9afc0f6d53662ea8e46b",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0815_frame_026_jpg.rf.d3ae45a7136a8415df0148bda107364d.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "7a3a5d639c48d7a539ee57ab09f7fed20087fc38107faa800c2cf78215ebb564",
+    "pixels": "4cd0aef9710e5c1dd46ca0c75eaf7392d2160a6c056b82fcdc06ed41764d05fc",
+    "group": "tartanhacks__orig_img_0815_frame_026_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.20701851851851852 0.5571666666666667 0.24687962962962962 0.7020520833333334"
+    ],
+    "input_label_sha256": "0d3b5faf70e700a1367fe8a51dc5ae797366851671213d121e61089aa9deb7e3",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0824_frame_002_jpg.rf.bc0cd018cf6fc18505213086dbec305c.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "596f17c2ad74bf18de45daeda10f7275052212bfb19394db9e3d1127fa43c0f5",
+    "pixels": "36e71dc6716544ae1718b9221f03af8c477601b959b99a4d075b765f54dc2139",
+    "group": "tartanhacks__orig_img_0824_frame_002_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.6158888888888888 0.5112291666666666 0.7521666666666667 0.37207291666666664",
+      "5 0.8888888888888888 0.22766145833333334 0.21516666666666667 0.283203125"
+    ],
+    "input_label_sha256": "91a7bcdb9dc9e67ed7e2e3195a149977ee2f98023db352ad08310ec8926baf23",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0824_frame_004_jpg.rf.152363b388d06a51e2fe0f0748387f33.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "be8463e746de14ecfeede3595f22c81c38baba4f3e8fe161309ad9194a145764",
+    "pixels": "6b2e51d988f383dba60acf82aec907e76d7a9b54510220ec261ea3dcfbd5290d",
+    "group": "tartanhacks__orig_img_0824_frame_004_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.4496574074074074 0.5874010416666666 0.7825555555555556 0.3693854166666667"
+    ],
+    "input_label_sha256": "ed3069daa4a5fd873100e48cd977c3603d58a54feafa0623e6101d4379284a80",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0824_frame_006_jpg.rf.740baa3f07eb2acd5e3c8a4228615cd3.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "57642ffd29aea380e3180949b703000fb6e3d5ddc2575bf634fddbffb3e2efa5",
+    "pixels": "56c45d86e3e47b1b563fec230ea0c8d6836723deeaebfb0133c10cdc51ecc853",
+    "group": "tartanhacks__orig_img_0824_frame_006_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.24305555555555555 0.40046875 0.4861111111111111 0.3295833333333333"
+    ],
+    "input_label_sha256": "ea55376e3b33762aaacce9947c7f0bc476c962d463998532f5252ba9a4923dd8",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0824_frame_008_jpg.rf.a0097489b53d8ccf5d7a16623e004163.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "03d38114ac83419ffb26280d2f89055e0b53b71a5bac2f75cdfbfdfff3a53440",
+    "pixels": "a51bbfc21de6d00f557a8d9467d0b0f40c22b60bbdcaa3488e1bee6c859fff3b",
+    "group": "tartanhacks__orig_img_0824_frame_008_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5 0.5235260416666666 1 0.5465208333333333"
+    ],
+    "input_label_sha256": "73d8ef1621cd6a75a801d8e1db6e13134a2acefd90e452abe9ef020b64a29ee1",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0824_frame_010_jpg.rf.183c795ec1ef3869e99ddc7d02ec7047.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "705ada223c28e779e78b1e9e35713fb26a01171087ab00edab154d9f50369924",
+    "pixels": "6db27491ff267ab3722132b9e24c9170d6ba17d9b50be218b2692f02e9f7534f",
+    "group": "tartanhacks__orig_img_0824_frame_010_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5772592592592594 0.5166041666666666 0.7452222222222222 0.3630364583333333"
+    ],
+    "input_label_sha256": "523bf6b147ad3775e368640e6d9cb2dceacb653f5b60a4a70fc2c67b30737f0d",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0825_frame_003_jpg.rf.69c21161c5a7327425d8e1613599de05.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "9b98a7a1922cd08ee3ea1e4d04135fbe6aed29b4ab263c984b07a83f46576ab1",
+    "pixels": "162d49f119b8e8d6da2162791d7d46ad41b586ea374dbdc6bbe95b5504dca09b",
+    "group": "tartanhacks__orig_img_0825_frame_003_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.4138425925925926 0.4570208333333333 0.8276759259259259 0.3614375"
+    ],
+    "input_label_sha256": "bf11ed83c69fad92f9298bfa2aeedacc18bd601035d2bbd359100233ad984b4e",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0825_frame_011_jpg.rf.72b6a13001fb51a411ce72e615b70bfb.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "f71790aa34a8c8ed5a64d85d5dc12fc65ec2901ae6504488ffa2042abfba458b",
+    "pixels": "5ebf1d74ae8a32ff91684057ae1159a2581f346119e7507dedda968c44f3b51a",
+    "group": "tartanhacks__orig_img_0825_frame_011_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.4346759259259259 0.42090104166666664 0.4578981481481481 0.19677604166666668"
+    ],
+    "input_label_sha256": "ecaa01cf440968dafaa09d7a3fa1b9137ee8352282e4966c990a2722600b9360",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0825_frame_016_jpg.rf.7ac6f533f0e8f1a7bec396c13242f1a8.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "38b565c764905fe8974c621da512ab9196af3b85a322b1d318ce0ef8f9d855a2",
+    "pixels": "98c0168f859e88e5f30a148bae1d0d790e60a7fde53bf385a191f9e1944ee14f",
+    "group": "tartanhacks__orig_img_0825_frame_016_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.7022592592592594 0.5185572916666666 0.5820277777777778 0.365234375"
+    ],
+    "input_label_sha256": "fc9aade72d237ee632b3a4f6cf4b210f7ca0d6f49d5293622e51879d6a7c9ba6",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0825_frame_020_jpg.rf.a35100ef46ddff2775f5bb0a874f98f3.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "fc175dae34c07295f95ed5ab96e05bd36bc0b3297ca34ee014c1fcbd8b8574e0",
+    "pixels": "0a96dff1f9faafceb913a23935d8785dcb37235b57852bb013452fdcd37d1a65",
+    "group": "tartanhacks__orig_img_0825_frame_020_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5147592592592594 0.5634791666666668 0.7352407407407406 0.406984375"
+    ],
+    "input_label_sha256": "4a1ec95bd4f38a34ab3c7ba74924993554b80b0ae0adb3a9a23974f2b46f7670",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0825_frame_029_jpg.rf.fc8e6b4491eedd0f58b356e994665ac9.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "19e9ecf86247246f3e023f0b72f453abc8cdcd2a16b682c08419245536fe1b54",
+    "pixels": "0f2b770a309b63cf235a329b16203d69aa438211629ef44e230b0fdb15b444c0",
+    "group": "tartanhacks__orig_img_0825_frame_029_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5 0.45766666666666667 1 0.7221041666666667"
+    ],
+    "input_label_sha256": "dec1f94e92200f8164b8b53b5350fd39fe170dcf8285dee8fd762d406b20936a",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0826_frame_001_jpg.rf.0c55eb439c3c7a5dad0cec2254b5819e.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "a333db895765cea7c0accf0c72860cb62d70484558f472ca17b04b526a2ac6dc",
+    "pixels": "7fc2b8e6289c279d732213c167fa5368e32867f4b0d1a9154beebeaf2d0c3d2d",
+    "group": "tartanhacks__orig_img_0826_frame_001_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.599388888888889 0.4631354166666667 0.4056018518518519 0.31543229166666664"
+    ],
+    "input_label_sha256": "7a6bae137025d54c66d1b4b668623c538c899104899c4e5f0843b9103152d589",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0826_frame_003_jpg.rf.b138a56266e8cc669b75d97af8a7c2c3.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "b51708858e68c645dd4ca39bc9fb422c1188f5063b3ae6a8ce0556da13d64e30",
+    "pixels": "19848c75f78bfb7c149007a62933f4244b348135fe7dd3cc5dda090016082242",
+    "group": "tartanhacks__orig_img_0826_frame_003_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.2754351851851852 0.63878125 0.550861111111111 0.360375"
+    ],
+    "input_label_sha256": "82c8dd862f2ca0cdf6b4c900695db41eb180c4604d8cb053de62d7bae0fa592c",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0826_frame_005_jpg.rf.421ec6c77be76a6ee9154a72265fb686.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "91705674ea800208f1a1438c95334d46521c599b3192e459187fb2b9a4c92faf",
+    "pixels": "879edbd86f20f907e3d9ba14652fe0976f1239080ef5fd32451038c547a3f66b",
+    "group": "tartanhacks__orig_img_0826_frame_005_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.7083425925925926 0.28479166666666667 0.5833055555555556 0.4128072916666667"
+    ],
+    "input_label_sha256": "dd938bc6e5bc390f184a13606a5147ea7de05b5b3fb6e67253d7cf70da93d12b",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0826_frame_006_jpg.rf.289d298b9acefa7dfa09aa84b0cf2fc5.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "17e9084096a94388cc43d7328b7cb1570b1dfae417ad01846645e126a1d2127c",
+    "pixels": "bb873d22323f47018f6e927658df70950d1d4a5e884516a6ab0adb57aedcd410",
+    "group": "tartanhacks__orig_img_0826_frame_006_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5198981481481482 0.30724479166666663 0.7341851851851852 0.4473020833333334"
+    ],
+    "input_label_sha256": "4a3df33cd28e895876d09a027efe1a1ca7b0da4a956644fd13699275c8c43607",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0826_frame_008_jpg.rf.9028c20e872bdf5e79bb1b21a7e80d99.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "7e0e5f69c9b50774f0765479d70b89f2416960e527fbcf5279dec65166c42df6",
+    "pixels": "279967aafe0dc4ea2894f4dea4f4cdeb79ba66a15887c2c456ac603f163d44bf",
+    "group": "tartanhacks__orig_img_0826_frame_008_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.38478703703703704 0.52871875 0.5935925925925927 0.473578125"
+    ],
+    "input_label_sha256": "eef266d7464d3e903f2dedec7b8155eddbea71131a49471a5bf2c380f0d72e6e",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0828_frame_002_jpg.rf.c6ea680e87c274d8688064e3983ca6d8.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "800ec89d1ba0db213307ebe3f5ee8d40bbcc7ea50eb48f7774941d711d51f0c5",
+    "pixels": "484c6cec19e0cfe9a680ec45651592d79620d74b360620d8ecbbcce7893d67e6",
+    "group": "tartanhacks__orig_img_0828_frame_002_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5949166666666666 0.43133854166666663 0.8101574074074074 0.41423437500000004"
+    ],
+    "input_label_sha256": "e4c8d653398faa3b58afddc95289eebab4abfa0ff877c62f28f8f36c6876e52a",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0828_frame_014_jpg.rf.02375d9071260de180c463dfe1c193a9.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "8bda0bdedb205586c4bbb9fefef24610aea0625753d9d80cb9381430ca798fb3",
+    "pixels": "a856f65fce5a2e8ebdc66a72199f98566a43badefdc9710213617a945a9a3ca7",
+    "group": "tartanhacks__orig_img_0828_frame_014_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5121574074074075 0.2866197916666666 0.43901851851851853 0.4868177083333334"
+    ],
+    "input_label_sha256": "c896f824506f0382b3cee550fd5d79e531cff869a391a0b0d2ddab46258458ba",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0828_frame_018_jpg.rf.f7c38e54c76b3924949dd6c54f0a025a.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "3beaafd851fc945ff505e2f804beb7bb4d6012ade5f4921cdc5d1e00f0784181",
+    "pixels": "780f66a9b9afd49427c8734a8cc52c9516ce0e3c833eedcfe2828258ee22cca0",
+    "group": "tartanhacks__orig_img_0828_frame_018_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.368270833 0.542968750 0.736541667 0.478026042"
+    ],
+    "input_label_sha256": "ee9d136a548c0bb6ff5eb5c3a2d47de17ed430983269e448b4b3105d4fc0b9a3",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0828_frame_021_jpg.rf.e8d0380b7a6aea21ea39ae9676cd8b16.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "d46a6c3996113b68ebd64f533fcedfdcddaa392e4644b4cd5f61682e2aad27a0",
+    "pixels": "98d90402a61676422126dfd64448d28ee49a98fdce3317a04809468520dad63d",
+    "group": "tartanhacks__orig_img_0828_frame_021_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.30569444444444444 0.41168229166666664 0.39837962962962964 0.2603385416666667"
+    ],
+    "input_label_sha256": "850ebb4573e1dcdec68032fbcf4578bd5df2e191edab82624c3e67e562add27f",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0828_frame_025_jpg.rf.af79f4cb51b3244819b614a8c080d108.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "08cacef77c1b36a096570faec73c591fb75348aa48b619957e26c4bc669ec964",
+    "pixels": "eeaa22afb7e98ffbf3a187f0160f04c3e311a5254517ea4156be2e498e64396c",
+    "group": "tartanhacks__orig_img_0828_frame_025_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.4544259259259259 0.4663072916666666 0.8051203703703703 0.2963854166666666"
+    ],
+    "input_label_sha256": "0b5f05bac2a1eb9571bf467fbf298bce0bcc0bd3e300dcef49320fb91deb315c",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0830_frame_004_jpg.rf.e9a83c66e4544148e4f67aa59364a3cf.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "f0f3d69a2cd5cec963e2a93e90e8dfec7dbcadb08d3d50785f7ee70cba738583",
+    "pixels": "5ad0d0f4929f3b61d2e8642c2cf81aa5ad7d52bda6a05e19d86e7d91328e9a6f",
+    "group": "tartanhacks__orig_img_0830_frame_004_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.47025925925925927 0.4900260416666667 0.3849074074074074 0.25557291666666665"
+    ],
+    "input_label_sha256": "1e7baf8a5fc27bca7d4a7cf574d4e09d97945af3c5d653334c433a774eede8fe",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0830_frame_012_jpg.rf.653850af7580c212d5b041795e9c180b.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "731cbf1639ab6740bb18ac3cd7d87bcc4d8e28c5885b1b1cd9c9aeefc74beeb6",
+    "pixels": "a67a7a3ac6824d6bda85fb68073eba9f5659699648bc355ebe070743531738db",
+    "group": "tartanhacks__orig_img_0830_frame_012_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.47562037037037036 0.335421875 0.2663611111111111 0.20469791666666665"
+    ],
+    "input_label_sha256": "f6b7ad47c02d1fefa236f5a5893d4dd26fd9069c48ab39a85498e6feb6ac8b4a",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0830_frame_021_jpg.rf.9bb5e44795f88e3b1140fe084d87e0a9.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "2695e2d7c7e4b054a0bf883a68c3e7b282f54f92a4081058cf33c2c5806dea37",
+    "pixels": "21018be803cbb2fbf98a0ab06503bcfd018d2506399ed5bd2490486e28aa6196",
+    "group": "tartanhacks__orig_img_0830_frame_021_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.6223055555555556 0.4985364583333334 0.2924259259259259 0.29915625"
+    ],
+    "input_label_sha256": "41ab8664f528f8262a6d502eb215569e78798e1f0139778e42b7124b2cd02b0e",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0831_frame_004_jpg.rf.94e0f53207e31bfbf83abd6b17fb3f0d.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "df5521e494adc164d81450061ac3f9d8cdb8420b8e33aaa99de2ee266782aeb5",
+    "pixels": "ca0f79101d5c0085d4b85e57e203070b01e2cd7a305a7e9e5c22b07b2862726c",
+    "group": "tartanhacks__orig_img_0831_frame_004_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.2952685185185185 0.32061458333333337 0.21039814814814814 0.35216666666666663"
+    ],
+    "input_label_sha256": "f3599d7c306cda9f8a8355ef256c0d5557933f30b5e61b66ab4b7eb2a90ca595",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0831_frame_012_jpg.rf.deb7f996a269485ea670cbd62a488eab.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "df17ffc60d98307f51dcc3ebc7255673d4ad3b30f1a74f7a9372d74908150b6c",
+    "pixels": "b5f5e8c7e378ab3b18bde1e80451e3ba8db95b1ad175632e638935310a7c186d",
+    "group": "tartanhacks__orig_img_0831_frame_012_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.5449259259259259 0.4285625 0.45089814814814816 0.3618125"
+    ],
+    "input_label_sha256": "c62431f1f7d32c141383ff4d13d1da822c1b34f5c668a19993e147cb873ac3b2",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0831_frame_018_jpg.rf.1f1d84546fda8b0cc7dddf50d139263c.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "ec2fbdfd629a7355513fcfb1d93bd04fbac6226e375e9c0cbc3d2a0a5035f113",
+    "pixels": "8eb9c4246d89c39943efb83a9be83c0a619f650c51cadebeead314bcbd1d1bdb",
+    "group": "tartanhacks__orig_img_0831_frame_018_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.18937962962962962 0.5444947916666667 0.31105555555555553 0.1332604166666667"
+    ],
+    "input_label_sha256": "17aa38c7abeb7500789565062c3a29e3c7be78b218fda2f38fb800062d9ed94c",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0832_frame_003_jpg.rf.09deebafa1fcc1fe60a867970c9ec3d7.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "419fe5de000f4de5caf0ea10043d6db40de9cd2700de91eea9ddce1489fdf88c",
+    "pixels": "27c8a7f92378bd80a1b49dfce96d3d8536a6c71d4206f21c747ee753a2565253",
+    "group": "tartanhacks__orig_img_0832_frame_003_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.3635 0.533203125 0.32790740740740737 0.27832291666666664"
+    ],
+    "input_label_sha256": "773893515f556fc219d0a86d9fc43ad60703d91a5d5b02437c23af1c16a20590",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0832_frame_011_jpg.rf.2c2b75d822c795a6bfd70f60a6268fc0.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "e4a6d186f9f9383620b74b192b9d6ace3425ca34ea3f226fd1f8a765ce6f5fed",
+    "pixels": "54d88e1812e3f7015b0d931b436f921334731f2da9279855b4e153e8d1ee5a6c",
+    "group": "tartanhacks__orig_img_0832_frame_011_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.44560185185185186 0.4760052083333333 0.8310277777777778 0.32440625"
+    ],
+    "input_label_sha256": "422572acd2633fe8a88610773244c6469689ad6a153b0aa1ca8ca73a40e1485a",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_0832_frame_017_jpg.rf.7aac05f93b760eb4e4c08a24c7450911.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "7dd1d5a466e6166655f0378c4d2901ff36dfb9f3ae17c5049682359240b8e8b4",
+    "pixels": "71411366e0bee88705e3f1f7a38a1beb74b238fa97c7bf7c6f3c855a22db790b",
+    "group": "tartanhacks__orig_img_0832_frame_017_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.4621388888888889 0.45482812499999997 0.7205185185185184 0.17475"
+    ],
+    "input_label_sha256": "227ebbf4dc6b6e0791857312c1e07ef3c31e48c1b356590fe8f048619453e6d5",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6204_frame_006_jpg.rf.b7d86caa2526e6cd2558ffea830acaf6.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "c553dbd9cde734c1653bd38dbe0fb6dbe481fc264223d2fd9549ed38427209ff",
+    "pixels": "596a8f214b96c063d5dc70d7d449a357b5c2857eee41ad2eee15d941730f7c15",
+    "group": "tartanhacks__orig_img_6204_frame_006_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.5740740740740741 0.34388541666666667 0.5647685185185186 0.2757864583333333"
+    ],
+    "input_label_sha256": "402d132875f8cd14d19b0e0f3abd16b37ba6b25fb47b98e1a6def2d5d699ba11",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6204_frame_018_jpg.rf.0bcd3a616641782033d59937ac07de23.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "d1156ca432e319152d5858721eff64cc35fe602b067e4aed594239b125ad87c5",
+    "pixels": "2af8982fd5fb4648d5d80b40845bfd9b334a1e41ad422a144309cfebaf1824d7",
+    "group": "tartanhacks__orig_img_6204_frame_018_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.3927685185185185 0.3940885416666667 0.41512037037037036 0.25119270833333335"
+    ],
+    "input_label_sha256": "7646a1c8ad70d266e2ff42e533472403cd8ea4f29cb8ab672849907129dff902",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6204_frame_028_jpg.rf.c6a5641f2e24d6d1045e3cdf76fedf01.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "16ee505e2537fd315850c51dbf9420c0b964bc5116fc0a3a738bae83e924e78e",
+    "pixels": "cec933b4f529bff0b1c8d0312f77f4d960d7b110bff50bd56555448948621d83",
+    "group": "tartanhacks__orig_img_6204_frame_028_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.29412962962962963 0.441890625 0.5413796296296297 0.13705208333333332"
+    ],
+    "input_label_sha256": "7d01095efd2164503b43952317aed579ad0b879a25bc9f00cdaad2d00db60bff",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6205_frame_006_jpg.rf.93523166a2bfd07acc87fe65adff8c41.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "2136d148c0477433247261ae2f15dd21a62e49fded2c2541e7b28799fa0586ec",
+    "pixels": "1596b713fea4c6a01f968afecfb42c22a33ad4e8971abe1c8f4099075d880dc1",
+    "group": "tartanhacks__orig_img_6205_frame_006_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.46841145833333336 0.47529629629629633 0.179 0.4177314814814815"
+    ],
+    "input_label_sha256": "e08aff5bcebf711a212ea9d0e16669856dc2e669136f3b438ca34d0653f4bc02",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6205_frame_018_jpg.rf.bd5ced7cf23dfa124913822b5a2197a6.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "0ed7a5e32f6e9ab597c5ef019aaaf83e7c6183384e21a4f4fee9bf564f40ce3f",
+    "pixels": "0025d21d300dca3c603cc00d14f4719a02593c28607ef8a35ad26f45eb7e5f5c",
+    "group": "tartanhacks__orig_img_6205_frame_018_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.673609375 0.20412962962962963 0.17272916666666666 0.40825"
+    ],
+    "input_label_sha256": "8be5519dbc086330d6d44e99140ca6292526625c86555018b680bc1c6964cc5b",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6205_frame_030_jpg.rf.4216b2554bf0837069a1310ba0f7d7e6.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "42c5cf73633d8f61d8bdd10a29884d2f436bdba9c117fedd3d5e14cf2d290721",
+    "pixels": "449d15710e153c4ea133faf808b4a8763d0782b266e811ad7ccc4b68326411ae",
+    "group": "tartanhacks__orig_img_6205_frame_030_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.245921875 0.6905277777777777 0.16961458333333335 0.10327777777777779"
+    ],
+    "input_label_sha256": "35a719e9dbfa19fa3ecbd5cc74355f799b9dcceb772c3fdd44c0f22a8e8d52c7",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6206_frame_006_jpg.rf.ee26b294657fb5089172bef72b6de612.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "bc25eb8b19c904df1925540462c0daf2fcb954f7a8ad96dd1f4fabd6ca5dc527",
+    "pixels": "29241156a63851026c82442e04a7705c375a879fd676d6a9c1b9ff47060ad04e",
+    "group": "tartanhacks__orig_img_6206_frame_006_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.03625 0.6103518518518518 0.0725 0.36375"
+    ],
+    "input_label_sha256": "9394439d3472ff3d23c7c1b5450d85237dd37f2554e9c3a1ba55cf0d382357b3",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6206_frame_017_jpg.rf.e8aa236c69aad67286d03ac3b135290a.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "ae6aa29e98ab52e9c2024f4e897949f8d3ff8ab4612a3f89640d3cb8ed19cf8e",
+    "pixels": "a3e32d8e19c6e24d34722c3e0700d8a73d44dc4bd36831f103b3358471ae3a81",
+    "group": "tartanhacks__orig_img_6206_frame_017_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.535421875 0.42921296296296296 0.25572395833333333 0.695925925925926"
+    ],
+    "input_label_sha256": "b5983404bb965c174f8314d3576fc642534329b26be2f57e578bf83ff63dc43c",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6206_frame_028_jpg.rf.a7cba78116ebaaf2a09e60059aa8f743.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "0bc2fb1def2f49353b3440b9745979e4d6b63e1318608cc48b2612aa523973f0",
+    "pixels": "65af7686bb8fc7bb4bce18b997c26c5b4ec9aa08ae81fc20a3dc0a83e7706d1f",
+    "group": "tartanhacks__orig_img_6206_frame_028_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "3 0.430359375 0.7544074074074074 0.251328125 0.41112037037037036"
+    ],
+    "input_label_sha256": "0720cd5e0607ae887ba9e1a95b560b5a3c15983fd38d11e5dd7cc39d609df418",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6210_frame_004_jpg.rf.f530c2a82188e77bbcb83b29bbe3f680.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "5298d145dd7eb94ee997c178f348751c8b18fda581ae08d5403c6ecb203d1db0",
+    "pixels": "eb6eca6466b27c33df43dbb2208e3e733c7f704b46bf53af0d7d37c07268f13e",
+    "group": "tartanhacks__orig_img_6210_frame_004_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.611864583 0.772108796 0.369541667 0.455782407"
+    ],
+    "input_label_sha256": "da79e1e122407b1ca2f24f84884abd8e8738b5245d0c0d8a8a9a63f16cc600d7",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6210_frame_012_jpg.rf.0aa56cfcddfe78a1bac4114d97b4a051.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "ff95e0e0f43c78a8eae0a976379158b51af064ef8edf1c34261e632998c9377b",
+    "pixels": "dd7a59bb35bece5987af2a671a3326a7421cb2f303f96923434963c9fb72db58",
+    "group": "tartanhacks__orig_img_6210_frame_012_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.426661458 0.198039352 0.467895833 0.396078704"
+    ],
+    "input_label_sha256": "353d653fe7394615dbef75e7e6761bcc56cf564a4c232fdb0ba12260ef73ef48",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6210_frame_020_jpg.rf.ac809a7fc2fdd3482c1ca1db32844948.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "f4c695975cba0f3470273110a71a8066b1522d67a3e54b278e4be53ef4705182",
+    "pixels": "582a71b5a330b1b799dcef50dfa9c53483f92af83a0af0add8e62493be951c25",
+    "group": "tartanhacks__orig_img_6210_frame_020_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.7710885416666666 0.1824722222222222 0.25311979166666665 0.3649444444444444"
+    ],
+    "input_label_sha256": "4e7a14cde7a57cb9ea3550157144382914f00025a80ae545039f3f62550e423e",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6210_frame_028_jpg.rf.2cf2c04c5a44a73fadf42a0471075cb8.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "5ef883c6517ca0ab11e809be682ed9850a3c36c55b97a4aa3b4b569440c9a6e5",
+    "pixels": "0defa6aee34c75ba8b4cbdc0b525d0dd5757e16cc3ef0a5832b14abcdc23eb6e",
+    "group": "tartanhacks__orig_img_6210_frame_028_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5414791666666667 0.7451203703703704 0.2860729166666667 0.47125"
+    ],
+    "input_label_sha256": "6760d5b2a9b5682169cb72cb56d9f92f55a7dc4e0575ff0a5d450036e3bb03ae",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6210_frame_036_jpg.rf.78481107498967f74aac70ec6d113899.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "e23711258cf09f50eb07410558b98c1f57341e709d647f34c19a367d7acae336",
+    "pixels": "39968c1cacd4d9865e3ff7e1b0f39362b1eb9dde0643ef7e1323cb1015742c1a",
+    "group": "tartanhacks__orig_img_6210_frame_036_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.41630729166666663 0.1915740740740741 0.27270833333333333 0.3502777777777778"
+    ],
+    "input_label_sha256": "e95886145b107e87f0df5ba7bd43c39f70362f6b35fd231b5b616a09c163bb1f",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6211_frame_004_jpg.rf.326b8514b5fe4e29c1ddc9712c1bb0be.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "2afb8e8e3fa2d47539f49ab71558f1b50a8d31d806cbb6f2d09dfb6648c5d3f8",
+    "pixels": "6679d54080d151f720656135ce7fc77dd8493a946627a3971f4f4918bef3d586",
+    "group": "tartanhacks__orig_img_6211_frame_004_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.350729167 0.781368056 0.230088542 0.437263889"
+    ],
+    "input_label_sha256": "126a1437030cc086bfb683197409f86b5033154a7ab1895cd8933d0248e47ca5",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6211_frame_012_jpg.rf.2ed56a63e1aee1d73f33248ec6700c49.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "969b3fb6675b437b6ad14dafb212f4ef8a6f833d4696556e165beb38d254174f",
+    "pixels": "754b513d6af7a1fb56a17257fecdc64133af97c6083854cb600ed3e01ffbad4c",
+    "group": "tartanhacks__orig_img_6211_frame_012_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.4600104166666667 0.2697407407407407 0.30521354166666664 0.5394814814814815"
+    ],
+    "input_label_sha256": "543f5891a0a36a77611b2ea3a946259261d3d45a03824cceb3cce707f552a21a",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6211_frame_020_jpg.rf.8d96bef63e6eed08aff626807ee9953e.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "d04106bdfbf8f854e9d1d1f6fb32d9c19b676fc6ddb20559ed75c9b411f493e3",
+    "pixels": "f4f5a6314f029936a6b2ad3399ade5c46c587f2983d3a42709a5567a791a28ba",
+    "group": "tartanhacks__orig_img_6211_frame_020_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.5357864583333334 0.4422037037037037 0.2253125 0.3957777777777778"
+    ],
+    "input_label_sha256": "ecadafa2be8a3e5162721f745cc9b66b3d2a8792cc9685419bd7262b43cbd8d4",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6211_frame_028_jpg.rf.3ca51c0099b2b4d2ac99ff4252412315.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "8b3ca9350dc16929a2cfddd240f548775ea0b4b35e5d1e3bc590602f0980d4f2",
+    "pixels": "3999d236f378cfc0cf55886e548aead343017966c1e5a26bfa4f43a1b4273203",
+    "group": "tartanhacks__orig_img_6211_frame_028_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.4028958333333333 0.6632407407407407 0.18077604166666666 0.3862037037037037"
+    ],
+    "input_label_sha256": "78db6f4a0809ed316ada771b5174621c464d1d971c1deccc83976da1cec18f18",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6211_frame_036_jpg.rf.f94c81adf65890f0ce0d4c6d2525c17a.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "f0ecbbac99b9123afb8ed88b2f4bc9bda07d399374cb69f7f382ae468bd18999",
+    "pixels": "9adf23c88d4fe65eacbd8f4f4631f6f38423148b786961edf562fabecdcf5e00",
+    "group": "tartanhacks__orig_img_6211_frame_036_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.3712604166666667 0.5407685185185185 0.3362604166666667 0.2384814814814815"
+    ],
+    "input_label_sha256": "9af96102e3148e06eae87f307f28ed93e4e1c8cf4b98cea29d435dcdc5280193",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6219_frame_005_jpg.rf.61e80feb0264eb627f07e9a497417540.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "7cca4928cc0276fb68a768dbbc91e3ae24c4afabb7955558f3c39edc54ed2b1e",
+    "pixels": "cac653c2493443ec9f6855ddaaa5b1a21f7f2e75a8016e26329d851388a01d59",
+    "group": "tartanhacks__orig_img_6219_frame_005_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.39671875 0.586037037037037 0.2960260416666667 0.4540092592592592"
+    ],
+    "input_label_sha256": "f6c6f3ad9334848c6d618d46e267f0c2241fcfea0f65c358a7e07f2a43a60c06",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6219_frame_014_jpg.rf.7a1de2f3153b9182812a088ef20f1358.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "470c513f890c39d99f0912f9f4e380fdaa1155d811dced088e709e5e54e93d1d",
+    "pixels": "1cb58f5481ca3a6d0a78e0071bca486ed77e4d41c301d84fcdd564d0f808ca42",
+    "group": "tartanhacks__orig_img_6219_frame_014_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.7450520833333333 0.49386111111111114 0.26353125 0.48262962962962963"
+    ],
+    "input_label_sha256": "4bc71ceb59cb0616c7a6159906e30e174b5e22075b7949efd339d5d0783b8c47",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6219_frame_023_jpg.rf.fe577ff3e8958edb5be036685c67f925.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "5059eecf631852b115c2b6523f14a703eb5572aa33c27cb0bb07d9c0ba990128",
+    "pixels": "ab6779eb293e81203b9a9294929b12e9eb80a839d8b3147b61e0f85ff370eb7c",
+    "group": "tartanhacks__orig_img_6219_frame_023_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.6502604166666667 0.6105 0.20225520833333333 0.3515277777777778"
+    ],
+    "input_label_sha256": "f56a1aa2b4a710953d15553603120d3c7fc92948daa6be318a1be058f448ea7b",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6219_frame_031_jpg.rf.74453f7212bef5705fb0702b93b3d2dc.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "640874fd2c941c7d5e9078a9868144a7d840a5148a1d4cbd8acb132d03231eee",
+    "pixels": "edf8bb4bc1bdd07bff542596159955295c3d3234c4a13a16ef30da6963b3ff50",
+    "group": "tartanhacks__orig_img_6219_frame_031_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.781114583 0.321622685 0.379921875 0.643245370"
+    ],
+    "input_label_sha256": "504f7bd5114598e0502e8c8801c7188484436189f5d26d9f8a792708d586f5f4",
+    "frozen_val": true
+  },
+  {
+    "name": "tartanhacks__orig_IMG_6219_frame_040_jpg.rf.a5e43d4242d16a50914fb994fc2dbf12.jpg",
+    "split": "val",
+    "original_split": "train",
+    "sha": "551523270fe251082c41e22c155c8a355a30ca75d2561b7503e3a4b0c424dff3",
+    "pixels": "08d353ab4f491504d2d47087920dcdee8341b9bdb48b703a527dd11da4abbce9",
+    "group": "tartanhacks__orig_img_6219_frame_040_jpg",
+    "capture": "tartanhacks__heldout_source",
+    "rows": [
+      "5 0.41996354166666666 0.4900555555555555 0.17063541666666668 0.35000925925925924"
+    ],
+    "input_label_sha256": "b6e7155dbdf4070528a0264bd271937f4b09a67d2405439b26e87bf5e9c774ef",
+    "frozen_val": true
+  }
+]

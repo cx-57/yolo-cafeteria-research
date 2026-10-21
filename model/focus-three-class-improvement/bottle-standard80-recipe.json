@@ -1,0 +1,15 @@
+{
+  "target_min_ap50": 0.8,
+  "wall_limit_minutes": 1,
+  "hypothesis": "Engineering first epoch of a proper80-epoch standard Ultralytics training run on the complete corrected1294-image pool, COCO-pretrained YOLO11n. Subsequent nine-minute chunks retain optimizer and total80 horizon; no native time compression. All augmentations/optimizer/warmup defaults unchanged. No performance guarantee.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/data.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "imgsz": 640,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0
+  }
+}

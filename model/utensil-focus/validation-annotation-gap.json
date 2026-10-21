@@ -1,0 +1,14 @@
+{
+  "name": "school_lunch__010788000_jpg.rf.d192224e052df030b38ca826840724e2.jpg",
+  "image_sha256": "37d33aa8534c7679066d489d2ccab61ac61bbbc363ed36f694e9c3e225585c37",
+  "rows": [
+    "0 0.26339285714285715 0.7247023809523809 0.4419642857142857 0.5089285714285714",
+    "0 0.6930803571428571 0.6889880952380952 0.37723214285714285 0.46130952380952384",
+    "0 0.24441964285714285 0.24553571428571427 0.23883928571428573 0.29464285714285715",
+    "0 0.46986607142857145 0.27976190476190477 0.15848214285714285 0.22023809523809523",
+    "6 0.7488839285714286 0.15773809523809523 0.19866071428571427 0.31547619047619047"
+  ],
+  "reviewer": "Codex native-resolution visual inspection 2026-10-19; no model prediction consulted",
+  "finding": "Metal eating spoon along the lower tray edge is visibly present but has no class-3 annotation. Validation annotations are incomplete. This example establishes a reporting limitation; it is not silently relabeled during the fixed-benchmark training comparison.",
+  "status": "Requires a systematic validation annotation review and reevaluation of both baseline and revised models; no 85-90% certification yet"
+}

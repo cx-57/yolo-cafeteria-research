@@ -1,0 +1,207 @@
+[
+  {
+    "name": "plate__train__lvis_000000009270.jpg",
+    "image_sha256": "f09f21975851d2b443e5a7462a5de5560c82430e06c75b7db02ae69b56a46d6d",
+    "input_label_sha256": "f37a297ed09c6d641aa72ed74e4a17bcbaaf23a2104a0a0f9747523d279ddcb1",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.270047170 0.382031250 0.351415094 0.098437500"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000087593.jpg",
+    "image_sha256": "4b3e69568524c56e95f0c17265b606aaa4b5be43415c69df04b831cd96f36dee",
+    "input_label_sha256": "0d2f1826244da450c9c0a436b1c3205f85f832c3a97ccec6a4776058c79eebff",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.638281250 0.754166667 0.723437500 0.120833333"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000091952.jpg",
+    "image_sha256": "99488e9a84bae8d43e92f12f012b7d8451125691e6cc80bf0efc02a6e27d0c11",
+    "input_label_sha256": "e5e686b1cbf84a939ac82ae377e132377931d310c19b81b71589eafd886d2e6f",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.735937500 0.351562500 0.212500000 0.546875000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000112044.jpg",
+    "image_sha256": "391556fa8714c310ec21810f5bd60111d1fb0c58f7d024c5ef8418f0daa59a74",
+    "input_label_sha256": "0d7ed5491bf4391d16e8ee4735293d8381a83bc1db649373463f63dbf1a2adf5",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.307812500 0.203747073 0.296875000 0.407494145"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000282143.jpg",
+    "image_sha256": "a61225292e2a6ab6126a21bad73c20852b83156be3fb3b84482b891a6cff9f7e",
+    "input_label_sha256": "1497dfbd7b917a34b8eb47d0de5fd0d9f7966769f593545f8cae99fabcb90b9f",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.730000000 0.874666667 0.224000000 0.250666667"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000468276.jpg",
+    "image_sha256": "600a18c4aaff26f2f1b9d5025b51d0bba5fe973859cc5de987be7d1b98567839",
+    "input_label_sha256": "473e1e3b3e9278542c1ffb8ffbdcfce66424d77e03f22e62bee8f1acd7c3d440",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.414062500 0.848958333 0.375000000 0.302083333",
+      "3 0.500000000 0.886458333 0.075000000 0.227083333"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000471842.jpg",
+    "image_sha256": "2786a541e950b11b57aa0c94cc8237add3e91c04de9ef8447a0eba08179abb4e",
+    "input_label_sha256": "5f10b0b512c9d3cdebdde4cf7f78e8fbee394e1b131406bd25d900fb099883fa",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.682031250 0.210280374 0.170312500 0.420560748"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000479350.jpg",
+    "image_sha256": "8ca52d1c818432ff30a3042668cf2b5c92134c754a34f03c540a78dc008c8df6",
+    "input_label_sha256": "d4917d7dec240d01ca11f19a415c619ffa0a3d2ded964ed86c38d35e5d4a94a4",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.147656250 0.386792453 0.057812500 0.160377358",
+      "3 0.347656250 0.367924528 0.139062500 0.202830189",
+      "3 0.791406250 0.698113208 0.042187500 0.141509434"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000488373.jpg",
+    "image_sha256": "8864babddfd11d257cea4ea5c3f49b37e453ed465c27ad4f33e25da74471fc2d",
+    "input_label_sha256": "28f61da7740170473233de3138231b62d9ad8bd07828f9d9fe06826fe5a1893f",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.130468750 0.544496487 0.029687500 0.133489461"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000492729.jpg",
+    "image_sha256": "a8859df3d9542bff014dc996edbb0c35218542c618f3450e44588e056d7238b7",
+    "input_label_sha256": "2360444eff3e47ba47dd48bfafbcf5efed2cdcc4abb0227c5d11444e82705ad4",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.509000000 0.428000000 0.314000000 0.376000000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000495095.jpg",
+    "image_sha256": "0b41e481114a80887fe0e09606453ef9ef681fb856a20e01f9eb0afebeffa41a",
+    "input_label_sha256": "ec7b23c674e48f57dd555cce494988a9fdb2d088496039229782d8de74c22437",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.205065359 0.515522876 0.070261438 0.057189542"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000505234.jpg",
+    "image_sha256": "38b01830ccbef98497dde2a7ee17da8d0566edcd6da837093dc3148eaa89f90e",
+    "input_label_sha256": "f4267cd40f5fc5311a3fe291a0c2cdb3da418e2eddd9ebcae814ac5cbca0133a",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.400781250 0.463443396 0.126562500 0.351415094"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000529929.jpg",
+    "image_sha256": "66260b92dab0d4004ac39cb602f27ec2201cf64019363bfb557a08b6f6026d73",
+    "input_label_sha256": "59985aaa0133850dff65aa76d3eb555363ba781bd1919310b45921ed3178ef15",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.973437500 0.379166667 0.053125000 0.187500000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000533976.jpg",
+    "image_sha256": "126364261b6c99e22f4a983b361f48a7603af0927d8a8dce3cfd56a1ef190fe6",
+    "input_label_sha256": "8355fda3af70be3f098d86f4c49cf056bde9299c6e07b978b3b480c55f4155c5",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.396875000 0.414062500 0.177083333 0.059375000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000552467.jpg",
+    "image_sha256": "02ebaeb24a7fc27bfb27a5f3a9023677aebd88cb87f7da6c6fb01eab6f903f10",
+    "input_label_sha256": "e90d1c41f5853fb81dde3f631618f5e690d8d3396176f57d1aec65fbf591cc77",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.242968750 0.266871166 0.117187500 0.071574642",
+      "3 0.342187500 0.390593047 0.018750000 0.089979550"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000036260.jpg",
+    "image_sha256": "32ea9dd260e4559ef50baf1b77735f2a7aeb844433e5e60596d566af7dc97e3b",
+    "input_label_sha256": "b01810547e9f399d2f31466b6a8a121a2b18930ee8524947dfb1bfdba77267ad",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.657812500 0.152083333 0.115625000 0.304166667",
+      "3 0.864843750 0.547916667 0.270312500 0.129166667"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000238795.jpg",
+    "image_sha256": "ba3416a8b2d15a01df4c196a4ab7c5b6052530cfdd799dbc0f0a636766d694a6",
+    "input_label_sha256": "3773d23ac6a9923dddc51b862f8cdc77843a706f560ad7386adf607f7fd0bb07",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.541406250 0.881250000 0.326562500 0.237500000",
+      "3 0.710937500 0.829166667 0.578125000 0.304166667"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000272426.jpg",
+    "image_sha256": "9602378dfb7df327874ee896e5f2d6a25293ceda0dacddbd009d8a8c6ed4d5a0",
+    "input_label_sha256": "999b0a6ae5738190487934f399c42022a9b0bffc9bb64b4c877d57e0b1182664",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.357031250 0.588357588 0.098437500 0.374220374",
+      "7 0.477343750 0.489604990 0.104687500 0.201663202"
+    ]
+  }
+]

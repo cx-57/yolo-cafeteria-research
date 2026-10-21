@@ -1,0 +1,54 @@
+{
+  "target_min_ap50": 0.8,
+  "wall_limit_minutes": 7,
+  "primary_comparison_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
+  "hypothesis": "Add8 reviewed independent-ID, small/crowded plastic-beverage-bottle scenes (28 boxes) to the retained1294 image pool; preserve all images, labels and splits and prior source replay. Each new photo receives four exposures, not four independent examples. Start an explicit new optimizer phase from the separately evaluated63.08% fixed126 bottle AP50 checkpoint; data change and reset mean gains cannot be attributed to data alone. Seven-minute epoch-complete budget normally yields three epochs near9minutes;80-epoch schedule stays fixed.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/bottle-recovery80-chunk9/train/weights/best_min_ap50.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-context-reviewed/data-replay.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "nbs": 4,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 9.55e-05,
+    "lrf": 0.1,
+    "mosaic": 0,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0,
+    "warmup_epochs": 0.6013667425968109,
+    "warmup_bias_lr": 0.0
+  },
+  "sampling": {
+    "unique_images": 1076,
+    "views_per_epoch": 1788,
+    "source_unique": {
+      "condiments": 44,
+      "dry_wet_waste": 204,
+      "food_american": 19,
+      "plate": 185,
+      "school_lunch": 297,
+      "school_lunch_asian": 20,
+      "trash_detection": 133,
+      "utensil": 5,
+      "waste_detection_v3": 149,
+      "external_bottle": 20
+    },
+    "source_views": {
+      "condiments": 44,
+      "dry_wet_waste": 204,
+      "food_american": 19,
+      "plate": 401,
+      "school_lunch": 297,
+      "school_lunch_asian": 20,
+      "trash_detection": 569,
+      "utensil": 5,
+      "waste_detection_v3": 149,
+      "external_bottle": 80
+    }
+  },
+  "source_checkpoint_sha256": "818161d62c00ffc580c6b5ce0c6261b58fbccd699b5227e3471f4dce3a5b5693",
+  "dataset_fingerprint": "3986872df5850b7acf862df91fa3329e1bc9408d9d1646d8a07151bcf1b08089",
+  "acceptance": "Evaluate saved selected and latest checkpoints on both unchanged fixed126 and expanded226; compare every class against the preserved epoch3 model. Require80% AP50 per class on both sets before accepting the target. Neither validation set is an independent deployment test."
+}

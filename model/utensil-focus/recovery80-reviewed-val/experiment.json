@@ -1,0 +1,28 @@
+{
+  "binding": {
+    "dataset_fingerprint": "a8072e28cfc6089c21b40bc68d46a4818c7a611865822350389fad200f337876",
+    "training_yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/weak-v4-clean/data.yaml",
+    "training_yaml_sha256": "643face678b160f7917728be5485189a7f1c39ec088ac8dd11326b47a6a750d2",
+    "training_list_sha256": "b555bc5ab2a6cc9cf6ff3cc2b4e23a277da56612f40f830177924c99787bd395",
+    "policy_sha256": "eeec89eb5801809324f33cd57336f5108064fc0c7fe261dade94ba65b72b9bbb",
+    "pretrained_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "training_holds": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/training-holds.json",
+      "sha256": "e03ee5c2f5211303feab13d9f3fee491bea19c2296acbdd7bdfd9c2192610bf7"
+    },
+    "epochs": 80
+  },
+  "initialization": "Continue existing clean optimizer/EMA; additive annotations in one fixed split only.",
+  "source_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-revised/train/weights/last_resume.pt",
+  "source_checkpoint_sha256": "dc85666d7aac74ac131934969c6f2434e19fdf51ddbc625ee0030040fe589098",
+  "inherited_epochs": 15,
+  "revision": {
+    "changed_validation_images": 111,
+    "added_objects": {
+      "utensil": 117,
+      "condiment_packet": 1
+    },
+    "validation_unchanged": false
+  },
+  "checkpoint_selection": "Highest minimum AP50 across bound selection targets on development validation; no independent test."
+}

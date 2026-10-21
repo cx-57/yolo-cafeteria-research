@@ -1,0 +1,2549 @@
+[
+  {
+    "name": "utensil__IMG_20231109_141023_jpg.rf.6e80fc64956f4574a1c389f224fcce9d.jpg",
+    "image_sha256": "a361ca7c55e3f109990b5448e02980b276fe8dc4835e61008f672f1241c071f5",
+    "input_label_sha256": "066fd03c8d3f56c2844b11786c69f8d6a84238ce497e8035544b024b87887e29",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: the white spoon beside the already-labeled fork was omitted. Preserve the fork and all other labels.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.657031250 0.522656250 0.101562500 0.567187500"
+    ]
+  },
+  {
+    "name": "utensil__1244_jpg.rf.2f12e3a054ca32c565ab312f7596a7cc.jpg",
+    "image_sha256": "114297a38e2a73270f6fb8fce3803134563b8bb978bb4b9e7d5e70b6dbbe863e",
+    "input_label_sha256": "320ad7b24b6cd4cbb43767dcff75c4fb6bb2fe859d002d3950ea506aed04131d",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: two identifiable spoon bowls clipped by the right and bottom image edges were omitted. Box only their visible extents; retain all nine existing utensil boxes.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.964062500 0.611718750 0.071875000 0.179687500",
+      "3 0.819531250 0.935937500 0.160937500 0.128125000"
+    ]
+  },
+  {
+    "name": "utensil__1224_jpg.rf.6513525422842cb7b51fa595e9ff4e23.jpg",
+    "image_sha256": "4e61c74b63a4ff6be473df6f918f1e611db7b644e8bac29b9a488a41bc310954",
+    "input_label_sha256": "9a396b408891d48b6548c53008e37f836a70b03035ff0f74ae126fd7c1f76bde",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: the large diagonal white spoon immediately left of the flowers is missing. Preserve all twelve existing utensil annotations. The transparent bundle remains unresolved for exhaustive annotation.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.800000000 0.579687500 0.281250000 0.215625000"
+    ]
+  },
+  {
+    "name": "utensil__1219_jpg.rf.7fc782aca125dc1b1f174d91bba44e3a.jpg",
+    "image_sha256": "caedcc32d6f97cc0ac8b0b003d0c96fab49ef5440a0d46fe246642719a8bba12",
+    "input_label_sha256": "f81d7e23ba45f38c79f22dc3c1d00d9786cba144721c6672a83dd0d5414f007e",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: a separate spoon clipped along the right edge and another spoon bowl clipped at the lower-right edge were omitted. Retain the fifteen existing boxes, including valid clipped-object boxes; ambiguous tiny edge fragments remain unadjudicated.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.956250000 0.463281250 0.087500000 0.539062500",
+      "3 0.857031250 0.929687500 0.126562500 0.140625000"
+    ]
+  },
+  {
+    "name": "school_lunch__020261002_jpg.rf.017a1208d01710d6dce8d46803a094aa.jpg",
+    "image_sha256": "3ad97bde35498441ff4e77927bf9f6d6a87e1fc46adb50c77888a8f9c6111d92",
+    "input_label_sha256": "fdb0c7b6cfcc8906fc9c30715c108ea2ce73bcfb188c1a0621a305192fb21b93",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.488839286 0.816964286 0.370535714 0.116071429"
+    ]
+  },
+  {
+    "name": "school_lunch__020262001_jpg.rf.a057d92f4d648ecabde16e828052d4b8.jpg",
+    "image_sha256": "8e99c5608f52477eda5d0df5956652dc5adf2babb5d29c15fb84c4830291ba69",
+    "input_label_sha256": "85a7c83bbbdf5f73f51cbf70a2dc8197493535febc1d7dd0b927725dbbb0c215",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.352678571 0.828869048 0.419642857 0.133928571"
+    ]
+  },
+  {
+    "name": "school_lunch__020301001_jpg.rf.2b4e928c4101416b865e10679ea03dc2.jpg",
+    "image_sha256": "13cd629635603402d14881c9ab204437337ecd25f78c3999123eefe4d2f8f81d",
+    "input_label_sha256": "56a0a220cf391657a0636dee77004904e459e201dc9c22b0a1c4aaf372c270fa",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.531250000 0.791666667 0.379464286 0.113095238"
+    ]
+  },
+  {
+    "name": "school_lunch__020309002_jpg.rf.3eaee7753b9aa42b01779e770a75e2c7.jpg",
+    "image_sha256": "efa94f3f339bccd659a3f2db25e41bd12195a8e96605b56caa92271890860c22",
+    "input_label_sha256": "f8929722479c73138927a870f4319929aa24b411e51686cb6ebf32c6534c8551",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.496651786 0.819940476 0.377232143 0.110119048"
+    ]
+  },
+  {
+    "name": "school_lunch__020310001_jpg.rf.81823745a82fb20a0019e57dd62b1f17.jpg",
+    "image_sha256": "a9e0e8135a21a90522f76ffa9ef1c9bea29ba4e79c36415e33c4f537a224ccdf",
+    "input_label_sha256": "84a7a3ad8e630d6e6755b2d9e66a146c9c9d9977e3529d11f0e888543afbb019",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.524553571 0.800595238 0.397321429 0.119047619"
+    ]
+  },
+  {
+    "name": "school_lunch__020315001_jpg.rf.6a16a7066fdfc7a0aa19aa1a9fa5bc60.jpg",
+    "image_sha256": "ea69693050f16bdd2c377592838a379738a67bb059e1778e1cf2af90bd667254",
+    "input_label_sha256": "7db5b07aefcffdeaa0406eb0b1489f3a00b7d7d061b24fc7489af705a5a00cc8",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.518973214 0.790178571 0.390625000 0.110119048"
+    ]
+  },
+  {
+    "name": "school_lunch__020415000_jpg.rf.31f4cbb018796a46caff93b7a6a7ecab.jpg",
+    "image_sha256": "d542b193d054c4358b4f9ba0260688e20f72ebe68212f6190425f3ae24748d74",
+    "input_label_sha256": "a8e3007747683487f2e2a02c235d2a349188607d3f5cd27a8aa0379aa30098f5",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.493303571 0.752976190 0.352678571 0.107142857"
+    ]
+  },
+  {
+    "name": "school_lunch__020415002_jpg.rf.e3860387f6eb719f24e1960c243aded8.jpg",
+    "image_sha256": "e2874be8b60fc8ef1f9fa444c01f72e35b04f62e3cfedcc11feed78ec864ae1f",
+    "input_label_sha256": "4aef97a081d68694d81a1717f5aecc06489779987e9af540c1f2697eee208650",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.491071429 0.790178571 0.299107143 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__020418001_jpg.rf.ef9c005b4f628f7f5cacc9c82b50d88c.jpg",
+    "image_sha256": "5b165474010863f98d2c967b4e566a1a448f52ecca8e54569fb9a66894c20a2e",
+    "input_label_sha256": "16aacbf042ed08d039e49a36ad9f786c2791ca6b37c895c000ef3eb67130babc",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.475446429 0.782738095 0.303571429 0.107142857"
+    ]
+  },
+  {
+    "name": "school_lunch__020425001_jpg.rf.b4025e737bc88d7f234828d57c4e7a80.jpg",
+    "image_sha256": "e268533d5929b39bc2e116784602ea69aaf4679435450eee72b7cae6d682c928",
+    "input_label_sha256": "d80fdceb9a3e038d32771a98ba48903ab79d4caba96de7d7fbf66886a44f837a",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.500000000 0.741071429 0.361607143 0.107142857"
+    ]
+  },
+  {
+    "name": "school_lunch__020429000_jpg.rf.fbbaf157847ce1a88e4296b2bcd23add.jpg",
+    "image_sha256": "7914ea9c7f19e60e9f8f529cb06621dcc15eddfdf85f3fdede020f2bf4402629",
+    "input_label_sha256": "08ee1c25b522c0c5b0fe34a639501fdcf365f99d480f5f5dfb64e76623fe7165",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.494419643 0.711309524 0.350446429 0.107142857"
+    ]
+  },
+  {
+    "name": "school_lunch__020429001_jpg.rf.aafa3d756e1e4c0b92716e1b1c056e8a.jpg",
+    "image_sha256": "ea282950d10306f87a8aae212d29e14600aead492641ec1e6189022fae9b2e2c",
+    "input_label_sha256": "cf3e3f32660f35a9f6e0bfb8a3d258c30342ca1b097e7f91ba7512f0ef1fd0fc",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.520089286 0.791666667 0.348214286 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__020452000_jpg.rf.91a1724521bd5779df746f88db54aa1c.jpg",
+    "image_sha256": "25cf3323cb9ad892d4969b226f24ed42959e71139f870e035f8f5e33da4997fd",
+    "input_label_sha256": "cdd285ff4fbc49b8bc21d46d2ff723b87f307230ae90ea744383d4920687f34b",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.516741071 0.781250000 0.296875000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__020466001_jpg.rf.3c6b62c62230678d053f8afda1791e9c.jpg",
+    "image_sha256": "d76d2fb78852ccda768c536bcaebefa41eca1b10de438d9801ac31cecd7d4645",
+    "input_label_sha256": "826923efdc292d6fc25616bebee2a788b92849ad2a03ab7f21a94a74efc5244e",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.448660714 0.784226190 0.375000000 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__020469002_jpg.rf.4220ebb91f4086f61327bb6100ad1fd3.jpg",
+    "image_sha256": "b12787d8c40092de387cf9d86c260b948fec6e43abfb055bb6c4913a240850fc",
+    "input_label_sha256": "b152688ea0f62908348741e8ad1f4f8a5bc3d5c3bf13e2570ae3a54324786042",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.494419643 0.778273810 0.296875000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__020504001_jpg.rf.d254dcf9f5ea5ca9ef6cd4277cd20b67.jpg",
+    "image_sha256": "8ff0d0611cc60062a52bbdd998715eff8a79c14999e9e2a320f68975ea7d6287",
+    "input_label_sha256": "70d4c700194b71132d333060fedb2666f7c772c730ad8d770a2d26efba60a8b5",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.477678571 0.822916667 0.401785714 0.104166667"
+    ]
+  },
+  {
+    "name": "school_lunch__020512000_jpg.rf.383cda73e0f10f1577ab25c945a64d02.jpg",
+    "image_sha256": "3ecd4b5c60775f520bb6dce4df028de762600b246135f364e92b7e8cd822116b",
+    "input_label_sha256": "3f8229bf1f23f293628e0add294d366ba776fc6b0a4e554cb192d6acc40936cd",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.502232143 0.730654762 0.334821429 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__020512002_jpg.rf.e9576902fd90505b0589d2fd4e664da1.jpg",
+    "image_sha256": "3031715c2124e4f35190513100fd4a3a2f66acd7c9fd531ed070b02b0943ffd2",
+    "input_label_sha256": "b8c5b8ac188a3b73346261adedec94212578da892b20a7a434a5a213bf7653d9",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.462053571 0.763392857 0.352678571 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__020513001_jpg.rf.e37056de7397add1264ce7009208300f.jpg",
+    "image_sha256": "7f630c2c1ee180e514828369e2ffaf2e42550de4cc005975e689c118f237e9fa",
+    "input_label_sha256": "45b3064118c6375ee4ae4692d8f1980a0d116dbda9b63f366d276af2d68a00f9",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.459821429 0.778273810 0.410714286 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__020526002_jpg.rf.dff16db9d977b3b108c5ee93c9d85b65.jpg",
+    "image_sha256": "67d5f2816f32bf1acdebf9bdbb05d5ce0c2909f390627ed094ce153e9aa3b6a1",
+    "input_label_sha256": "57949a19369f123ef3d4bc9c95c819ac74732f338caad6c8f13fb26c9b419936",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.429687500 0.809523810 0.377232143 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__020558000_jpg.rf.734358b05ae4765d9769a85cbca62e81.jpg",
+    "image_sha256": "af77fc95261e8ac3a6ce608ae04e853eee50bf1b55a2675ac3387b62410d8b0d",
+    "input_label_sha256": "5167d240fb86fabc39aef91a6e53fa8d17ea2eb743f5b78ace1345fe209fec04",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.544642857 0.769345238 0.383928571 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__020572000_jpg.rf.0d8385e171452b71bf5da6672577e410.jpg",
+    "image_sha256": "009c4d9c2e96249f83cf90f900b1e63f11b5934035dc14c9385fbde19e401757",
+    "input_label_sha256": "122888b351706370395745377588bfea70f407b6befca177f94e5fa1d69d3dc6",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.474330357 0.709821429 0.328125000 0.127976190"
+    ]
+  },
+  {
+    "name": "school_lunch__021012000_jpg.rf.d6c4051de1450a44efcd91b52bc83aaa.jpg",
+    "image_sha256": "bc5fbdedee7658d8ee2dbd37c19a14c2151bf2ec8ee5d47db231d7bded49d188",
+    "input_label_sha256": "ebd9a0ea2ea33f994fc80d99223dbd53d99a3e5d4391648d89bb060f9f1cab5a",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.457589286 0.790178571 0.370535714 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__021012002_jpg.rf.d97fb84305883c895cb4114717cbe3a1.jpg",
+    "image_sha256": "200b82ec01fd1aca5684b9d4598ccf4f919751f649577f201a8a8e849c9eb8b8",
+    "input_label_sha256": "e203d59d1f404c5ae6f24fff0914419e93e57667367e036f76418a8cf8e3a18b",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.443080357 0.788690476 0.354910714 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__021026000_jpg.rf.6171d9a9f97adc17036ab46b9b4f13a6.jpg",
+    "image_sha256": "2a375e623c7dc62bf58a51b32394ed463de3c3e211efa4961bd6bc17ed19901e",
+    "input_label_sha256": "f83b20ebd373c777c9356a6327be8338ea0bd83bcb73ca1ebed25b08e5cac3cc",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.495535714 0.764880952 0.321428571 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__021104000_jpg.rf.13054fb591fe19d09106f780e14a8821.jpg",
+    "image_sha256": "0d609e489780e6b94db9b1db266843a6a029c2059b44ecaff56b739b19c7bb99",
+    "input_label_sha256": "c71d04acff055ff726dd090e8e50a2b74446ae0d3e8aa02bc166bd7fdc6ca8c6",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.511160714 0.760416667 0.383928571 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__021116002_jpg.rf.20d80204f37192d3e77f6538ac8177c3.jpg",
+    "image_sha256": "cf9138ae4ef9e1d4377a0547985a0b3dab5ed55fd4bb0938cd507ec2cc119cd1",
+    "input_label_sha256": "c004bea38a3e042419896e1f25746262ab36f9c28cfe7200d5946e83f0e00ae4",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.502232143 0.769345238 0.379464286 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__021258002_jpg.rf.71dcbf48ec1bd0403f8e667cd28fb4f7.jpg",
+    "image_sha256": "183f97d9db5634b2381e6fc95eb7f81e89efd0c12b929902b05e7d895dbddde8",
+    "input_label_sha256": "ea8a9498e50ca056038303ec51ea6f2600d70431802ece8415afe81ba1f7ae5a",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible metal eating spoon along the lower tray edge; chopsticks are outside the documented class definition.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.473214286 0.767857143 0.361607143 0.095238095"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000004386.jpg",
+    "image_sha256": "f9cef2aebf61ac0e34a8c2212c97fad1f842737c6b3ef5955a1b439b034df09b",
+    "input_label_sha256": "6b56cd8fde38ae88ef98ebcf68c730c6cb3b5493e2ed7827d0485453ab9a9d9d",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork omitted by the source plate annotations; only visible extents are boxed.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.307962529 0.339843750 0.105386417 0.029687500"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000011403.jpg",
+    "image_sha256": "4f147d6dd3474001dff62db036028705a5cbaf887a54b3ab4cf0d545e208201e",
+    "input_label_sha256": "a5b9ec65510d8fc8b552ed4b829bb1be178d1107ad440500c0e168cd56dd09fc",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork omitted by the source plate annotations; only visible extents are boxed.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.382812500 0.698958333 0.659375000 0.352083333"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000026676.jpg",
+    "image_sha256": "2395ef91051c9b46ef5badc7e7abf1f2b591ef8912a5185fc4bc7055ead12a09",
+    "input_label_sha256": "181a1ae0aa7a1d0797c8424c8ce259810ef168a7e2b7633e7e172e11ff21127e",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork omitted by the source plate annotations; only visible extents are boxed.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.264062500 0.517564403 0.278125000 0.510538642",
+      "3 0.150835937 0.128829040 0.071953125 0.219718970",
+      "3 0.140304687 0.132704918 0.068796875 0.218758782",
+      "3 0.235343750 0.101978923 0.081218750 0.179695550",
+      "3 0.135976562 0.137880562 0.067734375 0.212341920",
+      "3 0.227695312 0.104355972 0.078921875 0.176206089",
+      "3 0.156210937 0.090503513 0.078765625 0.181007026"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 233553,
+        "category_id": 1000,
+        "image_id": 26676,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 233554,
+        "category_id": 1000,
+        "image_id": 26676,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 233555,
+        "category_id": 1000,
+        "image_id": 26676,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 233557,
+        "category_id": 1000,
+        "image_id": 26676,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 233558,
+        "category_id": 1000,
+        "image_id": 26676,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 233559,
+        "category_id": 1000,
+        "image_id": 26676,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ],
+    "withheld_proposal": "One nearly identical overlapping transparent-fork box is not imported because the individual extent is ambiguous under the duplicate guard."
+  },
+  {
+    "name": "plate__train__lvis_000000065163.jpg",
+    "image_sha256": "583613b4b0ac43f5b966c8400d93d450ce1c4c8dfd409248149ea44bffc63185",
+    "input_label_sha256": "a14013d13411e7d10dc04aab539fe357a38437df36a501adb0bb0158b15fb299",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork omitted by the source plate annotations; only visible extents are boxed.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.679687500 0.807291667 0.046875000 0.152083333"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000096048.jpg",
+    "image_sha256": "91368ff924f532e781c28be5a64e1c07b8bd1a9a91b28b2dd318004268824d20",
+    "input_label_sha256": "8b37d707cd9f038553703b0d7e733f708501dbdd2301e917e2464f4ec0d2ab01",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork omitted by the source plate annotations; only visible extents are boxed.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.211718750 0.575000000 0.198437500 0.350000000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000112818.jpg",
+    "image_sha256": "e79f07a12b3d84588a409336d152516a399a3db0b1732d9ae9e6a0a15a6fda5e",
+    "input_label_sha256": "1526901814055ce3e17f63d2588b56b74f0b6bbb385548aef14e610218e04c35",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork omitted by the source plate annotations; only visible extents are boxed.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.370312500 0.628125000 0.740625000 0.356250000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000009908.jpg",
+    "image_sha256": "54617a413cef01a25591b325a497cd4cbf24da62e9e0d6e01be5eb7f6f7cc7d8",
+    "input_label_sha256": "9df4589c950b9dd38cb2ff5c570c9b88e9e2bfc5811e917f61494730e6fc9841",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible eating fork (clipped at the bottom) and two overlapping identifiable Heinz condiment sachets omitted by the plate-source labels; box each visible extent.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "3 0.492187500 0.792708333 0.734375000 0.414583333",
+      "7 0.361718750 0.900000000 0.195312500 0.179166667",
+      "7 0.348437500 0.931250000 0.337500000 0.137500000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000123946.jpg",
+    "image_sha256": "0c4e709f32f897627b1785062ed33a7b6fb1881298e1c0f6ef4185957059d34a",
+    "input_label_sha256": "85682ddb4a51ce7beb7c4fc27ba45a529af23cd890db4e3c269d60cd49b46653",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable sealed sweet-relish sachet below the hot dogs.",
+    "scope": "Training-only additive review; preserve existing rows and all validation images/labels. Not an exhaustive all-class sign-off.",
+    "additions": [
+      "7 0.601041667 0.810937500 0.460416667 0.154687500"
+    ]
+  },
+  {
+    "name": "school_lunch__010788000_jpg.rf.d192224e052df030b38ca826840724e2.jpg",
+    "image_sha256": "37d33aa8534c7679066d489d2ccab61ac61bbbc363ed36f694e9c3e225585c37",
+    "input_label_sha256": "abe093e785e68ff97789d840c5379bfa221a62e0691c36cbb08fdad90ac4610b",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.661830357 0.897321429 0.453125000 0.163690476"
+    ]
+  },
+  {
+    "name": "school_lunch__020259000_jpg.rf.9936ec32b0f6751b9bc8a0c33938bb38.jpg",
+    "image_sha256": "59320465ec4f9923b6a91edee1e82b4f9bd7df5ba31443234beffa6107fd4e79",
+    "input_label_sha256": "5f7460cde20a10ad18ecc43c7124b2e9caacaf413f77cc2a881396412ba879ac",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.602678571 0.782738095 0.312500000 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__020259002_jpg.rf.ce02e737c68fa6d3ed7601c136c6268a.jpg",
+    "image_sha256": "fdadccf1320fc1d264f95e08791d05008c5e5d5861408401c9225677012752bd",
+    "input_label_sha256": "ae3c038177d86332eb9c82a0fc3734516f3c510e1e734a294fe5b2d34a020029",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.486607143 0.787202381 0.299107143 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__020266002_jpg.rf.4e32670761b6389911223e2cc1c01f61.jpg",
+    "image_sha256": "f31c6abb4231650a002d2bb9fe0cf926560a64170fdaf632d1daeb86d1c9c9c7",
+    "input_label_sha256": "4e4772aaa19d65d3c119243b7c351c8ddf02a90fc97c682948ea754bb4d86a46",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.590401786 0.776785714 0.359375000 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__020273000_jpg.rf.a6a3d5127060901cc5bd5b561d18b435.jpg",
+    "image_sha256": "3e2ad1bcade6ce8ca70f78a4e3e391d139e4f5ff73a4a96020d0ffef3faf0d4a",
+    "input_label_sha256": "a727d264fa1e818b4c947435b7b5b634730faf843a9bc2a027148d66a571596d",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.549107143 0.806547619 0.267857143 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__020280002_jpg.rf.a00b92b71cf024717fe6dbbb0b01e10d.jpg",
+    "image_sha256": "0362bce6749117db70b3e9452d91d3220bf0755a332c4b158a3ef18d938b76da",
+    "input_label_sha256": "720ecb1e1272927ecdec6629d5cb2f34f3b76008d3b234b91ed07585670960be",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.553571429 0.778273810 0.272321429 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__020401002_jpg.rf.20fc7d37be07f7674aea666a40c3b5c0.jpg",
+    "image_sha256": "cbf64a1fcc40fe43e6f11b9a30fc52a4df4cdc1477ef4f65bd31e8476c2dd891",
+    "input_label_sha256": "8b6ecc923a0a3937593139f4941859726f27d8f02890213f36440eb77deb07a3",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.516741071 0.772321429 0.354910714 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__020465002_jpg.rf.6317625bb2abb452a29c4d1ac079e736.jpg",
+    "image_sha256": "3859dda74c793dd3be99919a1808a3b779f6302ddb67f5744460d42e2d943398",
+    "input_label_sha256": "a871aab788d43de4a259666153541fd188f887706bb2df7e4ae03768170ba5cc",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.481026786 0.805059524 0.296875000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__021060001_jpg.rf.d39772229afbbfe1af101965d664f40c.jpg",
+    "image_sha256": "4ef6b805bce377ecb127c7b1bea9844c94e762a4fb52683ccb23d155a1a6a505",
+    "input_label_sha256": "19e41f1d8d967ff8d8497ea71950d722176ed840f7a7f1fcca8b32f7d4a387d4",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.505580357 0.785714286 0.345982143 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__021158002_jpg.rf.30ad2333c445bd13dd69664a739b6081.jpg",
+    "image_sha256": "bb0ea09e770033c3c1b1e9fc9da4ca412efec9bb52d7d1a34bd39dc1bafd356b",
+    "input_label_sha256": "3969b0665c1e492a78442321cadca32aab4ec63cc0debd599242015a5862f715",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.473214286 0.739583333 0.357142857 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__021225000_jpg.rf.064880040c34125549ffd0fb29548bf3.jpg",
+    "image_sha256": "bd230ca2f1377a9748357a0fbf9d2fe020a6c6a493bbad3a9bd8cbf3a659f8ae",
+    "input_label_sha256": "d94616f69c69c7366d0e3690fa3b54c49491bffe1ed325a902fb5b18cf4b0041",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.531250000 0.800595238 0.379464286 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__021225002_jpg.rf.9a19ddd02096d70f0532fc7e869b134d.jpg",
+    "image_sha256": "bf9af0e022b1aad8bb86a7643aa145e72573bf22518c7d2bf4c3663b57a3df34",
+    "input_label_sha256": "e73b8462390b27e1f48755f9a2aa872003e0070fc5e89c924d2535b7de4600fb",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.522321429 0.761904762 0.339285714 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__021272000_jpg.rf.ebe0bd8dbe8973ba05cc49f64302903f.jpg",
+    "image_sha256": "f121b819d58ab191c298a30105a8462720833f8b22bc94d9d115494e9b6a46ad",
+    "input_label_sha256": "7df88b43cec7092753a00f207c089b1d2d79e93b6fe9479e6c6df4c8d46ffc7a",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.525669643 0.778273810 0.372767857 0.104166667"
+    ]
+  },
+  {
+    "name": "school_lunch__021306002_jpg.rf.d1b81ced878eef9a0b1a69c1ce0835ab.jpg",
+    "image_sha256": "3b1dbeb15e6d90a28bed9e2e6efdbf10ed44d9458c00d156eca811b39e5d8735",
+    "input_label_sha256": "fce639bd211f681ab159d3ec3853ffeecf142392761e9da265e1d6e04fd31993",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.448660714 0.781250000 0.388392857 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__021313002_jpg.rf.f5d4c95a243a47ebbfa191835339b546.jpg",
+    "image_sha256": "34528d0fc0c6f5e532b5c7c97fbf598f185be88f8e3ebf525c6058fc066b20d7",
+    "input_label_sha256": "094fad55cb878315e305afe8d2f80a9d923d0c924232217597e02d4290912d4c",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.506696429 0.793154762 0.357142857 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__021402000_jpg.rf.101afb64966f62bbc2cda079c948263e.jpg",
+    "image_sha256": "914dd0559179d93301f2d16ef11bcc8c3c955a565f5ada12f8b02b0e88a2efcf",
+    "input_label_sha256": "aacd22dfed69e9b1cec3226aa0f4c0acaa859dfaab8d50639718bb2237f531eb",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.577008929 0.785714286 0.337053571 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__021402002_jpg.rf.b16381410b3cac042bdb4c57fed1b70a.jpg",
+    "image_sha256": "25d2c352cc728b15437142b522057f2f60a24742b0ad68993cab63a5e6ff0514",
+    "input_label_sha256": "21e022cfffbd5fe306e3fd0b8f4c3a43d0711464782d960a33a0552860ad993b",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.508928571 0.769345238 0.334821429 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__021414000_jpg.rf.7a245c0d06bb29356b2be533754ec7ae.jpg",
+    "image_sha256": "7378fedd96879ea175091b18146eb5cdcda24a9119e7b9bb87597eec423e4b3e",
+    "input_label_sha256": "a412d1f2011604d64c78f01e584c6581a0ee6fd7a4817494f18d1bd04dcf798d",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.518973214 0.812500000 0.332589286 0.083333333"
+    ]
+  },
+  {
+    "name": "school_lunch__021451000_jpg.rf.e69ca07282f2d7f4f07c7cf959415887.jpg",
+    "image_sha256": "dbb3221fac20297a10ee8115f5b832417a4e8f51eb96aea382a9c47b1128657e",
+    "input_label_sha256": "a7b0220b8b0f05428c97970d8106a19612f971bccef2dd35d6e335f1bb46304b",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.504464286 0.779761905 0.334821429 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__022266000_jpg.rf.33eb1daa1090f66719b7e0ee588eb29e.jpg",
+    "image_sha256": "4fe314c6f98ce5865bd2954543841392b4795c955402e710851dcee8c8b3a5b4",
+    "input_label_sha256": "58f9f62311ff228d9eb4bf3304347958966977926da06a1c093ea8b92dd12602",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.494419643 0.802083333 0.359375000 0.104166667"
+    ]
+  },
+  {
+    "name": "school_lunch__022266002_jpg.rf.66fb8ff2961752188ce0c74d74d202fd.jpg",
+    "image_sha256": "ac37d6ea96b33f9f7fc484154ded5e71749a92bbb7ddccf27912c6f33f2a6435",
+    "input_label_sha256": "a58d52be5197caa9b7a0061dd5f5f07b41d42ff2d7aed56fc068fd6e17bb630f",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.502232143 0.752976190 0.334821429 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__022271000_jpg.rf.d6c5c6a416c6b473c45ff6cac25958a6.jpg",
+    "image_sha256": "65fad109cb43eeba7f14c9c3bef7f39da603de827fa15aaadbb70ad57925fefa",
+    "input_label_sha256": "430391df36334e97cdeea32c31e8df4fc6a5163895138f8b3e337be37c964035",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.516741071 0.757440476 0.243303571 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__022312002_jpg.rf.8c86833c521a51ff79385f8e67a06a53.jpg",
+    "image_sha256": "fd213e93617ccf05296706e238e914b44a6fb6dae1fa9d057bd6882e748b512a",
+    "input_label_sha256": "a7c2ee05135372cc947e833bfbdac27d1faf3f538b07f23b1a884c2d89840710",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.526785714 0.813988095 0.357142857 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__022429000_jpg.rf.e5d7d7fa6ca1a6888c31b0337dc9bab1.jpg",
+    "image_sha256": "150f37fba736d0ef58cf35f5dc6584a78cb3f4ff7d0818bef5c4c7455dc0a8e1",
+    "input_label_sha256": "e742d7c6bb1b6dfc6039eba6f71adf0eb19d21540efa47fe864b4c76fb2ea663",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.505580357 0.790178571 0.279017857 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__022471001_jpg.rf.60b1118b4d19db5209c84b3aa78485ae.jpg",
+    "image_sha256": "e71a9c90e80ccb8dbcb14ebd0a7a2a59f6ac1d71c68aaefef29d19fed35d6920",
+    "input_label_sha256": "7df849c04223dc5296625467a9c76c45824f50d73115749a24fbd0e61a09708a",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.489955357 0.781250000 0.363839286 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__022552001_jpg.rf.c6de43d8fa12642b4c1a208194a727b3.jpg",
+    "image_sha256": "a620dedbfffbb75b105a2bd269070ae070f6c8b982e0bfac597cab2098c356ed",
+    "input_label_sha256": "c5e8b24d1054ef64b0600231001f23e60dd39b6e4f7fe8174e886fce2cbfaac7",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.526785714 0.794642857 0.383928571 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__023052002_jpg.rf.4a87d2ef3bf2f046c345c2add396bdd1.jpg",
+    "image_sha256": "fcacf583c4d975eb745ee056d7a81a5704a20906230ef122bcc6380ee0f0fc0a",
+    "input_label_sha256": "be7246d213d5ace21323bbdab75bcd6b732ea7651a22eac6aa574f03ea81728d",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.484375000 0.742559524 0.299107143 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__023071000_jpg.rf.b52473f57805cbca5a1eaaafb613d45a.jpg",
+    "image_sha256": "46d4173a52c92e9ec0cc14bde362063994c08219c988237d9dc716f13cefc1e9",
+    "input_label_sha256": "15d3d44f36d47e8b62fb008f435e2bc5f813ad1d8885b804d1c2920d9fb04df3",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.507812500 0.781250000 0.377232143 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__023071002_jpg.rf.6d92e63bdfee9c2c715bf6b9ae08651c.jpg",
+    "image_sha256": "c18d4cc01407785409f914837a03b43b7abbe9bfda96a787682e5f12293c55e6",
+    "input_label_sha256": "f08f08a17dd04e135933dded76d9b3d530c97b048b3e2f1374282d08063d30fc",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.506696429 0.758928571 0.330357143 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__023106000_jpg.rf.e71e2460342087adfe1d74e35b9d50e2.jpg",
+    "image_sha256": "9517998b371ded1304dc38d0aac90efdf3c2e0adf6ba7e3917771c28a32854ba",
+    "input_label_sha256": "e450f49ee47e78e7733cb36e2d453344122b34936f49631d9a55d24f6f334420",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.570312500 0.779761905 0.381696429 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__023106002_jpg.rf.ce25a3c514576b51ca7c56d1f80b66b8.jpg",
+    "image_sha256": "5a38b7e902f59761db811e644a401c1fdbc822e26bfdb958431b07f010374124",
+    "input_label_sha256": "8a882676bdcd97200b358caa3d1a9a77c5d9eb773f927ba012d4dea9606ec264",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.514508929 0.775297619 0.368303571 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__023114001_jpg.rf.388b9f12de5c0cb77435a47b9a59049a.jpg",
+    "image_sha256": "08c53f62e79a168bdd552046f27a8545ca85145295adfe8535cc98353d2d34fd",
+    "input_label_sha256": "5ea1114c10be7e4ff03267edc6263c88fd45588cce23de2caf68644745e2b5c5",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.512276786 0.787202381 0.359375000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__023215002_jpg.rf.a0baf6fc03cafaea6eb93a4947c2e8ca.jpg",
+    "image_sha256": "821b461b90cf9dabfd9121793ce83ec334aa068bf8a454e4f5aa4c10e424a533",
+    "input_label_sha256": "6c3c277990ed28cbaa9c6611cdeeea00a3f56bca21afea25d411aa6af1ddbb59",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.497767857 0.800595238 0.348214286 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__023303002_jpg.rf.7d502f2a8594b2daad6c4929b5d479f7.jpg",
+    "image_sha256": "70918733e66385971e4d8b4c71c9a0596bfbb806dd2756b7ceebc6cebdea82ea",
+    "input_label_sha256": "01c6378c77e6d1ea1c1ab6fc2f89bc3b9e9988b9e5282e87b3de531ab478ca83",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.504464286 0.720238095 0.334821429 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__023310002_jpg.rf.01c6546bc4113c363db0e797c0a5a45f.jpg",
+    "image_sha256": "28efeb09b61f0ce3266fe4510f95e257c6dca0926b39ad00ede964e184919dbf",
+    "input_label_sha256": "1fae164247be08759259945b78fa6f24d743b5d9c1fc758a5c8bc06d6ffb9241",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.435267857 0.748511905 0.361607143 0.133928571"
+    ]
+  },
+  {
+    "name": "school_lunch__023404000_jpg.rf.53b896f366c47892bbbb4c7f98d6c074.jpg",
+    "image_sha256": "2e3fa3dcaa82cb8d068fd292cef1117b4e071d8fa4b00389f6ca646cfa5feb2d",
+    "input_label_sha256": "aa70f951b3fd947e841fe24a30571ef8f0f6c1b88d7267dcd518aaee77156936",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.483258929 0.778273810 0.359375000 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__023407000_jpg.rf.3c17034f0e7cac790f2e2b1efdc90393.jpg",
+    "image_sha256": "5ff1650450596e2eb1e9802fb507517ef86cc798146254a0c4d4008f7ca8f4af",
+    "input_label_sha256": "d2b4564e5690327c0b8e82daaebfa62369c60cca22d7fd5c1f5d491b37b629ab",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.512276786 0.779761905 0.350446429 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__023425002_jpg.rf.6ef238ca19a6dbd73b909313d4343c25.jpg",
+    "image_sha256": "3c47ead092e567c0a5a4304e6b6f5653a8c2c14b845af39af68307e97132ded3",
+    "input_label_sha256": "0058f3fcfa7b89cb91bb47f65717c135392f2d739ec5d37982bd5c7de1c5ee46",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.590401786 0.742559524 0.305803571 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__023469002_jpg.rf.24557bd06dd3335646a24f0f633f8f16.jpg",
+    "image_sha256": "dabc5157e765389d561e46ab0c7b729a08d1f890b08ea93c063b35dabf63de3a",
+    "input_label_sha256": "433894adba37cbbbf3e77320fbceaf670b221456c3c45a208611369ad341e1ee",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.481026786 0.776785714 0.337053571 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__023568002_jpg.rf.d093a046310c756891c85745adea9adc.jpg",
+    "image_sha256": "bc93aab66cf833315c5cd0a76dff1a02d4521d135cb3857dfe483cb469c48690",
+    "input_label_sha256": "4ac0c06278332a747bf404204c51fabe566130b61b2b91e3e12077bedede04c9",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.477678571 0.779761905 0.357142857 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__023570000_jpg.rf.7fce55c00b3fc32ba15d585e4be94caa.jpg",
+    "image_sha256": "7c371b9b25323b61f2541feaf00d023118360187cfcf69cc4d6564f420ba794f",
+    "input_label_sha256": "362307c5a6f93588e338552b1b729291df3495c2d06aac23c7ae9cae9bb9ff32",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.484375000 0.752976190 0.361607143 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__024022000_jpg.rf.ea9e7652eda1f3d5c7a55dcde65afbe8.jpg",
+    "image_sha256": "0471f748036c7d879e187837e547a7a24323460e031968404b55628d2fcd7ab3",
+    "input_label_sha256": "01bdbfb09198d7c1e8aa589677d7db6a81c8ebb9ec5d28dabbff2893a335e0fc",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.489955357 0.754464286 0.359375000 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__024064002_jpg.rf.17726e3abbce56029aa8a3f9623d6339.jpg",
+    "image_sha256": "d4de15d8671070f7c290100235c41b6310d20e8a1212aeafc0fce7c1f20eafe4",
+    "input_label_sha256": "fd7bbd87f7cdd54c30d265e63f9c58c390cb3aa04f72e04bd5b0ebabf0aa3081",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.488839286 0.799107143 0.357142857 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__024112002_jpg.rf.14daabbcfc306268ad4b3c09ac034a7d.jpg",
+    "image_sha256": "bc53aee199b7965bc0489a92e7aa6d1c7ac2e09a5556829da951e38297fc3209",
+    "input_label_sha256": "ac66a84dbe2b1b8e7a03724bfe5689a4025b13794df4d1930f4239db9d35eca4",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.541294643 0.813988095 0.372767857 0.110119048"
+    ]
+  },
+  {
+    "name": "school_lunch__024118000_jpg.rf.b6357c19e73c85fee8f0917bd40b08f1.jpg",
+    "image_sha256": "bced027e8720f1b882724f4386034974cf9b8373ba581c59e39e88614502fa49",
+    "input_label_sha256": "32bbb9ef2af6adf30cc33869aa3616db34cc93f70e8b87bebd855f571e12c13c",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.516741071 0.790178571 0.372767857 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__024228002_jpg.rf.63f38f93b027511956b96395c87294f0.jpg",
+    "image_sha256": "58c459de43de8e10a1c73540b6409e37013cddfba6490b810dccc74b21c04bc5",
+    "input_label_sha256": "d6058b116e5c0a9450fea13a713277948e4c373c22c0a5271d7fbae104d72c19",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.477678571 0.788690476 0.366071429 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__024276001_jpg.rf.2a9d7edab7b2fedd8667b0a13a4a2fe0.jpg",
+    "image_sha256": "130db13b0656251e5c6b5d7da7c204d2c5b56a1e7c4d3688ab39f134f47c2b8e",
+    "input_label_sha256": "bd2707842f885c773c0eddafe18ef3f1ffee83e6e9fc82da7e89bb8162bbfccf",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.492187500 0.766369048 0.368303571 0.104166667"
+    ]
+  },
+  {
+    "name": "school_lunch__024316000_jpg.rf.bb9f97a4aa68eee7e9f89511c8da19c3.jpg",
+    "image_sha256": "a6a0783e2b7188ba842bf8787b1dff18340ef0e5adc877456794d70b3b791488",
+    "input_label_sha256": "8bbb25fa979b4cdd64211a4fab1a4a9dd03ba156623f458b3df13980113a882b",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.502232143 0.815476190 0.370535714 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__024316002_jpg.rf.6c09ab28cac08c5ba93bb14645e052a1.jpg",
+    "image_sha256": "1935f91f3fea4a460ff51743b238d0c99088ea2cde01baca81368170e82d6bde",
+    "input_label_sha256": "e9e4698fad27681518b5b736008c6942382a8c2f7edcc96d61acc6ca6c95f34e",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.485491071 0.808035714 0.381696429 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__024318002_jpg.rf.e4c456f683352bbefe033045cb81a640.jpg",
+    "image_sha256": "a77dc0fcf790385e611be4b6b26d9005bcece17a3c662e2b702b2d5efa0a825d",
+    "input_label_sha256": "f6bda8d349d5673798336b469989dcad9191a038f4abdcb7f79e44e03ff61dc5",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.526785714 0.782738095 0.370535714 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__024410000_jpg.rf.8f0807c82ee3816e3279b9e3ff2cb145.jpg",
+    "image_sha256": "719d9f5f314ce41fc59433d67e23acb5b1c595dffe7a9701518bc4f89f3f348d",
+    "input_label_sha256": "3f62b94bdefe180e6106f7cfa3ca7746514252310069f2eb18c8a0dd0b245dd2",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.484375000 0.828869048 0.375000000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__024410002_jpg.rf.9da79361c0901f241488cb8848e82122.jpg",
+    "image_sha256": "61a4470779e7dc0db103bc2969c878ec29b5607fcfda895ea037ae6638668114",
+    "input_label_sha256": "ec512faa82bffaa3235204080078837d8a96ecdbcd61474a999afea1a5e27298",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.439732143 0.767857143 0.361607143 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__024424000_jpg.rf.fbe45a51dc1ae2a4ae1bf142720a2da3.jpg",
+    "image_sha256": "de28a6eae594b5fab5d805aba4e21f6753adcf28fde3ffbc67a1e7dced629195",
+    "input_label_sha256": "c0015cec7596368951f0a66428c5f4b6bc527142b02fb95bc0e5f30ca70c9213",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.486607143 0.842261905 0.370535714 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__024424002_jpg.rf.e4f59ea3086826019a14e056d34e1ee8.jpg",
+    "image_sha256": "f28703c728d5984054b1c6069d765040d1969e6782a13c92345dade03c5eb30c",
+    "input_label_sha256": "3a291cc903c688c5dc801ce9384388e4417e6fd93e57a0e1d66ea134940d5fba",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.447544643 0.767857143 0.359375000 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__024451000_jpg.rf.5de34d5d2298d4ba626f3a355671f43f.jpg",
+    "image_sha256": "078bc781f9df048c96b355c5b671f556997cb8ef45eebb807640520d1fcb9497",
+    "input_label_sha256": "7cab4f31be2987f7b6b66e925e20ffeede2c19f186a90202f15957a6735a7e3a",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.452008929 0.815476190 0.363839286 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__024472000_jpg.rf.9a6489436e1ad7321d3514adcd80ebec.jpg",
+    "image_sha256": "cf957d1dec458b3a7c1310c8cc683040dcafcf9d0b17e0dca4bac01d3314ce99",
+    "input_label_sha256": "531d82e1c20c1915705d8994ba851ce8e274201dc357e5a5c7e9bb932c030693",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.514508929 0.799107143 0.363839286 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__024505000_jpg.rf.9ae34ae99aee227cb244bb540f66320e.jpg",
+    "image_sha256": "8f032534395441c5797417583d0a983285a3bc4189135329c88a99ea8a0a01d8",
+    "input_label_sha256": "099fd884d8ee215405451cc6189faa2f53d595f8f01f980e2afbfe944fbb33f6",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.441964286 0.837797619 0.379464286 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__024505002_jpg.rf.ae4f7f9fb9846995530a8963de8561d6.jpg",
+    "image_sha256": "57136a9f610c9e0e28f84025c300027fdae04622a231b02f70c7d17f29dc905b",
+    "input_label_sha256": "9fc3b9799277c6a35243029654c9c0f9c566b62e88b6a983ffdee13407f994f7",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.450892857 0.836309524 0.388392857 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__024514000_jpg.rf.ab7da952fd78972da747f87ed3b4d213.jpg",
+    "image_sha256": "8d9229562a2032faad874573fea2d0a2224b92176a0104293edeea2a5588cba1",
+    "input_label_sha256": "fd2bf7f2decbdb36d69875dc7cd617ae0dc07d05310b62c7d4616655780a7a1c",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.465401786 0.757440476 0.359375000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__024514002_jpg.rf.97da5b7e8386e1359b015c1d60a757f6.jpg",
+    "image_sha256": "86bf6d424d2d1f45251e6ab5e1ebfe1645918fefca98638b60de63a39e8ef6b1",
+    "input_label_sha256": "2c6f2f94a82dc9479efb89b1e91a8802d9ca60742f0b82d9b51f5bcde9ec612a",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.539062500 0.755952381 0.337053571 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__024526001_jpg.rf.5c92a5c366dec789cec81238092c9b64.jpg",
+    "image_sha256": "3c6fb5740d2cc7c81321bd76cbc386c4ff41fd8339bd1c6a8e68264a8c09d0e3",
+    "input_label_sha256": "d944d74be4e33ad58da241007b82a33555dbaec5367e23790d359f93bfaef9bf",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.453125000 0.796130952 0.370535714 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__024526002_jpg.rf.3eb467912ad83afcd644b7691b1ad9b3.jpg",
+    "image_sha256": "6f6f1bdbe42cd43a2c4867eaabfb1727e0f9cbe10d33911a56679be3c6baeed3",
+    "input_label_sha256": "52592b604b2f03a0bc5038757a033348160d581bebb0a357439266c43a4c0515",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.415178571 0.861607143 0.379464286 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__024553000_jpg.rf.a5343f893c35316203e611b5ad283b2c.jpg",
+    "image_sha256": "606dc32637f7982101590ae1746d65bf7f1ed726a283e3f606aa7d5689d8883a",
+    "input_label_sha256": "11869071b204df13b4126d26584b4b368025f7bdae13fb8f417cf893da3e8915",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.511160714 0.840773810 0.343750000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__024553002_jpg.rf.2e3636e96e36eba9ffec66a051fe2604.jpg",
+    "image_sha256": "550c22898a50c55e8200b377b7e3bada0f3c8cfc23a874d90e7c84fb139a41da",
+    "input_label_sha256": "e57ec29a075e1154087fcafffceb337f4504dcb8733fcbf058cb6072d176690b",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.440848214 0.846726190 0.363839286 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__025023000_jpg.rf.495493e92b02f3fe30f348f75eab2dda.jpg",
+    "image_sha256": "057fda43df8f4984cd895ff79eca14e037c32e48312e7746e86d001800725799",
+    "input_label_sha256": "893b3b9edc1ef4c7e489c29986028fa6d7d2815444d684a85dd739acf2ae7ad2",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.441964286 0.752976190 0.357142857 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__025023002_jpg.rf.83e0fe34e2ac7b8d3e5d3b698d9b073f.jpg",
+    "image_sha256": "605d635f3253c90c88379accb1790db697d3f25d8de760148f6d5952916a327a",
+    "input_label_sha256": "b04a9a71981b59945909d32256ff61bfda1dab5afdd7d3f5cb7dcbb751c4e7c8",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.462053571 0.769345238 0.339285714 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__025028002_jpg.rf.850c34355585c0ab0059b0781b8d70e4.jpg",
+    "image_sha256": "b314f393a3fbf17a0e73dd38b763bbde16dbc76afa71899d388e9e2a2cbd82ce",
+    "input_label_sha256": "ef79bc297a33598769cfb0e262294575ea68a62fe496ed87dc0d7722e983af37",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.416294643 0.796130952 0.359375000 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__025120000_jpg.rf.20131bebe0664617aeb1c8c393c047c6.jpg",
+    "image_sha256": "e1ad62f3850f379a0bbe41320528d07fef4ef5c369d6775a73c38772fe170115",
+    "input_label_sha256": "3b07c2da86952cffb6553f69e0183f22e2ded4566437b051e72c0ff3c26dcb10",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.377232143 0.812500000 0.361607143 0.107142857"
+    ]
+  },
+  {
+    "name": "school_lunch__025159002_jpg.rf.4b4a76d0766959cc50a1431e12be77fa.jpg",
+    "image_sha256": "bad5d2c203d8dce53e00e0a84311588f101bd8e232986330a4f7508906402b33",
+    "input_label_sha256": "e2a079fc0a90a4985aac8f2fe700cb88073eb2edc8d898e92457dff7930619b2",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.498883929 0.787202381 0.332589286 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__025254002_jpg.rf.19f0b8fcf5e8d98dc064f97b7c627e15.jpg",
+    "image_sha256": "86c14da3c9c1a94ec557ceb7db853b4079f5d68e22491d848eafb43d3e29e9ea",
+    "input_label_sha256": "f2267bee15bf72480e15cdbb52aca93ddf9902fb660dd8b53e434efda4794679",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.502232143 0.778273810 0.325892857 0.074404762"
+    ]
+  },
+  {
+    "name": "school_lunch__025301000_jpg.rf.4201d4456f172d45190b7c0c05712d05.jpg",
+    "image_sha256": "258bbd8431bcece344c731e23fe872c4660679d392c2707b14980d67a95b43be",
+    "input_label_sha256": "b95c1acc4721392234f434c661057ec7c6e7eaec5c44d18fea64002be5b28971",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.462053571 0.776785714 0.357142857 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__025315000_jpg.rf.2659ecee5c2414b943f1d4e48d9e4f2f.jpg",
+    "image_sha256": "6047416a419541cb7229994a5b29bde273978fac5fff035f1719c832cd9b1f11",
+    "input_label_sha256": "6b370342c20c112cb5e0ff2700d49581c02d555e6b7d09ec6d2b0e93480ca3be",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.482142857 0.766369048 0.325892857 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__025315002_jpg.rf.773df9f64100896cfe582aa31bc6f80d.jpg",
+    "image_sha256": "338bce550c69b9ad88f480af8a4bcd8f0ca28f81f1e1553ac3fc49a8e52c9c99",
+    "input_label_sha256": "b8e377ced83fb4c019e3c38c4e6c974d65892ac8bea656e0586c12f834e98dcc",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.462053571 0.802083333 0.303571429 0.080357143"
+    ]
+  },
+  {
+    "name": "school_lunch__025457000_jpg.rf.b88c3db0dbae3638b7d0e2587f0bf239.jpg",
+    "image_sha256": "d39ca9b6589fbee9ae5b21f564f794ccb5efa005ca2275e81e4338853e2c55f2",
+    "input_label_sha256": "c85acfb42a2f652a2a37c685ce5184f8adfde4cfdc813c45b5d0aea26efdbe92",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.495535714 0.752976190 0.334821429 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd.jpg",
+    "image_sha256": "4122ae187c3990549fbfe58c3ef8e1907e501479fab0bfb964aaa68bcb1cccaa",
+    "input_label_sha256": "101e2068beed5a530df959a917b9cd99ecce8ced5faac2b1391a4475d1ad975c",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.501116071 0.787202381 0.323660714 0.092261905"
+    ]
+  },
+  {
+    "name": "school_lunch__025512001_jpg.rf.4c8ab4661704faede5090ee0aab7161e.jpg",
+    "image_sha256": "b7bbcd78a4d5f3166fc63c621ead8a5f19af480db698bc91720615fbac3bd93e",
+    "input_label_sha256": "5d0ca8cc4252d9d49be05e689a96cb670c54a775692f9dac96604acab0615f3a",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.457589286 0.772321429 0.343750000 0.086309524"
+    ]
+  },
+  {
+    "name": "school_lunch__025552000_jpg.rf.e3fae3ba8ae39f2bb27a0b29e0211966.jpg",
+    "image_sha256": "dbf048bdee373cb0b5639970d68b920fe84d7650ccb390fa39044925966002b5",
+    "input_label_sha256": "e8e7795a308d4a95bc04f709fcab99375b234bc549cd21362e627df4c00efd96",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.588169643 0.836309524 0.368303571 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__025552001_jpg.rf.0c5e72a76ced4a15d1ab06756e337237.jpg",
+    "image_sha256": "eed7b7124583a6f71939a8e7f349a0f68eded75935bb3b077100fcfeaadec337",
+    "input_label_sha256": "aa447d13e704eda1650c49ca08f3bc58d2af271688012cbbec0b7b8e58861d8c",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.547991071 0.813988095 0.359375000 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__025559002_jpg.rf.748b126c4b44efc43fe82864726e6575.jpg",
+    "image_sha256": "f442d065365e6f7dc7bf0bb94e22ec00b971eb405896ddbd5f1a9feb12996e7c",
+    "input_label_sha256": "4ed8e71c78286a69c272f0dd7153f725b11a4e23d4aa1bc1680ab04e275d25d3",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.530133929 0.791666667 0.350446429 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__026077002_jpg.rf.a6f8c0406863a244b36012bfe5c50bcc.jpg",
+    "image_sha256": "8f7f5312cac17c700ac8e66ec5880f7872f6e359f23da70f1531e1c779a24724",
+    "input_label_sha256": "08918d4e9b971c39cebcc8c1be684da3948bc8d1aba8551061e03d0d484b2e2c",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.534598214 0.779761905 0.323660714 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__026118001_jpg.rf.f6bd04d8876d3984a104712968f41ce8.jpg",
+    "image_sha256": "de1fdc6c98a4bbd5f3e8a4dc1b543292994a31341e04c68d5203896fe772f876",
+    "input_label_sha256": "fe606e2d632a1668fb74c866f7861500198e80c74346cb02cfb52178f7e6db39",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.508928571 0.793154762 0.325892857 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__026118002_jpg.rf.a0f765ff1caa8c20207de58163e1ca02.jpg",
+    "image_sha256": "e383aad5067f49db9e4d7cd769d328b74a873b679d69a68c486326818c771c79",
+    "input_label_sha256": "6ff0ae41f6db90aa483f81637e67fa729e38488933f6ff8320cd4b05166ea0ab",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.474330357 0.776785714 0.345982143 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__026180000_jpg.rf.1fdddc83009f877db115892995879e1a.jpg",
+    "image_sha256": "b488378764634571b4db889c9e2af085ed607279ef081e9ba8aff083038055b5",
+    "input_label_sha256": "d371323d4be4bd0f21e9f82c9aad9e3a4cd21b961dff5f6079ee4b75d0c52425",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.460937500 0.779761905 0.345982143 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__026260002_jpg.rf.25607328cc2f7a6e430216397962b721.jpg",
+    "image_sha256": "fab6d6e520b98c2c9d38ff68eaf1310d6bec8aaa2a80edcf0d8cdd1878e879ac",
+    "input_label_sha256": "89b245f3c314886fe3e2fbea90f374c80f3e8bdc67c281e9a80c20aa62b2d7c4",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.475446429 0.767857143 0.343750000 0.089285714"
+    ]
+  },
+  {
+    "name": "school_lunch__026402002_jpg.rf.677377d379ab2be1df5be03f60c99bc3.jpg",
+    "image_sha256": "5306a244f173850cfe0bcca017ff8e9730277982a0bfe0a9b6cc2d3187900ffa",
+    "input_label_sha256": "c4d9b45176896ad19836fe681c55d1cd422b0fc458ecd3729e16c2540e444943",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.448660714 0.785714286 0.366071429 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__026425002_jpg.rf.82264197050e01b78caf5309047d4c91.jpg",
+    "image_sha256": "1e4c65e4ad7db5bd3e89b327d40f82d1f53650dd01736b2610b1dab4ac54ff3e",
+    "input_label_sha256": "e4d8f4a9b4a192d822a1c406ccdbbf5693f50a8e56833b2e8050c4469d92ab48",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.473214286 0.779761905 0.343750000 0.101190476"
+    ]
+  },
+  {
+    "name": "school_lunch__026472000_jpg.rf.c3a768ccbbc329ae4b609082bde70234.jpg",
+    "image_sha256": "a4a7cb6df060ece17ff1f49e953f681211398f77ebf3a6b4ac4ee917ea31da01",
+    "input_label_sha256": "fd0c568e4fc1109723da654c46e2cf909b3bc5747b838a8c5e49c740997c38b0",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.489955357 0.781250000 0.359375000 0.104166667"
+    ]
+  },
+  {
+    "name": "school_lunch__026511002_jpg.rf.1cac6a1aa06bb9401c48df8465449558.jpg",
+    "image_sha256": "68ada104e26e1c8f5ff617b4517f3d16d8ea4a7df19b95707403f31ffceb5fd3",
+    "input_label_sha256": "0ebeaadaadce4402a694a82e7ea89977b7a649ba2f4f463dc76af15042095770",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.445312500 0.770833333 0.341517857 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__026513001_jpg.rf.8a9029393ccf57a557806b782bd50ece.jpg",
+    "image_sha256": "f5aafbd6e81e46e274c3e687de3b641428ab654a77b4f002869b0bee07792334",
+    "input_label_sha256": "7a6c3e7beec0e6cb5a2fa10731bebf2e26cd1ed0181d456bd0bd757004c74022",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.515625000 0.757440476 0.334821429 0.098214286"
+    ]
+  },
+  {
+    "name": "school_lunch__027206001_jpg.rf.76d4975e5e1efa2adec3344930d20a43.jpg",
+    "image_sha256": "2f070d8a0bf426ea521c9124fae312917038a24fc4c4cefe0ceb409921c96c7d",
+    "input_label_sha256": "80d0ba2d8e916e25dadc32648f234319ac3d8346f7cfa1304c06aeb8b6ec63bf",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.456473214 0.803571429 0.345982143 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__027211002_jpg.rf.980e4547c0e0ed8f294c8f12fe27fdd9.jpg",
+    "image_sha256": "9d92a946ee4246f9f14e4f52b460910354c52dc0be5784c82094677067194f88",
+    "input_label_sha256": "b567ad33a0fa736b1819d9b11581fe88db05ce6273bf10bd464922e46d42deee",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.441964286 0.776785714 0.343750000 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__027225002_jpg.rf.6e95a3f2775df1cfe42f344ed48ca69e.jpg",
+    "image_sha256": "40bc3ca25cb1afd8dc4df21394b66f4b84e750a87212ec99ee5f733a33551227",
+    "input_label_sha256": "bda0c6da523cd32852e5b15d77bb4e971a9f678ea690fd13e2ac6e0c59317fd7",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.458705357 0.782738095 0.337053571 0.095238095"
+    ]
+  },
+  {
+    "name": "school_lunch__027278000_jpg.rf.bfd78a4391862446e22dc979efff6dcf.jpg",
+    "image_sha256": "faddf17bd7c6f48c7bdacfa664ea28dbd8b7e31b61be30987026dda82bad88c3",
+    "input_label_sha256": "80dcfbac501a9dc47397cc369c3109923f4981e6293da6b5ca493c9c4b128a0a",
+    "reviewer": "Codex native-resolution visual/crop review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Visible reusable eating spoon omitted by source annotations. Box visible extents including identifiable clipped/occluded spoons. Review made from source pixels without consulting predictions; preserve all existing rows.",
+    "scope": "Validation-only annotation addition; same held-out image and split; not a full 11-class semantic sign-off.",
+    "additions": [
+      "3 0.500000000 0.802083333 0.348214286 0.092261905"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000009270.jpg",
+    "image_sha256": "f09f21975851d2b443e5a7462a5de5560c82430e06c75b7db02ae69b56a46d6d",
+    "input_label_sha256": "f37a297ed09c6d641aa72ed74e4a17bcbaaf23a2104a0a0f9747523d279ddcb1",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.270047170 0.382031250 0.351415094 0.098437500"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000087593.jpg",
+    "image_sha256": "4b3e69568524c56e95f0c17265b606aaa4b5be43415c69df04b831cd96f36dee",
+    "input_label_sha256": "0d2f1826244da450c9c0a436b1c3205f85f832c3a97ccec6a4776058c79eebff",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.638281250 0.754166667 0.723437500 0.120833333"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000091952.jpg",
+    "image_sha256": "99488e9a84bae8d43e92f12f012b7d8451125691e6cc80bf0efc02a6e27d0c11",
+    "input_label_sha256": "e5e686b1cbf84a939ac82ae377e132377931d310c19b81b71589eafd886d2e6f",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.735937500 0.351562500 0.212500000 0.546875000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000112044.jpg",
+    "image_sha256": "391556fa8714c310ec21810f5bd60111d1fb0c58f7d024c5ef8418f0daa59a74",
+    "input_label_sha256": "0d7ed5491bf4391d16e8ee4735293d8381a83bc1db649373463f63dbf1a2adf5",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.307812500 0.203747073 0.296875000 0.407494145"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000282143.jpg",
+    "image_sha256": "a61225292e2a6ab6126a21bad73c20852b83156be3fb3b84482b891a6cff9f7e",
+    "input_label_sha256": "1497dfbd7b917a34b8eb47d0de5fd0d9f7966769f593545f8cae99fabcb90b9f",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.730000000 0.874666667 0.224000000 0.250666667"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000468276.jpg",
+    "image_sha256": "600a18c4aaff26f2f1b9d5025b51d0bba5fe973859cc5de987be7d1b98567839",
+    "input_label_sha256": "473e1e3b3e9278542c1ffb8ffbdcfce66424d77e03f22e62bee8f1acd7c3d440",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.414062500 0.848958333 0.375000000 0.302083333",
+      "3 0.500000000 0.886458333 0.075000000 0.227083333"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000471842.jpg",
+    "image_sha256": "2786a541e950b11b57aa0c94cc8237add3e91c04de9ef8447a0eba08179abb4e",
+    "input_label_sha256": "5f10b0b512c9d3cdebdde4cf7f78e8fbee394e1b131406bd25d900fb099883fa",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.682031250 0.210280374 0.170312500 0.420560748"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000479350.jpg",
+    "image_sha256": "8ca52d1c818432ff30a3042668cf2b5c92134c754a34f03c540a78dc008c8df6",
+    "input_label_sha256": "d4917d7dec240d01ca11f19a415c619ffa0a3d2ded964ed86c38d35e5d4a94a4",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.147656250 0.386792453 0.057812500 0.160377358",
+      "3 0.347656250 0.367924528 0.139062500 0.202830189",
+      "3 0.791406250 0.698113208 0.042187500 0.141509434"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000488373.jpg",
+    "image_sha256": "8864babddfd11d257cea4ea5c3f49b37e453ed465c27ad4f33e25da74471fc2d",
+    "input_label_sha256": "28f61da7740170473233de3138231b62d9ad8bd07828f9d9fe06826fe5a1893f",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.130468750 0.544496487 0.029687500 0.133489461"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000492729.jpg",
+    "image_sha256": "a8859df3d9542bff014dc996edbb0c35218542c618f3450e44588e056d7238b7",
+    "input_label_sha256": "2360444eff3e47ba47dd48bfafbcf5efed2cdcc4abb0227c5d11444e82705ad4",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.509000000 0.428000000 0.314000000 0.376000000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000495095.jpg",
+    "image_sha256": "0b41e481114a80887fe0e09606453ef9ef681fb856a20e01f9eb0afebeffa41a",
+    "input_label_sha256": "ec7b23c674e48f57dd555cce494988a9fdb2d088496039229782d8de74c22437",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.205065359 0.515522876 0.070261438 0.057189542"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000505234.jpg",
+    "image_sha256": "38b01830ccbef98497dde2a7ee17da8d0566edcd6da837093dc3148eaa89f90e",
+    "input_label_sha256": "f4267cd40f5fc5311a3fe291a0c2cdb3da418e2eddd9ebcae814ac5cbca0133a",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.400781250 0.463443396 0.126562500 0.351415094"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000529929.jpg",
+    "image_sha256": "66260b92dab0d4004ac39cb602f27ec2201cf64019363bfb557a08b6f6026d73",
+    "input_label_sha256": "59985aaa0133850dff65aa76d3eb555363ba781bd1919310b45921ed3178ef15",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.973437500 0.379166667 0.053125000 0.187500000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000533976.jpg",
+    "image_sha256": "126364261b6c99e22f4a983b361f48a7603af0927d8a8dce3cfd56a1ef190fe6",
+    "input_label_sha256": "8355fda3af70be3f098d86f4c49cf056bde9299c6e07b978b3b480c55f4155c5",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.396875000 0.414062500 0.177083333 0.059375000"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000552467.jpg",
+    "image_sha256": "02ebaeb24a7fc27bfb27a5f3a9023677aebd88cb87f7da6c6fb01eab6f903f10",
+    "input_label_sha256": "e90d1c41f5853fb81dde3f631618f5e690d8d3396176f57d1aec65fbf591cc77",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.242968750 0.266871166 0.117187500 0.071574642",
+      "3 0.342187500 0.390593047 0.018750000 0.089979550"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000036260.jpg",
+    "image_sha256": "32ea9dd260e4559ef50baf1b77735f2a7aeb844433e5e60596d566af7dc97e3b",
+    "input_label_sha256": "b01810547e9f399d2f31466b6a8a121a2b18930ee8524947dfb1bfdba77267ad",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.657812500 0.152083333 0.115625000 0.304166667",
+      "3 0.864843750 0.547916667 0.270312500 0.129166667"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000238795.jpg",
+    "image_sha256": "ba3416a8b2d15a01df4c196a4ab7c5b6052530cfdd799dbc0f0a636766d694a6",
+    "input_label_sha256": "3773d23ac6a9923dddc51b862f8cdc77843a706f560ad7386adf607f7fd0bb07",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.541406250 0.881250000 0.326562500 0.237500000",
+      "3 0.710937500 0.829166667 0.578125000 0.304166667"
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000272426.jpg",
+    "image_sha256": "9602378dfb7df327874ee896e5f2d6a25293ceda0dacddbd009d8a8c6ed4d5a0",
+    "input_label_sha256": "999b0a6ae5738190487934f399c42022a9b0bffc9bb64b4c877d57e0b1182664",
+    "reviewer": "Codex native-resolution visual review,2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Clearly identifiable eating cutlery omitted by plate-source labels; visible extents only. For photo272426 also add the sealed individual sauce sachet beside the sandwich. No predictions consulted. Preserve all inherited rows.",
+    "scope": "Held-out annotation additions only; same image/split. Ambiguous tiny fragments and cake-serving tools are not automatically promoted.",
+    "additions": [
+      "3 0.357031250 0.588357588 0.098437500 0.374220374",
+      "7 0.477343750 0.489604990 0.104687500 0.201663202"
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000071136.jpg",
+    "image_sha256": "5f6566fc869ade4c3e337dae576809fd50068969eb009c6003f2bf1c1129ab9b",
+    "input_label_sha256": "3660a24b9dd8b839d58900be7436c52f96fda20ed12e4929ab7223da9bb61c94",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.029312500 0.591395833 0.056343750 0.036375000",
+      "3 0.956257812 0.418916667 0.087484375 0.040208333"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 56444,
+        "category_id": 1000,
+        "image_id": 71136,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 56472,
+        "category_id": 469,
+        "image_id": 71136,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000067537.jpg",
+    "image_sha256": "299b76e258600c851f92b23ba811cb5cf44b56fa8fbc247ca034c4b375b67d9b",
+    "input_label_sha256": "78e4cb705cf73a4f7fe356f7b43cb59ba4431fc5cd3bafb367e75f227a841a42",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.282382813 0.912540984 0.092734375 0.021381733",
+      "3 0.623625000 0.933243560 0.018687500 0.115011710",
+      "3 0.363250000 0.587248244 0.077875000 0.028548009",
+      "3 0.098835937 0.317868852 0.041265625 0.025901639"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 103801,
+        "category_id": 1000,
+        "image_id": 67537,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 103802,
+        "category_id": 1000,
+        "image_id": 67537,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 103803,
+        "category_id": 1000,
+        "image_id": 67537,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 103805,
+        "category_id": 1000,
+        "image_id": 67537,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000211282.jpg",
+    "image_sha256": "78934c2e5fa640b8c58deae96017aaca3d82392c316d13fc9da551874fa00b94",
+    "input_label_sha256": "fc07c41bd7aeadd86f0a9bedfce62ee81439d4dab337629783e966f744b1cceb",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.402268817 0.830625000 0.353354839 0.242656250",
+      "3 0.183494624 0.369656250 0.137956989 0.224531250"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 270659,
+        "category_id": 469,
+        "image_id": 211282,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 270660,
+        "category_id": 469,
+        "image_id": 211282,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000500965.jpg",
+    "image_sha256": "f8da450d92ea0b883ee6e1b43b2606d35bae241da27aa0adc431bbad5604e924",
+    "input_label_sha256": "eceedc525b06583c856998c85528430fe4cb22a010a677af2e86ac9ca01e0662",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.384849850 0.672150000 0.209159159 0.133860000",
+      "3 0.887657658 0.686950000 0.222402402 0.112940000"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 99669,
+        "category_id": 469,
+        "image_id": 500965,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 99670,
+        "category_id": 469,
+        "image_id": 500965,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000324789.jpg",
+    "image_sha256": "41dd306bdeab54d96bf9f3eea5886d4a6dacf62958e949f92da78f78ddd10494",
+    "input_label_sha256": "02c0d1bf0be32645121c887d770c4736dd6e9d5da1cc91001bb7e5354a5563d7",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.853585937 0.569874477 0.292828125 0.772677824"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 225142,
+        "category_id": 469,
+        "image_id": 324789,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000252629.jpg",
+    "image_sha256": "4f549a2ea14f73bd82f4be6279caff64c262223cd2131b819e2f2aa61c44e62f",
+    "input_label_sha256": "ed738661582324450be85f560fe7e76d8c92e6e8eee46a1230b647f03bad1cab",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.780023438 0.219707260 0.176453125 0.081288056",
+      "3 0.620054688 0.097131148 0.045453125 0.194262295"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 142473,
+        "category_id": 469,
+        "image_id": 252629,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 142474,
+        "category_id": 469,
+        "image_id": 252629,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000143450.jpg",
+    "image_sha256": "f9652f10a431eefac5b0faa4251c7f4bda4953983d4d46dd1fae3a03da3e9d9a",
+    "input_label_sha256": "955b0d6c4e577402de1077b097202f753c00a8587f2c0e7bd7296b4b0680cb7f",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.813609375 0.427934272 0.214562500 0.850000000"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 146632,
+        "category_id": 1000,
+        "image_id": 143450,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000044839.jpg",
+    "image_sha256": "f990176dc3afd8eaff736ca93d03dd41ec707d07cf0321d137cd1d1dba87bd45",
+    "input_label_sha256": "effc487dc4d52ed1c0b17bb69456ad0e77c28e4ea13f7c87c9909e7cc1829ffc",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.951359375 0.770518868 0.095250000 0.098207547",
+      "3 0.512257812 0.927924528 0.140828125 0.038726415",
+      "3 0.118257813 0.854233491 0.115640625 0.097382075"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 33150,
+        "category_id": 469,
+        "image_id": 44839,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 33151,
+        "category_id": 469,
+        "image_id": 44839,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 33152,
+        "category_id": 469,
+        "image_id": 44839,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000144065.jpg",
+    "image_sha256": "75b71a6fd2f0c04cec26211c0eb829ccc483b59a22f6566cf94e63a8097f3baa",
+    "input_label_sha256": "8560dcd26dd13b1d2b986ff8c42dcbc91c90bf22d5932e21aac6c59f8268a340",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.736195312 0.763641686 0.157265625 0.065456674",
+      "3 0.608320312 0.874637002 0.170859375 0.054894614",
+      "3 0.589460937 0.706779859 0.137953125 0.043067916",
+      "3 0.994203125 0.449800937 0.011593750 0.058009368",
+      "3 0.492304688 0.747084309 0.156953125 0.051264637"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 147021,
+        "category_id": 469,
+        "image_id": 144065,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 147022,
+        "category_id": 469,
+        "image_id": 144065,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 147023,
+        "category_id": 469,
+        "image_id": 144065,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 147024,
+        "category_id": 469,
+        "image_id": 144065,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 147025,
+        "category_id": 469,
+        "image_id": 144065,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000489879.jpg",
+    "image_sha256": "db4c13235338dab625f2ec3ab55f2567dfe65885d7308fd7a8cbcaa58492e28c",
+    "input_label_sha256": "7c7ebd44bd5cc5d1fbe91a2048388ceafebfca55b020964856ae67b773ee64c1",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.387429687 0.352161215 0.182640625 0.070350467"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 37733,
+        "category_id": 469,
+        "image_id": 489879,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000145318.jpg",
+    "image_sha256": "f656857e81a14ebdfef54c0a7b39ad4bfff236ef9d7f7a4086bb274136acbfa5",
+    "input_label_sha256": "12764052b555768e3658b959058c9bb81250ea32223d3d583ca60acb1d34f9ba",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.253289063 0.639458333 0.231203125 0.270416667"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 99617,
+        "category_id": 1000,
+        "image_id": 145318,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000409708.jpg",
+    "image_sha256": "2e28dd8fb53424fb5523ce50489266cd1d95928e77db83d3a5a7b17810e1ecb9",
+    "input_label_sha256": "c632680aa198055c4a552e817e5f890fef3c8659efb688c7d3381e6a529ff5fb",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.015523437 0.686030445 0.030984375 0.052341920"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 99226,
+        "category_id": 469,
+        "image_id": 409708,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000570094.jpg",
+    "image_sha256": "4abffc18aa621dedd18c67a2d306953987d31a235d68e97d7f7510f3a714b9e5",
+    "input_label_sha256": "4599489086e739637875c855fb424a5b9171782f04c76267800d5896a9edc5e4",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.606650000 0.927133333 0.066540000 0.050960000"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 47766,
+        "category_id": 469,
+        "image_id": 570094,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000352734.jpg",
+    "image_sha256": "567de5583987b24083e0db2ac3253ebbb42100f1ff249d6684b5194ec604165e",
+    "input_label_sha256": "2eeedd3b6fa476a3d8e830adcbf4426278fd298cb96cbeb0e9749685c992c116",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.310054687 0.723579812 0.369171875 0.101666667"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 357430,
+        "category_id": 1000,
+        "image_id": 352734,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000530259.jpg",
+    "image_sha256": "ad35a3ad6c16d6d49af08db886ad8c824740212b3fb9bc2ec98aa80d90cc8421",
+    "input_label_sha256": "0e4bc5b576189c7eed6d2b59d78dbf65dce296f2d0590f3c51929bfb4d61f490",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.874531250 0.789781250 0.243843750 0.416729167",
+      "3 0.182968750 0.291406250 0.350000000 0.433687500"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 341784,
+        "category_id": 469,
+        "image_id": 530259,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 341785,
+        "category_id": 469,
+        "image_id": 530259,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000309386.jpg",
+    "image_sha256": "d959e595126a61a7a9702ab4448f95b02a5fddb8f613403cef1b14eb60506781",
+    "input_label_sha256": "0006c3cf80f112d77e04e347200d50c4c07e0e3ca13c2ff3e6314556d6a2bb33",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.517111801 0.547273438 0.092318841 0.011890625",
+      "3 0.867380952 0.682335937 0.265113872 0.032953125"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 536594,
+        "category_id": 469,
+        "image_id": 309386,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 536595,
+        "category_id": 469,
+        "image_id": 309386,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000442287.jpg",
+    "image_sha256": "8c61d4c6d70ba280d66c988880997d5cee54e2a8169075389a97f9c2fdeb9e2a",
+    "input_label_sha256": "3c00ec49232e796e34cdc3b60a4da6faaa9470ed4ed4d392037c4949c7b34839",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.322677083 0.556640625 0.168812500 0.135687500"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 387558,
+        "category_id": 469,
+        "image_id": 442287,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000539573.jpg",
+    "image_sha256": "309806b1fb9c3286b48dedc28f0189ebd819cf5480a6dc0dc3423704341b0857",
+    "input_label_sha256": "1e42b590e08dccf520514ca49079acdf9a1d680834738859a50bf80c19ff0b75",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.241299766 0.509343750 0.213138173 0.039656250"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 393453,
+        "category_id": 469,
+        "image_id": 539573,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000245806.jpg",
+    "image_sha256": "529111216ed2b5b80b5d8f15a1afde7d225a2fe076a75e9339ca317dbb0ab675",
+    "input_label_sha256": "d337f45a6d1ac558aaf4d2423756ff45000fcbb718068fcbc4f3efad9a78e6bf",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.055500000 0.669031250 0.111000000 0.024625000",
+      "3 0.046843750 0.738953125 0.034145833 0.074562500"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 538533,
+        "category_id": 1000,
+        "image_id": 245806,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 538534,
+        "category_id": 1000,
+        "image_id": 245806,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000310655.jpg",
+    "image_sha256": "3db7bce359b775934035c37cda08ef513b98aac200d0b481ea614a3ff7690a92",
+    "input_label_sha256": "cfd3eb235600c65a95cd428f1b93e85e5f3543af8afabaca3d839a59bf6545e3",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.792760000 0.317173333 0.412800000 0.291360000"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 693688,
+        "category_id": 469,
+        "image_id": 310655,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000486262.jpg",
+    "image_sha256": "c52292545a0c9fea174645a0496b896bdf6dc8012b1b5bf82d3915153174e9e4",
+    "input_label_sha256": "b5be689328bf2e886db1b86634ea45a4779bd074293b53722a1d4139ed551a52",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.460742188 0.288166667 0.091453125 0.362333333"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 800752,
+        "category_id": 469,
+        "image_id": 486262,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000186719.jpg",
+    "image_sha256": "41fa757326fdbfc28994d3a677a47e0b37419171b6600cfff32c7d6d3e352435",
+    "input_label_sha256": "b6cf411e677a2d24284a0c57c8bd818c5bf77d63b429b233f983b2b87e205843",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.578609375 0.640339578 0.268500000 0.059133489",
+      "3 0.648906250 0.683138173 0.262750000 0.110070258"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 905620,
+        "category_id": 469,
+        "image_id": 186719,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 905621,
+        "category_id": 469,
+        "image_id": 186719,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000226751.jpg",
+    "image_sha256": "6307e5cdbc93524d7287dc1129dfb67d2a21f37fb2117393c95dbc12630ca00a",
+    "input_label_sha256": "b46d2df73ebac3ee1526283a72039dc0544b8cfa68343ba1e00a2834553475c8",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.766315359 0.676119281 0.396846405 0.267075163",
+      "3 0.662745098 0.010882353 0.024607843 0.019477124"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 1167291,
+        "category_id": 469,
+        "image_id": 226751,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 1167292,
+        "category_id": 469,
+        "image_id": 226751,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000144275.jpg",
+    "image_sha256": "5ce3db690cb4323b104095e99d1870c1ffb1e169f78b989e962af41802ad6258",
+    "input_label_sha256": "4b926479da9a93750ec723633fe409f9e82a06ecfa9f3c9132b9c9bc05aa90e4",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.693523438 0.818126464 0.609796875 0.238641686"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 1105502,
+        "category_id": 469,
+        "image_id": 144275,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000245577.jpg",
+    "image_sha256": "ff0c05d39c6f42c969a8e18934a632cdf20195a1113d2a0c7fb63c5478fc25b3",
+    "input_label_sha256": "37ead187eb08eaa3e363cad85a0fdf3a50ec7593a2be2c309681bac541b0e609",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.340859375 0.806244131 0.662875000 0.387511737"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 980840,
+        "category_id": 469,
+        "image_id": 245577,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000195852.jpg",
+    "image_sha256": "186f692c23ff72bb0762b2188b45eff403a0d48c2e2df82686807623a3966277",
+    "input_label_sha256": "d18f1fe9cc73191d8ad4aae7e0be0684438477b2885c4cbb7c00bdce2d8f2370",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.674718750 0.408735363 0.378375000 0.229320843"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 1113096,
+        "category_id": 469,
+        "image_id": 195852,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000516462.jpg",
+    "image_sha256": "b0561d8089eef817a015229dbb8105757a6f18ba4b760d35ee436fc1e3f93bf5",
+    "input_label_sha256": "4c90eaca0360e4756a37969de8ec658e26d751e353321249f948e31493748660",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.528676815 0.646484375 0.159367681 0.253843750"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 1132669,
+        "category_id": 1000,
+        "image_id": 516462,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000554085.jpg",
+    "image_sha256": "0cbaffd463ea01f6e503f710512720a2bed488f43757b1ee668ae66be8c00add",
+    "input_label_sha256": "131653b5da780649505ed40124564c05fda342c1c6deba1e0bf6ce9138e65adc",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.527453125 0.418618267 0.441843750 0.432927400"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 1242872,
+        "category_id": 1000,
+        "image_id": 554085,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__train__lvis_000000014402.jpg",
+    "image_sha256": "92a80be2e33ad973589b54bda977171da3cddf030db0a6be16ca962b184ae431",
+    "input_label_sha256": "af04fd33a87efe1c011fc3d53050b2af46874b21c31f64dc0a7e35ab988dc198",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.709531616 0.914890625 0.549274005 0.112750000"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 1005114,
+        "category_id": 469,
+        "image_id": 14402,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000334483.jpg",
+    "image_sha256": "25b008f452e77d8618bb1cfb9380eb3c7d2dd43fe5c92c5cbcd949b3d4f9ce4b",
+    "input_label_sha256": "92db6c709f4f9d123a11d81c826ac7f7862a79c93196f0223e65884f524f0b0f",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.395364583 0.731281250 0.099562500 0.146000000",
+      "3 0.599583333 0.636820313 0.098458333 0.022859375"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 10815,
+        "category_id": 469,
+        "image_id": 334483,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 10820,
+        "category_id": 469,
+        "image_id": 334483,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000345361.jpg",
+    "image_sha256": "2444d5e254c43f64175fb611d93fc19de85ab9eb389148e92687cd445c63095e",
+    "input_label_sha256": "59033dc3505efb0b074989e62a88c1f9b877ba0f14213e0a730de1ad341fc629",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.243390000 0.530474860 0.042220000 0.015754190",
+      "3 0.374550000 0.654203911 0.041180000 0.047067039"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 18803,
+        "category_id": 1000,
+        "image_id": 345361,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 18804,
+        "category_id": 1000,
+        "image_id": 345361,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000327780.jpg",
+    "image_sha256": "5b492dc6808bf75c27b3c085784fa102e325acb43125475c1ae1babc83a61fd4",
+    "input_label_sha256": "06782b966a1285e4448dd0f178e94cb85c2f221ef840f769cc47551b196fec81",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.512414062 0.393645833 0.293453125 0.787291667"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 14128,
+        "category_id": 469,
+        "image_id": 327780,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000268378.jpg",
+    "image_sha256": "c8d28db19ef226195811e86b5c41ab6635d16c8e9d375a1d4fb841fcb038b68a",
+    "input_label_sha256": "af550192a6439cc92242a02bd2e13e31406de121fce99cd91ca42137b79acb42",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.415476563 0.699721448 0.047671875 0.058830084",
+      "3 0.657976563 0.784874652 0.043578125 0.128635097"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 13210,
+        "category_id": 469,
+        "image_id": 268378,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 13211,
+        "category_id": 469,
+        "image_id": 268378,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000004108.jpg",
+    "image_sha256": "9f8ef24dcfcb3d49008c65ab99118e7e67623328aa7abf9cb58433bfbe96e334",
+    "input_label_sha256": "d462da32d7fb66fbf63fa2b29eae561725ea9245fa6f4ae0965fcac31ed760bd",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.721541667 0.423109375 0.091875000 0.088062500",
+      "3 0.850750000 0.780601563 0.045708333 0.157609375",
+      "3 0.652906250 0.465531250 0.082979167 0.086750000",
+      "3 0.343427083 0.929828125 0.118604167 0.135031250",
+      "3 0.611031250 0.450593750 0.048812500 0.098000000",
+      "3 0.541333333 0.404250000 0.038958333 0.114375000"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 72088,
+        "category_id": 469,
+        "image_id": 4108,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 72089,
+        "category_id": 469,
+        "image_id": 4108,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 72090,
+        "category_id": 469,
+        "image_id": 4108,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 72091,
+        "category_id": 469,
+        "image_id": 4108,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 72092,
+        "category_id": 469,
+        "image_id": 4108,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      },
+      {
+        "annotation_id": 72093,
+        "category_id": 469,
+        "image_id": 4108,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000478407.jpg",
+    "image_sha256": "64256c7b83d59a30b5776b40017fb09bda83c809124de8bbf2c567212b21dd42",
+    "input_label_sha256": "2a4b1d9a1a6c4976b3ea70e02e46be85a42c0ed668e74cc653e08cab922b8947",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.315200000 0.620480000 0.053000000 0.191413333"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 141959,
+        "category_id": 469,
+        "image_id": 478407,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  },
+  {
+    "name": "plate__val__lvis_000000234091.jpg",
+    "image_sha256": "b386f2f6de68e44be29d9e2b4bfecb25f822a12b8af2ca51145b75dd4b95c5e3",
+    "input_label_sha256": "fa555ed0da34728a1dd6078a1bba7df16dc1dd867343839f480ee16b5c55c813",
+    "reviewer": "Codex visual review of original pixels and official LVIS annotations,2026-10-19; AI-assisted",
+    "reason": "Visible physical eating utensils omitted by plate-source annotations; exclude cooking tools, printed package artwork and ambiguous crowded proposals. Preserve inherited rows.",
+    "additions": [
+      "3 0.939869281 0.697982026 0.120261438 0.211683007"
+    ],
+    "lvis_provenance": [
+      {
+        "annotation_id": 163625,
+        "category_id": 469,
+        "image_id": 234091,
+        "source": "Official LVIS v1, archive SHA in source-expansion inventory"
+      }
+    ]
+  }
+]

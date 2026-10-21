@@ -1,0 +1,28 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/balanced-real-v8/train/weights/last.pt",
+  "weights_sha": "fdeefabe568ab258470d57508bda85150d0082e99103edb6695d50000885feaa",
+  "split": "val",
+  "dataset_fingerprint": "b7f9dfbfbdf2b19e9b0cc12592a194f16569f5bb1624b9b37f858c78887dc47a",
+  "independent_test": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.8073222954466966,
+      "recall": 0.597972972972973,
+      "AP50": 0.7059694137465697,
+      "AP50_95": 0.44001721819448114
+    },
+    "condiment_packet": {
+      "precision": 0.23496568695458567,
+      "recall": 0.3333333333333333,
+      "AP50": 0.12925857126387358,
+      "AP50_95": 0.08036832428020427
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.5211439912006411,
+    "metrics/recall(B)": 0.46565315315315314,
+    "metrics/mAP50(B)": 0.4176139925052217,
+    "metrics/mAP50-95(B)": 0.26019277123734275,
+    "fitness": 0.26019277123734275
+  }
+}

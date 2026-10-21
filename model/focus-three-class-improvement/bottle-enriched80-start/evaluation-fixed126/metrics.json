@@ -1,0 +1,40 @@
+{
+  "overall": {
+    "precision": 0.6953684444987024,
+    "recall": 0.5317176343367842,
+    "AP50": 0.6345709510308213,
+    "AP50_95": 0.4759160828182355
+  },
+  "per_class": {
+    "plate": {
+      "precision": 0.8954710083601808,
+      "recall": 0.5036496350364964,
+      "AP50": 0.6961190324011768,
+      "AP50_95": 0.5036883127003596,
+      "objects": 137
+    },
+    "wrapper": {
+      "precision": 0.5943153761208542,
+      "recall": 0.6470588235294118,
+      "AP50": 0.7225545635693083,
+      "AP50_95": 0.5674528549347728,
+      "objects": 17
+    },
+    "bottle": {
+      "precision": 0.5963189490150722,
+      "recall": 0.4444444444444444,
+      "AP50": 0.4850392571219788,
+      "AP50_95": 0.3566070808195739,
+      "objects": 45
+    }
+  },
+  "weights": "model/focus-three-class-improvement/bottle-enriched80-start/train/weights/best_min_ap50.pt",
+  "weights_sha256": "fef580e7a71e88a36de729cd5b6dc015288e7b192058c500bbc7385ba670a72f",
+  "dataset_fingerprint": "2f089e1570c5d6d0438760c55fe92dc6a641006c9f5d9fdd7a80e1dd3a080893",
+  "imgsz": 640,
+  "augment": false,
+  "target_min_ap50": 0.8,
+  "minimum_class_AP50": 0.4850392571219788,
+  "all_classes_meet_target": false,
+  "interpretation": "Reviewed public validation; no independent test or improvement claim."
+}

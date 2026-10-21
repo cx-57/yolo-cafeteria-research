@@ -1,0 +1,197 @@
+{
+  "method": "Mutual bidirectional Lowe0.75 SIFT700, RANSAC4px, spatial feature area reported; flags require visual review. Canonical source IDs separately exclude known originals. Not proof of complete capture independence.",
+  "pairs": [
+    {
+      "candidate": "taco_0849",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1094",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0028",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1067",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1097",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1250",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0860",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1141",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0116",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0348",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1080",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1078",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1022",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1479",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0301",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0616",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0176",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1107",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1475",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1079",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1345",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0346",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1377",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0148",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0389",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0124",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1063",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1272",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1168",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1227",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1224",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0853",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1492",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1271",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1139",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1353",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1112",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1091",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1241",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1145",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1342",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1316",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0111",
+      "matches": []
+    },
+    {
+      "candidate": "taco_0344",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1249",
+      "matches": []
+    },
+    {
+      "candidate": "taco_1101",
+      "matches": [
+        {
+          "validation": "trash_detection__train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg",
+          "mutual_matches": 7,
+          "inliers": 6,
+          "candidate_feature_area": 0.028369754897667385,
+          "reference_feature_area": 0.032946757224114546
+        }
+      ]
+    }
+  ]
+}

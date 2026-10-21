@@ -1,0 +1,12 @@
+{
+  "source_epoch": 9,
+  "source_sha256": "d4074aed050011f257a6613c55588020557ad5e71e0689c6e7b5c75c040938df",
+  "optimizer_preserved": true,
+  "prior_resume_epoch": 8,
+  "prior_resume_preserved": "model/focus-three-class-improvement/capture-bottle-replay-e8/train/weights/last_resume.epoch8.pt",
+  "prior_selected_epoch": 6,
+  "prior_selected_sha256": "c9160cdd83c5758229122f09d391002530fb86f641bf4fd7e672c5655643ab13",
+  "selected_epoch": 9,
+  "minimum_class_AP50": 0.47975935848678963,
+  "note": "Recovered valid latest checkpoint and selection from completed epoch9; cause of incomplete end-of-epoch bookkeeping is unconfirmed."
+}

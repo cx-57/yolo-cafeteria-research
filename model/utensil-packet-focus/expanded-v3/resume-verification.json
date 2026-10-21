@@ -1,0 +1,12 @@
+{
+  "completed_epochs": 3,
+  "total_phase_epochs": 80,
+  "optimizer_state_preserved": true,
+  "ema_updates": 27,
+  "finite_weights": true,
+  "classes": {
+    "0": "utensil",
+    "1": "condiment_packet"
+  },
+  "selected_sha_checked": true
+}

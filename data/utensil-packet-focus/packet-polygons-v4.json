@@ -1,0 +1,487 @@
+[
+  {
+    "name": "packet_extra_v3__commons_195737522.jpg",
+    "split": "train",
+    "sha": "e7c944aa0a164c4a407f894ed899adc4c993f66ec4008c82f8f34631eb624b96",
+    "pixels": "e63217d82b684559a179d4515a07e785c8f71aa1776776bd2b560e01f0e19b15",
+    "group": "commons_195737522",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.496875000 0.500900901 0.841666667 0.425225225"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_195737522.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "195737522",
+      "title": "File:Best Foods Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "ccb90f0d3f841b4dd94bd6a81d6176f41cf35758",
+      "url": "https://commons.wikimedia.org/wiki/File:Best_Foods_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Best_Foods_Mayonnaise_Packet.jpg/960px-Best_Foods_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        74,
+        178
+      ],
+      [
+        629,
+        205
+      ],
+      [
+        809,
+        165
+      ],
+      [
+        862,
+        158
+      ],
+      [
+        880,
+        378
+      ],
+      [
+        74,
+        396
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  },
+  {
+    "name": "packet_extra_v3__commons_176555534.jpg",
+    "split": "train",
+    "sha": "b8c41bdb12ad3549b5885c830827e253635d49598745b3d28b38d4999adca3a4",
+    "pixels": "0a76fb1ea583f43f52bf6ae456585f41486a56949d49210b3391c0cf64425ce6",
+    "group": "commons_176555534",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.489583333 0.491961415 0.806250000 0.514469453"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_176555534.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "176555534",
+      "title": "File:Chef\u2019s Quality Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "283df28cdbfa102bb6e82e74be0c71c645ab3aba",
+      "url": "https://commons.wikimedia.org/wiki/File:Chef%E2%80%99s_Quality_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Chef%E2%80%99s_Quality_Mayonnaise_Packet.jpg/960px-Chef%E2%80%99s_Quality_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        99,
+        147
+      ],
+      [
+        252,
+        169
+      ],
+      [
+        849,
+        165
+      ],
+      [
+        857,
+        458
+      ],
+      [
+        843,
+        466
+      ],
+      [
+        128,
+        443
+      ],
+      [
+        86,
+        427
+      ],
+      [
+        83,
+        223
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  },
+  {
+    "name": "packet_extra_v3__commons_161951901.jpg",
+    "split": "train",
+    "sha": "fcb842f783b5a4cc28d3deff0751e2330189627231b07ccd6e4fd3d2f449edfb",
+    "pixels": "c4f198bc3c60e2437ba2a10691b0b1a4172ba74fce3d7bd67b96243a860c2778",
+    "group": "commons_161951901",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.501562500 0.505563798 0.511458333 0.790059347"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_161951901.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "161951901",
+      "title": "File:Heinz Real Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "cb215e0d546d369c7e31cb1dff9b56932bd9d77e",
+      "url": "https://commons.wikimedia.org/wiki/File:Heinz_Real_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Heinz_Real_Mayonnaise_Packet.jpg/960px-Heinz_Real_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        236,
+        161
+      ],
+      [
+        259,
+        150
+      ],
+      [
+        691,
+        149
+      ],
+      [
+        701,
+        940
+      ],
+      [
+        727,
+        1188
+      ],
+      [
+        726,
+        1214
+      ],
+      [
+        420,
+        1212
+      ],
+      [
+        239,
+        1190
+      ],
+      [
+        254,
+        1114
+      ],
+      [
+        263,
+        960
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  },
+  {
+    "name": "packet_extra_v3__commons_191029949.jpg",
+    "split": "train",
+    "sha": "4f2b050d68588f697a2b956c5cd4566898687dfb80ae909336216a43ab6f7b30",
+    "pixels": "7264b05681ec8434a111adfe031f6391fb42f16bd7f89b4f1c93b642e4475993",
+    "group": "commons_191029949",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.493750000 0.504950495 0.885416667 0.359735974"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_191029949.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "191029949",
+      "title": "File:Hellmann's Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "5e1b9aef099668a2dde0741c5a3a1afca0b83d8f",
+      "url": "https://commons.wikimedia.org/wiki/File:Hellmann%27s_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Hellmann%27s_Mayonnaise_Packet.jpg/960px-Hellmann%27s_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        63,
+        202
+      ],
+      [
+        201,
+        209
+      ],
+      [
+        838,
+        200
+      ],
+      [
+        882,
+        197
+      ],
+      [
+        899,
+        392
+      ],
+      [
+        829,
+        399
+      ],
+      [
+        56,
+        415
+      ],
+      [
+        49,
+        394
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  },
+  {
+    "name": "packet_extra_v3__commons_163302326.jpg",
+    "split": "train",
+    "sha": "26483703b410058722ab8d258b2ee73081c9028bafb728f1023d70fcab75f434",
+    "pixels": "812aac2dfcdf3ec6c3fca9c66e1f6abf70f7d0d5883cdef73db0b2d3b1c6561d",
+    "group": "commons_163302326",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.481250000 0.505003574 0.522916667 0.831308077"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_163302326.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "163302326",
+      "title": "File:Kraft Mayo Real Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "593b9681aee46f8b9ca06dfb7c70785f5b8aaa9f",
+      "url": "https://commons.wikimedia.org/wiki/File:Kraft_Mayo_Real_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Kraft_Mayo_Real_Mayonnaise_Packet.jpg/960px-Kraft_Mayo_Real_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        256,
+        125
+      ],
+      [
+        694,
+        160
+      ],
+      [
+        713,
+        272
+      ],
+      [
+        704,
+        645
+      ],
+      [
+        683,
+        1263
+      ],
+      [
+        223,
+        1288
+      ],
+      [
+        211,
+        1248
+      ],
+      [
+        245,
+        937
+      ],
+      [
+        230,
+        880
+      ],
+      [
+        239,
+        283
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  },
+  {
+    "name": "packet_extra_v3__commons_193539206.jpg",
+    "split": "train",
+    "sha": "fc231d6b91e779a8f0b7c3499b7a75dcb7c3e8990cb2b4a3c8f369d36284483e",
+    "pixels": "547597eadad3c0ffd27bbd8f68a48a4ba6116a2471a7a5c8b83aa1885f2c61f3",
+    "group": "commons_193539206",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.506250000 0.508375209 0.808333333 0.544388610"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_193539206.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "193539206",
+      "title": "File:Shake Shack Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "c884434eb7a8e47aacf4213c2441b8295c45959b",
+      "url": "https://commons.wikimedia.org/wiki/File:Shake_Shack_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Shake_Shack_Mayonnaise_Packet.jpg/960px-Shake_Shack_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        104,
+        150
+      ],
+      [
+        418,
+        152
+      ],
+      [
+        625,
+        154
+      ],
+      [
+        852,
+        141
+      ],
+      [
+        870,
+        432
+      ],
+      [
+        874,
+        450
+      ],
+      [
+        114,
+        466
+      ],
+      [
+        98,
+        403
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  },
+  {
+    "name": "packet_extra_v3__commons_195737523.jpg",
+    "split": "train",
+    "sha": "bfb2853f78275e168bce6fba6ef4ee3b8e3b3d417e6b7d7bd9da27d2930d22e2",
+    "pixels": "2c11f8e3df1b1e23cf943c2e3751bfa0e8c480bc6eb28f6b4904691f927e1616",
+    "group": "commons_195737523",
+    "capture": "commons_artist_ef7cb96e06964f8ea0b7",
+    "rows": [
+      "1 0.500000000 0.489379085 0.858333333 0.508169935"
+    ],
+    "image_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/new-source-candidates/commons_195737523.jpg",
+    "known_classes": [
+      0,
+      1
+    ],
+    "verified_absent": [
+      0
+    ],
+    "verified_absence": false,
+    "reviewer": "Codex native-resolution visual annotation 2026-10-20; AI-assisted, not independent human certification",
+    "reason": "All physical mayonnaise sachets boxed, including entire seams. French-fries photo also includes its visible eating fork. Whole photo reviewed for both target classes.",
+    "provenance": {
+      "pageid": "195737523",
+      "title": "File:Subway Mayonnaise Packet.jpg",
+      "artist": "taurusemerald",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_sha1": "a0006d59afa7d4580292fce10b7053f79a275efe",
+      "url": "https://commons.wikimedia.org/wiki/File:Subway_Mayonnaise_Packet.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Subway_Mayonnaise_Packet.jpg/960px-Subway_Mayonnaise_Packet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    "polygon": [
+      [
+        89,
+        153
+      ],
+      [
+        548,
+        167
+      ],
+      [
+        845,
+        144
+      ],
+      [
+        884,
+        175
+      ],
+      [
+        892,
+        451
+      ],
+      [
+        822,
+        452
+      ],
+      [
+        604,
+        428
+      ],
+      [
+        74,
+        455
+      ],
+      [
+        68,
+        397
+      ],
+      [
+        82,
+        200
+      ]
+    ],
+    "mask_review": "Codex native photograph packet-outline polygon review, 2026-10-20; packet texture retained, background removed for training augmentation only"
+  }
+]

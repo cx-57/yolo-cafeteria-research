@@ -1,0 +1,48 @@
+[
+  {
+    "name": "utensil__IMG_20231109_141023_jpg.rf.6e80fc64956f4574a1c389f224fcce9d.jpg",
+    "image_sha256": "a361ca7c55e3f109990b5448e02980b276fe8dc4835e61008f672f1241c071f5",
+    "input_label_sha256": "066fd03c8d3f56c2844b11786c69f8d6a84238ce497e8035544b024b87887e29",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: the white spoon beside the already-labeled fork was omitted. Preserve the fork and all other labels.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.657031250 0.522656250 0.101562500 0.567187500"
+    ]
+  },
+  {
+    "name": "utensil__1244_jpg.rf.2f12e3a054ca32c565ab312f7596a7cc.jpg",
+    "image_sha256": "114297a38e2a73270f6fb8fce3803134563b8bb978bb4b9e7d5e70b6dbbe863e",
+    "input_label_sha256": "320ad7b24b6cd4cbb43767dcff75c4fb6bb2fe859d002d3950ea506aed04131d",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: two identifiable spoon bowls clipped by the right and bottom image edges were omitted. Box only their visible extents; retain all nine existing utensil boxes.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.964062500 0.611718750 0.071875000 0.179687500",
+      "3 0.819531250 0.935937500 0.160937500 0.128125000"
+    ]
+  },
+  {
+    "name": "utensil__1224_jpg.rf.6513525422842cb7b51fa595e9ff4e23.jpg",
+    "image_sha256": "4e61c74b63a4ff6be473df6f918f1e611db7b644e8bac29b9a488a41bc310954",
+    "input_label_sha256": "9a396b408891d48b6548c53008e37f836a70b03035ff0f74ae126fd7c1f76bde",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: the large diagonal white spoon immediately left of the flowers is missing. Preserve all twelve existing utensil annotations. The transparent bundle remains unresolved for exhaustive annotation.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.800000000 0.579687500 0.281250000 0.215625000"
+    ]
+  },
+  {
+    "name": "utensil__1219_jpg.rf.7fc782aca125dc1b1f174d91bba44e3a.jpg",
+    "image_sha256": "caedcc32d6f97cc0ac8b0b003d0c96fab49ef5440a0d46fe246642719a8bba12",
+    "input_label_sha256": "f81d7e23ba45f38c79f22dc3c1d00d9786cba144721c6672a83dd0d5414f007e",
+    "reviewer": "Codex native-resolution visual review, 2026-10-19; AI-assisted, not independent human certification",
+    "reason": "Native-resolution review: a separate spoon clipped along the right edge and another spoon bowl clipped at the lower-right edge were omitted. Retain the fifteen existing boxes, including valid clipped-object boxes; ambiguous tiny edge fragments remain unadjudicated.",
+    "scope": "utensil additions only; not an exhaustive all-class sign-off",
+    "additions": [
+      "3 0.956250000 0.463281250 0.087500000 0.539062500",
+      "3 0.857031250 0.929687500 0.126562500 0.140625000"
+    ]
+  }
+]

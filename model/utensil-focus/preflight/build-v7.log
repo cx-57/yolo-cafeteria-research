@@ -1,0 +1,38 @@
+{
+  "image_counts": {
+    "train": 2381,
+    "val": 764
+  },
+  "counts": {
+    "train": {
+      "food": 2684,
+      "plate": 664,
+      "paper_boat": 0,
+      "utensil": 265,
+      "hinged_container": 74,
+      "napkin": 83,
+      "drink_carton": 893,
+      "condiment_packet": 77,
+      "wrapper": 192,
+      "bottle": 345,
+      "bowl": 129
+    },
+    "val": {
+      "food": 994,
+      "plate": 217,
+      "paper_boat": 0,
+      "utensil": 296,
+      "hinged_container": 47,
+      "napkin": 36,
+      "drink_carton": 406,
+      "condiment_packet": 42,
+      "wrapper": 9,
+      "bottle": 53,
+      "bowl": 2
+    }
+  },
+  "fingerprint": "cc30ea3b8886e87caf6252f9ee62dd5cdd3814bbf774072a4d7beb224aa3a1bd",
+  "interpretation": "Revised development benchmark; not comparable to old AP. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Limited: 42 annotated validation packet(s); small support does not establish packet accuracy."
+}
+Integrity passed: source labels preserved plus hash-bound additions; no recorded capture/original/hash/pixel split overlap.

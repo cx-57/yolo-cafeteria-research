@@ -1,0 +1,12 @@
+{
+  "completed_epochs": 9,
+  "selected_epoch": 9,
+  "weights_sha256": "69f650a71696d67bc6dd492d407e8c38ce40231c5da18c99afdcd1faf48c4863",
+  "resume_checkpoint_sha256": "69f650a71696d67bc6dd492d407e8c38ce40231c5da18c99afdcd1faf48c4863",
+  "optimizer_present": true,
+  "ema_present": true,
+  "epoch_horizon": 80,
+  "validation_annotations": "Incomplete; see validation-annotation-gap.json. These AP values are provisional.",
+  "target_85_90_verified": false,
+  "packet_validation_supported": false
+}

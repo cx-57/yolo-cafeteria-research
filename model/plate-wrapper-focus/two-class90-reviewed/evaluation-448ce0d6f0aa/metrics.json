@@ -1,0 +1,36 @@
+{
+  "per_class": {
+    "plate": {
+      "precision": 0.9365224555548105,
+      "recall": 0.7310924369747899,
+      "AP50": 0.8590111073263546,
+      "AP50_95": 0.7181024111420927,
+      "objects": 238
+    },
+    "wrapper": {
+      "precision": 0.9077173744375295,
+      "recall": 0.8404255319148937,
+      "AP50": 0.8805647018666732,
+      "AP50_95": 0.5758038077608204,
+      "objects": 94
+    }
+  },
+  "overall": {
+    "precision": 0.9221199149961701,
+    "recall": 0.7857589844448418,
+    "AP50": 0.8697879045965139,
+    "AP50_95": 0.6469531094514567
+  },
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/two-class90-reviewed/train/weights/best_min_ap50.pt",
+  "weights_sha256": "448ce0d6f0aa39d805083fa9cad631a1176676a8da5943fe7ecccebbaaf70861",
+  "dataset_fingerprint": "3a92a28252f41d815805ebfe8b5b246a7bec0a2c3f559d3cc09168a70f0a1d8a",
+  "validation_protocol": "26f85903b7f46f6b2261088eee1f933338532f5cc5cba6f7ae3c1ce85ed290a2",
+  "validation_images": 246,
+  "target_AP50": 0.9,
+  "all_classes_meet_target": false,
+  "interpretation": "Development validation reused during selection; independent cafeteria test still needed.",
+  "delta_AP50_from_initial_model": {
+    "plate": 0.02628543771457692,
+    "wrapper": 0.04875275530234202
+  }
+}

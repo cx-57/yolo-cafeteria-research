@@ -1,0 +1,15 @@
+path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/grouped-v7-reviewed-negatives
+train: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/weak-v7-reviewed/train.txt
+val: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/grouped-v7-reviewed-negatives/images/val
+names:
+- food
+- plate
+- paper_boat
+- utensil
+- hinged_container
+- napkin
+- drink_carton
+- condiment_packet
+- wrapper
+- bottle
+- bowl

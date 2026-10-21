@@ -1,0 +1,54 @@
+{
+  "train": {
+    "counts": {
+      "images": 301,
+      "objects": 330,
+      "multiple_bottle_images": 14,
+      "objects_area_below_1pct": 42,
+      "objects_area_below_4pct": 107
+    },
+    "source": {
+      "dry_wet_waste": {
+        "images": 141,
+        "objects": 141,
+        "objects_area_below_4pct": 0
+      },
+      "plate": {
+        "images": 11,
+        "objects": 24,
+        "objects_area_below_4pct": 19
+      },
+      "trash_detection": {
+        "images": 112,
+        "objects": 128,
+        "objects_area_below_4pct": 88
+      },
+      "waste_detection_v3": {
+        "images": 37,
+        "objects": 37,
+        "objects_area_below_4pct": 0
+      }
+    }
+  },
+  "val": {
+    "counts": {
+      "images": 36,
+      "objects": 45,
+      "multiple_bottle_images": 7,
+      "objects_area_below_1pct": 15,
+      "objects_area_below_4pct": 36
+    },
+    "source": {
+      "plate": {
+        "images": 6,
+        "objects": 6,
+        "objects_area_below_4pct": 3
+      },
+      "trash_detection": {
+        "images": 30,
+        "objects": 39,
+        "objects_area_below_4pct": 33
+      }
+    }
+  }
+}

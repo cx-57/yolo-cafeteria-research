@@ -1,0 +1,18 @@
+{
+  "train": {
+    "images": 355,
+    "objects": {
+      "utensil": 190,
+      "condiment_packet": 234
+    },
+    "verified_joint_negatives": 65
+  },
+  "val": {
+    "images": 764,
+    "objects": {
+      "utensil": 296,
+      "condiment_packet": 42
+    },
+    "verified_joint_negatives": 0
+  }
+}

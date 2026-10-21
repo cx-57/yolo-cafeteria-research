@@ -1,0 +1,43 @@
+{
+  "per_class": {
+    "plate": {
+      "precision": 0.9060007298864977,
+      "recall": 0.809951461923255,
+      "AP50": 0.9005448358346156,
+      "AP50_95": 0.7609276280862689,
+      "objects": 238
+    },
+    "wrapper": {
+      "precision": 0.959843394699444,
+      "recall": 0.8617021276595744,
+      "AP50": 0.9038337395492184,
+      "AP50_95": 0.6578727626661076,
+      "objects": 94
+    }
+  },
+  "overall": {
+    "precision": 0.9329220622929708,
+    "recall": 0.8358267947914146,
+    "AP50": 0.9021892876919171,
+    "AP50_95": 0.7094001953761884
+  },
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/lr-low/train/weights/verified-epoch17-f7055a6bddfa.pt",
+  "weights_sha256": "f7055a6bddfaa2e84480afd7c875571333f7cb4e30b941236eb57857df85d8f1",
+  "dataset_fingerprint": "3a92a28252f41d815805ebfe8b5b246a7bec0a2c3f559d3cc09168a70f0a1d8a",
+  "validation_protocol": "26f85903b7f46f6b2261088eee1f933338532f5cc5cba6f7ae3c1ce85ed290a2",
+  "validation_images": 246,
+  "selected_epoch": 17,
+  "completed_epochs": 28,
+  "measured_at_utc": "2026-10-19T14:20:08.821967+00:00",
+  "fresh_inference": true,
+  "inference_directory": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/lr-low/verification-20261019T141941Z",
+  "metric": "mean_AP50",
+  "minimum_mean_AP50": 0.88,
+  "preferred_mean_AP50": 0.9,
+  "minimum_met": true,
+  "preferred_met": true,
+  "all_classes_AP50_at_least_90": true,
+  "independent_test": false,
+  "validation_used_for_model_selection": true,
+  "interpretation": "Development validation reused for tuning; not independent cafeteria accuracy. AP50 is not recall."
+}

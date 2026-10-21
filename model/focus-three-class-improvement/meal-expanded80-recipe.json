@@ -1,0 +1,23 @@
+{
+  "target_min_ap50": 0.8,
+  "wall_limit_minutes": 1,
+  "primary_comparison_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
+  "hypothesis": "Add382 native-reviewed missing meal photos to address wrapper context coverage. Transfer the independently evaluated stronger checkpoint; retain prior gentle fine-tuning settings. New optimizer for changed dataset; subsequent chunks preserve optimizer and fixed80 horizon.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/ablation-sampling2/train/weights/best.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/meal-expanded/data.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "nbs": 4,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "mosaic": 0,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0,
+    "warmup_epochs": 1,
+    "warmup_bias_lr": 0.0
+  }
+}

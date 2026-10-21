@@ -1,0 +1,63 @@
+{
+  "dataset_fingerprint": "9600be6224aebd2a3ee860135f61c5f1e06dee395ace0e8ea94fdfcbaa058e7c",
+  "method": "Normalized box size projected to a 640px longest-side image; actual letterboxing can make the short side smaller. Capture grouping uses existing recorded identities.",
+  "classes": {
+    "utensil": {
+      "train": {
+        "positive_images": 148,
+        "boxes": 246,
+        "capture_groups": 30,
+        "image_sources": {
+          "plate": 45,
+          "school_lunch": 29,
+          "utensil": 36,
+          "waste_detection_v3": 38
+        },
+        "median_normalized_short_box_side": 0.128044795,
+        "normalized_short_side_below_16_of_640": 8,
+        "normalized_short_side_below_32_of_640": 27
+      },
+      "val": {
+        "positive_images": 230,
+        "boxes": 296,
+        "capture_groups": 79,
+        "image_sources": {
+          "school_lunch": 93,
+          "tartanhacks": 27,
+          "utensil": 92,
+          "plate": 18
+        },
+        "median_normalized_short_box_side": 0.12096353900000001,
+        "normalized_short_side_below_16_of_640": 1,
+        "normalized_short_side_below_32_of_640": 4
+      }
+    },
+    "condiment_packet": {
+      "train": {
+        "positive_images": 74,
+        "boxes": 77,
+        "capture_groups": 12,
+        "image_sources": {
+          "condiments": 44,
+          "plate": 2,
+          "packet_extra": 28
+        },
+        "median_normalized_short_box_side": 0.472965470548409,
+        "normalized_short_side_below_16_of_640": 0,
+        "normalized_short_side_below_32_of_640": 0
+      },
+      "val": {
+        "positive_images": 22,
+        "boxes": 42,
+        "capture_groups": 18,
+        "image_sources": {
+          "plate": 1,
+          "packet_extra": 21
+        },
+        "median_normalized_short_box_side": 0.26,
+        "normalized_short_side_below_16_of_640": 0,
+        "normalized_short_side_below_32_of_640": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "train/dry_wet_waste": {
+    "images": 141,
+    "bottles": 141,
+    "small": 0
+  },
+  "train/plate": {
+    "images": 11,
+    "bottles": 24,
+    "small": 19
+  },
+  "train/trash_detection": {
+    "images": 93,
+    "bottles": 106,
+    "small": 73
+  },
+  "val/trash_detection": {
+    "images": 49,
+    "bottles": 61,
+    "small": 48
+  },
+  "train/waste_detection_v3": {
+    "images": 37,
+    "bottles": 37,
+    "small": 0
+  },
+  "val/plate": {
+    "images": 6,
+    "bottles": 6,
+    "small": 3
+  },
+  "train/external_bottle": {
+    "images": 20,
+    "bottles": 48,
+    "small": 48
+  }
+}

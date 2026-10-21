@@ -1,0 +1,28 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/context-v4/initial.pt",
+  "weights_sha": "4ae3259a4b805f453c6957f3f666c0f8169ff328fe1336775fbb2d19b4ad56b8",
+  "split": "val",
+  "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+  "independent_test": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.5423748415741176,
+      "recall": 0.5485555161076728,
+      "AP50": 0.5217148769613602,
+      "AP50_95": 0.24597024701363507
+    },
+    "condiment_packet": {
+      "precision": 0.09237710355306035,
+      "recall": 0.4523809523809524,
+      "AP50": 0.1587734174845636,
+      "AP50_95": 0.08955428888531955
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.317375972563589,
+    "metrics/recall(B)": 0.5004682342443126,
+    "metrics/mAP50(B)": 0.3402441472229619,
+    "metrics/mAP50-95(B)": 0.1677622679494773,
+    "fitness": 0.1677622679494773
+  }
+}

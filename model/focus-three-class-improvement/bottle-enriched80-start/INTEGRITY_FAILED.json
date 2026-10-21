@@ -1,0 +1,6 @@
+{
+  "status": "rejected",
+  "reason": "Ultralytics rewrote the training copy of river023 because Samsung SEFT metadata followed JPEG EOI. Post-build hash no longer matched; expanded evaluation stopped. No claim from this probe is accepted.",
+  "source_image_sha256": "8bfdb665257b10aa4f60a2bd7d08ed0353dd42b95ce76f04b181f2d74501afb8",
+  "clean_image_sha256": "33b9c7b8026859ad7c1a824e6a90b8bbcc5eb3380eb0a055b33e74884fb11865"
+}

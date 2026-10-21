@@ -1,0 +1,2878 @@
+[
+  {
+    "name": "tetra_pak__11-_jpg.rf.d61b01fde05dde907e0bbbce40412870.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "40a6be5cb86ac5cf32233a11d8b9f48de169a2d1f185b17eaa0f6c08caca6d8f",
+    "pixels": "5bb1e962627384725d0017d320c58d3effff1e713a4433efac1a80c4db0936bc",
+    "group": "tetra_pak__11-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.36640625 0.48750000 0.40625000 0.84843750",
+      "6 0.71562500 0.45312500 0.37500000 0.78750000"
+    ],
+    "input_label_sha256": "99ef97b92a8361b8b13c60ba097f52e9fc23aeee967c2f3acbb42347c2247743",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__15-_jpg.rf.ca275956e9894503af06b8e1afe25b6d.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "1da5ff53d047c9e2367ded2365b7b04218e353688a6c4c8c177447aa0b94f49f",
+    "pixels": "dd80610e1f8249c36eef29864f51c76ffe38686372d7b133d91ace498489e955",
+    "group": "tetra_pak__15-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49453125 0.48515625 0.88437500 0.88515625"
+    ],
+    "input_label_sha256": "bdb51ce9ed5bc99aa623f94da23b3cf5cb4d32024d51720b03980346b5fe3dc1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__23-_jpg.rf.e15d6a7daa748f29589a2a1a28f5b8cb.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "633c060d3c290db37ac59b5d742b70a64b2228059c429d16bfc6af8dda028f01",
+    "pixels": "63bde9dca2ba9bba94ee1c491f3d52aec790f7be815a264ccf02b639e96fadfb",
+    "group": "tetra_pak__23-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.15546875 0.57578125 0.26953125 0.80468750",
+      "6 0.38593750 0.56250000 0.25312500 0.81015625",
+      "6 0.61406250 0.55312500 0.23828125 0.81093750",
+      "6 0.84531250 0.57031250 0.26796875 0.84609375"
+    ],
+    "input_label_sha256": "19865010bab7c76db585141d3debe94a81e7c730ecfd00fad9ded533077809cc",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__4-_jpg.rf.a44a1ff7c4ca455cddf60c906fd78853.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "c5d3b9b807acc962fcfc7c1ea05c229b6c213cfe9d3df267943b51a89515cf78",
+    "pixels": "e51bd9ac845539024ded65c6ebe28f0a7cb5275bcd3c5ee1d5f75e3c0f137f3d",
+    "group": "tetra_pak__4-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.31953125 0.60078125 0.34609375 0.75390625",
+      "6 0.70390625 0.49609375 0.36718750 0.94140625"
+    ],
+    "input_label_sha256": "04a323cf69e03e69fd48df254b8b979828d1bffd131ffb441444163030f88848",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__45-_jpg.rf.3de1750b8d2734dd56b8c673602badda.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "12bbed877262293d2de2d8bb06cebb14aabe9e83c39f5864281cdfa557795656",
+    "pixels": "cf51c057985aceb0fad71e1a0cb53388f9a3d740e9b8115204364711a59c5ee0",
+    "group": "tetra_pak__45-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50625000 0.49687500 0.65703125 0.84140625"
+    ],
+    "input_label_sha256": "690abf428e834e6794cd71a5874e9e62f353b58df53e1b81a564b089439e40c1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__46-_jpg.rf.915b332b19782d40da4b9985dc9d1364.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8aa6c8450c88d5dbedbcddeef8ac4e8c21c5be60052df87ad8425ac08b2a0515",
+    "pixels": "28c07ead8881a3f2f60340678dbdd1c7ab2d6c3e58cdec38bb079fda8590a4ce",
+    "group": "tetra_pak__46-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.21718750 0.52109375 0.30546875 0.77656250",
+      "6 0.49843750 0.49531250 0.26562500 0.79140625",
+      "6 0.79765625 0.51640625 0.30234375 0.80390625"
+    ],
+    "input_label_sha256": "8225275f11e62b78b7dd002bdbc14c0a63ee370d1b6fd466aed7ca620938fad7",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__49-_jpg.rf.970ba41632d4ea64704481576859a36a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "77b2c4f39d7ed796ac94847c740eab6733843c3a4240329440542f98b83ddbc8",
+    "pixels": "f8cb8b0ec934ced323c1c4b54f9e7ef5e6277ea283378e3564359d03d2752e78",
+    "group": "tetra_pak__49-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.81050256 0.49044315 0.34567160 0.87324604",
+      "6 0.50384845 0.51590171 0.34467220 0.83989986",
+      "6 0.186490522 0.531737750 0.372981045 0.892569120"
+    ],
+    "input_label_sha256": "425d9cc1dfc35593ef3ed006c33091c749da8cd46a0c11f353f28024dfeeade4",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__53-_jpg.rf.e9c77935c5e8ec9858d8e1e342818dde.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a2baee757355baf762a0e92081af3942d47e03eda10790681e87c9c8b74f60d9",
+    "pixels": "6e93a1dc0f34b18f5d7648080effcd56ed37c26cc80a9b4c6c7c06f99002e810",
+    "group": "tetra_pak__53-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.35937500 0.53750000 0.30390625 0.62968750",
+      "6 0.68359375 0.35000000 0.29765625 0.58437500"
+    ],
+    "input_label_sha256": "9b82f2a5721caad0b9e983f548c31fb9630dbba3ff65dfef34714c5e98d8fe04",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__59-_jpg.rf.2050f906862e54d832669fd7b806b1b4.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "cbcd61e4b614332ea2c3772c7246d71df3cc201026f4d9a9b12ce28307a10590",
+    "pixels": "9d23da295a66c6f0016bd070c0f9dcd1063e21849f204cfa67b8f0cbbeb6cc65",
+    "group": "tetra_pak__59-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.27524566 0.50402678 0.40127175 0.93580049",
+      "6 0.64879812 0.51812516 0.37223236 0.90055555"
+    ],
+    "input_label_sha256": "cab0f8da45aa7333a5d294f1d9b680a58200fa4ea66ff0e14a2f5d8fe2cafc18",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__63-_jpg.rf.1102d4930096f91bf9cceaccb5854be8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "992401608bf6302bbed256f07912b728731e6c7e1447ad1df904c1a64ab7bb0a",
+    "pixels": "faa7d4a8971e6a7bd984b2fd2558dbf8bf2766a74513ac5b08c4e7f0c2ac244a",
+    "group": "tetra_pak__63-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.44729519 0.52902706 0.54551576 0.66462957"
+    ],
+    "input_label_sha256": "c3079dcf99674c22f41c255fe531bd4717a83a5fc9c21cfdfe41c95f37d9f8a6",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__69-_jpg.rf.a7f95caa737dcbebb7bb98ac62038735.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "5e65ca183708dca2dd8a23704fa1928bc742911acde02496d1ea45901b1a0dbf",
+    "pixels": "8fb1bc5979cc39ceabd2680b70c5ca98fa6a25b23c3df91c8b2c75cae4c6856e",
+    "group": "tetra_pak__69-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48606959 0.57671804 0.56423447 0.53717717"
+    ],
+    "input_label_sha256": "9266cea17069af0675d77ab294418a76e02a46d1c55e4642d570fcb9dd1ad011",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__70-_jpg.rf.e0c43bc3e613d53173c89f9f75c1f113.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d56380bd5da099e354326c3f4d257b8e68962130b18b49a10e3949ed41b4ebb6",
+    "pixels": "93c663c52a694e792341d2d54dac3809a38fbe990be955345c809e11d9916f15",
+    "group": "tetra_pak__70-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.41562500 0.49531250 0.63046875 0.57968750"
+    ],
+    "input_label_sha256": "77227bce532f2b1430da6a91cefceec40a3ef635fec518be07484326c55ca4e7",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__73-_jpg.rf.8077bd8e2a1a3c0c0397953e41652289.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "55b9752863c43bc127f117b0f51f37842799d0c5da3c8aac8a9eb767a9a0b676",
+    "pixels": "f457b9b1c535b8832cddba2cb603fff9b5449640b7edd5d76139e57ecd41fd1b",
+    "group": "tetra_pak__73-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.41520597 0.46852030 0.55621211 0.52106306"
+    ],
+    "input_label_sha256": "924212405b6eb135158c6b71f286a44252ee01ebda8810eb74612b0f935b0302",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__74-_jpg.rf.1a137e7b7bfc030b5c8616037eb30a57.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "7229631cd504ca1739f70c6ffe5f1d89bdf04124145e77aedd98faf6c15e6c95",
+    "pixels": "4a116d1ff3641fb31cf02482ffa71a7d292c642b64d584990873abd4be0cec1b",
+    "group": "tetra_pak__74-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.43526167 0.48652035 0.44122591 0.40087852"
+    ],
+    "input_label_sha256": "98605e6951252f4039c9cf79d5b03cd0c0aae30701f04a9a4d0d9c12782fe97c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__78-_jpg.rf.4e4b4a7530d1bbf179e9ee6584e93421.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f6a8e699fd7026eff5463bd976818a93ff1e124ede94a232156db1b2acb0fb11",
+    "pixels": "ec51bf8d4110bcecb7994b0d220cb0263da6e2ab1e6bdbd5919e03c16819dfb3",
+    "group": "tetra_pak__78-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.37643157 0.47649843 0.55888611 0.40087839"
+    ],
+    "input_label_sha256": "2b7e782da8d43f628863aa804d2cf8edb9d45a614fe4ae06931477866119d677",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__A_01_jpg.rf.02bd0fe2fc69af595d61f040c045cbbe.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3b1de04c725fa60489938c410b22682844f9d0e6850a93ec29188edeaf95382b",
+    "pixels": "bf1d7dadbcdba190139b23a2789812e562178d5a2ffe101fb2f93e38498ee748",
+    "group": "tetra_pak__a_01_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.28984375 0.49062500 0.35546875 0.98046875",
+      "6 0.72031250 0.49296875 0.31953125 0.93750000"
+    ],
+    "input_label_sha256": "5aab64e9121fcd9e5497a06653a5b0c234d858294b2755ae2a2ffe5857bc5afb",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__C_001_jpg.rf.9c5c6f42f8a0d90a28278befc9863f03.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "9e26fdba79aa158fa8324742c0bf51ada92e21207d06f4629131851fb7f7ca5f",
+    "pixels": "198a4bdd6a2bb81d1bffb21bf78a9cfde2422bc7e6e81fd8d35b7b60b269dcdf",
+    "group": "tetra_pak__c_001_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48437500 0.51171875 0.62968750 0.41093750"
+    ],
+    "input_label_sha256": "5af509000f7aec45b782f7da8e338f26697604a51acc335836a65715f4302904",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__C_024_jpg.rf.27899d9808dcac0f0c288221f5c4f135.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "bced6c502703a0080d2391ed82f7071f9b14f238f32c03ac5a9297494cbcf582",
+    "pixels": "ea23d9a90be26e312be1ed72e165e8803e5459e28e553de04986d821d71426bb",
+    "group": "tetra_pak__c_024_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.34765625 0.35000000 0.56484375 0.34140625",
+      "6 0.38828125 0.67031250 0.46406250 0.30078125"
+    ],
+    "input_label_sha256": "e88e1ca4de4b1cc85fd598986d5230592384fbc7ed91b344f3a52f2f548d1a1f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__C_138_jpg.rf.89aa377e5affb9ee342f0388410e3d8e.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "567a8e04fe1cddcdca9684d07d5e168e93bbb23418946d3d614a6fe2d848296b",
+    "pixels": "c47257805bf3681d91b7275210c38ceecf2d7c951af74f878e6a6371a34bde6a",
+    "group": "tetra_pak__c_138_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51718750 0.51093750 0.68750000 0.62500000"
+    ],
+    "input_label_sha256": "76dac66f9f54123b3dcdb1b677cde2f90055e3a05ded4207673e182ff353b59e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__C_163_jpg.rf.704fe3a9bc19a21b49aece8773d9f786.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "83b1a81d2d04434baa9e9785eff7ba6883258c72c0981c2e3bbee42c3521fdd0",
+    "pixels": "252f5211703f13bea4157f8d76b008cfda6371beff9d1440e6b589295ace1218",
+    "group": "tetra_pak__c_163_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.54453125 0.50703125 0.90625000 0.54843750"
+    ],
+    "input_label_sha256": "2d18430657497f71af7372db86767789f89aa66335df0e8ab37e585237d948c8",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__C_171_jpg.rf.9a26ec580b7be07469c28bda3c3bc1f5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6f89448c953a706b222a9baa08217c779046afd1242c2e9ecf8192dba26f9e97",
+    "pixels": "af6d76f954fb88bfcb219a3d43d4b62a915a5ea6daa3000b079d0e5e838a4e5c",
+    "group": "tetra_pak__c_171_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.32968750 0.89453125 0.43750000 0.19921875",
+      "6 0.36875000 0.41015625 0.44218750 0.19218750",
+      "6 0.59375000 0.18906250 0.70156250 0.25468750",
+      "6 0.59609375 0.66484375 0.65156250 0.26718750"
+    ],
+    "input_label_sha256": "ba9c9471844903ee883e5ee75836d4bebf4db2085bd77a88a8f50ebdcc150995",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__C_181_jpg.rf.0cb15147de1583472d35893fe5b58500.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "7c505f353685e979c037dc55436c6b3e99c566fbdd0ad2d86803da00ee71e934",
+    "pixels": "2d8ec85d1268b7a16b8b4e726d7eba9bfea5050575e3a3020f7505fbd336712c",
+    "group": "tetra_pak__c_181_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.42421875 0.26796875 0.70703125 0.32656250"
+    ],
+    "input_label_sha256": "ecdb1ba661dc956c4affb8812e8c7ee39d495766be448ff53b0c5965d857fb19",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3459_JPG.rf.8bd854c8f8a92c957262a25d19a206ce.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6ca168e9b9bae75a8e97407f52230f8f63245fb1517fd5f9cc3d72b96f3fcf55",
+    "pixels": "5467bc115c01b45cde6c3a2f4ef9abb3edddc45a9360308e11f0cd2f77403b02",
+    "group": "tetra_pak__img_3459_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.58281250 0.44140625 0.68046875 0.72890625"
+    ],
+    "input_label_sha256": "1346428709a59a6825ce84fce4825dbb4f3c1f44c6539fecf55ebef4c4ab9086",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3465_JPG.rf.7ecedff75b95b34b4b269dead8316c37.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "9f1eaef2eb62f860e8b26db3948740a371a0aedf9c52989e10917542b54ced9f",
+    "pixels": "e23df9460f8e244c6d85f744eefc25d42008cbf39a63d6507639176e16a9a82e",
+    "group": "tetra_pak__img_3465_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.47578125 0.52187500 0.50546875 0.39453125"
+    ],
+    "input_label_sha256": "a22088807d89e40d68cd614bd05e4e701fd438396471c7fb91ef65544127a61a",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3467_JPG.rf.6b0a9d56ebff8ff38e155614193153c5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8dd3345f4b5bdedca6595041f9ff02084d090b6b91d42ad58f82fc4c937ebeb5",
+    "pixels": "4f98eb57bdb6fa7a56c94463b6ddfdd3d70a6fbd6d5a775eb168384fa021edbb",
+    "group": "tetra_pak__img_3467_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.43906250 0.45546875 0.49218750 0.62265625"
+    ],
+    "input_label_sha256": "54475518216b560e374aa3a0bb1ac3ddf23dcf04c06e8f76a19af89012f1eb26",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3468_JPG.rf.37f11b2b79217d7eb0fd2900181d4791.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "08276c5eae56e5fa9e721af596b78da1f92e8d9e228c9548391492e56359f64d",
+    "pixels": "5a5c5f09a876486fd2cbc91d848f6b6a6f66fa3fc420363dfd5aec97949e9fc8",
+    "group": "tetra_pak__img_3468_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49062500 0.43437500 0.70703125 0.69921875"
+    ],
+    "input_label_sha256": "b3e4d5a54d29428d9fe43d7a6686440d297f2123ca246c8d9274053bb369f0a7",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3469_JPG.rf.20e740432e904682cc40fdf3fa0394c1.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "7fd77e7209e48e4a9b514ea45f41f77744767b481776e5a4cfd09c5885cd4bcb",
+    "pixels": "0ec0c571f42b70a0ae2125ce319fd17a2b5b56ba77732241988f676daddf2a21",
+    "group": "tetra_pak__img_3469_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.40937500 0.44609375 0.67031250 0.75859375"
+    ],
+    "input_label_sha256": "f763c12362db88bf264818698d087145ab13740fd8c34bc1265aff1e1fc688c9",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3470_JPG.rf.f2718ac11af0e8b689a4fed065d5f165.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "ea6ceaa601d76eaa4387e83d0aebdde3054863b1f4f2ae6574383f7db18816a5",
+    "pixels": "8b773899a38f9e83810ae6a230b1e342afd005fc84b4a19a54d7ea6847537adb",
+    "group": "tetra_pak__img_3470_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46015625 0.43125000 0.51562500 0.38046875"
+    ],
+    "input_label_sha256": "9d74c36f06980b027c77e906d3fb46f7dde7a7fa4e7c5c44a3c1f76dc01fd114",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3536_JPG.rf.86db4d0f6817a1b661e133fdff49401a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "51f2e4c37455686d12b8385168abbe373280762e57d686323f6b572994ba2045",
+    "pixels": "72c7486d913bcdcc6d5bde0d767fa338831554a7c5ac19f9e4ebfa5450b52056",
+    "group": "tetra_pak__img_3536_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.42265625 0.54531250 0.75000000 0.57031250"
+    ],
+    "input_label_sha256": "7b6ce833b694da97f925c20bd2de4ec21aab51ac2c3787d9fc31978b0777c63a",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3537_JPG.rf.2c9e19c13f828e9439773bd0c0487fbd.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "93a33bb00d70277af96b0f1343d08e7afbb519804c0aba9db7fdbc9b6c0c5eed",
+    "pixels": "6c4f066f613a763c020ac4ec5cf23bccd4442f6c50f1087cd895ccf90cf7b83d",
+    "group": "tetra_pak__img_3537_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46015625 0.48750000 0.75312500 0.54843750"
+    ],
+    "input_label_sha256": "364df221d5bd0c4c13f05a8223a3e1ac90e5a71f1217a304ec3eb0f0730b6723",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__IMG_3538_JPG.rf.80bfe5a5d0e20538bd53d857ee564736.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "aa501c7e3adf7aae4d35f0b6d8219cbf818b80e8f74cf829445c4091d23a9add",
+    "pixels": "63ec306562c4e31ea6c708c95d3b9b425d79fa683f95ba2a48640e00802301e3",
+    "group": "tetra_pak__img_3538_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52187500 0.52109375 0.75000000 0.58046875"
+    ],
+    "input_label_sha256": "b65f94f2a3fbe7fa62b2e88ca8c9b73402e7f18ac1e32e599557ad0b3cc223af",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_123_jpg.rf.eaf3e28e1b476e18ca06138783a192bd.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "eceb100725c3cc8392b1a8ab49bcd9d96f812bbdd221f7fc5b5eba4ed185fcce",
+    "pixels": "7034141611bfa0be9f8fae26ec5ec5e6e3cc3834ec770c761160cec561747815",
+    "group": "tetra_pak__line_album_test_221220_123_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.59453125 0.39296875 0.65156250 0.58281250"
+    ],
+    "input_label_sha256": "a8fb6f14a1ab56689f84b7c5bdc298b8c6701f2fc9fa7bf783b811d86d85dd47",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_141_jpg.rf.06012f4e22c0c406f5d5e401b57f2f1e.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "0066ba6210d52d4be58bb09348da81d54d59902d1fa35816abdaef41b55b2150",
+    "pixels": "55dfe7d13c342ae5d96ff4313a1147ecdce12ad7d2d1cad14c3afe187b206791",
+    "group": "tetra_pak__line_album_test_221220_141_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.54574423 0.44512921 0.59311440 0.63896885"
+    ],
+    "input_label_sha256": "c5711188dd3e735d22aa022410a28a7095dc624e24f937c626ecbc16d000fea8",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_149_jpg.rf.f138326506cf7571a0f89b1d7f7abc2b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8f203cabf5dfd76d1120d99dbefba96f614f47cf52b9afd5813f578c673f2707",
+    "pixels": "018205c59c72ac1bcde8e9f9d3c8a62b84c7518857dad34f92d0c8c3ed854021",
+    "group": "tetra_pak__line_album_test_221220_149_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.58849113 0.43314750 0.64120456 0.52271952"
+    ],
+    "input_label_sha256": "ea44e4a6f4c33e3d05626bec65bcdce410e82bf9c2e076c7d12add41d8ac7c43",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_151_jpg.rf.1ffb089a81baa71069b5045cbca28d04.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8d892b2fe6f1a791456faa2b327634b91f1c08925822ca5a5d887eb16e7bac7f",
+    "pixels": "49898b5a7b24fd21f61d172772d423c901d40116bc107042f431cc8fe8c1e8b7",
+    "group": "tetra_pak__line_album_test_221220_151_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.45078125 0.57187500 0.61718750 0.52968750"
+    ],
+    "input_label_sha256": "f6e5ee7a7d4f1f9f6ab338e180052adff5c2737be37237d76f8c5de63ab21b1d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_153_jpg.rf.9b22b07c9c3a5ba5583db96583db1446.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "052ffe24ac43950af8ee3664c0068ca30fa0f08bf9e67c9e2334ca35a014bd1f",
+    "pixels": "661f994d0ec69708e378cbb26942132509c5a9cc0c17368fd135475cb31f986d",
+    "group": "tetra_pak__line_album_test_221220_153_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51406250 0.47968750 0.45390625 0.45390625"
+    ],
+    "input_label_sha256": "15b8012c0bd9f1220a0d26e8725b5e65c30b09c0cb1f95f2daf3b4cbb8e5840f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_154_jpg.rf.7c35a868ebb6691fcbb0ec4012788fb5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "432759ec1c69fe0c44f331dec1ba42b6d83ae4be53b040b8b6efac8334326f1e",
+    "pixels": "818ea371a7e50b6f6e39a0ab31cd1203149032b9722e2e55075e1eef3f80f1da",
+    "group": "tetra_pak__line_album_test_221220_154_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51234815 0.53180781 0.45685811 0.44958713"
+    ],
+    "input_label_sha256": "23e9974b13ff18dd3b7c7a52f14471b8d9b5ef17baa0aafc5d6f331ba7ae220f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_155_jpg.rf.59aed7f731ed74913365cfcf57cdc77f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "26d09911ba18ec17fed741c89ec8aae86e9f0583c385f67945b3d532b63f9556",
+    "pixels": "50a649bacf6ba1679b9bf8b3ee4adc517287a968e536cc7b982c7a981a3db784",
+    "group": "tetra_pak__line_album_test_221220_155_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.55234375 0.51171875 0.57968750 0.44531250"
+    ],
+    "input_label_sha256": "a3057e355065f225b053c654e6b20d04fc3d7a5684b0179e86f96db5f91b53db",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_159_jpg.rf.4326048792be485674bc64283982f7b3.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "352f86eadc4918f5a6b58c1c83b911ff7e2e11b90db361659f484b1a098d6618",
+    "pixels": "9b7f2dc5318ce5dde27651382df521a27503ac75a048c40c081320a52d85d957",
+    "group": "tetra_pak__line_album_test_221220_159_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.59116290 0.39805776 0.50227705 0.44467426"
+    ],
+    "input_label_sha256": "2e698aba6cb127a0387d25606b56330f8347ae4a99d2db329bcd955bce6401e2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_162_jpg.rf.e2849cf554db2537d45cd266d65974c0.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "36222ba3e67cc5cf1e7333d4dc44dd02628f6383a47394d2b2b4545e99ed7cc5",
+    "pixels": "167f70f6b78100d5c8b83c26f25606ea8e60dbfa9cf1de6269472fff6a30f381",
+    "group": "tetra_pak__line_album_test_221220_162_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.56562500 0.55546875 0.56406250 0.45078125"
+    ],
+    "input_label_sha256": "31a5327ee6cfb7984e9094a0d10a290510940472051b91ff4a732ac22287d45a",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_174_jpg.rf.c6ede840669e1aa870b1e0f8ab9e4757.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6d0955edc4d1a77f06e228c906f6e0e9a031a1f7bd16d89d5a903d1713ca9a70",
+    "pixels": "2afbec59cfc399c4db1f3ae6a28496673162de62d85095359e4a503f04bfa4dc",
+    "group": "tetra_pak__line_album_test_221220_174_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.40414487 0.41149306 0.60380091 0.39376718"
+    ],
+    "input_label_sha256": "c307fa13a90cd203b320f34a24d59dbeeda36773b38479d68de4dd5e08b2e931",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_175_jpg.rf.2dbc672c470e30f38ffaa0e5059e8aa5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "85a45f765cccdd1530d5b53c2a526534a9280a112c5a1a03dcdfa7f9b6247a1b",
+    "pixels": "28bc633e1f990a4b72b09e9fd711e27a1c1a3a67949c6896e4d8c5eb500aae14",
+    "group": "tetra_pak__line_album_test_221220_175_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.36006208 0.42038135 0.55838252 0.41605132"
+    ],
+    "input_label_sha256": "70ec54b01a16fdc8f028e50d4891c76af06a03df1555976868c1d7c28f95bbdd",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_186_jpg.rf.531a1236a36fe5a35d457a25e57214f4.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "11b27a893ada8c2416d068bb285cbe63d23659338c2b64b265798f36aecf19e6",
+    "pixels": "0836b6d0bbe1f3c59d451d7c33217c02362f5b9b7b6627d0a9cd953b1aa72c5f",
+    "group": "tetra_pak__line_album_test_221220_186_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.45859375 0.54531250 0.63906250 0.47109375"
+    ],
+    "input_label_sha256": "d89cac8392bb625aafdf1f36fa82ddc7f85167f434fae1585ea66b672355df26",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_187_jpg.rf.f3875a2774264be1166597475c6c0bb8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6a30f9628ee0c39f3617f5b8b2cfaac84b586262ee203e3b8d3d64e3edfb538e",
+    "pixels": "4f0f271b9151ca6ffbf8c7c6a72d12d1edf241ef599f82f9a25993adf2e90cd3",
+    "group": "tetra_pak__line_album_test_221220_187_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51101235 0.38720159 0.54502405 0.46238055"
+    ],
+    "input_label_sha256": "0ce9a2c1bce887a1867f37de16cf17be049118405b1a9bd21a682349ecd6b85b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_2_jpg.rf.d0df316481e6878fcff4fa5dca53d619.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8a5e0f860eb98cca6105e14f2df61896c90572983158c434b81f11ca270a3e12",
+    "pixels": "6d5d401c79e6f30b018aa2637949dc0cb965fb2bd3d61a4f9da8dd25c4db90e8",
+    "group": "tetra_pak__line_album_test_221220_2_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.43593750 0.46796875 0.44921875 0.73281250"
+    ],
+    "input_label_sha256": "4512885ba10b57295edad2e93edd81459f5c9bdbada4a9b8c1109851b51a8450",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_46_jpg.rf.37189391ac69dfd4b8609a8ef3f4e010.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8742c8da964a427c29018dc93a00720a0722bc527ae8013a260305b88528a4d3",
+    "pixels": "f7d4cc20607b6e7222e3931733f654c33643ccb088035cb6c125e47d7ccdacac",
+    "group": "tetra_pak__line_album_test_221220_46_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49498212 0.54027337 0.56105392 0.58488681"
+    ],
+    "input_label_sha256": "08920e15d98aa08a38396dd33f1462cce60508dfb0395b39eee885fe0caa4f1e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_48_jpg.rf.75a67fedc7411e0138d01ba83ae8a9bd.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "0611a6e05d7bdd7a4ce8bec758db122152698a351ea8a379d6993770f4f76f09",
+    "pixels": "1a1742381e7ad961aedeedb32ae2c8885809e1f44df561298c06945c555d671d",
+    "group": "tetra_pak__line_album_test_221220_48_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.53125000 0.57187500 0.54296875 0.60156250"
+    ],
+    "input_label_sha256": "a59e281f0d127b215ece20db4a07f21b2c3df678fc2c791a692ddc1676f07440",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_52_jpg.rf.d43b29a50c388c17e4717955d9045a98.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d564497666db93ec4f0b817fccf8a6f684f2d8dec2fca4a3efb91bbc82d00439",
+    "pixels": "ebcff5039f61cf523c765be04b7cc5155bfa79d8e4501a9c51eb90955fe2c800",
+    "group": "tetra_pak__line_album_test_221220_52_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48162374 0.57637043 0.71066831 0.66492376"
+    ],
+    "input_label_sha256": "854e03dd7d433ca48739ee42bfa4599917c1cbcb68c83325e832a304855cb84e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_61_jpg.rf.25ed6a3d9bb88314cb9144472561ccc0.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "c5ca946e00a1cfab4b68440828a6fe3b6b04d4b030faa418b63a6aa116e06f9d",
+    "pixels": "fcf5d987fe6e3ba418b99ed3b5dd189750d8bd7af56e9156769c47f44ec309c0",
+    "group": "tetra_pak__line_album_test_221220_61_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52421875 0.50703125 0.52343750 0.67109375"
+    ],
+    "input_label_sha256": "5d75469c2e035e96d9bcbfc500416ab6accae02d0ece625b8d454aeb0990a721",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_79_jpg.rf.e325809e1c553b0f36550ad989b3881b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "aeb1799e3d74d44726ae8920f2a5349f424d33546023374456218d8301556903",
+    "pixels": "9e63fca74bb573f1d7fc9fbcff631b01e6a56bcf210067af0ff262d51ba2f80b",
+    "group": "tetra_pak__line_album_test_221220_79_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48359375 0.49531250 0.47734375 0.42656250"
+    ],
+    "input_label_sha256": "19a35bcc8f4126ce4ee6d304bc69769756e1d0a6d2ecfcb0877a0946c0ed57c1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_80_jpg.rf.19506004e0fd10298f3697bd64d1f02f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a61deba3fe4d7cff57fe6d6a2809339d32bd30fccf3ae105c14f807459f19665",
+    "pixels": "cfde566a8d8deaf1ef9ebad474fbd175781e6ecb292571acbf17e6772cedd3b7",
+    "group": "tetra_pak__line_album_test_221220_80_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.47895197 0.53205426 0.49693352 0.54924613"
+    ],
+    "input_label_sha256": "e2214e8c14bddc034b8577e4ead3966e9e18f637bc6b2ebb950043d6fbb886c2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__LINE_ALBUM_test_221220_83_jpg.rf.abe69dfd4b2d2213d13ca0466365dcaf.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "911a69899ab7a1c120a00f0d2cb0f5fb3ee524131e9c77b8a547f87dddfbc2c3",
+    "pixels": "bd86b5e4d48518c40bd1a25483352564569d7a1e4d324ffedbb34f9e51799655",
+    "group": "tetra_pak__line_album_test_221220_83_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.44843750 0.57890625 0.55781250 0.42265625"
+    ],
+    "input_label_sha256": "20b22c813fe9c21680f07304adf6fd20ef7150af21c93700657f7f227349741b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__a16_jpg.rf.a122b28b5bff5c8773e59f0b94848876.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "63303825ad52464e6a520f917beff80fcf5328cfd553bfca8d2e28d0fb150ab5",
+    "pixels": "fb65db3c9737a68ebdfa72544ae5f58a751d89fd1b07392265ee02c7008d5c35",
+    "group": "tetra_pak__a16_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.54053777 0.45800136 0.49612719 0.72718646"
+    ],
+    "input_label_sha256": "f02dd9198558fb55a5207502877cf03af66c31bac39fc4dba9fdafaa5cba74ac",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__a21_jpg.rf.983e2e73d7d0978ab18cb16ee8c48178.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "e4d876ffeb0bf9b2a185cbded8b95270136ee8fca7997a8ec7dfa6f1e34dac4b",
+    "pixels": "565c72d45a6bb78de846a856fe0dfb26e080a92da0fd6afc3dfa96698a613844",
+    "group": "tetra_pak__a21_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49077662 0.59937935 0.52435005 0.62595551"
+    ],
+    "input_label_sha256": "2506164f7ae2b7d8067b6bcfacbd6efb5143749b670d60d987c269cf00929187",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__a22_jpg.rf.32810354beca4da3f456614372e79a73.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "55936efa01e186162ad4f3d107a8ed0b8e7723ea8972d3ea5df93fd5b31fc426",
+    "pixels": "15b0fcef057da35f40bb0b126440c4da55e58856b305afb3b15f586eda08a669",
+    "group": "tetra_pak__a22_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48706298 0.59381353 0.45453565 0.78230753"
+    ],
+    "input_label_sha256": "1984433cef92edd5f48190d316588437728b3951bf96f21af4379160c2ab5621",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__a27_jpg.rf.81bc21243d7f7887936032eab88c57d4.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "ec3d796bf2fcea53f7b230d059530d37f1e30eeaddee34e1620d4717f6ac0f5c",
+    "pixels": "7215537563b6d2c9918e401c2726e0ccf5d6aa1fcd606bffad169bcf7d7d2be1",
+    "group": "tetra_pak__a27_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50065760 0.47772360 0.51850743 0.92664062"
+    ],
+    "input_label_sha256": "72af0159074d573bb422519dc86ea00ae0face608bf8b12fd9e1b961b61d4ee1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b10_jpg.rf.f902d67334cd6a6cf4f8a2801c8d6ba9.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "0145a1f5b0eeea2d1445d406b84ed857047d54fca9be89b4f1d62cf9fe9b5465",
+    "pixels": "16606883b80608baa235875972593050b3c65ddbcb0f0174517fd9e193d12e23",
+    "group": "tetra_pak__b10_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50934416 0.50000000 0.67734725 1.00000000"
+    ],
+    "input_label_sha256": "1b750081891ffa356efdad7bcc8e296abc82f8bb5d2ffcd7d8ad308391b95ae2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b13_jpg.rf.d037ad50ad58ef68df9f2ce2f713d1bc.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "bcce3e8f0eccd6f7962d364c056bf8a61e587c103c637646614d20eaacfd2fdc",
+    "pixels": "d45e358ece70c36c69afcdf8dea006ec69c3fee5ab2b2aa6e775b49b4b5dbcbd",
+    "group": "tetra_pak__b13_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.40907892 0.50000000 0.69665778 1.00000000"
+    ],
+    "input_label_sha256": "6a7d8943d4f64b138c96c8d966afab79367290700d3a6e908045bb00db6fd602",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b14_jpg.rf.8a7fe0183010735755a63b5434866927.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "da63f73738a6c837d77728e7a763d92b8a1d78ab8842b93521b9d99501d15ad9",
+    "pixels": "026dca3f1e60bb0e7455c57b826c1358cff2aabad1837e37d636b610769345b0",
+    "group": "tetra_pak__b14_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.419476810 0.499744633 0.637241360 0.999489265"
+    ],
+    "input_label_sha256": "1e55153725e0b8bd827d811b894ffcc931feb8be5a478b75701794a94bb694eb",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b16_jpg.rf.d89235d4b43023281b78ea5a6224adf4.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "0ab95fd32924fc4f7afe563f5a22dc7c94c7dc4579cc235eff391df6fe47ef96",
+    "pixels": "b251f3726269079d30a65a716bbe63e5e4df574f78f0e456fcdc1d7cb65cd814",
+    "group": "tetra_pak__b16_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49296875 0.50234375 0.58750000 0.99531250"
+    ],
+    "input_label_sha256": "0b77eee8f62d0119fc81de6bd0b99190a10c16c3572e2220d97ee4403a753f49",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b19_jpg.rf.b008495dc05700d091d333941bd3be24.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "7e720505ddeabfa2d9ca72cc8692f63f14f84174f9e001ca84764dd30a53cdd0",
+    "pixels": "4bf71786949be0281b8c5e9a8936720549b2f7683375f1cd2124a37ad6d1157b",
+    "group": "tetra_pak__b19_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.60515318 0.46253201 0.61644569 0.92506402"
+    ],
+    "input_label_sha256": "5fd7fb0f0571eb80938ed9e145e63197a9f3ebd9fb11e1cafe1430b5d20be920",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b22_jpg.rf.082dd99c75712361094aa9225e1b52c8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3f8556748ab3ef4162374420b7bea362f71733a501c39c345bbb6bf1815d72b5",
+    "pixels": "638f4ee0c738688d9319f11541fea158e37ea29a9c27111c7256bbf74a7c9cde",
+    "group": "tetra_pak__b22_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52865448 0.50201406 0.63872661 0.99495042"
+    ],
+    "input_label_sha256": "8eebc2215170b02c4e0e250d70bcc36bbffa54ae811c80ed4b51adcb9aa9126c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b24_jpg.rf.8fb54be162bb911141fa23f84417a361.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "4cee084cc6b8af9cb39583bd9a3e73a9e841fbfc14c360482bb444afcadd3986",
+    "pixels": "e16020160e7c62362837837029df5fcef2b90b9d848b90b0f14ba44f3c65658c",
+    "group": "tetra_pak__b24_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49746086 0.47523873 0.63872671 0.95047745"
+    ],
+    "input_label_sha256": "c70789d9714efe53caba19e658327c8dc6ccb520fc82bbd054a70ccc188c6d3e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b26_jpg.rf.8ad5c3f26d427eeb0eade1137e9104df.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a2640654ba365922a7892569339a7b7b6811a2858611b33fb91fe485f377bd0e",
+    "pixels": "9ed5a9ccbbbd4d4eb787d6a8328b6a65e62c02f712a706daae55606804c23214",
+    "group": "tetra_pak__b26_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.60156250 0.44453125 0.55312500 0.88046875"
+    ],
+    "input_label_sha256": "1ed08b7829bc93f300b5681f10e3c66942b9dd38b4f1822c22b19f4df3dda2f8",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b2_jpg.rf.dedca2c9733e2bf23ac33ed84f8e2340.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "172616509f2584c358dfeec79b5c170f01a981802e3aed73cdc64e03193271f7",
+    "pixels": "593dfeb32b8938f62c9190c0b7777a046fb59fa74bfc673af9a34bec2cb550d9",
+    "group": "tetra_pak__b2_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52578125 0.52421875 0.60781250 0.95156250"
+    ],
+    "input_label_sha256": "d1b9afaec974b0719c4b974df6a06e7d79daa1882f4ea4726eda183d9b7e914d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b32_jpg.rf.ea843a9247322b1f6c8cd7a35df71a97.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "1740873688b3ba531b6c79ab9485f57773e2782957110b4e0666b98c60c528fa",
+    "pixels": "25648b3b87ac72b9cbc0b472d0360c0bdf8ef53e1953b8a4f92468669d9fe99d",
+    "group": "tetra_pak__b32_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.37491444 0.42531926 0.57188312 0.85063851"
+    ],
+    "input_label_sha256": "5da386e4ed4bc53083ceee466ae96c0c55f4898e5f72d2e1a2e9421fba237cfe",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b33_jpg.rf.ba96e60c42608f65f5ff55ca800daa5f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "62f8b8d148b5689bde4ca57922935e80250ed70eefd2a3ffccd4857b69182635",
+    "pixels": "1f92dd363a14302a6b1d80a3a5cfef77f22a873102d4c5edda183d55bd3482e3",
+    "group": "tetra_pak__b33_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.511572240 0.483407362 0.687745240 0.966814725"
+    ],
+    "input_label_sha256": "b14fe3496f639db8610097e0ded47bfcceca2112f918b8a3f8600524a5f19419",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b38_jpg.rf.0222032f1487db1ef2a02787d39d7ba2.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "31a2617881c788fc30ef878b4aa4288c2ef29651679240bc54f6f7b4010ff8a6",
+    "pixels": "9e2a0ae17cdef79a615c87ec25ea4ab966e9e0d2d058c2337ccb3b5f3711f1ab",
+    "group": "tetra_pak__b38_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.40759356 0.49938730 0.63724136 0.99294320"
+    ],
+    "input_label_sha256": "915f978a5a1912841a05e3a0a3f5e590da0719a312bf32860b49dd37eb1f16c5",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b44_jpg.rf.ae18663d336cccf6f81b67aa726fa750.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a4c2a2a2b4972a3e838d7d9d255920ba9c3a61b9d9b4ca59b2a71c6118728795",
+    "pixels": "414a1eeeae6f9c20105b89f87b56616f82eb2cd7195b9e31235c3013398bbda1",
+    "group": "tetra_pak__b44_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.53203125 0.46250000 0.68515625 0.92500000"
+    ],
+    "input_label_sha256": "b950d7cfd7d07db4ae07cc3120ac17b951345e794ff3519f6c845320730150bd",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b46_jpg.rf.89733192c14af4adab39cc679c1fc195.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "2d5099b5992b3202d21604ec57080e0d2e219934cc442383de6c3918142f297e",
+    "pixels": "a05504fd5b230bbb29c75308c8bcfb5fcdcd08c170d4b8e7cd8031047f645a78",
+    "group": "tetra_pak__b46_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.56578976 0.44619474 0.60901851 0.89238947"
+    ],
+    "input_label_sha256": "b33be885f3acef417da3738b655ac302fda0ad332acf2963bf150b061161104c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b47_jpg.rf.02512c3d7e28a67fdbf89710cf6b8545.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "e0b477aa8ce016159f59172034397a220e2ebb571116e0c902b4d82cfe35d74b",
+    "pixels": "830961575cee8bd66d5664ba66a03f21d0ad46b6c74499111069119c05e920fc",
+    "group": "tetra_pak__b47_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.60349108 0.46217455 0.69106934 0.85316861"
+    ],
+    "input_label_sha256": "0f929fd417c9b167d902610089643422783d11e7bbb5be7021a14b9f615a60fd",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b48_jpg.rf.31cd9fb8bfd96943058235d0511a43c8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6d9dd57d115f30cd33f8c0de464fd525a1b5519c88f215b0ace43841d07b0d1c",
+    "pixels": "f56ad6f8fac23a5a2d6b2abddb48eb6b24232fb55bfc3ce4c267823cffbbb611",
+    "group": "tetra_pak__b48_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.55167839 0.41679323 0.58376646 0.82775505"
+    ],
+    "input_label_sha256": "c5e695de7d1356a85f8b4d77b7f6c3a0f45742b08fcb018476b99265e3d874e2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b55_jpg.rf.8ede77f037f92bee63a3311e497eaef3.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d7af9804a9b54872bdfd31e565acee68d48208bdaf1b031453754754dfa57b72",
+    "pixels": "a3b3a7a7ad42f99d539c0ae65211796f17d13dc0b835252c57f2d148390b9ece",
+    "group": "tetra_pak__b55_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.69248088 0.43131530 0.61503824 0.78781956"
+    ],
+    "input_label_sha256": "98e865779ec8becf9e3ad5d8a0c730734294c71c393f2c6866c0a5b429ee1e84",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b59_jpg.rf.40f23e929f66ba80e62b93a4e9f0fdad.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "79dc0cf0f21993d8275dfbad67afd2022fc9f81a6617936847f10dbf9d350bd2",
+    "pixels": "4329fb872a71bdcfa8bcf5ab05370c031270ff29a92a29f6a08c5865b2a95612",
+    "group": "tetra_pak__b59_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.39645295 0.40818817 0.56445624 0.80866026"
+    ],
+    "input_label_sha256": "66796bbc2b1b5bb0c3dcf3e3daa1d8d3c401ccb87daf66e4b2b049c7ec5515ac",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b61_jpg.rf.ba9d9144c7258f45a54346ebdde90b4f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "cd98b554f685bfc557ddbc5598545bbb9909a1736ad79d1633172a2dbfecd1a0",
+    "pixels": "f79b45827c64dc93b4f3c69ca745bddedc45b6783cda2c34299cec1790abf1e0",
+    "group": "tetra_pak__b61_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50265981 0.45221350 0.66397855 0.76054537"
+    ],
+    "input_label_sha256": "41f3a5b04474b821b1b2a45da85d2d6143747928da287dfb312cab56291e968c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b64_jpg.rf.b2c0bcfeb099030265d39ea687bf27d7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "ad1abdbbce2e156ca61e84daa596e77aea18d7aea029d447641c27aec76c5588",
+    "pixels": "3738121a58711369cd7e46902c2a84b3accc8a059e147ff7401fd52c522fdef0",
+    "group": "tetra_pak__b64_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38456965 0.44583728 0.57931009 0.88584316"
+    ],
+    "input_label_sha256": "02aaa8ef7b5d67a5587762f29ad347abfb24eb2774a64ce60afe47079829dca1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b65_jpg.rf.7bd6ca108d1f478d725525f6a968a178.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "890546120fbf830312dd1bc3cd8c3dd01b57140c3638b39898a662d560d40377",
+    "pixels": "d0c5d48dfd75c9d784eb610defda48d51c64f4c394f451af47a0cfff8e5f3bfb",
+    "group": "tetra_pak__b65_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.28281896 0.51390922 0.55999998 0.86950585"
+    ],
+    "input_label_sha256": "368501f312a5fc20fbb9d27ea8112d5f2ddf32d158afb611a93118d76b056d64",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b70_jpg.rf.c16336e05daa9119bbc739bb4fb69d33.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a417bc2d031b97552f2a63cc353890ff6c6ad6327b65d13944ce775dd91f20ca",
+    "pixels": "3e8eea00f374dccfef9a05d548d6c758f5bd380667024d0fdab5b8eaa4a835db",
+    "group": "tetra_pak__b70_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.56796875 0.38437500 0.60703125 0.76875000"
+    ],
+    "input_label_sha256": "d97900ee5103894d6e61e46ea059beb142a93f1cbb8b859f89eaa2e833136b15",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__b9_jpg.rf.b67ea82f2cb162cd9a84e9fff4935b78.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "fd07303f477e592212b76764b43501996c8349806656489422f0364a8654696a",
+    "pixels": "eae0c9e9a393764a3ceb763d90cb72023cb16f4b1e5c4f8172c83e67a393d164",
+    "group": "tetra_pak__b9_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46849538 0.50029494 0.59267900 0.99112792"
+    ],
+    "input_label_sha256": "8c02c770351e397b4e6934105d7359c533016aa76082f3faca1d2215940a14bc",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c10_jpg.rf.7a0ad140a492e2154ca023133f903040.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d898a30a1b7a9d51c6385452f83ce803a74242349d24294a9e4ea82cf6b7e102",
+    "pixels": "e3d7fffb9a6dc94a830bae232cfcf47b8bbdcb15adad1db6f67ac59aba02b07b",
+    "group": "tetra_pak__c10_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.366077930 0.591117468 0.732155860 0.817765065"
+    ],
+    "input_label_sha256": "93b67b2322bf6a8b99ff109a1b77acb53d73acd348688917f67e0c8ed33fb2e0",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c16_jpg.rf.01348e1e4dc243be2f5106d546c51257.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "8e1e0718684d16d9c8465763785a8b0b5c9f8d9a3ef71a4e3544971810152ef1",
+    "pixels": "6eefb734c4d65700c77e2baf8ef0a11f29b005b796f2e75c2202d055acf375ca",
+    "group": "tetra_pak__c16_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.576930380 0.467977743 0.577824940 0.935955485"
+    ],
+    "input_label_sha256": "79e9ed6fb085709e911219d1f66f54c35e31310204bdf784dbb423a3446a6a1f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c17_jpg.rf.a502a0131ffbd7b3c26e7a2df9a1241b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d63a301e04dacffc2758f0c8ff344bee80827b2b1a2fea2e56a55d9359e4188b",
+    "pixels": "c8e101b7e76a1804ca24baae4b2ff0d678c72df1a00cff78ec46f9f368e61995",
+    "group": "tetra_pak__c17_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.529397200 0.507375638 0.693686860 0.985248725"
+    ],
+    "input_label_sha256": "231bf5b33b86202e59fafd01479a8da62b23d3f0aa82160c5f6108950c56f72e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c20_jpg.rf.8bd21f3d7c3aa1be708b38bda08bf02b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "7766fed2941e554b34eefa2fd7bfbc0c9cee35abb106fa7b4a54485b527d3340",
+    "pixels": "2046a2c24e9d62fc0ab92fd6351e5117b776909aa3fbb4d16623e2b622a36b15",
+    "group": "tetra_pak__c20_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.30517606 0.53903413 0.61035212 0.92193174"
+    ],
+    "input_label_sha256": "60214fa2b149a1ad0946c62e6bf5cb0805b56a412d0282dded72183607a86763",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c22_jpg.rf.e2163d84b1f1327f1c695ece9ced35f7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "e4e177bf7e37837e35f679d4f69dbe81538525ba989f6204de36c2a6c85b2b52",
+    "pixels": "03ba4f9f04782213cb158a39ac77489a15e515bc7692314cac957fabbbbb3160",
+    "group": "tetra_pak__c22_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.60234375 0.47500000 0.55937500 0.93671875"
+    ],
+    "input_label_sha256": "95df34aca280cf03adaa1ea7147878f0761362c63fd7a30ce022f8880202e956",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c24_jpg.rf.695fb360a769174733500ead73bec1e3.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "b453f58515c11974e511fb4382d02fcea5206278f1e282191d9776a2666029cb",
+    "pixels": "70e2ae6ee1d63b93480a372dac15457faa287b41b9916adf4efac047bb154e96",
+    "group": "tetra_pak__c24_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.55316384 0.50022694 0.62238710 0.99954612"
+    ],
+    "input_label_sha256": "2e57ee0969ba64994d044e1fd12feb4e10dab3234b6f4df1d02794c962792bf2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c25_jpg.rf.69a799877f49ccf0f6fdb486d554aed6.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "b8b8b86756eaf6a2e82828b3a73fa9a70d16c93d45a9e3429126541c4d3a2236",
+    "pixels": "4546c226a71c54d3a92df69fe28b9e0624454ba03f8c07a53e7d8c093d983fcc",
+    "group": "tetra_pak__c25_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.497460860 0.513503088 0.718938900 0.972993825"
+    ],
+    "input_label_sha256": "6a790433f67aeedb8a8a765e7ea5baea5b2ef017febd59ed1fa42b5c1dc87e23",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c26_jpg.rf.5bba18c2bf5bf0ae31f2bcaabd70dec5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "4510c8f621afebf566858cb9a4642dfc45ba416fdf13b1a836dfc422923eebfd",
+    "pixels": "36f4838ff5f9b3bbdc7da5dd569ccd0602086304d6605632e87524c7fd1c9967",
+    "group": "tetra_pak__c26_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.34000729 0.49282418 0.56445615 0.98065563"
+    ],
+    "input_label_sha256": "84449a51e21dacfe39301c26b5c7a430bca1800418780d76c1a605ef61ce6463",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c28_jpg.rf.842fe9900635db33857063c09c2cdbdf.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a56daa0bd5a8d87fad5ce6df16c691f713c6b971f77c704f5dd10328a768855d",
+    "pixels": "42bb26534379c3bbe7aedf4b5a2f8535f662c8afeba93154db8264a3db4bfc8e",
+    "group": "tetra_pak__c28_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.53533883 0.50022694 0.69665777 0.99954612"
+    ],
+    "input_label_sha256": "01283e499b0ef713ba6669410eae6785f8d971452275ee41d7dda70586cf0204",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c31_jpg.rf.e9da3f588aa842b52ad1ce51f42b822a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a839b136b34c81061f1a3114815999f187055e131007b13984fd02a8fef30c4e",
+    "pixels": "8cf4c7b3ae8ec7370f1216740c820fd8e63b71bafd08677996cf29ad87d0be30",
+    "group": "tetra_pak__c31_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.57247411 0.44765259 0.55405826 0.88947377"
+    ],
+    "input_label_sha256": "a48e06d5f6eddaa062de60a92becc37b277b57fee74d096bb2118fdbe0b8ef98",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c32_jpg.rf.e9a8e4c8fda0468cfdab390ac32a86a0.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "c61a6ab0eec41f2a8ea8fe48a0f6bb4513aa170f9625e9b35bce03b21ca40e38",
+    "pixels": "09dc3eca0c2ca0f575dc8491d00bdb872f5d3505e9aae9282fc24fcfcee40709",
+    "group": "tetra_pak__c32_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.31029909 0.47977687 0.58822283 0.95955374"
+    ],
+    "input_label_sha256": "d6d64bcd466a2b4b4fa89bfb6d8c3568ae862abfbe8fd1656a46f090d0cce966",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c37_jpg.rf.7e4c631d7ebfc84ad258cb5813027ea3.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "241c9054d02013d957b1007f20aa1caf1c7c1941183081db5b0e4a26ea58c379",
+    "pixels": "a18bd98e480dd4c95982b0ae0754019ae4732b768bc78c115578c96631a5b6e6",
+    "group": "tetra_pak__c37_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.59772615 0.48227353 0.69665777 0.94729943"
+    ],
+    "input_label_sha256": "1a18098c737aa7e71a879a2c5bc0d46ace4548364ac3c8e9564588e6e521a601",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c41_jpg.rf.6688043f65f18237f3266f3daa6c5968.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "b81ced3221581a5cdd839734e2a8454c530cbec2215b48a0c83736bc2984c6d3",
+    "pixels": "52aef89180db4c2af91a446c003a68446fa3cb86c737204797812ea0bcdf43a7",
+    "group": "tetra_pak__c41_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.39720236 0.63008538 0.69961490 0.73517716"
+    ],
+    "input_label_sha256": "50de61c661c1e02e884ae99735e5a66659b1dc5566c4ab4accb82e7eb595495b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c42_jpg.rf.dc26155a87a92c8b5b7d0d51da34f9db.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "df3b813781766dd624812fe2c694bd69ca53e0a0f44a8e46f10be9871e9a5c16",
+    "pixels": "55dedfc6da9b2e5767260dc37801c1e015b949011432a5d36bddd7cabdc13278",
+    "group": "tetra_pak__c42_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.337036430 0.614003507 0.647639140 0.771992985"
+    ],
+    "input_label_sha256": "11cbf493dc56def205e38ce393cb8a697665ef6662200eb016eeaae56a235d90",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c47_jpg.rf.4d7d4bbdb59c1a9ac1fe1535f78898a3.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "60d884bedd7cebfc6a8f14d57ccd2ad0ae17207666c0d65e052f5203ff7830fd",
+    "pixels": "a0dcd912a9802837c555248830ae2fd78b0dacb3bab2373d22c9acd26e672614",
+    "group": "tetra_pak__c47_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49374733 0.39864071 0.63129963 0.73336191"
+    ],
+    "input_label_sha256": "83947a22c1d5c7fad40a29ee1bf9e1902386f3484cba2a047a1d2f28e01d0e49",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c49_jpg.rf.3d3edd5c404eb15ac59dc6d1a64a51a9.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "dd74772278d115775dd7c92a50a3fe654d4c46efbc752c3a687e54d8a2d8931a",
+    "pixels": "026d905708d7c9c518c7b231543043e03365dbf3997707d098b8d382947f9aa4",
+    "group": "tetra_pak__c49_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38456960 0.42496186 0.64763915 0.74606869"
+    ],
+    "input_label_sha256": "9968ddfa0b25ea9c07307af0f64a012549c6cf6df934c8523bd9a0d40a010967",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c52_jpg.rf.ff2fb7caefd474adbf876ff5ac48d917.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "859b01ef7703a3873bd224c83a6d52a4ac43977ffd8f25d10f5a90669df1ba19",
+    "pixels": "159954879f38a0f02ec8163d4160073731e55bacd1e335283d7159d867fc8876",
+    "group": "tetra_pak__c52_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38828125 0.34531250 0.59531250 0.69062500"
+    ],
+    "input_label_sha256": "77d2e8b26e37b5dcf31377450ce3bc0aa1f61a4854c57d3515f85133432e5fa8",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c54_jpg.rf.1fe525d6f53406e97f6c39bb4aff02d8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3e5ad61a208ed0330532c35967cc2ce5e66679d5452d912e1e5dd9c66bff159d",
+    "pixels": "b7070e962c0ac0a091f589c86e9f73e93531263bca43368aeaa912af96174ef6",
+    "group": "tetra_pak__c54_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46329639 0.40862462 0.65060995 0.76785182"
+    ],
+    "input_label_sha256": "c41d27f58eedbe070920defaf6987c3000fe47878fe121c31086d303462d5a80",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c5_jpg.rf.66f9c3d4cc25231296fa15dde6c31fc0.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "e70696177e019e92399655b9b7c313940ec18846af724130aa9fa824f74dd9a0",
+    "pixels": "072ab522e9c3e7f494f440c0014f1e58bde0cddcbf12419cffb3be2f6c7cffe1",
+    "group": "tetra_pak__c5_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.406850790 0.497021733 0.564456150 0.994043465"
+    ],
+    "input_label_sha256": "caebd03e5adfe8e1cceecbc177787c668d7542d1b96983db6853ca44f658179c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c7_jpg.rf.71abe386023f15eb5381b7d72d785398.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6fda6ad44d3df1f7ec98a1f0fd515a835ee4708332a9c010f2cfde2dac5bb10e",
+    "pixels": "daa93a7e1d01fb2579a6cee5fcb31ae3d942958472d7bbdd468415c9369f63bc",
+    "group": "tetra_pak__c7_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52568372 0.51390933 0.70705566 0.96389915"
+    ],
+    "input_label_sha256": "0bc0cbcaf6ce6cdfc58730fa8dee42dfa5bc0b70a4f409035fda93be5d1c5fa8",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c8_jpg.rf.323606468c646824814e38b4f2c7ae26.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "401f1599d3825c96537046180b411170cbe1d6dba72e9e7906dfa1e445eba724",
+    "pixels": "8f350a9fd99d2fe941b655feb0667a5844b5bfe41aec07db053a076be3eeaffb",
+    "group": "tetra_pak__c8_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49316982 0.51248184 0.58789218 0.97503631"
+    ],
+    "input_label_sha256": "217faf35e2a017e9e1f6821e2ae326f9325e340d2b1050e5b1d4389bef4eebec",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__c9_jpg.rf.d926bec87641166725ae36d658b9dd84.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6764f2d15e08bdbf63fd0d7f95401c5bb375f6080160712910efc69dcc6ee90b",
+    "pixels": "233e3492c038bbb58d96c9e5a895f8a8d39ea2ddcbf1af81bc1a013af3f74e20",
+    "group": "tetra_pak__c9_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38531238 0.54104855 0.63427035 0.90962070"
+    ],
+    "input_label_sha256": "c745bcb5d1e246e3646e4c594e701cbe07cb04da684bf1d6c0c51978b81c8e6d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-102-_jpg.rf.ef7290b51435574c95c286b3890998b8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "1c8454035860803243dc9fa30be054b0d5d284f8328dd9ba39b8683e18d80de3",
+    "pixels": "fc931c20e5367cd5267b6d8bc5a2bef357de52dbc1076606a4947c925f44e3db",
+    "group": "tetra_pak__cart-102-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51250000 0.52031250 0.95234375 0.49296875"
+    ],
+    "input_label_sha256": "7225e5ee90f83cdeba2a0b5c5140042801482ab4710eb1dd2a3457c4d1220f3e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-104-_jpg.rf.f42fb478ea04f624c367cba56d8b9e38.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "64e7825b5c0a4e169e608bd2a388bf11bfef18640d542ebcf5e873ecc1e8d888",
+    "pixels": "c64ab295d2f49b2ac1b820cfb2500968abd4c858f5b7854c7de12ea86801a331",
+    "group": "tetra_pak__cart-104-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49687500 0.52500000 0.97812500 0.49921875"
+    ],
+    "input_label_sha256": "d34ef30eac0c8c1c96e5a30b8f91fb32b1a1176866a7bcef0945aa97ec910fe6",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-107-_jpg.rf.e244e04012bdde7064d4dd7dc503e9d5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d033f5b8690558e075fc4ebbf2910879ebd19a8e620be33d7b274945ffd121cb",
+    "pixels": "98ebb78cffe766be528ef6df3d30e16e6bb2089cac26eb68e2a7d9602a0a333e",
+    "group": "tetra_pak__cart-107-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49921875 0.49609375 0.98125000 0.43906250"
+    ],
+    "input_label_sha256": "0ff9a410febbf2586a7c788bcfe2e3e13b62666f0721b5e4013afacca680e655",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-112-_jpg.rf.63adb336138927dffc329b3a08a0d786.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "00f2a180337bfb373abeeae97dbe6c2acbd5827efaf77513eab8ce352d04e7f1",
+    "pixels": "62c0bcc79afb01f96212ba1b2ebaa91facca3f2ec695520181e9cf1e27b8f75b",
+    "group": "tetra_pak__cart-112-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50000000 0.10234375 1.00000000 0.20468750",
+      "6 0.49687500 0.30312500 0.99375000 0.20000000",
+      "6 0.50000000 0.50000000 1.00000000 0.19765625",
+      "6 0.50000000 0.70000000 1.00000000 0.20078125",
+      "6 0.50000000 0.89843750 1.00000000 0.20312500"
+    ],
+    "input_label_sha256": "81c80ef25872a47f7bac2e4b5a61e83339cc799a2c915c77e4afd55a9b8b81b2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-115-_jpg.rf.52b4070a5fad092dccd5f344f3d0d6c3.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "28d342a94d855916b8297329bdc87741bec365ecf1eda1cfe51fba2b79797853",
+    "pixels": "08a4ece7fd0840875ec9b22ec89bd2dc9e3cc791603231c6e451fef77ff6d244",
+    "group": "tetra_pak__cart-115-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50546875 0.49687500 0.96406250 0.33203125"
+    ],
+    "input_label_sha256": "4f50fc9c3c9eaf806cdef307a17bc2cc6540cc900335703d87cf2a0360a91452",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-121-_jpg.rf.66f02b505a4b836ecff77468c0b4cd11.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3dcb484fcee9bdece40c83d8d2724c5157e3c26aa796fe5f3a6ce70ad06aa2b2",
+    "pixels": "8fc95688f01c784b45ab342f0f43264800145edc810381ff05e3480b72094ac5",
+    "group": "tetra_pak__cart-121-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49921875 0.50234375 0.94218750 0.88671875"
+    ],
+    "input_label_sha256": "5431278a43722e491e207de2e0851e279191cdff607804add5042a9cac9566aa",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-123-_jpg.rf.0b19d48e569daaf78c13cf2961836992.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "15d6a5ae6465d94fa9e6217bd2d0d8585c2b641c19f57ff6233561d00d1cab32",
+    "pixels": "683019289996aa68e3623d41c7fa19199120ecd1afeb8fe4ac9a262d5290c924",
+    "group": "tetra_pak__cart-123-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49609375 0.49531250 0.74609375 0.55468750"
+    ],
+    "input_label_sha256": "f6126617b2793ad04aa62141c25e5528334512009c5d9e11a59319652a6468cf",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-124-_jpg.rf.e146c27a853d72a251ee016a50803a17.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d3c87818a0167682cacdd312c24b9866771b18ccbfb77268e7c418ed97def40e",
+    "pixels": "28a49a37d7936799e4c7c11a669d111455f1cefcd60a3a580fe17470dea3725f",
+    "group": "tetra_pak__cart-124-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49687500 0.50000000 0.99375000 0.39609375"
+    ],
+    "input_label_sha256": "10430db8839a10b4bb14667d22cb828b28338325fe5e5546820b009e1de43934",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-125-_jpg.rf.b25b7ec4520b746e2fbba5c52fd7aa61.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d827c49d310108dcead376257387b58d1c910fb180e14f642efb9bc60ddc6dc4",
+    "pixels": "82572822797740f3a3182648b6d2b5de0b575cd644723e24bacd715f48ddd8f8",
+    "group": "tetra_pak__cart-125-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50468750 0.50078125 0.99062500 0.50781250"
+    ],
+    "input_label_sha256": "6728a4a2d85cc2d10125b24994fd9e761465daf13835dbfc308bb64fdf680b80",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cart-128-_jpg.rf.27f9cdefc7509bc745b2d8cb0e771faf.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f8401082b425e1095ae01f61386e060dd9fa5696a012baf2c0227f0b3b7205e1",
+    "pixels": "633ffe453336b7b3e62eb6e3cb26da15c83f0806af8aacd29d894d34f58a2caf",
+    "group": "tetra_pak__cart-128-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49687500 0.49687500 0.75156250 0.50781250"
+    ],
+    "input_label_sha256": "1e1abe38cd9710915a6bf49439147f29cfed88eac3bc6e4a14999159998287f0",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc102_jpg.rf.86ff1d8c8b8be0d9113f6f02014e59a7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "2baf35af3962d808ac56298f0cedfec1e91b05b54968a1b22b51a3d08124e177",
+    "pixels": "574fbe179b0d9195eb8da2ed47d8335b95102bca515f8edf8ff70b693a2a4e94",
+    "group": "tetra_pak__cc102_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.40536538 0.42259642 0.65655147 0.84519284"
+    ],
+    "input_label_sha256": "994bbfc923cb0b2491891129b74a23a7731eeed86e845e3d3fb085ed28c9a8b6",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc133_jpg.rf.6fcdbdaeb3c075cbcf9ab642f1525ebb.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "2d1a7251ff863430c376a0e8bf7044734cd313aed486cd6150ac6c341f4eac5c",
+    "pixels": "0fd732b5e103a692dfdbbedeb7297c008e608162edc1cd82f4376afc69e9e786",
+    "group": "tetra_pak__cc133_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48828125 0.56875000 0.58359375 0.86250000"
+    ],
+    "input_label_sha256": "84fd194ed66399ed0af39f1a6d3021d797c2760b2dc1907cede62d5a8c738d2a",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc138_jpg.rf.cc04bb984d55b0ca15468af57a7a6759.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "82436948fea8decfb25f22d31d80540678a28ec577a5cce1001d1b1b00f53c06",
+    "pixels": "e103912b39913d6af8758956ca8ae1d2020692c43825c7ccf2e50dee32fc6ea0",
+    "group": "tetra_pak__cc138_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.56801789 0.50496809 0.72933689 0.89464933"
+    ],
+    "input_label_sha256": "91659e80b880e4c3d33374690b7420563c6dc21a0a7080ce534f2a98f873852d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc13_jpg.rf.9ce5c932d606129e89377ecadd873620.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "7af7fadaea74fbc6af5453e1b50af61fdb51f0e2e1731f22b7a5d33b9de88b44",
+    "pixels": "b13b6bc4685d89359443c2e5341eae08efc4e4e894c25f4fb9c13f6477bb3970",
+    "group": "tetra_pak__cc13_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.53984375 0.63828125 0.55390625 0.72343750"
+    ],
+    "input_label_sha256": "bc6c32a1f382d8976a2f3fe7123461bed6dbcfc2197490c9d94265612bf39890",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc144_jpg.rf.6102fa96c9312523635ad872fbc75c16.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "0973f354aeea0c251ef0d11f668bb665f7c5be412a652d2159ca27d91bee6502",
+    "pixels": "c98ce1adce34703c5dfc3854fc4a9941d70f4a674a2c784e420886ef909a99c5",
+    "group": "tetra_pak__cc144_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46329644 0.50122012 0.74864711 0.98927757"
+    ],
+    "input_label_sha256": "585a60c2828e313b2f1b2fa47697d57cb7f3addbd3c8c6a8345b8402db776b44",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc148_jpg.rf.4b41f0850f58d6fb8e819574c518ba85.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "496926055b83b89d471d9aada16d108412a95cdd634ed77757b704df74b0253f",
+    "pixels": "7d22d529bcf413d8198e714ea146b9c5337f625596036da973627286d6952fb9",
+    "group": "tetra_pak__cc148_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.60292505 0.53188544 0.76350127 0.93622912"
+    ],
+    "input_label_sha256": "b85022878b7a17b971f1ed48896a4095652354101f267c84a8ce3000dc5e82e6",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc157_jpg.rf.4630ebe3f6cf8e57f0abfe51076a7e72.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "952974721392e201ecf90fa0b77ae5a1105f0bc3ce94934c6ccb727e9cda6f20",
+    "pixels": "3bdf26102482ef14be6b0462472bde1090f1c113b0d333b788485d6471191cd1",
+    "group": "tetra_pak__cc157_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.44769956 0.45912840 0.72042426 0.91734903"
+    ],
+    "input_label_sha256": "cee719ac1a398b813259a3dc51b80565e45d145b1c1f0dc164283fe6e08b6950",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc1_jpg.rf.734fd417bce56d5ec66e8f001491fac7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "806f6cee35755cbe74e4a06c110e4712979361521b50b235226fe3467a08ed18",
+    "pixels": "b83544b6f734cb5bc0ca0f7d02897272782287ca980af68a9b0f02dd20e41df1",
+    "group": "tetra_pak__cc1_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46189271 0.62489501 0.59079120 0.75020998"
+    ],
+    "input_label_sha256": "cdea505e4e22d121319496b335e4d834450a98bfea9a463fdab8096bfe72c2ca",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc31_jpg.rf.1dd38033ce7ba64a09b99ab511a5e274.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "2e608d0fcad2e5a95934e2b83d7e662a79edaf4f83e5df974551c4d03ee794df",
+    "pixels": "089f943d3ac079abb0a46090ecda8f3f4e4c252e7d8795ce7385c7c4b4105f28",
+    "group": "tetra_pak__cc31_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.39571022 0.41365813 0.65803713 0.82232353"
+    ],
+    "input_label_sha256": "4db68d081195942faaf34764d8da3380b62de04a6b9e2affcb09b4a98dde0dc0",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc34_jpg.rf.6a5fccbf313f4967600a42eb2b74a992.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "ad987ec019d53379574d9bc4b1540f4387e11ce84d03c4ac5a5c0a1aa04d675c",
+    "pixels": "d5ba87c85f46cc20d0504b9c112eb4dca974e65d35eb58a96dbbb4ba86437571",
+    "group": "tetra_pak__cc34_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.57990124 0.36836575 0.55999998 0.73582373"
+    ],
+    "input_label_sha256": "1cc7693afeeb4e6c0328668739dbf2888a9888b7c74da173fbdeefe33d2a0f22",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc35_jpg.rf.45afe65aec4f3fcf5c6424708b8a6a49.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f45da92ae0fcc1f7d2af93e10165e4721c9d4b59252a8dedc3bffebfb31130ee",
+    "pixels": "923377e6bbd397f6440194d5be77f7a8543b3894ba4fa3d1e7e5bc38b1730bd3",
+    "group": "tetra_pak__cc35_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38679779 0.36178548 0.53920410 0.72357096"
+    ],
+    "input_label_sha256": "54a02f3486eb5ea72028d72a809b544da73a0d1476b4fdcffe0b2988c59b0a98",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc37_jpg.rf.d2f313b0086621dcf4efbdd04dcbd463.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "79fe35fbde002c844977df61263e6fc09b650111b3fdb19ef9882fd87fb09bc5",
+    "pixels": "485c3a9776e3eac0e5b5b53768a3a8e5c3c1a88994c36a4d2002fcd543089d2d",
+    "group": "tetra_pak__cc37_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.384569660 0.401721002 0.600106070 0.803442005"
+    ],
+    "input_label_sha256": "1d5096539496532ec948a7e3f5038f481357b4044cf977fb7abaff78a88fc704",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc54_jpg.rf.f157d526370dd96224cc905cded6506c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "c0a40525c5f007035c3c2473aad267e43016daf7d8a87d5d84eb27205ea84fd5",
+    "pixels": "47c45c4d2e10b5bc8a8e7bde98abd62a6046bd33338ea83dd50d6c44e7415a00",
+    "group": "tetra_pak__cc54_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51008683 0.51710675 0.64021217 0.93935148"
+    ],
+    "input_label_sha256": "70805c66f5c8c4652c62f067a6df569350330dccfee156fd0819c442fd82dab0",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc57_jpg.rf.d276bf89227a928c01ffdfc9fd755cd7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "497954e18784cb6a69fdb37fbbddd9f370319af257557836389168e88da382ac",
+    "pixels": "96e311034b15f1af36585f4c875df2d69b4cc9f060ea985d82530da1032e7c24",
+    "group": "tetra_pak__cc57_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.61258015 0.42894981 0.55108745 0.85789962"
+    ],
+    "input_label_sha256": "91b77f51fdf06b387a0c641aedc979db563abf976b1975f857badabf9719d4a2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc58_jpg.rf.3da77f90528d965c8c7fa859781d3736.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "29395bd96d6f6e1e70562cf616e83ad2d00eb5ebac2d43eae6c8fac8bbb3dc25",
+    "pixels": "671fe6097ee8d72a287703a75e33d5318a9e77812351dbbc3f999a0924f152c9",
+    "group": "tetra_pak__cc58_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.379370760 0.436210792 0.568912310 0.872421585"
+    ],
+    "input_label_sha256": "da53852f841bd49a3dc23706dd21c3aecb954a33933708a144d0ddde143c112e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc63_jpg.rf.3451512be3728e1ceb51d5287ed3401b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "fdaa6f87273d8798b7926f039fb6b7006a14acd5c6d28de0f6deb550e3e9cf39",
+    "pixels": "2cfb1e9123c8dcd7115f2a8ecc1154358fd33ed7a1ec6a6e08e211cf463ba6dc",
+    "group": "tetra_pak__cc63_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.37120096 0.40081335 0.59713516 0.80162670"
+    ],
+    "input_label_sha256": "a0ec1bb1e492d0ed8a9d50a6ceeac1e5388d7dcc4364639d382198223cc9ebbb",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc64_jpg.rf.2a7684b276dd6eae2632afca7278f2d5.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "dfc94f7eaa17291e9e5b4226ee0318c0049acffe73873fd6258009c6b8b95259",
+    "pixels": "4dc322c3598a432808cb3107903fe02dda3922506ba3f62000eec1d0a1d2be89",
+    "group": "tetra_pak__cc64_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38828314 0.41896593 0.62535791 0.83793186"
+    ],
+    "input_label_sha256": "e182b96e95d747fdb44a15e01506532737162fd349a0be4611976e84b0b14f4e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc6_jpg.rf.ed5f3bb2a9ac93a02e6816ff5a4f565c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "01f71de77c08e3d24c1cb855ae377d680883690c22ab6b8ed1009807bde5508a",
+    "pixels": "fac4286ed80c4a9b2ee6e50c78b5d9eeee6b06454fd8169fdb97c8e0e7c6a20b",
+    "group": "tetra_pak__cc6_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49968900 0.36959666 0.58376656 0.73336191"
+    ],
+    "input_label_sha256": "4bda4093e4473cd5811a4aa1e21055f5d50e4e7eed53a85940b830b4d86f2fbc",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc72_jpg.rf.a86c903490df3fff64c28800e2364fe1.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "ff614313b30a8210a5ebf43b664d72a400340cb0bb0b3a744e215daab26c8e68",
+    "pixels": "d980e92ba828259fda8362639c45ce5d2a2d9c09dfdaf1d9e5962d2c03c3357d",
+    "group": "tetra_pak__cc72_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.63634674 0.45436337 0.61050386 0.90872674"
+    ],
+    "input_label_sha256": "1df602368289323eec44600847c80bb833909f2969682d8e03b175424fa20fb4",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc79_jpg.rf.23f51c64cc80d82e2c254eac8197556c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "43176c0f9438a7e15698cf8d025cf9cfd8ecc427c4fe85b73e441701bc356031",
+    "pixels": "a52990f67407a768d17769653bd0b898cf392d3e8fd5867a73c25aa69e79ee2f",
+    "group": "tetra_pak__cc79_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46701003 0.39843111 0.63724126 0.79186947"
+    ],
+    "input_label_sha256": "3ec4bfb87ca91fc148903112f5d88d7694b1d82728276edcd43ddc5f4b387adf",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc7_jpg.rf.7ac4d98015d68c023249365e2a806f9b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a80535c999e61a8f5e23a105cae61e76b79d7786578892015ea6b6942bb487bf",
+    "pixels": "f08117becb3cd6bc3d67daf6124779eed1de950452220f0836de5afa51d7026c",
+    "group": "tetra_pak__cc7_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52791180 0.50755591 0.72636598 0.93303985"
+    ],
+    "input_label_sha256": "0fc66563f4f77f5815f8e7b3bd0be0d46e8cb197481bee4db00ffa32ad42cb41",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc86_jpg.rf.490655c41386ed9a0f6fca60674cb6b9.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "62429a29152621f3199c702b6a9a46284698921c5c44e7b87b534ca3b3d15300",
+    "pixels": "1f4351abc49299f4f22919cb35b12f4866a8152c839104607a682dec555e40b9",
+    "group": "tetra_pak__cc86_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48186408 0.39377931 0.64021197 0.78665085"
+    ],
+    "input_label_sha256": "a510edb5d113b139866c35491a1388c07c63dc0797955e92dcbedcaa987bd0b4",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc88_jpg.rf.45c822ac1b956b90180c6d44d8ef579d.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "724a4041889d8516b3775776cfd7882e2e3ffa849358ce112305f2ee1801872d",
+    "pixels": "4cd384bdf0404918065005430c87a9699aa343c88f56201b5e21b191c1970abd",
+    "group": "tetra_pak__cc88_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.36377383 0.48284556 0.64763914 0.82997943"
+    ],
+    "input_label_sha256": "6e516d05b23fdc7205d5ab87c16d8e0e342ea9b7723696019105aad40e96f549",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cc8_jpg.rf.b56204965c5d012d7503b299b1005590.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "688fe115f510efacced4785d2824d2fbc365fddb2faffb63d9d927f4a5c78b9c",
+    "pixels": "c12a715c3283167cbd679366b2d4043a8858f5f24d9faf21a2fd4b44da827df8",
+    "group": "tetra_pak__cc8_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.54053782 0.42859235 0.58525202 0.84409232"
+    ],
+    "input_label_sha256": "b35d4c052c9057ab4cb88043ed5a06b313ee99a18222af103dfba5712ac9218e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm102_jpg.rf.800bda45c01b056694c98d247c78d566.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3bfa6b80f1d46b2d231089a8581df595017a482be48de0444631ed645d8877d6",
+    "pixels": "9e2e36fa2b079781adb746df3953a151ee5ae1d693c94c70d29ce15a625c6cde",
+    "group": "tetra_pak__cm102_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50711608 0.61919397 0.65209551 0.75332987"
+    ],
+    "input_label_sha256": "4134e0dba59657efdba3b1e27a42cf74f7cbdf3b3c17278c79253ba3db3868b5",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm106_jpg.rf.a1c6d6c588a1aebdb5e84954bd12280c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "517e4442a372afaf1dee1408ef68c8ba8ca39b4b0d4e4bf0ceb778bdd32cfdb5",
+    "pixels": "42a1f7adbc31c09723c84d8b59ffa1ca55ffc5f599e7794480b5e802cf29c1e2",
+    "group": "tetra_pak__cm106_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.44398617 0.36813881 0.64466833 0.73627761"
+    ],
+    "input_label_sha256": "bb42ecea4dfe5187d1bfd9331c55e707a8dba8a7cb9c9a715c6479694ceb2207",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm15_jpg.rf.6f3fefd854a2377405b808035302c587.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "fc300fd8e7285b02a84d4c061dd2920efcade5241bbc4588afcf3e88f3db323f",
+    "pixels": "95d207259b3f0271aa48c5f9b1cca9dc1097786b246c4d0dff88ba4dd5cfaf0f",
+    "group": "tetra_pak__cm15_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50637330 0.61763400 0.60604769 0.76473200"
+    ],
+    "input_label_sha256": "f26f5de6142a15da0058f92661568ef00fd96fd84198c3aec08969eba67e1093",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm18_jpg.rf.99f1364491d18794576408a202fd1f07.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "c5607e20ff6d6d3394baf6333c77b56004d30425041059d2ca3849af12f8433c",
+    "pixels": "a37c7bf009d62223cb78acfd66594261a7ddc003dc74adc3fe22b8038245cbd5",
+    "group": "tetra_pak__cm18_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.35189059 0.52480082 0.59713526 0.83320094"
+    ],
+    "input_label_sha256": "7df4ff1816b826152e832e798a29fc01548b19ccaad084131c3d113e26aeb014",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm31_jpg.rf.dbd83377e3fe6a08d79298bf83b248e2.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "cef4586e7df505bc5f121a43858e09f0c386504e4ecd0b4802674ce643018326",
+    "pixels": "f86be37c62e7217d168d77855542532816525bbe427dfff0c2a4ee31a6508d73",
+    "group": "tetra_pak__cm31_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.68708586 0.45400598 0.62582828 0.84409245"
+    ],
+    "input_label_sha256": "b211ab5548406bd4878b53eadb21d2b4d1fee929f8d1e56158e602cf5d96a945",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm32_jpg.rf.5cbd9ae80cac71a767c62483dfe9892b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "94dbc02cfc7637c79ff50689c5f6d75530e29557f3ae97de01c6737b915ee11a",
+    "pixels": "2fff4dafcd8c3e78c40e3a2b96fa42751a6ad90bf3a51e1096ce67f3314bfaef",
+    "group": "tetra_pak__cm32_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.716051387 0.504833050 0.567897225 0.807787380"
+    ],
+    "input_label_sha256": "ade626876c1a006baf0b8ca3d2d18ee5c2d182c974612e51fc0cc6ef5cde3868",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm34_jpg.rf.d2d8a957e024eea9466e57841bded808.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "65ba7009003c3ba8742de1186cfc7282edd39bfe8aafc672ca9ea90379b13ad8",
+    "pixels": "db066ffb1b342a04a83cc66d8e8288b275a85deaeaf7bbd8a3a61841378654e0",
+    "group": "tetra_pak__cm34_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.37187500 0.61562500 0.61953125 0.76875000"
+    ],
+    "input_label_sha256": "955696c09261dfd81fd9a999a0d6faa99d306f3f255cf7e8c6e0a276dbe4beeb",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm38_jpg.rf.8908cc34f2872bbb469cfa41c6b532a2.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "5bf747e030f3b1d965c0f50c04587bf76b11a3ca33ea007bd78485073b91463f",
+    "pixels": "2144c35f3065b7a553987464503b80c46cd5763110f32fb06f30ef0acadbfe50",
+    "group": "tetra_pak__cm38_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.67496753 0.44891858 0.58376657 0.87241958"
+    ],
+    "input_label_sha256": "e78f2d649617f0149db3475277a56dcfde63892ed3d93e786e434d658d0064e1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm39_jpg.rf.0bcf4e2ef1d172b0ccbf9ffdadc4717e.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f474bba2b0944b16f3f5600b3c12fbf0e47a23481e086964613f93746cfe5d6a",
+    "pixels": "fe275dc340d15e0d1cda97820ea2ee985a9a56935c3468d33f9d9eb698b85e08",
+    "group": "tetra_pak__cm39_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.38011334 0.50735277 0.57336857 0.84631410"
+    ],
+    "input_label_sha256": "d440406b4ab51725ac8ca1f6ca2627831f96d01f392c8ecd4402fcd915f281dc",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm3_jpg.rf.1db04688025bbefb21309351ac17904f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "50d2e85ce98d19784b89595921d891a5a80e3c87d7f86e953f582e1ff37e2ff1",
+    "pixels": "df76e2565b390dead905fd6a3052049de766d598274fc67ba4f309db687327af",
+    "group": "tetra_pak__cm3_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.464781790 0.410797292 0.715968090 0.821594585"
+    ],
+    "input_label_sha256": "de0e489b9723cdd880e17541f0f73acbaa866897ff516d7af8edfff303789bd9",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm40_jpg.rf.b6959c58dc31c696890a433955553096.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f29f31a6c9678e807a20be36242ecf2a8392fd675b68ae584bf347e8b73ea97f",
+    "pixels": "a9579f963f325287eb8d5833fdd245b8b658a7f1b8f24c0bb63d15f1b55af5e8",
+    "group": "tetra_pak__cm40_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.368972820 0.530864198 0.696657770 0.938271605"
+    ],
+    "input_label_sha256": "be6f68601a34c649e5939def3e86881ac5499e205862e88e78c4e8d73f5039f2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm4_jpg.rf.6c3a482cb9ac7a781b742744273e76a8.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "81fba467346ce7afca3415c1cb21aa0ff4b13600087e4597202615fb14ce0892",
+    "pixels": "d9981be8e769f6b98dd662cf409ce23935e3e0f6ed7148a7f6c616e9083ccef8",
+    "group": "tetra_pak__cm4_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.58515625 0.36640625 0.56250000 0.73281250"
+    ],
+    "input_label_sha256": "1c7f682ad1a29c99bdf45a308c6e4fc47c11bc90cc6cbdb7290a4a6e6adf4cda",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm50_jpg.rf.56bc0bf4f6596c552a03851c6ad5495a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "5a17982ecc6337f36245bef21641d9cd1e3e4c322fb276ccc72e99c6c6ebbd9a",
+    "pixels": "a450c76713adbfb720afb5c6e4c55ac6f424a44aa666da088251f031ced8235e",
+    "group": "tetra_pak__cm50_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46552452 0.64123228 0.72933679 0.71753544"
+    ],
+    "input_label_sha256": "a02d7941ce02455d8c65ad3969d232af65120725a06344b549e4170c99f9c081",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm53_jpg.rf.8054d4b059da19e1fe2578ad5029093f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "1b30328dd2e4f955959daffb6ec9864bce0d75d61700b6c0224384fa17b309a1",
+    "pixels": "afa23a96a4ecf0744d9cb31079ba5399e706ffd5f715311ff89cdc3bcf83073f",
+    "group": "tetra_pak__cm53_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.484092170 0.385383733 0.597135160 0.770767465"
+    ],
+    "input_label_sha256": "0382d8518b639c92c32f66876df48124387b141c1076bb7210422686c92624ba",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm54_jpg.rf.011c8a04063f7df83cb2cde0eccbf410.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "881ddbfdf0092cf947f50ce6690ac270119a1c041e4ade06399b50709af08358",
+    "pixels": "88e2ee388293a5e2a01b85f42fd9b16477cff03492df7ce2c70ada6709132596",
+    "group": "tetra_pak__cm54_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.648972810 0.357247303 0.567427060 0.714494605"
+    ],
+    "input_label_sha256": "a88a7646cb785052485620877accd7cf9f1e22583ca299b33c7d424e5a848b6b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm55_jpg.rf.ee92f48575b754bd1db804660b81b479.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6a20dcc227b9757598d591ea97f2083db00e640ae9aa2c65b21df351179b3091",
+    "pixels": "e8b083bf8d56a3ef606de4f8a91ce81583c8b8895138e8f4bb97ed0265c951d9",
+    "group": "tetra_pak__cm55_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.62520623 0.37721510 0.61496023 0.75443019"
+    ],
+    "input_label_sha256": "27657ea535add04c4ba2cc64ef5a98161e0a4d5b0b2c8105c1c5ba72478d084c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm5_jpg.rf.d11723945006b60c0def33aa8256ff4f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "c3c8c16a6debd7552d9d1c3d41cd537bad872e3eaa242910124928ba0a6d32b6",
+    "pixels": "fc664153720297c1368ef2c54c47019de4fb420edd62dfe6077712805d5c6785",
+    "group": "tetra_pak__cm5_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.44398607 0.42133137 0.81103434 0.83683134"
+    ],
+    "input_label_sha256": "baad1f6b5360aa6c5cd6186834bbdd003402410cddcab1b1d1873e111bb795d4",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm60_jpg.rf.22abc342989e408ada09b0749e7ef061.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "16ce2e319b513354a2af0ec906835f8e262688b1c0bdfc092f9cd9560a64d07e",
+    "pixels": "784a440848c600fc9d2a3a522614570bacadad37a71277eebb17dfeb1cdadaba",
+    "group": "tetra_pak__cm60_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.54796485 0.57115153 0.66546390 0.82400094"
+    ],
+    "input_label_sha256": "9079688059d33073a7a045b9198c602c39ec291ece82c90979035ee305efaed9",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm64_jpg.rf.989c30f567c08d3c45d00b7fa2f424bb.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f7ade1fcb555e35ca5bf0ec912ba1046a0899ea87c8ee17b099b255bc4c59665",
+    "pixels": "034bd4323e201ac586020cd59a77e70e9d926b81569b58d01c3018c4e87a62fe",
+    "group": "tetra_pak__cm64_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.67496753 0.48590409 0.63724136 0.95456054"
+    ],
+    "input_label_sha256": "022a91ebe41b22f70802444bb344c196dd458d09a214ba8e10f6b0cf83df0d07",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm72_jpg.rf.d40f8467948af03e2035a1abce489b9a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "b22bc022ad90cdf1b7283997fc62c46c80f6eda4b695aabc15d1a563580625d7",
+    "pixels": "69755192a4787097fe344bcc863dc74951ec95561949396011109956feca9695",
+    "group": "tetra_pak__cm72_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.52197877 0.55773066 0.60157414 0.88453867"
+    ],
+    "input_label_sha256": "0729c2d907885a3af94d9a2bd468ed0d519797cc2d250906df4a5537b35069b0",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm73_jpg.rf.e3295cd835574d04ea99357e8e7c8a03.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "4e18a0894103e836acd100e482099ccb02cedcebc5f026c668585366d6b7a673",
+    "pixels": "f998ad661298aee00bf06fa00651613f8ff1b7afe84b5027043abaaeb420670e",
+    "group": "tetra_pak__cm73_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51751386 0.52482220 0.58079565 0.93844253"
+    ],
+    "input_label_sha256": "08508bd0afdf788ad1db3c44b0f48ab066a6a94c3d8d5d36935ec17d7a837c1e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm78_jpg.rf.5fff06fc3631e9058221cf651cde5a68.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "9baff3bc4e290d4437236f03791f103bc205eeaa50b5b48fc50c07b617255920",
+    "pixels": "5f485385b42b63f2c9060651c53d23642f3579eab1177e4b8ac077b23d6b6aa1",
+    "group": "tetra_pak__cm78_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.43340982 0.46217460 0.67176245 0.91488724"
+    ],
+    "input_label_sha256": "1241875e03e4898e4cc481ea8581ab164a091d814582124c4b26e0b56921b41b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm79_jpg.rf.28962d80e265a0c7a2b512ff73d52b57.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "db5b2bcea469ddf5da131b420976834e71ab2131b71edd49bfe03c9c49a7c630",
+    "pixels": "bc20d17e18c4b3ed45596f8c41e3bfe1ae598304d9303dbd4ff8536f00ada874",
+    "group": "tetra_pak__cm79_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48750000 0.59296875 0.51093750 0.81406250"
+    ],
+    "input_label_sha256": "9d901bceb5209da27cda3aae19abef072d228d22e191cf1d80362ebfeee3a1e8",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm83_jpg.rf.ce13074c3b9ce065133eacb9ec787912.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "08054f432e8216eabacf51b159178e6fbbef92138d1b22b969198f9ed15799fe",
+    "pixels": "fad4d8a4ebebf5f60f406461d27542cf40e9deab08b96285079e1621faf276de",
+    "group": "tetra_pak__cm83_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.37788531 0.59196509 0.57188322 0.80415677"
+    ],
+    "input_label_sha256": "8cc9e8b11b83a33548ba1a09f09d3f2dda4bd843a532556e5e08a2280bc7cf26",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm86_jpg.rf.15b9ebaafc66b8e8c0bfcccaf8ea742a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "521bc3b6ceb9c815dbef245edb52576817c2a8edc8cabda7ec0442691a2f36ad",
+    "pixels": "e69c6575741da7dc94fa24d394b23dcf882500078a3ad6d5d3d467530b59d16c",
+    "group": "tetra_pak__cm86_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.42170494 0.55773066 0.59416445 0.88453867"
+    ],
+    "input_label_sha256": "4c82d9595d46bc8da3efb6b1745eb9dafea9920875d2045f68dcdb5679782ad7",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm87_jpg.rf.96bbac224f14f714bf0083006100e7e0.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "658b19f0f80afc6b200199199c309923b05c024c98fe4a54be41e98fa60548c9",
+    "pixels": "cd0aa6faf1d236512cafb05b44545505e3280d5221d7232cb8b05a330be2224b",
+    "group": "tetra_pak__cm87_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.61109485 0.48397513 0.58970819 0.95478759"
+    ],
+    "input_label_sha256": "a431397934dccc4f44e74de874a29946455c8378bd76677833fce6ae3eb1a206",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm91_jpg.rf.e9f40c7567da31749b8d2a512cb45f33.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "b83e9dee1492abdddca0342c2d1495198152e5e226d5674064440abbd4073a03",
+    "pixels": "127ccdd43a8ba5f085188c9946e703a7b7ff76df319c6951e2d6ac8722a736b6",
+    "group": "tetra_pak__cm91_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.454391270 0.648493327 0.707040840 0.703013345"
+    ],
+    "input_label_sha256": "aac5f9e548cd59faf12347df15d0102b82d7eeb7104725b332a30ea8c4e8731c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm94_jpg.rf.5711ab524dd655789fb84f61b2807ec9.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "9b5541e91ca187328cc2fc1238517df54cc50e940a40f1a1106d9f674c324295",
+    "pixels": "a93c1f620fe60c1ee6c9463daee0ec7d254af98929702c3dc18e5a23dddd98fc",
+    "group": "tetra_pak__cm94_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.46181104 0.55205491 0.64466833 0.89486872"
+    ],
+    "input_label_sha256": "f646bea76235ec418f9d5e41ca3c5ac19f7be38462e4a42a3ef1132a480d5609",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm97_jpg.rf.0cbe7e8fc99d2516d79ab44bef1ff20a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "0c3e8fd96cd87f16e2f92633887835d5173d2b11bc0dccd4b17aab61e38e9f67",
+    "pixels": "0e6c572b9a345d95f12ebe028e581ef0ae61d8bc4e63efd9c1e5131360f4e0f8",
+    "group": "tetra_pak__cm97_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.35674446 0.46652671 0.71348892 0.69676195"
+    ],
+    "input_label_sha256": "36c396b68994d688ceb072e4e5993d3c7b563da48b8a43bbf1400b06e09e40b6",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__cm99_jpg.rf.a3e71fae9871ce2a1eab41913a579fb0.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "000bdebc75301f6cb4788ba03be76d45282ec4337dface6f478f29193e018b1a",
+    "pixels": "fba99f3b27264e5f20de572a576480cad4de73f4b930bb6f21789eead0a6e30c",
+    "group": "tetra_pak__cm99_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.47815049 0.49475568 0.61793084 0.91507417"
+    ],
+    "input_label_sha256": "68c97122a6e3503014c6f2e61801d64cf924bda843fa2be60833190e10bdc9a7",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__fruitjuice-17-_jpeg.rf.15736ea6aeff46bb885190b23580044a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a66fc9a31e508dc81fc2222f7631ecaa7c6991a540595115b4afa25d325119ee",
+    "pixels": "00e442e85fbc035f04477fb2b028cf31ba61e4125eeaecac2bdbbe7ce42d365b",
+    "group": "tetra_pak__fruitjuice-17-_jpeg",
+    "capture": null,
+    "rows": [
+      "6 0.43046875 0.61093750 0.34375000 0.77812500"
+    ],
+    "input_label_sha256": "0023d77aac75efb7610d1c6fbb40557e5c769c916371a936ec15484b26e4ed71",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__fruitjuice-2-_jpg.rf.925e736ee8f1d534e27c0a9c5bb4531f.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3494246fbea0575516125fbd18a07dcc5ea2af088485bd251d434eb3ecf196b3",
+    "pixels": "fb0c67fb053f1e85f0580d7fa253c3dda05b44f6ae31e579a27c2edb600d4f21",
+    "group": "tetra_pak__fruitjuice-2-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.67812500 0.52187500 0.49296875 0.95546875"
+    ],
+    "input_label_sha256": "d6e78d5da782fbe48fbdc5e8bff0bf4ceeb7ab688cc8e519057385109a4886d3",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__fruitjuice-24-_jpg.rf.5173c5247e8e8795668b661bd79d9a19.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "1003058f669a1475285eac83b04230317c92c797b3d2e42a03c0be134d3737d6",
+    "pixels": "2576695b89e1cd8ebe48c6d0715559f3a1b122da8bdd912741e5053263f3ed62",
+    "group": "tetra_pak__fruitjuice-24-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51328125 0.48437500 0.43984375 0.95546875"
+    ],
+    "input_label_sha256": "932796b1072d2cf44d9edb0c04166a6138ef92fb3978e911f2610f534e46b845",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__fruitjuice-29-_jpg.rf.3890afb926dae080f73966ace57dfa0a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6a0e0d4cf47fbe1a0ba12ad87f67029146048a826bd95fd5e442cbfb249efdec",
+    "pixels": "083329a5a7eaf56f8cac0254123562ec2eea5c8a6729b7251a8c5cc6f0262968",
+    "group": "tetra_pak__fruitjuice-29-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51250000 0.43515625 0.30468750 0.57968750"
+    ],
+    "input_label_sha256": "253360997d0bfa8fd14c0e8883815fe52ec7e74d0867278c8958c3f4df58705b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__fruitjuice-34-_jpg.rf.1da4ec7e2d25fd5b40398f0698a7abdb.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a8bfa36bf898a6eccd020152cb0a1094e332038338462fd04e54103781fc7b89",
+    "pixels": "8219619616fff159d8510a7b8ac97062b92e6f80a21d98c21c8e769cc2658a8c",
+    "group": "tetra_pak__fruitjuice-34-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.53750000 0.57812500 0.39531250 0.78203125"
+    ],
+    "input_label_sha256": "3c5b4bd9ca6d5e48a42d015a405247a2dababd0eedb684be85c7d5101c88b879",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__juice-369-_jpg.rf.4bf075290878eb536f8905e90c219c6c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d1abb46283b6619118afaa1b8e0b3d0ec4f27f2b3d40a9e642539c569fee3ae7",
+    "pixels": "398566e9fc3e59b6c17a6f109b2c1fc67fadcc5ffc829415867807fed6fb572f",
+    "group": "tetra_pak__juice-369-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49218750 0.50000000 0.98437500 1.00000000"
+    ],
+    "input_label_sha256": "ba9e81164dbdd0d5c16c3820b60687f6e5e535796bdae2e0c78114db0e71c6cd",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o36_jpg.rf.797eabf9f8f31145d1c70e85a718f64c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "328e6e5d50b9b3cedf2c61f9a8cc9b1cea01c3d84b526809cf9283c26704d74e",
+    "pixels": "8fac7b669b8497278f86592a06af5412528704bebc9a0a9035b3518f03b100c0",
+    "group": "tetra_pak__o36_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.60441050 0.50000000 0.61793104 1.00000000"
+    ],
+    "input_label_sha256": "d959b52ae33b23165676ab3b510a24ce6fec6b4cccfbcef403e023053b5cc086",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o40_jpg.rf.a729cee8690e187088f72c62d0c402cb.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "918e0e006dc16ddef0d8bf0e70ffa8b49a610c05e603062e56f24f3c6f980bb7",
+    "pixels": "46f65bccd780de4b402d810ac7f23065c0f2087df1c08bfe65e70ce7cd5b1667",
+    "group": "tetra_pak__o40_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.34297816 0.50303530 0.59119364 0.99290793"
+    ],
+    "input_label_sha256": "2041cf8a01563ba5a482821a791476cfc0e51d9ef64efaa5f12c5656d8f71198",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o43_jpg.rf.4aa91df92a9b493e2d2376f5aa2b7f07.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "53d74d893e4499d80ce66a4b5618074b775484261babc81ddcbb5c41aaaaaede",
+    "pixels": "83417faffe987975699a44729652f671d121b59b38e854fd32f702c3c0ffb052",
+    "group": "tetra_pak__o43_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.507116070 0.414427783 0.565941500 0.828855565"
+    ],
+    "input_label_sha256": "4c7225c174b261e77d317ffd415dead590a771c834ee103d0c4781a748fb5124",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o46_jpg.rf.ce7fb2e5aeefe0ad81347a5ff2028043.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "75d72e92dd3a625c9cc12af0ae1702759596d0c8af17d6373df641bee10a6eb9",
+    "pixels": "b8ce8d8b9a531c64ae8a5807d4b9e7cb988a04104e7a890c34f0b43a13eefc81",
+    "group": "tetra_pak__o46_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.61640625 0.52734375 0.62031250 0.87890625"
+    ],
+    "input_label_sha256": "38d41a62d69dfb2f2885df730f94cf78f1c84f6ffc8cef1199c2dde0ca34980c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o47_jpg.rf.a78bd3bdb293b3b6972e5910ccdd319a.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a6b7d2108a72dd309c52887cad88aace51ae8d1a498e4114726301b2c585ce60",
+    "pixels": "cf00baa934c4d12d87489066254238a9e04adc5f72f5826c87c8f16131009906",
+    "group": "tetra_pak__o47_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.65156250 0.56093750 0.66328125 0.75000000"
+    ],
+    "input_label_sha256": "815cd83bd03ce8ca0679c5c883e2b9ea2536400fc2a27de656d815f93aa38457",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o49_jpg.rf.6b523ae9d79507628e9fd7017a722913.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "cd156b3781bc39daeadd8229381424b0f890ba941d01d866a6ece3a3bc67a668",
+    "pixels": "5f0f1444fa437d75157bd03a4f89c7670d145d05d62434f7bf41066ce866a0f1",
+    "group": "tetra_pak__o49_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.65937065 0.53333952 0.65061006 0.74714383"
+    ],
+    "input_label_sha256": "3f11a08639c419ae8a77b1217d8ec5d0f264bdb28023bc416ddc5257d3c08d2f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o57_jpg.rf.d2b56bf7979becf3d01f3cc682b63df7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "fbfbe1526823d1395cf67d656b55193e9785431cf8eeedb45fe037b8064782e2",
+    "pixels": "54dda2041a29daf23620d7b5687bd55e3016c62bc7fdabd92aa27f8a4bb81079",
+    "group": "tetra_pak__o57_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.61250000 0.37656250 0.64609375 0.75234375"
+    ],
+    "input_label_sha256": "217d0ad78b6d1c08021b62d77abf3cc08ac2d2738523d2c9b01fdf3080d38fc4",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o58_jpg.rf.c6b370092c53f8ec711e8b1bc6b85156.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6aa65678c1fc6f992569334ee492e80eb859f2a142812b8c9b46af876f103916",
+    "pixels": "f7011e02c88f347c4828e09045b03987fd5ffa31b5a8ce691661c97990ae6dfa",
+    "group": "tetra_pak__o58_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.55910541 0.40625915 0.62238720 0.81251830"
+    ],
+    "input_label_sha256": "319bc5769a61f3b2c5d45e28e5e7c95e27eb6d2dad216120d5acc85cf3411a9d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o5_jpg.rf.089d124410b7f697f6be0e82ee0abf0e.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "131e8f39391d50aca0e206f4cf72d8abdf66a773977d9ffb8ffef8bee58d84c9",
+    "pixels": "13e4ae84eb2b8c97206dfea8465390b390d7f9bb631b92aac12079189cc00495",
+    "group": "tetra_pak__o5_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.51305764 0.50000000 0.69962859 1.00000000"
+    ],
+    "input_label_sha256": "58634de80f7a17d484743f504184e3deb0f36650166e2ea2c398d3d748e0084d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o60_jpg.rf.eab30472b30a57752a79e666d92603a2.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6140e538e758cb62c5dc1268a5d406d4edd7c7f1d4621103ac48c708e977e554",
+    "pixels": "c35146f276c1bd88545e24e0f1f17252f503f4200bdc4602b441a5b3fc463503",
+    "group": "tetra_pak__o60_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.42467570 0.47251583 0.78132613 0.94503165"
+    ],
+    "input_label_sha256": "4ccc8d0e77dfe387d002b4de9f5d3c99bcfe8f800bea46f1823ee27e7e21b2c0",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__o8_jpg.rf.abd44569e3ab3ce3f44b8f8c42bf4185.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f84c1e9f3d32811ee1def538fa211e1a18dec075194d5539ffbc0ba5f74f9a19",
+    "pixels": "4a3ae7c85f4b6d1d8cfaeaecd802287265e4ed1ecda3b3227b5501d2ddb82512",
+    "group": "tetra_pak__o8_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.63437500 0.49609375 0.56171875 0.99218750"
+    ],
+    "input_label_sha256": "6309fe4b08cf0abf80dd2e5fc97b874ff2f38431db08546e23f8b70d2678161f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__small-milk-carton-mockup_638990-3_jpg.rf.0caa28dc63bccf9014bade5e509e740d.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "edaee6619f37f0ff578aa328eb3750387ce08d145348d3c6009f8994a7d3667c",
+    "pixels": "16616e31b9d6afec9b7d44000fbcd60549fbc853d9fe9de883bfef19ff784384",
+    "group": "tetra_pak__small-milk-carton-mockup_638990-3_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48984375 0.49140625 0.24296875 0.55156250"
+    ],
+    "input_label_sha256": "66b853c7a5f14a296a8be4547f8b88743d1bf370bcd0a53333448cf14744e804",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__trai_cay-14-_jpg.rf.8ad3125e69118bd5baecfba1382d1675.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a7ab15b3521693dc9b006db32ba01bed6ea340df4af41828d03c5d7140ee499a",
+    "pixels": "7b3844cf1165ab0fffba50822439dfce42c23da9ce52efc20d210d3f429abac2",
+    "group": "tetra_pak__trai_cay-14-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48906250 0.47578125 0.27968750 0.46250000"
+    ],
+    "input_label_sha256": "9e030f043f94945e6aaf594e609e56c52b1ad73ef951e8839a9f1b00989760e2",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y10_jpg.rf.38a54bb2d277a772cbc2690e58ebc3b1.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "edda4c12c2f6c5b3ad85e93214abdb948e40fa4cc11bb3b4bfe6c5148c69b004",
+    "pixels": "65e46a4401d518fa86e66762fe5bf3fa5d71b2413ce233f1b535b19335d21f23",
+    "group": "tetra_pak__y10_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.40982160 0.50110640 0.71596799 0.99313511"
+    ],
+    "input_label_sha256": "6e9d7f460d486beacbf18b4fced688ef98c79de635a855436825f767675dd37c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y13_jpg.rf.e990379ece378ca1c328e283a4ba045d.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "aa9d31776a08e22b8be48afe2d7278f514b599319bbfe3df22d0695ece375fb9",
+    "pixels": "4974c1f01633ee904eac8fc185eba34657627f7da9f2bcc70c5c3463d4fd24dc",
+    "group": "tetra_pak__y13_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.343796700 0.499744633 0.687593400 0.999489265"
+    ],
+    "input_label_sha256": "7aaeef4b06f1ab91a03355183cc5bd9c49b4accc035ac0e15ce5f35a37e31340",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y15_jpg.rf.465d8281be6e238e0440e5c97d08da10.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "16f5487307eedbe6aa094116f0b8623f039b8343ffd986f5e31caf3fb4810908",
+    "pixels": "ed3fe9725174f2206416a7b2ea3774012404c8194b2413b6fcb0a243cecc2344",
+    "group": "tetra_pak__y15_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.47963600 0.48522261 0.66249320 0.97044522"
+    ],
+    "input_label_sha256": "bb718157b3e381861e661088b1a4e1900be903b9050ed62fdfb6c75672a0343b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y1_jpg.rf.e10ca0b3c4537fee435f4dafe91c691d.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f3723fa360205ff7f163dac6ad7ee9d0c12771d05c18bada507927ca1128d7f4",
+    "pixels": "0ef036acb8392829bf8afa3b0909cc1e2df3f729513bc99129ef36afbe613ac2",
+    "group": "tetra_pak__y1_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.50265976 0.48123472 0.56891231 0.95663804"
+    ],
+    "input_label_sha256": "1dfc629749fa8bc99a19e519735ff4c0e0ab7d7aa952551662199052e2f8468e",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y21_jpg.rf.05ef101003159d32d56fde45a300c8db.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "efca89abaa1e0a772c33f0bcb555a0152c6be2f40f0a877111dd703c692976d2",
+    "pixels": "bbc350cd0bddf03f6e78551697792095c733cd6dc06bc902cf3b99b6315ade1e",
+    "group": "tetra_pak__y21_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.30517606 0.50055021 0.61035212 0.99889957"
+    ],
+    "input_label_sha256": "b79bac9dffdc4683de8c31b5fb0b67203c06fc5b342e5aa40b6b28487d8b53c5",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y25_jpg.rf.ef83b49d4c29272d91115cc7b639e46c.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "10adff3737d0ce6a9aec0a1ca0fd359b73140c955ec3f4e50f1631fa65eaa010",
+    "pixels": "7476256d8cbc447704ff750f93d84cb74abfc496f4c22a390a79524a8742350c",
+    "group": "tetra_pak__y25_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.56133349 0.50000000 0.66843492 1.00000000"
+    ],
+    "input_label_sha256": "fbacb84d8d7468da6deebc5a20628b3b1cadd961952205ab326c907f3bfc826b",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y29_jpg.rf.b406869ff76078b53bb0e03507b92def.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "4d372c0c873257552227c8bb83260149ad1762bd56e541f23afa672e89a1f9e7",
+    "pixels": "fc16b3dcc7ab4971b68f91c1cd7fe1f7be6d84340b1bba8f6273a92a07323324",
+    "group": "tetra_pak__y29_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.42838929 0.50110640 0.71151183 0.99313511"
+    ],
+    "input_label_sha256": "d0a507593dac2cce1d47064aefe76ccb0695cac1333808d218d2afe419a62638",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y38_jpg.rf.856b9568f8451b3f25e439320e774e5e.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "6256dfdebaba353f685401015683c499ba0aa9897f7ff39a2263648d9fdf17bd",
+    "pixels": "a12c632cc5cf2dc1f84885d9bca85b63438b4e51ebc8c6a11c56d89095db5c67",
+    "group": "tetra_pak__y38_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48186408 0.43494585 0.63427055 0.79508066"
+    ],
+    "input_label_sha256": "9150f38eb4fc01ed6fbd8581ced5daa6f30ffbbb08bf29fcba3bb3e68766311c",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y39_jpg.rf.2bf7120a21c311bcb816e8e1bcd85adf.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "594d1460e4f2432d951146e14743fda4362944e21606e83d7667cbf18506a746",
+    "pixels": "80605d5cf8d3a4186aa5000783974ffb243635b3f7c8e33f0078efe451d84ce6",
+    "group": "tetra_pak__y39_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.45364123 0.39082947 0.60456224 0.78165894"
+    ],
+    "input_label_sha256": "eb37a3728c2e3c2790b3b4b29def6543e4d0fafe120987e46e3792679683d9f7",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y40_jpg.rf.9d911243644865a85f8175c8ff6d193b.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "56327185c151903c7b32ebfa962106614e983c66384e5d6af69384ede018aa20",
+    "pixels": "af44a5ac8e2c684996966d72084c31006bc4c486a432df50e5c6055f80bc6b3f",
+    "group": "tetra_pak__y40_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.39496754 0.38288907 0.64763925 0.73219064"
+    ],
+    "input_label_sha256": "2f85e69681d8763019bef59030689acbeb12286f25002112347042e7b9836c75",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y42_jpg.rf.8837ce1aaa50a5b2fcd04d5bcda7dfa7.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "f2ed49f8d8e951e38c5f037781240974c6055c2cf60d96a9691f077f42c2d7a5",
+    "pixels": "d656729cf316367e462fa2437819e9b6230e52d4e73d809afea3cb7642898f45",
+    "group": "tetra_pak__y42_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.34669164 0.38992188 0.57782484 0.77984376"
+    ],
+    "input_label_sha256": "3f57ac78028a15baad491b3b70c0aabad6b7edffdf352cfbeba016b495b8da10",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y44_jpg.rf.9ea2ae275cf1127621a783acf4b745f6.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "777fe87e83b4401cc421f33dc34e9cf44a039250e92232e6b059b12cc74b2ac7",
+    "pixels": "f93409092172df10da5fe62b5788609c2a2969b1451dde5e85bc5807a6852928",
+    "group": "tetra_pak__y44_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.48593750 0.38125000 0.54921875 0.75000000"
+    ],
+    "input_label_sha256": "ca2ce2861cb587b39e0c96f7ce909994a02f75aa2f3b046590fd896ea98409d1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y48_jpg.rf.cd02dc29e4f16a787092b03e55c402c9.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "e36722151088f70ae7e57ca27804388f6637a296b928814a8344d92798312e98",
+    "pixels": "bbdaa224b12a77c434752f97f04346ebb237292e94356f73d73a3d84c476a3b5",
+    "group": "tetra_pak__y48_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.47295165 0.42768478 0.64021217 0.85316870"
+    ],
+    "input_label_sha256": "d604006abfa4f6fce794eed504a04d68f77b5114293569e076566dd117822d42",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y53_jpg.rf.79e2ac85b9a30ba8fed1b9f419b1d904.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "78f2ba52facb529952e3876b83836a6f8980e36fb31fa28e89f7296df4ed4b3c",
+    "pixels": "b67938313c211fb475e514c7ffbce7b61bf3251591d03e92cf83c53bb7879b6b",
+    "group": "tetra_pak__y53_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.279181392 0.430425230 0.558362785 0.847687800"
+    ],
+    "input_label_sha256": "6fa74afa671dc721c68e80e70025adaf8fc17e4d2a4df9570bc094ebdd60690d",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y55_jpg.rf.a3406cb5adc1ce892d97403a69dc5994.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "5af7c6ec00a1a4d586dee29c2c75c1431afa693ff481781f16027c61cc6f4302",
+    "pixels": "f5742309df348a978afb97cc874c54f69b6863deb0469a8231c1969717253e08",
+    "group": "tetra_pak__y55_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.58529478 0.41225517 0.66804573 0.80778747"
+    ],
+    "input_label_sha256": "8f101749e61a1262099936609b101549a3d1ea2fa84d6defc68a662940641fc1",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y56_jpg.rf.651fc919e430ae6bea289a32f6f062d2.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "a692d7d4ae62ea5992858248860339af1853aeec69ca5eb3105ae19657453cb5",
+    "pixels": "d4732282e183a289a453c30edbb25ec55091c5d60d4dc429d3a14c56214e4f8e",
+    "group": "tetra_pak__y56_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.36080307 0.39954836 0.55554381 0.79326533"
+    ],
+    "input_label_sha256": "a10f55656a1c72258a7f78d73e52c1bf0f25cc73c9ec504ae51da34247a2714a",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y5_jpg.rf.38ad08f2b1e8dc3843f0c94258c67874.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "9583b42e19ff61ef75fac4533852a63b1e5cb1cde8d143efb50cab9670850786",
+    "pixels": "09d0af9f116bc4f071d6a3f9e522ebf5df9f644acbf9438b75b599ec29b69fca",
+    "group": "tetra_pak__y5_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.510086830 0.503290668 0.661007740 0.993418665"
+    ],
+    "input_label_sha256": "c10a4923ff5fe1cabae37cef42c5216a2658924d80246f003368d674add5f03f",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y64_jpg.rf.94bf568e34a203061fb4d3e69d98ec04.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "468538a4998b4e471f24b3d79060e5ad779222877a883ddd40c40f776ca24e7c",
+    "pixels": "c67130133f3acc7cd8bca8026b64f3e00a9082e749d41a660685c7f0b2c5195b",
+    "group": "tetra_pak__y64_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.42812500 0.40859375 0.65468750 0.70234375"
+    ],
+    "input_label_sha256": "e041fbccd5eb74a90c704051660c0066ca10ea2e4a56da50b295767a32b9c011",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__y8_jpg.rf.365594a1d86c93768a6fa268578bd94e.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "3cb1db3a11f84474990828622b4de73d54f1270cdcf1aa18b50ad5f4d1b792b0",
+    "pixels": "141844420f9b60cfd5e5e1539537edf3b61810af7e74af925c5a9735f5596cce",
+    "group": "tetra_pak__y8_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.32292511 0.50000000 0.62535791 1.00000000"
+    ],
+    "input_label_sha256": "33a89dc3d084ee478446701298b3c05e596682ce1fe9df2aebe1a019fc21a402",
+    "frozen_val": true
+  },
+  {
+    "name": "tetra_pak__yomost-4-_jpg.rf.053a2d5eeb0de130bb79d587e4b4e998.jpg",
+    "split": "val",
+    "original_split": "val",
+    "sha": "d0d0ff5e07a67197fa549aa075c37761476d7167c088482f798ac9d0b942a8ce",
+    "pixels": "11387663283d8ff20f29d1d06d924248294c6580ddc4b94939be5c1c02094fbf",
+    "group": "tetra_pak__yomost-4-_jpg",
+    "capture": null,
+    "rows": [
+      "6 0.49062500 0.49765625 0.45156250 0.96406250"
+    ],
+    "input_label_sha256": "3e366a2bd3c1b06262fe11ce424c988544792ff4ef55124d3b56b5c04a8f2aac",
+    "frozen_val": true
+  }
+]

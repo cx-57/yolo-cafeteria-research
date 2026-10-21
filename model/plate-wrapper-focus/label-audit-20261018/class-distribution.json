@@ -1,0 +1,49 @@
+{
+  "train": {
+    "plate": {
+      "objects": 650,
+      "short_side_under_32px": 59,
+      "area_under_4pct": 151,
+      "by_source": {
+        "food_american": 7,
+        "plate": 313,
+        "school_lunch": 297,
+        "school_lunch_asian": 20,
+        "waste_detection_v3": 13
+      }
+    },
+    "wrapper": {
+      "objects": 395,
+      "short_side_under_32px": 0,
+      "area_under_4pct": 23,
+      "by_source": {
+        "dry_wet_waste": 55,
+        "plate": 5,
+        "school_lunch": 217,
+        "trash_detection": 28,
+        "waste_detection_v3": 90
+      }
+    }
+  },
+  "val": {
+    "plate": {
+      "objects": 238,
+      "short_side_under_32px": 26,
+      "area_under_4pct": 51,
+      "by_source": {
+        "school_lunch": 107,
+        "plate": 131
+      }
+    },
+    "wrapper": {
+      "objects": 94,
+      "short_side_under_32px": 2,
+      "area_under_4pct": 9,
+      "by_source": {
+        "school_lunch": 80,
+        "trash_detection": 13,
+        "plate": 1
+      }
+    }
+  }
+}

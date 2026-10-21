@@ -1,0 +1,413 @@
+{
+  "exact_matches_to_existing": [],
+  "near_duplicate_candidates": [
+    {
+      "a": "packet_extra__commons_79131842.jpg",
+      "b": "food_american/images/train__download_jpg.rf.e72c33c8896de27c9a763f969928013d.jpg",
+      "distance": 5,
+      "legacy": true,
+      "visual_review": "False match: existing photo depicts a cheeseburger, candidate depicts four ketchup sachets on concrete; distinct source pixels/content.",
+      "reviewer": "Codex native source image comparison,2026-10-19"
+    }
+  ],
+  "records": [
+    {
+      "name": "packet_extra__commons_76849252.jpg",
+      "split": "val",
+      "sha256": "5f1baebc9bb705be7e94868fff66dad3a4a5c0a20def688846e8b3cb047d4d3d",
+      "pixels": "a788bc004d05afa53eff25f152fa7f5a7d33fffb4818a0cc62a8b3bcc6b0cfbd",
+      "dhash": "fcf8e8c0ecfcfc38",
+      "capture": "commons_artist_f6be1e6205a335896b0e"
+    },
+    {
+      "name": "packet_extra__commons_76849251.jpg",
+      "split": "val",
+      "sha256": "92d4d7066a8a9248e89d84fa8a1458352c370edeab83142bd2ec35e8858e73e7",
+      "pixels": "d05d7214fb0844f21fe8c568e79b2db4cde7cd98340d7e20823bbeb56e0e9863",
+      "dhash": "c6e6e5edfc3c3c3f",
+      "capture": "commons_artist_f6be1e6205a335896b0e"
+    },
+    {
+      "name": "packet_extra__commons_134523475.jpg",
+      "split": "val",
+      "sha256": "40a38b0ca49ab456354a3fc97bdb82b7ddf804973e88c5b8403931641ec8c795",
+      "pixels": "33e90efc35b29bbb4f731df47f50a804ab944211b1ac5f0add5f2b5838ea8a09",
+      "dhash": "793f37371f4f6f6c",
+      "capture": "commons_artist_464279f21521e12d7176"
+    },
+    {
+      "name": "packet_extra__commons_79131842.jpg",
+      "split": "val",
+      "sha256": "bc189816c154fca7d526bb2b7618678ccb2cf3ba9bf50f5b78f2bffa80dcfc08",
+      "pixels": "dc96f4aa59a37c51f81b721288409f8ae1f2231140da06b791388e9a378bda93",
+      "dhash": "070f0f560e0f1b1f",
+      "capture": "commons_artist_8b9371dd7303b24bb989"
+    },
+    {
+      "name": "packet_extra__commons_79131845.jpg",
+      "split": "val",
+      "sha256": "33e981fb9c96caf40cbc5b677991d67815666ca670fc377a886247046b48969f",
+      "pixels": "fc5f6d6de24ffda138f606ac31ac06d0fe518550db694cb31545695e611b9191",
+      "dhash": "5647960f1796cd1d",
+      "capture": "commons_artist_8b9371dd7303b24bb989"
+    },
+    {
+      "name": "packet_extra__commons_163836383.jpg",
+      "split": "train",
+      "sha256": "f67eed20b9eebdc132377ba22c57e88883f29c99f0e6f352e06d009a5e8fc244",
+      "pixels": "ebefe303a022ba2e6f09abf7ba40efbfd78d8edf2152d7879bb459b82d2923ad",
+      "dhash": "e1691717034fe9fb",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_164620596.jpg",
+      "split": "train",
+      "sha256": "f912bdb94e9166a3238b13e57141ce4bb930891fd40d7606b890a924bef4d356",
+      "pixels": "6ad4530cad4e041259193ee8175f1521ee2fdfd1aafe6a91d8602e22ca30adf7",
+      "dhash": "fccd8751457171fc",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_163302327.jpg",
+      "split": "train",
+      "sha256": "a365c7e261cfb1063d55e8f4cb68467d8a8b5be95bec1324e675717b3030ade4",
+      "pixels": "1c69f96ade2fabc6fa6d1ab2098483c95de4eb112b3123b642389b813611cbff",
+      "dhash": "f3c4ccccdcd0d4fd",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_41796.jpg",
+      "split": "val",
+      "sha256": "ea9ad590e816b2292e31fa9fb6ffd381e050dcfa8c475d2b09919d1dac08b59b",
+      "pixels": "0863c9f3888217a130c64a1e0e175dc5aec09412c7490b3ff89d1207b6f27387",
+      "dhash": "0f1c7c6863c7c7cf",
+      "capture": "commons_artist_1a6d5ba0ba32437c9132"
+    },
+    {
+      "name": "packet_extra__commons_172793988.jpg",
+      "split": "train",
+      "sha256": "a4c54572d42fc75b1daa2ae7398338083e0762ed887b20e8fb474c3331514131",
+      "pixels": "0d91cf191ee225b842c3d41195aad6936956ab487bcc920d388572563c369fed",
+      "dhash": "61f8c6b4eef0e4e1",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_181111366.jpg",
+      "split": "val",
+      "sha256": "78efe6f465139667f37ab054e426c1589ed19925a43df057c8f5db080db21eda",
+      "pixels": "778adae4a2196fcb545dee18c76f9dcfe2a1f2f55fa9642ff102b5e100e39087",
+      "dhash": "01808088b03cd040",
+      "capture": "commons_artist_1886c56d8bef9863634c"
+    },
+    {
+      "name": "packet_extra__commons_144598161.jpg",
+      "split": "val",
+      "sha256": "ea72237aaf69f86a2384401ce37c0205000cd92f8d5f5b2fe1fc3e1c177f1767",
+      "pixels": "5027292d15293b54ae3a1f8df488e63352a508e33f9b074781b5f9d1e959543a",
+      "dhash": "54f8fc86c6e4f273",
+      "capture": "commons_artist_34b3c3c9c5b5c7295a87"
+    },
+    {
+      "name": "packet_extra__commons_123080240.jpg",
+      "split": "val",
+      "sha256": "d2c0da7831dda95e69c703e7bc774974f6cba727d40e8f1dd5b14d48b07b50ac",
+      "pixels": "b130773b43c17fceae3ab936c3e764629c3059c346b6d2e75dc0aabe145ed3ab",
+      "dhash": "808607261e4f0e37",
+      "capture": "commons_artist_81cfb00832bc5e50aed5"
+    },
+    {
+      "name": "packet_extra__commons_60726639.jpg",
+      "split": "train",
+      "sha256": "5702f6dfa5aa2f4d3dc81b22f1c5895720b592bbbc70374b434f62d14ac223a4",
+      "pixels": "b069fb7df69aadaf8a918ca2ee1b6fe67c4c32c84ba48c3438b6afcae56f3465",
+      "dhash": "e3f3f9f1e9fdf5e7",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_50271067.jpg",
+      "split": "train",
+      "sha256": "716004b41baeae9aa40f3587fd0e3346ee71f089b5f76ca0d0fae57cb536519c",
+      "pixels": "007f707001dba842f2a60051291d3300ca1b8921b6caa2b3365adc0d0536c077",
+      "dhash": "d3f6f4fcf4f4fcff",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_20315796.jpg",
+      "split": "train",
+      "sha256": "aeb725c8b4830420790f0e8ac6f88e4753c65f48a2e81538ae6ec6451334dd48",
+      "pixels": "7d717efa9c37419e581e6732faf5b320b830c99583dc4897c766fea65083944d",
+      "dhash": "0d3333716969715b",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_20315790.jpg",
+      "split": "train",
+      "sha256": "90ca36920b9efcb6ea9d8dcf8e30dda35ec62f8b54629b421e095093608ec638",
+      "pixels": "333cd015f8b04e0610cbb4f4d01576a3c4e9969624808723ed1489f36e0ce629",
+      "dhash": "3313333323293333",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_177847053.jpg",
+      "split": "val",
+      "sha256": "f0eb8c369fdb0127a2118657beee2772bb05fe1a24176dea2a560732264fb10c",
+      "pixels": "5e582d1d09917b51ff1ad327ea7ce8dcf57f48789550011480a6c0dce11e7601",
+      "dhash": "e78d2307318f9ef2",
+      "capture": "commons_artist_3cb598b4d9c9f21af3d8"
+    },
+    {
+      "name": "packet_extra__commons_154062323.jpg",
+      "split": "val",
+      "sha256": "b7546d30c919ceead839f5ef30d7dfe19ac46a72b5fb28cefd21d90af48e4c19",
+      "pixels": "5b5de72694ff14a60baa01efb7a933983836786f9d2db774c28b4d2487e4010a",
+      "dhash": "f199389c98a0c0c0",
+      "capture": "commons_artist_f93c4cbdba4c9e560f6b"
+    },
+    {
+      "name": "packet_extra__commons_53333535.jpg",
+      "split": "train",
+      "sha256": "2e2fef48dfac2a11df4cc5815a820ce0ce85882b42de80aeddf874df464ca69d",
+      "pixels": "930a0c427557cec8094c53ed5a143033dae277e418b4f05cee83f26cb2a8e5c3",
+      "dhash": "7f7fdcd4e0d979f6",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_20780147.jpg",
+      "split": "train",
+      "sha256": "dc6be8a489b1f5c861b52c96070d9b2410864de64702415245340788fc1d2e27",
+      "pixels": "93fee1ee6f0c6ac9ade5dd665141d23452b6af40d6e335ab1ec555ca13026332",
+      "dhash": "fce0e4bcb8fcdebf",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_20777998.jpg",
+      "split": "train",
+      "sha256": "47be2de30c499277cb828d4fa741f0ca1e4889d0c8582fa55b2a86b5d1709b02",
+      "pixels": "a7dd71ac3c89f17dbfb51562f14ea3ab777246bcd665ac20b574de9a20045e58",
+      "dhash": "8080c2c0c0c2c010",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_40093753.jpg",
+      "split": "train",
+      "sha256": "a65173269532c9e81de5164b930d3522e69c9becd80e48fa0fb8567b71a7757e",
+      "pixels": "54c3afdf1da919c704c0a35aa054503178d9908335d04126530110640fb361f7",
+      "dhash": "61333755575555ce",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_40941075.jpg",
+      "split": "train",
+      "sha256": "ba485cf4f0013cfa4b553b9bd6fd89989a12ab7f31ab2f9ae7e6c23883a4a4db",
+      "pixels": "ed6918b008f7b92aa76b4ca0c34d7513f37d3cab41699bf7932f45ae82240c4d",
+      "dhash": "fbd3fa680cc63018",
+      "capture": "commons_artist_8ea153438158a34a6a4c"
+    },
+    {
+      "name": "packet_extra__commons_26760369.jpg",
+      "split": "train",
+      "sha256": "e464cf424ced96da153a41546c3d2b060a09a70de645d8bb456eb46ad0efe144",
+      "pixels": "bbd42c7ae29c6b356cca780df023cb25f9ce07d19780683ecf1c45647fa58da2",
+      "dhash": "3722caf239c97933",
+      "capture": "commons_artist_d8efc2f81d5f95987d6a"
+    },
+    {
+      "name": "packet_extra__commons_75426106.jpg",
+      "split": "train",
+      "sha256": "0523f0d703abbc5d98d32e72883fde8928311a7bcf868cfc122350d9e00749a0",
+      "pixels": "0088bb99c704299ed518bcaa91b102a44806782de6bb00b3e4b412d3a33cb529",
+      "dhash": "83834543ad192d7a",
+      "capture": "commons_artist_b863a9a0bbdd0fa46dac"
+    },
+    {
+      "name": "packet_extra__commons_127812805.jpg",
+      "split": "val",
+      "sha256": "fd3aed3684465cfdd5651c6bff3bfb42577f0a19fb9e195b6760612d731a1a66",
+      "pixels": "04985d4755c2431cb1a0779c626984041beaaee90008a40f9893a02abac2fc95",
+      "dhash": "c296e6d6d6f6f76d",
+      "capture": "commons_artist_48b62e01f554faeeb52d"
+    },
+    {
+      "name": "packet_extra__commons_5781340.jpg",
+      "split": "val",
+      "sha256": "618d2a4e73c95d4f404bc2c1fadc528d5281089b9c919947b700e40bd04dc3f5",
+      "pixels": "4565b599213d1e9ea13537a278c3c6980a2653b2ed053a70c1c98267c95a6c54",
+      "dhash": "f7b2b3b3f376c6d2",
+      "capture": "commons_artist_e1d215229f79cbad886d"
+    },
+    {
+      "name": "packet_extra__commons_201481455.jpg",
+      "split": "train",
+      "sha256": "7736a5b3bffad87901276581831077aace16a7ff57b40dc945a58342f0d84a6f",
+      "pixels": "fb9bc7ea92a1fe4ab4c6422e063a3ecbc8daf8813551f57f3388127959fbb7cb",
+      "dhash": "0065032331716187",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_177853121.jpg",
+      "split": "val",
+      "sha256": "d562635db69f2a122d651d55ea241cdf6c903882054350e5789bc856b58dbaba",
+      "pixels": "9ebe3aa48b25a77683c1b8a7d1a8fbb50a519cc9cffc29a20850533b287f3f69",
+      "dhash": "fbf8a7a38386ce02",
+      "capture": "commons_artist_d5527eb98ef51a7c8702"
+    },
+    {
+      "name": "packet_extra__commons_55760343.jpg",
+      "split": "train",
+      "sha256": "b0673ef9cfd486470cdf329b7417d44ab99ad9e679265bdba0a775f89081ee71",
+      "pixels": "df4b615c807d27c21612e24bd0c59a43024e1753026565a9383dd13fbd445df5",
+      "dhash": "cacb8d89d1e2e2f2",
+      "capture": "commons_artist_901b90ff45d3d1dae009"
+    },
+    {
+      "name": "packet_extra__commons_75487067.jpg",
+      "split": "val",
+      "sha256": "4f6ee08d5d848e65416ec2021465d1f071d26d036e9ad0ed129f3568da3b5830",
+      "pixels": "34fe3a3f7a103af2998c6afcd362b6d4041521dc47d4aea7f7ef2b4bba741227",
+      "dhash": "e22243e10907e107",
+      "capture": "commons_artist_87995713a84e344f677f"
+    },
+    {
+      "name": "packet_extra__commons_92205122.jpg",
+      "split": "train",
+      "sha256": "fee37108095b95ee37ceea18acaa2ed00e9cb1180161ebfe0fedbd8ad87fd962",
+      "pixels": "e48151e554afcf00cfc28a6634981ac1a8079649e0d60dc1a00f1290f25a6275",
+      "dhash": "79e4266246a27278",
+      "capture": "commons_artist_6112d18a340e5730b277"
+    },
+    {
+      "name": "packet_extra__commons_71435229.jpg",
+      "split": "val",
+      "sha256": "0afde5f62c3501a5e50e99e821b1085718929685c4f01770b2c1d172a738b284",
+      "pixels": "713fce993a18963335db63923778c88d15c083e9a303a14b0c5458e5502f1e02",
+      "dhash": "0c171f2507930f07",
+      "capture": "commons_artist_b693c3f529567a09b6e6"
+    },
+    {
+      "name": "packet_extra__commons_161951902.jpg",
+      "split": "train",
+      "sha256": "dbed785f3276561637b9ff0caf950cd09cc099589650cdb9e199153ddb1ff049",
+      "pixels": "2abfff38d6786c942c4424869f0ba109f30c39b71a5fa0f1375cf20d16642d1c",
+      "dhash": "e4969c9c9c9c9cb0",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_85187007.jpg",
+      "split": "val",
+      "sha256": "398486879dc1a00034e516e9ba003449ec443469696c05740ccfbc27f0fb1f57",
+      "pixels": "68d477b079055041fee04ad6b22c55c46d8038c061caa68701e8913263a9dae3",
+      "dhash": "f8fccfc61e3ca740",
+      "capture": "commons_artist_8072e49ae9c2426f0394"
+    },
+    {
+      "name": "packet_extra__commons_85187012.jpg",
+      "split": "val",
+      "sha256": "896027aaa45913f905d9444a14de6f3c742e3c317c820321737862a63dd07ea6",
+      "pixels": "35fdfc291ff9384e26ccc2fb7e437712339572b9dc4a358c94af40252a5bed89",
+      "dhash": "072b190d0888d442",
+      "capture": "commons_artist_8072e49ae9c2426f0394"
+    },
+    {
+      "name": "packet_extra__commons_85187019.jpg",
+      "split": "val",
+      "sha256": "cc463687071ffebcc01e21d133424fafdbc46ef2946c9689722ee5b4cdda77be",
+      "pixels": "a5732e51615d2ec3a531a5e753a0c011ba0c7e9c58ff6900b2cf0bf0858d4c4a",
+      "dhash": "0f07500a03f1e9b1",
+      "capture": "commons_artist_8072e49ae9c2426f0394"
+    },
+    {
+      "name": "packet_extra__commons_164620595.jpg",
+      "split": "train",
+      "sha256": "fbfdc47ad7463e3dbf508da9d65c2e9692dd61366fbdaeea229d3e8052f7b4aa",
+      "pixels": "e81ff76e8153fc70bb77f7a8943889e56e7482116ccb2c1ec5c2eb41f9b41ab5",
+      "dhash": "c44d2b1333394faa",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_162720067.jpg",
+      "split": "train",
+      "sha256": "9ebe20bda2d1cde9cf81abcd2fe809d955e4531d62336ba3c8776ecfdbde565c",
+      "pixels": "34639f0c956b550b37ededa00046e3c6c99949f7a72abb456a96fc892e3e35bc",
+      "dhash": "f0e0707071701200",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_162395185.jpg",
+      "split": "train",
+      "sha256": "1dd9be65501c9a272bbb877ea06917f1db54af36e4ed05f353bceda818d01bed",
+      "pixels": "a489a7f343174b103d96f96b71c2c9cca7a1070ab37519f0ab5aea1719285306",
+      "dhash": "a496969a9e969610",
+      "capture": "commons_artist_ef7cb96e06964f8ea0b7"
+    },
+    {
+      "name": "packet_extra__commons_61290568.jpg",
+      "split": "val",
+      "sha256": "66c164c7dabf9d212bdedf826753bbd979839bf9df5c58198c66dbffae9a69f0",
+      "pixels": "a242d775b73eb79b666ba762b71d15b641edd2851e2a308cb4176b975d084c82",
+      "dhash": "c83e3e6ec264198b",
+      "capture": "commons_artist_34ddecab1e704e174880"
+    },
+    {
+      "name": "packet_extra__commons_58483831.jpg",
+      "split": "train",
+      "sha256": "ecb3e24ff2561408f89fd77f430f4daa07bdc568557251014123db3f2863af77",
+      "pixels": "876bf1da43937ebe5554b4d59b2ba5d0c2f745126e0d2e065ce8e211b870be4d",
+      "dhash": "a86c5551555d7ba6",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_58483830.jpg",
+      "split": "train",
+      "sha256": "7d8367a5cabc92e82136f0e66f98d1432dbb3ed350845f2e45626dd3d83350fb",
+      "pixels": "0818c919a2ac4bb92b6e0d2f3c1986ff4447944d77b2e0ae50e898736ccaaa0f",
+      "dhash": "3ce9d5c9f0350ba2",
+      "capture": "commons_artist_8bea60aeda250e24f3ea"
+    },
+    {
+      "name": "packet_extra__commons_103763114.jpg",
+      "split": "train",
+      "sha256": "50f85b5a6854a8039cd02158f512e6b7b4d1696d2a9f515f338d24d7f13df4cc",
+      "pixels": "f9a326581219035847ba5e2867a527aa48b9d87a61a8dca173671f7f60bc6346",
+      "dhash": "b6e92beeedcbbdbf",
+      "capture": "commons_artist_6112d18a340e5730b277"
+    },
+    {
+      "name": "packet_extra__commons_82689195.jpg",
+      "split": "train",
+      "sha256": "0a27a440b093991c0bcca2153ca115441c177f058b95dfda4870e4a313161c68",
+      "pixels": "2503dd49afe17d96709f3c7a5259983e4251c118006e9dead723f8a5681e705a",
+      "dhash": "076553c9657464c0",
+      "capture": "commons_artist_c1db21e7995a15328f6b"
+    },
+    {
+      "name": "packet_extra__commons_164965609.jpg",
+      "split": "val",
+      "sha256": "b49846197ca1b52e7d9d1cf743730f3b88e09c2958c7719ba85e56c28a636ae9",
+      "pixels": "0998249d9f104ceea3b17ffbf2335a9fa7d57567f872bb47e830fd7bbf37d38e",
+      "dhash": "0c1818d8f5911204",
+      "capture": "commons_artist_8ba1ead578b7783b6fa7"
+    },
+    {
+      "name": "packet_extra__commons_30863332.jpg",
+      "split": "train",
+      "sha256": "de233d9525ff7e309842c7eaa93ecd15cf3ee0ec785a05670df1fefd34d2cf29",
+      "pixels": "2628e561974494c9406c892e5c7b07b0e97c37f0f3fc57d29396e7b635759660",
+      "dhash": "1e6769193911111d",
+      "capture": "commons_artist_7f87e9c818e0f948e777"
+    },
+    {
+      "name": "packet_extra__commons_66511340.jpg",
+      "split": "train",
+      "sha256": "f47034c12867b02ca2480602e02db7280f8ce0d104a1d3adc67b98b6044cf576",
+      "pixels": "cfb77fa1301f6e5a7138995a3a661e879f33aad7ad82bdbeb7008e5af14bfae4",
+      "dhash": "9876d4d4dcb9e0c6",
+      "capture": "commons_artist_5112163b8e64cc5630eb"
+    }
+  ],
+  "limits": "dHash screening is a candidate detector, not proof that unknown related photos are absent. Authors grouped conservatively; no new cafeteria session test.",
+  "existing_dataset_fingerprint": "a8072e28cfc6089c21b40bc68d46a4818c7a611865822350389fad200f337876",
+  "legacy_inventory": "data/audits/v2_review_2026-10-12/structural/inventory.csv",
+  "legacy_inventory_sha256": "d767152a1aeb49f663bd544f07816750280bcb9dad62f83d5eacf616425009fe",
+  "review_manifest": "data/utensil-focus/packet-additions-v6.json",
+  "review_sha256": "fef73a0ab1b8687ec53c673a0a4c19782a2e4fd3696b985e24b9c9b761591992"
+}

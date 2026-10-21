@@ -1,0 +1,40 @@
+{
+  "overall": {
+    "precision": 0.8503115956017475,
+    "recall": 0.5076742154970696,
+    "AP50": 0.6534008384226575,
+    "AP50_95": 0.5069494249905129
+  },
+  "per_class": {
+    "plate": {
+      "precision": 0.920154645291381,
+      "recall": 0.5047219928964374,
+      "AP50": 0.7518163281551506,
+      "AP50_95": 0.570978707196906,
+      "objects": 137
+    },
+    "wrapper": {
+      "precision": 0.7436893636481497,
+      "recall": 0.5294117647058824,
+      "AP50": 0.6312035138985586,
+      "AP50_95": 0.5069341001774285,
+      "objects": 17
+    },
+    "bottle": {
+      "precision": 0.8870907778657118,
+      "recall": 0.4888888888888889,
+      "AP50": 0.5771826732142632,
+      "AP50_95": 0.4429354675972041,
+      "objects": 45
+    }
+  },
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/bottle-stability-accum64/train/weights/last.pt",
+  "weights_sha256": "7e065a6129f1331001e46f0839e71d765309050cdd01edc958acf30cc49fef30",
+  "dataset_fingerprint": "2f089e1570c5d6d0438760c55fe92dc6a641006c9f5d9fdd7a80e1dd3a080893",
+  "imgsz": 640,
+  "augment": false,
+  "target_min_ap50": 0.8,
+  "minimum_class_AP50": 0.5771826732142632,
+  "all_classes_meet_target": false,
+  "interpretation": "Reviewed public validation; no independent test or improvement claim."
+}

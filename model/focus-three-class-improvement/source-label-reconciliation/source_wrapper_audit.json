@@ -1,0 +1,1711 @@
+{
+  "trash_detection__train__000005_JPG.rf.457af049215a7141728329200f838bd8.jpg": {
+    "record": {
+      "name": "trash_detection__train__000005_JPG.rf.457af049215a7141728329200f838bd8.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000005_jpg",
+      "sha": "089f14307402b9dc6b86335b5e0bceba82a34d26876421c4f731f3cc9928287e",
+      "pixels": "7ef39f185a800d002ddef882ee2bbf66ff4bf554020ee34947fdf977e46b08aa",
+      "rows": [
+        "1 0.37173203 0.40563726 0.47385621 0.34007353",
+        "1 0.540625000 0.638281250 0.612500000 0.329687500"
+      ],
+      "verified_absence": false,
+      "review_status": "full_verified",
+      "review_reason": "No complete target review",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000005_JPG.rf.457af049215a7141728329200f838bd8.jpg",
+      "input_label_sha256": "47082c061859709b4f07f2973b2c9588a387235de809ad100a4513d902d9c79c",
+      "override_applied": true,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000005_JPG.rf.457af049215a7141728329200f838bd8.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.2990196078125,
+          0.36488970625,
+          0.8799019609375,
+          0.7886029406249999
+        ],
+        "max_wrapper_IoU": 0.626970093214455
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.18545751562499999,
+          0.56954656875,
+          0.34926470625,
+          0.8560049015625
+        ],
+        "max_wrapper_IoU": 0.12086993638727286
+      }
+    ]
+  },
+  "trash_detection__train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg": {
+    "record": {
+      "name": "trash_detection__train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000007_jpg",
+      "sha": "b6a7cbcdcdb95274e970ce300320894ba822ee0ed8cefd2682d40a856b9bec2e",
+      "pixels": "4b0f1e3f24e021ae5444b23398e179e62af2c2dd84e1d86ae846e4a029f624d6",
+      "rows": [
+        "1 0.69728916 0.51713102 0.49431057 0.31174699",
+        "1 0.355468750 0.446875000 0.382812500 0.293750000"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected_and_signed_off",
+      "review_reason": "Two snack packets on ground, blue/yellow on left was omitted; correction V2 override now has both class-8 wrapper boxes.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg",
+      "input_label_sha256": "1281c8c0e3296c3a72417053ebe4287087661c76f5ddb6945b4db78652836dd8",
+      "override_applied": true,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.164658634375,
+          0.29875752968749997,
+          0.642904953125,
+          0.5788780124999999
+        ],
+        "max_wrapper_IoU": 0.7623169098189536
+      }
+    ]
+  },
+  "trash_detection__train__000019_jpg.rf.91b7ec1f763f6b9fc99b8a3c5ef4d87f.jpg": {
+    "record": {
+      "name": "trash_detection__train__000019_jpg.rf.91b7ec1f763f6b9fc99b8a3c5ef4d87f.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000019_jpg",
+      "sha": "2bb04a99ff2228a4777fb2a5643fd1477d2fc2ae52311c98c3cf2fb875ac994f",
+      "pixels": "f04e93c1856db47e971b72668c78ffa7672a8f5ec5617ace1acfeed910161232",
+      "rows": [
+        "2 0.44042838 0.47213855 0.19812584 0.10203313"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One blue-capped crushed plastic drink bottle on grass; label covers visible bottle.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000019_jpg.rf.91b7ec1f763f6b9fc99b8a3c5ef4d87f.jpg",
+      "input_label_sha256": "f364a8862436e766ee03230d19e9dd2f15893f3ea744fc6b49a328b728d32d0f",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000019_jpg.rf.91b7ec1f763f6b9fc99b8a3c5ef4d87f.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.9407630515625,
+          0.0596762046875,
+          0.9993306562500001,
+          0.1391189765625
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000034_jpg.rf.2caa61f4d36835a34cad2e49e9c90b1f.jpg": {
+    "record": {
+      "name": "trash_detection__train__000034_jpg.rf.2caa61f4d36835a34cad2e49e9c90b1f.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000034_jpg",
+      "sha": "9657a5ef367ea54838e498f20b701d6cdfda1a312564c7e70fd66d1373b604de",
+      "pixels": "7f58a99e6ccc895130590d6dc98013d7afeec0d5f60ba1477f1929059ec53d40",
+      "rows": [
+        "2 0.39909639 0.18665286 0.18975904 0.09770331",
+        "1 0.52031250 0.48515625 0.06875000 0.06093750"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected",
+      "review_reason": "Added clearly visible orange flexible food wrapper on bank; retained plastic beverage bottle.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000034_jpg.rf.2caa61f4d36835a34cad2e49e9c90b1f.jpg",
+      "input_label_sha256": "a48b484e60fe652e1f80fa1cec360c8ba8c1ea49f1583f8f9fb7a24df0718a04",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000034_jpg.rf.2caa61f4d36835a34cad2e49e9c90b1f.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.484939759375,
+          0.45858433749999994,
+          0.5555555562500001,
+          0.5210843374999999
+        ],
+        "max_wrapper_IoU": 0.8376874083561631
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.4601740296875,
+          0.1276355421875,
+          0.6676706828125,
+          0.23305722968749998
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.75066934375,
+          0.0227786140625,
+          0.998326640625,
+          0.11972891562500002
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__train__000037_JPG.rf.7ce5844905e941f713561bf61c19df09.jpg": {
+    "record": {
+      "name": "trash_detection__train__000037_JPG.rf.7ce5844905e941f713561bf61c19df09.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000037_jpg",
+      "sha": "0aec72efc38c26851a039e7c2c9ec19e726948dd4af8688a30d5159ed07ee86c",
+      "pixels": "7cd36cb3a1a473f5755bc90111730006711bc905bbcad52359dc0779ba0d6b1c",
+      "rows": [
+        "2 0.37938262 0.56986789 0.08574695 0.07266260",
+        "2 0.66558689 0.42123984 0.09946646 0.12601626",
+        "1 0.69626524 0.10086382 0.05640244 0.04014228",
+        "1 0.90320122 0.22230691 0.03353659 0.04827236"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Two beverage bottles and two separate snack wrappers among leaves, four matching original boxes.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000037_JPG.rf.7ce5844905e941f713561bf61c19df09.jpg",
+      "input_label_sha256": "82b8c8c9480f5716937013ffc2e3f8315528439068bd1176c81a69e4703d43c1",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000037_JPG.rf.7ce5844905e941f713561bf61c19df09.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.8262195125,
+          0.1626016265625,
+          0.855945121875,
+          0.21036585312499997
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__train__000037_jpg.rf.38cb5de90e63fee1eadd43d9a10b3e87.jpg": {
+    "record": {
+      "name": "trash_detection__train__000037_jpg.rf.38cb5de90e63fee1eadd43d9a10b3e87.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000037_jpg",
+      "sha": "38ffc0847cf334e0c7a04c459f33a1230d10c7f9df1828ad0ef0b6375beb72d4",
+      "pixels": "f4f02c858e6682aa4417ab2d74c3959d67eddce7d97f165a479e55283dad3671",
+      "rows": [
+        "2 0.49652778 0.53869048 0.33961640 0.30803571"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Single large clear crushed plastic bottle on grass, full silhouette boxed.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000037_jpg.rf.38cb5de90e63fee1eadd43d9a10b3e87.jpg",
+      "input_label_sha256": "9bb8e00c7d690dfa550043e55a86b677f24683dfd2a1d4f9f1c429a50b5758dc",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000037_jpg.rf.38cb5de90e63fee1eadd43d9a10b3e87.txt",
+    "boxes": [
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.36375661406250004,
+          0.6939484125,
+          0.4513888890625,
+          0.7800099203124999
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000044_JPG.rf.ea9b559d21bb89a6b77d7ab1ffdbe06f.jpg": {
+    "record": {
+      "name": "trash_detection__train__000044_JPG.rf.ea9b559d21bb89a6b77d7ab1ffdbe06f.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000044_jpg",
+      "sha": "3933ea982ea419c0f73695c01dae5f0496821b369c71d036a5e2d44f44eac8f7",
+      "pixels": "00179e3fcbb77b0476a148fbabdda6427ffb908a066aa9a2841f83d5c290d1f6",
+      "rows": [
+        "2 0.43566176 0.39598652 0.18750000 0.06709559"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Crushed clear bottle near uprooted tree trunk is the only visible three-class target and matches source box.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000044_JPG.rf.ea9b559d21bb89a6b77d7ab1ffdbe06f.jpg",
+      "input_label_sha256": "3b967923e76865ba70fc28c2502701c9f8510b2dab8a601774176bfd9638c703",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000044_JPG.rf.ea9b559d21bb89a6b77d7ab1ffdbe06f.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.3366013078125,
+          0.3802083328125,
+          0.3811274515625,
+          0.4203431375
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.0016339875000000001,
+          0.7775735296875,
+          0.2169117640625,
+          0.9181985296875
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000048_jpg.rf.21cf89dfd520b7cb90b5bfe3336aa7f7.jpg": {
+    "record": {
+      "name": "trash_detection__train__000048_jpg.rf.21cf89dfd520b7cb90b5bfe3336aa7f7.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000048_jpg",
+      "sha": "34bf2e521c79c05b86fea548ecf8a394d6d74d6c2b83333c07b3ab29031c90c6",
+      "pixels": "1d1383b1adf2fea02c21de7facbc42ec62bd7e9b3490d1577a814c86f12bfe84",
+      "rows": [
+        "2 0.51068884 0.43459916 0.61520190 0.86919831"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Large partially cropped clear beverage bottle in close-up, cap and entire visible body correctly bounded.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000048_jpg.rf.21cf89dfd520b7cb90b5bfe3336aa7f7.jpg",
+      "input_label_sha256": "563e505c7f0529aad1154a15f4afcbfd59f5670bcd72f5fbf578947589a02cbd",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000048_jpg.rf.21cf89dfd520b7cb90b5bfe3336aa7f7.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.38004750625,
+          0.5189873421875,
+          0.7363420421875,
+          0.9978902953125001
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000056_jpg.rf.8f2b9cd06892aba10b4c45d39b811e98.jpg": {
+    "record": {
+      "name": "trash_detection__train__000056_jpg.rf.8f2b9cd06892aba10b4c45d39b811e98.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000056_jpg",
+      "sha": "4f2a815d950476c70ab224e4233684fbca2b5db040426a4351738eaa1fce11a8",
+      "pixels": "c39e49d46a6a13b67ac4d2b3f78eb46aac5f852af45ec257e4d37eaa1cacb8cf",
+      "rows": [
+        "2 0.44345238 0.22854663 0.41997355 0.21999008",
+        "1 0.46875000 0.71718750 0.22656250 0.18437500",
+        "1 0.35781250 0.88281250 0.10312500 0.17812500"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected",
+      "review_reason": "Added two omitted flexible printed food packages below plastic bottle.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000056_jpg.rf.8f2b9cd06892aba10b4c45d39b811e98.jpg",
+      "input_label_sha256": "0b2b3310595e90b0973867676a3be4df81419a95582473004815dab420bc869b",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000056_jpg.rf.8f2b9cd06892aba10b4c45d39b811e98.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.3640873015625,
+          0.6326884921875,
+          0.5796957671875,
+          0.784226190625
+        ],
+        "max_wrapper_IoU": 0.7821614985370011
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.3144841265625,
+          0.8060515875,
+          0.40211640156249995,
+          0.9637896828124999
+        ],
+        "max_wrapper_IoU": 0.7525092451841999
+      }
+    ]
+  },
+  "trash_detection__train__000057_jpg.rf.87ed1455d9cee55fb697118d664f83f7.jpg": {
+    "record": {
+      "name": "trash_detection__train__000057_jpg.rf.87ed1455d9cee55fb697118d664f83f7.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000057_jpg",
+      "sha": "d5bf01a03eab3ba47da87ae8547359c83f4afd7f351ef1c85656335bcc7003a6",
+      "pixels": "6b9f8dc6b599f34ed19ddf59570c84fac5b6897c8052d2f5377236652326624a",
+      "rows": [
+        "1 0.55192308 0.57680289 0.16282051 0.10504808",
+        "2 0.511438000 0.104575000 0.194444000 0.071895000"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected_three_class_only",
+      "review_reason": "Original central snack wrapper still valid. Distinct flattened drink bottle in grass near upper center was omitted; added one scoped class-9 bottle.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000057_jpg.rf.87ed1455d9cee55fb697118d664f83f7.jpg",
+      "input_label_sha256": "efc258102d2bd24226d42a1a23570c97c26d9d27c94bcf33f5ce8343893dcb33",
+      "override_applied": true,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000057_jpg.rf.87ed1455d9cee55fb697118d664f83f7.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.722435896875,
+          0.29254807656250004,
+          0.8022435890624999,
+          0.334134615625
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.271794871875,
+          0.90985576875,
+          0.3541666671875,
+          0.953846153125
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.43044871718750005,
+          0.9170673078125,
+          0.458974359375,
+          0.9461538468749999
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__train__000062_jpg.rf.226c7bc5d39e99df1e575e5896b62c9c.jpg": {
+    "record": {
+      "name": "trash_detection__train__000062_jpg.rf.226c7bc5d39e99df1e575e5896b62c9c.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000062_jpg",
+      "sha": "113fbf04bb175b75ea6f97415482a6374584426230379ee97aa3cb3ca46f06cb",
+      "pixels": "83866c986279e938cfcf172936a85b7d3b1f12e3f520a3c2e6ddbc80a3b81e47",
+      "rows": [
+        "2 0.38378906 0.10904948 0.15820312 0.06054688",
+        "1 0.68750000 0.81953125 0.28750000 0.36093750"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected",
+      "review_reason": "Added omitted branded flexible bread/food bag at lower right; retained beverage bottle.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000062_jpg.rf.226c7bc5d39e99df1e575e5896b62c9c.jpg",
+      "input_label_sha256": "27518bb43addd9ab5f2e4a15a1a28e569f5006eed1ddd33b6b393df8932205fc",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000062_jpg.rf.226c7bc5d39e99df1e575e5896b62c9c.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.544921875,
+          0.6295572921875,
+          0.8349609375,
+          0.9986979171874999
+        ],
+        "max_wrapper_IoU": 0.9546892500430403
+      }
+    ]
+  },
+  "trash_detection__train__000070_jpg.rf.6e398d00faf9d54fe95814d1023fd052.jpg": {
+    "record": {
+      "name": "trash_detection__train__000070_jpg.rf.6e398d00faf9d54fe95814d1023fd052.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000070_jpg",
+      "sha": "e84e3f7ec09922f1f6dde8c9588af430140a53d0429ce81fc85ea5ada0de7a9d",
+      "pixels": "7589a3cde07f193bb19422cb459e24057ed7f04587cfdb52e312638b68462c46",
+      "rows": [
+        "2 0.53563596 0.34687500 0.16995614 0.03525000"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One far-distance clear plastic bottle in dry field, existing source box aligns.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000070_jpg.rf.6e398d00faf9d54fe95814d1023fd052.jpg",
+      "input_label_sha256": "e2fb64d3570afa7777982b2fc57b123c1f390938eed887352bbd6e8b5d6b54b7",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000070_jpg.rf.6e398d00faf9d54fe95814d1023fd052.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.0575657890625,
+          0.34825,
+          0.06962719375000001,
+          0.35875
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000071_jpg.rf.4ee8c06b5ac736bc10deb1b48be779d6.jpg": {
+    "record": {
+      "name": "trash_detection__train__000071_jpg.rf.4ee8c06b5ac736bc10deb1b48be779d6.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000071_jpg",
+      "sha": "713051724797c2f697dde50b9c8c5383781fde85f4cc39666371ebbfcebd4762",
+      "pixels": "a0cf03affec689a771752b453414e2a6609d6009a7c3237893753cc36a403f61",
+      "rows": [
+        "2 0.64473684 0.67887500 0.10197368 0.12275000"
+      ],
+      "verified_absence": false,
+      "review_status": "verified_unchanged",
+      "review_reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000071_jpg.rf.4ee8c06b5ac736bc10deb1b48be779d6.jpg",
+      "input_label_sha256": "e8cb1d42bfe8bc52e9565a4cc47337ebfd44d1f00b9080ad0a151a3ba834f620",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000071_jpg.rf.4ee8c06b5ac736bc10deb1b48be779d6.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.86951754375,
+          0.61175,
+          0.9331140343750001,
+          0.66025
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.jpg": {
+    "record": {
+      "name": "trash_detection__train__000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000079_jpg",
+      "sha": "eb005f2026f7542af0b15f802a9c6c832331051972f1b4e38c94ec198b443f1b",
+      "pixels": "9a80a38290e9ddeef48da9eacc073e9938a543c780c9c68551a0c88d0d6f5849",
+      "rows": [],
+      "verified_absence": true,
+      "review_status": "corrected",
+      "review_reason": "Removed both glass beverage bottles; cartons and carrier bag are outside the three target classes.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.jpg",
+      "input_label_sha256": "8e6ef279eb126bcf06536119368c4b3c8910bf0d38b4fa963434adfcc8d72c01",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.23692810468749997,
+          0.4595588234375,
+          0.37867647031249996,
+          0.5487132359375
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.49223856250000003,
+          0.499693628125,
+          0.5510620921875,
+          0.528186275
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000090_jpg.rf.2f13d0b8f4b67c6280c58d7a352b8ac3.jpg": {
+    "record": {
+      "name": "trash_detection__train__000090_jpg.rf.2f13d0b8f4b67c6280c58d7a352b8ac3.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000090_jpg",
+      "sha": "d17a739261f640ca014fd0d4d06743b69ba6f3996b3f9bc9aceb7faf532cf1f6",
+      "pixels": "123178a2cad4fb2c7713b27f40bb34e1969e698886cab417f63de6ab7e84ce99",
+      "rows": [
+        "2 0.60444079 0.66900000 0.29331140 0.10450000"
+      ],
+      "verified_absence": false,
+      "review_status": "verified_unchanged",
+      "review_reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000090_jpg.rf.2f13d0b8f4b67c6280c58d7a352b8ac3.jpg",
+      "input_label_sha256": "02daec3e095d209d4322775c1841d36bb2073a9ae5f1fda019f1bb2f7a5430eb",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000090_jpg.rf.2f13d0b8f4b67c6280c58d7a352b8ac3.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.4325657890625,
+          0.36175,
+          0.5877192984375,
+          0.4265
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000090_jpg.rf.73d3f6dab3183f7c267d3f62ab8a22c1.jpg": {
+    "record": {
+      "name": "trash_detection__train__000090_jpg.rf.73d3f6dab3183f7c267d3f62ab8a22c1.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000090_jpg",
+      "sha": "2c2f8b021d65b54a5718bd87b30726edbad0f741c5365f4581e34de56d83d4d2",
+      "pixels": "d01eb57dd30667c3f037377f170ef3845570c04b52c54efb9243741f2a12574c",
+      "rows": [
+        "2 0.82620192 0.54054487 0.11153846 0.23429487",
+        "1 0.13593750 0.35703125 0.16250000 0.22968750",
+        "1 0.52031250 0.73906250 0.19062500 0.25312500"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One clear branded plastic beverage bottle on right and two distinct snack wrappers on left and lower center, three target boxes match.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000090_jpg.rf.73d3f6dab3183f7c267d3f62ab8a22c1.jpg",
+      "input_label_sha256": "ab394b8e484ddf606538a36cddcbb1068c4649aba0acb0d5ee63d644fa4ed8fb",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000090_jpg.rf.73d3f6dab3183f7c267d3f62ab8a22c1.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.058413460937499995,
+          0.25512820468749997,
+          0.211778846875,
+          0.4628205125
+        ],
+        "max_wrapper_IoU": 0.8534086448604932
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.42764423125000006,
+          0.613141025,
+          0.6081730765625,
+          0.858653846875
+        ],
+        "max_wrapper_IoU": 0.918556522006221
+      }
+    ]
+  },
+  "trash_detection__train__000093_jpg.rf.ac2788d0e3de06b1e6a6ac41d34054e7.jpg": {
+    "record": {
+      "name": "trash_detection__train__000093_jpg.rf.ac2788d0e3de06b1e6a6ac41d34054e7.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000093_jpg",
+      "sha": "de4045942eb729b4c3ff05ea4c51a723e0f561ad8ca89179d4bcd08e1d8210d3",
+      "pixels": "a09887dca3b385e1e5b2c7a96345aa63391b72a167c1e1b5ed661647d93552d6",
+      "rows": [
+        "2 0.50480769 0.84102564 0.48942308 0.23653846"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One large flattened blue-label Aquafina bottle beside water and grass, original bbox spans full object.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000093_jpg.rf.ac2788d0e3de06b1e6a6ac41d34054e7.jpg",
+      "input_label_sha256": "391f5305354fe5cf35a5d16ad0a25b07b07a9487f4ad2487c2b51a5476eb1a73",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000093_jpg.rf.ac2788d0e3de06b1e6a6ac41d34054e7.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.16201923125,
+          0.8673076921874999,
+          0.3884615390625,
+          0.9794871796875
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000095_jpg.rf.17f175b1c6dbdc07b142b0a81a4d7461.jpg": {
+    "record": {
+      "name": "trash_detection__train__000095_jpg.rf.17f175b1c6dbdc07b142b0a81a4d7461.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000095_jpg",
+      "sha": "a9a75afbb2065e94571265767fd7b1892c7bf44fdec9f806d833363d6aa680db",
+      "pixels": "0f199dea335ce822c5b25ae711a73140658e8c14ce2f930bad9b5a8953fe5122",
+      "rows": [
+        "2 0.61713521 0.53228539 0.12315930 0.18279367"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One small clear drink bottle with red cap in weeded road divider; source bbox fits.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000095_jpg.rf.17f175b1c6dbdc07b142b0a81a4d7461.jpg",
+      "input_label_sha256": "537da8015d90c9ea64bfe81bf442274841b389625e41ad429491e949b1391b5e",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000095_jpg.rf.17f175b1c6dbdc07b142b0a81a4d7461.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.699464525,
+          0.5195783125,
+          0.8045515390625001,
+          0.5378388546874999
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg": {
+    "record": {
+      "name": "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000097_jpg",
+      "sha": "0d3037fb1ce98359a761b57fb8b8543f0b0d1a5adef43f7c316f58e687829f72",
+      "pixels": "d512eeffb5e529fd42d99672462acbd329e1e2a8451bad9cb0adea482433c49e",
+      "rows": [
+        "2 0.45760870 0.49384058 0.12717391 0.07681159",
+        "2 0.49619565 0.56829710 0.13913044 0.08224638",
+        "1 0.54850543 0.45525362 0.05461957 0.08876812"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Two separately labeled plastic bottles and one distinct blue food wrapper in shallow water/leaf litter; three target boxes correspond.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg",
+      "input_label_sha256": "28564e8e1bf1696b62db00827ef0c6c61dc10e01663097250f9bd206dcc7aa59",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.56141304375,
+          0.54891304375,
+          0.5855978265624999,
+          0.5927536234375
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__train__000104_JPG.rf.34c828534c535f976e2765ac029f054d.jpg": {
+    "record": {
+      "name": "trash_detection__train__000104_JPG.rf.34c828534c535f976e2765ac029f054d.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000104_jpg",
+      "sha": "bf745ea1c25f6fff9750be6df6ae8eef1b322a6f70af24b4ea6393a59e065bb7",
+      "pixels": "673ebb97444bec81d40afd31cf4eaa4630d15a5fc10bd83ef8595de5c55e8383",
+      "rows": [
+        "2 0.33333333 0.36718750 0.25735294 0.17800245"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One crushed clear plastic bottle on white table, source bbox fits; adjacent foil lump is not snack wrapper.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__train__000104_JPG.rf.34c828534c535f976e2765ac029f054d.jpg",
+      "input_label_sha256": "172f8b25d412d560107a945e97f6a78207e9248acdff147effc801b0370f1db5",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/train/labels/000104_JPG.rf.34c828534c535f976e2765ac029f054d.txt",
+    "boxes": [
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.382352940625,
+          0.4696691171875,
+          0.5498366015625,
+          0.634803921875
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__valid__000008_jpg.rf.e477a13a8700a9a87d54aa441ffe486f.jpg": {
+    "record": {
+      "name": "trash_detection__valid__000008_jpg.rf.e477a13a8700a9a87d54aa441ffe486f.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000008_jpg",
+      "sha": "5b72455eae324c52d741c7e3dfd058cde80ebad06d9e1a180c4867a1bfd7dac3",
+      "pixels": "9542db0cf865c7b84d293666b8187aa709ed3b9fbab174d0c918c9bfb5ddad8e",
+      "rows": [
+        "2 0.15706699 0.41299020 0.24632353 0.08149510",
+        "2 0.03186275 0.36366422 0.06372549 0.03553922",
+        "2 0.02614379 0.60585172 0.05147059 0.25949755",
+        "2 0.58671875 0.44687500 0.25156250 0.15312500"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected",
+      "review_reason": "Added omitted plastic milk beverage jug at center-right; retained three visible plastic bottle boxes.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__valid__000008_jpg.rf.e477a13a8700a9a87d54aa441ffe486f.jpg",
+      "input_label_sha256": "bd161828bf6f33cffb996e83b223f6c2884297d1ef8795c3ff46804d87e7deb7",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/valid/labels/000008_jpg.rf.e477a13a8700a9a87d54aa441ffe486f.txt",
+    "boxes": [
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.23856209218750002,
+          0.4375,
+          0.270016340625,
+          0.45710784374999996
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg": {
+    "record": {
+      "name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000015_jpg",
+      "sha": "ea74e468152e68c59b5c116175c06d7c25c48492edb5fce39dff58b3c6f83fee",
+      "pixels": "4bd10887d5a3bc51eb35f20e9ba75546274501b0b203826f15bdb11b85c0f93e",
+      "rows": [
+        "1 0.60149642 0.56198145 0.12556929 0.09126403"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One small crumpled red snack wrapper on ground beneath blue metal fence; source box covers visible packet.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+      "input_label_sha256": "9231eb0f7ac89901fd31b726d66048d3f147be709ec6fabc73293a5126144d70",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/valid/labels/000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8757319453125,
+          0.667154709375,
+          1.0,
+          0.8096632500000001
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__valid__000049_JPG.rf.fc95994296930d055db44a7ee890027d.jpg": {
+    "record": {
+      "name": "trash_detection__valid__000049_JPG.rf.fc95994296930d055db44a7ee890027d.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000049_jpg",
+      "sha": "2a747901443c490b5cad0d16d5ede6dd48ffdfa2e289616c4c25c8b2315d846c",
+      "pixels": "5b94db6594d700988b29d58bf679dcf601f261b2bfb1b008b329cbedacbe92fb",
+      "rows": [
+        "2 0.29166667 0.56250000 0.08169935 0.15134804"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One clear crumpled red-label plastic soda bottle near wooden planks; source box correct.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__valid__000049_JPG.rf.fc95994296930d055db44a7ee890027d.jpg",
+      "input_label_sha256": "5b0d34e6e8d4fa6b7eb50a605f1a51473b8a9939567ed6970ff4581f7b15ba1a",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/valid/labels/000049_JPG.rf.fc95994296930d055db44a7ee890027d.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.7724673203125,
+          0.5401348046875001,
+          0.8370098046875001,
+          0.593443628125
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.215686275,
+          0.5955882359375,
+          0.26960784375,
+          0.6283700984375
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.2634803921875,
+          0.7153799015625,
+          0.3165849671875,
+          0.7463235296875
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.0,
+          0.2594975484375,
+          0.045343137500000005,
+          0.2833946078125
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__valid__000062_JPG.rf.c43c0fd28133e29f9e7cba2953c55ae0.jpg": {
+    "record": {
+      "name": "trash_detection__valid__000062_JPG.rf.c43c0fd28133e29f9e7cba2953c55ae0.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000062_jpg",
+      "sha": "8362a4e0ab51a5533f84de3cd4a6ccbf7873114b53df4de4624d94cd17baaa5a",
+      "pixels": "e2b0eaeb9cb8075de0578e973d753ddb6751f640d9b60b1ceff98963f9a8d299",
+      "rows": [
+        "2 0.43892974 0.37270221 0.34109477 0.11060049",
+        "1 0.083593750 0.665625000 0.167187500 0.065625000",
+        "1 0.056250000 0.836718750 0.112500000 0.092187500"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected_three_class_only",
+      "review_reason": "Retained original white/blue plastic drink bottle and added two missing blue food/snack foil wrappers in left-edge brush through checksum-locked scoped V2 append; other litter types not audited.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__valid__000062_JPG.rf.c43c0fd28133e29f9e7cba2953c55ae0.jpg",
+      "input_label_sha256": "3dadb47ffa19dd4d45c86076e954166b7cfeb42a4130a7d74bd30cf2dc7d5c65",
+      "override_applied": true,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/valid/labels/000062_JPG.rf.c43c0fd28133e29f9e7cba2953c55ae0.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.043300653125,
+          0.6541053921875,
+          0.1797385625,
+          0.8823529406249999
+        ],
+        "max_wrapper_IoU": 0.1805055524403886
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.8259803921875,
+          0.12653186249999998,
+          0.8349673203125001,
+          0.13511029375
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.8018790843750001,
+          0.1240808828125,
+          0.8275578171875001,
+          0.1384803921875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.2140522875,
+          0.45557597968749997,
+          0.5342796843750001,
+          0.606617646875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.3954248359375,
+          0.5932486625,
+          0.57271241875,
+          0.8927696078125
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.2553104578125,
+          0.6841299015625,
+          0.419934640625,
+          0.825367646875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.777777778125,
+          0.0150122546875,
+          0.8346949890625,
+          0.05392156875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8088235296875,
+          0.0389489875,
+          0.8513071890624999,
+          0.054227940625000005
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8014705875000001,
+          0.054227940625000005,
+          0.84150326875,
+          0.0603553921875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.8619281046875,
+          0.5462622546875,
+          0.8713235296875,
+          0.55590533125
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.8390522875,
+          0.5484068625,
+          0.86261940625,
+          0.5715762875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.8235294124999999,
+          0.549938725,
+          0.8545751640624999,
+          0.5729166671875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.44893790781250004,
+          0.8213848046875001,
+          0.4587418296875,
+          0.8299632359375
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.43504902031250003,
+          0.823835784375,
+          0.45751634062499996,
+          0.8482810890625
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.44056372499999996,
+          0.8452818625,
+          0.453431371875,
+          0.8572303921875
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__valid__000078_JPG.rf.abdd6c3784e1de4d0d6a814e78b3e70b.jpg": {
+    "record": {
+      "name": "trash_detection__valid__000078_JPG.rf.abdd6c3784e1de4d0d6a814e78b3e70b.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000078_jpg",
+      "sha": "922fcbbbf7e81f7ac31ccf82deb50f3d9b5013a1de36792f0f433f7bd88bdee9",
+      "pixels": "22aa6b5d867e3b294788c50c7a43b5c796922ad53d4852210f08b0c4f3aa2e3f",
+      "rows": [
+        "1 0.71364379 0.56464461 0.09313725 0.06678922",
+        "2 0.53451797 0.62193627 0.05923203 0.13541667"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Small food snack wrapper to right of large garbage bag and clear plastic bottle lower center both annotated. Large yellow bag is not a snack wrapper.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__valid__000078_JPG.rf.abdd6c3784e1de4d0d6a814e78b3e70b.jpg",
+      "input_label_sha256": "7f6ba1e25d38975f6f5bc8e978dbe3d94624d1a68f80b62e0584b4815c9849db",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/valid/labels/000078_JPG.rf.abdd6c3784e1de4d0d6a814e78b3e70b.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.7369281046875,
+          0.312193628125,
+          0.7888071890624999,
+          0.33976715625
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__valid__000084_jpg.rf.9871f2da402a82fa1c669da01d4b3726.jpg": {
+    "record": {
+      "name": "trash_detection__valid__000084_jpg.rf.9871f2da402a82fa1c669da01d4b3726.jpg",
+      "split": "train",
+      "original_split": "train",
+      "group": "trash_detection__000084_jpg",
+      "sha": "8b495311a38fc6e64e4f1fa8e00c244fd5aefe50363db31bb6d6acb0f55833c2",
+      "pixels": "cf9d9867971c3c575df027c66a62d653309a5fbe530de2b96b1ce01d8cad1c1a",
+      "rows": [
+        "2 0.61262019 0.79903846 0.05985577 0.13397436"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One tiny partially covered white plastic bottle in grass at river edge; source bbox matches bottle, bags on bank excluded.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/train/trash_detection__valid__000084_jpg.rf.9871f2da402a82fa1c669da01d4b3726.jpg",
+      "input_label_sha256": "7c262b1a97a14351d80b087a88fc0f8b0ddffea76b48ebcc39f75c1f23b9df25",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": false,
+      "frozen_train": true
+    },
+    "source_label": "data/raw/trash/valid/labels/000084_jpg.rf.9871f2da402a82fa1c669da01d4b3726.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.6105769234375,
+          0.527564103125,
+          0.6834134609375,
+          0.6166666671875001
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8206730765625,
+          0.2929487171875,
+          0.85576923125,
+          0.349358975
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8759615390625,
+          0.33942307656250004,
+          0.91923076875,
+          0.3637820515625
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8052884609375001,
+          0.89326923125,
+          0.9199519234375,
+          0.9990384609375
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000002_jpg.rf.bf205561a718dfe8856abaeb7ed1179c.jpg": {
+    "record": {
+      "name": "trash_detection__train__000002_jpg.rf.bf205561a718dfe8856abaeb7ed1179c.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000002_jpg",
+      "sha": "49a7c72c3c483e0a3cf213368860440d00583d7af3f7e171a32165c44e5c0723",
+      "pixels": "8f508abac156a417a9b81c382778b2ba30b7f994d51d367daeb93a6ebcf61f0e",
+      "rows": [
+        "2 0.35675000 0.59978070 0.10150000 0.10964912"
+      ],
+      "verified_absence": false,
+      "review_status": "verified_unchanged",
+      "review_reason": "Small green drink bottle in grass; correct source box",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000002_jpg.rf.bf205561a718dfe8856abaeb7ed1179c.jpg",
+      "input_label_sha256": "8faf873b4b1abe7deaff873e9f8bc0683beb6615213060c48e61f794586ab2e9",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000002_jpg.rf.bf205561a718dfe8856abaeb7ed1179c.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.0017500000000000003,
+          0.377741228125,
+          0.027250000000000003,
+          0.42269736875
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg": {
+    "record": {
+      "name": "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000003_jpg",
+      "sha": "b5ea609359bfa84650536b1207d6db350411e070973278dfe7c7959315f39e50",
+      "pixels": "29540cb0a8a65ab3175b41c3957a011d42ebbd1f033940e0f3723049be6fb209",
+      "rows": [
+        "2 0.16000000 0.25548246 0.06200000 0.09758772",
+        "2 0.19687500 0.22395833 0.06125000 0.10471491",
+        "2 0.752734375 0.199218750 0.061718750 0.173437500"
+      ],
+      "verified_absence": false,
+      "review_status": "full_verified",
+      "review_reason": "No complete target review",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+      "input_label_sha256": "9692d76fd9402140bfa287b93ded174ec3a904938686f767f38f3d6b487a4937",
+      "override_applied": true,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.00025,
+          0.13103070156250002,
+          0.02475,
+          0.1770833328125
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.122,
+          0.186403509375,
+          0.1565,
+          0.23464912343750002
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.09975,
+          0.085526315625,
+          0.11925,
+          0.12390350937500001
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.18725,
+          0.3327850875,
+          0.20375000000000001,
+          0.370614034375
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.5105000000000001,
+          0.320723684375,
+          0.5822499999999999,
+          0.40021929843750004
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.7255,
+          0.1282894734375,
+          0.7755,
+          0.2439692984375
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg": {
+    "record": {
+      "name": "trash_detection__train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000009_jpg",
+      "sha": "f2ed62aa1c8dd4005bed289875c91a74f5d9fc8f7e710510af944d43ec79f392",
+      "pixels": "25b78bb7090c85273ac5294e7f78f030ec959ed0601ea506e96543d847ccbf7a",
+      "rows": [
+        "2 0.07475962 0.68317308 0.09278846 0.35352564"
+      ],
+      "verified_absence": false,
+      "review_status": "verified_unchanged",
+      "review_reason": "Native image reviewed for all three target classes; existing boxes match visible eligible objects, with no clear omissions.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg",
+      "input_label_sha256": "dc298b1cce76e9fea9228a16ec8f52f4e7c2ba84c0fe5ba16826826e90f7b594",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.47355769218750005,
+          0.01891025625,
+          0.6165865390625,
+          0.18910256406249998
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.8019230765625001,
+          0.000641025,
+          0.885096153125,
+          0.0483974359375
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.644471153125,
+          0.25288461562500003,
+          0.709134615625,
+          0.30256410312500004
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000020_JPG.rf.43fa54851aa7cb82b4062e2b73a800f0.jpg": {
+    "record": {
+      "name": "trash_detection__train__000020_JPG.rf.43fa54851aa7cb82b4062e2b73a800f0.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000020_jpg",
+      "sha": "16e48e01333924d622315f062919b883bdc322f93f73e1d336a60d553e788e0c",
+      "pixels": "fb0e19237b90467f431ad1b1ce1d14ed4c4ade42d4234848c09f87c87ca5c652",
+      "rows": [
+        "1 0.61437908 0.81678922 0.21486928 0.13296569"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One yellow snack wrapper at lower center; other paper litter and KFC cardboard cartons are not additional snack wrappers.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000020_JPG.rf.43fa54851aa7cb82b4062e2b73a800f0.jpg",
+      "input_label_sha256": "8be146f48614f30e0568ff285d2101d54c2036aca973ed556a9ee93bd73fe880",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000020_JPG.rf.43fa54851aa7cb82b4062e2b73a800f0.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.38766339843750003,
+          0.4234068625,
+          0.46650326875000003,
+          0.4932598046875
+        ],
+        "max_wrapper_IoU": 0.0
+      }
+    ]
+  },
+  "trash_detection__train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg": {
+    "record": {
+      "name": "trash_detection__train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000055_jpg",
+      "sha": "f0f501b7b45b824f4c331731f2337bc6799f4d9280aca379d7e1e02660dfd587",
+      "pixels": "1c824cba18b7fd4f73782c997468054afb20d5c7b937235f10d62505f53231e3",
+      "rows": [
+        "2 0.34957108 0.65972222 0.10477941 0.06290850",
+        "2 0.708333333 0.576000000 0.142156863 0.171568627"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected_three_class_only",
+      "review_reason": "Source labeled one small water bottle at left; second distinct capped clear drink bottle toward right was missing. Added bottle to scoped V2 manifest, retaining all original rows.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg",
+      "input_label_sha256": "d8b083109ece63e2f1bf1dbc5c21c38dbe6191a2e34040b9a3d2dddb396b53c1",
+      "override_applied": true,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.9365808828125,
+          0.329248365625,
+          0.9911151953124999,
+          0.38766339843750003
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.9286151953124999,
+          0.41339869218749997,
+          0.9696691171875,
+          0.43382352968750004
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg": {
+    "record": {
+      "name": "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000055_jpg",
+      "sha": "1fe23659df69508c71e80fbda21f038631ea3233927c2fea61943e13320f4eb3",
+      "pixels": "c806fe322345e868a845aba1c462860def8ea2b6234b064d8074a7abb5aca741",
+      "rows": [
+        "1 0.54182692 0.63281250 0.41826923 0.30552885"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One torn multicolored snack wrapper partly hidden by grass near curb; source box corresponds.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+      "input_label_sha256": "43ef08a0357305fccb821467101bc516f4c8a99dd0d77a4c4f2e6a451a8f25aa",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.1516025640625,
+          0.834375,
+          0.336858975,
+          0.999278846875
+        ],
+        "max_wrapper_IoU": 0.0
+      },
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.73141025625,
+          0.5879807687499999,
+          0.9432692312500001,
+          0.7300480765625
+        ],
+        "max_wrapper_IoU": 0.01790681929928719
+      }
+    ]
+  },
+  "trash_detection__train__000058_JPG.rf.1fc27d0bbaaed624a92504e831f05147.jpg": {
+    "record": {
+      "name": "trash_detection__train__000058_JPG.rf.1fc27d0bbaaed624a92504e831f05147.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000058_jpg",
+      "sha": "6db1b2f0b6cdab21dc4a47dafa9e349597047e530fa436136873bb94c5aa652a",
+      "pixels": "0440948ddf3dac816b38dade5448103c9915cf5cdd33d758adb046ea455f22ff",
+      "rows": [
+        "2 0.35253268 0.14200368 0.35620915 0.10263480",
+        "2 0.49550654 0.30775123 0.28431372 0.21783088"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Two separate drinking bottles on white table, both correctly labeled; small foil balls excluded.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000058_JPG.rf.1fc27d0bbaaed624a92504e831f05147.jpg",
+      "input_label_sha256": "25475b5a318416bee01945921cb79abb3bbb403b805c2af4282a2795b2d62304",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000058_JPG.rf.1fc27d0bbaaed624a92504e831f05147.txt",
+    "boxes": [
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.49632352968750004,
+          0.5517769609375,
+          0.606617646875,
+          0.6608455875
+        ],
+        "max_wrapper_IoU": 0
+      },
+      {
+        "source_class": 2,
+        "xyxy": [
+          0.178513071875,
+          0.5762867640625,
+          0.3280228765625,
+          0.640318628125
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000069_jpg.rf.9e1208a47846a8f81ba1e14c374f9be3.jpg": {
+    "record": {
+      "name": "trash_detection__train__000069_jpg.rf.9e1208a47846a8f81ba1e14c374f9be3.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000069_jpg",
+      "sha": "599b7ff80c0a95c9adec295ac3f18f13e5fb5b43379ee5d43f143706139fff9f",
+      "pixels": "1b840ede81d6c9bab6f36f08d27eb643afdb8921b547c1109fca91505d20c6f6",
+      "rows": [
+        "2 0.68811275 0.53390523 0.09681373 0.18627451"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "Single branded clear beverage bottle beside iron fence; original annotation covers cap/body.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000069_jpg.rf.9e1208a47846a8f81ba1e14c374f9be3.jpg",
+      "input_label_sha256": "00ec564d709a59c17d948a00a29a2f32305b4b5295d26236664d25ed51792061",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000069_jpg.rf.9e1208a47846a8f81ba1e14c374f9be3.txt",
+    "boxes": [
+      {
+        "source_class": 35,
+        "xyxy": [
+          0.78125,
+          0.65073529375,
+          0.8060661765624999,
+          0.6666666671875
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__train__000075_jpg.rf.014d149f3354f835ae2cae1cd14712af.jpg": {
+    "record": {
+      "name": "trash_detection__train__000075_jpg.rf.014d149f3354f835ae2cae1cd14712af.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__000075_jpg",
+      "sha": "7e2d79095dfeea0f5768b545dd659060b2654d430c7ab66bf1c875e6e06793d0",
+      "pixels": "21e744640467a717b02a5958150f7fabf56b1667aa0a01643e98809415fbe56f",
+      "rows": [
+        "2 0.55952381 0.48053075 0.19246032 0.12475198"
+      ],
+      "verified_absence": false,
+      "review_status": "focus_verified",
+      "review_reason": "One white-capped clear bottle by boxed foam litter beneath shrubs; correctly classed and localized.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__train__000075_jpg.rf.014d149f3354f835ae2cae1cd14712af.jpg",
+      "input_label_sha256": "ae3a3a66ff37a8be20e245674d2a54cefb492359c5162deb63ac3bd9e3b956c2",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/train/labels/000075_jpg.rf.014d149f3354f835ae2cae1cd14712af.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.662367725,
+          0.84325396875,
+          0.775132275,
+          0.9766865078125001
+        ],
+        "max_wrapper_IoU": 0
+      }
+    ]
+  },
+  "trash_detection__valid__IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.jpg": {
+    "record": {
+      "name": "trash_detection__valid__IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.jpg",
+      "split": "val",
+      "original_split": "val",
+      "group": "trash_detection__img_4860_jpg",
+      "sha": "628ab3998f122146cf21845c22adcd0c980baf09ac0339e00fcb93c8f8452e87",
+      "pixels": "f0c2395650cd3e3d8806502ff70b7a638b5fa90ef9f12acb4242cb91486037c2",
+      "rows": [
+        "1 0.42749183 0.48728554 0.43096405 0.22334559",
+        "1 0.73281250 0.57109375 0.20937500 0.10156250"
+      ],
+      "verified_absence": false,
+      "review_status": "corrected",
+      "review_reason": "Added omitted detached printed flexible food-package section at right of large crisp bag.",
+      "image": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/images/val/trash_detection__valid__IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.jpg",
+      "input_label_sha256": "331f4b2e4c7306791942b5dba1427f1316ff46d103594ca0e5e3a8734d3833ff",
+      "override_applied": false,
+      "accepted": true,
+      "capture": null,
+      "frozen_val": true,
+      "frozen_train": false
+    },
+    "source_label": "data/raw/trash/valid/labels/IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.txt",
+    "boxes": [
+      {
+        "source_class": 43,
+        "xyxy": [
+          0.6323529406249999,
+          0.5140931375,
+          0.8545751640624999,
+          0.6225490203125
+        ],
+        "max_wrapper_IoU": 0.8493537373982516
+      }
+    ]
+  }
+}

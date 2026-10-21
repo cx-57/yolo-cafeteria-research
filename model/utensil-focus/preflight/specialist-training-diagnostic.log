@@ -1,0 +1,37 @@
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+YOLO11n summary (fused): 101 layers, 2,597,294 parameters, 0 gradients, 6.4 GFLOPs
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1639.1±1000.7 MB/s, size: 60.5 KB)
+[K[34m[1mval: [0mScanning /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/reviewed-v1/labels/train.cache... 224 images, 32 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 224/224 104.4Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 1% ──────────── 1/56 1.6s/it 0.5s<1:26[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 5% ╸─────────── 3/56 4.2it/s 0.6s<12.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 8% ━─────────── 5/56 6.7it/s 0.8s<7.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 7/56 8.6it/s 0.9s<5.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━╸────────── 9/56 9.9it/s 1.1s<4.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 19% ━━────────── 11/56 10.6it/s 1.3s<4.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 21% ━━╸───────── 12/56 8.9it/s 1.5s<5.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 23% ━━╸───────── 13/56 7.7it/s 1.7s<5.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 15/56 9.5it/s 1.8s<4.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 17/56 11.1it/s 2.0s<3.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 19/56 12.1it/s 2.1s<3.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━──────── 21/56 12.9it/s 2.2s<2.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 41% ━━━━╸─────── 23/56 13.4it/s 2.4s<2.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 25/56 13.8it/s 2.5s<2.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 48% ━━━━━╸────── 27/56 14.2it/s 2.6s<2.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 51% ━━━━━━────── 29/56 13.9it/s 2.8s<1.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 31/56 14.1it/s 2.9s<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 58% ━━━━━━━───── 33/56 13.2it/s 3.1s<1.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 34/56 10.4it/s 3.4s<2.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 64% ━━━━━━━╸──── 36/56 10.4it/s 3.5s<1.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 38/56 10.7it/s 3.7s<1.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 71% ━━━━━━━━╸─── 40/56 11.0it/s 3.9s<1.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 42/56 11.2it/s 4.1s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 44/56 9.8it/s 4.4s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 46/56 10.3it/s 4.6s<1.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 85% ━━━━━━━━━━── 48/56 10.7it/s 4.7s<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 50/56 11.0it/s 4.9s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 92% ━━━━━━━━━━━─ 52/56 11.2it/s 5.1s<0.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 54/56 11.3it/s 5.2s<0.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 98% ━━━━━━━━━━━╸ 55/56 9.2it/s 5.5s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 56/56 9.9it/s 5.7s
+                   all        224        261       0.83      0.713      0.805      0.494
+               utensil        121        187      0.699      0.615      0.686       0.41
+      condiment_packet         72         74       0.96      0.811      0.924      0.578
+Speed: 0.4ms preprocess, 8.6ms inference, 0.0ms loss, 9.6ms postprocess per image
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/warm-low-v1/best.pt",
+  "weights_sha": "97128909682fa3b222b1778174d9590e5ba9c001b04e80f044035b38c0446aa0",
+  "split": "train",
+  "dataset_fingerprint": "6ee1ccc700420270b6c37eef194c8544f6c4be657b8ce8a480a156424859902a",
+  "independent_test": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.6992916935913434,
+      "recall": 0.6149732620320856,
+      "AP50": 0.6861204507029702,
+      "AP50_95": 0.41024864665743277
+    },
+    "condiment_packet": {
+      "precision": 0.960033070947722,
+      "recall": 0.8108108108108109,
+      "AP50": 0.9239749990290477,
+      "AP50_95": 0.5781890922650279
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.8296623822695326,
+    "metrics/recall(B)": 0.7128920364214482,
+    "metrics/mAP50(B)": 0.805047724866009,
+    "metrics/mAP50-95(B)": 0.4942188694612303,
+    "fitness": 0.4942188694612303
+  }
+}

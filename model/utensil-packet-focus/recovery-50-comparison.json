@@ -1,0 +1,229 @@
+{
+  "target_per_class_AP50": 0.5,
+  "independent_test": false,
+  "runs": {
+    "expanded-v3/latest": {
+      "weights_sha": "b6370161f2516929df5535e4bd69876a3b935575798e879eb0d0d0590e4ac719",
+      "dataset_fingerprint": "26d5dda6b6c0396de3e967f8d2323f67b8e9769c7de9710fad7380bb1ab31ab2",
+      "classes": {
+        "utensil": {
+          "precision": 0.7599096854127337,
+          "recall": 0.47635135135135137,
+          "AP50": 0.5936942652885109,
+          "AP50_95": 0.3128988821299624
+        },
+        "condiment_packet": {
+          "precision": 0.12303273080860386,
+          "recall": 0.23809523809523808,
+          "AP50": 0.07275667909857422,
+          "AP50_95": 0.03787524779909238
+        }
+      }
+    },
+    "expanded-v3/selected": {
+      "weights_sha": "b8f54411e9ffa87abd31d7e5c7a699f64c56112aec4e6df79220018cdd800100",
+      "dataset_fingerprint": "26d5dda6b6c0396de3e967f8d2323f67b8e9769c7de9710fad7380bb1ab31ab2",
+      "classes": {
+        "utensil": {
+          "precision": 0.5423748415741176,
+          "recall": 0.5485555161076728,
+          "AP50": 0.5217148769613602,
+          "AP50_95": 0.24597024701363507
+        },
+        "condiment_packet": {
+          "precision": 0.09237710355306035,
+          "recall": 0.4523809523809524,
+          "AP50": 0.1587734174845636,
+          "AP50_95": 0.08955428888531955
+        }
+      }
+    },
+    "context-v4/latest": {
+      "weights_sha": "ded4c30f8aedd7618f58d0215d4700a6d64b84f7059a65f1ccba6dcc5b14a38e",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.6489283042050095,
+          "recall": 0.5709459459459459,
+          "AP50": 0.5559809400494494,
+          "AP50_95": 0.2948409374583635
+        },
+        "condiment_packet": {
+          "precision": 0.09640328039126388,
+          "recall": 0.35714285714285715,
+          "AP50": 0.07662230315814647,
+          "AP50_95": 0.04816914564175174
+        }
+      }
+    },
+    "context-v4/selected": {
+      "weights_sha": "4ae3259a4b805f453c6957f3f666c0f8169ff328fe1336775fbb2d19b4ad56b8",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.5423748415741176,
+          "recall": 0.5485555161076728,
+          "AP50": 0.5217148769613602,
+          "AP50_95": 0.24597024701363507
+        },
+        "condiment_packet": {
+          "precision": 0.09237710355306035,
+          "recall": 0.4523809523809524,
+          "AP50": 0.1587734174845636,
+          "AP50_95": 0.08955428888531955
+        }
+      }
+    },
+    "coco-restart-v5/latest": {
+      "weights_sha": "2d2abd1b413877425053b1103cea68358e84d2ff18e1e7490e6f3d4acfdb67a9",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.6492284573440074,
+          "recall": 0.5064859834287251,
+          "AP50": 0.5591441409186787,
+          "AP50_95": 0.33043826380858815
+        },
+        "condiment_packet": {
+          "precision": 0.22148078997302478,
+          "recall": 0.21428571428571427,
+          "AP50": 0.121107740111671,
+          "AP50_95": 0.08171828715434451
+        }
+      }
+    },
+    "coco-restart-v5/selected": {
+      "weights_sha": "beccc88202818c4d2b2c6597d336eb43787bb2233eb5225df21e32aa7b897bbf",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.6639039108837766,
+          "recall": 0.2469199006474537,
+          "AP50": 0.32527202387827037,
+          "AP50_95": 0.16210334411966282
+        },
+        "condiment_packet": {
+          "precision": 0.32265553167998084,
+          "recall": 0.2835973030454614,
+          "AP50": 0.20280457477859143,
+          "AP50_95": 0.14717552815384377
+        }
+      }
+    },
+    "head-only-v6/baseline": {
+      "weights_sha": "5b66d5eaf9f679341ca038c12d7785f3e51502ab429a3a28fcf730ab94564cb1",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.6639039108837766,
+          "recall": 0.2469199006474537,
+          "AP50": 0.32527202387827037,
+          "AP50_95": 0.16210334411966282
+        },
+        "condiment_packet": {
+          "precision": 0.32265553167998084,
+          "recall": 0.2835973030454614,
+          "AP50": 0.20280457477859143,
+          "AP50_95": 0.14717552815384377
+        }
+      }
+    },
+    "head-only-v6/latest": {
+      "weights_sha": "b2e54959d3cd4e2276cb8e96e555cd206af8ad281051e60afbd88dd3116a5d61",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.8132264347891862,
+          "recall": 0.5589734279418368,
+          "AP50": 0.6726139974586546,
+          "AP50_95": 0.40880244564293033
+        },
+        "condiment_packet": {
+          "precision": 0.1403545821410159,
+          "recall": 0.42857142857142855,
+          "AP50": 0.1585907493524774,
+          "AP50_95": 0.11232797917793484
+        }
+      }
+    },
+    "head-only-v6/selected": {
+      "weights_sha": "5b66d5eaf9f679341ca038c12d7785f3e51502ab429a3a28fcf730ab94564cb1",
+      "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+      "classes": {
+        "utensil": {
+          "precision": 0.6639039108837766,
+          "recall": 0.2469199006474537,
+          "AP50": 0.32527202387827037,
+          "AP50_95": 0.16210334411966282
+        },
+        "condiment_packet": {
+          "precision": 0.32265553167998084,
+          "recall": 0.2835973030454614,
+          "AP50": 0.20280457477859143,
+          "AP50_95": 0.14717552815384377
+        }
+      }
+    },
+    "real-only-v7/baseline": {
+      "weights_sha": "61dd4066f340eb71b6b0e901aab4a7d8352aa1aaf9d386afa24c1ec96607d182",
+      "dataset_fingerprint": "ee5af6aa293bab3a70848ed00f2f362ee1508f791a968612e4450f2d2147cfbc",
+      "classes": {
+        "utensil": {
+          "precision": 0.8132264347891862,
+          "recall": 0.5589734279418368,
+          "AP50": 0.6726139974586546,
+          "AP50_95": 0.40880244564293033
+        },
+        "condiment_packet": {
+          "precision": 0.1403545821410159,
+          "recall": 0.42857142857142855,
+          "AP50": 0.1585907493524774,
+          "AP50_95": 0.11232797917793484
+        }
+      }
+    },
+    "real-only-v7/latest": {
+      "weights_sha": "0402b047696b78e808bb7c38755f6496a7f62ad2372e30f44d9ae0e666cbf8d1",
+      "dataset_fingerprint": "ee5af6aa293bab3a70848ed00f2f362ee1508f791a968612e4450f2d2147cfbc",
+      "classes": {
+        "utensil": {
+          "precision": 0.8209370630626752,
+          "recall": 0.5472972972972973,
+          "AP50": 0.6890925820917578,
+          "AP50_95": 0.43200971952608824
+        },
+        "condiment_packet": {
+          "precision": 0.24903247431203357,
+          "recall": 0.38095238095238093,
+          "AP50": 0.23817563821678184,
+          "AP50_95": 0.16149107434337598
+        }
+      }
+    },
+    "real-only-v7/selected": {
+      "weights_sha": "1e748428bf76e4202561b34b092bf668fa6929d24fe772d39acc34743a826184",
+      "dataset_fingerprint": "ee5af6aa293bab3a70848ed00f2f362ee1508f791a968612e4450f2d2147cfbc",
+      "classes": {
+        "utensil": {
+          "precision": 0.855163942240666,
+          "recall": 0.5585241705327,
+          "AP50": 0.7105703050566676,
+          "AP50_95": 0.4382613731217477
+        },
+        "condiment_packet": {
+          "precision": 0.43733729971483776,
+          "recall": 0.30952380952380953,
+          "AP50": 0.24743772405761902,
+          "AP50_95": 0.16847627793128778
+        }
+      }
+    }
+  },
+  "real_only_data_change": {
+    "removed_training_composites": 128,
+    "removed_synthetic_packet_boxes": 192,
+    "training_real_images": 227,
+    "validation_records_unchanged": true,
+    "validation_records_sha256": "03c49cd261d4efd242ce054864af722bed00a544efe64d2944ce5c828f1e1c25"
+  }
+}

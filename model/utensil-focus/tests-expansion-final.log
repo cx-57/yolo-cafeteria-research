@@ -1,0 +1,197 @@
+.............................................Frozen split: 9 training originals, 17 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmpuwxy69ek/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 2 additional boxes; skipped 2 overlaps
+Prepared experiment: /private/tmp/tmp9q_e2v97/data/training-revised/data.yaml
+Frozen split: 9 training originals, 9 views; 2 validation originals, 2 views
+Accepted 1 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmpzekojhji/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmps9j94urv/data/training-revised/data.yaml
+Frozen split: 9 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmpf4qb2en9/data/training-repeat-control/data.yaml
+Frozen split: 9 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmpf4qb2en9/data/training-revised/data.yaml
+Frozen split: 8 training originals, 14 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmpkyw1vanb/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: data/training-revised/data.yaml
+Weak-class fast subset: 4 of 8 training views (50.0%).
+Selected 3 weak original groups + 1 strong-class replay groups. Validation unchanged.
+Prepared subset: /private/tmp/tmp4vdhqkyr/data/training-revised/data.yaml
+Frozen split: 8 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/tmp/tmpdfvl8a5h/data/focus/data.yaml
+Weak-class fast subset: 6 of 11 training views (54.5%).
+Selected 3 weak original groups + 0 strong-class replay groups. Validation unchanged.
+Prepared subset: /private/tmp/tmpdfvl8a5h/data/training-revised/data.yaml
+Per-class AP50: {'plate': 0.99, 'wrapper': 0.99, 'bottle': 0.61} minimum: 0.61
+Per-class AP50: {'plate': 0.81, 'wrapper': 0.82, 'bottle': 0.83} minimum: 0.81
+....Per-class AP50: {'plate': 0.8, 'wrapper': 0.8, 'bottle': 0.8} minimum: 0.8
+....Integrity passed: 3 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 2,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+.........................Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/main.py", line 105, in __init__
+    self.runTests()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/main.py", line 281, in runTests
+    self.result = testRunner.run(self.test)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/runner.py", line 240, in run
+    test(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/suite.py", line 122, in run
+    test(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/suite.py", line 122, in run
+    test(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/suite.py", line 122, in run
+    test(result)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/case.py", line 690, in __call__
+    return self.run(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/case.py", line 634, in run
+    self._callTestMethod(testMethod)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/case.py", line 589, in _callTestMethod
+    if method() is not None:
+       ^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_partial_labels.py", line 53, in test_all_known_classes_equal_standard_bce_and_gradients
+    torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/testing/_comparison.py", line 1665, in assert_close
+    actual, expected = _unwrap_dtensor_for_comparison(actual, expected)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/testing/_comparison.py", line 41, in _unwrap_dtensor_for_comparison
+    from torch.distributed.tensor import DTensor
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/distributed/tensor/__init__.py", line 4, in <module>
+    import torch.distributed.tensor._ops  # force import all built-in dtensor ops
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/distributed/tensor/_ops/__init__.py", line 2, in <module>
+    from ._conv_ops import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/distributed/tensor/_ops/_conv_ops.py", line 8, in <module>
+    from torch.distributed.tensor._dtensor_spec import DTensorSpec, TensorMeta
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/distributed/tensor/_dtensor_spec.py", line 10, in <module>
+    from torch.distributed.tensor.placement_types import (
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/distributed/tensor/placement_types.py", line 17, in <module>
+    from torch.distributed.tensor._collective_utils import (
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/torch/distributed/tensor/_collective_utils.py", line 28, in <module>
+    from torch.fx.experimental.symbolic_shapes import guard_or_false
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1087, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1187, in get_data
+KeyboardInterrupt
+Scanned 1 images; overlay images saved: /private/tmp/tmpcl1_en6t/output
+Eligible target images: {'plate': 1, 'napkin': 0}
+Possible wrong-class overlaps: 0 (see wrong_class_candidates.csv)
+Scanned 1 images; overlay images disabled: /private/tmp/tmpcl1_en6t/full-report
+Eligible target images: {'plate': 1}
+Possible wrong-class overlaps: 0 (see wrong_class_candidates.csv)

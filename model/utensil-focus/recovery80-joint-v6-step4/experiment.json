@@ -1,0 +1,39 @@
+{
+  "binding": {
+    "dataset_fingerprint": "9600be6224aebd2a3ee860135f61c5f1e06dee395ace0e8ea94fdfcbaa058e7c",
+    "training_yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/weak-v6-packets/data.yaml",
+    "training_yaml_sha256": "0ca6e951361ed79bcc2a3225f99d723e0232f4d5199a4639c296982cb0e57cfe",
+    "training_list_sha256": "28b1c5bc89386ade523457058b91c7eb193a7c4757839355b5199b5edc52598c",
+    "policy_sha256": "e915354329d7fc6b80a7cc4990f637fb01cd18c9445c1e77bcd6fb06c1931386",
+    "pretrained_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "training_holds": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/training-holds.json",
+      "sha256": "e03ee5c2f5211303feab13d9f3fee491bea19c2296acbdd7bdfd9c2192610bf7"
+    },
+    "epochs": 80,
+    "policy": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/coverage-packets-v6.json",
+    "nominal_batch": 4,
+    "validation_batch": 4,
+    "selection_targets": [
+      "utensil",
+      "condiment_packet"
+    ]
+  },
+  "initialization": "Continue existing clean optimizer/EMA; reviewed packet expansion.",
+  "source_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-reviewed-val/train/weights/last_resume.pt",
+  "source_checkpoint_sha256": "9af44de3095b81a43592af85726cad9531a269b008483dd23750339b654e946a",
+  "training_change": {
+    "nominal_batch_before": 64,
+    "nominal_batch_after": 4,
+    "validation_batch": 4
+  },
+  "inherited_epochs": 15,
+  "revision": {
+    "new_images": 49,
+    "added_training_objects": {
+      "utensil": 68
+    },
+    "existing_validation_images_and_labels_unchanged": true
+  },
+  "checkpoint_selection": "Highest minimum AP50 across bound selection targets on development validation; no independent test."
+}

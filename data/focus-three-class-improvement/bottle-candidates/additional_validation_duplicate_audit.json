@@ -1,0 +1,219 @@
+{
+  "method": "SIFT600 ratio0.72 RANSAC4px against all226 validation images; sourceCOCO IDs excluded if already in3096 V2 pool. Manual review required, heuristic not proof of complete capture independence.",
+  "pairs": [
+    {
+      "candidate": "lvis_000000043344",
+      "matches": [
+        {
+          "validation": "school_lunch__020280002_jpg.rf.a00b92b71cf024717fe6dbbb0b01e10d.jpg",
+          "matches": 8,
+          "inliers": 6
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000061843",
+      "matches": [
+        {
+          "validation": "plate__val__lvis_000000059526.jpg",
+          "matches": 24,
+          "inliers": 13
+        },
+        {
+          "validation": "school_lunch__025512001_jpg.rf.4c8ab4661704faede5090ee0aab7161e.jpg",
+          "matches": 19,
+          "inliers": 10
+        },
+        {
+          "validation": "school_lunch__025159002_jpg.rf.4b4a76d0766959cc50a1431e12be77fa.jpg",
+          "matches": 17,
+          "inliers": 8
+        },
+        {
+          "validation": "plate__train__lvis_000000041279.jpg",
+          "matches": 26,
+          "inliers": 7
+        },
+        {
+          "validation": "plate__train__lvis_000000112044.jpg",
+          "matches": 23,
+          "inliers": 6
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000094544",
+      "matches": [
+        {
+          "validation": "school_lunch__025457000_jpg.rf.b88c3db0dbae3638b7d0e2587f0bf239.jpg",
+          "matches": 28,
+          "inliers": 13
+        },
+        {
+          "validation": "plate__train__lvis_000000087593.jpg",
+          "matches": 8,
+          "inliers": 7
+        },
+        {
+          "validation": "plate__train__lvis_000000495095.jpg",
+          "matches": 8,
+          "inliers": 7
+        },
+        {
+          "validation": "plate__train__lvis_000000533976.jpg",
+          "matches": 21,
+          "inliers": 7
+        },
+        {
+          "validation": "plate__train__lvis_000000028314.jpg",
+          "matches": 9,
+          "inliers": 6
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000264976",
+      "matches": []
+    },
+    {
+      "candidate": "lvis_000000129599",
+      "matches": [
+        {
+          "validation": "plate__train__lvis_000000127256.jpg",
+          "matches": 14,
+          "inliers": 11
+        },
+        {
+          "validation": "plate__val__lvis_000000406550.jpg",
+          "matches": 18,
+          "inliers": 8
+        },
+        {
+          "validation": "plate__train__lvis_000000107770.jpg",
+          "matches": 9,
+          "inliers": 7
+        },
+        {
+          "validation": "plate__val__lvis_000000238795.jpg",
+          "matches": 12,
+          "inliers": 7
+        },
+        {
+          "validation": "school_lunch__022475002_jpg.rf.af41d8ccb4bc1acf9c64df5d34387b12.jpg",
+          "matches": 11,
+          "inliers": 7
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000036123",
+      "matches": [
+        {
+          "validation": "plate__train__lvis_000000533976.jpg",
+          "matches": 22,
+          "inliers": 9
+        },
+        {
+          "validation": "plate__train__lvis_000000143143.jpg",
+          "matches": 15,
+          "inliers": 8
+        },
+        {
+          "validation": "plate__train__lvis_000000505234.jpg",
+          "matches": 19,
+          "inliers": 8
+        },
+        {
+          "validation": "plate__val__lvis_000000083761.jpg",
+          "matches": 14,
+          "inliers": 7
+        },
+        {
+          "validation": "school_lunch__023568002_jpg.rf.d093a046310c756891c85745adea9adc.jpg",
+          "matches": 8,
+          "inliers": 7
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000015738",
+      "matches": [
+        {
+          "validation": "plate__train__lvis_000000488373.jpg",
+          "matches": 59,
+          "inliers": 50
+        },
+        {
+          "validation": "plate__train__lvis_000000479350.jpg",
+          "matches": 48,
+          "inliers": 40
+        },
+        {
+          "validation": "trash_detection__train__000087_JPG.rf.9c76faa7891baa4452f391b1391247f2.jpg",
+          "matches": 39,
+          "inliers": 31
+        },
+        {
+          "validation": "school_lunch__023469002_jpg.rf.24557bd06dd3335646a24f0f633f8f16.jpg",
+          "matches": 38,
+          "inliers": 30
+        },
+        {
+          "validation": "school_lunch__021314002_jpg.rf.f1c07ee61c46004c95572cb815803bfd.jpg",
+          "matches": 36,
+          "inliers": 29
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000026053",
+      "matches": [
+        {
+          "validation": "school_lunch__024228002_jpg.rf.63f38f93b027511956b96395c87294f0.jpg",
+          "matches": 11,
+          "inliers": 8
+        },
+        {
+          "validation": "plate__val__lvis_000000310459.jpg",
+          "matches": 18,
+          "inliers": 6
+        },
+        {
+          "validation": "school_lunch__021551000_jpg.rf.4b95820d5819150166f0ae5dd05a8a9b.jpg",
+          "matches": 8,
+          "inliers": 6
+        }
+      ]
+    },
+    {
+      "candidate": "lvis_000000073201",
+      "matches": [
+        {
+          "validation": "school_lunch__020477002_jpg.rf.86aca1e7f881251a3f16965d4b993ada.jpg",
+          "matches": 13,
+          "inliers": 9
+        },
+        {
+          "validation": "plate__train__lvis_000000488373.jpg",
+          "matches": 13,
+          "inliers": 7
+        },
+        {
+          "validation": "plate__val__lvis_000000358770.jpg",
+          "matches": 12,
+          "inliers": 7
+        },
+        {
+          "validation": "school_lunch__025457000_jpg.rf.b88c3db0dbae3638b7d0e2587f0bf239.jpg",
+          "matches": 9,
+          "inliers": 7
+        },
+        {
+          "validation": "trash_detection__train__000012_jpg.rf.a9afee671774b7c67ce14cb2a0cbc20f.jpg",
+          "matches": 13,
+          "inliers": 7
+        }
+      ]
+    }
+  ]
+}

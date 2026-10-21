@@ -1,0 +1,12 @@
+{
+  "epoch": 2,
+  "per_class_AP50": {
+    "plate": 0.7235193761681156,
+    "wrapper": 0.7562046659392034,
+    "bottle": 0.3898462890499727
+  },
+  "minimum_AP50": 0.3898462890499727,
+  "target_AP50": 0.8,
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/capture-clean80-chunk2/train/weights/best_min_ap50.pt",
+  "weights_sha256": "143ac26120f993eb2a3173e1d1471b618eb792d78bf5fab4c7e89bd169d0dd62"
+}

@@ -1,0 +1,487 @@
+{
+  "diagnostic": "Bottle GT recall only on bottle-positive validation photos, fixed conf0.25 and IoU0.5. This is not AP50, not precision, and not a new target test.",
+  "images": 55,
+  "objects": 67,
+  "counts": {
+    "4to16pct": {
+      "objects": 14,
+      "matched": 5
+    },
+    "1to4pct": {
+      "objects": 30,
+      "matched": 8
+    },
+    "below1pct": {
+      "objects": 21,
+      "matched": 7
+    },
+    "16pct_or_more": {
+      "objects": 2,
+      "matched": 1
+    }
+  },
+  "misses": [
+    {
+      "name": "trash_detection__train__000021_jpg.rf.69beb13282d945c74658eb2329e95417.jpg",
+      "area_fraction": 0.0190776911052493,
+      "box": [
+        0.471218205,
+        0.47646837500000006,
+        0.639558235,
+        0.589796685
+      ]
+    },
+    {
+      "name": "trash_detection__train__000029_jpg.rf.bb5e2dac4437552962000a20a4c0b1a7.jpg",
+      "area_fraction": 0.013962477263028,
+      "box": [
+        0.17436413,
+        0.53049699,
+        0.41834003000000003,
+        0.58772591
+      ]
+    },
+    {
+      "name": "trash_detection__train__000037_JPG.rf.7ce5844905e941f713561bf61c19df09.jpg",
+      "area_fraction": 0.0125343912846396,
+      "box": [
+        0.6158536600000001,
+        0.35823171,
+        0.71532012,
+        0.48424796999999997
+      ]
+    },
+    {
+      "name": "trash_detection__train__000037_JPG.rf.d0e10276ca28382ca2330a1091865784.jpg",
+      "area_fraction": 0.00608740222863,
+      "box": [
+        0.47426471000000003,
+        0.46936274,
+        0.53635621,
+        0.56740196
+      ]
+    },
+    {
+      "name": "trash_detection__train__000076_jpg.rf.a2f33c6e827affcd6b8bd19660f2b7ba.jpg",
+      "area_fraction": 0.005152781207448,
+      "box": [
+        0.29761905,
+        0.44890873000000003,
+        0.43165785,
+        0.48735119
+      ]
+    },
+    {
+      "name": "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg",
+      "area_fraction": 0.0097684302336169,
+      "box": [
+        0.394021745,
+        0.45543478499999995,
+        0.521195655,
+        0.5322463749999999
+      ]
+    },
+    {
+      "name": "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg",
+      "area_fraction": 0.0114429750378072,
+      "box": [
+        0.42663043,
+        0.52717391,
+        0.56576087,
+        0.60942029
+      ]
+    },
+    {
+      "name": "trash_detection__train__000097_jpg.rf.f04c44037b55c5ad9c3d09592e4f416f.jpg",
+      "area_fraction": 0.008195723565,
+      "box": [
+        0.43859649000000006,
+        0.63,
+        0.6557017500000001,
+        0.66775
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000010_jpg.rf.65151e2c489484904191cd6bb6e256f4.jpg",
+      "area_fraction": 0.059378027971662396,
+      "box": [
+        0.41119063,
+        0.48169839,
+        0.73649967,
+        0.6642264499999999
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000015_JPG.rf.23f8ea96baaa5f01d2eb6d96585fc991.jpg",
+      "area_fraction": 0.0173230777389999,
+      "box": [
+        0.455772645,
+        0.708883825,
+        0.630195375,
+        0.8082004549999999
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000015_jpg.rf.61f2aaa1d5605f18b2bfdc8344ed6831.jpg",
+      "area_fraction": 0.10369414127360699,
+      "box": [
+        0.6218750000000001,
+        0.657692305,
+        0.93028846,
+        0.993910255
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000029_JPG.rf.1470570600355315dd0a5cf67f841ab0.jpg",
+      "area_fraction": 0.0097444076150756,
+      "box": [
+        0.41086957,
+        0.459057965,
+        0.53423913,
+        0.538043475
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000029_JPG.rf.1470570600355315dd0a5cf67f841ab0.jpg",
+      "area_fraction": 0.010391560586326398,
+      "box": [
+        0.43913043,
+        0.53405797,
+        0.57635869,
+        0.60978261
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000029_jpg.rf.164c529bd3b291e1f8c99d8c1914af36.jpg",
+      "area_fraction": 0.04628865136500001,
+      "box": [
+        0.29605263000000004,
+        0.482,
+        0.62609649,
+        0.62225
+      ]
+    },
+    {
+      "name": "plate__train__lvis_000000095062.jpg",
+      "area_fraction": 0.10319661452031251,
+      "box": [
+        0.734375,
+        4.999999858590343e-10,
+        0.9234374999999999,
+        0.5458333335000001
+      ]
+    },
+    {
+      "name": "plate__train__lvis_000000305152.jpg",
+      "area_fraction": 0.035326229018749995,
+      "box": [
+        0.47812499999999997,
+        0.0,
+        0.6359374999999999,
+        0.223849372
+      ]
+    },
+    {
+      "name": "plate__train__lvis_000000335815.jpg",
+      "area_fraction": 0.007410000000000001,
+      "box": [
+        0.6435000000000001,
+        0.101,
+        0.7005,
+        0.231
+      ]
+    },
+    {
+      "name": "plate__train__lvis_000000384671.jpg",
+      "area_fraction": 0.057084309140625,
+      "box": [
+        0.386416862,
+        0.29375,
+        0.573770492,
+        0.5984375
+      ]
+    },
+    {
+      "name": "plate__train__lvis_000000488363.jpg",
+      "area_fraction": 0.0583875,
+      "box": [
+        0.1703125,
+        0.38000000000000006,
+        0.33906250000000004,
+        0.726
+      ]
+    },
+    {
+      "name": "plate__val__lvis_000000358770.jpg",
+      "area_fraction": 0.016063084140625,
+      "box": [
+        0.69375,
+        0.1542056075,
+        0.771875,
+        0.35981308450000005
+      ]
+    },
+    {
+      "name": "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+      "area_fraction": 0.00605043864,
+      "box": [
+        0.129,
+        0.20668860000000003,
+        0.191,
+        0.30427632000000004
+      ]
+    },
+    {
+      "name": "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+      "area_fraction": 0.0064137882375,
+      "box": [
+        0.16625,
+        0.171600875,
+        0.22749999999999998,
+        0.276315785
+      ]
+    },
+    {
+      "name": "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+      "area_fraction": 0.010704345703125,
+      "box": [
+        0.7218749999999999,
+        0.1125,
+        0.78359375,
+        0.2859375
+      ]
+    },
+    {
+      "name": "trash_detection__train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg",
+      "area_fraction": 0.0328030997061144,
+      "box": [
+        0.028365389999999997,
+        0.50641026,
+        0.12115385000000001,
+        0.8599359
+      ]
+    },
+    {
+      "name": "trash_detection__train__000012_jpg.rf.a9afee671774b7c67ce14cb2a0cbc20f.jpg",
+      "area_fraction": 0.1677186879542568,
+      "box": [
+        0.22824632000000003,
+        0.22176205,
+        0.65595716,
+        0.61389307
+      ]
+    },
+    {
+      "name": "trash_detection__train__000016_JPG.rf.6a36c0567a53d01e53a958e26c42cfd5.jpg",
+      "area_fraction": 0.0051813009479527,
+      "box": [
+        0.146241835,
+        0.258578425,
+        0.287173205,
+        0.29534313500000003
+      ]
+    },
+    {
+      "name": "trash_detection__train__000025_jpg.rf.054985cb09540f07754928b945943f9e.jpg",
+      "area_fraction": 0.0617187504375,
+      "box": [
+        0.21474358999999998,
+        0.44951923000000005,
+        0.72115385,
+        0.57139423
+      ]
+    },
+    {
+      "name": "trash_detection__train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg",
+      "area_fraction": 0.0243896578035371,
+      "box": [
+        0.6372549015,
+        0.49021568649999997,
+        0.7794117645,
+        0.6617843135
+      ]
+    },
+    {
+      "name": "trash_detection__train__000058_JPG.rf.0808bdd137e833711ef8d38b68cb5103.jpg",
+      "area_fraction": 0.0065763722484341,
+      "box": [
+        0.5600490149999999,
+        0.555759805,
+        0.636437905,
+        0.641850495
+      ]
+    },
+    {
+      "name": "trash_detection__train__000058_JPG.rf.1fc27d0bbaaed624a92504e831f05147.jpg",
+      "area_fraction": 0.036559454868419994,
+      "box": [
+        0.174428105,
+        0.09068628,
+        0.530637255,
+        0.19332107999999998
+      ]
+    },
+    {
+      "name": "trash_detection__train__000069_JPG.rf.1c9cd9d7dffaf61d8f7bbe46fe92072b.jpg",
+      "area_fraction": 0.0238930532604447,
+      "box": [
+        0.306066175,
+        0.239379085,
+        0.49234068500000006,
+        0.367647055
+      ]
+    },
+    {
+      "name": "trash_detection__train__000069_JPG.rf.1c9cd9d7dffaf61d8f7bbe46fe92072b.jpg",
+      "area_fraction": 0.0111655770533769,
+      "box": [
+        0.758578435,
+        0.819852935,
+        0.8419117650000001,
+        0.9538398650000001
+      ]
+    },
+    {
+      "name": "trash_detection__train__000085_jpg.rf.4a050c9f98a731e747081fc7443ff9e3.jpg",
+      "area_fraction": 0.012876156984953698,
+      "box": [
+        0.36860670500000003,
+        0.454365075,
+        0.451940035,
+        0.608878965
+      ]
+    },
+    {
+      "name": "trash_detection__train__000087_JPG.rf.9c76faa7891baa4452f391b1391247f2.jpg",
+      "area_fraction": 0.006548338159782299,
+      "box": [
+        0.542892155,
+        0.5494281049999999,
+        0.6412377450000001,
+        0.616013075
+      ]
+    },
+    {
+      "name": "trash_detection__train__000087_jpg.rf.77221350fa41f94d0bafc9d7d5b83789.jpg",
+      "area_fraction": 0.0073659540449999995,
+      "box": [
+        0.1875,
+        0.209,
+        0.37280702,
+        0.24875
+      ]
+    },
+    {
+      "name": "trash_detection__train__000100_JPG.rf.0cb3669d5133eec48582ce72acbbc8d3.jpg",
+      "area_fraction": 0.0239691463977797,
+      "box": [
+        0.30453431499999994,
+        0.236519605,
+        0.490808825,
+        0.36519607499999995
+      ]
+    },
+    {
+      "name": "trash_detection__train__000100_JPG.rf.0cb3669d5133eec48582ce72acbbc8d3.jpg",
+      "area_fraction": 0.0115283932351139,
+      "box": [
+        0.759191175,
+        0.8149509850000001,
+        0.840992645,
+        0.955882355
+      ]
+    },
+    {
+      "name": "trash_detection__train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg",
+      "area_fraction": 0.0215864979707925,
+      "box": [
+        0.4338235349999999,
+        0.170343135,
+        0.651960785,
+        0.269301465
+      ]
+    },
+    {
+      "name": "trash_detection__train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg",
+      "area_fraction": 0.035738,
+      "box": [
+        0.28200000000000003,
+        0.5605,
+        0.496,
+        0.7275
+      ]
+    },
+    {
+      "name": "trash_detection__train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg",
+      "area_fraction": 0.02812,
+      "box": [
+        0.472,
+        0.766,
+        0.6619999999999999,
+        0.9139999999999999
+      ]
+    },
+    {
+      "name": "trash_detection__train__000135_JPG.rf.a62714a7a78e37b7ffa7bcd395c217c3.jpg",
+      "area_fraction": 0.008029764568995899,
+      "box": [
+        0.411458335,
+        0.644199345,
+        0.460477945,
+        0.808006535
+      ]
+    },
+    {
+      "name": "trash_detection__train__IMG_5053_JPG.rf.8964f94d6aa1f48d8ed3d624b0bb7331.jpg",
+      "area_fraction": 0.006434699134868001,
+      "box": [
+        0.9628268,
+        0.124693625,
+        1.0,
+        0.29779411499999997
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000012_jpg.rf.75c5fdec27471daa465f28785b93ecc1.jpg",
+      "area_fraction": 0.016169661486587703,
+      "box": [
+        0.393790855,
+        0.384191175,
+        0.557189545,
+        0.483149505
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000022_JPG.rf.dd06df32128261ba6594966187229787.jpg",
+      "area_fraction": 0.0627545605046136,
+      "box": [
+        0.27634804,
+        0.44934641,
+        0.46813726,
+        0.7765522899999999
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000022_JPG.rf.dd06df32128261ba6594966187229787.jpg",
+      "area_fraction": 0.046114449990969,
+      "box": [
+        0.14031863,
+        0.5919117650000001,
+        0.37898285,
+        0.785130715
+      ]
+    },
+    {
+      "name": "trash_detection__valid__000115_JPG.rf.ed87a8b811064104ead06d7b00f30d3c.jpg",
+      "area_fraction": 0.0289149110006568,
+      "box": [
+        0.11060049000000001,
+        0.2124183,
+        0.32444853,
+        0.34763072
+      ]
+    }
+  ],
+  "weights_sha256": "143ac26120f993eb2a3173e1d1471b618eb792d78bf5fab4c7e89bd169d0dd62",
+  "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296"
+}

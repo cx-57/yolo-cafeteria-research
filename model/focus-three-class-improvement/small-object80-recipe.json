@@ -1,0 +1,52 @@
+{
+  "target_min_ap50": 0.8,
+  "wall_limit_minutes": 1,
+  "primary_comparison_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
+  "hypothesis": "Small-object coverage test: only107/330 train bottles occupy below4% image area versus36/45 validation bottles. Keep all unique images and existing replay; add mosaic .5 and scale .7 at640 to synthesize smaller and multiple-object scenes. New optimizer phase explicitly starts from completed epoch5, unchanged validation.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/meal-replay80-chunk9/train/weights/last.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/meal-expanded/data-replay.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "nbs": 4,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "mosaic": 0.5,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0,
+    "warmup_epochs": 0.6182669789227166,
+    "warmup_bias_lr": 0.0,
+    "scale": 0.7,
+    "close_mosaic": 0
+  },
+  "sampling": {
+    "unique_images": 1056,
+    "views_per_epoch": 1708,
+    "source_unique": {
+      "condiments": 44,
+      "dry_wet_waste": 204,
+      "food_american": 19,
+      "plate": 185,
+      "school_lunch": 297,
+      "school_lunch_asian": 20,
+      "trash_detection": 133,
+      "utensil": 5,
+      "waste_detection_v3": 149
+    },
+    "source_views": {
+      "condiments": 44,
+      "dry_wet_waste": 204,
+      "food_american": 19,
+      "plate": 401,
+      "school_lunch": 297,
+      "school_lunch_asian": 20,
+      "trash_detection": 569,
+      "utensil": 5,
+      "waste_detection_v3": 149
+    }
+  },
+  "decision": "Short trial rejected as replacement: fixed126 bottle AP50 fell55.12 to53.44; no target attained."
+}

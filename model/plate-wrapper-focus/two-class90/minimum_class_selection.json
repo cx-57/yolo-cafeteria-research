@@ -1,0 +1,11 @@
+{
+  "epoch": 1,
+  "per_class_AP50": {
+    "plate": 0.8323296323082761,
+    "wrapper": 0.8317191428332298
+  },
+  "minimum_AP50": 0.8317191428332298,
+  "target_AP50": 0.9,
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/two-class90/train/weights/best_min_ap50.pt",
+  "weights_sha256": "e328f383e64190c50e527662d039263788c8724fdc6696db70dd2b40a73088ec"
+}

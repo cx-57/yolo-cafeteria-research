@@ -1,0 +1,41 @@
+{
+  "overall": {
+    "precision": 0.5961990764796073,
+    "recall": 0.5069808357313406,
+    "AP50": 0.5696160593311715,
+    "AP50_95": 0.3860796805017521
+  },
+  "per_class": {
+    "plate": {
+      "precision": 0.8505937815868888,
+      "recall": 0.4804393197134034,
+      "AP50": 0.6989181279487177,
+      "AP50_95": 0.530185949498035,
+      "objects": 237
+    },
+    "wrapper": {
+      "precision": 0.5782378154954508,
+      "recall": 0.7553191489361702,
+      "AP50": 0.7779739138510522,
+      "AP50_95": 0.5054677069663585,
+      "objects": 94
+    },
+    "bottle": {
+      "precision": 0.3597656323564823,
+      "recall": 0.28518403854444796,
+      "AP50": 0.23195613619374494,
+      "AP50_95": 0.12258538504086311,
+      "objects": 67
+    }
+  },
+  "weights": "model/focus-three-class-improvement/capture-clean80-chunk2/train/weights/last.pt",
+  "weights_sha256": "e027fe92721fab71d27cfd206873f83ba1b0fb1f8a55f8ad12be64e797a354ac",
+  "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "imgsz": 640,
+  "augment": false,
+  "target_min_ap50": 0.8,
+  "minimum_class_AP50": 0.23195613619374494,
+  "all_classes_meet_target": false,
+  "interpretation": "Reviewed public validation; no independent test or improvement claim."
+}

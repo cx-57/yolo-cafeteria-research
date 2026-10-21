@@ -1,0 +1,8 @@
+{
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/real-only-v7/best.pt",
+  "source_sha": "1e748428bf76e4202561b34b092bf668fa6929d24fe772d39acc34743a826184",
+  "output_sha": "5ddd8772a4bcac89ffa731a5119a3a9b76685bb3255465032d3fc09ac0a522b8",
+  "fresh_two_class_classifier": false,
+  "freeze_backbone": true,
+  "dataset_fingerprint": "bfdaecc4b55ed0e521788b5206d441e396f029e91aa4c8db1efc64bd6170549b"
+}

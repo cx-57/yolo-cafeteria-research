@@ -1,0 +1,15 @@
+[
+  {
+    "name": "plate__train__lvis_000000119560.jpg",
+    "image_sha256": "124f003f22f14a9e175d5778f95abf65c86b4c4630a0886b1f74c62d8444dabc",
+    "input_rows_sha256": "a7923ca8fb891404152960edca1bd7638baa292f13f18c16305545665104381d",
+    "status": "verified_unchanged",
+    "rows": [
+      "0 0.163367188 0.476453608 0.170109375 0.069855670",
+      "0 0.228453125 0.793268041 0.414843750 0.237298969",
+      "0 0.128312500 0.340371134 0.137656250 0.034762887"
+    ],
+    "reviewer": "codex_visual_review_2026-10-18",
+    "reason": "Native-resolution re-review: foreground pizza plate and two background food plates match the three existing boxes. The round printed object at the child's mouth is attached to the red party blower and is a party decoration, not an additional food plate. No additional identifiable food wrappers. Preserve all three boxes and close the stale adjudication note."
+  }
+]

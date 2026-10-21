@@ -1,0 +1,28 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/coco-restart-v5/train/weights/last.pt",
+  "weights_sha": "2d2abd1b413877425053b1103cea68358e84d2ff18e1e7490e6f3d4acfdb67a9",
+  "split": "val",
+  "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+  "independent_test": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.6492284573440074,
+      "recall": 0.5064859834287251,
+      "AP50": 0.5591441409186787,
+      "AP50_95": 0.33043826380858815
+    },
+    "condiment_packet": {
+      "precision": 0.22148078997302478,
+      "recall": 0.21428571428571427,
+      "AP50": 0.121107740111671,
+      "AP50_95": 0.08171828715434451
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.43535462365851607,
+    "metrics/recall(B)": 0.3603858488572197,
+    "metrics/mAP50(B)": 0.34012594051517486,
+    "metrics/mAP50-95(B)": 0.20607827548146634,
+    "fitness": 0.20607827548146634
+  }
+}

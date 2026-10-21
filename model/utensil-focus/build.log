@@ -1,0 +1,38 @@
+{
+  "image_counts": {
+    "train": 2353,
+    "val": 743
+  },
+  "counts": {
+    "train": {
+      "food": 2684,
+      "plate": 664,
+      "paper_boat": 0,
+      "utensil": 143,
+      "hinged_container": 74,
+      "napkin": 83,
+      "drink_carton": 893,
+      "condiment_packet": 44,
+      "wrapper": 192,
+      "bottle": 345,
+      "bowl": 129
+    },
+    "val": {
+      "food": 994,
+      "plate": 217,
+      "paper_boat": 0,
+      "utensil": 179,
+      "hinged_container": 47,
+      "napkin": 36,
+      "drink_carton": 406,
+      "condiment_packet": 0,
+      "wrapper": 9,
+      "bottle": 53,
+      "bowl": 2
+    }
+  },
+  "fingerprint": "c6f16be86855476206c8bb9cc789e409350d560fb5cfba5d496602211b571694",
+  "interpretation": "Revised development benchmark; not comparable to old AP. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Unsupported: all 44 packet photos share a background batch."
+}
+Integrity passed: source labels preserved plus hash-bound additions; no recorded capture/original/hash/pixel split overlap.

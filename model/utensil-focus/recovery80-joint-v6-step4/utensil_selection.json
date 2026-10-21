@@ -1,0 +1,24 @@
+{
+  "epoch": 15,
+  "utensil_AP50": 0.22483732329531675,
+  "per_class_AP50": {
+    "food": 0.8185186696050053,
+    "plate": 0.05017266336412462,
+    "utensil": 0.22483732329531675,
+    "hinged_container": 0.3168483765081192,
+    "napkin": 0.06104172363638859,
+    "drink_carton": 0.8324045123508919,
+    "condiment_packet": 0.018301649126333225,
+    "wrapper": 0.022238400488400492,
+    "bottle": 0.1127551004818296,
+    "bowl": 0.024567901234567906
+  },
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-joint-v6-step4/train/weights/best_utensil.pt",
+  "weights_sha256": "dc85666d7aac74ac131934969c6f2434e19fdf51ddbc625ee0030040fe589098",
+  "selection_targets": [
+    "utensil",
+    "condiment_packet"
+  ],
+  "selection_score": 0.018301649126333225,
+  "inherited_from": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-reviewed-val"
+}

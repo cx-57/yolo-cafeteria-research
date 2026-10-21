@@ -1,0 +1,40 @@
+{
+  "overall": {
+    "precision": 0.805466426023869,
+    "recall": 0.690285096254209,
+    "AP50": 0.7540839161501934,
+    "AP50_95": 0.5557364508032058
+  },
+  "per_class": {
+    "plate": {
+      "precision": 0.9237326069459741,
+      "recall": 0.7665719885788901,
+      "AP50": 0.8569564226995408,
+      "AP50_95": 0.7163639650073856,
+      "objects": 237
+    },
+    "wrapper": {
+      "precision": 0.8231739836134199,
+      "recall": 0.8089887640449438,
+      "AP50": 0.8480898041578079,
+      "AP50_95": 0.5782175130741549,
+      "objects": 89
+    },
+    "bottle": {
+      "precision": 0.6694926875122127,
+      "recall": 0.49529453613879315,
+      "AP50": 0.5572055215932313,
+      "AP50_95": 0.3726278743280765,
+      "objects": 45
+    }
+  },
+  "weights": "model/focus-three-class-improvement/meal-replay80-start/train/weights/best_min_ap50.pt",
+  "weights_sha256": "8526865d6171dc30caf395e79abf07a056e626ad04a337ffafdce35e54ae967e",
+  "dataset_fingerprint": "6a2cacb1e86e8128fa3cc607056fa7ba0fff43047e6bb39309d8263dd0ea88d1",
+  "imgsz": 640,
+  "augment": false,
+  "target_min_ap50": 0.8,
+  "minimum_class_AP50": 0.5572055215932313,
+  "all_classes_meet_target": false,
+  "interpretation": "Reviewed public validation; no independent test or improvement claim."
+}

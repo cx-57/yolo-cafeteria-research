@@ -1,0 +1,31 @@
+{
+  "weak_classes": [
+    "utensil",
+    "napkin",
+    "condiment_packet"
+  ],
+  "replay_fraction": 0.15,
+  "seed": 42,
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/grouped-v2/data.yaml",
+  "source_training_views": 2353,
+  "selected_training_views": 525,
+  "weak_original_groups": 202,
+  "strong_only_groups_in_source": 2151,
+  "replay_original_groups": 323,
+  "selected_class_group_support": {
+    "food": 155,
+    "plate": 51,
+    "paper_boat": 0,
+    "utensil": 77,
+    "hinged_container": 11,
+    "napkin": 81,
+    "drink_carton": 118,
+    "condiment_packet": 44,
+    "wrapper": 28,
+    "bottle": 51,
+    "bowl": 17
+  },
+  "validation_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/grouped-v2/images/val",
+  "validation_unchanged": true,
+  "all_class_labels_preserved": true
+}

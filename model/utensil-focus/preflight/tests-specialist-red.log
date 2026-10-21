@@ -1,0 +1,29 @@
+FFF
+======================================================================
+FAIL: test_projection_preserves_decoded_boxes_and_target_scores (test_utensil_packet.SpecialistTests.test_projection_preserves_decoded_boxes_and_target_scores)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_utensil_packet.py", line 35, in test_projection_preserves_decoded_boxes_and_target_scores
+    self.assertIsNotNone(specialist, 'Need learned output-channel projection')
+AssertionError: unexpectedly None : Need learned output-channel projection
+
+======================================================================
+FAIL: test_projection_requires_both_training_reviews_and_keeps_all_validation (test_utensil_packet.SpecialistTests.test_projection_requires_both_training_reviews_and_keeps_all_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_utensil_packet.py", line 17, in test_projection_requires_both_training_reviews_and_keeps_all_validation
+    self.assertIsNotNone(specialist, 'Need a reviewed two-class specialist')
+AssertionError: unexpectedly None : Need a reviewed two-class specialist
+
+======================================================================
+FAIL: test_training_coverage_cannot_cross_into_validation (test_utensil_packet.SpecialistTests.test_training_coverage_cannot_cross_into_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_utensil_packet.py", line 53, in test_training_coverage_cannot_cross_into_validation
+    self.assertIsNotNone(specialist)
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

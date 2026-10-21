@@ -1,0 +1,59 @@
+anyio 4.15.1 offloaded 29
+restored anyio
+charset_normalizer 3.5.2 offloaded 5
+CANDIDATES ['charset_normalizer-3.5.2-cp312-cp312-macosx_10_13_universal2.whl', 'charset_normalizer-3.5.2-cp312-cp312-win_arm64.whl', 'charset_normalizer-3.5.2-cp37-abi3-macosx_10_9_universal2.whl', 'charset_normalizer-3.5.2-cp37-abi3-win_arm64.whl', 'charset_normalizer-3.5.2-py3-none-any.whl']
+cycler 0.12.1 offloaded 1
+restored cycler
+filelock 4.0.12 offloaded 4
+restored filelock
+fonttools 4.66.1 offloaded 177
+CANDIDATES ['fonttools-4.66.1-cp312-cp312-macosx_10_13_universal2.whl', 'fonttools-4.66.1-py3-none-any.whl']
+restored fonttools
+h11 0.16.0 offloaded 4
+restored h11
+httpcore 1.0.9 offloaded 7
+restored httpcore
+idna 3.20 offloaded 2
+restored idna
+jinja2 3.1.6 offloaded 16
+restored jinja2
+markupsafe 3.0.4 offloaded 1
+CANDIDATES ['markupsafe-3.0.4-cp312-cp312-macosx_11_0_arm64.whl', 'markupsafe-3.0.4-cp312-cp312-win_arm64.whl']
+matplotlib 3.11.2 offloaded 183
+CANDIDATES ['matplotlib-3.11.2-cp312-cp312-macosx_11_0_arm64.whl', 'matplotlib-3.11.2-cp312-cp312-win_arm64.whl']
+mpmath 1.3.0 offloaded 44
+restored mpmath
+networkx 3.7 offloaded 265
+restored networkx
+opencv_python 5.0.0.93 offloaded 35
+restored opencv_python
+pillow 12.3.0 offloaded 48
+CANDIDATES ['pillow-12.3.0-cp312-cp312-macosx_11_0_arm64.whl', 'pillow-12.3.0-cp312-cp312-win_arm64.whl']
+pip 24.0 offloaded 193
+restored pip
+polars 2.0.0 offloaded 93
+restored polars
+polars_runtime_32 2.0.0 offloaded 1
+CANDIDATES ['polars_runtime_32-2.0.0-cp310-abi3-macosx_11_0_arm64.whl', 'polars_runtime_32-2.0.0-cp310-abi3-win_arm64.whl']
+psutil 7.2.2 offloaded 5
+CANDIDATES ['psutil-7.2.2-cp36-abi3-macosx_11_0_arm64.whl', 'psutil-7.2.2-cp37-abi3-win_arm64.whl']
+pyparsing 3.3.3 offloaded 9
+restored pyparsing
+python_dateutil 2.9.0.post0 offloaded 5
+restored python_dateutil
+pyyaml 6.0.3 offloaded 13
+CANDIDATES ['pyyaml-6.0.3-cp312-cp312-macosx_11_0_arm64.whl', 'pyyaml-6.0.3-cp312-cp312-win_arm64.whl']
+requests 2.34.2 offloaded 14
+restored requests
+six 1.17.0 offloaded 1
+restored six
+sympy 1.14.0 offloaded 656
+restored sympy
+torch 2.14.1 offloaded 3328
+restored torch
+ultralytics 8.4.175 offloaded 113
+restored ultralytics
+ultralytics_platform 0.1.83 offloaded 9
+restored ultralytics_platform
+urllib3 2.8.0 offloaded 13
+restored urllib3

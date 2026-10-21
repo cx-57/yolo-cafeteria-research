@@ -1,0 +1,269 @@
+{
+  "warm-low-v1": {
+    "baseline": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/warm-low-v1/initial.pt",
+      "weights_sha": "c837af1ad801a7307e898fc89061c3fc953a082bb16ad8dd1de80ea55f038e45",
+      "dataset_fingerprint": "6ee1ccc700420270b6c37eef194c8544f6c4be657b8ce8a480a156424859902a",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.2483196942572867,
+          "recall": 0.29910556906195895,
+          "AP50": 0.20513922755328579,
+          "AP50_95": 0.07605817980193297
+        },
+        "condiment_packet": {
+          "precision": 0.044081603311712673,
+          "recall": 0.19047619047619047,
+          "AP50": 0.024882796215840747,
+          "AP50_95": 0.012200000841330313
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.14620064878449968,
+        "metrics/recall(B)": 0.2447908797690747,
+        "metrics/mAP50(B)": 0.11501101188456327,
+        "metrics/mAP50-95(B)": 0.044129090321631634,
+        "fitness": 0.044129090321631634
+      }
+    },
+    "latest": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/warm-low-v1/train/weights/last.pt",
+      "weights_sha": "6bbef1fac81d66b140af07598c553695021e892d0f4158df58bd3889d7204870",
+      "dataset_fingerprint": "6ee1ccc700420270b6c37eef194c8544f6c4be657b8ce8a480a156424859902a",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.5523949988740979,
+          "recall": 0.5202702702702703,
+          "AP50": 0.49958185852169035,
+          "AP50_95": 0.2314947111892213
+        },
+        "condiment_packet": {
+          "precision": 0.08234953674065544,
+          "recall": 0.40476190476190477,
+          "AP50": 0.06649975867058977,
+          "AP50_95": 0.030758060868413133
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.3173722678073767,
+        "metrics/recall(B)": 0.4625160875160875,
+        "metrics/mAP50(B)": 0.28304080859614006,
+        "metrics/mAP50-95(B)": 0.1311263860288172,
+        "fitness": 0.1311263860288172
+      }
+    },
+    "selected": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/warm-low-v1/best.pt",
+      "weights_sha": "97128909682fa3b222b1778174d9590e5ba9c001b04e80f044035b38c0446aa0",
+      "dataset_fingerprint": "6ee1ccc700420270b6c37eef194c8544f6c4be657b8ce8a480a156424859902a",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.21465263431834036,
+          "recall": 0.40202702702702703,
+          "AP50": 0.233596730881359,
+          "AP50_95": 0.11227021983513792
+        },
+        "condiment_packet": {
+          "precision": 0.06656628843026809,
+          "recall": 0.2857142857142857,
+          "AP50": 0.07361739981702681,
+          "AP50_95": 0.03360122843984351
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.14060946137430422,
+        "metrics/recall(B)": 0.3438706563706564,
+        "metrics/mAP50(B)": 0.15360706534919288,
+        "metrics/mAP50-95(B)": 0.0729357241374907,
+        "fitness": 0.0729357241374907
+      }
+    },
+    "selection": {
+      "epoch": 2,
+      "min_AP50": 0.07357225792413102
+    }
+  },
+  "balanced-v2": {
+    "baseline": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/balanced-v2/initial.pt",
+      "weights_sha": "14f36f1418280898dee39e42f420ae8fbdec099352b40f818b90e73f845e4c74",
+      "split": "val",
+      "dataset_fingerprint": "3be7a43fa5c7808fe55b92d285a4fdaa92e79a3371cc0b58e9a37a93ee056220",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.5523949988740979,
+          "recall": 0.5202702702702703,
+          "AP50": 0.49958185852169035,
+          "AP50_95": 0.2314947111892213
+        },
+        "condiment_packet": {
+          "precision": 0.08234953674065544,
+          "recall": 0.40476190476190477,
+          "AP50": 0.06649975867058977,
+          "AP50_95": 0.030758060868413133
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.3173722678073767,
+        "metrics/recall(B)": 0.4625160875160875,
+        "metrics/mAP50(B)": 0.28304080859614006,
+        "metrics/mAP50-95(B)": 0.1311263860288172,
+        "fitness": 0.1311263860288172
+      }
+    },
+    "latest": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/balanced-v2/train/weights/last.pt",
+      "weights_sha": "397853deb4b8f21a952a9b58ee5af49e672aa92768bcd0e72d306a8db9a13622",
+      "split": "val",
+      "dataset_fingerprint": "3be7a43fa5c7808fe55b92d285a4fdaa92e79a3371cc0b58e9a37a93ee056220",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.391313001452196,
+          "recall": 0.4966216216216216,
+          "AP50": 0.3963512161495352,
+          "AP50_95": 0.18810007932354386
+        },
+        "condiment_packet": {
+          "precision": 0.0719550357076913,
+          "recall": 0.30952380952380953,
+          "AP50": 0.11010853153830279,
+          "AP50_95": 0.049006306061479064
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.23163401857994365,
+        "metrics/recall(B)": 0.40307271557271557,
+        "metrics/mAP50(B)": 0.253229873843919,
+        "metrics/mAP50-95(B)": 0.11855319269251148,
+        "fitness": 0.11855319269251148
+      }
+    },
+    "selected": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/balanced-v2/best.pt",
+      "weights_sha": "285843282860a903a2c5f180da49b8c4646a5e25e1d8472886f564bb19b04af4",
+      "split": "val",
+      "dataset_fingerprint": "3be7a43fa5c7808fe55b92d285a4fdaa92e79a3371cc0b58e9a37a93ee056220",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.527740291308571,
+          "recall": 0.47297297297297297,
+          "AP50": 0.47465798574104817,
+          "AP50_95": 0.24357619136146963
+        },
+        "condiment_packet": {
+          "precision": 0.15597657786587857,
+          "recall": 0.23809523809523808,
+          "AP50": 0.11427792917440442,
+          "AP50_95": 0.06022607617771277
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.3418584345872248,
+        "metrics/recall(B)": 0.3555341055341055,
+        "metrics/mAP50(B)": 0.2944679574577263,
+        "metrics/mAP50-95(B)": 0.15190113376959122,
+        "fitness": 0.15190113376959122
+      }
+    },
+    "selection": {
+      "epoch": 2,
+      "min_AP50": 0.11434045413652777
+    }
+  },
+  "expanded-v3": {
+    "baseline": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/expanded-v3/initial.pt",
+      "weights_sha": "fd0ecbf4ecd9825f80e94519204d0c480b9796297973facfc4b1268e342dd352",
+      "split": "val",
+      "dataset_fingerprint": "26d5dda6b6c0396de3e967f8d2323f67b8e9769c7de9710fad7380bb1ab31ab2",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.527740291308571,
+          "recall": 0.47297297297297297,
+          "AP50": 0.47465798574104817,
+          "AP50_95": 0.24357619136146963
+        },
+        "condiment_packet": {
+          "precision": 0.15597657786587857,
+          "recall": 0.23809523809523808,
+          "AP50": 0.11427792917440442,
+          "AP50_95": 0.06022607617771277
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.3418584345872248,
+        "metrics/recall(B)": 0.3555341055341055,
+        "metrics/mAP50(B)": 0.2944679574577263,
+        "metrics/mAP50-95(B)": 0.15190113376959122,
+        "fitness": 0.15190113376959122
+      }
+    },
+    "latest": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/expanded-v3/train/weights/last.pt",
+      "weights_sha": "b6370161f2516929df5535e4bd69876a3b935575798e879eb0d0d0590e4ac719",
+      "split": "val",
+      "dataset_fingerprint": "26d5dda6b6c0396de3e967f8d2323f67b8e9769c7de9710fad7380bb1ab31ab2",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.7599096854127337,
+          "recall": 0.47635135135135137,
+          "AP50": 0.5936942652885109,
+          "AP50_95": 0.3128988821299624
+        },
+        "condiment_packet": {
+          "precision": 0.12303273080860386,
+          "recall": 0.23809523809523808,
+          "AP50": 0.07275667909857422,
+          "AP50_95": 0.03787524779909238
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.4414712081106688,
+        "metrics/recall(B)": 0.3572232947232947,
+        "metrics/mAP50(B)": 0.33322547219354254,
+        "metrics/mAP50-95(B)": 0.1753870649645274,
+        "fitness": 0.1753870649645274
+      }
+    },
+    "selected": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/expanded-v3/best.pt",
+      "weights_sha": "b8f54411e9ffa87abd31d7e5c7a699f64c56112aec4e6df79220018cdd800100",
+      "split": "val",
+      "dataset_fingerprint": "26d5dda6b6c0396de3e967f8d2323f67b8e9769c7de9710fad7380bb1ab31ab2",
+      "independent_test": false,
+      "classes": {
+        "utensil": {
+          "precision": 0.5423748415741176,
+          "recall": 0.5485555161076728,
+          "AP50": 0.5217148769613602,
+          "AP50_95": 0.24597024701363507
+        },
+        "condiment_packet": {
+          "precision": 0.09237710355306035,
+          "recall": 0.4523809523809524,
+          "AP50": 0.1587734174845636,
+          "AP50_95": 0.08955428888531955
+        }
+      },
+      "overall": {
+        "metrics/precision(B)": 0.317375972563589,
+        "metrics/recall(B)": 0.5004682342443126,
+        "metrics/mAP50(B)": 0.3402441472229619,
+        "metrics/mAP50-95(B)": 0.1677622679494773,
+        "fitness": 0.1677622679494773
+      }
+    },
+    "selection": {
+      "epoch": 1,
+      "min_AP50": 0.15890794345883366
+    }
+  }
+}

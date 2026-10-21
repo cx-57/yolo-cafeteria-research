@@ -1,0 +1,7 @@
+{
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt",
+  "source_sha": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+  "output_sha": "980bdeab53d45b349982c7acfe22d4a9bce46823d054ed714ecb3428225380b7",
+  "fresh_two_class_classifier": true,
+  "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8"
+}

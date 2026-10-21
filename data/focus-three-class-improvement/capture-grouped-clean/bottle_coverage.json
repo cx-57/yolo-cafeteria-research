@@ -1,0 +1,14 @@
+{
+  "train": {
+    "bottle_images": 302,
+    "bottle_objects": 356,
+    "objects_below4pct": 140,
+    "multiple_bottle_images": 23
+  },
+  "val": {
+    "bottle_images": 55,
+    "bottle_objects": 67,
+    "objects_below4pct": 51,
+    "multiple_bottle_images": 10
+  }
+}

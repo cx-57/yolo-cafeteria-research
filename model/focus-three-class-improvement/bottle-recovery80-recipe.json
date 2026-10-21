@@ -1,0 +1,54 @@
+{
+  "target_min_ap50": 0.8,
+  "wall_limit_minutes": 9,
+  "primary_comparison_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
+  "hypothesis": "Fine-tune the saved 55.12% bottle AP50 checkpoint using the repaired, hash-verified external-bottle dataset and existing replay policy. Original 1282 images/labels/splits and both validation sets stay fixed. A new optimizer phase is required because the training dataset changed; this does not isolate data effects from optimizer effects.",
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/meal-replay80-chunk9/train/weights/last.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched-clean/data-replay.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "nbs": 4,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 9.55e-05,
+    "lrf": 0.1,
+    "mosaic": 0,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0,
+    "warmup_epochs": 0.6013667425968109,
+    "warmup_bias_lr": 0.0
+  },
+  "sampling": {
+    "unique_images": 1068,
+    "views_per_epoch": 1756,
+    "source_unique": {
+      "condiments": 44,
+      "dry_wet_waste": 204,
+      "food_american": 19,
+      "plate": 185,
+      "school_lunch": 297,
+      "school_lunch_asian": 20,
+      "trash_detection": 133,
+      "utensil": 5,
+      "waste_detection_v3": 149,
+      "external_bottle": 12
+    },
+    "source_views": {
+      "condiments": 44,
+      "dry_wet_waste": 204,
+      "food_american": 19,
+      "plate": 401,
+      "school_lunch": 297,
+      "school_lunch_asian": 20,
+      "trash_detection": 569,
+      "utensil": 5,
+      "waste_detection_v3": 149,
+      "external_bottle": 48
+    }
+  },
+  "source_checkpoint_sha256": "c6cd2f345c4e1bf5f6712184b5a45703c633dd1f914d51dfe1b173d6e4cf7f90",
+  "dataset_fingerprint": "8bca75a76b56733cfc2b9fb5a43c67895ab9409fbb52068f0284c80c6e50b462",
+  "acceptance": "Separately evaluate last.pt and best_min_ap50.pt on fixed126 and expanded226; never replace the baseline merely for higher expanded mean AP."
+}

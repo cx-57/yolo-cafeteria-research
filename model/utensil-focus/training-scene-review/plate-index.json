@@ -1,0 +1,4185 @@
+[
+  {
+    "name": "plate__train__lvis_000000001455.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "8f4a1d0c7aaa40a0ca0f0fd0af425d67cf60bbd956bca8fcea231a77c0a85a55",
+    "pixels": "514aea9e496c226e618b25570e30be91e5da239e6f245abae873cecca331769d",
+    "group": "plate__lvis_000000001455",
+    "capture": null,
+    "rows": [
+      "1 0.860930000 0.601813333 0.195300000 0.096586667",
+      "1 0.864880000 0.589626667 0.195600000 0.104960000",
+      "1 0.808460000 0.584000000 0.088840000 0.099200000",
+      "1 0.870990000 0.558933333 0.201300000 0.150880000",
+      "0 0.465270000 0.590133333 0.124660000 0.113173333",
+      "0 0.796540000 0.201973333 0.250240000 0.309120000"
+    ],
+    "input_label_sha256": "438aa13a741bc274c3fd21deab824eab133abb9af5def392b93567e663eadf8a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000004386.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f9cef2aebf61ac0e34a8c2212c97fad1f842737c6b3ef5955a1b439b034df09b",
+    "pixels": "1bddc1a9a5925d223c7b200ebb1176a87a7e6eadb2dbb9c5325a59bcc99f67ed",
+    "group": "plate__lvis_000000004386",
+    "capture": null,
+    "rows": [
+      "1 0.417283372 0.403296875 0.306744731 0.069687500",
+      "0 0.49297424 0.37812500 0.15690867 0.09062500",
+      "0 0.37236534 0.39531250 0.19203747 0.07187500"
+    ],
+    "input_label_sha256": "6b56cd8fde38ae88ef98ebcf68c730c6cb3b5493e2ed7827d0485453ab9a9d9d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000009908.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "54617a413cef01a25591b325a497cd4cbf24da62e9e0d6e01be5eb7f6f7cc7d8",
+    "pixels": "87af8954d199fdba92833879dfa371f3c3dd6abe0742811db302854610b67c92",
+    "group": "plate__lvis_000000009908",
+    "capture": null,
+    "rows": [
+      "1 0.500117188 0.514041667 0.999765624 0.965291667",
+      "0 0.574358974 0.445392491 0.753846154 0.590443686"
+    ],
+    "input_label_sha256": "9df4589c950b9dd38cb2ff5c570c9b88e9e2bfc5811e917f61494730e6fc9841",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000011042.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "155c476a191f672beff20670ea20af63e647def8fa1808f1382906e8ca0a46dc",
+    "pixels": "32a3be02137b6db8946f45a04dfe8d21c378dd6078a82e760fd7c6244a4fbb14",
+    "group": "plate__lvis_000000011042",
+    "capture": null,
+    "rows": [
+      "1 0.567140625 0.570385417 0.835968750 0.859229167",
+      "0 0.507601562 0.531677083 0.942046875 0.791104167"
+    ],
+    "input_label_sha256": "dfc48645d5af1dfa5af51a0d4c5272f38eecbaba522f1fc5e84493ea51491e9d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000011403.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4f147d6dd3474001dff62db036028705a5cbaf887a54b3ab4cf0d545e208201e",
+    "pixels": "61b1c6a5f3a1d109f118c8af520d105e77cf31aaad80ead750ee3697379ca301",
+    "group": "plate__lvis_000000011403",
+    "capture": null,
+    "rows": [
+      "1 0.551335937 0.537312500 0.825609375 0.915791667"
+    ],
+    "input_label_sha256": "a5b9ec65510d8fc8b552ed4b829bb1be178d1107ad440500c0e168cd56dd09fc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000014402.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "92a80be2e33ad973589b54bda977171da3cddf030db0a6be16ca962b184ae431",
+    "pixels": "20ed92699d6c7f588f9c281f9996e8e201d7c74ccc03ab05864b756691ab7c5f",
+    "group": "plate__lvis_000000014402",
+    "capture": null,
+    "rows": [
+      "1 0.299543326 0.780515625 0.511124122 0.170531250",
+      "1 0.734566745 0.978312500 0.426932084 0.043375000"
+    ],
+    "input_label_sha256": "af04fd33a87efe1c011fc3d53050b2af46874b21c31f64dc0a7e35ab988dc198",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000018299.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "849a83afd6fc57f2ee0c6a7465c2e996e7b931c3d911928c05b66fe3ccef0903",
+    "pixels": "6aee36891610631507d86c17221abb8bb07d1af4f7fcf7eb8db0733bcbda2c37",
+    "group": "plate__lvis_000000018299",
+    "capture": null,
+    "rows": [
+      "1 0.899156250 0.351288056 0.201687500 0.114238876",
+      "1 0.250390625 0.616346604 0.306312500 0.106791569",
+      "1 0.525125000 0.237505855 0.226281250 0.088548009",
+      "1 0.220250000 0.357213115 0.251406250 0.111522248",
+      "0 0.229487179 0.521153846 0.269230769 0.142307692",
+      "0 0.234615385 0.596153846 0.269230769 0.107692308",
+      "0 0.503846154 0.442307692 0.248717949 0.100000000",
+      "0 0.539743590 0.321153846 0.182051282 0.073076923",
+      "0 0.803846154 0.426923077 0.197435897 0.092307692"
+    ],
+    "input_label_sha256": "fd0e3543a9345a25983c2f2a6d98cffc610320d36d42cd4f5c611612e398b914",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000019838.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "72c23de4d6ff8194cc1bced02deb97f1cd06a128c721b2cc610082bb06ceb6ce",
+    "pixels": "c08d6d4faaf953d2a49278445d5528b9603473a5bba568bc1058dcd1492cf533",
+    "group": "plate__lvis_000000019838",
+    "capture": null,
+    "rows": [
+      "1 0.328125000 0.945367188 0.446958333 0.109265624",
+      "1 0.524916667 0.684445312 0.435416667 0.131515625",
+      "0 0.155927083 0.938554687 0.311854167 0.122890625",
+      "0 0.462427083 0.390242188 0.339354167 0.139484375"
+    ],
+    "input_label_sha256": "e89f2d012444f989156249237f62d979238b29dd837b5b49f2e2e5ebccfae239",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000019957.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2ae337325c7baf66ef983de3ef7e5a0b510b6af7215d1c856a0831e2577c6365",
+    "pixels": "d96004d2acf6de99485a14a9ed2adcf0cfd4fa70d20708c3cbc83ff2a5233146",
+    "group": "plate__lvis_000000019957",
+    "capture": null,
+    "rows": [
+      "1 0.197253333 0.563740000 0.394506666 0.166320000",
+      "1 0.536066667 0.863500000 0.457413333 0.271120000",
+      "0 0.207171315 0.544776119 0.318725100 0.134328358",
+      "0 0.565737052 0.892537313 0.470119522 0.208955224"
+    ],
+    "input_label_sha256": "5b2e0477dd3fc8fd5520e336c5b678baeaf53ca21c4077868edce187c5fbc90c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000021280.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "883ffc4c849057daa05d8a77ba46b025b638385cee8a36ffbf6be9a602ccbf44",
+    "pixels": "c497b635cf3b17f5a098f2d561013f1d98aebded19833314bf22777af3ee7158",
+    "group": "plate__lvis_000000021280",
+    "capture": null,
+    "rows": [
+      "1 0.436281250 0.949439252 0.199875000 0.098084112",
+      "0 0.455128205 0.867816092 0.089743590 0.095785441",
+      "0 0.667948718 0.885057471 0.115384615 0.084291188"
+    ],
+    "input_label_sha256": "f205a6a4af392cc5deee812f834f93cbae75de7ecdcdadcdac783d605170a5af",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000021364.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d39fe43fe91fb34520f0f231a413e8fa2da706556f1cbf9b8d9f5f673249c193",
+    "pixels": "83e2f97ce7855b65ef59fe720604bdb1c3da627e4d53000fbe4b4cdb41265e29",
+    "group": "plate__lvis_000000021364",
+    "capture": null,
+    "rows": [
+      "1 0.908179687 0.882646370 0.182421875 0.137845433",
+      "1 0.908062500 0.796768150 0.183875000 0.121545667",
+      "1 0.907617187 0.822822014 0.182609375 0.124847775",
+      "1 0.907835938 0.936100703 0.181296875 0.113934426",
+      "1 0.907554688 0.753021077 0.182859375 0.126323185",
+      "1 0.908265625 0.732693208 0.183468750 0.120749415",
+      "1 0.907546875 0.778138173 0.182562500 0.120679157",
+      "1 0.908406250 0.659789227 0.183187500 0.242576112",
+      "1 0.889242188 0.950644028 0.134390625 0.098711944",
+      "1 0.906812500 0.814449649 0.181718750 0.120889930",
+      "1 0.907679688 0.859110070 0.182734375 0.123325527",
+      "1 0.908460937 0.837049180 0.183078125 0.121779859",
+      "1 0.907632812 0.763079625 0.184265625 0.127704918",
+      "1 0.907734375 0.909215457 0.183250000 0.120679157",
+      "1 0.907625000 0.917470726 0.183062500 0.134051522",
+      "1 0.908109375 0.871709602 0.182718750 0.116627635"
+    ],
+    "input_label_sha256": "c72fc7b724e4be6959d8e72f477862502eb1c5cef77428f6dc13f9f68941b5ba",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000026676.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2395ef91051c9b46ef5badc7e7abf1f2b591ef8912a5185fc4bc7055ead12a09",
+    "pixels": "d36d13cfe8bd38dff0322797aa77a9e76afbb845910948622ebb78d9cb02b0c2",
+    "group": "plate__lvis_000000026676",
+    "capture": null,
+    "rows": [
+      "1 0.472851562 0.537177986 0.669859375 0.784379391",
+      "1 0.117812500 0.733805621 0.235625000 0.532388759",
+      "0 0.455140625 0.550468384 0.315250000 0.514613583",
+      "0 0.600937500 0.439355972 0.276406250 0.501100703"
+    ],
+    "input_label_sha256": "181a1ae0aa7a1d0797c8424c8ce259810ef168a7e2b7633e7e172e11ff21127e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000031922.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "dbf60ae9df9e17c380d5bf912e5c4fbd32f55af6c7ea5c4fc27ed644c080c1c7",
+    "pixels": "9a66dddf726483d76bb173ab665b8ac74abcb3358c80c3c0b103e7f62fa5c9e5",
+    "group": "plate__lvis_000000031922",
+    "capture": null,
+    "rows": [
+      "1 0.119320312 0.706489583 0.208859375 0.051604167",
+      "1 0.290453125 0.891458333 0.241906250 0.109500000",
+      "1 0.025593750 0.969875000 0.051187500 0.060250000",
+      "0 0.310256410 0.829351536 0.112820513 0.081911263"
+    ],
+    "input_label_sha256": "a4bd9563c140c3bacee929e51d08e57ed2e973ed5eece98c780cd61d2b5686ba",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000034056.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "52de80d82d576dd2406d3e166c0d41769eeaf8dd60e2712ca655365f0a3ee7c7",
+    "pixels": "aeb5e921d5b3d7119beb08bc7299e6b38b9f1a6336aaa488c06756b2ce479c27",
+    "group": "plate__lvis_000000034056",
+    "capture": null,
+    "rows": [
+      "1 0.658629977 0.524539063 0.262833724 0.048953125",
+      "0 0.323660714 0.511940299 0.343750000 0.140298507"
+    ],
+    "input_label_sha256": "e508d7c5edccfd94fcdda8bbdcea57e5a651c60b59d2970e35b247105415dea3",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000036574.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "735f4fbc5f444685bc6af9536d897916d8ad5f5c19bf1ead35786dc7ccce9541",
+    "pixels": "c918f901e2cb9e9b3525fbf34a732496322cdff50eb22505f3fb3f4f965dd445",
+    "group": "plate__lvis_000000036574",
+    "capture": null,
+    "rows": [
+      "1 0.337273438 0.783229167 0.089796875 0.074333333"
+    ],
+    "input_label_sha256": "5df31ca4d2c03fc934f9c574b7a29d5e668cfe8d60c0fe2b43fb7a14d9f41e52",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000039446.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "48b0253c37cb2db9f7a2b9cc10f363d699f9d9f7ded9fc50e81b4f14e0490055",
+    "pixels": "a6cb2ccdac623a6435349fbbdb1fca89127486004cc9c16f14d0474841157cf5",
+    "group": "plate__lvis_000000039446",
+    "capture": null,
+    "rows": [
+      "1 0.584802083 0.630750000 0.279937500 0.084218750",
+      "0 0.589145833 0.626625000 0.182333333 0.073187500"
+    ],
+    "input_label_sha256": "bd064a121a4f77299a47da52dd2cba698b25d1ba9ef7eafc494add0f155b8132",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000042683.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d050714de14765c6ad1009ed5a5c6947abf8f5333e46ffde270b80578ee2a434",
+    "pixels": "61a564b14f02f0b2da6377d559e359e47e0017af72de2486b87c6684e63be33d",
+    "group": "plate__lvis_000000042683",
+    "capture": null,
+    "rows": [
+      "1 0.497459150 0.583627451 0.779428105 0.358039216"
+    ],
+    "input_label_sha256": "aa6e32fb675fc6bc5807ffe0901561256417ceb871c709583369e4e3c9b7ec29",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000042834.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c1f1af6f4f31b3e72c1c977686824b05e402d8349db9446bedce958fa407be54",
+    "pixels": "269df8d46f26275feedbd959c7676a9520650754f6a8f6c475569d721a1c5196",
+    "group": "plate__lvis_000000042834",
+    "capture": null,
+    "rows": [
+      "1 0.543437500 0.553070312 0.318166667 0.171734375",
+      "1 0.075083333 0.573039063 0.150166666 0.149953125"
+    ],
+    "input_label_sha256": "09860550d68e97df9f13cc5568e4e74852a3cd80216bab4a06ce1980818b13d1",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000044204.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "adea7e0761165b1ecdfe867a4b8d1016ac33b6109bf36e789074e94018600af6",
+    "pixels": "45808e16439815942a68039c60805cee8af5adedec3fb1e9dd530fa2d3fc5e4b",
+    "group": "plate__lvis_000000044204",
+    "capture": null,
+    "rows": [
+      "1 0.446486928 0.795776144 0.616307190 0.281258170",
+      "0 0.548864379 0.782238562 0.571519608 0.325522876"
+    ],
+    "input_label_sha256": "762ebb49f95856c90619b6bf7ef55af389bc5a90c5566a26b279b7c82cabaddc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000044839.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f990176dc3afd8eaff736ca93d03dd41ec707d07cf0321d137cd1d1dba87bd45",
+    "pixels": "a9a14d6f2949c16297166f2f0e2080fcd76145c7924be70096722a0707e59b5e",
+    "group": "plate__lvis_000000044839",
+    "capture": null,
+    "rows": [
+      "1 0.458601563 0.924716981 0.137578125 0.034952830",
+      "1 0.796398437 0.920707547 0.140921875 0.034433962",
+      "1 0.200484375 0.917311321 0.111562500 0.032924528",
+      "1 0.979656250 0.371273585 0.040093750 0.013537736",
+      "1 0.648265625 0.446792453 0.074187500 0.020377358",
+      "1 0.058585937 0.980259434 0.117171874 0.039481132",
+      "1 0.562882813 0.334929245 0.032890625 0.015235849",
+      "0 0.180890625 0.892346698 0.052468750 0.060731132",
+      "0 0.460531250 0.903290094 0.096375000 0.052240566",
+      "0 0.995210937 0.352523585 0.009578125 0.025754717",
+      "0 0.803367187 0.900754717 0.090546875 0.056179245",
+      "0 0.555609375 0.319752358 0.022125000 0.022146226",
+      "0 0.660242187 0.428349057 0.040046875 0.032500000"
+    ],
+    "input_label_sha256": "effc487dc4d52ed1c0b17bb69456ad0e77c28e4ea13f7c87c9909e7cc1829ffc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000047285.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1fc17a6de671be17c34d4e0791d10fa9d0edecfdd239b7bcdeec75075c7b0b56",
+    "pixels": "1eb3ee49eebc148d2e9fcc37ab11c081cb7934bf55539293f03885d5ad6c1d4c",
+    "group": "plate__lvis_000000047285",
+    "capture": null,
+    "rows": [
+      "1 0.325718750 0.436643192 0.032875000 0.050657277",
+      "1 0.304828125 0.308650235 0.011125000 0.004389671",
+      "1 0.392328125 0.495140845 0.041531250 0.019765258"
+    ],
+    "input_label_sha256": "8769cebe15bb5a429e4e57ea83896faa06e342825e992a6ebe1f51363a8876b3",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000047658.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0f0b9d8eb8975ec85f720b4d246bda0f0fa47ebc84e6e4f9a1eeffc0b32902d4",
+    "pixels": "9f6033434063aff605bccc7f4c72d467621333cfdb5d3fddabef5b734618bc8e",
+    "group": "plate__lvis_000000047658",
+    "capture": null,
+    "rows": [
+      "1 0.670620000 0.878920000 0.487440000 0.099360000",
+      "0 0.500000000 0.658208955 0.994029851 0.570149254"
+    ],
+    "input_label_sha256": "3c844ab49c5f6c7f334bb3d4b44d1b1c37507b7645769aba1aa9d5493ae77100",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000049128.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4ba001ff4f80a211cc2b740dd9e6699838201930e2be51476829370cd5581fd8",
+    "pixels": "0f16c22f7a4498601617d12c339085b813c0a90582e1376e5ca0f8dd0fc2f306",
+    "group": "plate__lvis_000000049128",
+    "capture": null,
+    "rows": [
+      "1 0.707020833 0.680750000 0.194208333 0.093250000",
+      "1 0.870791667 0.974429688 0.072625000 0.051140625",
+      "1 0.603125000 0.893453125 0.490833333 0.213093750",
+      "1 0.022541667 0.957765625 0.045083333 0.084468750",
+      "1 0.274145833 0.951085937 0.176958333 0.097828125",
+      "1 0.565614583 0.500507812 0.083437500 0.031796875"
+    ],
+    "input_label_sha256": "4cfc753763019d771d0d158f301ead3a8ace81bbf49d521b03e959b7d42a6e66",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000051335.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "68d44a2a6b755cc4eb81716b1542583465ed96e4fdc919cbfe3e793d3de9c918",
+    "pixels": "c40f351d124c19b4d732b04dec8a267f779a76b66fad2f02616a2e5f8210ba1d",
+    "group": "plate__lvis_000000051335",
+    "capture": null,
+    "rows": [
+      "1 0.477957516 0.862818627 0.252712418 0.179232026",
+      "0 0.543283582 0.504477612 0.143283582 0.167164179",
+      "0 0.077611940 0.704477612 0.125373134 0.077611940",
+      "0 0.494029851 0.922388060 0.068656716 0.053731343"
+    ],
+    "input_label_sha256": "8e7758af881edc5cf351c1faa1d78e3ea75c642adfbb7e2b3fdf26526f954575",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000052494.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ca4c29b0c0b86b0bc89bfd91d1b2c84a090a60c1779636504e7808df9c29c61c",
+    "pixels": "26b7f3100724390872a8b7e33dc06de5acb794fc28ff391bf1021abdbb501472",
+    "group": "plate__lvis_000000052494",
+    "capture": null,
+    "rows": [
+      "1 0.517187500 0.493536896 0.641875000 0.911348601"
+    ],
+    "input_label_sha256": "8ada97b52ad1b59635f8aaa73e751a0c582e065c4ce4855630b320139c7e8f43",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000053301.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ba765b34c35798e5980435ba3bfd8b5b423b248069e79bd3deaf21f5e6ca5c5e",
+    "pixels": "19b9789197b66226fd9ac4be851b26256ef1a1b7ddfde3cf78835e03e15696e1",
+    "group": "plate__lvis_000000053301",
+    "capture": null,
+    "rows": [
+      "1 0.707470000 0.656226667 0.585060000 0.236613333",
+      "0 0.710250000 0.452240000 0.578140000 0.470666667"
+    ],
+    "input_label_sha256": "d4725918668008724edddbba7b9bd1e6f69ef5d7d1d42bf4711f9dc816823cf1",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000053388.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "285a0ecdd8e31e33913d7fc6523f46fda740afef93a41161cdb5fe8bf5d3cd5d",
+    "pixels": "0fc910a5af37327a3c542d3ebb67e3570c761ed1bcb33b9a013dc4a7805564cc",
+    "group": "plate__lvis_000000053388",
+    "capture": null,
+    "rows": [
+      "1 0.177992188 0.769413717 0.354140625 0.453871681",
+      "1 0.606031250 0.091692478 0.340781250 0.182853982",
+      "0 0.142307692 0.869090909 0.269230769 0.261818182",
+      "0 0.701282051 0.641818182 0.587179487 0.716363636",
+      "0 0.623076923 0.069090909 0.205128205 0.138181818"
+    ],
+    "input_label_sha256": "a1d8e2865a3c0b0cac8a1fb36fd2e2e9b0cbc75a9e4f6b7d809c95f3b249fb19",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000065163.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "583613b4b0ac43f5b966c8400d93d450ce1c4c8dfd409248149ea44bffc63185",
+    "pixels": "dd4ed988442ecd8dbe9c3e8fb8c7854bdd2f3644b54f86ca8a02f4088a28da21",
+    "group": "plate__lvis_000000065163",
+    "capture": null,
+    "rows": [
+      "1 0.845523438 0.915354167 0.308953125 0.169291666",
+      "0 0.581218750 0.485125000 0.401875000 0.379875000",
+      "0 0.886312500 0.966052083 0.098937500 0.065062500"
+    ],
+    "input_label_sha256": "a14013d13411e7d10dc04aab539fe357a38437df36a501adb0bb0158b15fb299",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000066129.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d510e36300c8da5274ed0f2057d43fa5e367ff1bc11a638ec23a839a0f7c8c42",
+    "pixels": "50bbf7edf194e841135e4575408fb677a0289740e3365e58a24be1001f3835ba",
+    "group": "plate__lvis_000000066129",
+    "capture": null,
+    "rows": [
+      "1 0.827117188 0.771791667 0.256921875 0.243250000",
+      "0 0.470437500 0.682937500 0.503437500 0.446750000"
+    ],
+    "input_label_sha256": "b72246a5183ce9a40f4e0a14773be172e4176240a6ac8ed53bcc0473b31b53fc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000067537.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "299b76e258600c851f92b23ba811cb5cf44b56fa8fbc247ca034c4b375b67d9b",
+    "pixels": "b462ffdad748a19139c143b85c53ae3755acccfcc61e0c017e291716b63d3566",
+    "group": "plate__lvis_000000067537",
+    "capture": null,
+    "rows": [
+      "1 0.523718750 0.703466042 0.031593750 0.043138173",
+      "1 0.584859375 0.941112412 0.134031250 0.117775176",
+      "1 0.774195313 0.827646370 0.199046875 0.130936768",
+      "1 0.377578125 0.747985948 0.073812500 0.047025761",
+      "1 0.339835938 0.485597190 0.038234375 0.036861827",
+      "1 0.248921875 0.958957845 0.154343750 0.082084309",
+      "1 0.340851563 0.711651054 0.045421875 0.049531616"
+    ],
+    "input_label_sha256": "78e4cb705cf73a4f7fe356f7b43cb59ba4431fc5cd3bafb367e75f227a841a42",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000071136.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5f6566fc869ade4c3e337dae576809fd50068969eb009c6003f2bf1c1129ab9b",
+    "pixels": "51ebb61671a18d65c7cc6fbf7f273afa05569600ef590a9bfbf06b0ecd253877",
+    "group": "plate__lvis_000000071136",
+    "capture": null,
+    "rows": [
+      "1 0.940328125 0.399072917 0.119343750 0.175104167",
+      "1 0.943882813 0.658239583 0.111203125 0.221354167",
+      "1 0.005648438 0.874333333 0.011296875 0.113875000",
+      "1 0.012500000 0.563666667 0.025000000 0.124916667",
+      "0 0.467101563 0.416375000 0.779078125 0.622041667"
+    ],
+    "input_label_sha256": "3660a24b9dd8b839d58900be7436c52f96fda20ed12e4929ab7223da9bb61c94",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000072866.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c81551ce82c1cab28c3fd42d37cd0914109d8fa0c27d62dcbe0924529b94d566",
+    "pixels": "128e15e1dc8f4d5e860d654aa02d990154c33213d5b3d9c2cf1dc2b3b561ad0a",
+    "group": "plate__lvis_000000072866",
+    "capture": null,
+    "rows": [
+      "1 0.182429245 0.889992188 0.333018868 0.112765625",
+      "1 0.187606132 0.898734375 0.332900943 0.112000000",
+      "1 0.190224057 0.865382813 0.269740566 0.118953125"
+    ],
+    "input_label_sha256": "d8333099017970ad7d6e433e2b9001cf33cc33c7a5e77ff90e7f8431049e4d1b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000075339.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "55312bd603a153d99a1c0093dda36e8a868d7b996ac907c49353c6ad33db8ab4",
+    "pixels": "f19835255b006676a27227cb3017223b77b40068cf79259e196ea8252ae34ddc",
+    "group": "plate__lvis_000000075339",
+    "capture": null,
+    "rows": [
+      "1 0.894515625 0.691779859 0.093750000 0.037236534",
+      "1 0.473968750 0.608278689 0.045062500 0.015667447",
+      "1 0.512617187 0.572552693 0.113234375 0.037096019",
+      "1 0.927273438 0.815995316 0.117578125 0.057002342",
+      "1 0.825007812 0.401955504 0.050171875 0.015807963",
+      "0 0.352564103 0.632692308 0.171794872 0.065384615",
+      "0 0.517948718 0.561538462 0.092307692 0.053846154",
+      "0 0.960256410 0.832692308 0.074358974 0.057692308",
+      "0 0.871794872 0.657692308 0.076923077 0.053846154",
+      "0 0.891025641 0.775000000 0.089743590 0.065384615"
+    ],
+    "input_label_sha256": "fb8f55facd8999f3315c6f2c146bef9522ba6f6ae64a8153b9a093f5d3212149",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000075628.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4f1c78e84b0830581ffbbe49f65b6e15f446424baaca41cad2171faf4e2a188c",
+    "pixels": "1daa1108df1c6b597ef1bd211722b9f4b771e149ad13ef2b29beb4b85f5fe5f5",
+    "group": "plate__lvis_000000075628",
+    "capture": null,
+    "rows": [
+      "1 0.961000000 0.010992991 0.035125000 0.021985981",
+      "1 0.716460937 0.068948598 0.300421875 0.128598131",
+      "1 0.031625000 0.327394860 0.059937500 0.253574766"
+    ],
+    "input_label_sha256": "00c0d6e391b253d465443a0407d02ccb0b168f483399bdfa21b430c998deffe7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000078695.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d623ca0ec65274a41714a0051769432d613798d14ed54ccc4290a59d346a7415",
+    "pixels": "70d1fde889ae1308192632a9086ab341b7f3624b41dda111d31c0a5977a55321",
+    "group": "plate__lvis_000000078695",
+    "capture": null,
+    "rows": [
+      "1 0.370359375 0.595458333 0.740718750 0.666500000",
+      "0 0.211538462 0.406143345 0.423076923 0.307167235",
+      "0 0.198717949 0.687713311 0.182051282 0.344709898",
+      "0 0.556410256 0.605802048 0.235897436 0.501706485"
+    ],
+    "input_label_sha256": "7ffeb57efface0d097b930a81154d625939a52980f2ebed5e15713b263f04fa0",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000079754.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d6648264d4b80b23820e809e2f7bcc8fe77ab8ed230e03cfd21a0f4b7b47b999",
+    "pixels": "b07f9e4f631141d9b18c9e212317a75bd7a8a59582084dc3521f20eed03d159a",
+    "group": "plate__lvis_000000079754",
+    "capture": null,
+    "rows": [
+      "1 0.497773437 0.665836120 0.175203125 0.057224080",
+      "0 0.477715877 0.626865672 0.114206128 0.059701493",
+      "0 0.583565460 0.605970149 0.064066852 0.065671642"
+    ],
+    "input_label_sha256": "ae02afee9be9c7399ddcd632c7ea94c4eb056be78f48a018735b137cb6ef86c0",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000079798.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b9c1efcfcaf4d7e2cbf0f8fba9a3e07241800c1f3a378d1084459b477ac2e495",
+    "pixels": "e17240e34b259306fdd983a2082c536825d20924cda8af79c2f5b2a077b8867c",
+    "group": "plate__lvis_000000079798",
+    "capture": null,
+    "rows": [
+      "1 0.435585937 0.562000000 0.689953125 0.742500000",
+      "0 0.522742188 0.543197917 0.515046875 0.913604167"
+    ],
+    "input_label_sha256": "d21c9d23b497750316affc482464134f41dd7d76a3482fa639df54cb658f9423",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000084415.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b5c7d32236c0c1a3978c6add4c43c0b222b8fcd882a0fbd95e63b20ba6b4a2f3",
+    "pixels": "e1bffbed38ba7b6dd6687e82008f4f8a31b6f7721e6a4d2ba9c46d4d3af6b797",
+    "group": "plate__lvis_000000084415",
+    "capture": null,
+    "rows": [
+      "1 0.505531250 0.334740566 0.217687500 0.107216981",
+      "1 0.587437500 0.444599057 0.154000000 0.049622642",
+      "1 0.071421875 0.542488208 0.142843750 0.122853774",
+      "1 0.517960938 0.397558962 0.276484375 0.127193396",
+      "1 0.495343750 0.479410377 0.283625000 0.064292453",
+      "1 0.546968750 0.492676887 0.177187500 0.055400943",
+      "0 0.171794872 0.544573643 0.312820513 0.453488372",
+      "0 0.465384615 0.321705426 0.376923077 0.403100775",
+      "0 0.785897436 0.639534884 0.325641026 0.302325581",
+      "0 0.979487179 0.631782946 0.035897436 0.325581395"
+    ],
+    "input_label_sha256": "b957830fd17897893c47db579e5adf7aea9152024774a7217e359171b1f20078",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000089534.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4e08d6c35b78af6baf6a4d81fe42c5f5841f3e94e35d10d7a4dd40112ae93ae1",
+    "pixels": "a9059763c2806b8ca5471580e564b9daa6cc375dd33089f423b18cd82634e466",
+    "group": "plate__lvis_000000089534",
+    "capture": null,
+    "rows": [
+      "1 0.500632813 0.499675732 0.998171875 0.999225941",
+      "0 0.519242188 0.516443515 0.923046875 0.939372385"
+    ],
+    "input_label_sha256": "b213a5348129e1a4cdd6671a04bed7cabbe596c201600ff1b741a214c878a7d7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000089725.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f0cf1205e994747bc1af85e14e6d13f23baecabf35e67d39430203afea19b0f7",
+    "pixels": "16b5b430375f385df699ef2846ed69e22ab07cb685daa99e3b195e1343289051",
+    "group": "plate__lvis_000000089725",
+    "capture": null,
+    "rows": [
+      "1 0.693671875 0.975139860 0.177156250 0.044825175",
+      "1 0.726648437 0.208857809 0.109109375 0.053706294",
+      "0 0.261538462 0.593869732 0.076923077 0.076628352",
+      "0 0.248717949 0.662835249 0.087179487 0.084291188",
+      "0 0.248717949 0.747126437 0.087179487 0.091954023",
+      "0 0.251282051 0.839080460 0.102564103 0.122605364",
+      "0 0.424358974 0.645593870 0.064102564 0.118773946",
+      "0 0.680769231 0.630268199 0.074358974 0.088122605",
+      "0 0.702564103 0.716475096 0.076923077 0.099616858",
+      "0 0.916666667 0.178160920 0.084615385 0.172413793",
+      "0 0.793589744 0.229885057 0.069230769 0.107279693"
+    ],
+    "input_label_sha256": "6ef39b0d2173d18700d7bbced398cdcbb22b490975afd8bac47756fdc52c6b0d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000092813.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e45e78aeda5f0b5e8532c95f0b05ed0dd71b69935bbc16533ed40cab87c82117",
+    "pixels": "74a005026b02926153f0e5ef4db3fc2a038a20539bca168ed110332877eb6f64",
+    "group": "plate__lvis_000000092813",
+    "capture": null,
+    "rows": [
+      "1 0.302789063 0.732776000 0.485734375 0.322160000",
+      "0 0.535437500 0.402192000 0.390187500 0.325600000"
+    ],
+    "input_label_sha256": "8d332278de89bfd9816d266515b0d37a3c4e25b922ba9f95c15c086d8e8f8b38",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000096048.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "91368ff924f532e781c28be5a64e1c07b8bd1a9a91b28b2dd318004268824d20",
+    "pixels": "51eed89211bcbaaa1b6233ea037508ba376feab24a3b49e91b18d3463a6c822d",
+    "group": "plate__lvis_000000096048",
+    "capture": null,
+    "rows": [
+      "1 0.730335937 0.864906250 0.539328125 0.270187500"
+    ],
+    "input_label_sha256": "8b37d707cd9f038553703b0d7e733f708501dbdd2301e917e2464f4ec0d2ab01",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000106272.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4d858894c996edbef123530bb8fb5c5a8431565239107532e023acdc0ce839b9",
+    "pixels": "8d4b2bdcb704fa0b9e766e1dca997c0127f9f3edb3625b35c1705940c42f3ba8",
+    "group": "plate__lvis_000000106272",
+    "capture": null,
+    "rows": [
+      "1 0.391601562 0.929355972 0.185578125 0.133512881",
+      "1 0.619179687 0.781814988 0.157828125 0.085550351",
+      "1 0.655382812 0.710679157 0.135015625 0.076018735",
+      "1 0.293695313 0.654578454 0.074203125 0.069625293",
+      "1 0.568023437 0.644718970 0.103765625 0.064754098",
+      "1 0.331765625 0.776756440 0.145750000 0.095433255",
+      "1 0.720773437 0.953606557 0.207109375 0.092786885",
+      "1 0.445718750 0.553747073 0.104093750 0.050491803"
+    ],
+    "input_label_sha256": "906b7b13810e9f4a4cc7baab1aa52a125a9ff89508a9a496df222faf5b60f53c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000107518.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "48630d2e01998c00dac2aed0affa4ab421e86ba0308b241c5267d0ea71e1c36e",
+    "pixels": "c8452504e9356eaefbbbbb09e93e95668cc14d90a65160b39644b431ceaab379",
+    "group": "plate__lvis_000000107518",
+    "capture": null,
+    "rows": [
+      "1 0.404343750 0.701357422 0.215781250 0.054511719",
+      "1 0.575046875 0.844169922 0.148281250 0.032597656",
+      "0 0.595945312 0.623535156 0.089078125 0.100312500",
+      "0 0.360585938 0.600761719 0.054765625 0.070351562"
+    ],
+    "input_label_sha256": "858e735b7538629bcb76ce5c7aa064dea8e6ce9974060793fbdd1a5ccecf6dbc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000108081.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "298a12f83cead7449b7c0659bd1e62795014c519a48817b68e245fab33b76bd1",
+    "pixels": "79af85cc652ca533e31604e8e4eabe8578a5d79dc91a7a81bdd989fde76240cf",
+    "group": "plate__lvis_000000108081",
+    "capture": null,
+    "rows": [
+      "1 0.501414062 0.501592506 0.982796875 0.977330211",
+      "0 0.497273438 0.489976581 0.855609375 0.960936768"
+    ],
+    "input_label_sha256": "6c1744be26a7a4265c15c8d31129f873bba27d498ef1105be086014135cdb366",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000112818.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e79f07a12b3d84588a409336d152516a399a3db0b1732d9ae9e6a0a15a6fda5e",
+    "pixels": "9074b993d2420da1ec391d78030093c9944bba9af05c94363d47ab9afa8d214a",
+    "group": "plate__lvis_000000112818",
+    "capture": null,
+    "rows": [
+      "1 0.516921875 0.532020833 0.966156250 0.935958333",
+      "0 0.603656250 0.474260417 0.647093750 0.757937500"
+    ],
+    "input_label_sha256": "1526901814055ce3e17f63d2588b56b74f0b6bbb385548aef14e610218e04c35",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000113905.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5de85d6cf80e867c4135d32dae9631f6e02d09d8d90e38ada2a3998a6c67c48a",
+    "pixels": "53440c770661a5bc01e0f2bf2a9e730055e738749057a90ff8d7fba9c9486f4a",
+    "group": "plate__lvis_000000113905",
+    "capture": null,
+    "rows": [
+      "1 0.496023438 0.566416667 0.464703125 0.508625000"
+    ],
+    "input_label_sha256": "cf6935e6d2a227ea4c90efc0a1176e8835972aafd230b4a08d6e3544704d2cda",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000118219.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "7399cf4eca15fced79f6c093320f2551785cde8ee111b9bbda403fca4d66bd6b",
+    "pixels": "145f586c4f78e13f62090e0e2edc7466bc399251fa5ed3b255692c043507194d",
+    "group": "plate__lvis_000000118219",
+    "capture": null,
+    "rows": [
+      "1 0.703804688 0.705899533 0.381671875 0.503060748",
+      "0 0.679487179 0.712643678 0.625641026 0.574712644"
+    ],
+    "input_label_sha256": "a40f29ab2693e87867c22cbf515ee168720aaf9944ed1ca83775086107966833",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000119560.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "124f003f22f14a9e175d5778f95abf65c86b4c4630a0886b1f74c62d8444dabc",
+    "pixels": "7b87b9ca812b61268b3303b63a797b74e4a77302ef791485270d39e913f170a8",
+    "group": "plate__lvis_000000119560",
+    "capture": null,
+    "rows": [
+      "1 0.163367188 0.476453608 0.170109375 0.069855670",
+      "1 0.228453125 0.793268041 0.414843750 0.237298969",
+      "1 0.128312500 0.340371134 0.137656250 0.034762887"
+    ],
+    "input_label_sha256": "01627240023ff00ae8b8f22f3d882a4aca7f1c9a010d71aaf5fe1d6add9015a5",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000123389.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ee91769e241d893902b744c068e7a3035b1f519baa0ec17a752c8d980cc9e11f",
+    "pixels": "f3df3c234224926ff6225b0ac078893e999dbca803cc9a08387fa087578c5b59",
+    "group": "plate__lvis_000000123389",
+    "capture": null,
+    "rows": [
+      "1 0.766226562 0.394468750 0.346640625 0.175312500",
+      "1 0.166429688 0.885250000 0.331734375 0.228458333",
+      "1 0.444718750 0.688458333 0.611531250 0.536916667",
+      "0 0.824382813 0.416145833 0.217109375 0.155916667",
+      "0 0.468734375 0.671781250 0.642500000 0.538020833"
+    ],
+    "input_label_sha256": "c10438afc47d0464c9fb9479c68ec3d557ca0e8a20674711fa2148cc05d8bc03",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000123946.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0c4e709f32f897627b1785062ed33a7b6fb1881298e1c0f6ef4185957059d34a",
+    "pixels": "10913dc53e09a57f3f67222fedad50102c974f4117cc3f03a4403378404778e2",
+    "group": "plate__lvis_000000123946",
+    "capture": null,
+    "rows": [
+      "1 0.499760417 0.637109375 0.998937500 0.723968750"
+    ],
+    "input_label_sha256": "85682ddb4a51ce7beb7c4fc27ba45a529af23cd890db4e3c269d60cd49b46653",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000125242.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4ea235562f09364501df861ae3e895faca8a47182883f85770b126c4f95b15f0",
+    "pixels": "7788b62d6522a826ba493929a24c47121e027b00253a48c41e1a4996db83286e",
+    "group": "plate__lvis_000000125242",
+    "capture": null,
+    "rows": [
+      "1 0.468750000 0.444964871 0.562500000 0.777517564",
+      "0 0.501625000 0.580094118 0.413062500 0.627435294",
+      "0 0.463867188 0.350717647 0.461578125 0.463647059"
+    ],
+    "input_label_sha256": "292189d6342fa04bb29716515699fd08dadb37184fedf8cd0ef1d29f7cbfcce2",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000125597.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "68288f26327bfd7c9e5ad322a3aac270b120642e246b31c59c37761242a5c47a",
+    "pixels": "86f55d565a3933a6aa16c363f4cdf74c9bc3e8e57b1c94d677e7b5acb4fdf691",
+    "group": "plate__lvis_000000125597",
+    "capture": null,
+    "rows": [
+      "1 0.736578125 0.466564706 0.354781250 0.311200000",
+      "1 0.392500000 0.627082353 0.491468750 0.376847059",
+      "0 0.366007812 0.632329412 0.410296875 0.336047059",
+      "0 0.741656250 0.450305882 0.368156250 0.304564706"
+    ],
+    "input_label_sha256": "ac22d04b7b8659c427226864233c3dce4449e5a72bd5fa82500e16ad161cde4e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000127339.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "7d16b189ffcafb718cdde7a9a6ccb751d6df5051bfefecb7ddd2cb5ec92c55d4",
+    "pixels": "7b116fa238016969e81eaf10e6857bd7ffc10a2cffdc8e4e06154ab6ac6b0f5b",
+    "group": "plate__lvis_000000127339",
+    "capture": null,
+    "rows": [
+      "1 0.581679688 0.562677083 0.284140625 0.212395833",
+      "0 0.637179487 0.587030717 0.120512821 0.122866894",
+      "0 0.408974359 0.723549488 0.094871795 0.109215017"
+    ],
+    "input_label_sha256": "f05f064f95081c0e696f2f6c29eee0cb483c074e2d7dca8cf556e4e28d0d9001",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000130438.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "25f070f21c408d3caf41cbcc27d974408be0952c4e8a58b3e453645bb0176efe",
+    "pixels": "787f74e609e83a0d21d222d099ce60b9520d5231e3b3986896393f13eec73d17",
+    "group": "plate__lvis_000000130438",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.552780374 1.000000000 0.894439252",
+      "0 0.487179487 0.572796935 0.594871795 0.854406130"
+    ],
+    "input_label_sha256": "82d46a60e5e3cbdf19220a6d0425b144a5d1c0e154a15f45c1c32a7a96b2b76b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000133722.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "aaa3f32cbdb553d6cefd65d70a383d82e6d4f9a4480e352ae34c390d48cbfb19",
+    "pixels": "a770736d67e32f00b285742968804d2c57d2d5179b9d8277a586e788fe7268f0",
+    "group": "plate__lvis_000000133722",
+    "capture": null,
+    "rows": [
+      "1 0.600484375 0.732798595 0.422250000 0.132201405"
+    ],
+    "input_label_sha256": "bd5223f0d8c2000f6dccbbc57fbd5fc3192a77f4cdbfa1ac9e489a0bd3ee59f3",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000136894.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "460018e78eedd0af1691a07908d96b1c5f568491a21b38135671df5d7f465cf7",
+    "pixels": "a7df1fafa5dd8641d46ee55fcc25cbf7197ed43d99fb4fc00c2b52daf7498ced",
+    "group": "plate__lvis_000000136894",
+    "capture": null,
+    "rows": [
+      "1 0.825820312 0.672365967 0.348359375 0.504265734",
+      "0 0.567948718 0.409961686 0.294871795 0.544061303",
+      "0 0.841025641 0.593869732 0.307692308 0.590038314",
+      "0 0.497435897 0.557471264 0.307692308 0.310344828",
+      "0 0.508974359 0.726053640 0.253846154 0.325670498",
+      "0 0.332051282 0.601532567 0.105128205 0.222222222",
+      "0 0.188461538 0.530651341 0.094871795 0.540229885",
+      "0 0.280769231 0.582375479 0.100000000 0.674329502"
+    ],
+    "input_label_sha256": "80c050ebc7e040b8fe2325bddb3b1cac03972ff43c648b24f1468fc24416b948",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000140304.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1d199aef31ad87a3391472def7b5a0149a9a7a97588fc830a7db35b876af970b",
+    "pixels": "26a54cf12713cbc7eaf40a474bc1d19aee8738022d2a24378210378e0c16751b",
+    "group": "plate__lvis_000000140304",
+    "capture": null,
+    "rows": [
+      "1 0.505070313 0.635800000 0.504828125 0.340800000",
+      "0 0.357554688 0.532837500 0.295765625 0.610425000",
+      "0 0.650046875 0.536537500 0.319125000 0.636575000"
+    ],
+    "input_label_sha256": "dd21b9db88f1e1a3ca2f09ca2931dd360050712dddd309bdec9fc3c22a01b1d4",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000141952.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "71a3c44ad988ebf433309ee0bf2bfeb4a0f88d4346ae77ce253f6f2768c9b44d",
+    "pixels": "b49b98a0b4169f09dd7a063dcb440b744e114630841d725db5651876f98ff142",
+    "group": "plate__lvis_000000141952",
+    "capture": null,
+    "rows": [
+      "1 0.364653333 0.453340000 0.073306667 0.099280000",
+      "1 0.948960000 0.906570000 0.102080000 0.104060000",
+      "1 0.606920000 0.734530000 0.071813333 0.050780000",
+      "1 0.670320000 0.727910000 0.087040000 0.059540000",
+      "0 0.491440000 0.756030000 0.169866667 0.099260000",
+      "0 0.673373333 0.726160000 0.058000000 0.041400000"
+    ],
+    "input_label_sha256": "b8ce1471d6607bb0786e90dda1a4f1bce7650cb43713d18734a7c7e9af16af69",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000142413.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3dae0391d00738a6766418f19568231d95b5346a981d696bd597f466fc6ace4f",
+    "pixels": "f60a46703d9b1bbbd40a1f0cea795618f006d11150fa66c9eaddcabb7667f375",
+    "group": "plate__lvis_000000142413",
+    "capture": null,
+    "rows": [
+      "1 0.434343750 0.144234375 0.191104167 0.035531250",
+      "1 0.422968750 0.116179687 0.191604167 0.038890625"
+    ],
+    "input_label_sha256": "2825589e52b7975c48736b119b248bd37f782c429c26efca5d43a9a28abf719f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000143450.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f9652f10a431eefac5b0faa4251c7f4bda4953983d4d46dd1fae3a03da3e9d9a",
+    "pixels": "47764de0331cea0d27e30c2155690c47ed92a4d9ba646d90223283d69b95b665",
+    "group": "plate__lvis_000000143450",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.531760563 1.000000000 0.936478873",
+      "0 0.429101562 0.593098592 0.588734375 0.813802817"
+    ],
+    "input_label_sha256": "955b0d6c4e577402de1077b097202f753c00a8587f2c0e7bd7296b4b0680cb7f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000144065.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "75b71a6fd2f0c04cec26211c0eb829ccc483b59a22f6566cf94e63a8097f3baa",
+    "pixels": "ff06ecb1547417b084c3365214119ac12a64db5e944d8b6731ce4b8f9faad717",
+    "group": "plate__lvis_000000144065",
+    "capture": null,
+    "rows": [
+      "1 0.514742188 0.759110070 0.189859375 0.114894614"
+    ],
+    "input_label_sha256": "8560dcd26dd13b1d2b986ff8c42dcbc91c90bf22d5932e21aac6c59f8268a340",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000144275.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5ce3db690cb4323b104095e99d1870c1ffb1e169f78b989e962af41802ad6258",
+    "pixels": "a63e800f10e56a02178220e673a3cf920ca43d8063ba9c58881c8c24a4b0cc06",
+    "group": "plate__lvis_000000144275",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.651159251 1.000000000 0.697681498"
+    ],
+    "input_label_sha256": "4b926479da9a93750ec723633fe409f9e82a06ecfa9f3c9132b9c9bc05aa90e4",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000145318.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f656857e81a14ebdfef54c0a7b39ad4bfff236ef9d7f7a4086bb274136acbfa5",
+    "pixels": "47849368d462e7d51a1e57af220870b6506366e35591e07161183e62d88876ed",
+    "group": "plate__lvis_000000145318",
+    "capture": null,
+    "rows": [
+      "1 0.736054687 0.230875000 0.295296875 0.146958333",
+      "1 0.210117188 0.784791667 0.390421875 0.382625000",
+      "0 0.582051282 0.191126280 0.143589744 0.136518771",
+      "0 0.723076923 0.230375427 0.128205128 0.105802048",
+      "0 0.203846154 0.771331058 0.346153846 0.334470990"
+    ],
+    "input_label_sha256": "12764052b555768e3658b959058c9bb81250ea32223d3d583ca60acb1d34f9ba",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000150703.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3b92d2c42ffcaa0cb855d8ebde28d2b45974f181ed4cf6cc65164d83ed451ff7",
+    "pixels": "f3e21c6c5f9f0a00183f74afc74e173b32f9b3be4215195c082e3ef719b98751",
+    "group": "plate__lvis_000000150703",
+    "capture": null,
+    "rows": [
+      "1 0.522015625 0.570968750 0.336343750 0.713895833",
+      "0 0.625641026 0.621160410 0.405128205 0.477815700"
+    ],
+    "input_label_sha256": "f6a1793db8a7fbc793c2cdb661ff359e8f36892904463db4b5066bfe9a0c1d0e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000152866.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "26b4070594586abd912b1f799db5e90afcaf072aae5b4acc37658532133030ae",
+    "pixels": "9a39e69206839823f7f5e82221fd63889a19236319fe56cf532d9c53a93d325b",
+    "group": "plate__lvis_000000152866",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.549291667 1.000000000 0.895416667",
+      "0 0.635187500 0.705739583 0.729625000 0.588520833",
+      "0 0.402343750 0.238520833 0.358875000 0.373916667",
+      "0 0.208382813 0.512395833 0.416765625 0.571916667",
+      "0 0.677914062 0.387562500 0.586828125 0.520708333"
+    ],
+    "input_label_sha256": "76f873164509196edd369026da082bafbadb52e98e78e081d6e34cc74d11cc16",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000152871.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1265ca39efcfc231817f1357debdff4fec148f18d4db5c3155c9dfab9d256d44",
+    "pixels": "0879042f69ffe09fc38b1f15bd7cef3bc51951a3fdef6e9b80663a014074cad7",
+    "group": "plate__lvis_000000152871",
+    "capture": null,
+    "rows": [
+      "1 0.350242188 0.181656250 0.107734375 0.056729167",
+      "1 0.241945313 0.693197917 0.194640625 0.160062500",
+      "1 0.277210938 0.412645833 0.148390625 0.095583333"
+    ],
+    "input_label_sha256": "f43e01f18034595ea4cd440b325c6854c1d1adbdb44525561595f05a3fb4c03d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000157586.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "51ee07b60d9c4a55227189577abeef1b1d4b4af66fcad0d0103c3d6c5e8d3c5a",
+    "pixels": "06ed9d908b4f37a9be2f2ee9efbea8dc5ed3ec88639a01e06509d8ea5f39f736",
+    "group": "plate__lvis_000000157586",
+    "capture": null,
+    "rows": [
+      "1 0.438632813 0.622640187 0.502734375 0.467336449",
+      "1 0.110351562 0.614112150 0.158234375 0.079158879",
+      "0 0.498717949 0.532567050 0.366666667 0.390804598"
+    ],
+    "input_label_sha256": "e93736bcf561f3abb72ef7481b91dfc8c7d7cfb251179633a7f6b08274591f60",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000167520.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4e2beca9bc47b68f92806730334da0726a298f1e13d15703b4b2ca9fabcc8cb3",
+    "pixels": "7b627ba674674fa74d486b94422b6441acdd1a3e9746fe52ad0d04913666396e",
+    "group": "plate__lvis_000000167520",
+    "capture": null,
+    "rows": [
+      "1 0.108421875 0.946642259 0.197687500 0.089769874",
+      "1 0.123304687 0.857426778 0.231140625 0.092970711",
+      "1 0.315031250 0.977405858 0.241312500 0.041338912"
+    ],
+    "input_label_sha256": "b4cd9329c327a01cd43dec6c226e5e067fdce05c7b80d696e3f6c6d2d6e8689f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000168422.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "aa119ceb37b8f9f6f6270acdf216a2cc005f13ce471b30cdb31634029bfce192",
+    "pixels": "4069131a9ef55d90114aec6a7900c50b9685dd77fca51846ea68e7cbc9fbc62b",
+    "group": "plate__lvis_000000168422",
+    "capture": null,
+    "rows": [
+      "1 0.489927083 0.581531250 0.972604167 0.449593750",
+      "0 0.621513944 0.564179104 0.446215139 0.411940299",
+      "0 0.231075697 0.597014925 0.462151394 0.400000000"
+    ],
+    "input_label_sha256": "8c5f73d14829c03ddc279e9099ca10efc950c00b655346008a4506f96e57ed65",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000169986.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b70f10a8c0deb2d6bfe065847493d24bd8964a83758e99048b8a85176a871cb6",
+    "pixels": "df0dfdc8f02435cbffd3c2dc904bcae99becad71507f79a650a52882935a6dd8",
+    "group": "plate__lvis_000000169986",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.874445313 1.000000000 0.251109375",
+      "0 0.598197917 0.799000000 0.803604167 0.402000000"
+    ],
+    "input_label_sha256": "d45d62659c521d5d63908499848ec1103b3a60155111f0c6da44cd67b23cdf60",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000174526.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4066c2a89be1eb9e20362f335c9f396f95ff121e6b53f8d1c4f82b17b0a41f44",
+    "pixels": "9402c2ec1acc9402d78ccf0ab53eb508c9677f631667b928f9fa1be3d308d19d",
+    "group": "plate__lvis_000000174526",
+    "capture": null,
+    "rows": [
+      "1 0.465460937 0.818220141 0.086421875 0.042763466",
+      "1 0.747406250 0.761814988 0.080718750 0.040023419",
+      "1 0.695679687 0.783758782 0.082453125 0.047283372",
+      "1 0.554875000 0.817611241 0.085718750 0.042857143",
+      "1 0.415226563 0.717400468 0.073171875 0.017377049",
+      "1 0.414812500 0.706920375 0.071968750 0.032810304",
+      "1 0.613101563 0.786124122 0.083203125 0.042974239",
+      "1 0.916914063 0.653583138 0.067859375 0.028196721",
+      "1 0.163750000 0.426159251 0.033500000 0.011803279",
+      "0 0.702601562 0.777810304 0.027453125 0.035292740",
+      "0 0.598195313 0.685889930 0.010609375 0.013325527",
+      "0 0.470304687 0.798009368 0.032359375 0.041592506",
+      "0 0.975140625 0.687740047 0.027843750 0.055433255",
+      "0 0.476507813 0.710538642 0.022765625 0.032927400",
+      "0 0.614851562 0.782505855 0.035765625 0.039672131",
+      "0 0.554406250 0.808442623 0.030031250 0.036932084",
+      "0 0.496625000 0.712939110 0.021437500 0.042224824",
+      "0 0.638109375 0.713583138 0.031968750 0.031288056",
+      "0 0.139460937 0.399086651 0.010890625 0.016674473",
+      "0 0.563890625 0.689672131 0.027968750 0.030117096",
+      "0 0.754421875 0.760316159 0.031906250 0.033512881"
+    ],
+    "input_label_sha256": "772256c221bcacf0305337d6bc6825148576b9db7f322b889fa55beae60c5031",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000174888.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4d57e0b2e7e457460ea0ecbf3248f9ac18a2644403be2882bf09952043de020d",
+    "pixels": "c1d7ecd94b3ea81d964e36ab92d58e4842d298609c0730dfdcef8839cf3952d4",
+    "group": "plate__lvis_000000174888",
+    "capture": null,
+    "rows": [
+      "1 0.486179687 0.735333333 0.217265625 0.205041667",
+      "0 0.550859375 0.678593750 0.147906250 0.102729167"
+    ],
+    "input_label_sha256": "70569b31cb6a4f09d4d0fa0bdf9ccfdbfc932673994515943791e049663b0e5d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000182406.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "00d1021eed31d04fb89108602b6bd6781422ee94f119b17ff546fbc8ca3745ea",
+    "pixels": "fe9eb4940ea8728d145557ff93d8592f6df0128c8e63518bbc893116cb7ce8f3",
+    "group": "plate__lvis_000000182406",
+    "capture": null,
+    "rows": [
+      "1 0.264617188 0.869406250 0.114421875 0.049479167",
+      "1 0.076062500 0.866843750 0.027312500 0.026937500"
+    ],
+    "input_label_sha256": "04f335606831a5b2ef78225dbaa479cc15f54320a18bf5268bec726d7a1bfef7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000186719.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "41fa757326fdbfc28994d3a677a47e0b37419171b6600cfff32c7d6d3e352435",
+    "pixels": "1a9c45966b1ba7c663cbf52e616ec418131b2ae1198a2c96a69a6cc10110a324",
+    "group": "plate__lvis_000000186719",
+    "capture": null,
+    "rows": [
+      "1 0.735406250 0.679707260 0.352750000 0.140163934",
+      "0 0.721794872 0.651923077 0.217948718 0.211538462"
+    ],
+    "input_label_sha256": "b6cf411e677a2d24284a0c57c8bd818c5bf77d63b429b233f983b2b87e205843",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000190177.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c3c4303c2eb4996c2ae0bbc6493ee8d37ab0598e5db7083e90f174c8962a36a6",
+    "pixels": "af62db860a85ef689f76c9947458ccf0c7d58d9a900a19271e9c0050c786c22d",
+    "group": "plate__lvis_000000190177",
+    "capture": null,
+    "rows": [
+      "1 0.504070000 0.561666667 0.986660000 0.872826667"
+    ],
+    "input_label_sha256": "013e5218f096a81db4c05726aa2d1a6bbed606f2986ba227ffcc78c7b36e7037",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000193062.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "af3b3d24ff0b34d51ad1fb8662952f3a7c6b1a901c73b6469ccf6a3c567fec89",
+    "pixels": "8fe217557ceb94dbcb1ba5e4d1e84c1bf08f018977cce1ab2658a5be12a64a71",
+    "group": "plate__lvis_000000193062",
+    "capture": null,
+    "rows": [
+      "1 0.516500000 0.743970894 0.666120000 0.279916840",
+      "0 0.491379310 0.740298507 0.534482759 0.214925373",
+      "0 0.504310345 0.547761194 0.376436782 0.152238806"
+    ],
+    "input_label_sha256": "4d9433f75388f2278ca4631bfc2b04035064e3dfea69821de7a4ba0e806e6928",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000195852.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "186f692c23ff72bb0762b2188b45eff403a0d48c2e2df82686807623a3966277",
+    "pixels": "684adeacf3765567eacda9bd118e71949b8650e58aa8976e46f5d84bab8db1d7",
+    "group": "plate__lvis_000000195852",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.610655738 1.000000000 0.778688525",
+      "0 0.388695313 0.597587822 0.762265625 0.781124122"
+    ],
+    "input_label_sha256": "d18f1fe9cc73191d8ad4aae7e0be0684438477b2885c4cbb7c00bdce2d8f2370",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000196888.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b6fb7c46921e44f4a4780a37d03b502bae6008f9124a89ad0d4c08ac995aa355",
+    "pixels": "b08d0ca5b97e1d3b1490bc168f9447a9fe4e9bd0296507c248abe2b22cb9d6b6",
+    "group": "plate__lvis_000000196888",
+    "capture": null,
+    "rows": [
+      "1 0.615382813 0.605437500 0.226734375 0.024625000",
+      "1 0.604601563 0.649239583 0.206359375 0.044104167",
+      "1 0.467000000 0.650010417 0.281312500 0.040562500",
+      "1 0.216257813 0.643135417 0.265359375 0.052187500",
+      "1 0.977054688 0.634208333 0.045890625 0.051041667",
+      "1 0.619187500 0.617614583 0.216843750 0.031479167"
+    ],
+    "input_label_sha256": "e99562eddfe580e3020dd4c88f48f0154982d32726e9de86e7bfc54f000f6801",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000202767.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "44713f48e962f3ecf6fb916e84c12a697ce15e737b55424773428435a1715302",
+    "pixels": "0c8a1762942cd0155ba7645b0c052e5fd91de4b2abe77ce6b8328c7243676146",
+    "group": "plate__lvis_000000202767",
+    "capture": null,
+    "rows": [
+      "1 0.376906250 0.718635417 0.127000000 0.052312500",
+      "1 0.683398437 0.392041667 0.064046875 0.013333333",
+      "1 0.407273437 0.785343750 0.170390625 0.137770833",
+      "0 0.120512821 0.503412969 0.061538462 0.051194539",
+      "0 0.046153846 0.530716724 0.041025641 0.044368601",
+      "0 0.476923077 0.590443686 0.082051282 0.061433447",
+      "0 0.853846154 0.348122867 0.056410256 0.047781570",
+      "0 0.237179487 0.093856655 0.023076923 0.030716724",
+      "0 0.407692308 0.810580205 0.097435897 0.085324232"
+    ],
+    "input_label_sha256": "66fb14248b24704769e044e7cceb65d3fb1beb8d965fbc98d504fdc485a6b57b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000202855.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0aec2524640f4fcd03413af04e03cff090205edcff37bf030b8be824f1be39e3",
+    "pixels": "3843cd739bcba48f66729ecea78b68247b89cca03b84155be8dcd9e29d27d9c1",
+    "group": "plate__lvis_000000202855",
+    "capture": null,
+    "rows": [
+      "1 0.730585938 0.427614583 0.129421875 0.083520833",
+      "1 0.289171875 0.928250000 0.212968750 0.143500000"
+    ],
+    "input_label_sha256": "8ca0e026ec8fd9d7f4373c7e3e715b1375db8a8d3e0f284810bf304b6cb19d65",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000203734.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4dd1a31ae340c2b8363d8e17b5effbbf3b77274c4e93ea6f82a1291fbb836dd3",
+    "pixels": "45fe21eac8f78a21f00f31650ddf3bebf543b029690dbbca3b48200ab56b543a",
+    "group": "plate__lvis_000000203734",
+    "capture": null,
+    "rows": [
+      "1 0.733031250 0.895962343 0.169875000 0.134184100",
+      "0 0.732437500 0.898253138 0.143562500 0.111150628"
+    ],
+    "input_label_sha256": "0c23fe78a3993ee6137b0374091168d0b07951e700b35426fc3526057178fccd",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000210404.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e0a27410c706e3906ae95d4feedbc8a227baa5de30fd2dd706120735c8050341",
+    "pixels": "1f421fbc69e15d1c8fccc396d78d63d33eb47b89dc7682d26fa3fcb8f3e73c34",
+    "group": "plate__lvis_000000210404",
+    "capture": null,
+    "rows": [
+      "1 0.487052083 0.958195313 0.515645833 0.083609374"
+    ],
+    "input_label_sha256": "0e60c092df3398d5a0fc6c99324eccf1beff523d8d7e63aa4b8d61bf11e0a804",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000211282.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "78934c2e5fa640b8c58deae96017aaca3d82392c316d13fc9da551874fa00b94",
+    "pixels": "fe851ae844411b5ca2372c2f042c8f4b45f11dc5b7555485eacda1b5dd9a2d46",
+    "group": "plate__lvis_000000211282",
+    "capture": null,
+    "rows": [
+      "1 0.783989247 0.552648438 0.361870968 0.100671875",
+      "1 0.452645161 0.769125000 0.775741935 0.349187500",
+      "1 0.421763441 0.327992187 0.768172043 0.309078125",
+      "1 0.491430108 0.068484375 0.411462366 0.068218750",
+      "1 0.824892473 0.099742187 0.279763441 0.131796875",
+      "0 0.390946502 0.183582090 0.411522634 0.176119403",
+      "0 0.526748971 0.325373134 0.477366255 0.304477612",
+      "0 0.444444444 0.058208955 0.329218107 0.098507463",
+      "0 0.705761317 0.717910448 0.358024691 0.188059701",
+      "0 0.296296296 0.656716418 0.296296296 0.095522388"
+    ],
+    "input_label_sha256": "fc07c41bd7aeadd86f0a9bedfce62ee81439d4dab337629783e966f744b1cceb",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000212248.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "82d9647a50185f2fcfb0c3d0438f29cfb3d9be95f24cd34abbcfabee71354792",
+    "pixels": "05eaeee74d3966897531b6021197cf9a849e786f5466a4958ca17971aed50cce",
+    "group": "plate__lvis_000000212248",
+    "capture": null,
+    "rows": [
+      "1 0.187750000 0.514429688 0.375500000 0.261234375"
+    ],
+    "input_label_sha256": "5e8800e96bdb20b00c3fba0c6035aaccf0dc0a4fc8360879d3a96103f78dc443",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000212853.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f532e66866594b75a0fd266554e350ad75064ee5126ae76e4205cb5309e2cef4",
+    "pixels": "b7b15c36f614547f37f05cef18ae571346f6fd3f3972b62782c4e231ae9d9527",
+    "group": "plate__lvis_000000212853",
+    "capture": null,
+    "rows": [
+      "1 0.488520833 0.818132813 0.977041666 0.363734375",
+      "1 0.052864583 0.577890625 0.105729166 0.024562500",
+      "0 0.436458333 0.784367188 0.872916667 0.431265625"
+    ],
+    "input_label_sha256": "191073c7dd338a6f8e9930a318623c1f8fcc310e072a7c2ab46ad7594b603cee",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000216265.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "581121e707e5e9b3707a9486dae2a0fc25e7e3cd64c46c4ae722b9ea38a4d6d2",
+    "pixels": "733eba40e92d503f269590a808ec82824fa167f1392f5bdad34382e576756a00",
+    "group": "plate__lvis_000000216265",
+    "capture": null,
+    "rows": [
+      "1 0.671398437 0.823833333 0.196609375 0.148458333",
+      "1 0.596812500 0.336416667 0.036156250 0.025125000"
+    ],
+    "input_label_sha256": "d137e8936685c554caec3891ea51ffaf87cf5b6d982f15f303356a7564565f8e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000222209.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "9b11e5cb4e76aae2e1c3d4b10b6c7d17839e5ce0f5179686dfe91897382813ec",
+    "pixels": "f75b4f6f4e23fca2fec57b8f0d364d48504e30e17a37e58ce0f01e52394355a2",
+    "group": "plate__lvis_000000222209",
+    "capture": null,
+    "rows": [
+      "1 0.575636792 0.762460937 0.653537736 0.339734375",
+      "1 0.935200472 0.210343750 0.127193396 0.145562500",
+      "0 0.600153302 0.635820313 0.381863208 0.201296875",
+      "0 0.627441038 0.819453125 0.433466981 0.203343750",
+      "0 0.983879717 0.246796875 0.032240566 0.091531250"
+    ],
+    "input_label_sha256": "dc95ac04d780b58e9401a50eff4ec8d46bff857b259885d1c75772b715194538",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000225490.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5cc8b8912ae3381bfd293b80f09630c10e7b5f9f720f9c2962df765dc4c7f51e",
+    "pixels": "34f86c250b7de0443892c512bff674121aa1ac32d4248b2182453edf86e4172d",
+    "group": "plate__lvis_000000225490",
+    "capture": null,
+    "rows": [
+      "1 0.773804687 0.427239583 0.447078125 0.558354167",
+      "1 0.301476562 0.406697917 0.401734375 0.527645833",
+      "0 0.130625000 0.366718750 0.258343750 0.267520833",
+      "0 0.331429688 0.489197917 0.239703125 0.272229167",
+      "0 0.487257813 0.325812500 0.284265625 0.353666667",
+      "0 0.162476563 0.541854167 0.324953125 0.207333333",
+      "0 0.267085937 0.236645833 0.256515625 0.339000000"
+    ],
+    "input_label_sha256": "7f93c256880fc766e48b78f43073383a161cf9cac683a8c7af092b3ecc1120b6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000226751.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "6307e5cdbc93524d7287dc1129dfb67d2a21f37fb2117393c95dbc12630ca00a",
+    "pixels": "abacbac1b7792527f6398b40a01b6dcac0a0d9b7528c315d672e0b2a8b8160ba",
+    "group": "plate__lvis_000000226751",
+    "capture": null,
+    "rows": [
+      "1 0.459035948 0.639117647 0.557777778 0.398921569",
+      "1 0.650620915 0.040825163 0.268202614 0.080408497",
+      "0 0.382089552 0.564179104 0.131343284 0.202985075",
+      "0 0.516417910 0.511940299 0.143283582 0.116417910",
+      "0 0.538805970 0.653731343 0.146268657 0.125373134",
+      "0 0.659701493 0.174626866 0.155223881 0.146268657",
+      "0 0.585074627 0.038805970 0.214925373 0.065671642"
+    ],
+    "input_label_sha256": "b46d2df73ebac3ee1526283a72039dc0544b8cfa68343ba1e00a2834553475c8",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000226988.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e54d029fe6655aab21fb399ac0a307cec821fbc9fe5beea9c6f2bcdf7ca8883c",
+    "pixels": "7db549e8b5a41a04f030d932a34cbb63c7764f3980e85ba2c42ddddf57b30b79",
+    "group": "plate__lvis_000000226988",
+    "capture": null,
+    "rows": [
+      "1 0.502986667 0.869510000 0.698453333 0.257180000",
+      "1 0.241706667 0.706260000 0.333173333 0.221400000",
+      "1 0.645026667 0.689240000 0.522533333 0.279440000"
+    ],
+    "input_label_sha256": "3bb084c9bbc89ec8a308d79903cee06488c97eaf67f7945fd5ddec36fa75954b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000229233.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c05e87e67e57e04740d8e725dca8b547ce88c608d4b5d0d3af804620ad4d59c9",
+    "pixels": "c9464486f440236b908ffd7fb750c48e7e5d82c9e81d8e1dc33513f6f9f0f4e5",
+    "group": "plate__lvis_000000229233",
+    "capture": null,
+    "rows": [
+      "1 0.384460937 0.670833333 0.212109375 0.076541667",
+      "1 0.139710937 0.673416667 0.219046875 0.057416667",
+      "1 0.138023438 0.652364583 0.195421875 0.068229167"
+    ],
+    "input_label_sha256": "50e826db338d7385df7155017bc04854058a66bd809016527fc7e816bc5b5b7a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000230745.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "9213832444b096af533b84f9df3231e315dd609bc5b0a074d0359b1d81d65dec",
+    "pixels": "7801bcbdcd4cdeec4bc33183321e29130c0f70caf50ddfa581581b928ec3e6ab",
+    "group": "plate__lvis_000000230745",
+    "capture": null,
+    "rows": [
+      "1 0.310367187 0.104028103 0.339671875 0.208056206",
+      "1 0.479906250 0.675597190 0.435125000 0.462107728",
+      "1 0.780226562 0.215948478 0.355734375 0.430117096",
+      "0 0.486765625 0.556604215 0.423468750 0.612131148",
+      "0 0.717875000 0.154508197 0.118093750 0.165128806",
+      "0 0.824593750 0.135409836 0.102062500 0.150585480"
+    ],
+    "input_label_sha256": "9e9adda6b33d3d537a1742aba5898b3548c6202459696ab7545a8449bfb152f5",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000232663.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e11a8ab38796b37c138db54d7a327de297b184f736b0897e3915e35208790467",
+    "pixels": "34732777cafc7a14e226bfb49da22461207b8c0018237d21f863feb92aefeb2e",
+    "group": "plate__lvis_000000232663",
+    "capture": null,
+    "rows": [
+      "1 0.453145833 0.960804687 0.269458333 0.078390625",
+      "1 0.632312500 0.210500000 0.103875000 0.039656250",
+      "1 0.655843750 0.257804688 0.132645833 0.060421875",
+      "1 0.796645833 0.634109375 0.348458333 0.167406250",
+      "1 0.857104167 0.912648438 0.285125000 0.173140625",
+      "1 0.651322917 0.502890625 0.342937500 0.148781250",
+      "1 0.506750000 0.263867187 0.167916667 0.049296875",
+      "1 0.654677083 0.394726562 0.155604167 0.066609375",
+      "0 0.417406250 0.338390625 0.220729167 0.058562500",
+      "0 0.650770833 0.482468750 0.238541667 0.133125000",
+      "0 0.419572917 0.438359375 0.187729167 0.084468750",
+      "0 0.348677083 0.701703125 0.350270833 0.220562500",
+      "0 0.501572917 0.268554688 0.168770833 0.052515625",
+      "0 0.690645833 0.305046875 0.257250000 0.063062500"
+    ],
+    "input_label_sha256": "d6005df294ca79d114a806db8e15fd141cfc8ce2f99a900f9dde63db521283c0",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000236626.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "43d398aa2cb7f5193b502929d7200a6c995d67ffa4ca1948aadb31599bb7a8ac",
+    "pixels": "20998f2aef79dca41abcc81fe8191d684b868d0c30954589004081748c1a0eec",
+    "group": "plate__lvis_000000236626",
+    "capture": null,
+    "rows": [
+      "1 0.822328125 0.903629977 0.142156250 0.192740046",
+      "1 0.686609375 0.895761124 0.355031250 0.199156909",
+      "1 0.882054688 0.479028103 0.070421875 0.025644028",
+      "1 0.966187500 0.924203747 0.067625000 0.151592506"
+    ],
+    "input_label_sha256": "572ea385d082b5cdbb1b294f04e67200012e9f741ab4290c4b6328edfb73745b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000241408.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "04040107bae7675a2ce9ed128521a01a09a06c52a5de7e7b3822803790ce08cc",
+    "pixels": "54ca6b0ae8ee0dd8d8559d1db5bb9e11c62ed2ac69b06af5da639849f35f4918",
+    "group": "plate__lvis_000000241408",
+    "capture": null,
+    "rows": [
+      "1 0.817476562 0.560104167 0.302828125 0.102208333",
+      "1 0.571890625 0.713552083 0.623312500 0.219395833",
+      "1 0.264507812 0.596947917 0.378640625 0.118520833"
+    ],
+    "input_label_sha256": "080f59f06875ca8727940df619878a5147ef622126ff99c514fc59996f98ba1e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000245577.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ff0c05d39c6f42c969a8e18934a632cdf20195a1113d2a0c7fb63c5478fc25b3",
+    "pixels": "ab42f7588f0cb198db58ea1e6c8bac2d91fb8ab630a8c36b40ea2ad6fa4cceed",
+    "group": "plate__lvis_000000245577",
+    "capture": null,
+    "rows": [
+      "1 0.581507813 0.843908451 0.833078125 0.300352113",
+      "0 0.431078125 0.564612676 0.470531250 0.498474178",
+      "0 0.826257813 0.597617371 0.347484375 0.607159624"
+    ],
+    "input_label_sha256": "37ead187eb08eaa3e363cad85a0fdf3a50ec7593a2be2c309681bac541b0e609",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000245806.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "529111216ed2b5b80b5d8f15a1afde7d225a2fe076a75e9339ca317dbb0ab675",
+    "pixels": "37e821d644e16d1c6a540a29cdb30294af699743d634e4b414fbf43dcde6e7cd",
+    "group": "plate__lvis_000000245806",
+    "capture": null,
+    "rows": [
+      "1 0.405906250 0.719179687 0.203395833 0.110453125",
+      "1 0.189104167 0.737242187 0.226416667 0.098828125",
+      "1 0.190020833 0.762906250 0.228000000 0.064625000",
+      "1 0.037583333 0.578218750 0.070333333 0.042750000",
+      "1 0.306375000 0.713320312 0.012833333 0.039046875",
+      "1 0.482739583 0.491632812 0.113645833 0.029328125",
+      "0 0.229635417 0.563203125 0.078520833 0.026375000",
+      "0 0.306385417 0.573039063 0.075854167 0.028765625",
+      "0 0.194156250 0.543539063 0.070645833 0.022046875",
+      "0 0.859218750 0.937078125 0.026812500 0.011375000",
+      "0 0.837895833 0.946320312 0.022791667 0.011328125",
+      "0 0.837072917 0.936468750 0.023687500 0.010625000",
+      "0 0.857114583 0.927296875 0.024937500 0.010687500",
+      "0 0.265937500 0.540359375 0.070291667 0.020968750",
+      "0 0.816218750 0.945320313 0.022729167 0.012046875"
+    ],
+    "input_label_sha256": "d337f45a6d1ac558aaf4d2423756ff45000fcbb718068fcbc4f3efad9a78e6bf",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000251578.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "93391d964d2d69ec38e498894739464eb58a9228b901a682254a851a40f409c3",
+    "pixels": "1f8aa8289384d2741924479cc8c3c354e0914b3fe4a8f470dc93dc71f8a9dac8",
+    "group": "plate__lvis_000000251578",
+    "capture": null,
+    "rows": [
+      "1 0.529625000 0.550503513 0.080687500 0.058524590",
+      "1 0.411781250 0.722693208 0.041531250 0.068477752",
+      "1 0.575539063 0.862295082 0.115765625 0.107868852",
+      "1 0.210125000 0.724812646 0.047843750 0.080960187",
+      "1 0.646171875 0.663419204 0.033781250 0.065339578",
+      "1 0.191101563 0.985702576 0.044609375 0.023395785",
+      "0 0.600000000 0.863461538 0.087179487 0.073076923",
+      "0 0.079487179 0.803846154 0.117948718 0.092307692"
+    ],
+    "input_label_sha256": "1ec784f09d94d1b29dd802520c22ad398b2c4748cbdf6c33daeb64cbc6a5b6eb",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000251872.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "fd281a50a79ece2b08ce29c5be6df13e685036ce7cdcb8b1bacb0c1f3fd2fcee",
+    "pixels": "477e2f94780f281a70b42708873b77aa710f4020f2d1d34ac0b13e80660a7a1e",
+    "group": "plate__lvis_000000251872",
+    "capture": null,
+    "rows": [
+      "1 0.231986111 0.632335938 0.223361111 0.033890625",
+      "1 0.074986111 0.543382812 0.114416667 0.020515625",
+      "1 0.273666667 0.392414062 0.114777778 0.022890625",
+      "1 0.449555556 0.904039063 0.367666667 0.074203125",
+      "1 0.077333333 0.560726562 0.111055556 0.007015625",
+      "1 0.081375000 0.553867188 0.103027778 0.007671875",
+      "0 0.138297872 0.946268657 0.276595745 0.095522388",
+      "0 0.303191489 0.834328358 0.244680851 0.068656716",
+      "0 0.125000000 0.625373134 0.250000000 0.110447761",
+      "0 0.111702128 0.553731343 0.212765957 0.068656716",
+      "0 0.252659574 0.523880597 0.132978723 0.068656716"
+    ],
+    "input_label_sha256": "c224f687dd74e3cd30eaa27e2435b2464a99a7944bc0d3600d01f6fda7af3501",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000252629.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4f549a2ea14f73bd82f4be6279caff64c262223cd2131b819e2f2aa61c44e62f",
+    "pixels": "08fa31416fa6be63e8b03539365a1eaad08da9fc9a0b97103ee8eea48deac5d9",
+    "group": "plate__lvis_000000252629",
+    "capture": null,
+    "rows": [
+      "1 0.266054687 0.123676815 0.200296875 0.098594848",
+      "1 0.171109375 0.149437939 0.084781250 0.082482436",
+      "1 0.675671875 0.191990632 0.236281250 0.200843091",
+      "1 0.510554687 0.596135831 0.611640625 0.691896956"
+    ],
+    "input_label_sha256": "ed738661582324450be85f560fe7e76d8c92e6e8eee46a1230b647f03bad1cab",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000254454.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "676fbf3f2a75ceb63948c55c9d216b49670d31e12afdb11786868a0e2905cf09",
+    "pixels": "81439767d72f6230d52af488f88ee86191fd6150264d56bb57dfbb74bed25387",
+    "group": "plate__lvis_000000254454",
+    "capture": null,
+    "rows": [
+      "1 0.545648585 0.849984375 0.656721698 0.228375000"
+    ],
+    "input_label_sha256": "66a4867e63e182031e306a4a9bdd94c22099c65b380f0c477d420f2b8ee497fd",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000255124.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "fd511aad6bfca8bd4e97177f14ec0c72f7e21d46f7f0edb4bcb2349a0d3bc92e",
+    "pixels": "c4d177d548074c2f22bb2d85dc800c1b97c027c09ecc3f1a38fe1145c4a75f40",
+    "group": "plate__lvis_000000255124",
+    "capture": null,
+    "rows": [
+      "1 0.555843750 0.685177083 0.735218750 0.629645833",
+      "1 0.078960937 0.196458333 0.157921875 0.084750000",
+      "0 0.219230769 0.307167235 0.433333333 0.238907850",
+      "0 0.578205128 0.645051195 0.653846154 0.552901024"
+    ],
+    "input_label_sha256": "981c4d5af15710e1ba7e7fba66cb6b52d540b850aaf28aec5556be82a0ce5abe",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000256945.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "40cd2849f274c3a7dc16c147976158f2e6714a4e85e572cc900f06a54cd07858",
+    "pixels": "8c3b617c13343268346751d5d810c498f6bdabc37a48277f62c8263092da3cd9",
+    "group": "plate__lvis_000000256945",
+    "capture": null,
+    "rows": [
+      "1 0.445156250 0.663076923 0.788531250 0.517450549",
+      "0 0.369230769 0.389891697 0.312820513 0.512635379",
+      "0 0.633333333 0.386281588 0.246153846 0.433212996",
+      "0 0.302564103 0.700361011 0.353846154 0.259927798"
+    ],
+    "input_label_sha256": "4f93874ae5acc32bc3b8b5dab0e6776ad8b8c058d1ddeabb7112ea93c9773ddf",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000269879.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "52ed51690efc25d951d1abcb0aa52adffdf385d2f8a7279926a59ccc369ba493",
+    "pixels": "d81e89246eae06c8ea8137e885b57ba45d14dd5c59ab506315d71808cc28f5b4",
+    "group": "plate__lvis_000000269879",
+    "capture": null,
+    "rows": [
+      "1 0.618906250 0.792131148 0.519437500 0.415737705",
+      "0 0.603960937 0.724812646 0.478109375 0.435152225"
+    ],
+    "input_label_sha256": "be00096bde5ea207147631d20e8bca943868b194067cb5bbcafc25efbbf8c6a9",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000277156.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "45579010ac60b68180e1e778cdd015feec2284a6849aff7c071d155cd4099826",
+    "pixels": "058b6e725b62a4ef44eba4a2ae51552036dd1c4b59b4173481ae4c4b8b336c00",
+    "group": "plate__lvis_000000277156",
+    "capture": null,
+    "rows": [
+      "1 0.893492188 0.617229167 0.213015625 0.125208333",
+      "1 0.385953125 0.872927083 0.335250000 0.178729167",
+      "0 0.385945312 0.880916667 0.165703125 0.151916667",
+      "0 0.917140625 0.615062500 0.161718750 0.116583333"
+    ],
+    "input_label_sha256": "f5a8fc9da2274c3f330560499a702439266c9c04d3c5bd8e0dbffb5d871a831c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000277637.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d68904a5c0f635a348957333dcef13a4c34b4b9972eb8daa17d243df7e122b00",
+    "pixels": "ee5d3dffee749106191218b3e0629fdfa4b7e3a5d674d67b21323523e05e49f1",
+    "group": "plate__lvis_000000277637",
+    "capture": null,
+    "rows": [
+      "1 0.277663399 0.569566993 0.550490196 0.857728758",
+      "0 0.505751634 0.483080065 0.916928105 0.712303922"
+    ],
+    "input_label_sha256": "b3f1100fbe19b57a475a570cd4a91041f2a40c761ae7c95355a45ae9b957d77e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000281498.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f89de2c70e47aa68b881788ca0651138c1cc66b70f76c708049f2dbb04764a86",
+    "pixels": "bddf57ae60465fbf9a7298875b9832a24286d0b8bf6cd43ca7c61f6acb4ce156",
+    "group": "plate__lvis_000000281498",
+    "capture": null,
+    "rows": [
+      "1 0.705351562 0.575093750 0.291171875 0.340312500",
+      "1 0.431492188 0.932708333 0.236921875 0.134583333",
+      "0 0.579487179 0.508532423 0.107692308 0.156996587",
+      "0 0.726923077 0.551194539 0.187179487 0.228668942",
+      "0 0.885897436 0.182593857 0.064102564 0.105802048",
+      "0 0.456410256 0.960750853 0.087179487 0.058020478"
+    ],
+    "input_label_sha256": "60d6ab08389f68aa9825502dc4269e6cc6397aee15db50c09b4808386cd4d557",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000286176.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4f5ab1fc34063f2bf79ed80e1eb5fded036a9234e7fe34e43f25b96b9cf3f39d",
+    "pixels": "8880b1f60d82ce213868282b98b79877781e049a90ba0e9eb71b360f6aa09cbe",
+    "group": "plate__lvis_000000286176",
+    "capture": null,
+    "rows": [
+      "1 0.651289062 0.732523437 0.423609375 0.184296875",
+      "1 0.357312500 0.782421875 0.443281250 0.192281250",
+      "1 0.363093750 0.655296875 0.361531250 0.072812500",
+      "0 0.364179104 0.750746269 0.400000000 0.211940299",
+      "0 0.677611940 0.741791045 0.376119403 0.164179104",
+      "0 0.347761194 0.665671642 0.247761194 0.095522388"
+    ],
+    "input_label_sha256": "5a2d9c18883126b35975dfc1eaeae3830294f4584679af4025c3cae0802252a9",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000296843.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b44ce06ee834dcf18eaf43d5958481b8881f7f3893014cfdb1d2f096147a94d8",
+    "pixels": "4575a09029bf6ea5a7dc1bf6eefada2203a2077f55232e893507af44b24a4c2a",
+    "group": "plate__lvis_000000296843",
+    "capture": null,
+    "rows": [
+      "1 0.053578125 0.616281250 0.106031250 0.088645833",
+      "1 0.056398437 0.623250000 0.112796875 0.119083333",
+      "1 0.533906250 0.369041667 0.235218750 0.212916667",
+      "1 0.505117188 0.803895833 0.310015625 0.353541667",
+      "1 0.068578125 0.517697917 0.137156250 0.251395833",
+      "1 0.333437500 0.540010417 0.261781250 0.251687500",
+      "1 0.730539063 0.604895833 0.272828125 0.277500000",
+      "0 0.503846154 0.831058020 0.274358974 0.167235495",
+      "0 0.726923077 0.598976109 0.217948718 0.249146758",
+      "0 0.512820513 0.382252560 0.215384615 0.136518771",
+      "0 0.317948718 0.566552901 0.148717949 0.136518771"
+    ],
+    "input_label_sha256": "26905ef99ea281f194e793c143b03b3d120d00634ddfa79a5bb751b7cc330b37",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000299122.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2122374ca1e94d39ef3b5bef89f216be3f993ea62dd8c980a499c45cee82766d",
+    "pixels": "fad4a039bfa09fe9d385dcfaad78aeaeeb7e306ea45c6761ba15bbd2e2672c7f",
+    "group": "plate__lvis_000000299122",
+    "capture": null,
+    "rows": [
+      "1 0.924117188 0.777656250 0.121421875 0.148645833",
+      "1 0.889093750 0.942395833 0.221812500 0.115208333",
+      "0 0.419312500 0.802218750 0.299750000 0.179062500",
+      "0 0.549718750 0.823500000 0.309937500 0.220833333",
+      "0 0.414640625 0.672427083 0.296125000 0.150020833",
+      "0 0.711273437 0.818427083 0.288859375 0.213145833",
+      "0 0.710718750 0.696656250 0.282656250 0.166687500"
+    ],
+    "input_label_sha256": "69cbb16b560a3f787c7ab6c5b52b6d9d928c061934a51112a79788e20c8e3e61",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000302657.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b29137370c401b6e6922c8576a7e6e543c56659155b3905337455f7301b6ae0b",
+    "pixels": "5903954de28a65e557cb55339f7666535cbc31cd992900a609b2277ba6f54bc6",
+    "group": "plate__lvis_000000302657",
+    "capture": null,
+    "rows": [
+      "1 0.698484375 0.886197772 0.390812500 0.227604456",
+      "0 0.683921875 0.891894150 0.335093750 0.214986072"
+    ],
+    "input_label_sha256": "61b7f799ce7fed2455905c52f9a817990fddfdcb0f9db15dd531a6f85cc4ab1e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000307730.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c19451303e9bf502f68cce8bd03f617244ade6110c151f56d54c97c031465659",
+    "pixels": "8ff05a4dc74fab3945cbdf5694332d985374f5783d5304b6722c7867ff87d142",
+    "group": "plate__lvis_000000307730",
+    "capture": null,
+    "rows": [
+      "1 0.538546875 0.918545035 0.217750000 0.098799076",
+      "0 0.566140625 0.555739030 0.180625000 0.054341801"
+    ],
+    "input_label_sha256": "1e59261f708f76dd8921f50f2e8e948d1cdbc4790821bd9fc1c008910b5167eb",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000309386.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d959e595126a61a7a9702ab4448f95b02a5fddb8f613403cef1b14eb60506781",
+    "pixels": "509e67c96a3ee45f444a5d434d86cd87bd419fabb6254671dcbac2f2836b094e",
+    "group": "plate__lvis_000000309386",
+    "capture": null,
+    "rows": [
+      "1 0.546490683 0.548351563 0.186231884 0.042859375",
+      "1 0.420507246 0.477867188 0.042339545 0.004390625",
+      "1 0.422194617 0.679398437 0.322691511 0.069703125",
+      "1 0.044689441 0.562265625 0.089378882 0.016343750",
+      "1 0.578944099 0.562976563 0.126832298 0.021546875",
+      "1 0.767318841 0.666773438 0.377204969 0.082265625",
+      "1 0.632298137 0.782085937 0.534161491 0.140921875",
+      "1 0.736946170 0.594937500 0.254554865 0.034250000",
+      "0 0.629233954 0.758421875 0.454244306 0.146593750",
+      "0 0.018685300 0.552273438 0.037370600 0.020328125"
+    ],
+    "input_label_sha256": "0006c3cf80f112d77e04e347200d50c4c07e0e3ca13c2ff3e6314556d6a2bb33",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000309539.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f85d29cca1008481afb3dbe8b19c8509bdded534aed7597ef361e04aaade6dd7",
+    "pixels": "9ed70e31eda4af32a0e8f4b63b9c1604e22190df5caa7b8774f36ce4f837be50",
+    "group": "plate__lvis_000000309539",
+    "capture": null,
+    "rows": [
+      "1 0.493937500 0.579508368 0.804531250 0.840983264",
+      "1 0.166992188 0.111506276 0.333984375 0.223012552"
+    ],
+    "input_label_sha256": "64b2fca8ee25a06642c2bb43d2b169cc460513d63caddffa0093967b1c156d90",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000310121.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "cf7902d0031fa5009f84831bbae4bba5cacb4b1897a1be84deebbb3b2838f2ac",
+    "pixels": "ae052e1688f6af9a96e8a2c4eb2fcc42a63b311c480634cc2c9e94c1502a79e2",
+    "group": "plate__lvis_000000310121",
+    "capture": null,
+    "rows": [
+      "1 0.360429688 0.951448598 0.197265625 0.097102804"
+    ],
+    "input_label_sha256": "2a6f5458e51df464a16af00c00155c118057e427e2587c120107e858bc166302",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000310655.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3db7bce359b775934035c37cda08ef513b98aac200d0b481ea614a3ff7690a92",
+    "pixels": "79898c7f917854823db573ae82404a3eb06a7d896bafae27bc5b17988d74e5c4",
+    "group": "plate__lvis_000000310655",
+    "capture": null,
+    "rows": [
+      "1 0.548580000 0.463720000 0.902840000 0.695226667",
+      "0 0.500830000 0.400533333 0.404260000 0.467626667"
+    ],
+    "input_label_sha256": "cfd3eb235600c65a95cd428f1b93e85e5f3543af8afabaca3d839a59bf6545e3",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000311895.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "8f10639f5845e766609d3556e1b48e290100c9f5bb4b832d83eb70de3464b7e3",
+    "pixels": "ae5683bc2172a249d7cfc491af193c5e7d47701fe884a2812be9370f150dab0b",
+    "group": "plate__lvis_000000311895",
+    "capture": null,
+    "rows": [
+      "1 0.232484375 0.465317647 0.150562500 0.061882353"
+    ],
+    "input_label_sha256": "817aafc4a0d7ceec213d7dd8a841957a70adb7a9d10820aedbdf6abbd1a19eff",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000312785.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "23c3eb18305de2d1dca0a6fd632d6d8cab0253dea39f6c675d731f64e6d44927",
+    "pixels": "ad0adf8484d870516a159bf333a3019c4b0599a9f1d788985e27ef661d265a1c",
+    "group": "plate__lvis_000000312785",
+    "capture": null,
+    "rows": [
+      "1 0.863125000 0.434531250 0.133906250 0.078812500",
+      "1 0.617679688 0.401031250 0.077890625 0.065645833",
+      "1 0.038218750 0.040572917 0.050843750 0.014229167",
+      "1 0.681484375 0.774625000 0.216468750 0.214500000",
+      "0 0.867679687 0.428864583 0.061765625 0.051229167",
+      "0 0.032398438 0.036000000 0.019828125 0.014833333",
+      "0 0.668335937 0.775062500 0.094390625 0.102208333",
+      "0 0.590289062 0.388489583 0.054609375 0.064354167",
+      "0 0.145601563 0.008281250 0.016421875 0.014604167"
+    ],
+    "input_label_sha256": "4d11ef32dc7f63ad8d81d2d807fb68c22d84c9992868ef5c9ba25e498eb6d892",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000321390.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2296d989343861818962c5970f3cfcb11153831241ed4944c5dbf818fbf91e9f",
+    "pixels": "0f945a72f582dce20df603dd955626d22760e7cf7518568c6d01e1bacc4aa7e8",
+    "group": "plate__lvis_000000321390",
+    "capture": null,
+    "rows": [
+      "1 0.713254717 0.901578125 0.573490566 0.196843750",
+      "1 0.857617925 0.419726563 0.137264151 0.032046875",
+      "0 0.691441441 0.895522388 0.247747748 0.155223881"
+    ],
+    "input_label_sha256": "da9dab7cc47e4e915659a588e2228c12b0a9618e9bdf23b860478b5920261393",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000321940.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "080ecfac15ae996ecc531715d5117cc5ad1fc2b3e7873257d71ac0a5c9515be9",
+    "pixels": "bdf2c268886db20884611a5f6cfc744e4d22bfc467af14dbe4a63c71dc756ae3",
+    "group": "plate__lvis_000000321940",
+    "capture": null,
+    "rows": [
+      "1 0.926947917 0.884789063 0.142645833 0.049921875",
+      "1 0.930437500 0.869312500 0.139125000 0.031750000",
+      "1 0.926229167 0.841921875 0.147541667 0.056656250",
+      "1 0.930041667 0.862304688 0.139916667 0.029109375",
+      "1 0.929510417 0.875093750 0.140979166 0.036406250",
+      "1 0.927239583 0.877695312 0.139479167 0.037953125",
+      "0 0.432270916 0.808955224 0.203187251 0.095522388",
+      "0 0.615537849 0.862686567 0.187250996 0.083582090"
+    ],
+    "input_label_sha256": "7ae95fc962a95f30421e4a8502ffa18c380aa6ca5e0e70aef8f99cb6ee78f1aa",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000323499.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d94c13e3ebf5ae30ad63ea3744ca2614e8f09a1f977eebf7d7362a48c6daed20",
+    "pixels": "fa9d8a648999bf45663d7cf8e8325fe7048e57940a7013c517ff82fcb17e4213",
+    "group": "plate__lvis_000000323499",
+    "capture": null,
+    "rows": [
+      "1 0.562000000 0.560000000 0.468000000 0.432000000",
+      "0 0.524990000 0.518666667 0.458900000 0.377813333",
+      "3 0.391000000 0.810666667 0.554000000 0.208000000"
+    ],
+    "input_label_sha256": "03cb367cd1301205adc430fe807f5bfac579aea4299accb7b5ac5f4d77d98aa7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000324338.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "8a1fddeedade85e76caa463b1c9ff86da8ecf5d03b1efcd73f27508a96260e69",
+    "pixels": "bbce3747c856523e47f078da94882773db88d14c48c5f4a21d7d809e351e9b46",
+    "group": "plate__lvis_000000324338",
+    "capture": null,
+    "rows": [
+      "1 0.212726563 0.572447917 0.119171875 0.029729167",
+      "1 0.454812500 0.548968750 0.114312500 0.145979167"
+    ],
+    "input_label_sha256": "00cdde20fbc5c6b1af5b1fd43a6c7fede072ee56e659ee2c1ee2b8d31b151539",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000324789.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "41dd306bdeab54d96bf9f3eea5886d4a6dacf62958e949f92da78f78ddd10494",
+    "pixels": "d7d00f4bfea810639947282c59eb7f8c84237613f75e79ca16539dcd9fb90829",
+    "group": "plate__lvis_000000324789",
+    "capture": null,
+    "rows": [
+      "1 0.556320313 0.500826360 0.886109375 0.998347280",
+      "0 0.467948718 0.627147766 0.566666667 0.711340206"
+    ],
+    "input_label_sha256": "02c0d1bf0be32645121c887d770c4736dd6e9d5da1cc91001bb7e5354a5563d7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000326265.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b46d6d582b105a7e088869264129f4724f1f7041a7c4ca44e6f2f675ee6a1e37",
+    "pixels": "cf81b56187c8731aa5f4cd3b99cd7ffc5a651ae981e3f71535a7bda2e8b02dca",
+    "group": "plate__lvis_000000326265",
+    "capture": null,
+    "rows": [
+      "1 0.350690000 0.809320000 0.497340000 0.381360000",
+      "1 0.498280000 0.438986667 0.316120000 0.433013333",
+      "0 0.503110000 0.503440000 0.370100000 0.367200000",
+      "0 0.217070000 0.816733333 0.288660000 0.366533333",
+      "0 0.511020000 0.820386667 0.294000000 0.359226667"
+    ],
+    "input_label_sha256": "6245f55e05070eadc95e31ccf8f6caa3a8b6c8c4bbc5db3d494b92150f5bad5b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000333831.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5305ad3d0095d93ad3b10f4826b22bcdee2ce793b7cdc40abbcdb2eea91f87e7",
+    "pixels": "d2508246a254544cb739e57b1e868c778d853e4ae0151c826e9c956f249b586d",
+    "group": "plate__lvis_000000333831",
+    "capture": null,
+    "rows": [
+      "1 0.254718750 0.876062500 0.190281250 0.134041667",
+      "1 0.058578125 0.948010417 0.117156250 0.103979167"
+    ],
+    "input_label_sha256": "f6a26f1bc0b1ecf2e9b5456689fa094f3cb9f8b8c54afc550b5421d640337712",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000334476.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1cdf152d328a1175629c3643e67194cda41b874935dbeeb7915c7465522a14fb",
+    "pixels": "734eb192df80e38365a76bca8afbbeb71b2c57307242bebcddf61c0b97479780",
+    "group": "plate__lvis_000000334476",
+    "capture": null,
+    "rows": [
+      "1 0.671708333 0.147976562 0.504333333 0.173984375",
+      "1 0.500000000 0.584320312 1.000000000 0.540953125",
+      "0 0.568833333 0.157445312 0.671958333 0.314359375",
+      "0 0.532260417 0.626546875 0.932604167 0.678187500"
+    ],
+    "input_label_sha256": "131025c1296b0c473b76ef6c5ee27916c53f4eaf2456b17183df545bbf1ac8bc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000335810.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "cbec8583407e0b340cdc8b15953665aef78e7282bba037bc93152665ad8bf33e",
+    "pixels": "b168da6beb8fe7e2048b98a5c9fc018703b21c20d10825820a40537d78b811cc",
+    "group": "plate__lvis_000000335810",
+    "capture": null,
+    "rows": [
+      "1 0.592796875 0.881713287 0.814406250 0.236573427",
+      "0 0.555128205 0.260536398 0.458974359 0.398467433",
+      "0 0.169230769 0.327586207 0.333333333 0.647509579",
+      "0 0.870512821 0.204980843 0.253846154 0.402298851",
+      "0 0.739743590 0.701149425 0.520512821 0.590038314",
+      "0 0.161538462 0.578544061 0.323076923 0.383141762"
+    ],
+    "input_label_sha256": "0960d00faeabee6a874c369623eacadd5e3e77cdefb4ec92f655dd9f2d7ae6b6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000336954.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "fa4159ef635a614b9aa60cd39e1b25f8ba7d51db6dd4f87b37c7a6188725e882",
+    "pixels": "82cab2672507431fb80a046351f7a5dea710a0aa109a28fd1be6c53c46e42538",
+    "group": "plate__lvis_000000336954",
+    "capture": null,
+    "rows": [
+      "1 0.308520833 0.891625000 0.143958333 0.211031250",
+      "1 0.130708333 0.807757813 0.261416667 0.384484374",
+      "1 0.236583333 0.900242187 0.084125000 0.194734375",
+      "0 0.282868526 0.398507463 0.398406375 0.182089552",
+      "0 0.812749004 0.437313433 0.342629482 0.223880597",
+      "0 0.364541833 0.635820896 0.713147410 0.304477612"
+    ],
+    "input_label_sha256": "3f1c2bb5d1d10d205e760f0d4002dda5921d6874fb4c7d60228bf33511245a41",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000344667.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "9ba5fd39dccb24cd3c6f47408f0df253df6f006bab708ff074c9f0ba4977dbdb",
+    "pixels": "fbb4ceaea361f654f10e8bcb94ddcd36e1ac2ae4d7aef99919607d457b58e8b3",
+    "group": "plate__lvis_000000344667",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.518101562 1.000000000 0.670140625",
+      "0 0.278884462 0.553731343 0.557768924 0.516417910",
+      "0 0.587649402 0.194029851 0.689243028 0.208955224",
+      "0 0.743027888 0.673134328 0.513944223 0.289552239"
+    ],
+    "input_label_sha256": "6e1fbe70ac6ef63f4bf8423b73a938754b65ff61ece874a07814e89539153b52",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000345432.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e557c0ae971eb07e3208450dd23cb41882821cf216e535dcaa0cdb212ddb2ee7",
+    "pixels": "09b9fca9371a7787120cae52152c0fc59263517f3f8fc397407863b4a7a02a0c",
+    "group": "plate__lvis_000000345432",
+    "capture": null,
+    "rows": [
+      "1 0.422352941 0.741380719 0.844705882 0.517238562"
+    ],
+    "input_label_sha256": "ca3f2351d6fd999ee4cf95ebdb29b8e19e8d70bea296b39970da59b06bbee434",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000346262.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "9ae27238c80537f2792bb1e044c1a40332c82f6fe155aa8a340fc41c6fcf95eb",
+    "pixels": "85740d6bc31378c40a681e098b4322ac5257c451f77e0f3fdbaae20c817afff4",
+    "group": "plate__lvis_000000346262",
+    "capture": null,
+    "rows": [
+      "1 0.471421875 0.552416667 0.942843750 0.895166666",
+      "0 0.42031250 0.54270833 0.70937500 0.81458333",
+      "3 0.79375000 0.33645833 0.27812500 0.12291667"
+    ],
+    "input_label_sha256": "e4503ac473cb5470c69eaf534f2809ee9b783de1427c59b8e180fb89045bf82f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000351608.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5ba508e3a0662710021305cbe342a9720102df71c28de73c37e4346b1ec2fad4",
+    "pixels": "0b1645ed0a117e391111e04f96f9b21ac97c3bc6aea26a4f1f0dd05d3a5e5864",
+    "group": "plate__lvis_000000351608",
+    "capture": null,
+    "rows": [
+      "1 0.101614583 0.881281250 0.203229167 0.084625000"
+    ],
+    "input_label_sha256": "91d24be4b826f9c64188532d2f742df023d6ff372a3867916ff595e82816b865",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000352734.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "567de5583987b24083e0db2ac3253ebbb42100f1ff249d6684b5194ec604165e",
+    "pixels": "129526861d95773186f729c953834a199846973ae839004d3f24ab7baf2b49c2",
+    "group": "plate__lvis_000000352734",
+    "capture": null,
+    "rows": [
+      "1 0.574718750 0.861877934 0.540906250 0.262065728",
+      "0 0.676923077 0.842307692 0.205128205 0.223076923",
+      "0 0.524358974 0.676923077 0.074358974 0.161538462",
+      "0 0.482051282 0.938461538 0.076923077 0.092307692"
+    ],
+    "input_label_sha256": "2eeedd3b6fa476a3d8e830adcbf4426278fd298cb96cbeb0e9749685c992c116",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000363727.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "123b13035515f0cda4b813d70a7aa7f5e594d92f9d7f619b845906ef26e89929",
+    "pixels": "6688341ce36c66e24b9d296f2bf442a5385665d496b2c4a47e6c338dab13eb54",
+    "group": "plate__lvis_000000363727",
+    "capture": null,
+    "rows": [
+      "1 0.431148437 0.360811765 0.287265625 0.313482353",
+      "1 0.411750000 0.754894118 0.362062500 0.490211765",
+      "1 0.476898438 0.097129412 0.235671875 0.188941176",
+      "1 0.664539062 0.492800000 0.330796875 0.397035294",
+      "0 0.470512821 0.110038610 0.212820513 0.150579151",
+      "0 0.438461538 0.347490347 0.251282051 0.231660232",
+      "0 0.342307692 0.691119691 0.125641026 0.247104247",
+      "0 0.482051282 0.756756757 0.097435897 0.347490347",
+      "0 0.647435897 0.490347490 0.243589744 0.308880309"
+    ],
+    "input_label_sha256": "c873908cad6536910c641f6a48715ba19adb7c8e0eb39db31f27835358fdb2f1",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000368986.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "714996f2af6fcb942179e0047d6b0f3bd552834aad082e5d32a39642ae802630",
+    "pixels": "9a5aafda6818da3cb15995f052d4233ef8bec53cd61efc8814272f8c08d4f1b7",
+    "group": "plate__lvis_000000368986",
+    "capture": null,
+    "rows": [
+      "1 0.595367187 0.736030445 0.538296875 0.360772834",
+      "0 0.591195313 0.589742389 0.473984375 0.547587822"
+    ],
+    "input_label_sha256": "f69aa233b16d6010bffa7d4c9fd7cd07a7612b5b7e26f2134cb30e160df2a5f1",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000371092.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "11a4fdd0a55791092d6f6486075c392b64b630657c2c9c445f04abf76117b161",
+    "pixels": "4ebc89616feea8e96258672f40d0bafb0ef931e2d430f6c50738912c5e012bb8",
+    "group": "plate__lvis_000000371092",
+    "capture": null,
+    "rows": [
+      "1 0.487187500 0.420640625 0.059375000 0.012843750",
+      "1 0.437010417 0.557187500 0.076270833 0.023625000",
+      "1 0.399583333 0.512507812 0.020791667 0.010734375",
+      "1 0.197239583 0.876664063 0.162062500 0.079484375",
+      "1 0.088177083 0.505515625 0.061187500 0.028968750",
+      "1 0.557979167 0.428312500 0.032166667 0.035687500",
+      "1 0.543656250 0.445062500 0.051979167 0.012343750",
+      "1 0.359156250 0.857523438 0.155520833 0.083484375"
+    ],
+    "input_label_sha256": "6b31daa463e1d6084df0c1feeb903bfb4dbfa982d3638de847496e9a67bd59fc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000371950.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d53272309ccaaeb1e9e447f6fed58d6194a5ff79108071ec82abafadb45a2ccd",
+    "pixels": "aa3e66ce360b94df48bdf61123c58f0adaade97cd154184043a3f8ae47bc6094",
+    "group": "plate__lvis_000000371950",
+    "capture": null,
+    "rows": [
+      "1 0.741351563 0.039666667 0.314796875 0.079333333"
+    ],
+    "input_label_sha256": "57dae912a443ac4c322aef5a09ebdb482dab42efa9eedfffa3415c49dfb490f7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000373316.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "98f11e52173a105db545030d6005a72d31b2b11c7baddf4f59cca11d264ff6c9",
+    "pixels": "0167239a1b70abdaa9008831cce522faefd61f2ad8ee89afbc082ddbf8f82197",
+    "group": "plate__lvis_000000373316",
+    "capture": null,
+    "rows": [
+      "1 0.622893333 0.213780000 0.658000000 0.379200000",
+      "1 0.444040000 0.691520000 0.823120000 0.592640000",
+      "0 0.418326693 0.692537313 0.517928287 0.489552239",
+      "0 0.647410359 0.170149254 0.490039841 0.173134328"
+    ],
+    "input_label_sha256": "4c0484e9e13413697b089879707dc01ed6e557c593021c9be843373a8ff3330a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000376209.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "7d214e0763b686fc27533a226d518e72fdd27bcc596ebedafe654d0c18ac7573",
+    "pixels": "66270e26fe3c0e6a123ed3b87ae6ea29a20327e29309e1a33e6885c923419ea6",
+    "group": "plate__lvis_000000376209",
+    "capture": null,
+    "rows": [
+      "1 0.609390625 0.753865337 0.093562500 0.092269327",
+      "1 0.547710937 0.817730673 0.141328125 0.100149626",
+      "1 0.756648437 0.802369077 0.084796875 0.105187032",
+      "1 0.505320313 0.728416459 0.136515625 0.081221945",
+      "1 0.226187500 0.478079800 0.085906250 0.059301746",
+      "1 0.088210938 0.430511222 0.150265625 0.064463840",
+      "1 0.709968750 0.933441397 0.141062500 0.112019950",
+      "1 0.504804688 0.651122195 0.092109375 0.064588529",
+      "1 0.570000000 0.957082294 0.141812500 0.085835411",
+      "1 0.685687500 0.981047382 0.054562500 0.032618454",
+      "0 0.502564103 0.704918033 0.138461538 0.131147541"
+    ],
+    "input_label_sha256": "4892391db9bff064d48bb2d1355eeb28a5863896ecd4973bf8fdb6e3778be3f6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000376502.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "cc3b20f9fe6656fea9eb344cd56917e31908699cc65d8bb10ff28442daf9508e",
+    "pixels": "cede117c23ca905f4d838be68d5dfcb67d8a735e73a6d89d9b81faa1e5bd3c1f",
+    "group": "plate__lvis_000000376502",
+    "capture": null,
+    "rows": [
+      "1 0.355773438 0.521687500 0.235859375 0.153916667",
+      "1 0.751835937 0.561531250 0.221171875 0.042270833",
+      "0 0.678609375 0.485979167 0.239156250 0.154333333",
+      "0 0.362523438 0.508968750 0.210328125 0.191229167"
+    ],
+    "input_label_sha256": "501c0dbf7159cf8844230ea0008d93abe8dfd7262abe99f66237d363d34b632a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000379508.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e7069257854a6520908d3f93e82fa02328c1e540d1429e7d38d5c7c96c0d25fe",
+    "pixels": "f21e62b4adca6b07daf31ec8b12f99954880ad4181e96ad4ea772981b622b45d",
+    "group": "plate__lvis_000000379508",
+    "capture": null,
+    "rows": [
+      "1 0.451940000 0.848946667 0.161360000 0.157413333"
+    ],
+    "input_label_sha256": "47cb055791ddf15666d692fd45b008b01374942f10933459110f4628fd745f07",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000379820.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "298de714a7b95a0bd581dbce5a23706ff7e70c8199945bdbfe4d476a8e5eeed1",
+    "pixels": "5800b26a11985c761f239e30520d7c24fb0ea1218b5c812167b7d0e8227ab0eb",
+    "group": "plate__lvis_000000379820",
+    "capture": null,
+    "rows": [
+      "1 0.299210937 0.520535248 0.112390625 0.064516971",
+      "1 0.284132812 0.837480418 0.175078125 0.192715405",
+      "1 0.612328125 0.567911227 0.119125000 0.086997389",
+      "1 0.620664063 0.817767624 0.154453125 0.165718016",
+      "1 0.397515625 0.487519582 0.093750000 0.055039164",
+      "0 0.232051282 0.706008584 0.079487179 0.107296137",
+      "0 0.308974359 0.609442060 0.079487179 0.085836910",
+      "0 0.501282051 0.725321888 0.079487179 0.103004292",
+      "0 0.646153846 0.654506438 0.087179487 0.115879828",
+      "0 0.343589744 0.566523605 0.087179487 0.094420601"
+    ],
+    "input_label_sha256": "cb7d6f077beaf476b3d8697b846254e87bbe2752e46e9db4530d83298290d963",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000386009.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ddcd06e2ec9a2d2a04288716699efa7a559b5a6c907cdfa86f076d8e685cf8c2",
+    "pixels": "2a6f6036d33591ef18b600178e8a19274f80ddb4f73988762db9523d24e42e29",
+    "group": "plate__lvis_000000386009",
+    "capture": null,
+    "rows": [
+      "1 0.475914062 0.718782201 0.827484375 0.322014052",
+      "1 0.096046875 0.923196721 0.186187500 0.149859485",
+      "0 0.476343750 0.528255269 0.834875000 0.588829040"
+    ],
+    "input_label_sha256": "981e078f1a0e10a0c9bbfc54cda1850ca07a59cf2320e7bb9eadea227f037d77",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000392878.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "fd53a87a85adcfad0caf2f63752281b02efe71a48aad5a684d20cdef72fdc564",
+    "pixels": "c2b210ef43290399dff3929f60ed9f17fc49895901172a79b206334afd4f5995",
+    "group": "plate__lvis_000000392878",
+    "capture": null,
+    "rows": [
+      "1 0.323109375 0.511990632 0.078406250 0.020281030",
+      "1 0.771320312 0.531288056 0.051421875 0.030960187",
+      "1 0.577179687 0.254859485 0.034484375 0.008313817",
+      "1 0.561882813 0.295632319 0.026640625 0.010562061"
+    ],
+    "input_label_sha256": "0a67ccf74aef1993410e277d7188ea4c394d3fb9b04eed7b3c6f844d1bb6895b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000397318.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "cf49e7fc96a5eaa97bb69c6e7a17f60845af920b6a7bdf4bc20ccb266bb26275",
+    "pixels": "cc7148b23721b9b54e768d7b1d62a91804d6d06e9a84f5573de5e52982c45a2c",
+    "group": "plate__lvis_000000397318",
+    "capture": null,
+    "rows": [
+      "1 0.099304688 0.668521940 0.168765625 0.101709007",
+      "1 0.339765625 0.886812933 0.174750000 0.142263279"
+    ],
+    "input_label_sha256": "b3454d927e3325c9177bf3902c98909c7dbc784673468c53d986a143aa669009",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000400613.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "538658dc6c98b3e4b249ac71d9f9060805034dca374c9ad5046acbaaf0d78994",
+    "pixels": "fd432ca8b035844f0bf987d7b71d6e458e2f90f1256b1603c97a3baf448449a2",
+    "group": "plate__lvis_000000400613",
+    "capture": null,
+    "rows": [
+      "1 0.223708333 0.691851562 0.205041667 0.074296875",
+      "1 0.108791667 0.820640625 0.217583333 0.125375000",
+      "0 0.270916335 0.385074627 0.151394422 0.137313433",
+      "0 0.179282869 0.374626866 0.103585657 0.062686567",
+      "0 0.561752988 0.428358209 0.103585657 0.104477612",
+      "0 0.223107570 0.714925373 0.159362550 0.062686567",
+      "0 0.121513944 0.789552239 0.115537849 0.086567164"
+    ],
+    "input_label_sha256": "da024ebb2107826d39d15b5fb745c1793a1f5989e3c4bb0b370bc64da80011f7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000403580.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c78dc33a5efc50f4d41b1335ec8fd3f6c9b39498e488696d395d5a0555d8856c",
+    "pixels": "0cd0a1d7d3e760f609dc1199823b3b4350390920935cf3e93e14f208fcd8a2a1",
+    "group": "plate__lvis_000000403580",
+    "capture": null,
+    "rows": [
+      "1 0.076164062 0.848483264 0.152328124 0.238472803",
+      "0 0.607421875 0.462332636 0.785156250 0.612238494"
+    ],
+    "input_label_sha256": "c2001b4a0033e3a1ce80d9cd84895f0b181de58564c4d48b34d34908281df77d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000405214.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2a24ba0ec76965a3229c0f911615a14654a2574eae407b5b95b64cfbcfe13f39",
+    "pixels": "9c4bbc22b615b4abd6f1caf4b34509986cd267a93b8f42ce7151b8d0e1d640a5",
+    "group": "plate__lvis_000000405214",
+    "capture": null,
+    "rows": [
+      "1 0.421882812 0.289500000 0.314984375 0.117750000",
+      "1 0.187773438 0.521395833 0.324671875 0.196333333",
+      "1 0.720898438 0.428687500 0.372171875 0.159291667",
+      "1 0.586562500 0.704333333 0.483531250 0.283166667",
+      "0 0.156410256 0.418088737 0.112820513 0.221843003",
+      "0 0.271794872 0.363481229 0.071794872 0.208191126",
+      "0 0.370512821 0.346416382 0.120512821 0.228668942",
+      "0 0.483333333 0.211604096 0.100000000 0.218430034",
+      "0 0.530769231 0.627986348 0.138461538 0.286689420",
+      "0 0.635897436 0.387372014 0.102564103 0.283276451",
+      "0 0.728205128 0.496587031 0.112820513 0.412969283",
+      "0 0.839743590 0.370307167 0.171794872 0.228668942",
+      "0 0.425641026 0.571672355 0.123076923 0.215017065"
+    ],
+    "input_label_sha256": "5624d51e75ad602f90ce9a18a33830d2e8579174fe5e066d61829ed2c8a0e6dc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000405882.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ab006cf8413c63ac5fe909db533c96c3056102071fe6603b8fbf28f9169e05bb",
+    "pixels": "db0f59ecc6928d29165cdde239f7596effffe81423f0f9a99c7c023abec9d9f5",
+    "group": "plate__lvis_000000405882",
+    "capture": null,
+    "rows": [
+      "1 0.338770000 0.731282051 0.339340000 0.322923077"
+    ],
+    "input_label_sha256": "1471c81ca5c16af016063e940389b52f0a02041760f3c26316942436e3c6054c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000409708.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2e28dd8fb53424fb5523ce50489266cd1d95928e77db83d3a5a7b17810e1ecb9",
+    "pixels": "04bda6c5e2c3861183b2c307fed4c229fdc04095051652de0b8c3ce9f99aa698",
+    "group": "plate__lvis_000000409708",
+    "capture": null,
+    "rows": [
+      "1 0.674078125 0.806896956 0.163375000 0.055433255",
+      "1 0.657859375 0.871709602 0.185531250 0.084637002"
+    ],
+    "input_label_sha256": "c632680aa198055c4a552e817e5f890fef3c8659efb688c7d3381e6a529ff5fb",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000413971.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "61b6395213d65956f3dc04db574f2b84f1c4e07570d02268b094701728bb884b",
+    "pixels": "6e7e727c02ca54fa57815e8d96350f6b93380ea5c71c9e72f12b2166f37796e1",
+    "group": "plate__lvis_000000413971",
+    "capture": null,
+    "rows": [
+      "1 0.355742187 0.858658824 0.526078125 0.231011765",
+      "1 0.705671875 0.623623529 0.442437500 0.176141176"
+    ],
+    "input_label_sha256": "e10c47fe43a59335e4becf17764e181ab75ddc71f25b53f92a518e6a4ef54435",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000418791.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d63906d673edd83d5a0d72965458d37ba6711653f07da690ab3b58b917c47377",
+    "pixels": "b94c6739cefa80e0c55f117a77ef6f130b166a945468dca4872ec56f31b4f8ee",
+    "group": "plate__lvis_000000418791",
+    "capture": null,
+    "rows": [
+      "1 0.916210938 0.304458824 0.164171875 0.239882353",
+      "1 0.028906250 0.575317647 0.054968750 0.241458824",
+      "0 0.480769231 0.283783784 0.264102564 0.305019305",
+      "0 0.248717949 0.457528958 0.292307692 0.320463320",
+      "0 0.603846154 0.401544402 0.356410256 0.262548263",
+      "0 0.864102564 0.544401544 0.194871795 0.200772201",
+      "0 0.257692308 0.737451737 0.279487179 0.393822394",
+      "0 0.474358974 0.735521236 0.200000000 0.397683398",
+      "0 0.719230769 0.683397683 0.310256410 0.316602317"
+    ],
+    "input_label_sha256": "6b883e52f6367f5c1ef1307da00b0298e23b1e06bf7f4809a207fd500f517e53",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000419232.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2ce039ced88b523d0b876a6d050df58157fc55367bef40a4162d06c50f219a35",
+    "pixels": "b3b498d09bc7496eec9896fd9e01c731a950433df496f451c7cebf89b85010bb",
+    "group": "plate__lvis_000000419232",
+    "capture": null,
+    "rows": [
+      "1 0.297820312 0.691137787 0.112609375 0.047411273",
+      "1 0.185812500 0.202703549 0.022343750 0.011837161",
+      "1 0.454726562 0.555887265 0.093578125 0.052025052",
+      "1 0.448796875 0.824572025 0.113562500 0.100292276",
+      "1 0.154625000 0.224530271 0.035718750 0.012400835",
+      "1 0.054789063 0.247265136 0.043578125 0.015657620",
+      "1 0.115828125 0.218695198 0.023312500 0.009958246",
+      "1 0.429085938 0.155542797 0.029078125 0.006826722",
+      "1 0.014804688 0.882724426 0.029609375 0.078183716",
+      "1 0.015617188 0.240814196 0.029734375 0.012693111",
+      "1 0.570468750 0.452045929 0.016937500 0.013778706"
+    ],
+    "input_label_sha256": "7a71443a0bd7377931a0b7ac8505d3cd6d07e18417b31af44b0736eae3e93b73",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000420610.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "41c5ec6b4b7f8d633ae8692968da5fee9939013bb19335ebf5079b190158c66a",
+    "pixels": "0e91ff67452822374efe1cc9003d77ec05abf14eacdbaa85ccda65c01f0ff529",
+    "group": "plate__lvis_000000420610",
+    "capture": null,
+    "rows": [
+      "1 0.227335938 0.372887029 0.142921875 0.229414226",
+      "1 0.106703125 0.231652720 0.213406250 0.352426778"
+    ],
+    "input_label_sha256": "1b5cf626f03c6afc2f39386354cb53adfa8ad9128aba0662c160b255edded3f5",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000421639.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "84945ad9c35c90218309717ddcb24c0c94205be7524359b1a3d7b8c02837e7e2",
+    "pixels": "f99fc7addb912728ca9c9b569e4cc0d2c8c06259b5c3707c0037a90f52aa1158",
+    "group": "plate__lvis_000000421639",
+    "capture": null,
+    "rows": [
+      "1 0.462992187 0.566267606 0.517484375 0.441455399",
+      "0 0.448717949 0.436538462 0.405128205 0.496153846"
+    ],
+    "input_label_sha256": "908f1e92f601f1813efca65dd4f9d559778858afa1367a4d09080c039795f6f2",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000422040.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "188bcea90e70d0cb94c40b5a89a00d1a46d25eed7663f36b243989080607c199",
+    "pixels": "08622452aa93216169398e152b3a6400cbb8dcf0da8ac85fda33773a2d5b7c68",
+    "group": "plate__lvis_000000422040",
+    "capture": null,
+    "rows": [
+      "1 0.471875000 0.477148438 0.109958333 0.026234375",
+      "1 0.436406250 0.414460938 0.048645833 0.016359375",
+      "1 0.641843750 0.698085937 0.142187500 0.067765625",
+      "1 0.803593750 0.558625000 0.139812500 0.036125000",
+      "1 0.548302083 0.420742187 0.042854167 0.016296875",
+      "1 0.965666667 0.936539062 0.068666666 0.111984375",
+      "1 0.692864583 0.478851562 0.107020833 0.025015625",
+      "1 0.948322917 0.677695313 0.101812500 0.057296875",
+      "0 0.952191235 0.662686567 0.063745020 0.047761194",
+      "0 0.553784861 0.420895522 0.063745020 0.023880597",
+      "0 0.683266932 0.482089552 0.091633466 0.026865672",
+      "0 0.478087649 0.477611940 0.159362550 0.029850746"
+    ],
+    "input_label_sha256": "e9099bdcbdd107474e1df7964851526e1f7380f8d414e962c2e939d6e5d220ac",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000425177.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "96e8585a441efebf16ec86157b777304200125e1764aeddbbe82792d6e3f1450",
+    "pixels": "29ae7e72ce49dcf94295eee8c79f48f7466b0d90738ce7ed470be7ff5ced22f0",
+    "group": "plate__lvis_000000425177",
+    "capture": null,
+    "rows": [
+      "1 0.437041667 0.665429687 0.204458333 0.033453125",
+      "1 0.431614583 0.668234375 0.134729167 0.013718750",
+      "1 0.399677083 0.700617188 0.129687500 0.016109375",
+      "1 0.433541667 0.679132813 0.198166667 0.020328125",
+      "1 0.425447917 0.654648438 0.130979167 0.028578125",
+      "1 0.432291667 0.686093750 0.199208333 0.020843750",
+      "1 0.584083333 0.821492187 0.557000000 0.144421875",
+      "0 0.578229167 0.756429688 0.283750000 0.148890625"
+    ],
+    "input_label_sha256": "09bba4d8b3db4c4790f13a1513383e87d02158c61dd9c9ad13258305ec2031a7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000435583.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "a25dcc42a4085a07ba6d01d0e27820903318d693644d43a9a1faf94e1543aae0",
+    "pixels": "4e21ec29bc4ec784d78f16f43101c7892c9f9290b62d2004de7229482848b37a",
+    "group": "plate__lvis_000000435583",
+    "capture": null,
+    "rows": [
+      "1 0.157734375 0.502156250 0.130843750 0.113562500"
+    ],
+    "input_label_sha256": "1f3c476e1d45814a1ac8dd6a1d20f50b0a65be63c8a58cf35feaf4eb4927388c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000437944.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "498230e318ea339c00bfc9bccb3eecea7f4df97d8f5c686a426323119849c70b",
+    "pixels": "a40a58131f9676faf87c29efed1739659c1c29c27db7670a1b3dfea5c8952ea3",
+    "group": "plate__lvis_000000437944",
+    "capture": null,
+    "rows": [
+      "1 0.112703125 0.850367965 0.225406250 0.082510823",
+      "1 0.112703125 0.805616883 0.225406250 0.091536797",
+      "1 0.932382812 0.643777056 0.135234375 0.022186147",
+      "0 0.377140625 0.752597403 0.361843750 0.202467532"
+    ],
+    "input_label_sha256": "91efcb63290f899c88b8b0a8d00d01ff004a4dc92910e5e45a81441594e355d0",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000442231.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "efb32ca68cae0f38be4cef6a2496902b2be7781e54f532aa2948b3207830b33a",
+    "pixels": "801aaf38862fb6694a234799c33e6aaf438bd6da5f1e7cc499a99f89dd9a5286",
+    "group": "plate__lvis_000000442231",
+    "capture": null,
+    "rows": [
+      "1 0.414093750 0.873171875 0.407395833 0.228125000",
+      "1 0.938510417 0.411843750 0.122979166 0.025187500",
+      "1 0.984656250 0.438882812 0.030687500 0.024765625",
+      "0 0.245019920 0.523880597 0.394422311 0.241791045",
+      "0 0.910358566 0.437313433 0.059760956 0.026865672"
+    ],
+    "input_label_sha256": "c60f74fd06ef0e9b1cd0da3f606cad3efad60e64d64c5bd57e35b0371f90c45c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000442287.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "8c61d4c6d70ba280d66c988880997d5cee54e2a8169075389a97f9c2fdeb9e2a",
+    "pixels": "d00425b1a917f21afda3396abeab42682fa26f028944ed54da842298119c2141",
+    "group": "plate__lvis_000000442287",
+    "capture": null,
+    "rows": [
+      "1 0.196645833 0.980054688 0.393291667 0.039890625",
+      "1 0.481770833 0.721148438 0.329125000 0.098640625",
+      "0 0.500906250 0.699625000 0.178979167 0.113593750"
+    ],
+    "input_label_sha256": "3c00ec49232e796e34cdc3b60a4da6faaa9470ed4ed4d392037c4949c7b34839",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000444397.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0eddc76ba8b00ff1257a38df346254c7dd55469c0e04423c451f6b07ef1c82e7",
+    "pixels": "41cc8c22aef772f2a6450c27601ac2ce41cd231a1533558815e4b0c52b3d1e73",
+    "group": "plate__lvis_000000444397",
+    "capture": null,
+    "rows": [
+      "1 0.434391101 0.676179688 0.866533958 0.540234375",
+      "0 0.176339286 0.420895522 0.343750000 0.226865672",
+      "0 0.285714286 0.726865672 0.562500000 0.289552239"
+    ],
+    "input_label_sha256": "41caa0217f657d526df9b3109bba19e6ff035ff2a9f10a21226bf1c117bc0d6e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000448535.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b94ffd9f9e732137e102d3e0ea8463f52d7fa95b51944b7f521bf99e0670b071",
+    "pixels": "b9e8b7f514727a3bdaa941ed8145d0ea9c68c927d8ba998c18787e67d11b88d1",
+    "group": "plate__lvis_000000448535",
+    "capture": null,
+    "rows": [
+      "1 0.654523437 0.844104167 0.137734375 0.044791667",
+      "0 0.487179487 0.737201365 0.287179487 0.259385666",
+      "0 0.411538462 0.890784983 0.253846154 0.122866894"
+    ],
+    "input_label_sha256": "2f9106b78debdfc895d36e53b44b06652ee798654e4bdcd8d539a67818aa4233",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000451800.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c9c23635056b153cdb9f70d5c486b9547f636d402f6323fede7e485c4770960f",
+    "pixels": "b3f09fee7222846be4d0b2df3f18e90179ddcebe68ba00a4d68834cddc7bc922",
+    "group": "plate__lvis_000000451800",
+    "capture": null,
+    "rows": [
+      "1 0.756578125 0.712895833 0.486843750 0.476791667",
+      "1 0.336304687 0.622406250 0.504046875 0.550729167",
+      "0 0.345367188 0.564760417 0.449046875 0.445354167",
+      "0 0.754125000 0.601916667 0.393062500 0.691541667"
+    ],
+    "input_label_sha256": "affdf7a736778b3e7effbe587fcf76eb2775624d0369d898a97158b547de22ad",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000453552.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4bcf2783a6f028ca647128a6f0695ce157cd82de2ae65e4dd349ed1064ba5491",
+    "pixels": "2c8c97b8079ccb93981115c6150c2e990b350d923532207e9207d14df4a24e2a",
+    "group": "plate__lvis_000000453552",
+    "capture": null,
+    "rows": [
+      "1 0.152264151 0.921406250 0.304528302 0.120906250",
+      "1 0.147264151 0.896648438 0.266603774 0.124078125",
+      "0 0.233962264 0.751359375 0.353207547 0.175156250"
+    ],
+    "input_label_sha256": "c33933a1a2ea08579fec445b7526b97a4812d1eaeb4869c9f5c0e1aecf0bb73e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000472691.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4d034605d2693d2b6f41188f3220821e2daa763f707ce51dda5666c587b3f970",
+    "pixels": "9cf569e3bba88871b2506a2316e178f3715e166904413cd84a0108605979d4c9",
+    "group": "plate__lvis_000000472691",
+    "capture": null,
+    "rows": [
+      "1 0.334765625 0.584718750 0.503875000 0.361895833",
+      "1 0.756070313 0.237718750 0.306421875 0.109645833",
+      "0 0.336101563 0.610135417 0.477671875 0.700354167",
+      "0 0.772937500 0.527489583 0.454125000 0.435520833"
+    ],
+    "input_label_sha256": "75ef8f6fb105753e95542590e6be799b08ee71644d60827bf0d6c3ac54a077f2",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000478368.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f47058410fe425c9a4000fd0e3b88c40503f036ffd3c33c507d8951c085e85d9",
+    "pixels": "a17d7253c4f0f74dcba69aa7eef54ebd7dc488fce8248c57d2ef62c957bbcbba",
+    "group": "plate__lvis_000000478368",
+    "capture": null,
+    "rows": [
+      "1 0.029390625 0.115630841 0.057218750 0.185467290",
+      "0 0.469468750 0.260642523 0.187093750 0.193434579",
+      "0 0.864109375 0.388750000 0.221812500 0.234836449",
+      "0 0.368304688 0.431179907 0.211015625 0.207920561",
+      "0 0.307765625 0.214532710 0.181250000 0.163738318",
+      "0 0.810695313 0.639170561 0.250203125 0.285817757",
+      "0 0.184773437 0.364170561 0.195171875 0.197686916",
+      "0 0.554875000 0.523714953 0.219531250 0.248457944",
+      "0 0.664320313 0.324883178 0.197078125 0.228271028"
+    ],
+    "input_label_sha256": "d31ea82eca529d33694aa1da280f5185a239ea5c0f37f328640a71c7b8a2436e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000482913.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5cb0d3f3afe4fdcbc23dff600d6e6d221ea05bcdc7fe698fb61f412998386692",
+    "pixels": "b617af5aab252650f6cde8d4d6240a62f3da717492633084cb025050c9c256dd",
+    "group": "plate__lvis_000000482913",
+    "capture": null,
+    "rows": [
+      "1 0.458211297 0.693515625 0.731903766 0.204843750",
+      "0 0.478556485 0.605601563 0.513221757 0.316296875"
+    ],
+    "input_label_sha256": "6e21dda42674a0284350a77230f9d41ee036e4c9d14c1886c1d0dfb232489351",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000482998.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3aa6bd7d2cabd83195b6bbeea0d1015f4f1a4a615bdf5a0e2f52aadca579e1e6",
+    "pixels": "cf71481a37f7595b6caccb5a663d801e1d5c49f206175e95975b50be0884b8fd",
+    "group": "plate__lvis_000000482998",
+    "capture": null,
+    "rows": [
+      "1 0.915671875 0.529330986 0.094375000 0.164906103",
+      "1 0.970414063 0.563063380 0.056390625 0.049741784",
+      "1 0.934695313 0.876326291 0.128453125 0.043591549",
+      "1 0.538257813 0.517159624 0.106953125 0.038638498",
+      "0 0.547023437 0.505739437 0.090265625 0.023309859",
+      "0 0.632101562 0.730492958 0.071578125 0.039061033",
+      "0 0.680898438 0.861197183 0.150734375 0.087464789",
+      "0 0.563710938 0.763861502 0.104796875 0.058990610",
+      "0 0.996554688 0.555610329 0.006890625 0.040657277"
+    ],
+    "input_label_sha256": "e3f25c626f050382ad019ed96fd4f764d25a6b75581465efaaa39c66425af3d4",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000483769.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "59dc933b4e77b0229b80412bf95869d753512511babbeea1b404e738bc4e78a9",
+    "pixels": "dcfc35d404202bd7e8d9576be363aae72b95534ef54100706cb992c21b4fc42b",
+    "group": "plate__lvis_000000483769",
+    "capture": null,
+    "rows": [
+      "1 0.747625000 0.899281525 0.078312500 0.023548387",
+      "1 0.737101563 0.863724340 0.090171875 0.057126100",
+      "1 0.738789062 0.789252199 0.090828125 0.092815249",
+      "1 0.780179687 0.854486804 0.021609375 0.056129032",
+      "0 0.437562500 0.817096774 0.299312500 0.198651026"
+    ],
+    "input_label_sha256": "f113c0f847640adf745e9426871f72158099aa251144ffabade33bd272ea4c79",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000485954.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "04c60a9a231f9e91df3cf3b92750b37a8fe5e905c47cac7635d22656776a0f5f",
+    "pixels": "5ea296c75ffd95e9017f32e3409480426dd08e3589c27e1f116cc10fda85f0c0",
+    "group": "plate__lvis_000000485954",
+    "capture": null,
+    "rows": [
+      "1 0.237406250 0.763333333 0.126781250 0.076833333",
+      "1 0.853593750 0.707531250 0.213406250 0.065395833",
+      "0 0.255406250 0.761708333 0.064468750 0.058958333",
+      "0 0.851570313 0.670572917 0.183140625 0.095354167"
+    ],
+    "input_label_sha256": "6c0ffc1d73c5ae4669f3889fe51671c16b31983e2e5f02ac78a69f032fbc6f46",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000486262.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c52292545a0c9fea174645a0496b896bdf6dc8012b1b5bf82d3915153174e9e4",
+    "pixels": "2edb98c1a242bc70e1ae461258ffac5a06512f36321ed4dcce0e66d00f3cbd7d",
+    "group": "plate__lvis_000000486262",
+    "capture": null,
+    "rows": [
+      "1 0.345429688 0.649531250 0.310265625 0.071020833",
+      "0 0.381664062 0.608708333 0.090203125 0.082416667"
+    ],
+    "input_label_sha256": "b5be689328bf2e886db1b86634ea45a4779bd074293b53722a1d4139ed551a52",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000489879.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "db4c13235338dab625f2ec3ab55f2567dfe65885d7308fd7a8cbcaa58492e28c",
+    "pixels": "157a22506f457e4d52e6d2adeba28d9e1c4171051b715d404809c0778e7fcd95",
+    "group": "plate__lvis_000000489879",
+    "capture": null,
+    "rows": [
+      "1 0.665789063 0.328317757 0.525328125 0.538831776",
+      "1 0.076546875 0.040338785 0.076812500 0.080677570",
+      "0 0.713742188 0.252371495 0.539265625 0.445070093"
+    ],
+    "input_label_sha256": "7c7ebd44bd5cc5d1fbe91a2048388ceafebfca55b020964856ae67b773ee64c1",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000490264.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2164d17035ee6c26271411b9f3a836cfd562e5eda5f4ac1b91de3184f0241235",
+    "pixels": "10c3ef01cb4fbda3cb02d4707ad78af5b71957b7271d38be077f106c1015b60f",
+    "group": "plate__lvis_000000490264",
+    "capture": null,
+    "rows": [
+      "1 0.489210938 0.688135417 0.971828125 0.615687500",
+      "0 0.693589744 0.662116041 0.607692308 0.662116041",
+      "0 0.484615385 0.383959044 0.348717949 0.378839590"
+    ],
+    "input_label_sha256": "da373ea4bae2523008b2283710b9989b24418080498e4b85e14bb76eea45686b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000492321.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ad7223d665ab21f65be950d84532ea62e4a73c7933f00d4f55535f22c44d280f",
+    "pixels": "2c72e82d05f0f407acd528b0a5f1ab1ba3fad09f6e1979fa499bec8e59b2a140",
+    "group": "plate__lvis_000000492321",
+    "capture": null,
+    "rows": [
+      "1 0.812361111 0.545898693 0.375277778 0.252124183",
+      "1 0.274852941 0.725898693 0.547679739 0.349738562",
+      "0 0.822769608 0.546617647 0.354460784 0.216830065",
+      "0 0.255825163 0.677949346 0.511650327 0.321552288"
+    ],
+    "input_label_sha256": "a12d852ee90fd827c3db3d8e4c0819a1a5ba6f3425c5bd712f5e233f645e63e9",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000494887.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1fbc2ea713762aa0ce50ee9ac9cc35351d65123eed143cf9c2d3491823dd09a2",
+    "pixels": "959177564687ade3611f92562d6b92df528901dba9b5eae77946fe0be342c3db",
+    "group": "plate__lvis_000000494887",
+    "capture": null,
+    "rows": [
+      "1 0.763703125 0.632312500 0.060281250 0.157041667",
+      "1 0.565031250 0.711895833 0.042781250 0.106333333",
+      "1 0.589406250 0.649250000 0.131218750 0.061708333",
+      "1 0.783554688 0.636718750 0.038984375 0.114854167",
+      "0 0.397148438 0.836364583 0.358671875 0.327270833",
+      "0 0.659125000 0.696197917 0.217125000 0.208145833"
+    ],
+    "input_label_sha256": "ef81dcf7904f3c6ec979331c322dc8ffaf6e7d40b180e17c8e93ba5e1d6dceb6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000495269.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1b9e274bfc27d5af2d3805286ff3bcb324ab99297f2a437926c6b07851bd0999",
+    "pixels": "55b459df4e04633ff742f3ff7aa6c5d2a0e560b6316ea31b61f553652c558045",
+    "group": "plate__lvis_000000495269",
+    "capture": null,
+    "rows": [
+      "1 0.472500000 0.579640625 0.934330544 0.837437500"
+    ],
+    "input_label_sha256": "6bd0dbb3b55ff1bc172119bd0f102fa351b53cd5af798db926db6525db4a4301",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000500432.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ad3c45acd2fb75c40625e95f259b6765780e9d7bf16eb6b3d3b53fc7424bd74f",
+    "pixels": "6a7f96d6609b4c55ef2a284f278a08ea81f1668df4701b6523322a52c499e1ee",
+    "group": "plate__lvis_000000500432",
+    "capture": null,
+    "rows": [
+      "1 0.593770833 0.592570312 0.733041667 0.662828125",
+      "0 0.765875000 0.659257813 0.429291667 0.608265625",
+      "0 0.322291667 0.503484375 0.598416667 0.707843750"
+    ],
+    "input_label_sha256": "6409b4957a75333985adca7a3faa1d46aa322debd209bbd5b52d77b12995115f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000500965.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f8da450d92ea0b883ee6e1b43b2606d35bae241da27aa0adc431bbad5604e924",
+    "pixels": "9c8a7734cb0198191bd2d54108f3c0979748d5ef0822774ebe70b03d4e5a657d",
+    "group": "plate__lvis_000000500965",
+    "capture": null,
+    "rows": [
+      "1 0.547792793 0.867650000 0.580750751 0.201020000",
+      "1 0.932642643 0.714660000 0.134714715 0.114280000",
+      "0 0.507372372 0.801210000 0.353843844 0.217460000"
+    ],
+    "input_label_sha256": "eceedc525b06583c856998c85528430fe4cb22a010a677af2e86ac9ca01e0662",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000501491.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "6b0b84db1a988427eca01a88576037b3e8a988a4c0f728ea8b481f156bcf9467",
+    "pixels": "e034c95b715eefb2c4dcc3337a18e0151929e9688d12e960d292854ad0e25f82",
+    "group": "plate__lvis_000000501491",
+    "capture": null,
+    "rows": [
+      "1 0.031804687 0.587270833 0.063609374 0.160375000",
+      "1 0.958093750 0.282135417 0.083812500 0.156395833",
+      "1 0.890851562 0.955250000 0.218296875 0.089500000",
+      "0 0.455128205 0.503412969 0.341025641 0.419795222",
+      "0 0.871794872 0.532423208 0.220512821 0.334470990"
+    ],
+    "input_label_sha256": "123c85750e2d28fe7eff3208327f768087b97ef113a8fcb85c9eb6fe90e733f3",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000506011.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5f878a24889501d6d7da5865f365d6545f2118df5bf6510d7c227b2c2c7ea705",
+    "pixels": "212a73520059fa0b9d0ed95884246c15ddec0b2571169221b646f339402ab3cf",
+    "group": "plate__lvis_000000506011",
+    "capture": null,
+    "rows": [
+      "1 0.711796875 0.917283372 0.223406250 0.159765808",
+      "1 0.516101563 0.879496487 0.195921875 0.156697892",
+      "1 0.962796875 0.808430913 0.074406250 0.093021077",
+      "1 0.394078125 0.798911007 0.173281250 0.129344262"
+    ],
+    "input_label_sha256": "02e0e925ef0e1b520fdf391d533935ffccdb2b3e1d17ed0af03b3a88c8d6a07a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000507744.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "611e0a661ae9f8b2802cb95cde7160abaeaca23939a0073161ca548c2caaad67",
+    "pixels": "f8a8ca03109e59e54824e58b4cb38e89cb26c197ad0ac25a5845c4b0921febaf",
+    "group": "plate__lvis_000000507744",
+    "capture": null,
+    "rows": [
+      "1 0.295000000 0.644707260 0.103312500 0.022201405",
+      "1 0.294171875 0.642950820 0.105812500 0.096674473",
+      "0 0.302843750 0.806370023 0.161468750 0.175971897"
+    ],
+    "input_label_sha256": "f4041f43ff1b9b5a026303c619644edaaa8f8041b1430a2e4bf1d5cc15f355a6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000511345.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "955298ab912a37c7700e124337ea0e27ede417b1d737cad11ec78daea7ed1b49",
+    "pixels": "61c0a716fde6d7d09182a398f09fd50d88bb1105c5e5f01b48446488508a499d",
+    "group": "plate__lvis_000000511345",
+    "capture": null,
+    "rows": [
+      "1 0.156718750 0.661953125 0.202895833 0.059625000"
+    ],
+    "input_label_sha256": "8304c9674767bb69cbcc3632c18fec80bdc852c013604e6bb38b0840a68f5d44",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000516462.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b0561d8089eef817a015229dbb8105757a6f18ba4b760d35ee436fc1e3f93bf5",
+    "pixels": "397944a8892a98ee5189d1b5e0df8e3d8ffb37e1339f393f16e9c87b2806a5ed",
+    "group": "plate__lvis_000000516462",
+    "capture": null,
+    "rows": [
+      "1 0.545468384 0.851523438 0.705128806 0.166421875",
+      "0 0.582131148 0.842046875 0.507166276 0.143593750"
+    ],
+    "input_label_sha256": "4c90eaca0360e4756a37969de8ec658e26d751e353321249f948e31493748660",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000516828.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "fa7a7e52540c758207cf74052c49504104572870a26fb5df5f3dfea73d8ffe2a",
+    "pixels": "982da28b196d44610c24249688b0d53de8f1713e94d710706360b6473592e48c",
+    "group": "plate__lvis_000000516828",
+    "capture": null,
+    "rows": [
+      "1 0.499354305 0.571225166 0.822814570 0.624569536",
+      "0 0.455128205 0.435153584 0.730769231 0.767918089"
+    ],
+    "input_label_sha256": "6e140708190bbc2f55b3286159fbcb1b365b1a2584abe81113d70e27528ee98e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000518495.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "255596f4a537758cb69788ad5f19391345494d0249b23987e64bf26ada3b5bfd",
+    "pixels": "3d8b70ca6d7a4f1f1c87305ae823f30efebb405527e4c6c7d28c65f4669f8122",
+    "group": "plate__lvis_000000518495",
+    "capture": null,
+    "rows": [
+      "1 0.289210937 0.633895833 0.578421875 0.732208333",
+      "0 0.293589744 0.670648464 0.535897436 0.604095563",
+      "0 0.616666667 0.223549488 0.335897436 0.310580205",
+      "0 0.756410256 0.607508532 0.292307692 0.354948805"
+    ],
+    "input_label_sha256": "82cd3ee01efe59c7f1a2957f5a7020b4798bf335fbe1c3935a36df5abc00917a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000530259.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "ad35a3ad6c16d6d49af08db886ad8c824740212b3fb9bc2ec98aa80d90cc8421",
+    "pixels": "2b01f9feeb9757203016518b99e3794cbec4605dfac239bd2a967aafec9196b7",
+    "group": "plate__lvis_000000530259",
+    "capture": null,
+    "rows": [
+      "1 0.810335937 0.500479167 0.376796875 0.578166667",
+      "1 0.339335937 0.577875000 0.671421875 0.843458333",
+      "0 0.397435897 0.527303754 0.471794872 0.501706485",
+      "0 0.239743590 0.761092150 0.330769231 0.477815700",
+      "0 0.908974359 0.428327645 0.171794872 0.399317406"
+    ],
+    "input_label_sha256": "0e4bc5b576189c7eed6d2b59d78dbf65dce296f2d0590f3c51929bfb4d61f490",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000531433.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "97cb50ea145fe0114ea178cc122392246421ba4aae2013bce169ff6f3c71b1db",
+    "pixels": "9fd8200fecaca64b0b800a738e0ff083d429407f8b67a46b960e39d63b25ef3e",
+    "group": "plate__lvis_000000531433",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.664539749 1.000000000 0.670920502",
+      "0 0.426923077 0.345360825 0.341025641 0.484536082",
+      "0 0.496153846 0.764604811 0.982051282 0.443298969"
+    ],
+    "input_label_sha256": "345f3afaa12b5e5a4d351327bd75648a87e892ca280af33b0b42a55434628a0b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000534191.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "bdb8df437e204005e4df8531dd4d2a3155bca1819a15289bbe2923036eff071e",
+    "pixels": "b643e48ebcb09498aec2520008b28250b77fb4ab3a10330f1199adb985c223fe",
+    "group": "plate__lvis_000000534191",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.500000000 1.000000000 1.000000000",
+      "1 0.895460937 0.057070312 0.209078125 0.114140624",
+      "0 0.504687500 0.502343750 0.909375000 0.898437500"
+    ],
+    "input_label_sha256": "ad1fd135cfa1992733c610ff7f788f5db4b30bcf96fbffdafd4c0fa94e4b9935",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000535602.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5b066089649e779b605ab3fc1484e9794289b228ef7a4cd973a9230c8502efc7",
+    "pixels": "6624f87f3c9bf164bc086f2cb7b85d1335b77163075076a7fce29b76e68db255",
+    "group": "plate__lvis_000000535602",
+    "capture": null,
+    "rows": [
+      "1 0.139730000 0.723293333 0.199220000 0.116240000",
+      "1 0.714400000 0.916720000 0.286800000 0.166560000"
+    ],
+    "input_label_sha256": "786698fdfed2dca0b0e2d3576891030401b973389394b10a744c8144062edd5c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000537604.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "17fdd3d5252eebbbad1c47163f6ccda6be636162a066fe1a7e850089b0454737",
+    "pixels": "a828477ec6981de76d783aced644aa400b8a0d054158c46a92f8eeeed5249be5",
+    "group": "plate__lvis_000000537604",
+    "capture": null,
+    "rows": [
+      "1 0.309507813 0.893833333 0.281703125 0.212333333",
+      "0 0.365384615 0.639931741 0.248717949 0.221843003",
+      "0 0.325641026 0.918088737 0.138461538 0.102389078"
+    ],
+    "input_label_sha256": "5798329efad40716fe0b79d22aa2269e9f2d7bb0cad827eddf21ad929d50c2f6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000538368.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "d06424c046b197dc61f4d5bd86eb23402538f6182ed462d2e2c3d4b36542e6a7",
+    "pixels": "c2912d6d63f868462311d85501768da35b25959ab234c0cfa22ebcc83b7dc951",
+    "group": "plate__lvis_000000538368",
+    "capture": null,
+    "rows": [
+      "1 0.382747642 0.045000000 0.289316038 0.090000000",
+      "1 0.514882075 0.658186620 0.446462264 0.591302817",
+      "1 0.182452830 0.277676056 0.363349057 0.423380282",
+      "1 0.789091981 0.158433099 0.292806604 0.312147887",
+      "0 0.421049528 0.036443662 0.133089623 0.072887324",
+      "0 0.164799528 0.248080986 0.329599057 0.325950704",
+      "0 0.571108491 0.625510563 0.464150943 0.446654930",
+      "0 0.745271226 0.138186620 0.268514151 0.250387324",
+      "0 0.405660377 0.036813380 0.159669811 0.065739437"
+    ],
+    "input_label_sha256": "496f42dd4a8d8ec2e7248356bc47ad8b795f5139f030670be2a2596d818ec36f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000539573.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "309806b1fb9c3286b48dedc28f0189ebd819cf5480a6dc0dc3423704341b0857",
+    "pixels": "60f3648ce20d3d1e79fb8bd67679ecd95c79192df8e9e299843784f25be60d70",
+    "group": "plate__lvis_000000539573",
+    "capture": null,
+    "rows": [
+      "1 0.558711944 0.764703125 0.293864169 0.090875000",
+      "0 0.558035714 0.777611940 0.178571429 0.056716418"
+    ],
+    "input_label_sha256": "1e42b590e08dccf520514ca49079acdf9a1d680834738859a50bf80c19ff0b75",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000539717.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f0b9dcf4c04dac8fef6b4cdcf47a99468f7db335e90c1ef9b0ee6169b011372e",
+    "pixels": "ffbddd6df491ab349f6320535b3443a52779499c49a7f9ee87bda58b37bf653c",
+    "group": "plate__lvis_000000539717",
+    "capture": null,
+    "rows": [
+      "1 0.730200000 0.873110000 0.488346667 0.135660000"
+    ],
+    "input_label_sha256": "7e4e38892b94d65bb95b083aa72b3fdff2a2f19f6b861c845484e6f1e2df28a7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000540059.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0ed419d4e4d25ab0460ede630d6a29d9d6d4f2bc0b8e6d6d5f7fe328e99a0b1a",
+    "pixels": "bb3ae49fddfcdd07d782b9f7cb16fdd990649776b9f9c2e9b5af5d3711f9759d",
+    "group": "plate__lvis_000000540059",
+    "capture": null,
+    "rows": [
+      "1 0.559635417 0.784484375 0.319270833 0.149156250"
+    ],
+    "input_label_sha256": "1104670a641c464243e989e7320f547ca9578470c5a85373cdee3e3937f847e8",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000548913.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "1184a1c519bced1a71eecb1a19dfec79c7a654dc02ed69b10c622d079ea7061e",
+    "pixels": "619bf2e3a17a37376e3d1ae07eb935893ef9876377b1f625ee55277ff58360a1",
+    "group": "plate__lvis_000000548913",
+    "capture": null,
+    "rows": [
+      "1 0.524531250 0.782617371 0.929375000 0.309225352",
+      "0 0.558974359 0.582692308 0.425641026 0.442307692"
+    ],
+    "input_label_sha256": "fcb8e7718e5db89af9f4a1e985899ca01b6eb60a374f86827b2331d30e302168",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000550645.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "6f51faa40255cc28f2c14380b7728e544817f071f9ae78454a8574836f5c86f4",
+    "pixels": "8ebaa31b6162d7f1ede737bb85d3f5e587e8e723ce06085eb396517046739d2a",
+    "group": "plate__lvis_000000550645",
+    "capture": null,
+    "rows": [
+      "1 0.829156250 0.903976562 0.121187500 0.038265625",
+      "1 0.333177083 0.737351563 0.072604167 0.044171875"
+    ],
+    "input_label_sha256": "4f7861a8e6719438d216a15dd9c5516b458c20d558816bf46628cc90d1e8e73b",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000553075.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "8a9bae48825a56b86918cdc77dd66f991c4b8e43b9b9225b62651f886beb6194",
+    "pixels": "d769bc5f54c747001002f48f3a2704cb1f9d7fa9a7f050a6adc4cd7913b64936",
+    "group": "plate__lvis_000000553075",
+    "capture": null,
+    "rows": [
+      "1 0.562600000 0.071853333 0.376600000 0.143706667",
+      "0 0.500000000 0.548786667 1.000000000 0.868986667"
+    ],
+    "input_label_sha256": "31121fd4f07e991f8dab4250155947a1241c930ef850972b8956251efcfa29d3",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000554085.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0cbaffd463ea01f6e503f710512720a2bed488f43757b1ee668ae66be8c00add",
+    "pixels": "a81c542d0032511caf27c3f0aee40e56f7ca30e494fd2e2b68bc99441ab4ff64",
+    "group": "plate__lvis_000000554085",
+    "capture": null,
+    "rows": [
+      "1 0.296828125 0.570257611 0.452656250 0.433864169",
+      "0 0.289743590 0.517307692 0.302564103 0.265384615",
+      "0 0.760256410 0.234615385 0.474358974 0.415384615"
+    ],
+    "input_label_sha256": "131653b5da780649505ed40124564c05fda342c1c6deba1e0bf6ce9138e65adc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000557283.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "13f1b89086295cc0213b6301163cf152b96271cc7666414e0df498a07d674c00",
+    "pixels": "c162253d059cc6b4f0b22dbefac63cbdb7c1252a161c984e3a50064810069ce4",
+    "group": "plate__lvis_000000557283",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.500000000 1.000000000 1.000000000",
+      "0 0.524396552 0.521585938 0.949870690 0.858359375"
+    ],
+    "input_label_sha256": "9bd0c2566cb8ef9af86cbcb2ca5049dc050ec35be0c344bb43a77aa3b4f9c396",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000559247.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "84fa11ae6278b2d958373bb6072b1a84552bcece84f530d61819c845b55ef5e4",
+    "pixels": "38baada1837cac5ebe5602a487a92d67cb4078d403312dd0f913d8aa01dce5d7",
+    "group": "plate__lvis_000000559247",
+    "capture": null,
+    "rows": [
+      "1 0.560453125 0.485375000 0.090750000 0.026833333",
+      "1 0.294515625 0.684520833 0.132937500 0.050958333",
+      "1 0.332265625 0.638656250 0.100781250 0.034645833",
+      "1 0.639304688 0.419291667 0.068734375 0.011333333",
+      "1 0.486523437 0.586250000 0.106421875 0.037833333",
+      "1 0.659007812 0.493187500 0.046953125 0.015291667",
+      "1 0.020812500 0.551750000 0.041625000 0.011750000",
+      "0 0.780796875 0.695375000 0.111250000 0.067791667",
+      "0 0.665695313 0.670854167 0.076203125 0.034500000",
+      "0 0.556148437 0.472000000 0.060890625 0.031208333",
+      "0 0.744500000 0.714177083 0.111468750 0.068979167",
+      "0 0.572968750 0.662635417 0.069000000 0.019479167",
+      "0 0.636757812 0.405437500 0.024671875 0.019708333",
+      "0 0.539000000 0.674197917 0.049593750 0.009187500",
+      "0 0.547765625 0.467781250 0.052031250 0.027104167",
+      "0 0.528335937 0.702302083 0.056515625 0.021437500",
+      "0 0.626554687 0.750406250 0.112734375 0.081354167",
+      "0 0.730968750 0.751822917 0.117531250 0.088395833",
+      "0 0.452828125 0.565979167 0.040281250 0.037750000",
+      "0 0.017710937 0.539979167 0.028328125 0.012375000",
+      "0 0.674437500 0.706750000 0.033531250 0.040083333",
+      "0 0.522812500 0.727395833 0.060875000 0.035625000"
+    ],
+    "input_label_sha256": "fca9ba60ba3c7ab33953b75801c3a9b83f286ea05b1920d3f21489d294575d03",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000559891.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f3332875b2e69b28e229ef3bfeeab5e825ae68909d5e62980c215740f01a4e04",
+    "pixels": "d387a47ffbd6637f1ade33058009a9368b745c2810b1a1b688ab341dde63d31e",
+    "group": "plate__lvis_000000559891",
+    "capture": null,
+    "rows": [
+      "1 0.274828125 0.697260417 0.122375000 0.037437500",
+      "0 0.744929687 0.748781250 0.154359375 0.104645833"
+    ],
+    "input_label_sha256": "d174f08d5f6ecd872f08e5f2a8012f08af23894ccb5e2dc402aa6c761f2b6d0e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000560532.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3e13df26af69c135e00f8d3b3d1d3421966432c24c1210752c10743d73bb6b8c",
+    "pixels": "5cba5d9ef6baefae0382fb40d1056bd9a89d0c27eab90ef182e2aa495a9fbd66",
+    "group": "plate__lvis_000000560532",
+    "capture": null,
+    "rows": [
+      "1 0.315265625 0.650937500 0.455468750 0.454125000",
+      "0 0.230769231 0.721843003 0.261538462 0.365187713",
+      "0 0.393589744 0.627986348 0.356410256 0.436860068"
+    ],
+    "input_label_sha256": "3c4f2d541614b27ec024b64f66fbc68045a0a01d6a880ac81144e98bfbb95fe5",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000563816.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "49dc95ac78a65499bc3085af30423897a738f0898663419311c34b6fb669643f",
+    "pixels": "98be05e68ac1238668939fcc1a4b1c497944c635c5891d77521379b713227f12",
+    "group": "plate__lvis_000000563816",
+    "capture": null,
+    "rows": [
+      "1 0.554476562 0.450600000 0.794921875 0.618329412",
+      "0 0.638617188 0.432141176 0.591328125 0.513600000",
+      "0 0.524250000 0.496894118 0.592312500 0.669835294"
+    ],
+    "input_label_sha256": "7827f9fbccd6626572580cd04122d57daa1f7cfe6d11ec462a9949f738bd5dfc",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000564337.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3907593d345a92626a60e10af669e68283beceb0f2da9c644079b120bb7cba62",
+    "pixels": "02f9a6fc430590117df795cc1aabc0591b294d6f7dba417604d420a845151cbd",
+    "group": "plate__lvis_000000564337",
+    "capture": null,
+    "rows": [
+      "1 0.472406250 0.710375000 0.943354167 0.522656250",
+      "0 0.388446215 0.565671642 0.768924303 0.307462687",
+      "0 0.440239044 0.692537313 0.394422311 0.382089552"
+    ],
+    "input_label_sha256": "335557d34c8644b5ac5052a73c5d1915a278b114156d33396c5732de7b8db377",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000567079.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c9603ff1d5b238e139cecd5162b06cf5d34b25a65b56c035408c665e92fb37f2",
+    "pixels": "5e4590904ba0ba90ccf264d00cdf52966279574a2ca9d3135c80819adba08198",
+    "group": "plate__lvis_000000567079",
+    "capture": null,
+    "rows": [
+      "1 0.727757812 0.388979167 0.189109375 0.226000000",
+      "1 0.347351562 0.586625000 0.694703124 0.279708333",
+      "0 0.349281250 0.419864583 0.698562500 0.375520833"
+    ],
+    "input_label_sha256": "4e9a07ea9928638afa87de6d8a502cab7762cf5f5ee4779f6b3e385ee9f1fb90",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000569052.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "9b5093707025e20f22461010767c167db37edd940d47c5e452d6f49c587c8ea9",
+    "pixels": "91c12b50ff626a7d6f14501e8fc774dd6c9938cc867fa49122f86ed13096b0c0",
+    "group": "plate__lvis_000000569052",
+    "capture": null,
+    "rows": [
+      "1 0.688093750 0.723173302 0.429000000 0.425035129",
+      "1 0.019515625 0.275304450 0.039031250 0.217962529",
+      "0 0.439743590 0.451923077 0.879487179 0.742307692"
+    ],
+    "input_label_sha256": "21f3c794919e85604c8f69ef22f5ad2fdcf5242331b54757dce049b40c6d8f1c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000570094.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "4abffc18aa621dedd18c67a2d306953987d31a235d68e97d7f7510f3a714b9e5",
+    "pixels": "bc28c47a22eff325652313d5a3b2ca0ab9d41fb0b563076c797ed172ab166c8c",
+    "group": "plate__lvis_000000570094",
+    "capture": null,
+    "rows": [
+      "1 0.819150000 0.637093333 0.313620000 0.319626667",
+      "1 0.040530000 0.228706667 0.081060000 0.185306667",
+      "1 0.510520000 0.030906667 0.066080000 0.061813333",
+      "1 0.207280000 0.081506667 0.223880000 0.142853333",
+      "1 0.561690000 0.787560000 0.375820000 0.411600000",
+      "1 0.158620000 0.736240000 0.317240000 0.413280000",
+      "1 0.977250000 0.245666667 0.045500000 0.076613333",
+      "0 0.139743590 0.754266212 0.279487179 0.273037543",
+      "0 0.548717949 0.796928328 0.266666667 0.255972696",
+      "0 0.811538462 0.633105802 0.228205128 0.317406143",
+      "0 0.287179487 0.383959044 0.271794872 0.201365188",
+      "0 0.569230769 0.465870307 0.220512821 0.153583618",
+      "0 0.487179487 0.220136519 0.200000000 0.167235495",
+      "0 0.900000000 0.343003413 0.128205128 0.105802048",
+      "0 0.956410256 0.467576792 0.082051282 0.170648464",
+      "0 0.396153846 0.075085324 0.141025641 0.081911263",
+      "0 0.324358974 0.163822526 0.074358974 0.136518771"
+    ],
+    "input_label_sha256": "4599489086e739637875c855fb424a5b9171782f04c76267800d5896a9edc5e4",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__train__lvis_000000580685.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e32bdf6a674c842465d53fb07e900c6d96948690bd8d062dc5f83407cccd4087",
+    "pixels": "e9a72e03d6bbb978ddf6af239275187316c030aa79ee77d3ccc3ff0379964a78",
+    "group": "plate__lvis_000000580685",
+    "capture": null,
+    "rows": [
+      "1 0.462203125 0.584683099 0.626218750 0.455751174"
+    ],
+    "input_label_sha256": "f52d0f2b259fb24dcc5bcc239d59c5bb32a43559791348d3ce0fcbc51aa4bd0a",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000004108.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "9f8ef24dcfcb3d49008c65ab99118e7e67623328aa7abf9cb58433bfbe96e334",
+    "pixels": "59f67777f54c086fc6f1d1e5039967fbec8ba233efcaa1b8a529b976fd99500d",
+    "group": "plate__lvis_000000004108",
+    "capture": null,
+    "rows": [
+      "1 0.510583333 0.226460938 0.101000000 0.032640625",
+      "1 0.579114583 0.271125000 0.112604167 0.036000000",
+      "1 0.109947917 0.252281250 0.105687500 0.036156250",
+      "1 0.628697917 0.302421875 0.119104167 0.038750000",
+      "1 0.344250000 0.548773437 0.169708333 0.082453125",
+      "1 0.477979167 0.278500000 0.095125000 0.037062500",
+      "1 0.530229167 0.323453125 0.104083333 0.041468750",
+      "1 0.388666667 0.940734375 0.257708333 0.118531250",
+      "1 0.505614583 0.427812500 0.140854167 0.057312500",
+      "1 0.413916667 0.485976562 0.155291667 0.065828125",
+      "1 0.516343750 0.236960937 0.102729167 0.026765625",
+      "1 0.852593750 0.460867187 0.149604167 0.073234375",
+      "1 0.214760417 0.221414062 0.103687500 0.032359375",
+      "1 0.355083333 0.428648438 0.142875000 0.058796875",
+      "1 0.263197917 0.500609375 0.162854167 0.069031250",
+      "1 0.216843750 0.443640625 0.150895833 0.060062500",
+      "0 0.340637450 0.334328358 0.266932271 0.107462687",
+      "0 0.408366534 0.716417910 0.529880478 0.280597015",
+      "0 0.900398406 0.607462687 0.191235060 0.116417910"
+    ],
+    "input_label_sha256": "d462da32d7fb66fbf63fa2b29eae561725ea9245fa6f4ae0965fcac31ed760bd",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000019374.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "439caf873bb913798f43fd60e2558b4f104f74e70f026827439931bdbd382634",
+    "pixels": "8efe79a49c588ecf59155a4bab52159707d1ae2dea71def1d2991c6d076d63f2",
+    "group": "plate__lvis_000000019374",
+    "capture": null,
+    "rows": [
+      "1 0.450226562 0.668376168 0.241890625 0.115957944",
+      "0 0.465384615 0.670498084 0.166666667 0.099616858"
+    ],
+    "input_label_sha256": "b1580240cdee04d82adbd495ba421c5286b9985168bbfcbe721d5fd5b81ac0db",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000086924.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "09d8f292de0105fb988723a78cbeca54926d6371fc2f5babd0fae73d63ec8b29",
+    "pixels": "22693dd196a9812965f6986650292a5d4627c0a98f3146ad19b7addbcbb93473",
+    "group": "plate__lvis_000000086924",
+    "capture": null,
+    "rows": [
+      "1 0.705312500 0.872200000 0.394062500 0.255600000",
+      "0 0.492476562 0.501929412 0.122078125 0.183858824",
+      "0 0.714921875 0.474917647 0.124531250 0.168376471",
+      "0 0.775445313 0.379964706 0.128671875 0.167929412",
+      "0 0.644906250 0.574117647 0.125593750 0.189082353",
+      "0 0.563968750 0.690200000 0.138156250 0.201811765",
+      "0 0.231453125 0.852658824 0.148218750 0.223482353",
+      "0 0.327671875 0.720588235 0.148093750 0.202258824",
+      "0 0.621617188 0.322811765 0.114421875 0.178470588",
+      "0 0.412054687 0.610776471 0.128265625 0.186729412",
+      "0 0.557031250 0.409011765 0.117312500 0.172800000",
+      "0 0.711546875 0.232870588 0.106312500 0.152517647",
+      "0 0.778812500 0.152576471 0.094687500 0.147552941"
+    ],
+    "input_label_sha256": "a3db3bf45ce54f1445339a63eb500ec02e8d6226ce715ac6a60dafc35a672369",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000095674.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "8d5effff261025071bbc7e374964807a996b2785e1079cb23835b22d61447bf2",
+    "pixels": "f2d0d9ad3ca324b92a05dee8f139bb7f715463bfa3835a22ce0a118617468ff1",
+    "group": "plate__lvis_000000095674",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.672679687 1.000000000 0.654640625",
+      "0 0.496000000 0.432835821 0.968000000 0.865671642"
+    ],
+    "input_label_sha256": "a23e364bfefb027e6453e281cad41d2728ab1582bf02229f79608af8a8331bfa",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000106823.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "f672546d398323c36de2a2b52d286fd47761ba7ebd2d16f352f1304ae1f02d21",
+    "pixels": "4ed718684da17143d031ae93612537893cb6434170b498be45b30638b7182a66",
+    "group": "plate__lvis_000000106823",
+    "capture": null,
+    "rows": [
+      "1 0.499840000 0.622973301 0.998400000 0.751237864"
+    ],
+    "input_label_sha256": "3f525f4f10d66035970728cbe401be4ee179e7e2cd13992fdddc5805a31f28b7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000108238.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "950460f86238bea640084d651777abf576fe10a650d54acf13ad6ac5898e0a5e",
+    "pixels": "73901187feed3fcd03c1f0f255faf39f7b60361c617dda7109611a3d4110a8c1",
+    "group": "plate__lvis_000000108238",
+    "capture": null,
+    "rows": [
+      "1 0.610773438 0.760848018 0.083390625 0.062400881",
+      "1 0.716718750 0.684933921 0.083625000 0.052555066",
+      "1 0.542515625 0.583204846 0.059968750 0.035132159",
+      "1 0.041695313 0.496872247 0.015390625 0.013568282",
+      "1 0.469000000 0.853898678 0.064375000 0.091189427",
+      "1 0.056023437 0.454526432 0.028546875 0.014427313",
+      "1 0.580375000 0.632555066 0.079812500 0.046784141",
+      "1 0.714000000 0.864229075 0.108500000 0.097709251",
+      "1 0.491812500 0.643832599 0.073968750 0.040000000",
+      "1 0.046929687 0.467290749 0.015265625 0.013083700",
+      "1 0.500476563 0.631949339 0.068921875 0.044515419"
+    ],
+    "input_label_sha256": "bfb865e05825efd476e21dcee897c6ae4b3dd38126250b940709028986fb17b2",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000118739.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "3ac2939e2cc8503d9d9d7fdda48b44dac596e2a971a7642a52dd28afecb49f44",
+    "pixels": "c349f26876c36ba3c045e891086875e55f536d2fe8add8a1e347c02f66060dce",
+    "group": "plate__lvis_000000118739",
+    "capture": null,
+    "rows": [
+      "1 0.584187500 0.565235294 0.830750000 0.867929412",
+      "1 0.155750000 0.212764706 0.304812500 0.422517647",
+      "0 0.582609375 0.553211765 0.780156250 0.840023529",
+      "0 0.134460938 0.195858824 0.268921875 0.341364706"
+    ],
+    "input_label_sha256": "1fbe0d346064d75015e9c6271787e92a87a45129343a2e641dd4b5f56ac9aa72",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000122962.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "cbe230270c69febc336549d68fccd0ca50f6754d58d8fe917b210c8c5f8ddf59",
+    "pixels": "8e9582b8d1f6d2e9c1d4004582c521d37817b39aa79e42d979b597947d9283ab",
+    "group": "plate__lvis_000000122962",
+    "capture": null,
+    "rows": [
+      "1 0.583054688 0.386615566 0.046296875 0.028985849",
+      "1 0.555984375 0.441556604 0.052750000 0.035471698",
+      "1 0.443875000 0.845990566 0.098812500 0.096933962",
+      "1 0.421335938 0.302275943 0.074046875 0.032099057",
+      "1 0.677023438 0.363926887 0.033046875 0.024410377",
+      "1 0.612898437 0.520577830 0.060609375 0.044787736",
+      "1 0.418335938 0.587228774 0.053078125 0.058136792",
+      "1 0.804625000 0.081639151 0.025437500 0.009929245",
+      "1 0.655421875 0.413820755 0.054250000 0.030613208",
+      "1 0.667296875 0.293525943 0.040437500 0.019693396",
+      "1 0.622750000 0.347087264 0.038437500 0.024834906",
+      "1 0.285460938 0.835648585 0.097421875 0.104363208",
+      "1 0.506359375 0.502087264 0.062937500 0.042665094",
+      "1 0.839882813 0.085271226 0.027078125 0.011391509",
+      "1 0.632046875 0.468856132 0.061656250 0.037334906",
+      "1 0.645031250 0.311957547 0.038156250 0.020518868",
+      "1 0.386710937 0.678466981 0.080796875 0.069716981",
+      "1 0.532296875 0.699091981 0.083406250 0.068797170",
+      "1 0.545703125 0.619150943 0.076406250 0.060518868"
+    ],
+    "input_label_sha256": "a74b1f080a1fb68aa7e89a973834c7a6254c9da1475f7603a6d18390625ca741",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000179839.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "63379b20ce886a453e3396eb171ad54d3181d543ee253f250fab472feef8d5f4",
+    "pixels": "5a1215779e2d28823374a6fa5b79c36262b6668bbca581c34d7afcc46f387198",
+    "group": "plate__lvis_000000179839",
+    "capture": null,
+    "rows": [
+      "1 0.493280000 0.753613333 0.446640000 0.283813333"
+    ],
+    "input_label_sha256": "035c67bf37da3704841dec26174541fcc352db54303637e0137c4e3fb5039b0c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000201426.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "23327e9d0dc7433da034938e9535f30724d1ccadb3ba80f6684bed529f6ecd6c",
+    "pixels": "47941aef1c49514006a57bd1e443854854e096daf4f26096f18a74f376c9b2bd",
+    "group": "plate__lvis_000000201426",
+    "capture": null,
+    "rows": [
+      "1 0.944882813 0.763020408 0.110234375 0.110979592",
+      "1 0.515671875 0.855581633 0.437343750 0.181367347"
+    ],
+    "input_label_sha256": "01b22b1937dc7d35be9cbe4de577048afd267da9b583d22069bb416d5429b639",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000211527.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "439c4df11bdb519f91a1fc2600faa0f8e9a100a0eed37d41fbbbe4baf1f49a82",
+    "pixels": "84f2c3e3ef9f047a04836de0c26328141381d852b7daf343df98cc8045f68f72",
+    "group": "plate__lvis_000000211527",
+    "capture": null,
+    "rows": [
+      "1 0.644890625 0.302950820 0.151093750 0.207681499",
+      "1 0.325015625 0.615234192 0.200812500 0.126018735",
+      "1 0.861382812 0.912377049 0.198703125 0.175245902",
+      "0 0.201282051 0.409615385 0.166666667 0.203846154",
+      "0 0.351282051 0.359615385 0.143589744 0.165384615",
+      "0 0.389743590 0.507692308 0.107692308 0.153846154",
+      "0 0.219230769 0.515384615 0.135897436 0.130769231",
+      "0 0.571794872 0.444230769 0.220512821 0.242307692",
+      "0 0.747435897 0.700000000 0.135897436 0.169230769",
+      "0 0.884615385 0.732692308 0.117948718 0.188461538"
+    ],
+    "input_label_sha256": "6b659496f2c3ceaf5e052ca3a16d8437e0962bd522514538e02c260795ab025d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000232489.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2aa8b4f0f7498c5cda3170ed3de9cd1421e7cd2f6e33bb2e7c9da9a519151283",
+    "pixels": "43d16c090111687a01adc49edcca199f765d38f8fb7797ea1081819e2e8e7d86",
+    "group": "plate__lvis_000000232489",
+    "capture": null,
+    "rows": [
+      "1 0.494718750 0.513710937 0.989437500 0.972578125",
+      "0 0.589187500 0.348562500 0.774468750 0.525093750",
+      "0 0.367820313 0.512132812 0.735640625 0.893234375"
+    ],
+    "input_label_sha256": "ed2e7333883da79dd5bd0e58092cd1bddf27b16f640bbebd4989f1393e777da6",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000234091.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b386f2f6de68e44be29d9e2b4bfecb25f822a12b8af2ca51145b75dd4b95c5e3",
+    "pixels": "cf05b040d91f41c11734eda00e93e68e33eb380e0c697e64951a0424b6a38a78",
+    "group": "plate__lvis_000000234091",
+    "capture": null,
+    "rows": [
+      "1 0.920416667 0.332352941 0.153316993 0.113398693",
+      "1 0.547156863 0.776274510 0.774215686 0.447450980",
+      "0 0.582089552 0.764179104 0.447761194 0.346268657",
+      "0 0.937313433 0.319402985 0.119402985 0.101492537"
+    ],
+    "input_label_sha256": "fa555ed0da34728a1dd6078a1bba7df16dc1dd867343839f480ee16b5c55c813",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000246009.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "56e5cca3401274822ed6452de7657cf43a584c6ba530b86700c714a526d3ad08",
+    "pixels": "b98ec6e573bda2aceb442a3f53a591724d4d6d98b2bb3f8119508bb6df335d3f",
+    "group": "plate__lvis_000000246009",
+    "capture": null,
+    "rows": [
+      "1 0.651250000 0.921947917 0.324093750 0.156104167",
+      "0 0.508851562 0.656583333 0.134234375 0.183333333"
+    ],
+    "input_label_sha256": "133db0f908d6af05d609b52da3f2d0971072432a2ec0eced3cd5b60e038c307e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000268378.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "c8d28db19ef226195811e86b5c41ab6635d16c8e9d375a1d4fb841fcb038b68a",
+    "pixels": "7a047742759fa36a020b82ce0bde8fafbc72870e75da6d07bbcc78bbad6716f8",
+    "group": "plate__lvis_000000268378",
+    "capture": null,
+    "rows": [
+      "1 0.681671875 0.748161560 0.099468750 0.043342618",
+      "1 0.416179688 0.641643454 0.069046875 0.035320334",
+      "1 0.638906250 0.877534819 0.124125000 0.086044568",
+      "1 0.571195312 0.658147632 0.040453125 0.031504178",
+      "1 0.374406250 0.714484680 0.082562500 0.053314763",
+      "1 0.433976562 0.821281337 0.108359375 0.075041783"
+    ],
+    "input_label_sha256": "af550192a6439cc92242a02bd2e13e31406de121fce99cd91ca42137b79acb42",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000317147.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "218c8325b08fdcd7b50a7f5455483a0c2ea57e98d6346cbd5b40fab004a985bc",
+    "pixels": "49287e5d127a58cbda7992ee463e8ef87caf5296a893224eb51135db6abcc771",
+    "group": "plate__lvis_000000317147",
+    "capture": null,
+    "rows": [
+      "1 0.595822917 0.702382813 0.808354167 0.291984375"
+    ],
+    "input_label_sha256": "8817a9820467f5fed0c35582b4ff4c3ef9282c9f078e1cc66320fefdf4122891",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000327780.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5b492dc6808bf75c27b3c085784fa102e325acb43125475c1ae1babc83a61fd4",
+    "pixels": "7a1dd473893c7f06c95db3a55c457d7c870aa6361920ba7c8663c050061b3f09",
+    "group": "plate__lvis_000000327780",
+    "capture": null,
+    "rows": [
+      "1 0.500000000 0.500000000 1.000000000 1.000000000"
+    ],
+    "input_label_sha256": "06782b966a1285e4448dd0f178e94cb85c2f221ef840f769cc47551b196fec81",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000334417.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5acf3ce8da9a3a902f7b87139e810b0e584f2b9b49657c7bf0df795e10ea20da",
+    "pixels": "450909014dffd49c44e85e1954ebc38e672cb9817ec4ef59972ebd98ac863593",
+    "group": "plate__lvis_000000334417",
+    "capture": null,
+    "rows": [
+      "1 0.437093750 0.920354610 0.224375000 0.159290780"
+    ],
+    "input_label_sha256": "9dbc9f71826b88a8a473440e5aeccd34f68393095c2583e34efead4af2994ffd",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000334483.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "25b008f452e77d8618bb1cfb9380eb3c7d2dd43fe5c92c5cbcd949b3d4f9ce4b",
+    "pixels": "a43cfba918f18993d6e7cc29f9fdf53ef4edd069a6c7696f92e3e10a330f2076",
+    "group": "plate__lvis_000000334483",
+    "capture": null,
+    "rows": [
+      "1 0.574729167 0.956390625 0.323083333 0.087218750",
+      "1 0.581312500 0.594812500 0.165833333 0.038656250",
+      "1 0.521125000 0.826367188 0.259416667 0.099140625",
+      "1 0.453239583 0.680414063 0.150729167 0.060109375",
+      "1 0.875614583 0.944046875 0.248770833 0.111906250",
+      "1 0.542864583 0.548765625 0.184812500 0.052031250",
+      "1 0.842854167 0.862000000 0.225708333 0.077000000",
+      "1 0.963114583 0.816085938 0.073770833 0.081828125",
+      "1 0.877281250 0.578218750 0.063812500 0.014812500"
+    ],
+    "input_label_sha256": "92db6c709f4f9d123a11d81c826ac7f7862a79c93196f0223e65884f524f0b0f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000341271.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "0cb9be1a4c2b5880b6f75db9afa3952f2ab0d48646e3f12d9d86fdcf81ec0d6d",
+    "pixels": "5db31585bb689c81f518bede5b90196e72bd5e1f4b5176a6f637e4256aa40a93",
+    "group": "plate__lvis_000000341271",
+    "capture": null,
+    "rows": [
+      "1 0.570580065 0.822132353 0.196225490 0.279428105",
+      "1 0.363799020 0.825498366 0.241781046 0.272990196",
+      "0 0.259142157 0.766266340 0.443251634 0.386748366",
+      "0 0.739787582 0.772426471 0.446633987 0.379950980"
+    ],
+    "input_label_sha256": "fdfb5f8578d31085f938521c84ac0b29045465877923153a348ee02a11fe6ba7",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000345361.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "2444d5e254c43f64175fb611d93fc19de85ab9eb389148e92687cd445c63095e",
+    "pixels": "bcf36c52db6345ba8d575161eb6b0c150aed5604d120528856886f33f16b642c",
+    "group": "plate__lvis_000000345361",
+    "capture": null,
+    "rows": [
+      "1 0.049770000 0.569692737 0.099540000 0.042737430",
+      "1 0.114860000 0.606466480 0.104200000 0.042262570",
+      "1 0.255580000 0.674245810 0.149920000 0.066424581",
+      "1 0.334330000 0.744385475 0.139580000 0.076368715"
+    ],
+    "input_label_sha256": "59033dc3505efb0b074989e62a88c1f9b877ba0f14213e0a730de1ad341fc629",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000356276.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "92e0c405f3afcc6663dc6b91fd90969b51d409285183190a0de0b2d7a787c7a1",
+    "pixels": "76dc4bbfb5c376e2143017b6bcbe12c3b006ff9efbad4dc5fc1f0ac899a14e00",
+    "group": "plate__lvis_000000356276",
+    "capture": null,
+    "rows": [
+      "1 0.575820000 0.556173333 0.845920000 0.513626667"
+    ],
+    "input_label_sha256": "4238d7c08f6006f059f0143eb158464d2b2067d9a433bcf85ab8bcfec203a17c",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000358300.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "a95c3e4481ed41c7dd879aea4e6c46c60ab5a576eea5b3ea6f1c7ec0f0074c61",
+    "pixels": "a29710e179bb9208220419a0ec8583ccf8f91bda2fcb095db61461b4d1c259b4",
+    "group": "plate__lvis_000000358300",
+    "capture": null,
+    "rows": [
+      "1 0.280218750 0.662156250 0.095229167 0.040781250",
+      "1 0.527041667 0.513671875 0.079166667 0.030468750",
+      "1 0.534072917 0.445507812 0.056770833 0.042578125",
+      "1 0.596583333 0.544062500 0.054375000 0.010937500",
+      "1 0.029958333 0.608085938 0.059916667 0.013640625",
+      "1 0.172104167 0.513078125 0.090250000 0.033343750",
+      "1 0.371854167 0.452046875 0.051625000 0.014875000",
+      "1 0.069062500 0.920625000 0.136250000 0.080656250",
+      "1 0.658854167 0.410515625 0.041708333 0.007187500",
+      "1 0.439458333 0.525765625 0.068375000 0.019750000",
+      "0 0.585657371 0.497014925 0.175298805 0.050746269",
+      "0 0.286852590 0.661194030 0.055776892 0.044776119",
+      "0 0.193227092 0.516417910 0.107569721 0.053731343",
+      "0 0.476095618 0.623880597 0.075697211 0.059701493",
+      "0 0.501992032 0.691044776 0.071713147 0.050746269",
+      "0 0.434262948 0.774626866 0.191235060 0.086567164",
+      "0 0.382470120 0.897014925 0.231075697 0.122388060",
+      "0 0.049800797 0.928358209 0.091633466 0.065671642"
+    ],
+    "input_label_sha256": "93c8241f1d0e60fa5942b85e18a72e34dd4b925dabe6ddee4815a2eba384ff20",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000430125.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "b336eeb2abb247c15d27987255d51358b4d423c8b823750a08eed3e182abcc52",
+    "pixels": "d2d0102e4407308a8c443cee0f78636ac6ae7fc03e77b5a613625bb770f86eda",
+    "group": "plate__lvis_000000430125",
+    "capture": null,
+    "rows": [
+      "1 0.599367188 0.753361111 0.158296875 0.058944444",
+      "0 0.601282051 0.739726027 0.130769231 0.082191781"
+    ],
+    "input_label_sha256": "c152e7a75f9c639d5c9766a831c5512a08bbfe367a5e3d423c815575ef02262f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000455720.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "79c547709d1fb801cf62a7645b731d3daebed12fb416efe313bb8a043666927d",
+    "pixels": "0c18b0255c51e1237bd7e4add17d896e447292ace80c6efacd6000866b07f160",
+    "group": "plate__lvis_000000455720",
+    "capture": null,
+    "rows": [
+      "1 0.323484375 0.472609290 0.054375000 0.054508197",
+      "1 0.517968750 0.919112022 0.095812500 0.051120219",
+      "1 0.181742187 0.773114754 0.109046875 0.074590164",
+      "1 0.052750000 0.624726776 0.101531250 0.065573770"
+    ],
+    "input_label_sha256": "a5ecf75bc1c57e070354698461aa1f8db09ac5682b01b27263aa1d2437d755e0",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000478407.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "64256c7b83d59a30b5776b40017fb09bda83c809124de8bbf2c567212b21dd42",
+    "pixels": "5170e22eb35abb9fd236d27256eeeae64f16a559ff6c4fd65091ceb346baa3c2",
+    "group": "plate__lvis_000000478407",
+    "capture": null,
+    "rows": [
+      "1 0.479500000 0.715893333 0.238080000 0.067200000",
+      "1 0.288360000 0.779786667 0.317880000 0.110453333"
+    ],
+    "input_label_sha256": "2a4b1d9a1a6c4976b3ea70e02e46be85a42c0ed668e74cc653e08cab922b8947",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000482706.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "e572fd5562fbafc50ed9edc105b24a6aea668a0496e3ce8a05cee221b917c91b",
+    "pixels": "9f42f3dfb0a05ee4f02d7eb98f9b5ff063c00b0964e42a98e709b66dbd6d536e",
+    "group": "plate__lvis_000000482706",
+    "capture": null,
+    "rows": [
+      "1 0.489546875 0.147636023 0.183343750 0.211407129"
+    ],
+    "input_label_sha256": "68ca5a90e17a0b45e8c34b9a8a1e8f559ae473188c050bc93a6193dd27ce4e7f",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000483837.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "45a52f1b0a9f414f699cf0523fd5ccf23ff9d314502ebc94cde3f7b1146441ec",
+    "pixels": "a1b9ce1a530854b57c32a4617b9a27294137edca70ec915b2b8d656105174230",
+    "group": "plate__lvis_000000483837",
+    "capture": null,
+    "rows": [
+      "1 0.408820312 0.683957845 0.772578125 0.632084309"
+    ],
+    "input_label_sha256": "d7f4675367811e65447a554f55c298a67a3093129770f6027f9822991d939065",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000530975.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "5643aadb0049998a1f1e2a418af7be084c40d5ff5ac7eadf17b38cb5c61c0117",
+    "pixels": "f99e353354e9a73d7ec5b4abcfafd5f80ed83c93227d1cee20cd781ceee6af17",
+    "group": "plate__lvis_000000530975",
+    "capture": null,
+    "rows": [
+      "1 0.406250000 0.904041667 0.606312500 0.188166667"
+    ],
+    "input_label_sha256": "6b4490f10d9c55b0effa6336e87dffe396fe5ec4538f421ed036cea32dc5881d",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000538859.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "05bffbd4c38ac6c4d2a52afbbf5e199bdbc0671a9b9af508e9cb35b153c252e9",
+    "pixels": "83e956cbe754a0628c0ea522e1a8679bbde8d734c0ac6d899ebe7f8a5556d1da",
+    "group": "plate__lvis_000000538859",
+    "capture": null,
+    "rows": [
+      "1 0.423802083 0.734007813 0.109354167 0.105234375",
+      "1 0.493093750 0.896500000 0.287645833 0.134968750",
+      "1 0.793770833 0.850492188 0.228000000 0.134765625",
+      "1 0.734833333 0.685531250 0.134416667 0.086500000",
+      "1 0.328177083 0.792890625 0.256020833 0.163750000",
+      "1 0.800916667 0.734656250 0.020875000 0.028843750",
+      "0 0.456175299 0.555223881 0.490039841 0.125373134",
+      "0 0.332669323 0.801492537 0.258964143 0.128358209",
+      "0 0.500000000 0.913432836 0.243027888 0.155223881",
+      "0 0.758964143 0.786567164 0.171314741 0.223880597"
+    ],
+    "input_label_sha256": "2027eaf099d74c65cc426966b668a64f242244ab0fc2022f799cfc15bd9d7c3e",
+    "frozen_val": false
+  },
+  {
+    "name": "plate__val__lvis_000000557582.jpg",
+    "split": "train",
+    "original_split": "train",
+    "sha": "720d1224ecbf25bfb0a8bc40baa316d7828bfc4daa2ad66e29a530612ce36164",
+    "pixels": "46932d805ce061facc493998a9a2e36635fbdee330428ed625a016e10d4dca6e",
+    "group": "plate__lvis_000000557582",
+    "capture": null,
+    "rows": [
+      "1 0.539375000 0.944180328 0.133750000 0.044707260",
+      "0 0.586820312 0.398185012 0.202671875 0.056135831",
+      "0 0.795507813 0.319812646 0.167109375 0.182107728"
+    ],
+    "input_label_sha256": "c63a12323e10d1523e953e72ec8596f7b7feadecbc6f233c7488337f06b5ef47",
+    "frozen_val": false
+  }
+]

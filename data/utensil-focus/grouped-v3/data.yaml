@@ -1,0 +1,15 @@
+path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/grouped-v3
+train: images/train
+val: images/val
+names:
+- food
+- plate
+- paper_boat
+- utensil
+- hinged_container
+- napkin
+- drink_carton
+- condiment_packet
+- wrapper
+- bottle
+- bowl

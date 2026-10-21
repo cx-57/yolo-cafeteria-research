@@ -1,0 +1,2827 @@
+[
+  {
+    "name": "school_lunch__010122000_jpg.rf.48f53eac70c7963bf1bd62b5c699c5ad.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.487723,
+        0.324405,
+        0.573661,
+        0.511905
+      ],
+      [
+        1,
+        0.315848,
+        0.775298,
+        0.631696,
+        0.449405
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "c574f3f72b3b2e03492dac87294ababbaac3b288e439c9458b7ec9a483f7aa66",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010210000_jpg.rf.7786e2eee6df5968cb3b9cd0990a1818.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.440848,
+        0.296131,
+        0.546875,
+        0.425595
+      ],
+      [
+        1,
+        0.263393,
+        0.735119,
+        0.526786,
+        0.529762
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "b48685509c099846be6bb47fcda326c7cd0b672fe7339519d95443dfeeadd779",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010210001_jpg.rf.3f17d1616e4ee006e5cde507ce18691c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.444196,
+        0.339286,
+        0.540179,
+        0.428571
+      ],
+      [
+        1,
+        0.299107,
+        0.735119,
+        0.598214,
+        0.529762
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "c65d720e712fbff49324404b40dfd8bebb10765099a06ca0d0180c1d34599fa1",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010252001_jpg.rf.ffe0d67f4a60b0eaa84df689c28592ad.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.43192,
+        0.315476,
+        0.698661,
+        0.5
+      ],
+      [
+        1,
+        0.295759,
+        0.752976,
+        0.591518,
+        0.494048
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3f4992df25d47775e534fd7ff9a4651706dc9fb2c7b6d6485e369098c70cf26e",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010268000_jpg.rf.6236b9544e69d223b99e73e4cbad7ca0.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.462054,
+        0.324405,
+        0.558036,
+        0.452381
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d7013d7e4635cd69d75eddd52ef45695295b12f921401954fe7452681255ec48",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010268001_jpg.rf.453798c586a2537713f1d7a9f0ad5dc3.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.430804,
+        0.276786,
+        0.571429,
+        0.470238
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "878bc32e34a44e30db521a82d4a488ab6d10761de7fbef1478e7a49998729c7c",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010284000_jpg.rf.6b010dd0e9cd7685a182212be42c31d7.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.46317,
+        0.324405,
+        0.529018,
+        0.458333
+      ],
+      [
+        1,
+        0.257812,
+        0.735119,
+        0.515625,
+        0.529762
+      ],
+      [
+        1,
+        0.862723,
+        0.446429,
+        0.274554,
+        0.39881
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "fb6f85ecfd6d30089c2a6cfd15389ebcb8cca16adf5914de39225bda97076e34",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010294000_jpg.rf.ac802dfb58b9faef8851ac69e63d8cdc.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.460938,
+        0.260417,
+        0.578125,
+        0.485119
+      ],
+      [
+        1,
+        0.33817,
+        0.730655,
+        0.484375,
+        0.53869
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ea05d036264a5001ea968a44ce4eb1107c3926a6e9b8e77a9a5241b09f759983",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010294001_jpg.rf.90cf9fea8a1465e0a78583befb6ca15e.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.479911,
+        0.24256,
+        0.607143,
+        0.485119
+      ],
+      [
+        1,
+        0.310268,
+        0.735119,
+        0.580357,
+        0.529762
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "8ac8aa08e442d37b507768bce7c34d4effd7a256de36601950f764507e88c397",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010314000_jpg.rf.6361df596264cddb9884cbba0daba63d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.43192,
+        0.241071,
+        0.533482,
+        0.416667
+      ],
+      [
+        1,
+        0.272321,
+        0.738095,
+        0.513393,
+        0.52381
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7b6243384c55f65d50f70994ac13bb3ee37351a490f7944950e4cf4b26e29077",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010350000_jpg.rf.3d7173ab089703999b8aa21901b96567.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.434152,
+        0.263393,
+        0.569196,
+        0.485119
+      ],
+      [
+        1,
+        0.305804,
+        0.751488,
+        0.53125,
+        0.497024
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "4b0a6ce74cc3d0d96169b9eab46fa89c21f7d7d53eb7f9fe6a31dee858a20322",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010363000_jpg.rf.c4b582e924f680b5ac0eaae78d99aded.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.484375,
+        0.267857,
+        0.535714,
+        0.434524
+      ],
+      [
+        1,
+        0.289062,
+        0.736607,
+        0.502232,
+        0.526786
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "43825d15288836d309b50225afaa9eb61d63179e474d7931d3cceae532c8cc4c",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010376000_jpg.rf.739098b91a77d099ef761419ee0500f3.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.415179,
+        0.269345,
+        0.602679,
+        0.473214
+      ],
+      [
+        1,
+        0.84375,
+        0.383929,
+        0.3125,
+        0.267857
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7867381f29ef8fe6dc1fa5c0c32bcb3660cb87fdf18b702cbca8f29f3f854b9d",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010382000_jpg.rf.3c5801786eb8ebc225e0120d8aac9b5d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.398438,
+        0.261905,
+        0.591518,
+        0.470238
+      ]
+    ],
+    "reason": "White divided eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "5da446fbd964d2f9dd6ae467b09f41f2f03a9d572c57d49cca28e7feb37cb3e1",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010410001_jpg.rf.1b0e5d4ceaa3dc8f2187489e7a566130.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.454241,
+        0.255952,
+        0.618304,
+        0.511905
+      ],
+      [
+        1,
+        0.858259,
+        0.422619,
+        0.261161,
+        0.315476
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "2f62c1d4037bcb91439358922225d6a91bf1cc7d94c253c586ecf6304e38d348",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010411001_jpg.rf.c963ccdf202aabe1738e7c4425ca5c37.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.457589,
+        0.254464,
+        0.549107,
+        0.455357
+      ],
+      [
+        1,
+        0.339286,
+        0.754464,
+        0.473214,
+        0.491071
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "fdb310e1f8f9f31577cddf2cb46ffe77012630c6a819d70f70a0be8d82f0da66",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010420000_jpg.rf.29f7ee9d65005bbdcc3992762150724c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.438616,
+        0.232143,
+        0.578125,
+        0.464286
+      ],
+      [
+        1,
+        0.285714,
+        0.744048,
+        0.553571,
+        0.511905
+      ],
+      [
+        1,
+        0.861607,
+        0.375,
+        0.276786,
+        0.285714
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "bfa0c59b0c203565c0ee0eadccfe99eca35da6d299bccd2e280bb03f54c68f55",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010441000_jpg.rf.7973efb9fa9f188192ce83865208ecb2.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.497768,
+        0.247024,
+        0.633929,
+        0.494048
+      ],
+      [
+        1,
+        0.337054,
+        0.727679,
+        0.620536,
+        0.544643
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "044da948b4ea212287a32a8cdcbd420ced605e0d5e60c7f16e07564c3f633add",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010476000_jpg.rf.7c9316480b4e186b3e2c704e73c665b6.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.427455,
+        0.297619,
+        0.573661,
+        0.446429
+      ]
+    ],
+    "reason": "White divided eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "f9a7b3d2550f494b009a6777474d4e1ffd542ea0c43a8546264a1ae8bf65ea77",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010530000_jpg.rf.e8721a843912f60935ae71d49f451c00.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.446429,
+        0.254464,
+        0.642857,
+        0.485119
+      ],
+      [
+        1,
+        0.303571,
+        0.69494,
+        0.607143,
+        0.4375
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "c4773e86479298d17b9368af5d07d453b6bc83db755faf7389134d9992977ce9",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010538000_jpg.rf.c53e238702a23d5edef038e04c86ea8e.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.470982,
+        0.261905,
+        0.566964,
+        0.452381
+      ],
+      [
+        1,
+        0.339286,
+        0.700893,
+        0.678571,
+        0.383929
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "cb4e06c1c7ecc6fa19fe2603399fb1a24fd088bd4e3c5ace9a85f14e29a529fe",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010548000_jpg.rf.24555c802dbc53622af17c10437f9b59.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.4375,
+        0.297619,
+        0.571429,
+        0.517857
+      ],
+      [
+        1,
+        0.289062,
+        0.761905,
+        0.511161,
+        0.47619
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "f44a24aab3360e4dc136f763923630289d5199402ad6bcbbd7d1f88bd019f792",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010573000_jpg.rf.5f3ace5e9fc570608291e87c408e6780.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.421875,
+        0.239583,
+        0.558036,
+        0.479167
+      ],
+      [
+        1,
+        0.260045,
+        0.738095,
+        0.520089,
+        0.52381
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "57e65da6747badd20186ac6b769ea401e818e94d65b3abd4055df8dbe0441f01",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010583000_jpg.rf.2a284213e21b90b824fafbe7cd14afae.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.465402,
+        0.258929,
+        0.578125,
+        0.517857
+      ],
+      [
+        1,
+        0.301339,
+        0.720238,
+        0.477679,
+        0.559524
+      ]
+    ],
+    "reason": "Purple flexible packet beside divided plate could be a food wrapper or condiment packet; its contents/use are unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7ebad0d3f5d9209a64471568adf650a4a74cdd47ce8c46f3d2d7044318457b3f",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010590000_jpg.rf.f0e225cbb8ced7b2b0f0afe25f8bc214.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.436384,
+        0.209821,
+        0.573661,
+        0.419643
+      ],
+      [
+        1,
+        0.284598,
+        0.700893,
+        0.569196,
+        0.598214
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "de16c321722563adcdcc74f99cd3354bec68f50cf84e1c72e6902c8e5a0b7a46",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010606000_jpg.rf.2ea5035c26df46fbe10632e60d0a92b6.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.422991,
+        0.258929,
+        0.578125,
+        0.470238
+      ],
+      [
+        1,
+        0.310268,
+        0.72619,
+        0.526786,
+        0.547619
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "8b6e1d7b7a401221702de7a1759a325082f06aefa8d54e9047dc860fe5366fd0",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010626000_jpg.rf.84045276a26a845b917c2134139b4ccb.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.476562,
+        0.251488,
+        0.591518,
+        0.502976
+      ],
+      [
+        1,
+        0.285714,
+        0.727679,
+        0.558036,
+        0.544643
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "2593a21f9d176ae4a9f8749df02761b833b61b4cfb7330236894cbab48f3a320",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010626001_jpg.rf.0be3be751eb60b3144f75521116a596d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.466518,
+        0.25,
+        0.589286,
+        0.494048
+      ],
+      [
+        1,
+        0.295759,
+        0.736607,
+        0.591518,
+        0.526786
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "41997390b89a88e7e82c5ce8d948716981b0be21826e5bac8a2fa6e91592f926",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010645000_jpg.rf.3c349896660db60a04fc71ef01ab253e.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.440848,
+        0.230655,
+        0.551339,
+        0.46131
+      ],
+      [
+        1,
+        0.284598,
+        0.730655,
+        0.542411,
+        0.53869
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "fb8f294bdf0c8f909cb9aa89f909f141ffce048cc24d7a3e390981d128214f21",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010645001_jpg.rf.ea941a8b50838375c229d5c7bef9a3f5.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.427455,
+        0.232143,
+        0.555804,
+        0.464286
+      ],
+      [
+        1,
+        0.334821,
+        0.730655,
+        0.526786,
+        0.53869
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "72fbc007d77f7be56941983aa57a60cf4e29fb7d09e9174299958d4aaa85f228",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010655000_jpg.rf.60946313e3a9640ce4bfff4f2d00c045.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.46317,
+        0.233631,
+        0.564732,
+        0.46131
+      ],
+      [
+        1,
+        0.287946,
+        0.71131,
+        0.566964,
+        0.577381
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "4cab7e7823b52d90b2cf0ac10893b91715ec94bab738873db2354d30850d9d6f",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010669000_jpg.rf.49928d8ef0426161f9d1e2765d3c6129.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.428571,
+        0.263393,
+        0.540179,
+        0.46131
+      ],
+      [
+        1,
+        0.310268,
+        0.75,
+        0.486607,
+        0.5
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "678fd043aa4fb04aaa349dbb847e01b9527e770f889fda5b3324c2fa5b14129c",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010694000_jpg.rf.4ce696ee37fdc686bd21b45359f119bf.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.47433,
+        0.266369,
+        0.551339,
+        0.4375
+      ],
+      [
+        1,
+        0.299107,
+        0.732143,
+        0.495536,
+        0.535714
+      ],
+      [
+        1,
+        0.864955,
+        0.363095,
+        0.270089,
+        0.315476
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "19206e24d66b77c2f4bc72bd12a29cc1aa92ebc00594fdc351d78493d7b22718",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010712000_jpg.rf.2caaf2ffc42a5fac665d378a7b9cc78e.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.46317,
+        0.28869,
+        0.582589,
+        0.535714
+      ],
+      [
+        1,
+        0.305804,
+        0.738095,
+        0.53125,
+        0.52381
+      ]
+    ],
+    "reason": "Long pink flexible packet beside divided plate has unclear food-versus-condiment use.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "dd102be2ee806d56967c2b9d99978a4ebb1bb99e8b653caf63ad86340b3defd8",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010715001_jpg.rf.9472cded8b43324174a4ec3b559087dc.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.366071,
+        0.275298,
+        0.535714,
+        0.41369
+      ]
+    ],
+    "reason": "White divided eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "c7f13311508b989802ca9cdebc8d892c10b28e47bdeb347d07ef8a903437e365",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010716000_jpg.rf.931292f4e0b14c6a9af686632cc347d7.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.297991,
+        0.623512,
+        0.595982,
+        0.604167
+      ],
+      [
+        1,
+        0.350446,
+        0.208333,
+        0.59375,
+        0.27381
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "714492e95d42ee7110f04f211fef2309d34142981f622fd95baeeb9f8e2a13a4",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010718001_jpg.rf.5eedfdbb694325e614e60910c3dd2b8f.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.334821,
+        0.267857,
+        0.558036,
+        0.416667
+      ]
+    ],
+    "reason": "White divided eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "9b907e21e2b0fb7c40b54c7f7ea7d387d2dce601a4c95eef9a4b10c7e11ef842",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010733001_jpg.rf.07744f242e1a9247bfe5c5d66993fb81.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.348214,
+        0.287202,
+        0.517857,
+        0.4375
+      ],
+      [
+        1,
+        0.236607,
+        0.748512,
+        0.473214,
+        0.502976
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3a044313a47f2d30868da87dbdd6c382e106673375f0be5ee05f4d42bb579a85",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010758001_jpg.rf.fdc4a59bc98b9c1590932d5f8f942f97.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.340402,
+        0.266369,
+        0.582589,
+        0.491071
+      ],
+      [
+        1,
+        0.283482,
+        0.744048,
+        0.566964,
+        0.511905
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "af96dea816f668d4cd96e3d9dc3ee8bafe2d536732d6fc202c3d7773b5f46db9",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010788000_jpg.rf.d192224e052df030b38ca826840724e2.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.371652,
+        0.229167,
+        0.546875,
+        0.458333
+      ],
+      [
+        1,
+        0.262277,
+        0.739583,
+        0.475446,
+        0.520833
+      ]
+    ],
+    "reason": "Purple flexible packet beside milk carton has unclear food-versus-condiment use.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "37d33aa8534c7679066d489d2ccab61ac61bbbc363ed36f694e9c3e225585c37",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010846001_jpg.rf.ca35bcbb0fd1b06d5851e469a8713b42.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.399554,
+        0.224702,
+        0.540179,
+        0.443452
+      ],
+      [
+        1,
+        0.3125,
+        0.720238,
+        0.526786,
+        0.559524
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7c1abeaf19044d05f1a5649dbf55eefb8333b4c4d657b1ee7a405cd20e85a90b",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010859001_jpg.rf.e0879ff5e58139645147d9f8123ac131.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.386161,
+        0.251488,
+        0.504464,
+        0.395833
+      ],
+      [
+        1,
+        0.325893,
+        0.702381,
+        0.651786,
+        0.595238
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ebfb0ebcbcc95ec5ba5dcfee33fd43888f83897139f52cd56adf608523cf7da8",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010862001_jpg.rf.dd7c1ccb4dee4c151ccab7e510cd47f9.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.366071,
+        0.254464,
+        0.526786,
+        0.389881
+      ],
+      [
+        1,
+        0.734375,
+        0.363095,
+        0.227679,
+        0.214286
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "27afb54bdf7e8678b07955a852d74257e5069c4d5c010dafc818a6b98f38943d",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010865000_jpg.rf.31ac856756fb32358a5244babd19f927.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.341518,
+        0.223214,
+        0.540179,
+        0.410714
+      ],
+      [
+        1,
+        0.227679,
+        0.709821,
+        0.455357,
+        0.580357
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "007aa215db9f62bdffdee8863ffca9329bea20ac57e1aba1c106f4f774fecf11",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010874000_jpg.rf.9268ebb4a38714168c26cf46899dc376.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.383929,
+        0.247024,
+        0.526786,
+        0.422619
+      ],
+      [
+        1,
+        0.30692,
+        0.681548,
+        0.613839,
+        0.5
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "77dd29ede9a4fd3fee63f05f365c1d6afb6b04a2004131362ad1e88312667ca3",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010888000_jpg.rf.2b4ede72538a14db1c672736e4090e87.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.353795,
+        0.300595,
+        0.524554,
+        0.440476
+      ],
+      [
+        1,
+        0.272321,
+        0.744048,
+        0.5,
+        0.446429
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d599cbd1a983abc66f92c5e21c81938d2da848267c4054a31f67eb5175e5a1ee",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010908001_jpg.rf.33da968f6eca3f91106f2f108259cc5b.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.36942,
+        0.233631,
+        0.546875,
+        0.431548
+      ],
+      [
+        1,
+        0.301339,
+        0.712798,
+        0.602679,
+        0.574405
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "1ace61ab6179af4c9db337bf48281cdb14ed530080c12f50c570ea23a07f2f67",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010910000_jpg.rf.4420c721d991852a7ec6132d14c3ab08.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.356027,
+        0.269345,
+        0.542411,
+        0.419643
+      ]
+    ],
+    "reason": "Pink flexible packet to right of plate has unclear food-versus-condiment use.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "56219f2251712329f9124110caf42e17cd59e3b38f9bee7b302880526cd2794f",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010911000_jpg.rf.21b838c7abd1a25c7997ca689c3f0e98.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.366071,
+        0.251488,
+        0.549107,
+        0.4375
+      ],
+      [
+        1,
+        0.302455,
+        0.702381,
+        0.564732,
+        0.505952
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "77a6d38a8afaaa17bb75aeecac5d163643e8aabee21546d8807eef6eb6e967c3",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010961000_jpg.rf.b79c5e22251f5fdcd02acfdd1ac32c36.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.321429,
+        0.209821,
+        0.513393,
+        0.389881
+      ],
+      [
+        1,
+        0.271205,
+        0.697917,
+        0.542411,
+        0.502976
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "afbbdd838670cdf5e3f8a5604246f0a220a4e3f30bb75fdd248e434548876290",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010981000_jpg.rf.26c84fa0459c8a816d8c172e27c261ef.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.34933,
+        0.263393,
+        0.506696,
+        0.318452
+      ],
+      [
+        1,
+        0.314732,
+        0.674107,
+        0.629464,
+        0.526786
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "6f32a3387a609b411dd8b691ee0930e340b68bc7313a59ec406bab8cddf310d1",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__010996000_jpg.rf.89bd1e0471d43e4242cdccff23872520.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.366071,
+        0.25,
+        0.517857,
+        0.369048
+      ],
+      [
+        1,
+        0.252232,
+        0.681548,
+        0.504464,
+        0.535714
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "69ad9b2dd6dc931fecf40fa3708ea175892165173d0ffc411b858e2717aeeb1b",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011003000_jpg.rf.f09538c21f3a5e802c7ccc6c0407387d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.345982,
+        0.260417,
+        0.540179,
+        0.407738
+      ],
+      [
+        1,
+        0.25,
+        0.706845,
+        0.5,
+        0.485119
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "1d414f5db7680ecb479d7fdf8497cb5b6cc0d90905fc4eff7007bf23bbd2af4a",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011003001_jpg.rf.5c5b352dd6a7a8a143e6665aa8f9a0f3.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.357143,
+        0.212798,
+        0.53125,
+        0.395833
+      ],
+      [
+        1,
+        0.262277,
+        0.696429,
+        0.524554,
+        0.529762
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "74c154dd8f626704f028f82561da62ed2d4abb270cc8c50aca6e1f05a227ac16",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011024000_jpg.rf.b3ff375bc1d7db7ddf05dd9c9b0ca6a4.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.344866,
+        0.27381,
+        0.546875,
+        0.446429
+      ],
+      [
+        1,
+        0.310268,
+        0.729167,
+        0.495536,
+        0.470238
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "121a12336262f4fc6d803de4d2cc881b3547d14d29e63e9fea2a01facd6f083b",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011051000_jpg.rf.487a5cc9b5d3de2e7d0a168d7fce56f4.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.361607,
+        0.272321,
+        0.513393,
+        0.407738
+      ],
+      [
+        1,
+        0.311384,
+        0.708333,
+        0.622768,
+        0.583333
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "e9be7ef2bb62fa070f759ca70e44f3f7474fe7c5016d1ad2493416619a6d422b",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011057000_jpg.rf.fa6fd4d50216ddafdfc885f2af9b9463.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.333705,
+        0.230655,
+        0.529018,
+        0.41369
+      ],
+      [
+        1,
+        0.251116,
+        0.703869,
+        0.502232,
+        0.508929
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "910fbe4deffc61ae197f8868a977000a4bdb682c00ac64e1eba26b04d0113c67",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011062000_jpg.rf.badad5e8f3f35635482250bdeaf0ca6d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.372768,
+        0.217262,
+        0.508929,
+        0.375
+      ],
+      [
+        1,
+        0.310268,
+        0.644345,
+        0.620536,
+        0.580357
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "dfff20c93a344c32e61b324458a92e56d623d18bd3b96492a5c4878246c81cbc",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011067001_jpg.rf.e45ae0260e4560a78a672bf119b91acd.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.366071,
+        0.21131,
+        0.535714,
+        0.380952
+      ],
+      [
+        1,
+        0.27567,
+        0.672619,
+        0.551339,
+        0.559524
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7d57453a9cecad35000a97e5ecd8a7b86de673b3e712ce7464664716472960cc",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011096001_jpg.rf.50632e47905c628529a2f085562c5466.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.356027,
+        0.236607,
+        0.529018,
+        0.407738
+      ]
+    ],
+    "reason": "White divided eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "69d74d1365873a1de4fe2dc356f4e6a92ea5dd8b9f5c4a4ccdac9bad7235dd95",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011102000_jpg.rf.57b2a7ebe42e66fce1c21ba1f8b8158f.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.371652,
+        0.254464,
+        0.569196,
+        0.425595
+      ],
+      [
+        1,
+        0.328125,
+        0.690476,
+        0.65625,
+        0.541667
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "4a1e3e9ff052853756a1aaea91714c45bca3e2dbeb4b51278cf0586cc7929c3b",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011115000_jpg.rf.0ee2e4881db56527a1e038aa15cf678a.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.356027,
+        0.252976,
+        0.551339,
+        0.404762
+      ],
+      [
+        1,
+        0.246652,
+        0.677083,
+        0.493304,
+        0.473214
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "584ec9c8d1f3a734eed0b1ba7aa6e5d7a33ee2a1a44291ed52f61ff1109a6016",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011115001_jpg.rf.43de0bcb8e07f73f018051aaaf277be9.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.375,
+        0.21875,
+        0.535714,
+        0.395833
+      ],
+      [
+        1,
+        0.273438,
+        0.675595,
+        0.546875,
+        0.52381
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d14b180342eb263a6f19ba0b667ba815ad1f5f2ed56bf9796635165e141be957",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011121000_jpg.rf.1c551249be23d2ea55afa3fe72ae2161.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.370536,
+        0.244048,
+        0.544643,
+        0.392857
+      ],
+      [
+        1,
+        0.272321,
+        0.6875,
+        0.544643,
+        0.458333
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ccb9d4742a4fd1a4756e94474705f843806760701c8e85a8fc41c7e0130e12db",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011121001_jpg.rf.0a15298d08f5f7435f2b26013b27b867.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.364955,
+        0.227679,
+        0.524554,
+        0.395833
+      ],
+      [
+        1,
+        0.271205,
+        0.683036,
+        0.542411,
+        0.502976
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "83674d4627cecceb32f15089c16eceb3064cc19c07a88ddc3893196f0744eec6",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__011138001_jpg.rf.1b0d5b6cbba86ed6a03c17e58497c88f.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.348214,
+        0.264881,
+        0.558036,
+        0.428571
+      ],
+      [
+        1,
+        0.277902,
+        0.723214,
+        0.555804,
+        0.553571
+      ]
+    ],
+    "reason": "White divided eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "f6c4a94b6319d9488fa269e88a5e3f748e8423d7b7a5e07121f3c5f0ed79f5ea",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020259000_jpg.rf.9936ec32b0f6751b9bc8a0c33938bb38.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.532366,
+        0.395833,
+        0.412946,
+        0.529762
+      ],
+      [
+        1,
+        0.234375,
+        0.607143,
+        0.46875,
+        0.744048
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "59320465ec4f9923b6a91edee1e82b4f9bd7df5ba31443234beffa6107fd4e79",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020259002_jpg.rf.ce02e737c68fa6d3ed7601c136c6268a.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.513393,
+        0.41369,
+        0.428571,
+        0.553571
+      ],
+      [
+        1,
+        0.175223,
+        0.611607,
+        0.350446,
+        0.574405
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "fdadccf1320fc1d264f95e08791d05008c5e5d5861408401c9225677012752bd",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020260002_jpg.rf.50ee8a8b47ab64a8328e5a37d0c5cb5d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.50558,
+        0.370536,
+        0.457589,
+        0.610119
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "795845b93da11f02ea8faf027f2b619edd50a246d53fc8180c03b5dae3e3c151",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020261002_jpg.rf.017a1208d01710d6dce8d46803a094aa.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.483259,
+        0.434524,
+        0.421875,
+        0.553571
+      ],
+      [
+        1,
+        0.174107,
+        0.546131,
+        0.290179,
+        0.747024
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3ad97bde35498441ff4e77927bf9f6d6a87e1fc46adb50c77888a8f9c6111d92",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020262001_jpg.rf.a057d92f4d648ecabde16e828052d4b8.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.465402,
+        0.403274,
+        0.475446,
+        0.580357
+      ],
+      [
+        1,
+        0.143973,
+        0.505952,
+        0.252232,
+        0.565476
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "8e99c5608f52477eda5d0df5956652dc5adf2babb5d29c15fb84c4830291ba69",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020266002_jpg.rf.4e32670761b6389911223e2cc1c01f61.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.453125,
+        0.33631,
+        0.424107,
+        0.52381
+      ],
+      [
+        1,
+        0.243304,
+        0.702381,
+        0.401786,
+        0.369048
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "f31c6abb4231650a002d2bb9fe0cf926560a64170fdaf632d1daeb86d1c9c9c7",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020273000_jpg.rf.a6a3d5127060901cc5bd5b561d18b435.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.476562,
+        0.355655,
+        0.484375,
+        0.616071
+      ],
+      [
+        1,
+        0.209821,
+        0.69494,
+        0.419643,
+        0.407738
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3e2ad1bcade6ce8ca70f78a4e3e391d139e4f5ff73a4a96020d0ffef3faf0d4a",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020280002_jpg.rf.a00b92b71cf024717fe6dbbb0b01e10d.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.563616,
+        0.428571,
+        0.399554,
+        0.511905
+      ],
+      [
+        1,
+        0.223214,
+        0.630952,
+        0.446429,
+        0.708333
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "0362bce6749117db70b3e9452d91d3220bf0755a332c4b158a3ef18d938b76da",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020301001_jpg.rf.2b4e928c4101416b865e10679ea03dc2.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.485491,
+        0.346726,
+        0.453125,
+        0.574405
+      ],
+      [
+        1,
+        0.185268,
+        0.559524,
+        0.316964,
+        0.732143
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "13cd629635603402d14881c9ab204437337ecd25f78c3999123eefe4d2f8f81d",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020309002_jpg.rf.3eaee7753b9aa42b01779e770a75e2c7.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.267857,
+        0.517857,
+        0.446429,
+        0.565476
+      ],
+      [
+        1,
+        0.535714,
+        0.260417,
+        0.401786,
+        0.383929
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "efa94f3f339bccd659a3f2db25e41bd12195a8e96605b56caa92271890860c22",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020310001_jpg.rf.81823745a82fb20a0019e57dd62b1f17.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.261161,
+        0.514881,
+        0.473214,
+        0.595238
+      ],
+      [
+        1,
+        0.485491,
+        0.175595,
+        0.488839,
+        0.261905
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "a9e0e8135a21a90522f76ffa9ef1c9bea29ba4e79c36415e33c4f537a224ccdf",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020315001_jpg.rf.6a16a7066fdfc7a0aa19aa1a9fa5bc60.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.5,
+        0.366071,
+        0.441964,
+        0.547619
+      ],
+      [
+        1,
+        0.170759,
+        0.642857,
+        0.337054,
+        0.672619
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ea69693050f16bdd2c377592838a379738a67bb059e1778e1cf2af90bd667254",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020401002_jpg.rf.20fc7d37be07f7674aea666a40c3b5c0.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.522321,
+        0.36756,
+        0.419643,
+        0.485119
+      ],
+      [
+        1,
+        0.166295,
+        0.705357,
+        0.332589,
+        0.589286
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "cbf64a1fcc40fe43e6f11b9a30fc52a4df4cdc1477ef4f65bd31e8476c2dd891",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020402002_jpg.rf.e7864e15da42a116496ccdf7dc2fe5df.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.510045,
+        0.364583,
+        0.448661,
+        0.574405
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "edfbd1b9206c0256e96f1bfa8f4c59996e5b9a7e359cacd0f08d21145558cc0c",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020408001_jpg.rf.2ca453a0f6d957b6ca5e4c2dbad05eeb.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.46875,
+        0.313988,
+        0.450893,
+        0.520833
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d0f7962ef0f1284371cc38da26eaa52175b38e1a2e01ea77794c0bae55af25bc",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020415000_jpg.rf.31f4cbb018796a46caff93b7a6a7ecab.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.533482,
+        0.315476,
+        0.428571,
+        0.529762
+      ],
+      [
+        1,
+        0.212054,
+        0.563988,
+        0.40625,
+        0.395833
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d542b193d054c4358b4f9ba0260688e20f72ebe68212f6190425f3ae24748d74",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020415002_jpg.rf.e3860387f6eb719f24e1960c243aded8.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.470982,
+        0.401786,
+        0.441964,
+        0.547619
+      ],
+      [
+        1,
+        0.188616,
+        0.775298,
+        0.377232,
+        0.41369
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "e2874be8b60fc8ef1f9fa444c01f72e35b04f62e3cfedcc11feed78ec864ae1f",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020416002_jpg.rf.cbd7136166469de3c16f6b37feaa116b.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.467634,
+        0.366071,
+        0.444196,
+        0.577381
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "64e20561d5e4e99541fe84260d63a4167ea2e0eab6bae43bb43e24320041508f",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020418001_jpg.rf.ef9c005b4f628f7f5cacc9c82b50d88c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.516741,
+        0.380952,
+        0.435268,
+        0.52381
+      ],
+      [
+        1,
+        0.19308,
+        0.629464,
+        0.372768,
+        0.497024
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "5b165474010863f98d2c967b4e566a1a448f52ecca8e54569fb9a66894c20a2e",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020425001_jpg.rf.b4025e737bc88d7f234828d57c4e7a80.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.503348,
+        0.358631,
+        0.404018,
+        0.449405
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "e268533d5929b39bc2e116784602ea69aaf4679435450eee72b7cae6d682c928",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020428002_jpg.rf.40b77ddf7d67bca5c13335bde0939dd1.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.466518,
+        0.339286,
+        0.40625,
+        0.452381
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "a04e216dd2831c8cbd964e234d81d9aff633c7b2610513c8fcedeb324de35cba",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020429000_jpg.rf.fbbaf157847ce1a88e4296b2bcd23add.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.547991,
+        0.354167,
+        0.386161,
+        0.416667
+      ],
+      [
+        1,
+        0.207589,
+        0.50744,
+        0.415179,
+        0.83631
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7914ea9c7f19e60e9f8f529cb06621dcc15eddfdf85f3fdede020f2bf4402629",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020429001_jpg.rf.aafa3d756e1e4c0b92716e1b1c056e8a.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.487723,
+        0.38244,
+        0.408482,
+        0.455357
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ea282950d10306f87a8aae212d29e14600aead492641ec1e6189022fae9b2e2c",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020452000_jpg.rf.91a1724521bd5779df746f88db54aa1c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.495536,
+        0.370536,
+        0.424107,
+        0.544643
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "25cf3323cb9ad892d4969b226f24ed42959e71139f870e035f8f5e33da4997fd",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020463000_jpg.rf.4ea8d341d89693d1ea7571c22e5cf437.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.504464,
+        0.40625,
+        0.491071,
+        0.627976
+      ],
+      [
+        1,
+        0.143973,
+        0.653274,
+        0.287946,
+        0.622024
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "b118558e22bab6e21df5f5589b7cf498e9dc0d68a480e20191b6d701a72c88a1",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020463002_jpg.rf.0a6c6db879f87c585516aab4baa7df54.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.515625,
+        0.369048,
+        0.450893,
+        0.565476
+      ],
+      [
+        1,
+        0.177455,
+        0.214286,
+        0.354911,
+        0.428571
+      ],
+      [
+        1,
+        0.177455,
+        0.645833,
+        0.354911,
+        0.47619
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "c380a1f9c086b4d93759e4bb4099d3045ea6a454652e73b3a8820d7851886336",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020465002_jpg.rf.6317625bb2abb452a29c4d1ac079e736.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.508929,
+        0.355655,
+        0.459821,
+        0.574405
+      ],
+      [
+        1,
+        0.165179,
+        0.602679,
+        0.330357,
+        0.58631
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3859dda74c793dd3be99919a1808a3b779f6302ddb67f5744460d42e2d943398",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020466001_jpg.rf.3c6b62c62230678d053f8afda1791e9c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.439732,
+        0.388393,
+        0.459821,
+        0.604167
+      ],
+      [
+        1,
+        0.165179,
+        0.508929,
+        0.276786,
+        0.654762
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d76d2fb78852ccda768c536bcaebefa41eca1b10de438d9801ac31cecd7d4645",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020469002_jpg.rf.4220ebb91f4086f61327bb6100ad1fd3.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.514509,
+        0.386905,
+        0.399554,
+        0.428571
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "b12787d8c40092de387cf9d86c260b948fec6e43abfb055bb6c4913a240850fc",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020472001_jpg.rf.ce907e3065c9f3c8f59f3944ebe08b79.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.47433,
+        0.337798,
+        0.421875,
+        0.556548
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7a585621abbba14967652e7a9779cde43dbee7d4bec1b274b374ef308d3ac160",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020473000_jpg.rf.17bfc8fd58ed6b228051b53adbb824ba.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.496652,
+        0.322917,
+        0.457589,
+        0.592262
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "5b7c0d6aa2757dc54bd659a7d1921ab4a5018dc6c473fb6e23e0b4a54acce1d6",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020477002_jpg.rf.86aca1e7f881251a3f16965d4b993ada.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.46317,
+        0.333333,
+        0.466518,
+        0.589286
+      ],
+      [
+        1,
+        0.232143,
+        0.639881,
+        0.446429,
+        0.571429
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d68ed4034eb58d17047ebe706db8e09f0ef25b415822fa30b48377bb64257214",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020502000_jpg.rf.4c86f82a922547aa04898bcef95824f3.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.521205,
+        0.373512,
+        0.435268,
+        0.532738
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "270ca6033dc639a44b2ae6dc81d853f425344fad142209a9dc11f37106747fc0",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020504001_jpg.rf.d254dcf9f5ea5ca9ef6cd4277cd20b67.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.506696,
+        0.361607,
+        0.455357,
+        0.550595
+      ],
+      [
+        1,
+        0.204241,
+        0.58631,
+        0.359375,
+        0.654762
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "8ff0d0611cc60062a52bbdd998715eff8a79c14999e9e2a320f68975ea7d6287",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020505001_jpg.rf.9dba151551e1fa6691769487aa6dd2f3.jpg",
+    "status": "unresolved",
+    "rows": [
+      [
+        0,
+        0.483259,
+        0.394345,
+        0.444196,
+        0.574405
+      ]
+    ],
+    "reason": "Eating plate and any obvious bread packaging were boxed. An additional small flexible packet is visible, but its food-wrapper versus condiment/portion classification is unclear at native resolution.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7e40bf6c667d0175e0710a06c9e2e16130ba82cd16f5be92bbcf737825f2ef62",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020509001_jpg.rf.ce18629b9782dd1fffee6489587c7475.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.487723,
+        0.364583,
+        0.444196,
+        0.550595
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "023f6b2e9937c8a047bf9825724044326f37a1012adf37c95662e14ec7dfc2b5",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020512000_jpg.rf.383cda73e0f10f1577ab25c945a64d02.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.46875,
+        0.375,
+        0.433036,
+        0.565476
+      ],
+      [
+        1,
+        0.190848,
+        0.53125,
+        0.194196,
+        0.526786
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3ecd4b5c60775f520bb6dce4df028de762600b246135f364e92b7e8cd822116b",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020512002_jpg.rf.e9576902fd90505b0589d2fd4e664da1.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.478795,
+        0.395833,
+        0.404018,
+        0.529762
+      ],
+      [
+        1,
+        0.184152,
+        0.50744,
+        0.229911,
+        0.681548
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "3031715c2124e4f35190513100fd4a3a2f66acd7c9fd531ed070b02b0943ffd2",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020513001_jpg.rf.e37056de7397add1264ce7009208300f.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.506696,
+        0.327381,
+        0.46875,
+        0.589286
+      ],
+      [
+        1,
+        0.154018,
+        0.559524,
+        0.25,
+        0.666667
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "7f630c2c1ee180e514828369e2ffaf2e42550de4cc005975e689c118f237e9fa",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020516000_jpg.rf.dd1f61c49cf6afe139b8536bf2640ae8.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.49442,
+        0.360119,
+        0.457589,
+        0.589286
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "fe15010e32e38b937ae73f3ad834db00cd95be28aa39bab6226ca1680e8b2740",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020517000_jpg.rf.b00916d4c1ab81faced3813c470b671c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.460938,
+        0.385417,
+        0.466518,
+        0.592262
+      ],
+      [
+        1,
+        0.151786,
+        0.64881,
+        0.303571,
+        0.571429
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "e4f7f409205aa652ba0bfcf5c89d0e50113700305a37de0a2ecb70d7eb0701d5",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020526002_jpg.rf.dff16db9d977b3b108c5ee93c9d85b65.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.485491,
+        0.438988,
+        0.444196,
+        0.568452
+      ],
+      [
+        1,
+        0.159598,
+        0.607143,
+        0.319196,
+        0.636905
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "67d5f2816f32bf1acdebf9bdbb05d5ce0c2909f390627ed094ce153e9aa3b6a1",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020530001_jpg.rf.d6f73719f76852630a98fe18c8fa4267.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.495536,
+        0.372024,
+        0.433036,
+        0.547619
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "2cb626dbe6b3a130586fed6150b30240680e5d36050d89c1879ec87bc2551286",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020551001_jpg.rf.2b19d2e9d5d9670fef603e2029928aff.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.521205,
+        0.354167,
+        0.421875,
+        0.5
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ed195861a08569c591eb279afd17e22febca31b7c966c5951e8cf9774ea37574",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020552000_jpg.rf.1546eabfdc294268aa57c3f95baeb385.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.497768,
+        0.349702,
+        0.419643,
+        0.526786
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "a07e496b701876f6fdf0de164f976d76199f2f027efd0c59e34cc3964e10c594",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020554002_jpg.rf.0473c318fc7b75f6ca8d100614f5fdfd.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.496652,
+        0.366071,
+        0.412946,
+        0.482143
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "26c26d3af4b9f7950bb22635a410aa0a219314c41ba34fac97935b0b41256e54",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020558000_jpg.rf.734358b05ae4765d9769a85cbca62e81.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.501116,
+        0.346726,
+        0.412946,
+        0.467262
+      ],
+      [
+        1,
+        0.204241,
+        0.571429,
+        0.265625,
+        0.625
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "af77fc95261e8ac3a6ce608ae04e853eee50bf1b55a2675ac3387b62410d8b0d",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020564002_jpg.rf.c811964b748699ee932dee154f68a08a.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.495536,
+        0.345238,
+        0.424107,
+        0.547619
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "087d3c493f3f94148c58c99dece4c5a03f7f8052fab31f8d0a3ee6a6101d4c6e",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__020572000_jpg.rf.0d8385e171452b71bf5da6672577e410.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.481027,
+        0.337798,
+        0.395089,
+        0.449405
+      ],
+      [
+        1,
+        0.195312,
+        0.665179,
+        0.390625,
+        0.41369
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "009c4d9c2e96249f83cf90f900b1e63f11b5934035dc14c9385fbde19e401757",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021012000_jpg.rf.d6c4051de1450a44efcd91b52bc83aaa.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.475446,
+        0.364583,
+        0.46875,
+        0.592262
+      ],
+      [
+        1,
+        0.154018,
+        0.552083,
+        0.254464,
+        0.848214
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "bc5fbdedee7658d8ee2dbd37c19a14c2151bf2ec8ee5d47db231d7bded49d188",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021012002_jpg.rf.d97fb84305883c895cb4114717cbe3a1.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.466518,
+        0.397321,
+        0.46875,
+        0.610119
+      ],
+      [
+        1,
+        0.133929,
+        0.516369,
+        0.267857,
+        0.860119
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "200b82ec01fd1aca5684b9d4598ccf4f919751f649577f201a8a8e849c9eb8b8",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021019002_jpg.rf.3a39bf6ce0b8cf9bfae576c37394e677.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.493304,
+        0.394345,
+        0.477679,
+        0.627976
+      ],
+      [
+        1,
+        0.152902,
+        0.63244,
+        0.305804,
+        0.622024
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ee6bb91fb4ea0ac72f107b25461d73601c83bda2b8fe6d283c211335bda1ab01",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021026000_jpg.rf.6171d9a9f97adc17036ab46b9b4f13a6.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.497768,
+        0.327381,
+        0.450893,
+        0.559524
+      ],
+      [
+        1,
+        0.215402,
+        0.69494,
+        0.328125,
+        0.354167
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "2a375e623c7dc62bf58a51b32394ed463de3c3e211efa4961bd6bc17ed19901e",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021027000_jpg.rf.605e1d3c238d9230866baaf35135b9c3.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.477679,
+        0.33631,
+        0.46875,
+        0.541667
+      ],
+      [
+        1,
+        0.158482,
+        0.282738,
+        0.316964,
+        0.416667
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "d31ae04404021a537ffc9fd8f6f88795b682297f411a33eaa22f85edaca79324",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021027001_jpg.rf.a5b0bdb133356c1f1febd9fd2d0764b7.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.462054,
+        0.376488,
+        0.46875,
+        0.5625
+      ],
+      [
+        1,
+        0.179688,
+        0.75744,
+        0.359375,
+        0.407738
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "a63c82bd5de7adbbad65b0dd606546aa97cb36abbb5ab19565f2378c4eefb397",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021053000_jpg.rf.773de2be62c566f3545b9e6789593f71.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.516741,
+        0.36756,
+        0.444196,
+        0.568452
+      ],
+      [
+        1,
+        0.196429,
+        0.27381,
+        0.196429,
+        0.255952
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "e797be3074b0f1dd32a9ee862d9a7b801c80af049f2df26d90a26da11df64a91",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021053002_jpg.rf.45769acb8972c744ad4829446fbf673a.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.515625,
+        0.346726,
+        0.455357,
+        0.574405
+      ],
+      [
+        1,
+        0.191964,
+        0.260417,
+        0.258929,
+        0.3125
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "ff34834cc0d8c08bb7b5e5f9f3bce7c97b7a8155d99c3839118091e0f3fd7c95",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021055000_jpg.rf.9950c7f3ea480a1a97ccbf544ab441bc.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.508929,
+        0.340774,
+        0.450893,
+        0.568452
+      ]
+    ],
+    "reason": "White oval eating plate is visible; other vessels are rice/soup bowls; no scoped wrapper or plastic beverage bottle is visible.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "348139c5af1da9c8beebc58b047abb8a4855e8742aa3e088349154db25153ae7",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "name": "school_lunch__021060001_jpg.rf.d39772229afbbfe1af101965d664f40c.jpg",
+    "status": "corrected",
+    "rows": [
+      [
+        0,
+        0.501116,
+        0.395833,
+        0.426339,
+        0.529762
+      ],
+      [
+        1,
+        0.196429,
+        0.584821,
+        0.267857,
+        0.592262
+      ]
+    ],
+    "reason": "White oval eating plate is visible; clear or printed flexible food packaging is visible around bread/food.",
+    "reviewer": "Codex native school review 2026-10-16",
+    "image_sha256": "4ef6b805bce377ecb127c7b1bea9844c94e762a4fb52683ccb23d155a1a6a505",
+    "input_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+]

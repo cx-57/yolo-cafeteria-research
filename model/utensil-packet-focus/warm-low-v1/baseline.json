@@ -1,0 +1,27 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/warm-low-v1/initial.pt",
+  "weights_sha": "c837af1ad801a7307e898fc89061c3fc953a082bb16ad8dd1de80ea55f038e45",
+  "dataset_fingerprint": "6ee1ccc700420270b6c37eef194c8544f6c4be657b8ce8a480a156424859902a",
+  "independent_test": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.2483196942572867,
+      "recall": 0.29910556906195895,
+      "AP50": 0.20513922755328579,
+      "AP50_95": 0.07605817980193297
+    },
+    "condiment_packet": {
+      "precision": 0.044081603311712673,
+      "recall": 0.19047619047619047,
+      "AP50": 0.024882796215840747,
+      "AP50_95": 0.012200000841330313
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.14620064878449968,
+    "metrics/recall(B)": 0.2447908797690747,
+    "metrics/mAP50(B)": 0.11501101188456327,
+    "metrics/mAP50-95(B)": 0.044129090321631634,
+    "fitness": 0.044129090321631634
+  }
+}

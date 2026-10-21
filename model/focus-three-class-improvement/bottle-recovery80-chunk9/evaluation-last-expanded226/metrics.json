@@ -1,0 +1,40 @@
+{
+  "overall": {
+    "precision": 0.7680357810764051,
+    "recall": 0.7433882627827687,
+    "AP50": 0.7520677641533141,
+    "AP50_95": 0.5862041481322167
+  },
+  "per_class": {
+    "plate": {
+      "precision": 0.8671503786358921,
+      "recall": 0.7987041141910024,
+      "AP50": 0.8764133989434646,
+      "AP50_95": 0.744270057465999,
+      "objects": 237
+    },
+    "wrapper": {
+      "precision": 0.866645850049142,
+      "recall": 0.8314606741573034,
+      "AP50": 0.8597912047740262,
+      "AP50_95": 0.6129124515950841,
+      "objects": 89
+    },
+    "bottle": {
+      "precision": 0.5703111145441816,
+      "recall": 0.6,
+      "AP50": 0.5199986887424515,
+      "AP50_95": 0.4014299353355669,
+      "objects": 45
+    }
+  },
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/bottle-recovery80-chunk9/train/weights/last.pt",
+  "weights_sha256": "b12d2bbeb1c10f682ed5d5f17851be5778e761482c739ad0fe184381cb4e8297",
+  "dataset_fingerprint": "8bca75a76b56733cfc2b9fb5a43c67895ab9409fbb52068f0284c80c6e50b462",
+  "imgsz": 640,
+  "augment": false,
+  "target_min_ap50": 0.8,
+  "minimum_class_AP50": 0.5199986887424515,
+  "all_classes_meet_target": false,
+  "interpretation": "Reviewed public validation; no independent test or improvement claim."
+}

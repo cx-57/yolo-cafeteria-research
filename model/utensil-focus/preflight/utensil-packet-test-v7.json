@@ -1,0 +1,170 @@
+{
+  "split": "val",
+  "precision": 0.20529784285643587,
+  "recall": 0.41614976672628057,
+  "map50": 0.21575789874477902,
+  "map50_95": 0.1272357352189625,
+  "per_class": {
+    "food": {
+      "ap50": 0.7699167773861757,
+      "map50_95": 0.47751793427519906,
+      "precision": 0.5663953908041439,
+      "recall": 0.8551307847082495,
+      "f1": 0.6814396292335604,
+      "support": 994,
+      "images": 270,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "plate": {
+      "ap50": 0.07002424138217107,
+      "map50_95": 0.039540762887201986,
+      "precision": 0.07045460913018918,
+      "recall": 0.2903225806451613,
+      "f1": 0.11339166954407152,
+      "support": 217,
+      "images": 104,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "paper_boat": {
+      "ap50": null,
+      "map50_95": null,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "support": 0,
+      "images": 0,
+      "status": "unsupported",
+      "reliability": "absent"
+    },
+    "utensil": {
+      "ap50": 0.20508247665076634,
+      "map50_95": 0.07603436260892442,
+      "precision": 0.3089074461153695,
+      "recall": 0.20608108108108109,
+      "f1": 0.24722873263220102,
+      "support": 296,
+      "images": 230,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "hinged_container": {
+      "ap50": 0.0911957416376722,
+      "map50_95": 0.0461740562438744,
+      "precision": 0.08786231556991056,
+      "recall": 0.6382978723404256,
+      "f1": 0.15446269300046456,
+      "support": 47,
+      "images": 47,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "napkin": {
+      "ap50": 0.12498049843434499,
+      "map50_95": 0.08107157628011659,
+      "precision": 0.1051393190539243,
+      "recall": 0.19444444444444445,
+      "f1": 0.1364810712301424,
+      "support": 36,
+      "images": 35,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "drink_carton": {
+      "ap50": 0.7882679338835826,
+      "map50_95": 0.48928863695238045,
+      "precision": 0.7970776204410279,
+      "recall": 0.7449657378260136,
+      "f1": 0.7701411434809005,
+      "support": 406,
+      "images": 386,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "condiment_packet": {
+      "ap50": 0.024433040917714824,
+      "map50_95": 0.012016022822533688,
+      "precision": 0.03892292991566695,
+      "recall": 0.11904761904761904,
+      "f1": 0.058665139334223695,
+      "support": 42,
+      "images": 22,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "wrapper": {
+      "ap50": 0.0163743738933224,
+      "map50_95": 0.00828721230987051,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9,
+      "images": 8,
+      "status": "supported",
+      "reliability": "insufficient_support"
+    },
+    "bottle": {
+      "ap50": 0.037154330612467264,
+      "map50_95": 0.020772086954823122,
+      "precision": 0.07101308191963887,
+      "recall": 0.11320754716981132,
+      "f1": 0.08727813883631529,
+      "support": 53,
+      "images": 36,
+      "status": "supported",
+      "reliability": "measurable_public_validation"
+    },
+    "bowl": {
+      "ap50": 0.030149572649572652,
+      "map50_95": 0.021654700854700858,
+      "precision": 0.007205715614487774,
+      "recall": 1.0,
+      "f1": 0.01430832947585415,
+      "support": 2,
+      "images": 2,
+      "status": "supported",
+      "reliability": "insufficient_support"
+    }
+  },
+  "coverage": {
+    "total_class_count": 11,
+    "supported_class_count": 10,
+    "unsupported_class_count": 1,
+    "all_classes_evaluable": false,
+    "minimum_instances_per_class_for_reliable_reporting": 30,
+    "insufficient_support_classes": [
+      "wrapper",
+      "bowl"
+    ],
+    "all_classes_adequately_supported": false,
+    "supported_classes": [
+      "food",
+      "plate",
+      "utensil",
+      "hinged_container",
+      "napkin",
+      "drink_carton",
+      "condiment_packet",
+      "wrapper",
+      "bottle",
+      "bowl"
+    ],
+    "unsupported_classes": [
+      "paper_boat"
+    ]
+  },
+  "interpretation": "Existing saved V6 model tested on unchanged V7 development validation. V7 repaired-supervision performance is unmeasured because no V7 epoch/checkpoint is available.",
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-joint-v6/train/weights/best_utensil.pt",
+  "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-focus/weak-v7-reviewed/data.yaml",
+  "imgsz": 640,
+  "batch": 4,
+  "weights_sha256": "5cf0eca1767d703b1172ffaf616e8f8d9d43c98e93863946bcd61f122e516f48",
+  "dataset_fingerprint": "cc30ea3b8886e87caf6252f9ee62dd5cdd3814bbf774072a4d7beb224aa3a1bd",
+  "validation_images": 764,
+  "trained_on": "V6 recovery data, completed epoch16",
+  "v7_completed_epochs": 0,
+  "independent_test": false,
+  "validation_used_for_selection": true,
+  "startup_only_archive": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-reviewed-v7-startup-only"
+}

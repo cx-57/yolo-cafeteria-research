@@ -1,0 +1,154 @@
+[
+  {
+    "candidate_id": "lvis_000000013252",
+    "session": "coco_13252",
+    "image_sha256": "48da42275bcb1665e5ee5e37d52c96f0c2e932dadc38a402e249729aef1d7f89",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native hotel scene: two small clear PET drinking-water bottles on bedside tables; no plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.166507812 0.621920375 0.027734375 0.137985948",
+      "2 0.807351563 0.541159251 0.020171875 0.077681499"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000015148",
+    "session": "coco_15148",
+    "image_sha256": "bd134be2a2075717af35fda989ed8ec7d8dd47536d012a11b159ef13471b3d64",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native639x428 tennis-bench scene: three plastic drink bottles (yellow drink left, translucent sports bottle center floor, crushed clear bottle clipped at right). Hands-held tiny object is not identifiable as a bottle. Manually checked bounds against downloaded dimensions, not source640-width metadata. No plates/food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.214397496 0.835280374 0.025039124 0.128504673",
+      "2 0.552425665 0.853971963 0.028169014 0.100467290",
+      "2 0.977308294 0.808411215 0.045383412 0.037383178"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000179642",
+    "session": "coco_179642",
+    "image_sha256": "33fd21e7b4d7518615ac86e13ea66136d3f658fc68904a99d65a796058563d13",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native tennis scene: two clear plastic beverage bottles clipped by bottom edge; retain both separate visible boxes. Shopping/carry bags and towels are not food wrappers. No plates visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.373210938 0.948594848 0.032578125 0.102810304",
+      "2 0.400859375 0.953173302 0.033281250 0.093653396"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000160848",
+    "session": "coco_160848",
+    "image_sha256": "972ee539cc00de591712aac2aa5085ab12d8a1ad7f8628800411ea2d967db0b9",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native harbor/bicycle scene: two plastic cycling drink bottles on bicycle frame, separate boxes; no plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.444773438 0.722950820 0.022046875 0.052552693",
+      "2 0.461382812 0.745761124 0.018421875 0.053021077"
+    ]
+  },
+  {
+    "candidate_id": "river_023",
+    "session": "river_023-india-plasticbottle3bash-bashir",
+    "image_sha256": "8bfdb665257b10aa4f60a2bd7d08ed0353dd42b95ce76f04b181f2d74501afb8",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native river scene reviewed: three separate clear plastic soft-drink/water bottles. Lower transparent shape is reflection of foreground bottle, not an extra object. No identifiable plates or food wrappers; XML bounds checked visually. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.536706349 0.703703704 0.125992063 0.269841270",
+      "2 0.242063492 0.109126984 0.048611111 0.067460317",
+      "2 0.845734127 0.267195767 0.109126984 0.111111111"
+    ]
+  },
+  {
+    "candidate_id": "taco_0700",
+    "session": "taco_batch_2",
+    "image_sha256": "ad6458d26bca4ee05822be05b0d96c73c95dbe13f5d881f3a03684de140af868",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native street scene: one crushed clear PET beverage bottle by curb. No other discernible target objects. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.429330065 0.232230392 0.050653595 0.015318627"
+    ]
+  },
+  {
+    "candidate_id": "taco_0701",
+    "session": "taco_batch_2",
+    "image_sha256": "31b68c17b23294b7bf0043b2419e1eb0ba8b05e51d04dd532a8712ee8d2079e4",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native building/grass scene: one clear blue-capped PET beverage bottle. No plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.517003676 0.384191176 0.033394608 0.016748366"
+    ]
+  },
+  {
+    "candidate_id": "taco_0724",
+    "session": "taco_batch_2",
+    "image_sha256": "0917e35a4e88936ae147b9c31b43fa5ed51f7a0465f8b0a09c9f22abaa2fdb53",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native steps scene: one clear plastic beverage bottle, including cap. Separate discarded cap is not a bottle. No plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.800449346 0.409926471 0.116421569 0.024509804"
+    ]
+  },
+  {
+    "candidate_id": "taco_0729",
+    "session": "taco_batch_2",
+    "image_sha256": "21685e7379e644a549659f098f338a9e5d85d62ba4527c302840899e90a5d280",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native paving scene: one crushed clear beverage bottle with blue cap; separate cap excluded. No plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.584763072 0.264246324 0.036356209 0.035845588"
+    ]
+  },
+  {
+    "candidate_id": "taco_0764",
+    "session": "taco_batch_2",
+    "image_sha256": "6586d9ff7462adb0d2500e6cd928e88ddf4c40703c90959dc8cec4ba05481cd3",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native rail/gravel scene: two clear plastic beverage bottles. Green glass bottle, metal drink cans, cup, straw and cigarette excluded. No plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.414163769 0.422385621 0.070818843 0.035947712",
+      "2 0.766835283 0.408905229 0.049004110 0.026143791"
+    ]
+  },
+  {
+    "candidate_id": "taco_0789",
+    "session": "taco_batch_3",
+    "image_sha256": "c7da5f3c0332765eef75f3860d312e7d934a2ddaa5f179c9a05628e8559af637",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native wooden-shelter scene: one clear PET Pepsi beverage bottle. White tissue on ground is not a food wrapper. No plates visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.544526144 0.280330882 0.080065359 0.017769608"
+    ]
+  },
+  {
+    "candidate_id": "taco_1181",
+    "session": "taco_batch_7",
+    "image_sha256": "4060e7bad4534955ca0288df4883db1df9b9fd02f3e91c79761e0d898fbf291b",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-16",
+    "reason": "Native beach scene: one crushed green plastic soft-drink bottle with yellow cap; separate caps excluded. No plates or food wrappers visible. Nearest rotation-aware existing-image match inspected: different scene; photo identity is absent from the existing pool.",
+    "rows": [
+      "2 0.665416667 0.374750000 0.054166667 0.033500000"
+    ]
+  }
+]

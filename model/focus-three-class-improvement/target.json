@@ -1,6 +1,6 @@
 {
   "metric": "AP50",
-  "minimum_per_class": 0.9,
+  "minimum_per_class": 0.8,
   "classes": [
     "plate",
     "wrapper",
@@ -8,12 +8,391 @@
   ],
   "bottle_policy": "plastic beverage bottles only",
   "local_run_limit_seconds": 300,
-  "longer_training": "User executes supplied commands; each proposed run has a nine-minute native training budget.",
-  "validation_images": 126,
-  "acceptable_fallback_per_class": 0.85,
-  "scope": "All available V2 target candidates inventoried; all signed-off examples eligible; unresolved annotation semantics held explicitly.",
-  "dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
-  "dataset_images": 900,
+  "longer_training": "User runs epoch-complete6-minute-budget continuation chunks, likely~7\u201310 actual minutes at recent throughput; retains optimizer and fixed80-epoch horizon.",
+  "validation_images": 246,
+  "scope": "1302 retained images and unchanged labels; reviewed related captures grouped, plus transitive existing original groups. All prior validation anchors retained.",
+  "dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/capture-grouped-clean",
+  "dataset_images": 1302,
   "plate_stack_policy": "one box per entire stack",
-  "comparison_validation_images": 92
+  "comparison_validation_images": 126,
+  "latest_completed_user_run": "capture-bottle-replay-e8",
+  "all_classes_meet_target": false,
+  "bottle_gap": "Revised capture-grouped validation has67 bottle boxes; training356. New split has no score yet.",
+  "latest_diagnostic": "Hard-context training AP rose39.34% (epoch6) to57.45% (epoch10), validation bottle39.06% to46.88%. Field learning improved but remains weak; training-field/validation gap~10.6 points. Higher-resolution960 inference was rejected. Epoch9 remains best weakest-class model at47.98%; epoch10 has two classes above80%.",
+  "training_images": 1056,
+  "previous_user_run_epoch": 5,
+  "previous_user_run_fixed126_AP50": {
+    "plate": 0.7438514146517967,
+    "wrapper": 0.676033933232587,
+    "bottle": 0.5511967254777967
+  },
+  "current_training_run": "capture-bottle-replay-e10",
+  "current_training_epoch": 10,
+  "total_epoch_horizon": 80,
+  "planned_training_run": null,
+  "planned_training_status": "Cancelled by user: bottle removed from cafeteria scope. Active plate/wrapper configuration separately validated and meets80% AP50 per active class.",
+  "rejected_fresh_run": "bottle-standard80-chunk9",
+  "rejected_fresh_run_epoch": 6,
+  "rejected_fresh_run_expanded226_AP50": {
+    "plate": 0.7660212553818779,
+    "wrapper": 0.8632925270559254,
+    "bottle": 0.34460626216975293
+  },
+  "latest_completed_user_epoch": 9,
+  "latest_epoch_fixed126_AP50": {
+    "plate": 0.7309432840306789,
+    "wrapper": 0.4400297214764306,
+    "bottle": 0.5210148945747867
+  },
+  "latest_epoch_expanded226_AP50": {
+    "plate": 0.8764133989434646,
+    "wrapper": 0.8597912047740262,
+    "bottle": 0.5199986887424515
+  },
+  "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "latest_completed_user_runs": [
+    "bottle-stability-control",
+    "bottle-stability-accum64"
+  ],
+  "latest_paired_fixed126_AP50": {
+    "control": {
+      "plate": 0.7585571497404868,
+      "wrapper": 0.6226072455793019,
+      "bottle": 0.5859346069520608
+    },
+    "accum64": {
+      "plate": 0.7518163281551506,
+      "wrapper": 0.6312035138985586,
+      "bottle": 0.5771826732142632
+    }
+  },
+  "planned_recipe": null,
+  "current_training_dataset": "data/focus-three-class-improvement/capture-grouped-clean",
+  "bottle_coverage": {
+    "train": {
+      "bottle_images": 302,
+      "bottle_objects": 356,
+      "objects_below4pct": 140,
+      "multiple_bottle_images": 23
+    },
+    "val": {
+      "bottle_images": 55,
+      "bottle_objects": 67,
+      "objects_below4pct": 51,
+      "multiple_bottle_images": 10
+    }
+  },
+  "model_family": "YOLO11n only",
+  "latest_selected_epoch": 2,
+  "latest_selected_checkpoint_sha256": "c191c7ae770eafd7c6b18ef1f5f6ce8aa8d1b65ce8fcbfd7285f1314981d221b",
+  "validation_caveat": "Legacy hash and source checks missed related captures; not independent capture validation.",
+  "planned_training_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/capture-grouped-clean",
+  "latest_selected_fixed126_metrics": {
+    "overall": {
+      "precision": 0.7156946407956903,
+      "recall": 0.5815067699160457,
+      "AP50": 0.6367770326371357,
+      "AP50_95": 0.4680583614322889
+    },
+    "per_class": {
+      "plate": {
+        "precision": 0.8370145661645144,
+        "recall": 0.5997788872847258,
+        "AP50": 0.7117666428687961,
+        "AP50_95": 0.5069717767540964,
+        "objects": 137
+      },
+      "wrapper": {
+        "precision": 0.6152716583763456,
+        "recall": 0.5882352941176471,
+        "AP50": 0.5864769626769627,
+        "AP50_95": 0.4671782496782497,
+        "objects": 17
+      },
+      "bottle": {
+        "precision": 0.694797697846211,
+        "recall": 0.556506128345764,
+        "AP50": 0.6120874923656485,
+        "AP50_95": 0.4300250578645205,
+        "objects": 45
+      }
+    },
+    "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/bottle-context80-start/train/weights/best_min_ap50.pt",
+    "weights_sha256": "c191c7ae770eafd7c6b18ef1f5f6ce8aa8d1b65ce8fcbfd7285f1314981d221b",
+    "dataset_fingerprint": "2f089e1570c5d6d0438760c55fe92dc6a641006c9f5d9fdd7a80e1dd3a080893",
+    "imgsz": 640,
+    "augment": false,
+    "target_min_ap50": 0.8,
+    "minimum_class_AP50": 0.5864769626769627,
+    "all_classes_meet_target": false,
+    "interpretation": "Reviewed public validation; no independent test or improvement claim."
+  },
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "counts": {
+    "train": {
+      "images": 1056,
+      "negatives": 84,
+      "objects": {
+        "plate": 650,
+        "wrapper": 394,
+        "bottle": 356
+      },
+      "class_images": {
+        "plate": 521,
+        "wrapper": 381,
+        "bottle": 302
+      }
+    },
+    "val": {
+      "images": 246,
+      "negatives": 3,
+      "objects": {
+        "plate": 237,
+        "wrapper": 94,
+        "bottle": 67
+      },
+      "class_images": {
+        "plate": 186,
+        "wrapper": 90,
+        "bottle": 55
+      }
+    }
+  },
+  "historical_selection_fields_before_capture_repair": {
+    "current_fixed126_AP50": {
+      "plate": 0.712244846077309,
+      "wrapper": 0.6486355696029039,
+      "bottle": 0.6307733138070211
+    },
+    "current_expanded226_AP50": {
+      "plate": 0.8652687258964471,
+      "wrapper": 0.9194970042065569,
+      "bottle": 0.6298877210810343
+    },
+    "current_selected_checkpoint_sha256": "818161d62c00ffc580c6b5ce0c6261b58fbccd699b5227e3471f4dce3a5b5693",
+    "current_selected_run": "bottle-recovery80-chunk9",
+    "current_selected_epoch": 3,
+    "current_selected_fixed126_AP50": {
+      "plate": 0.712244846077309,
+      "wrapper": 0.6486355696029039,
+      "bottle": 0.6307733138070211
+    }
+  },
+  "current_selected_run": "capture-bottle-replay-e8",
+  "current_selected_epoch": 9,
+  "current_selected_checkpoint_sha256": "d4074aed050011f257a6613c55588020557ad5e71e0689c6e7b5c75c040938df",
+  "current_selected_AP50": {
+    "plate": 0.7329273449006392,
+    "wrapper": 0.8832544440879104,
+    "bottle": 0.47975935848678963
+  },
+  "current_selected_metrics": {
+    "overall": {
+      "precision": 0.7619843820891318,
+      "recall": 0.6356747548727321,
+      "AP50": 0.6986470491584464,
+      "AP50_95": 0.494737210031144
+    },
+    "per_class": {
+      "plate": {
+        "precision": 0.6426264678757025,
+        "recall": 0.7679324894514767,
+        "AP50": 0.7329273449006392,
+        "AP50_95": 0.5659085245418614,
+        "objects": 237
+      },
+      "wrapper": {
+        "precision": 0.9658076147203078,
+        "recall": 0.7659574468085106,
+        "AP50": 0.8832544440879104,
+        "AP50_95": 0.6174093193896864,
+        "objects": 94
+      },
+      "bottle": {
+        "precision": 0.6775190636713848,
+        "recall": 0.373134328358209,
+        "AP50": 0.47975935848678963,
+        "AP50_95": 0.30089378616188467,
+        "objects": 67
+      }
+    },
+    "weights": "model/focus-three-class-improvement/capture-bottle-replay-e8/train/weights/last.pt",
+    "weights_sha256": "d4074aed050011f257a6613c55588020557ad5e71e0689c6e7b5c75c040938df",
+    "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+    "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+    "imgsz": 640,
+    "augment": false,
+    "target_min_ap50": 0.8,
+    "minimum_class_AP50": 0.47975935848678963,
+    "all_classes_meet_target": false,
+    "interpretation": "Reviewed public validation; no independent test or improvement claim."
+  },
+  "latest_completed_run": "capture-bottle-replay-e10",
+  "latest_completed_run_epoch": 10,
+  "startup_recipe": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/capture-clean80-smoke-recipe.json",
+  "latest_epoch_metrics": {
+    "overall": {
+      "precision": 0.7675795145977199,
+      "recall": 0.6284966821912923,
+      "AP50": 0.7129150185569862,
+      "AP50_95": 0.5182733862176052
+    },
+    "per_class": {
+      "plate": {
+        "precision": 0.9457425039657789,
+        "recall": 0.5864978902953587,
+        "AP50": 0.8064311529384173,
+        "AP50_95": 0.6389118451455247,
+        "objects": 237
+      },
+      "wrapper": {
+        "precision": 0.7458593144140347,
+        "recall": 0.8297872340425532,
+        "AP50": 0.8634805326273074,
+        "AP50_95": 0.5954876301160754,
+        "objects": 94
+      },
+      "bottle": {
+        "precision": 0.6111367254133458,
+        "recall": 0.46920492223596505,
+        "AP50": 0.4688333701052341,
+        "AP50_95": 0.3204206833912156,
+        "objects": 67
+      }
+    },
+    "weights": "model/focus-three-class-improvement/capture-bottle-replay-e10/train/weights/last.pt",
+    "weights_sha256": "ed78743eeecffdfb8d6aa69aac7d528199500ecc4d637e0ac82113607dd0bd09",
+    "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+    "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+    "imgsz": 640,
+    "augment": false,
+    "target_min_ap50": 0.8,
+    "minimum_class_AP50": 0.4688333701052341,
+    "all_classes_meet_target": false,
+    "interpretation": "Reviewed public validation; no independent test or improvement claim."
+  },
+  "latest_epoch_AP50": {
+    "plate": 0.8064311529384173,
+    "wrapper": 0.8634805326273074,
+    "bottle": 0.4688333701052341
+  },
+  "checkpoint_recovery": "model/focus-three-class-improvement/capture-bottle-replay-e8/epoch9_checkpoint_recovery.json",
+  "training_fit_diagnostic": {
+    "interpretation": "Training-set fit diagnostic only. Not validation, not an80%-target result.",
+    "per_class": {
+      "plate": {
+        "precision": 0.847801336271158,
+        "recall": 0.6684439404267706,
+        "AP50": 0.8034081275655145,
+        "AP50_95": 0.6759486281422555
+      },
+      "wrapper": {
+        "precision": 0.7903705400575168,
+        "recall": 0.7893401015228426,
+        "AP50": 0.8462203225545839,
+        "AP50_95": 0.5855654652494544
+      },
+      "bottle": {
+        "precision": 0.7454450144025837,
+        "recall": 0.6004932150297397,
+        "AP50": 0.6747168084982462,
+        "AP50_95": 0.4388300756973963
+      }
+    },
+    "overall": {
+      "precision": 0.7945389635770862,
+      "recall": 0.6860924189931176,
+      "AP50": 0.7747817528727815,
+      "AP50_95": 0.5667813896963688
+    },
+    "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+    "weights_sha256": "c9160cdd83c5758229122f09d391002530fb86f641bf4fd7e672c5655643ab13"
+  },
+  "bottle_domain_fit_diagnostic": {
+    "interpretation": "Disjoint training-source fit diagnostic, not validation and not an80%-target result.",
+    "weights_sha256": "c9160cdd83c5758229122f09d391002530fb86f641bf4fd7e672c5655643ab13",
+    "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+    "groups": {
+      "closeup_video": {
+        "images": 178,
+        "bottle_objects": 178,
+        "precision": 0.8705430710044577,
+        "recall": 0.9269662921348315,
+        "AP50": 0.9658311108266509,
+        "AP50_95": 0.6511390520572544
+      },
+      "field_context": {
+        "images": 124,
+        "bottle_objects": 178,
+        "precision": 0.5026664375588651,
+        "recall": 0.39325842696629215,
+        "AP50": 0.39335641078188677,
+        "AP50_95": 0.23612293445542779
+      }
+    }
+  },
+  "replay_epoch9_img960_metrics": {
+    "overall": {
+      "precision": 0.5858761772782525,
+      "recall": 0.5912438882881579,
+      "AP50": 0.5649349062785238,
+      "AP50_95": 0.3877613888155136
+    },
+    "per_class": {
+      "plate": {
+        "precision": 0.5003645385747364,
+        "recall": 0.6835443037974683,
+        "AP50": 0.6596138449350282,
+        "AP50_95": 0.5076205317991918,
+        "objects": 237
+      },
+      "wrapper": {
+        "precision": 0.7754070776647574,
+        "recall": 0.7021276595744681,
+        "AP50": 0.7508400872244275,
+        "AP50_95": 0.4862877166232188,
+        "objects": 94
+      },
+      "bottle": {
+        "precision": 0.4818569155952634,
+        "recall": 0.3880597014925373,
+        "AP50": 0.2843507866761156,
+        "AP50_95": 0.1693759180241305,
+        "objects": 67
+      }
+    },
+    "weights": "model/focus-three-class-improvement/capture-bottle-replay-e8/train/weights/last.pt",
+    "weights_sha256": "d4074aed050011f257a6613c55588020557ad5e71e0689c6e7b5c75c040938df",
+    "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+    "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+    "imgsz": 960,
+    "augment": false,
+    "target_min_ap50": 0.8,
+    "minimum_class_AP50": 0.2843507866761156,
+    "all_classes_meet_target": false,
+    "interpretation": "Reviewed public validation; no independent test or improvement claim."
+  },
+  "latest_epoch_class_goal_status": {
+    "plate": true,
+    "wrapper": true,
+    "bottle": false
+  },
+  "latest_training_field_fit": {
+    "interpretation": "Training field/context fit only, not validation or target performance.",
+    "images": 124,
+    "bottle_objects": 178,
+    "precision": 0.644947200177697,
+    "recall": 0.5786516853932584,
+    "AP50": 0.574451741728469,
+    "AP50_95": 0.32885341982105076,
+    "weights_sha256": "ed78743eeecffdfb8d6aa69aac7d528199500ecc4d637e0ac82113607dd0bd09",
+    "dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296"
+  },
+  "experiment_status": "archived_user_removed_bottle",
+  "bottle_experiments_cancelled": true,
+  "active_target": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/target.json",
+  "active_classes": [
+    "plate",
+    "wrapper"
+  ]
 }

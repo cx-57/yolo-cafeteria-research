@@ -1,0 +1,1365 @@
+test_cache_checkpoint_mismatch_rejected (test_analyze_cached.CachedAnalysisTests.test_cache_checkpoint_mismatch_rejected) ... ok
+test_development_holdout_partition (test_analyze_cached.CachedAnalysisTests.test_development_holdout_partition) ... ok
+test_full_frame_confidence_sweep_changes_detections (test_analyze_cached.CachedAnalysisTests.test_full_frame_confidence_sweep_changes_detections) ... ok
+test_full_frame_resolution_comparison (test_analyze_cached.CachedAnalysisTests.test_full_frame_resolution_comparison) ... ok
+test_higher_crop_threshold_filters_unmatched_predictions (test_analyze_cached.CachedAnalysisTests.test_higher_crop_threshold_filters_unmatched_predictions) ... ok
+test_iou (test_analyze_cached.CachedAnalysisTests.test_iou) ... ok
+test_low_confidence_threshold_counts_true_matches (test_analyze_cached.CachedAnalysisTests.test_low_confidence_threshold_counts_true_matches) ... ok
+test_matching_one_prediction_cannot_claim_two_objects (test_analyze_cached.CachedAnalysisTests.test_matching_one_prediction_cannot_claim_two_objects) ... ok
+test_nms_preserves_different_class_boxes (test_analyze_cached.CachedAnalysisTests.test_nms_preserves_different_class_boxes) ... ok
+test_class_counts_nonnegative_and_size_report (test_analyze_cached.DetailedMatchingTests.test_class_counts_nonnegative_and_size_report) ... ok
+test_max_matching_fixes_overlapping_plate_greedy_error (test_analyze_cached.DetailedMatchingTests.test_max_matching_fixes_overlapping_plate_greedy_error) ... ok
+test_render_overlay_writes_review_file_without_modifying_source (test_analyze_cached.DetailedMatchingTests.test_render_overlay_writes_review_file_without_modifying_source) ... ok
+test_roboflow_exports_stay_in_same_partition (test_analyze_cached.DetailedMatchingTests.test_roboflow_exports_stay_in_same_partition) ... ok
+test_wrong_class_overlap_flags_review_candidate (test_analyze_cached.DetailedMatchingTests.test_wrong_class_overlap_flags_review_candidate) ... ok
+test_detects_duplicate_and_invalid_box_without_mutating_input (test_audit.AuditTests.test_detects_duplicate_and_invalid_box_without_mutating_input) ... ok
+test_empty_corpus_does_not_pass (test_audit.AuditTests.test_empty_corpus_does_not_pass) ... ok
+test_rejects_wrong_raw_image_even_when_filename_and_labels_match (test_audit.AuditTests.test_rejects_wrong_raw_image_even_when_filename_and_labels_match) ... ok
+test_repacked_source_preserves_manifest_split_and_double_underscore_filename (test_audit.AuditTests.test_repacked_source_preserves_manifest_split_and_double_underscore_filename) ... ok
+test_matching_original_bottle_is_not_a_missing_label (test_audit_coco_v2.AuditCOCOTests.test_matching_original_bottle_is_not_a_missing_label) ... ok
+test_missing_bottle_and_utensil_are_review_candidates (test_audit_coco_v2.AuditCOCOTests.test_missing_bottle_and_utensil_are_review_candidates) ... ok
+test_non_coco_classes_are_not_claimed_checked (test_audit_coco_v2.AuditCOCOTests.test_non_coco_classes_are_not_claimed_checked) ... ok
+test_ablation_filters_train_without_moving_validation_or_editing_labels (test_diagnose.DiagnosisTests.test_ablation_filters_train_without_moving_validation_or_editing_labels) ... ok
+test_fresh_scan_rejects_out_of_bounds_and_nonfinite_boxes (test_diagnose.DiagnosisTests.test_fresh_scan_rejects_out_of_bounds_and_nonfinite_boxes) ... ok
+test_metadata_mode_avoids_label_reads_and_does_not_invent_box_counts (test_diagnose.DiagnosisTests.test_metadata_mode_avoids_label_reads_and_does_not_invent_box_counts) ... ok
+test_run_summary_reports_missing_epochs_and_best_metrics_separately (test_diagnose.DiagnosisTests.test_run_summary_reports_missing_epochs_and_best_metrics_separately) ... ok
+test_support_distinguishes_boxes_images_and_missing_classes (test_diagnose.DiagnosisTests.test_support_distinguishes_boxes_images_and_missing_classes) ... ok
+test_unknown_exclusion_fails_instead_of_creating_an_unchanged_experiment (test_diagnose.DiagnosisTests.test_unknown_exclusion_fails_instead_of_creating_an_unchanged_experiment) ... ok
+test_a_mixed_rare_class_image_uses_the_maximum_repeat_not_a_sum (test_experiment.FrozenExperimentTests.test_a_mixed_rare_class_image_uses_the_maximum_repeat_not_a_sum) ... ok
+test_additions_append_to_both_splits_deduplicate_same_class_and_preserve_occluded_plate (test_experiment.FrozenExperimentTests.test_additions_append_to_both_splits_deduplicate_same_class_and_preserve_occluded_plate) ... ok
+test_bad_or_unmatched_additions_fail_before_creating_output (test_experiment.FrozenExperimentTests.test_bad_or_unmatched_additions_fail_before_creating_output) ... ok
+test_crop_requires_selected_weak_classes_and_repeat_budget (test_experiment.FrozenExperimentTests.test_crop_requires_selected_weak_classes_and_repeat_budget) ... ok
+test_current_ids_are_not_remapped_even_for_historical_source_names (test_experiment.FrozenExperimentTests.test_current_ids_are_not_remapped_even_for_historical_source_names) ... ok
+test_default_keeps_original_views_and_copies_labels_independently (test_experiment.FrozenExperimentTests.test_default_keeps_original_views_and_copies_labels_independently) ... ok
+test_focus_crops_only_train_and_matches_repeat_control (test_experiment.FrozenExperimentTests.test_focus_crops_only_train_and_matches_repeat_control) ... ok
+test_invalid_balancing_options_do_not_create_output (test_experiment.FrozenExperimentTests.test_invalid_balancing_options_do_not_create_output) ... ok
+test_output_guards_preserve_sources_and_unrelated_files (test_experiment.FrozenExperimentTests.test_output_guards_preserve_sources_and_unrelated_files) ... ok
+test_partial_objects_in_crop_remain_labeled_and_boundary_valid (test_experiment.FrozenExperimentTests.test_partial_objects_in_crop_remain_labeled_and_boundary_valid) ... ok
+test_rare_class_training_views_repeat_boundedly_and_validation_has_one_view (test_experiment.FrozenExperimentTests.test_rare_class_training_views_repeat_boundedly_and_validation_has_one_view) ... ok
+test_relative_source_without_yaml_path_resolves_against_the_yaml_directory (test_experiment.FrozenExperimentTests.test_relative_source_without_yaml_path_resolves_against_the_yaml_directory) ... ok
+test_weak_subset_bad_parameters_do_not_write_output (test_experiment.FrozenExperimentTests.test_weak_subset_bad_parameters_do_not_write_output) ... ok
+test_weak_subset_keeps_full_validation_and_all_labels (test_experiment.FrozenExperimentTests.test_weak_subset_keeps_full_validation_and_all_labels) ... ok
+test_weak_subset_selects_all_original_and_crop_views_together (test_experiment.FrozenExperimentTests.test_weak_subset_selects_all_original_and_crop_views_together) ... FAIL
+test_bad_box_stops (test_focus_three_class.FocusTests.test_bad_box_stops) ... ok
+test_capture_groups_transitive_and_frozen_validation (test_focus_three_class.FocusTests.test_capture_groups_transitive_and_frozen_validation) ... ok
+test_capture_leakage_is_rejected (test_focus_three_class.FocusTests.test_capture_leakage_is_rejected) ... ok
+test_checkpoint_selection_protects_weak_class_and_skips_final_revalidation (test_focus_three_class.FocusTests.test_checkpoint_selection_protects_weak_class_and_skips_final_revalidation) ... Frozen split: 9 training originals, 17 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpqhthwr0z/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 2 additional boxes; skipped 2 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpsu34p4k7/data/training-revised/data.yaml
+Frozen split: 9 training originals, 9 views; 2 validation originals, 2 views
+Accepted 1 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpoulzn83r/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmph7rkjew_/data/training-revised/data.yaml
+Frozen split: 9 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp3aicd5am/data/training-repeat-control/data.yaml
+Frozen split: 9 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp3aicd5am/data/training-revised/data.yaml
+Frozen split: 8 training originals, 14 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp0lm_zgnr/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: data/training-revised/data.yaml
+Weak-class fast subset: 4 of 8 training views (50.0%).
+Selected 3 weak original groups + 1 strong-class replay groups. Validation unchanged.
+Prepared subset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpvqeteahq/data/training-revised/data.yaml
+Frozen split: 8 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmplyq2r56m/data/focus/data.yaml
+Weak-class fast subset: 6 of 11 training views (54.5%).
+Selected 3 weak original groups + 0 strong-class replay groups. Validation unchanged.
+Prepared subset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmplyq2r56m/data/training-revised/data.yaml
+Per-class AP50: {'plate': 0.99, 'wrapper': 0.99, 'bottle': 0.61} minimum: 0.61
+Per-class AP50: {'plate': 0.81, 'wrapper': 0.82, 'bottle': 0.83} minimum: 0.81
+ok
+test_continuation_can_replay_only_the_complete_audited_training_pool (test_focus_three_class.FocusTests.test_continuation_can_replay_only_the_complete_audited_training_pool) ... ok
+test_continuation_clone_preserves_source_and_rejects_stripped (test_focus_three_class.FocusTests.test_continuation_clone_preserves_source_and_rejects_stripped) ... ok
+test_continuation_output_is_new_direct_child_of_improvement_root (test_focus_three_class.FocusTests.test_continuation_output_is_new_direct_child_of_improvement_root) ... ok
+test_continuation_wall_limit_latest_guard_and_inherited_best (test_focus_three_class.FocusTests.test_continuation_wall_limit_latest_guard_and_inherited_best) ... Per-class AP50: {'plate': 0.8, 'wrapper': 0.8, 'bottle': 0.8} minimum: 0.8
+ok
+test_empty_label_requires_explicit_absence_verification (test_focus_three_class.FocusTests.test_empty_label_requires_explicit_absence_verification) ... ok
+test_existing_training_capture_cannot_move_into_expanded_validation (test_focus_three_class.FocusTests.test_existing_training_capture_cannot_move_into_expanded_validation) ... ok
+test_expansion_requires_explicit_audited_count (test_focus_three_class.FocusTests.test_expansion_requires_explicit_audited_count) ... ok
+test_external_build_preserves_existing_images_labels_and_validation (test_focus_three_class.FocusTests.test_external_build_preserves_existing_images_labels_and_validation) ... Integrity passed: 3 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 2,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+ok
+test_external_review_requires_complete_hash_bound_nonduplicate_evidence (test_focus_three_class.FocusTests.test_external_review_requires_complete_hash_bound_nonduplicate_evidence) ... ok
+test_fingerprint_binds_leakage_and_review_evidence (test_focus_three_class.FocusTests.test_fingerprint_binds_leakage_and_review_evidence) ... ok
+test_frozen_anchor_rejects_changed_image_with_same_name_and_rows (test_focus_three_class.FocusTests.test_frozen_anchor_rejects_changed_image_with_same_name_and_rows) ... ok
+test_interrupted_resume_copy_preserves_previous_checkpoint (test_focus_three_class.FocusTests.test_interrupted_resume_copy_preserves_previous_checkpoint) ... ok
+test_latest_resume_cannot_silently_rewind_completed_epochs (test_focus_three_class.FocusTests.test_latest_resume_cannot_silently_rewind_completed_epochs) ... ok
+test_manual_review_hashes_duplicates_and_rows (test_focus_three_class.FocusTests.test_manual_review_hashes_duplicates_and_rows) ... ok
+test_optional_capture_fingerprint_keeps_original_encoding (test_focus_three_class.FocusTests.test_optional_capture_fingerprint_keeps_original_encoding) ... ok
+test_rebased_validation_rejects_legacy_checkpoint (test_focus_three_class.FocusTests.test_rebased_validation_rejects_legacy_checkpoint) ... ok
+test_recipe_cannot_train_on_validation_or_resume_into_original_run (test_focus_three_class.FocusTests.test_recipe_cannot_train_on_validation_or_resume_into_original_run) ... ok
+test_remap_preserves_coordinates_and_all_boxes (test_focus_three_class.FocusTests.test_remap_preserves_coordinates_and_all_boxes) ... ok
+test_reviewed_scene_members_cannot_cross_splits (test_focus_three_class.FocusTests.test_reviewed_scene_members_cannot_cross_splits) ... ok
+test_scene_reviews_require_exact_membership_and_image_hashes (test_focus_three_class.FocusTests.test_scene_reviews_require_exact_membership_and_image_hashes) ... ok
+test_stack_policy_allows_only_plate_relabel_on_same_frozen_image (test_focus_three_class.FocusTests.test_stack_policy_allows_only_plate_relabel_on_same_frozen_image) ... ok
+test_transitive_duplicate_groups_choose_fewest_moves (test_focus_three_class.FocusTests.test_transitive_duplicate_groups_choose_fewest_moves) ... ok
+test_bad_checkpoint_ontology_is_rejected_before_predictions (test_inspect_predictions.InspectionTests.test_bad_checkpoint_ontology_is_rejected_before_predictions) ... ok
+test_overlapping_objects_use_maximum_number_of_distinct_matches (test_inspect_predictions.InspectionTests.test_overlapping_objects_use_maximum_number_of_distinct_matches) ... ok
+test_real_image_overlay_files_and_zero_validation_support (test_inspect_predictions.InspectionTests.test_real_image_overlay_files_and_zero_validation_support) ... ok
+test_same_class_iou_matching_and_unmatched_objects (test_inspect_predictions.InspectionTests.test_same_class_iou_matching_and_unmatched_objects) ... ok
+test_size_bins_and_stratified_review_keep_occluded_candidates (test_inspect_predictions.InspectionTests.test_size_bins_and_stratified_review_keep_occluded_candidates) ... ok
+test_wrong_class_overlap_is_explicitly_flagged_not_reclassified (test_inspect_predictions.InspectionTests.test_wrong_class_overlap_is_explicitly_flagged_not_reclassified) ... ok
+test_food_box_preserves_official_geometry_and_current_class (test_lvis_food.LvisFoodTests.test_food_box_preserves_official_geometry_and_current_class) ... ok
+test_ingredients_inside_a_composite_food_are_not_duplicate_food_targets (test_lvis_food.LvisFoodTests.test_ingredients_inside_a_composite_food_are_not_duplicate_food_targets) ... ok
+test_missing_array_does_not_silently_drop_annotations (test_lvis_food.LvisFoodTests.test_missing_array_does_not_silently_drop_annotations) ... ok
+test_streaming_arrays_cross_chunk_boundaries (test_lvis_food.LvisFoodTests.test_streaming_arrays_cross_chunk_boundaries) ... ok
+test_all_known_classes_equal_standard_bce_and_gradients (test_partial_labels.PartialLabelsTests.test_all_known_classes_equal_standard_bce_and_gradients) ... ok
+test_batch_order_and_balanced_view_names_keep_source_coverage (test_partial_labels.PartialLabelsTests.test_batch_order_and_balanced_view_names_keep_source_coverage) ... ok
+test_bce_cannot_silently_use_missing_or_wrong_batch_mask (test_partial_labels.PartialLabelsTests.test_bce_cannot_silently_use_missing_or_wrong_batch_mask) ... ok
+test_known_plate_hard_negative_retains_penalty (test_partial_labels.PartialLabelsTests.test_known_plate_hard_negative_retains_penalty) ... /Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_partial_labels.py:76: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  self.assertGreater(float(losses[0, 0, 1]), 0)
+ok
+test_mismatched_ontology_and_invalid_coverage_ids_are_rejected (test_partial_labels.PartialLabelsTests.test_mismatched_ontology_and_invalid_coverage_ids_are_rejected) ... ok
+test_missing_unknown_or_misaligned_image_provenance_is_rejected (test_partial_labels.PartialLabelsTests.test_missing_unknown_or_misaligned_image_provenance_is_rejected) ... ok
+test_mixed_image_augmentation_is_rejected (test_partial_labels.PartialLabelsTests.test_mixed_image_augmentation_is_rejected) ... ok
+test_policy_file_requires_explicit_schema_and_source_metadata (test_partial_labels.PartialLabelsTests.test_policy_file_requires_explicit_schema_and_source_metadata) ... ok
+test_unknown_negative_has_zero_gradient_but_unknown_soft_positive_is_kept (test_partial_labels.PartialLabelsTests.test_unknown_negative_has_zero_gradient_but_unknown_soft_positive_is_kept) ... ok
+test_actual_yolo11n_forward_backward_on_a_real_plate_photo (test_partial_labels.UpstreamLossTests.test_actual_yolo11n_forward_backward_on_a_real_plate_photo)
+Real architecture + committed photo, but UNTRAINED weights: runtime smoke only. ... Scanned 1 images; overlay images saved: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp14856hb9/output
+Eligible target images: {'plate': 1, 'napkin': 0}
+Possible wrong-class overlaps: 0 (see wrong_class_candidates.csv)
+Scanned 1 images; overlay images disabled: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp14856hb9/full-report
+Eligible target images: {'plate': 1}
+Possible wrong-class overlaps: 0 (see wrong_class_candidates.csv)
+Overriding model.yaml nc=80 with nc=11
+ok
+test_all_known_classes_equal_standard_bce_and_gradients (test_partial_labels.UpstreamLossTests.test_all_known_classes_equal_standard_bce_and_gradients) ... ok
+test_all_known_full_upstream_detection_loss_is_unchanged (test_partial_labels.UpstreamLossTests.test_all_known_full_upstream_detection_loss_is_unchanged) ... ok
+test_batch_order_and_balanced_view_names_keep_source_coverage (test_partial_labels.UpstreamLossTests.test_batch_order_and_balanced_view_names_keep_source_coverage) ... ok
+test_bce_cannot_silently_use_missing_or_wrong_batch_mask (test_partial_labels.UpstreamLossTests.test_bce_cannot_silently_use_missing_or_wrong_batch_mask) ... ok
+test_known_plate_hard_negative_retains_penalty (test_partial_labels.UpstreamLossTests.test_known_plate_hard_negative_retains_penalty) ... ok
+test_mismatched_ontology_and_invalid_coverage_ids_are_rejected (test_partial_labels.UpstreamLossTests.test_mismatched_ontology_and_invalid_coverage_ids_are_rejected) ... ok
+test_missing_unknown_or_misaligned_image_provenance_is_rejected (test_partial_labels.UpstreamLossTests.test_missing_unknown_or_misaligned_image_provenance_is_rejected) ... ok
+test_mixed_image_augmentation_is_rejected (test_partial_labels.UpstreamLossTests.test_mixed_image_augmentation_is_rejected) ... ok
+test_partial_loss_preserves_box_and_dfl_components_and_box_gradients (test_partial_labels.UpstreamLossTests.test_partial_loss_preserves_box_and_dfl_components_and_box_gradients) ... ok
+test_policy_file_requires_explicit_schema_and_source_metadata (test_partial_labels.UpstreamLossTests.test_policy_file_requires_explicit_schema_and_source_metadata) ... ok
+test_unknown_negative_has_zero_gradient_but_unknown_soft_positive_is_kept (test_partial_labels.UpstreamLossTests.test_unknown_negative_has_zero_gradient_but_unknown_soft_positive_is_kept) ... ok
+test_build_preserves_membership_boxes_and_source_bytes (test_plate_wrapper.PlateWrapperTests.test_build_preserves_membership_boxes_and_source_bytes) ... Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+ok
+test_explicit_rebaseline_preserves_images_and_records_changed_validation (test_plate_wrapper.PlateWrapperTests.test_explicit_rebaseline_preserves_images_and_records_changed_validation) ... Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 2,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 2,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 2,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+ok
+test_filtered_baseline_must_have_zero_bottle_validation_support (test_plate_wrapper.PlateWrapperTests.test_filtered_baseline_must_have_zero_bottle_validation_support) ... ok
+test_lr_branch_writes_new_provenance_and_retains_verified_best (test_plate_wrapper.PlateWrapperTests.test_lr_branch_writes_new_provenance_and_retains_verified_best) ... ok
+test_lr_comparison_keeps_optimizer_state_and_source_unchanged (test_plate_wrapper.PlateWrapperTests.test_lr_comparison_keeps_optimizer_state_and_source_unchanged) ... ok
+test_quality_hold_blocks_verification_of_a_known_bad_dataset (test_plate_wrapper.PlateWrapperTests.test_quality_hold_blocks_verification_of_a_known_bad_dataset) ... Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+ok
+test_rebaseline_report_cannot_mix_datasets_or_changed_weights (test_plate_wrapper.PlateWrapperTests.test_rebaseline_report_cannot_mix_datasets_or_changed_weights) ... ok
+test_resume_cannot_silently_ignore_requested_lr_change (test_plate_wrapper.PlateWrapperTests.test_resume_cannot_silently_ignore_requested_lr_change) ... usage: plate_wrapper.py [-h] [--source SOURCE] [--data DATA] [--model MODEL]
+                        [--review-files [REVIEW_FILES ...]] [--rebaseline]
+                        [--epochs EPOCHS] [--target TARGET]
+                        [--minutes MINUTES] [--resume]
+                        [--continue-from CONTINUE_FROM] [--lr-scale LR_SCALE]
+                        [--weights WEIGHTS]
+                        {build,verify,baseline,train,evaluate}
+plate_wrapper.py: error: Changing learning rates requires --continue-from and a new --model directory
+ok
+test_training_review_cannot_change_frozen_validation_labels (test_plate_wrapper.PlateWrapperTests.test_training_review_cannot_change_frozen_validation_labels) ... ok
+test_two_class_audit_still_rejects_scene_leakage_and_unverified_negatives (test_plate_wrapper.PlateWrapperTests.test_two_class_audit_still_rejects_scene_leakage_and_unverified_negatives) ... ok
+test_unresolved_annotations_require_hash_bound_review (test_plate_wrapper.PlateWrapperTests.test_unresolved_annotations_require_hash_bound_review) ... ok
+test_verify_rejects_removed_target_box_even_with_rehashed_manifest (test_plate_wrapper.PlateWrapperTests.test_verify_rejects_removed_target_box_even_with_rehashed_manifest) ... Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+ok
+test_warm_start_cannot_have_trained_on_new_validation_images (test_plate_wrapper.PlateWrapperTests.test_warm_start_cannot_have_trained_on_new_validation_images) ... ok
+test_old_class_ids_are_read_using_current_ids (test_prepare.LabelMigrationTests.test_old_class_ids_are_read_using_current_ids) ... ok
+test_plate_box_and_incomplete_flag (test_prepare.LvisTests.test_plate_box_and_incomplete_flag) ... ok
+test_documented_help_works_without_raw_data (test_prepare.PrepareTests.test_documented_help_works_without_raw_data) ... ok
+test_polygon_converts_to_valid_detection_box (test_prepare.PrepareTests.test_polygon_converts_to_valid_detection_box) ... ok
+test_rejects_invalid_geometry_and_nonfinite_coordinates (test_prepare.PrepareTests.test_rejects_invalid_geometry_and_nonfinite_coordinates) ... ok
+test_source_key_is_independent_of_folder_name_and_uses_flat_pairs (test_prepare.PrepareTests.test_source_key_is_independent_of_folder_name_and_uses_flat_pairs) ... ok
+test_unknown_class_reports_label_location (test_prepare.PrepareTests.test_unknown_class_reports_label_location) ... ok
+test_all_bare_yolo11_names_load_and_download_inside_weights (test_train.TrainingControlsTests.test_all_bare_yolo11_names_load_and_download_inside_weights) ... ok
+test_build_options_with_prepared_data_fail_before_loading_model (test_train.TrainingControlsTests.test_build_options_with_prepared_data_fail_before_loading_model) ... ok
+test_checkpoint_class_names_and_ids_are_checked_before_validation (test_train.TrainingControlsTests.test_checkpoint_class_names_and_ids_are_checked_before_validation) ... ok
+test_coverage_aware_training_requires_no_mosaic_and_passes_custom_trainer (test_train.TrainingControlsTests.test_coverage_aware_training_requires_no_mosaic_and_passes_custom_trainer) ... ok
+test_coverage_mask_refuses_mixed_source_training_or_evaluation (test_train.TrainingControlsTests.test_coverage_mask_refuses_mixed_source_training_or_evaluation) ... ok
+test_default_training_behavior_is_preserved (test_train.TrainingControlsTests.test_default_training_behavior_is_preserved) ... ok
+test_evaluation_flags_reach_validator_and_report_effective_settings (test_train.TrainingControlsTests.test_evaluation_flags_reach_validator_and_report_effective_settings) ... ok
+test_fine_tune_can_skip_initial_warmup (test_train.TrainingControlsTests.test_fine_tune_can_skip_initial_warmup) ... ok
+test_invalid_and_nonfinite_options_fail_before_loading_a_model (test_train.TrainingControlsTests.test_invalid_and_nonfinite_options_fail_before_loading_a_model) ... ok
+test_invalid_class_weight_and_freeze_rejected (test_train.TrainingControlsTests.test_invalid_class_weight_and_freeze_rejected) ... ok
+test_legacy_validator_counts_are_used_when_metrics_lack_support (test_train.TrainingControlsTests.test_legacy_validator_counts_are_used_when_metrics_lack_support) ... ok
+test_manual_lr_requires_a_manual_optimizer (test_train.TrainingControlsTests.test_manual_lr_requires_a_manual_optimizer) ... ok
+test_omitted_evaluation_imgsz_uses_checkpoint_size_and_name_is_explicit (test_train.TrainingControlsTests.test_omitted_evaluation_imgsz_uses_checkpoint_size_and_name_is_explicit) ... ok
+test_report_aligns_metrics_and_does_not_invent_ap_for_unsupported_classes (test_train.TrainingControlsTests.test_report_aligns_metrics_and_does_not_invent_ap_for_unsupported_classes) ... ok
+test_reweighting_and_freeze_options_are_opt_in (test_train.TrainingControlsTests.test_reweighting_and_freeze_options_are_opt_in) ... ok
+test_training_controls_and_matching_final_evaluation_are_forwarded (test_train.TrainingControlsTests.test_training_controls_and_matching_final_evaluation_are_forwarded) ... ok
+test_training_requires_pinned_ultralytics_version_for_comparability (test_train.TrainingControlsTests.test_training_requires_pinned_ultralytics_version_for_comparability) ... ok
+test_validator_refuses_corrupt_or_misaligned_metrics (test_train.TrainingControlsTests.test_validator_refuses_corrupt_or_misaligned_metrics) ... ok
+test_audited_candidate_pairs_stay_in_one_split_in_an_alternate_output (test_train.TrainingPipelineTests.test_audited_candidate_pairs_stay_in_one_split_in_an_alternate_output) ... ok
+test_build_does_not_delete_output_referenced_by_a_source_label_symlink (test_train.TrainingPipelineTests.test_build_does_not_delete_output_referenced_by_a_source_label_symlink) ... ok
+test_build_does_not_delete_output_referenced_by_a_source_symlink (test_train.TrainingPipelineTests.test_build_does_not_delete_output_referenced_by_a_source_symlink) ... ok
+test_build_refuses_originals_and_unrelated_existing_output_directories (test_train.TrainingPipelineTests.test_build_refuses_originals_and_unrelated_existing_output_directories) ... ok
+test_deterministic_grouped_split (test_train.TrainingPipelineTests.test_deterministic_grouped_split) ... ok
+test_exact_duplicate_cross_source_cannot_enter_validation (test_train.TrainingPipelineTests.test_exact_duplicate_cross_source_cannot_enter_validation) ... ok
+test_factor_one_and_invalid_factor (test_train.TrainingPipelineTests.test_factor_one_and_invalid_factor) ... ok
+test_invalid_geometry_fails_before_training (test_train.TrainingPipelineTests.test_invalid_geometry_fails_before_training) ... ok
+test_malformed_group_audit_fails_before_replacing_generated_output (test_train.TrainingPipelineTests.test_malformed_group_audit_fails_before_replacing_generated_output) ... ok
+test_missing_class_warnings_are_visible_after_build (test_train.TrainingPipelineTests.test_missing_class_warnings_are_visible_after_build) ... ok
+test_orphan_label_and_missing_image_fail (test_train.TrainingPipelineTests.test_orphan_label_and_missing_image_fail) ... ok
+test_ratio_applies_to_all_sources_without_leaking_train_only_photos (test_train.TrainingPipelineTests.test_ratio_applies_to_all_sources_without_leaking_train_only_photos) ... ok
+test_roundoff_correction_does_not_edit_source (test_train.TrainingPipelineTests.test_roundoff_correction_does_not_edit_source) ... ok
+test_source_labels_are_converted_only_in_generated_copy (test_train.TrainingPipelineTests.test_source_labels_are_converted_only_in_generated_copy) ... Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp5zo992g4/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmphg4kvpoy/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpah_jjnfb/model/runs/comparison/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpgq3_xfty/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpslwqe4hd/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp539o8aez/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp539o8aez/model/runs/chosen/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpskp5e0f6/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpo4cdai1h/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpf_1jwy2h/model/runs/fit_validation/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+WARNING: explicitly using unpinned Ultralytics 8.4.80 (not a controlled or reproducible benchmark)
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmprft5nuz0/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Conservatively grouped 1 audited candidate pairs; skipped 1 out-of-corpus pairs. Candidate pairs do not prove duplicates.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+46 originals: 37 train, 9 val, 37 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+60 originals: 48 train, 12 val, 48 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+46 originals: 37 train, 9 val, 37 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+46 originals: 37 train, 9 val, 37 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: ok
+test_ten_views_per_training_original_and_untouched_validation (test_train.TrainingPipelineTests.test_ten_views_per_training_original_and_untouched_validation) ... ok
+test_tracked_near_duplicate_audit_is_used_by_default (test_train.TrainingPipelineTests.test_tracked_near_duplicate_audit_is_used_by_default) ... ok
+test_verified_missing_target_repairs_keep_legal_boxes (test_train.VerifiedAnnotationTests.test_verified_missing_target_repairs_keep_legal_boxes) ... ok
+test_balance_caps_repeated_capture_without_removing_validation (test_utensil_packet.SpecialistTests.test_balance_caps_repeated_capture_without_removing_validation) ... ok
+test_composite_boxes_match_rendered_object_and_reject_unsafe_parents (test_utensil_packet.SpecialistTests.test_composite_boxes_match_rendered_object_and_reject_unsafe_parents) ... ok
+test_dataset_configuration_and_membership_are_bound (test_utensil_packet.SpecialistTests.test_dataset_configuration_and_membership_are_bound) ... ok
+test_projection_preserves_decoded_boxes_and_target_scores (test_utensil_packet.SpecialistTests.test_projection_preserves_decoded_boxes_and_target_scores) ... plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 360 training views (10x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Conservatively grouped 1 audited candidate pairs; skipped 0 out-of-corpus pairs. Candidate pairs do not prove duplicates.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Overriding model.yaml nc=80 with nc=11
+ok
+test_projection_requires_both_training_reviews_and_keeps_all_validation (test_utensil_packet.SpecialistTests.test_projection_requires_both_training_reviews_and_keeps_all_validation) ... ok
+test_training_correction_rejects_validation_and_hash_mismatch (test_utensil_packet.SpecialistTests.test_training_correction_rejects_validation_and_hash_mismatch) ... ok
+test_training_coverage_cannot_cross_into_validation (test_utensil_packet.SpecialistTests.test_training_coverage_cannot_cross_into_validation) ... ok
+test_bad_review_hash_and_overwrite_are_rejected (test_utensil_recovery.RecoveryTests.test_bad_review_hash_and_overwrite_are_rejected) ... ok
+test_byte_duplicates_follow_validation_and_are_not_deleted (test_utensil_recovery.RecoveryTests.test_byte_duplicates_follow_validation_and_are_not_deleted) ... ok
+test_checkpoint_selection_tracks_utensil_and_retains_resume_on_later_decline (test_utensil_recovery.RecoveryTests.test_checkpoint_selection_tracks_utensil_and_retains_resume_on_later_decline) ... Recovery AP50: {'utensil': 0.8, 'napkin': 0.3}
+Recovery AP50: {'utensil': 0.7, 'napkin': 0.9}
+ok
+test_expansion_keeps_old_holdout_and_rejects_policy_drift (test_utensil_recovery.RecoveryTests.test_expansion_keeps_old_holdout_and_rejects_policy_drift) ... ok
+test_external_capture_cannot_move_an_old_training_photo_to_validation (test_utensil_recovery.RecoveryTests.test_external_capture_cannot_move_an_old_training_photo_to_validation) ... ok
+test_external_import_rejects_copy_of_old_capture_before_repair (test_utensil_recovery.RecoveryTests.test_external_import_rejects_copy_of_old_capture_before_repair) ... ok
+test_external_packets_bind_pixels_review_and_capture_split (test_utensil_recovery.RecoveryTests.test_external_packets_bind_pixels_review_and_capture_split) ... {
+  "image_counts": {
+    "train": 3,
+    "val": 4
+  },
+  "counts": {
+    "train": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 1,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    },
+    "val": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 2,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    }
+  },
+  "fingerprint": "ad76c1faf4ee5c14dc8b9a13b5c32a64e4b2053770d06bcafe8e5913488af003",
+  "interpretation": "Development validation; compare AP only with identical validation images, labels and inference settings. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Limited: 1 annotated validation packet(s); small support does not establish packet accuracy."
+}
+Integrity passed: original source files preserved; reviewed target corrections reproduced; no recorded capture/original/hash/pixel split overlap.
+ok
+test_external_training_packet_can_preserve_reviewed_eating_cutlery (test_utensil_recovery.RecoveryTests.test_external_training_packet_can_preserve_reviewed_eating_cutlery) ... ok
+test_full_schedule_disables_native_early_stopping_without_changing_loader (test_utensil_recovery.RecoveryTests.test_full_schedule_disables_native_early_stopping_without_changing_loader) ... ok
+test_full_schedule_does_not_stop_on_a_provisional_target_score (test_utensil_recovery.RecoveryTests.test_full_schedule_does_not_stop_on_a_provisional_target_score) ... Recovery AP50: {'utensil': 0.9, 'condiment_packet': 0.9}
+ok
+test_hash_bound_utensil_addition_preserves_other_classes_and_source (test_utensil_recovery.RecoveryTests.test_hash_bound_utensil_addition_preserves_other_classes_and_source) ... ok
+test_independent_packet_validation_does_not_split_original_capture_batch (test_utensil_recovery.RecoveryTests.test_independent_packet_validation_does_not_split_original_capture_batch) ... ok
+test_multi_target_selection_uses_the_weaker_class (test_utensil_recovery.RecoveryTests.test_multi_target_selection_uses_the_weaker_class) ... Recovery AP50: {'utensil': 0.8, 'condiment_packet': 0.1}
+Recovery AP50: {'utensil': 0.7, 'condiment_packet': 0.6}
+Recovery AP50: {'utensil': 0.9, 'condiment_packet': 0.2}
+ok
+test_nominal_batch_ablation_preserves_learning_state_and_parent (test_utensil_recovery.RecoveryTests.test_nominal_batch_ablation_preserves_learning_state_and_parent) ... ok
+test_offloaded_source_files_fail_before_a_blocking_read (test_utensil_recovery.RecoveryTests.test_offloaded_source_files_fail_before_a_blocking_read) ... ok
+test_original_prefix_is_not_a_split_rule_and_video_frames_stay_together (test_utensil_recovery.RecoveryTests.test_original_prefix_is_not_a_split_rule_and_video_frames_stay_together) ... ok
+test_packet_additions_require_the_same_hash_bound_review_as_utensils (test_utensil_recovery.RecoveryTests.test_packet_additions_require_the_same_hash_bound_review_as_utensils) ... ok
+test_photo_coverage_requires_train_membership_hashes_and_verified_absence (test_utensil_recovery.RecoveryTests.test_photo_coverage_requires_train_membership_hashes_and_verified_absence) ... ok
+test_rebenchmark_resets_stopping_comparison_but_retains_learning_state (test_utensil_recovery.RecoveryTests.test_rebenchmark_resets_stopping_comparison_but_retains_learning_state) ... ok
+test_rebenchmark_selection_uses_fresh_score_instead_of_inherited_ap (test_utensil_recovery.RecoveryTests.test_rebenchmark_selection_uses_fresh_score_instead_of_inherited_ap) ... {
+  "image_counts": {
+    "train": 3,
+    "val": 3
+  },
+  "counts": {
+    "train": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 1,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    },
+    "val": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 2,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 0,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    }
+  },
+  "fingerprint": "7c44dee9157f73be1a886140144e1007e39a7012e47dc3ca478c122f3803d22f",
+  "interpretation": "Development validation; compare AP only with identical validation images, labels and inference settings. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Unsupported: no packet validation annotations; the 44 original packet photos stay together as one background batch."
+}
+Integrity passed: original source files preserved; reviewed target corrections reproduced; no recorded capture/original/hash/pixel split overlap.
+Training views verified: 3 images; all 3 eligible target-positive images retained; 0 held photos excluded; validation unchanged.
+Prepared training revision: {'changed_validation_images': 1, 'added_objects': {'utensil': 1}, 'validation_unchanged': False}
+ok
+test_rehashed_label_deletion_still_fails_source_projection (test_utensil_recovery.RecoveryTests.test_rehashed_label_deletion_still_fails_source_projection) ... ok
+test_related_sessions_and_entire_tartan_source_are_held_out (test_utensil_recovery.RecoveryTests.test_related_sessions_and_entire_tartan_source_are_held_out) ... {
+  "image_counts": {
+    "train": 3,
+    "val": 3
+  },
+  "counts": {
+    "train": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 1,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    },
+    "val": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 2,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 0,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    }
+  },
+  "fingerprint": "7c44dee9157f73be1a886140144e1007e39a7012e47dc3ca478c122f3803d22f",
+  "interpretation": "Development validation; compare AP only with identical validation images, labels and inference settings. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Unsupported: no packet validation annotations; the 44 original packet photos stay together as one background batch."
+}
+Integrity passed: original source files preserved; reviewed target corrections reproduced; no recorded capture/original/hash/pixel split overlap.
+ok
+test_removing_last_target_requires_explicit_verified_absence (test_utensil_recovery.RecoveryTests.test_removing_last_target_requires_explicit_verified_absence) ... ok
+test_renamed_existing_photos_cannot_inflate_expanded_support (test_utensil_recovery.RecoveryTests.test_renamed_existing_photos_cannot_inflate_expanded_support) ... ok
+test_resume_options_pass_coverage_factory_before_saved_arguments_load (test_utensil_recovery.RecoveryTests.test_resume_options_pass_coverage_factory_before_saved_arguments_load) ... ok
+test_reviewed_packet_absence_adds_negative_gradient_only_for_that_photo (test_utensil_recovery.RecoveryTests.test_reviewed_packet_absence_adds_negative_gradient_only_for_that_photo) ... ok
+test_revision_checkpoint_preserves_optimizer_and_eighty_epoch_schedule (test_utensil_recovery.RecoveryTests.test_revision_checkpoint_preserves_optimizer_and_eighty_epoch_schedule) ... ok
+test_training_correction_can_replace_a_wrong_target_without_changing_source (test_utensil_recovery.RecoveryTests.test_training_correction_can_replace_a_wrong_target_without_changing_source) ... ok
+test_training_corrections_reject_non_targets_unknown_rows_and_heldout_images (test_utensil_recovery.RecoveryTests.test_training_corrections_reject_non_targets_unknown_rows_and_heldout_images) ... ok
+test_training_hold_preserves_original_and_is_not_a_negative (test_utensil_recovery.RecoveryTests.test_training_hold_preserves_original_and_is_not_a_negative) ... Training views verified: 3 images; all 3 eligible target-positive images retained; 1 held photos excluded; validation unchanged.
+ok
+test_training_list_rejects_held_out_paths_and_missing_target_images (test_utensil_recovery.RecoveryTests.test_training_list_rejects_held_out_paths_and_missing_target_images) ... Training views verified: 3 images; all 3 eligible target-positive images retained; 0 held photos excluded; validation unchanged.
+ok
+test_training_revision_rejects_validation_changes_and_label_deletions (test_utensil_recovery.RecoveryTests.test_training_revision_rejects_validation_changes_and_label_deletions) ... ok
+test_validation_batch_override_preserves_training_loader_and_coverage_factory (test_utensil_recovery.RecoveryTests.test_validation_batch_override_preserves_training_loader_and_coverage_factory) ... ok
+test_validation_revision_preserves_every_training_label_and_split (test_utensil_recovery.RecoveryTests.test_validation_revision_preserves_every_training_label_and_split) ... ok
+test_codex_review_preset_applies_both_approved_sources (test_v2.V2WorkflowTests.test_codex_review_preset_applies_both_approved_sources) ... ok
+test_codex_review_preset_rejects_ambiguous_explicit_files (test_v2.V2WorkflowTests.test_codex_review_preset_rejects_ambiguous_explicit_files) ... ok
+test_exact_nhs_photo_repeated_rejected (test_v2.V2WorkflowTests.test_exact_nhs_photo_repeated_rejected) ... ok
+test_full_comparison_disables_early_stopping (test_v2.V2WorkflowTests.test_full_comparison_disables_early_stopping) ... Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 1 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp9ip5hnvy/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp9ip5hnvy/training-v2/data.yaml
+Provisional: True
+Codex-reviewed food additions and 1 reviewed replacement annotation files applied to V2 copies
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bottle', 'bowl'], 'val': ['paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1yqbqbzw/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1yqbqbzw/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1yqbqbzw/training-v2/data.yaml --model yolo11n.pt --name v2-control-n-e100 --eval-name v2-control-n-e100-evaluation --epochs 100 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+ok
+test_full_resolution_unchanged_labels_count_but_flags_do_not (test_v2.V2WorkflowTests.test_full_resolution_unchanged_labels_count_but_flags_do_not) ... ok
+test_nhs_session_leakage_rejected (test_v2.V2WorkflowTests.test_nhs_session_leakage_rejected) ... ok
+test_partial_label_trial_rejects_unknown_training_source (test_v2.V2WorkflowTests.test_partial_label_trial_rejects_unknown_training_source) ... ok
+test_partial_label_trials_match_except_loss_and_disable_mosaic (test_v2.V2WorkflowTests.test_partial_label_trials_match_except_loss_and_disable_mosaic) ... V2 image-level review queue: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp6vcwbnla/review_log_queue.csv
+Review counts: {'full_image_verified': 1, 'food_only_verified': 0, 'not_verified': 1} total 2
+V2 image-level review queue: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp6vcwbnla/superseded_review.csv
+Review counts: {'full_image_verified': 1, 'food_only_verified': 0, 'not_verified': 1} total 2
+Frozen split: 2 training originals, 2 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmprxszfekk/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmprxszfekk/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp09w4u9bf/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp09w4u9bf/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp09w4u9bf/training-v2/data.yaml --model yolo11n.pt --name v2-no-mosaic-n-e10 --eval-name v2-no-mosaic-n-e10-evaluation --epochs 10 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0 --close-mosaic 10 --workers 0 --patience 0
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp09w4u9bf/training-v2/data.yaml --model yolo11n.pt --name v2-coverage-n-e10 --eval-name v2-coverage-n-e10-evaluation --epochs 10 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0 --close-mosaic 10 --workers 0 --patience 0 --coverage-policy /Users/Charles1/Desktop/yolo-cafeteria-research/data/audits/model_revisions_2026-10-12/source_coverage.json
+ok
+test_provisional_training_gated_and_hashes_checked (test_v2.V2WorkflowTests.test_provisional_training_gated_and_hashes_checked) ... Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbpzj7vpd/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbpzj7vpd/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbpzj7vpd/training-v2/data.yaml --model yolo11n.pt --name v2-control-n-e2 --eval-name v2-control-n-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+ok
+test_provisional_uses_original_split_and_keeps_source_intact (test_v2.V2WorkflowTests.test_provisional_uses_original_split_and_keeps_source_intact) ... ok
+test_ranking_rejects_different_training_schedules (test_v2.V2WorkflowTests.test_ranking_rejects_different_training_schedules) ... ok
+test_repair_cannot_empty_validation (test_v2.V2WorkflowTests.test_repair_cannot_empty_validation) ... ok
+test_review_queue_does_not_confuse_food_only_with_full_review (test_v2.V2WorkflowTests.test_review_queue_does_not_confuse_food_only_with_full_review) ... ok
+test_reviewed_public_validation_is_not_reported_as_nhs (test_v2.V2WorkflowTests.test_reviewed_public_validation_is_not_reported_as_nhs) ... ok
+test_roboflow_cross_split_group_is_repaired_only_in_v2 (test_v2.V2WorkflowTests.test_roboflow_cross_split_group_is_repaired_only_in_v2) ... ok
+test_strict_moves_legacy_validation_into_train_copies (test_v2.V2WorkflowTests.test_strict_moves_legacy_validation_into_train_copies) ... ok
+test_strict_nhs_validation_does_not_require_test_set (test_v2.V2WorkflowTests.test_strict_nhs_validation_does_not_require_test_set) ... ok
+test_strict_requires_complete_class_coverage (test_v2.V2WorkflowTests.test_strict_requires_complete_class_coverage) ... ok
+test_strict_test_when_supplied_needs_class_coverage (test_v2.V2WorkflowTests.test_strict_test_when_supplied_needs_class_coverage) ... ok
+test_three_class_append_preserves_other_labels_and_v1 (test_v2.V2WorkflowTests.test_three_class_append_preserves_other_labels_and_v1) ... ok
+test_three_class_append_rejects_other_classes_and_unreviewed (test_v2.V2WorkflowTests.test_three_class_append_rejects_other_classes_and_unreviewed) ... ok
+test_transitive_duplicate_hash_repair_moves_related_images (test_v2.V2WorkflowTests.test_transitive_duplicate_hash_repair_moves_related_images) ... ok
+test_trial_commands_differ_only_in_intended_options (test_v2.V2WorkflowTests.test_trial_commands_differ_only_in_intended_options) ... Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpahih0fje/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpahih0fje/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+V2 image-level review queue: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmppc9_m44p/generated_review_queue.csv
+Review counts: {'full_image_verified': 1, 'food_only_verified': 1, 'not_verified': 0} total 2
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwfggn93k/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwfggn93k/training-v2/data.yaml
+Provisional: False
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': [], 'val': [], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpz5afw77z/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpz5afw77z/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp2ed38dog/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp2ed38dog/training-v2/data.yaml
+Provisional: False
+Independent test set: yes
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': [], 'val': [], 'test': []}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpl0n47ltu/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpl0n47ltu/training-v2/data.yaml
+Provisional: False
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': [], 'val': [], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpnf_p84gv/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpnf_p84gv/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 3 validation originals, 3 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpsd_9dwi5/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpsd_9dwi5/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 2 validation copies into V2 train
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwf4vdqx5/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwf4vdqx5/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwf4vdqx5/training-v2/data.yaml --model yolo11n.pt --name v2-control-n-e2 --eval-name v2-control-n-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwf4vdqx5/training-v2/data.yaml --model yolo11n.pt --name v2-weighted-n-e2 --eval-name v2-weighted-n-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0 --cls-pw 0.25
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpwf4vdqx5/training-v2/data.yaml --model yolo11s.pt --name v2-control-s-e2 --eval-name v2-control-s-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+ok
+test_unverified_candidate_train_only_and_explicit (test_v2.V2WorkflowTests.test_unverified_candidate_train_only_and_explicit) ... ok
+test_unverified_candidates_refused_in_strict_or_validation (test_v2.V2WorkflowTests.test_unverified_candidates_refused_in_strict_or_validation) ... ok
+test_unverified_override_and_stale_sha_rejected (test_v2.V2WorkflowTests.test_unverified_override_and_stale_sha_rejected) ... ok
+test_verified_override_changes_copy_only (test_v2.V2WorkflowTests.test_verified_override_changes_copy_only) ... ok
+
+======================================================================
+FAIL: test_weak_subset_selects_all_original_and_crop_views_together (test_experiment.FrozenExperimentTests.test_weak_subset_selects_all_original_and_crop_views_together)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_experiment.py", line 272, in test_weak_subset_selects_all_original_and_crop_views_together
+    self.assertTrue(all(p.parent == focus/"images/train" for p in files))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 222 tests in 7.232s
+
+FAILED (failures=1)
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp7fmhv_su/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp7fmhv_su/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': [], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpv8c0ebwr/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpv8c0ebwr/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bottle', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}

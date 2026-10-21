@@ -1,0 +1,28 @@
+{
+  "weights": "model/utensil-packet-focus/context-v4/trained-original-bn.pt",
+  "weights_sha": "23f48da6719273ed7c4c348e2c02fcc93d5512019477f4a0f09f7deda6ea460f",
+  "split": "val",
+  "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8",
+  "independent_test": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.47497758750735586,
+      "recall": 0.4358108108108108,
+      "AP50": 0.4326585183104685,
+      "AP50_95": 0.23792213854572913
+    },
+    "condiment_packet": {
+      "precision": 0.016608091874892157,
+      "recall": 0.42857142857142855,
+      "AP50": 0.015009815911495162,
+      "AP50_95": 0.008292931009303664
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.245792839691124,
+    "metrics/recall(B)": 0.4321911196911197,
+    "metrics/mAP50(B)": 0.2238341671109818,
+    "metrics/mAP50-95(B)": 0.12310753477751642,
+    "fitness": 0.12310753477751642
+  }
+}

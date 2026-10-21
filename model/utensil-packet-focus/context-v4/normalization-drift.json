@@ -1,0 +1,650 @@
+[
+  {
+    "layer": "model.0.bn.running_var",
+    "relative_change": 0.16881684374067138
+  },
+  {
+    "layer": "model.1.bn.running_var",
+    "relative_change": 0.09900512934283197
+  },
+  {
+    "layer": "model.10.m.0.attn.proj.bn.running_var",
+    "relative_change": 0.09039809976765714
+  },
+  {
+    "layer": "model.10.m.0.ffn.0.bn.running_var",
+    "relative_change": 0.090224781578523
+  },
+  {
+    "layer": "model.23.cv3.1.1.1.bn.running_var",
+    "relative_change": 0.08895049044987759
+  },
+  {
+    "layer": "model.23.cv3.1.1.0.bn.running_var",
+    "relative_change": 0.08355896661864073
+  },
+  {
+    "layer": "model.2.m.0.cv1.bn.running_var",
+    "relative_change": 0.0824285414558669
+  },
+  {
+    "layer": "model.23.cv3.2.1.1.bn.running_var",
+    "relative_change": 0.0800730429684297
+  },
+  {
+    "layer": "model.23.cv3.2.0.0.bn.running_var",
+    "relative_change": 0.07940952779292691
+  },
+  {
+    "layer": "model.23.cv3.2.0.1.bn.running_var",
+    "relative_change": 0.07795494862911863
+  },
+  {
+    "layer": "model.22.m.0.m.0.cv1.bn.running_mean",
+    "relative_change": 0.07758627327895909
+  },
+  {
+    "layer": "model.10.cv2.bn.running_var",
+    "relative_change": 0.07560888235631079
+  },
+  {
+    "layer": "model.23.cv3.1.0.1.bn.running_var",
+    "relative_change": 0.07017022468499513
+  },
+  {
+    "layer": "model.20.bn.running_mean",
+    "relative_change": 0.06936091802874708
+  },
+  {
+    "layer": "model.10.m.0.attn.qkv.bn.running_var",
+    "relative_change": 0.06746108795232283
+  },
+  {
+    "layer": "model.9.cv2.bn.running_mean",
+    "relative_change": 0.06742963810264525
+  },
+  {
+    "layer": "model.13.cv1.bn.running_var",
+    "relative_change": 0.06676138755250867
+  },
+  {
+    "layer": "model.10.m.0.ffn.1.bn.running_var",
+    "relative_change": 0.06670214257214326
+  },
+  {
+    "layer": "model.8.cv2.bn.running_var",
+    "relative_change": 0.06508748116170314
+  },
+  {
+    "layer": "model.10.cv1.bn.running_var",
+    "relative_change": 0.06491278528544389
+  },
+  {
+    "layer": "model.9.cv2.bn.running_var",
+    "relative_change": 0.06422320825674492
+  },
+  {
+    "layer": "model.6.cv1.bn.running_var",
+    "relative_change": 0.06417300810060442
+  },
+  {
+    "layer": "model.23.cv3.1.0.0.bn.running_var",
+    "relative_change": 0.06374637413166183
+  },
+  {
+    "layer": "model.7.bn.running_var",
+    "relative_change": 0.06262645624085146
+  },
+  {
+    "layer": "model.4.cv1.bn.running_var",
+    "relative_change": 0.06128893976038212
+  },
+  {
+    "layer": "model.22.cv1.bn.running_var",
+    "relative_change": 0.061109020291027806
+  },
+  {
+    "layer": "model.19.cv1.bn.running_var",
+    "relative_change": 0.06052992438164112
+  },
+  {
+    "layer": "model.23.cv2.0.1.bn.running_mean",
+    "relative_change": 0.05996890165636813
+  },
+  {
+    "layer": "model.10.m.0.attn.proj.bn.running_mean",
+    "relative_change": 0.05939765887245948
+  },
+  {
+    "layer": "model.9.cv1.bn.running_var",
+    "relative_change": 0.05877047722537235
+  },
+  {
+    "layer": "model.19.m.0.cv2.bn.running_var",
+    "relative_change": 0.05838607020642763
+  },
+  {
+    "layer": "model.8.cv1.bn.running_var",
+    "relative_change": 0.05765264655653505
+  },
+  {
+    "layer": "model.22.m.0.cv3.bn.running_var",
+    "relative_change": 0.05747633061600836
+  },
+  {
+    "layer": "model.13.m.0.cv1.bn.running_mean",
+    "relative_change": 0.05717907843961637
+  },
+  {
+    "layer": "model.22.cv2.bn.running_var",
+    "relative_change": 0.05657000227982567
+  },
+  {
+    "layer": "model.5.bn.running_var",
+    "relative_change": 0.05653831609845654
+  },
+  {
+    "layer": "model.20.bn.running_var",
+    "relative_change": 0.05620634731438671
+  },
+  {
+    "layer": "model.23.cv2.0.1.bn.running_var",
+    "relative_change": 0.05610405211334391
+  },
+  {
+    "layer": "model.8.m.0.cv3.bn.running_var",
+    "relative_change": 0.05530219999810333
+  },
+  {
+    "layer": "model.5.bn.running_mean",
+    "relative_change": 0.05510425450069392
+  },
+  {
+    "layer": "model.2.m.0.cv1.bn.running_mean",
+    "relative_change": 0.05493725823193726
+  },
+  {
+    "layer": "model.3.bn.running_var",
+    "relative_change": 0.054530402274508845
+  },
+  {
+    "layer": "model.8.m.0.m.1.cv2.bn.running_var",
+    "relative_change": 0.05449290908082985
+  },
+  {
+    "layer": "model.10.m.0.ffn.1.bn.running_mean",
+    "relative_change": 0.053810802979426954
+  },
+  {
+    "layer": "model.23.cv2.1.0.bn.running_mean",
+    "relative_change": 0.053247054570841494
+  },
+  {
+    "layer": "model.23.cv2.2.1.bn.running_var",
+    "relative_change": 0.05296946158653179
+  },
+  {
+    "layer": "model.22.m.0.cv2.bn.running_var",
+    "relative_change": 0.05227483388628905
+  },
+  {
+    "layer": "model.23.cv2.1.0.bn.running_var",
+    "relative_change": 0.052223656096150144
+  },
+  {
+    "layer": "model.17.bn.running_var",
+    "relative_change": 0.051547356956391226
+  },
+  {
+    "layer": "model.23.cv2.2.0.bn.running_var",
+    "relative_change": 0.05080597014702883
+  },
+  {
+    "layer": "model.8.m.0.m.1.cv1.bn.running_var",
+    "relative_change": 0.050660735104668196
+  },
+  {
+    "layer": "model.2.cv2.bn.running_var",
+    "relative_change": 0.050493024450530694
+  },
+  {
+    "layer": "model.22.m.0.m.1.cv2.bn.running_var",
+    "relative_change": 0.05044313812564344
+  },
+  {
+    "layer": "model.19.cv2.bn.running_var",
+    "relative_change": 0.050237000180981956
+  },
+  {
+    "layer": "model.6.m.0.m.0.cv1.bn.running_var",
+    "relative_change": 0.05021733751922525
+  },
+  {
+    "layer": "model.6.m.0.m.1.cv2.bn.running_var",
+    "relative_change": 0.050181245443015485
+  },
+  {
+    "layer": "model.16.m.0.cv2.bn.running_mean",
+    "relative_change": 0.04941196197144782
+  },
+  {
+    "layer": "model.0.bn.running_mean",
+    "relative_change": 0.04919145868074034
+  },
+  {
+    "layer": "model.22.m.0.m.0.cv2.bn.running_mean",
+    "relative_change": 0.04883916201668691
+  },
+  {
+    "layer": "model.22.m.0.m.0.cv1.bn.running_var",
+    "relative_change": 0.04877846498303354
+  },
+  {
+    "layer": "model.22.m.0.m.1.cv2.bn.running_mean",
+    "relative_change": 0.04852716839739204
+  },
+  {
+    "layer": "model.22.m.0.m.0.cv2.bn.running_var",
+    "relative_change": 0.048495387698262185
+  },
+  {
+    "layer": "model.2.cv1.bn.running_var",
+    "relative_change": 0.048222496130297485
+  },
+  {
+    "layer": "model.8.m.0.cv2.bn.running_var",
+    "relative_change": 0.04791089712852329
+  },
+  {
+    "layer": "model.16.cv1.bn.running_var",
+    "relative_change": 0.04756306160870346
+  },
+  {
+    "layer": "model.13.m.0.cv2.bn.running_var",
+    "relative_change": 0.047140442488881155
+  },
+  {
+    "layer": "model.16.cv2.bn.running_var",
+    "relative_change": 0.04707367081955696
+  },
+  {
+    "layer": "model.23.cv3.2.1.0.bn.running_var",
+    "relative_change": 0.047053720734049946
+  },
+  {
+    "layer": "model.4.cv2.bn.running_var",
+    "relative_change": 0.04699727839845279
+  },
+  {
+    "layer": "model.23.cv2.0.0.bn.running_var",
+    "relative_change": 0.046958349218378014
+  },
+  {
+    "layer": "model.8.m.0.m.0.cv1.bn.running_var",
+    "relative_change": 0.04668898908583814
+  },
+  {
+    "layer": "model.23.cv2.2.0.bn.running_mean",
+    "relative_change": 0.04657937994493314
+  },
+  {
+    "layer": "model.13.cv2.bn.running_var",
+    "relative_change": 0.045549844925047586
+  },
+  {
+    "layer": "model.22.m.0.m.1.cv1.bn.running_var",
+    "relative_change": 0.045314820707146534
+  },
+  {
+    "layer": "model.19.m.0.cv2.bn.running_mean",
+    "relative_change": 0.04516950481060006
+  },
+  {
+    "layer": "model.22.cv1.bn.running_mean",
+    "relative_change": 0.04506207473472988
+  },
+  {
+    "layer": "model.2.m.0.cv2.bn.running_var",
+    "relative_change": 0.04483726453593281
+  },
+  {
+    "layer": "model.6.m.0.cv2.bn.running_var",
+    "relative_change": 0.044744952745037515
+  },
+  {
+    "layer": "model.13.m.0.cv1.bn.running_var",
+    "relative_change": 0.04447739573931669
+  },
+  {
+    "layer": "model.6.cv2.bn.running_var",
+    "relative_change": 0.044238127287632725
+  },
+  {
+    "layer": "model.6.m.0.cv1.bn.running_var",
+    "relative_change": 0.04385705364292225
+  },
+  {
+    "layer": "model.23.cv3.0.1.1.bn.running_var",
+    "relative_change": 0.04358273164965469
+  },
+  {
+    "layer": "model.22.m.0.cv1.bn.running_var",
+    "relative_change": 0.04315198100250465
+  },
+  {
+    "layer": "model.8.m.0.cv1.bn.running_var",
+    "relative_change": 0.043114406581221114
+  },
+  {
+    "layer": "model.8.m.0.m.1.cv1.bn.running_mean",
+    "relative_change": 0.04288991626751761
+  },
+  {
+    "layer": "model.13.m.0.cv2.bn.running_mean",
+    "relative_change": 0.042775299059941846
+  },
+  {
+    "layer": "model.7.bn.running_mean",
+    "relative_change": 0.04197813856750099
+  },
+  {
+    "layer": "model.8.m.0.m.0.cv2.bn.running_var",
+    "relative_change": 0.04176818183882991
+  },
+  {
+    "layer": "model.22.m.0.m.1.cv1.bn.running_mean",
+    "relative_change": 0.04169795403013675
+  },
+  {
+    "layer": "model.4.m.0.cv1.bn.running_mean",
+    "relative_change": 0.04143543628557395
+  },
+  {
+    "layer": "model.1.bn.running_mean",
+    "relative_change": 0.04094645603797533
+  },
+  {
+    "layer": "model.6.m.0.cv3.bn.running_var",
+    "relative_change": 0.04052135095276134
+  },
+  {
+    "layer": "model.23.cv3.0.0.0.bn.running_var",
+    "relative_change": 0.04029541218020002
+  },
+  {
+    "layer": "model.6.m.0.m.0.cv1.bn.running_mean",
+    "relative_change": 0.03998480234163011
+  },
+  {
+    "layer": "model.23.cv2.2.1.bn.running_mean",
+    "relative_change": 0.03920496253763445
+  },
+  {
+    "layer": "model.6.m.0.m.1.cv1.bn.running_var",
+    "relative_change": 0.038893845668803356
+  },
+  {
+    "layer": "model.8.m.0.m.0.cv1.bn.running_mean",
+    "relative_change": 0.03870341888281389
+  },
+  {
+    "layer": "model.16.m.0.cv2.bn.running_var",
+    "relative_change": 0.03828875320425728
+  },
+  {
+    "layer": "model.6.m.0.m.0.cv2.bn.running_var",
+    "relative_change": 0.03804628890650709
+  },
+  {
+    "layer": "model.23.cv2.0.0.bn.running_mean",
+    "relative_change": 0.037769970925886805
+  },
+  {
+    "layer": "model.4.m.0.cv2.bn.running_var",
+    "relative_change": 0.03717670684372297
+  },
+  {
+    "layer": "model.19.m.0.cv1.bn.running_var",
+    "relative_change": 0.03693848109794563
+  },
+  {
+    "layer": "model.23.cv3.0.1.0.bn.running_var",
+    "relative_change": 0.03682368977038589
+  },
+  {
+    "layer": "model.17.bn.running_mean",
+    "relative_change": 0.03610379732449601
+  },
+  {
+    "layer": "model.23.cv2.1.1.bn.running_var",
+    "relative_change": 0.03500441973377308
+  },
+  {
+    "layer": "model.6.m.0.m.1.cv1.bn.running_mean",
+    "relative_change": 0.03483540602784172
+  },
+  {
+    "layer": "model.6.m.0.m.1.cv2.bn.running_mean",
+    "relative_change": 0.03468514943649366
+  },
+  {
+    "layer": "model.3.bn.running_mean",
+    "relative_change": 0.03448931107090657
+  },
+  {
+    "layer": "model.19.m.0.cv1.bn.running_mean",
+    "relative_change": 0.03445867489606653
+  },
+  {
+    "layer": "model.23.cv3.0.0.1.bn.running_var",
+    "relative_change": 0.03445547697456551
+  },
+  {
+    "layer": "model.8.m.0.m.1.cv2.bn.running_mean",
+    "relative_change": 0.03425374741922445
+  },
+  {
+    "layer": "model.2.m.0.cv2.bn.running_mean",
+    "relative_change": 0.03399308179771368
+  },
+  {
+    "layer": "model.8.m.0.m.0.cv2.bn.running_mean",
+    "relative_change": 0.033782230680296364
+  },
+  {
+    "layer": "model.10.cv2.bn.running_mean",
+    "relative_change": 0.03363191220917551
+  },
+  {
+    "layer": "model.4.m.0.cv2.bn.running_mean",
+    "relative_change": 0.032645801584490215
+  },
+  {
+    "layer": "model.23.cv2.1.1.bn.running_mean",
+    "relative_change": 0.031816193591471725
+  },
+  {
+    "layer": "model.16.m.0.cv1.bn.running_var",
+    "relative_change": 0.031633714200387054
+  },
+  {
+    "layer": "model.23.cv3.2.0.0.bn.running_mean",
+    "relative_change": 0.031441618584072566
+  },
+  {
+    "layer": "model.10.m.0.ffn.0.bn.running_mean",
+    "relative_change": 0.029958157984510486
+  },
+  {
+    "layer": "model.22.m.0.cv2.bn.running_mean",
+    "relative_change": 0.02944628227226884
+  },
+  {
+    "layer": "model.13.cv1.bn.running_mean",
+    "relative_change": 0.02860745488135498
+  },
+  {
+    "layer": "model.23.cv3.1.0.1.bn.running_mean",
+    "relative_change": 0.027450814185921723
+  },
+  {
+    "layer": "model.6.m.0.m.0.cv2.bn.running_mean",
+    "relative_change": 0.02742086017162144
+  },
+  {
+    "layer": "model.23.cv3.1.0.0.bn.running_mean",
+    "relative_change": 0.027210414523966733
+  },
+  {
+    "layer": "model.19.cv2.bn.running_mean",
+    "relative_change": 0.026863934496430167
+  },
+  {
+    "layer": "model.22.cv2.bn.running_mean",
+    "relative_change": 0.025224919278515757
+  },
+  {
+    "layer": "model.8.m.0.cv2.bn.running_mean",
+    "relative_change": 0.024198153176380854
+  },
+  {
+    "layer": "model.22.m.0.cv1.bn.running_mean",
+    "relative_change": 0.02413328281534122
+  },
+  {
+    "layer": "model.2.cv1.bn.running_mean",
+    "relative_change": 0.024089807191995993
+  },
+  {
+    "layer": "model.6.m.0.cv2.bn.running_mean",
+    "relative_change": 0.023380985280323827
+  },
+  {
+    "layer": "model.16.cv1.bn.running_mean",
+    "relative_change": 0.02316688517605935
+  },
+  {
+    "layer": "model.8.cv2.bn.running_mean",
+    "relative_change": 0.02276708732489125
+  },
+  {
+    "layer": "model.4.m.0.cv1.bn.running_var",
+    "relative_change": 0.02252728711505237
+  },
+  {
+    "layer": "model.19.cv1.bn.running_mean",
+    "relative_change": 0.021084540554970062
+  },
+  {
+    "layer": "model.16.m.0.cv1.bn.running_mean",
+    "relative_change": 0.020411524821774475
+  },
+  {
+    "layer": "model.23.cv3.2.0.1.bn.running_mean",
+    "relative_change": 0.020387340510769035
+  },
+  {
+    "layer": "model.23.cv3.2.1.1.bn.running_mean",
+    "relative_change": 0.020311445952450703
+  },
+  {
+    "layer": "model.10.cv1.bn.running_mean",
+    "relative_change": 0.019879781520022538
+  },
+  {
+    "layer": "model.22.m.0.cv3.bn.running_mean",
+    "relative_change": 0.01981578597635217
+  },
+  {
+    "layer": "model.23.cv3.0.0.1.bn.running_mean",
+    "relative_change": 0.019521706594968023
+  },
+  {
+    "layer": "model.8.m.0.cv1.bn.running_mean",
+    "relative_change": 0.018834158583418796
+  },
+  {
+    "layer": "model.4.cv2.bn.running_mean",
+    "relative_change": 0.017769689587132438
+  },
+  {
+    "layer": "model.10.m.0.attn.qkv.bn.running_mean",
+    "relative_change": 0.017374065161914257
+  },
+  {
+    "layer": "model.13.cv2.bn.running_mean",
+    "relative_change": 0.016248981068745363
+  },
+  {
+    "layer": "model.16.cv2.bn.running_mean",
+    "relative_change": 0.016131373822723744
+  },
+  {
+    "layer": "model.23.cv3.0.0.0.bn.running_mean",
+    "relative_change": 0.01596323963466998
+  },
+  {
+    "layer": "model.6.m.0.cv1.bn.running_mean",
+    "relative_change": 0.015489393636346193
+  },
+  {
+    "layer": "model.6.cv2.bn.running_mean",
+    "relative_change": 0.015333858922854226
+  },
+  {
+    "layer": "model.23.cv3.1.1.1.bn.running_mean",
+    "relative_change": 0.015231815733492013
+  },
+  {
+    "layer": "model.23.cv3.1.1.0.bn.running_mean",
+    "relative_change": 0.01502496785959585
+  },
+  {
+    "layer": "model.23.cv3.0.1.0.bn.running_mean",
+    "relative_change": 0.014223499610593281
+  },
+  {
+    "layer": "model.8.cv1.bn.running_mean",
+    "relative_change": 0.013965365712720546
+  },
+  {
+    "layer": "model.6.cv1.bn.running_mean",
+    "relative_change": 0.013709958117091527
+  },
+  {
+    "layer": "model.10.m.0.attn.pe.bn.running_var",
+    "relative_change": 0.012848011465488807
+  },
+  {
+    "layer": "model.10.m.0.attn.pe.bn.running_mean",
+    "relative_change": 0.012775576797102046
+  },
+  {
+    "layer": "model.4.cv1.bn.running_mean",
+    "relative_change": 0.012469076424527666
+  },
+  {
+    "layer": "model.9.cv1.bn.running_mean",
+    "relative_change": 0.012158877425233547
+  },
+  {
+    "layer": "model.2.cv2.bn.running_mean",
+    "relative_change": 0.012137847105813313
+  },
+  {
+    "layer": "model.23.cv3.2.1.0.bn.running_mean",
+    "relative_change": 0.0116614703702462
+  },
+  {
+    "layer": "model.8.m.0.cv3.bn.running_mean",
+    "relative_change": 0.01126188256820611
+  },
+  {
+    "layer": "model.23.cv3.0.1.1.bn.running_mean",
+    "relative_change": 0.010699719438596
+  },
+  {
+    "layer": "model.6.m.0.cv3.bn.running_mean",
+    "relative_change": 0.00872852292686109
+  }
+]

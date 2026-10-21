@@ -1,0 +1,62 @@
+{
+  "train": {
+    "utensil": {
+      "positive_images_by_source": {
+        "school_lunch": 46,
+        "utensil": 36,
+        "waste_detection_v3": 38,
+        "packet_extra": 1
+      },
+      "boxes_by_source": {
+        "school_lunch": 46,
+        "utensil": 101,
+        "waste_detection_v3": 38,
+        "packet_extra": 2
+      },
+      "boxes_under_one_percent_image_area": 1,
+      "total_boxes": 187
+    },
+    "condiment_packet": {
+      "positive_images_by_source": {
+        "condiments": 44,
+        "packet_extra": 28
+      },
+      "boxes_by_source": {
+        "condiments": 44,
+        "packet_extra": 30
+      },
+      "boxes_under_one_percent_image_area": 0,
+      "total_boxes": 74
+    }
+  },
+  "val": {
+    "utensil": {
+      "positive_images_by_source": {
+        "school_lunch": 93,
+        "tartanhacks": 27,
+        "utensil": 92,
+        "plate": 18
+      },
+      "boxes_by_source": {
+        "school_lunch": 93,
+        "tartanhacks": 27,
+        "utensil": 152,
+        "plate": 24
+      },
+      "boxes_under_one_percent_image_area": 7,
+      "total_boxes": 296
+    },
+    "condiment_packet": {
+      "positive_images_by_source": {
+        "plate": 1,
+        "packet_extra": 21
+      },
+      "boxes_by_source": {
+        "plate": 1,
+        "packet_extra": 41
+      },
+      "boxes_under_one_percent_image_area": 1,
+      "total_boxes": 42
+    }
+  }
+}

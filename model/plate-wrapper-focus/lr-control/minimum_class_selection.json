@@ -1,0 +1,11 @@
+{
+  "epoch": 6,
+  "per_class_AP50": {
+    "plate": 0.8654707746550651,
+    "wrapper": 0.8630064558195104
+  },
+  "minimum_AP50": 0.8630064558195104,
+  "target_AP50": 0.9,
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/lr-control/train/weights/best_min_ap50.pt",
+  "weights_sha256": "8ed379c1bbcaa5a2f473df8a33e8e068278b2da457b0311ffad5e5a8b035c7ed"
+}

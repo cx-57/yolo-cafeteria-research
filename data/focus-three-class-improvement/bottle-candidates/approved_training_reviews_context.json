@@ -1,0 +1,118 @@
+[
+  {
+    "candidate_id": "lvis_000000043344",
+    "session": "coco_43344",
+    "image_sha256": "a3e2720baf1f3050d6e1112a98a3c7d73f407ba1efa34396d967ea5800721487",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Tennis-bench scene: five clear PET drink bottles, including the partly occluded bottle behind the center bottle. Green bag, tennis-ball tube, racquets and sports bags are not bottles or food wrappers. No plates or food wrappers visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.821039063 0.816030445 0.032046875 0.138524590",
+      "2 0.815281250 0.513149883 0.031781250 0.139039813",
+      "2 0.642109375 0.513946136 0.030593750 0.140632319",
+      "2 0.321703125 0.477318501 0.030968750 0.093278689",
+      "2 0.629867187 0.466955504 0.020203125 0.051943794"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000061843",
+    "session": "coco_61843",
+    "image_sha256": "8f4847f36c320b769e97fb393e0d608195609f7f38fb2f46dc8ca177d882ecaf",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "School sports scene: four plastic beverage bottles (two held clear bottles, one red-capped drink bottle on the step, one clear bottle behind the seated boy). The red object in his hand is an open drinking cup, and the black disc on the grass is sports equipment, not a plate. No food wrappers visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.637492188 0.464274005 0.023546875 0.103583138",
+      "2 0.516960937 0.472880562 0.033046875 0.096487119",
+      "2 0.441484375 0.582611241 0.031593750 0.123957845",
+      "2 0.808890625 0.414707260 0.017843750 0.073161593"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000094544",
+    "session": "coco_94544",
+    "image_sha256": "0a3aa18d581e32fc2f3614c5267dc5515efc7ce82d4c3ac33123d9acb87fa8f2",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Baseball field: four distinguishable small PET drinking-water bottles in the partly occluded pack at ground level. Pack film is carrier wrapping, not an individual food wrapper. No plates or food wrappers visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.806381733 0.873937500 0.026674473 0.024093750",
+      "2 0.754168618 0.876039063 0.011896956 0.033078125",
+      "2 0.836779859 0.892671875 0.031686183 0.045593750",
+      "2 0.856053864 0.897609375 0.026814988 0.067937500"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000264976",
+    "session": "coco_264976",
+    "image_sha256": "c0874f1872f74843b259315326f9a638df503276d368948a1b2053320b69f9f0",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Bathroom scene: four identifiable clear PET mineral-water bottles, including partly occluded left bottles. Soap, soap holder and toilet are not target classes. No plates or food wrappers visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.140492187 0.713416667 0.083421875 0.234666667",
+      "2 0.241210938 0.819927083 0.080734375 0.219312500",
+      "2 0.594781250 0.731750000 0.070687500 0.246791667",
+      "2 0.187531250 0.678010417 0.063906250 0.207354167"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000129599",
+    "session": "coco_129599",
+    "image_sha256": "e7002cf1fe65412c3a10f1ac154f6bd9dda053efd8ad7fa2ca76a4706b037157",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Kitchen counter: five small clear PET water bottles behind and beside the coffee machine. Drink cans and the cardboard carrier are excluded from the target classes. No plate or individual food wrapper visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.291376471 0.485015625 0.035223529 0.047218750",
+      "2 0.240294118 0.487976562 0.039741176 0.039359375",
+      "2 0.233588235 0.535203125 0.046094118 0.086156250",
+      "2 0.211058824 0.490695313 0.019435294 0.038078125",
+      "2 0.269635294 0.489046875 0.022517647 0.037250000"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000036123",
+    "session": "coco_36123",
+    "image_sha256": "140bcad3e4ef8a71f6a2d276456e12274986107475e2f41dd199c22cfc320f66",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Lecture room: four small clear PET beverage bottles. Download is the same photograph at640x427 versus source500x333; source bounds were proportionally mapped and checked against each bottle at native resolution. The carrier bag, notebooks and cables are not food wrappers. No plates visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.628330000 0.519234234 0.018140000 0.084594595",
+      "2 0.329100000 0.584174174 0.026440000 0.106906907",
+      "2 0.122320000 0.700180180 0.043600000 0.152072072",
+      "2 0.752040000 0.554789790 0.023240000 0.099669670"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000015738",
+    "session": "coco_15738",
+    "image_sha256": "2728bce1c0a351b05406741dc8fef6aa860a114ffc66011c85c10a3c4ba8c6bd",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Tennis court: one small clear PET water bottle on the ground beside the line judge. No plates or food wrappers visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.809941315 0.626148437 0.031525822 0.063953125"
+    ]
+  },
+  {
+    "candidate_id": "lvis_000000026053",
+    "session": "coco_26053",
+    "image_sha256": "bd8eac9bfc696bc0e1621e5ce10b4ca5bff5db582f054cbdd90be74d3cf7d83e",
+    "full_three_class_review": true,
+    "duplicate_reviewed": true,
+    "reviewer": "Codex native-resolution visual review 2026-10-17",
+    "reason": "Youth baseball: one small clear PET water bottle partly behind the bench/fence. Source width426 versus downloaded427; native bounds manually checked and set to[298,267,316,321] rather than blindly reusing source coordinates. No plates or food wrappers visible. Source COCO ID not present among LVIS-tagged filenames in the3096-image V2 pool; no mutual SIFT/RANSAC validation duplicate flagged against226 images. Exact image/pixel duplicate checks also required at build.",
+    "rows": [
+      "2 0.718969555 0.459375000 0.042154567 0.084375000"
+    ]
+  }
+]

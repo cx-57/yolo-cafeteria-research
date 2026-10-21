@@ -1,0 +1,12 @@
+{
+  "epoch": 2,
+  "per_class_AP50": {
+    "plate": 0.868106438380917,
+    "wrapper": 0.9242369853971792,
+    "bottle": 0.6053460161818189
+  },
+  "minimum_AP50": 0.6053460161818189,
+  "target_AP50": 0.8,
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/bottle-context80-start/train/weights/best_min_ap50.pt",
+  "weights_sha256": "c191c7ae770eafd7c6b18ef1f5f6ce8aa8d1b65ce8fcbfd7285f1314981d221b"
+}

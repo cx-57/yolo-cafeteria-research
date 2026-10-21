@@ -1,0 +1,12 @@
+{
+  "source": "model/focus-three-class-improvement/capture-clean80-chunk3/train/weights/last.pt",
+  "restored": "model/focus-three-class-improvement/capture-clean80-chunk3/train/weights/last_resume.pt",
+  "preserved_truncated_copy": "model/focus-three-class-improvement/capture-clean80-chunk3/train/weights/last_resume.truncated-20261018.pt",
+  "truncated_bytes": 14680064,
+  "truncated_sha256": "acd94e45bafbb2ca7fc2b1405735b45bc8e34c037e3bf5d3af982aa0054cc0d8",
+  "restored_bytes": 21355875,
+  "restored_sha256": "b7fe9fdf1520abc61ada1bf48b2beb8fc4082f4c0f570bd761582a0ef040401c",
+  "epoch": 7,
+  "optimizer_preserved": true,
+  "cause": "Original resume copy is truncated. The exact interruption cause is unknown; full source last.pt remains intact."
+}

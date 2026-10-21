@@ -1,0 +1,981 @@
+{
+  "schema_version": 1,
+  "names": [
+    "food",
+    "plate",
+    "paper_boat",
+    "utensil",
+    "hinged_container",
+    "napkin",
+    "drink_carton",
+    "condiment_packet",
+    "wrapper",
+    "bottle",
+    "bowl"
+  ],
+  "source_known_classes": {
+    "plate": [
+      1
+    ],
+    "school_lunch": [
+      0,
+      6
+    ],
+    "school_lunch_asian": [
+      0,
+      6
+    ],
+    "food_american": [
+      0
+    ],
+    "tetra_pak": [
+      6
+    ],
+    "macworx": [
+      4
+    ],
+    "utensil": [
+      3
+    ],
+    "condiments": [
+      7
+    ],
+    "trash_detection": [
+      8,
+      9
+    ],
+    "tartanhacks": [
+      3,
+      5
+    ],
+    "waste_detection_v3": [
+      1,
+      3,
+      5,
+      8,
+      9,
+      10
+    ],
+    "dry_wet_waste": [
+      5,
+      8,
+      9
+    ],
+    "packet_extra": [
+      7
+    ]
+  },
+  "reviewed_images": {
+    "condiments__train__464122_0_jpg.rf.962d58608576425f97087f8885069bc1.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464124_0_jpg.rf.ec4732df5eb1dc7ca418cfec31745303.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464125_0_jpg.rf.7d749e15f00eac7ac568f58785d1f3f8.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464126_0_jpg.rf.a93df2b5afecb1d6e064f418705c2420.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464127_0_jpg.rf.65ce9eec1bacc8c806e8318aa23d14fe.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464128_0_jpg.rf.014bb9e0fbd87f44a88f713501796243.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464129_0_jpg.rf.d1926d9e21e18079c8c84e9b853fc621.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464130_0_jpg.rf.1004a294f6a799582ab9e71d5abfee08.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464132_0_jpg.rf.fd84493b639f79f3604289c95279aa1e.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464133_0_jpg.rf.46ab44e52ff52a9d0da14d6092ebd575.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464134_0_jpg.rf.a773f4901e140a1c0274c74a2378cefd.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464135_0_jpg.rf.80b04f20d76ae39d9bbf30410e97b251.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464136_0_jpg.rf.7ba2c6dd2e67f009313e1ee90bfe98e3.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464138_0_jpg.rf.cb7f3995b7cdf4bb7ede91cac89c876e.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464140_0_jpg.rf.16b189ccab5ac0cae253b55468cab928.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464141_0_jpg.rf.9e898de98b2fd3e9c227a75bd74547c9.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464142_0_jpg.rf.5205a723090775ebd283d8310ee63963.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464143_0_jpg.rf.d6a0a23686c6a6dbad7639c7e1b4becd.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464144_0_jpg.rf.67a8fb60f13f18efdfefd27589bd8476.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464145_0_jpg.rf.9081577227e63e5c02a6e70d54aff444.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464147_0_jpg.rf.5cf99c67fcac6f3795b41d8503dd2841.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464148_0_jpg.rf.c0bd0088d5eebbe7b724909eea7941b3.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464149_0_jpg.rf.fb7e14494d41256dc203012eec2846b4.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464150_0_jpg.rf.03fbcbfa725bd40a14578f0393a83e8c.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464152_0_jpg.rf.95b874ccec66385e2bbc3c6bed938cc7.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464153_0_jpg.rf.0909d96821f6b8a75ef05297fdf76218.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464156_0_jpg.rf.8bece950f78c750eae6b44efa8587a45.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464157_0_jpg.rf.60e14f33bbe0b2923c1b401afc4d1e0b.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464158_0_jpg.rf.4b15b051bc55fab71a0b8810705e598b.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464160_0_jpg.rf.c5ceb42bbb18a91e97e8fc628436b3f7.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464162_0_jpg.rf.419c8e90c2377cac2ebcf2e222848bbb.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464163_0_jpg.rf.6b2ee407a9cdcb57cbb56f598dc4216f.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464164_0_jpg.rf.f81a3dbf58354bc704c546aa21fbd291.jpg": [
+      3,
+      7
+    ],
+    "condiments__train__464165_0_jpg.rf.1f80632d22648fc8f12b23b855c51fcd.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464121_0_jpg.rf.89ba9bc337a30804ab8689bd8757ca82.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464123_0_jpg.rf.9ecbdec92a10d988ad80cb6925d7f792.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464131_0_jpg.rf.9942f0d299459b9e0cbc8fe9dcab0c22.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464137_0_jpg.rf.48c208afe5a44303b115bc6103b716f8.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464139_0_jpg.rf.0bfa2fdf258df1d212c049995b350ba8.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464151_0_jpg.rf.0c4411c124196eb54092031f19c521f2.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464154_0_jpg.rf.1a89d3678064302e4cd10fa28aeee899.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464155_0_jpg.rf.b0aa0caee027f4072f1f07fb6e0e77cb.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464159_0_jpg.rf.edd2d8dbbf6d06b89e9a78c0bf5b6359.jpg": [
+      3,
+      7
+    ],
+    "condiments__valid__464161_0_jpg.rf.4a614ec1409421f983f4e75fc04b05e3.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_103763114.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_161951902.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_162395185.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_162720067.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_163302327.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_163836383.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_164620595.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_164620596.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_172793988.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_201481455.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_20315790.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_20315796.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_20777998.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_20780147.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_26760369.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_30863332.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_40093753.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_40941075.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_50271067.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_53333535.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_55760343.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_58483830.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_58483831.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_60726639.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_66511340.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_75426106.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_82689195.jpg": [
+      3,
+      7
+    ],
+    "packet_extra__commons_92205122.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010069000_jpg.rf.89148db6509d73cda216904a95a6786b.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010122000_jpg.rf.48f53eac70c7963bf1bd62b5c699c5ad.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010157000_jpg.rf.de455afea45a6f3bac04643816174dc3.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010530000_jpg.rf.e8721a843912f60935ae71d49f451c00.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010583000_jpg.rf.2a284213e21b90b824fafbe7cd14afae.jpg": [
+      3
+    ],
+    "school_lunch__010626000_jpg.rf.84045276a26a845b917c2134139b4ccb.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010669000_jpg.rf.49928d8ef0426161f9d1e2765d3c6129.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010694000_jpg.rf.4ce696ee37fdc686bd21b45359f119bf.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__010862001_jpg.rf.dd7c1ccb4dee4c151ccab7e510cd47f9.jpg": [
+      3
+    ],
+    "school_lunch__011003000_jpg.rf.f09538c21f3a5e802c7ccc6c0407387d.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020261002_jpg.rf.017a1208d01710d6dce8d46803a094aa.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020262001_jpg.rf.a057d92f4d648ecabde16e828052d4b8.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020301001_jpg.rf.2b4e928c4101416b865e10679ea03dc2.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020309000_jpg.rf.5212d4f01a873ff9cae7db730ac70037.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020309002_jpg.rf.3eaee7753b9aa42b01779e770a75e2c7.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020310001_jpg.rf.81823745a82fb20a0019e57dd62b1f17.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020315001_jpg.rf.6a16a7066fdfc7a0aa19aa1a9fa5bc60.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020415000_jpg.rf.31f4cbb018796a46caff93b7a6a7ecab.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020415002_jpg.rf.e3860387f6eb719f24e1960c243aded8.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020418001_jpg.rf.ef9c005b4f628f7f5cacc9c82b50d88c.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020425001_jpg.rf.b4025e737bc88d7f234828d57c4e7a80.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020429000_jpg.rf.fbbaf157847ce1a88e4296b2bcd23add.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020429001_jpg.rf.aafa3d756e1e4c0b92716e1b1c056e8a.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020452000_jpg.rf.91a1724521bd5779df746f88db54aa1c.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020466001_jpg.rf.3c6b62c62230678d053f8afda1791e9c.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020469002_jpg.rf.4220ebb91f4086f61327bb6100ad1fd3.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020504001_jpg.rf.d254dcf9f5ea5ca9ef6cd4277cd20b67.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020505001_jpg.rf.9dba151551e1fa6691769487aa6dd2f3.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020512000_jpg.rf.383cda73e0f10f1577ab25c945a64d02.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020512002_jpg.rf.e9576902fd90505b0589d2fd4e664da1.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020513001_jpg.rf.e37056de7397add1264ce7009208300f.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020526002_jpg.rf.dff16db9d977b3b108c5ee93c9d85b65.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020558000_jpg.rf.734358b05ae4765d9769a85cbca62e81.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__020572000_jpg.rf.0d8385e171452b71bf5da6672577e410.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021012000_jpg.rf.d6c4051de1450a44efcd91b52bc83aaa.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021012002_jpg.rf.d97fb84305883c895cb4114717cbe3a1.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021026000_jpg.rf.6171d9a9f97adc17036ab46b9b4f13a6.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021055000_jpg.rf.9950c7f3ea480a1a97ccbf544ab441bc.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021104000_jpg.rf.13054fb591fe19d09106f780e14a8821.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021116002_jpg.rf.20d80204f37192d3e77f6538ac8177c3.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021206001_jpg.rf.c69eca77068e043bc8278a1a1c632716.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021258002_jpg.rf.71dcbf48ec1bd0403f8e667cd28fb4f7.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021265000_jpg.rf.cabd42a6ae6d99549caeb30407b202d2.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021265002_jpg.rf.36fafddddfdbb64c19da86f834a82f00.jpg": [
+      3
+    ],
+    "school_lunch__021279000_jpg.rf.b2f49462b11c84ef6e05a0e81413627d.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021381000_jpg.rf.2b9164ee3afb7746a4bf8c8a432faf4e.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021428000_jpg.rf.1945e84bc31aab14795e56d57773fe86.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021428001_jpg.rf.74b7c8a846cccca3db7eb9ce45b95e23.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__021518002_jpg.rf.e86b7f9b429003c08cfe0814c743e70a.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__022212000_jpg.rf.6a7a8aaea003ea919fb2185a13a7b1c9.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__022280002_jpg.rf.d853fcf98d42b6cd33596b155b3a5b07.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__022301001_jpg.rf.03c4aa206fb4dbf1b168cf005ec219f1.jpg": [
+      3
+    ],
+    "school_lunch__022504001_jpg.rf.724a586c3b966eb1de1eb7458ed2df03.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__022556000_jpg.rf.4a6656b5e13f7c488aa043d1a26b5db3.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__023262002_jpg.rf.18808c13aafb619670f9ca2eb1a5cfb5.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__023317000_jpg.rf.c25860390550448cbaf3fc9acc967e40.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__023413000_jpg.rf.276a46c9e5b4e8a5caa813398291dbd6.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__023465001_jpg.rf.ad01cd8814fee640dd57182911605341.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__024159000_jpg.rf.923586813a7159e1d4de07013e339339.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__024180002_jpg.rf.7ade851578d4383460726fb76ac25858.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__024214002_jpg.rf.faac7b92543a4671c81ae84103d0b637.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__024406002_jpg.rf.b4bbacce2d2f2faab9c39d99c9775016.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__024559000_jpg.rf.16cc775535d69421596600ae925b77f1.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__025076000_jpg.rf.ec1a9c55ca7ece68c3492199d77fbfc0.jpg": [
+      3
+    ],
+    "school_lunch__025104002_jpg.rf.e9681dcc6ea761abd1ff96459a44d35d.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__025464000_jpg.rf.31f91acd5b1f0691467229deb73b41f6.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__025519002_jpg.rf.561274a855a27190e36d9987487d9f5e.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026067000_jpg.rf.a7809791cabb6c8d38e0145e49b87931.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026069000_jpg.rf.03971713d5bacd96bf6985c5ddf163d1.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026075001_jpg.rf.43139a506fcf5d335cd2d0b1e965209a.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026172002_jpg.rf.3e34f9b21f791a8852289b8b0f5a8a2f.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026212000_jpg.rf.ce3d56d6ebf7a0e1445295805177d440.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026254001_jpg.rf.2755139a32ac27e920c38c588c872b87.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026473002_jpg.rf.6c590ef46d8798ac777df4fa2cb3e009.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__026552002_jpg.rf.70fcea42ca8f02ac83223a5ea93d0c4b.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__027019002_jpg.rf.433f5850dd0a877cdfe5cb159a0b7540.jpg": [
+      3,
+      7
+    ],
+    "school_lunch__027072000_jpg.rf.c19f4746c5e8b72e491fd23e44129e7c.jpg": [
+      3,
+      7
+    ],
+    "tetra_pak__28-_jpg.rf.a6e5b1571e6dee30754b7fde2dbba3b4.jpg": [
+      3,
+      7
+    ],
+    "utensil__118321293-3186132371500904-5064071677841218163-n-500x500_jpg.rf.d18cfa313ed49e8d242375cb759b47a1.jpg": [
+      3,
+      7
+    ],
+    "utensil__1201_jpg.rf.4d2293dac03a581d7ee152eaf68a70e6.jpg": [
+      3,
+      7
+    ],
+    "utensil__1202_jpg.rf.27b169af91befd69e8a3ca9875d1a235.jpg": [
+      3,
+      7
+    ],
+    "utensil__1203_jpg.rf.03a4a6995c2d15a7e4ffcd0d0cbfe2a2.jpg": [
+      3,
+      7
+    ],
+    "utensil__1206_jpg.rf.85c3e907747bfa7009fc128d215029ed.jpg": [
+      3,
+      7
+    ],
+    "utensil__1207_jpg.rf.6fdc2c3047fd166cabfa1c11f51b263b.jpg": [
+      3,
+      7
+    ],
+    "utensil__1210_jpg.rf.a6a0dda92b8e37d2a8376d0e4aed6a1c.jpg": [
+      3,
+      7
+    ],
+    "utensil__1211_jpg.rf.d55f59776c5d54c2d1c64cd150e2acc9.jpg": [
+      3,
+      7
+    ],
+    "utensil__1213_jpg.rf.1461297c7e59efd8e26ea766ccc7db52.jpg": [
+      3,
+      7
+    ],
+    "utensil__1217_jpg.rf.04447ef0499e84e7b7d462591bea29b6.jpg": [
+      3,
+      7
+    ],
+    "utensil__1220_jpg.rf.b8f8d3cff559a8f1945440b332910976.jpg": [
+      3,
+      7
+    ],
+    "utensil__1227_jpg.rf.cd3ad015cabc4e1a782180b64cdef1f6.jpg": [
+      3,
+      7
+    ],
+    "utensil__1231_jpg.rf.bf821cec333d5b95296b9bc3217d4660.jpg": [
+      3,
+      7
+    ],
+    "utensil__1236_jpg.rf.34aa336b091ab6f49093dbadfb15a6b1.jpg": [
+      3,
+      7
+    ],
+    "utensil__1238_jpg.rf.65e3169bcd8d9e2a8964289b62107d0d.jpg": [
+      3,
+      7
+    ],
+    "utensil__1239_jpg.rf.cf9944466bc8878f435b2046777c02b1.jpg": [
+      3,
+      7
+    ],
+    "utensil__1240_jpg.rf.ca75a6cd6626e011b8038bade28fb706.jpg": [
+      3,
+      7
+    ],
+    "utensil__1241_jpg.rf.8426f188b13026af9190ed6f735eda2a.jpg": [
+      3,
+      7
+    ],
+    "utensil__1244_jpg.rf.2f12e3a054ca32c565ab312f7596a7cc.jpg": [
+      3,
+      7
+    ],
+    "utensil__1246_jpg.rf.edaafac6f0282c2ffa810e10fdccba22.jpg": [
+      3,
+      7
+    ],
+    "utensil__1247_jpg.rf.c4f345b7c82829e1d246ef4eed7e2e2f.jpg": [
+      3,
+      7
+    ],
+    "utensil__1248_jpg.rf.23ce771602756fbde8a209e3bc4db8f2.jpg": [
+      3,
+      7
+    ],
+    "utensil__1249_jpg.rf.b28c0f9db503608900b042f0b3de02d2.jpg": [
+      3,
+      7
+    ],
+    "utensil__1250_jpg.rf.a755dd8252b8c4fd404e4c6e1c2b77b1.jpg": [
+      3,
+      7
+    ],
+    "utensil__22_png_jpg.rf.48eca3ddea17dffcfc84f0952b928aec.jpg": [
+      3,
+      7
+    ],
+    "utensil__4_jpg.rf.e85968725b58f45f4e151c683bfe87c2.jpg": [
+      3,
+      7
+    ],
+    "utensil__5_jpg.rf.82aa27a6b05213b2df7695f1e963b9cf.jpg": [
+      3,
+      7
+    ],
+    "utensil__IMG_20231109_141023_jpg.rf.6e80fc64956f4574a1c389f224fcce9d.jpg": [
+      3,
+      7
+    ],
+    "utensil__IMG_20231109_141028_jpg.rf.1dfc7701cfbf8f48f61fc82a2e9399e9.jpg": [
+      3,
+      7
+    ],
+    "utensil__IMG_20231109_141029_jpg.rf.147a77a0295694f242da7d8c96a09b14.jpg": [
+      3,
+      7
+    ],
+    "utensil__IMG_20231109_141030_1_jpg.rf.3851582568cc860076953743fc80bfa6.jpg": [
+      3,
+      7
+    ],
+    "utensil__IMG_20231109_141036_jpg.rf.1c6c1c896b7ef955836821ecac4a2571.jpg": [
+      3,
+      7
+    ],
+    "utensil__IMG_20231109_141037_jpg.rf.4d3019dceff80445c90ed85f85f79dbf.jpg": [
+      3,
+      7
+    ],
+    "utensil__WOW_MEDIUMWEIGHT_6_INCH_PP_WHITE__84550-1633106354_jpg.rf.983fa38b2783d75bbec1517a6812d225.jpg": [
+      3,
+      7
+    ],
+    "utensil__gjo30403_jpg.rf.2072a7f8f16a531ee2e4157196d53ea8.jpg": [
+      3,
+      7
+    ],
+    "utensil__istockphoto-892877396-170667a_jpg.rf.b100b45fe2224b186c50101f25d2869a.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0001_jpg.rf.72ffbbd84404b7226efe3ed6322a45b0.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0002_jpg.rf.b2456461190a8d8d499b46048ba8ced0.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0003_jpg.rf.32a109e3f1b804350a848dd1f0be42a8.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0004_jpg.rf.8da8bb61012793c193dccb28a46fae9d.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0005_jpg.rf.0d12670e44bd85b788f6d135996d38d7.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0006_jpg.rf.e8a77ff29442fcdf98e4bf325f60f160.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0007_jpg.rf.74fa83474bdae1ee3fe66d71d2784ca2.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0008_jpg.rf.cdfb42071c32f30749665262c70976e2.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0009_jpg.rf.ce0b225d4866056f6ed64b8d009c3a5c.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-45_000_mov-0001_jpg.rf.11e4e078c9965e8ce450276b30fabf29.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-45_000_mov-0002_jpg.rf.ae68f80da78e9ab2a0bc8bc2a693f326.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-45_000_mov-0003_jpg.rf.cc598524207db88a3e82848c2304d871.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-13-45_000_mov-0010_jpg.rf.cce50caffc55b51fdb094974343b7fb2.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-14-04_000_mov-0000_jpg.rf.d7738766349213e71e57005dc4ab2c2f.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-14-04_000_mov-0001_jpg.rf.073abd2175702bebe9508640b9f37e24.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-14-04_000_mov-0002_jpg.rf.4ac81d17789ea5e361ec235b23bb16f9.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-14-04_000_mov-0003_jpg.rf.5fe77f219fe3456b93712cd2198c3bf4.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-14-04_000_mov-0004_jpg.rf.dc6ee1df6f960335f9f46fd24a30ff78.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-14-04_000_mov-0005_jpg.rf.9e76df7fef9b3eefbb3fa772f5c2f8e3.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-17-53_000_mov-0009_jpg.rf.b4ca8919b6bf91d20d626d423802a5d2.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-18-11_000_mov-0004_jpg.rf.d31c0858e5a06dab60eb5c8eb626ff1f.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-23-03_000_mov-0004_jpg.rf.fdc9131fa72db332ebafc95614837ce6.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__2024-02-05_12-24-06_000_mov-0002_jpg.rf.a9f663c70fc593d9665737a85d06573f.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0050_jpg.rf.58ee16b17caac168e0c4aa88ff7196f3.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0306_jpg.rf.19c85c7fc666b37adba2e10b188e9901.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0307_jpg.rf.085d280c8a01ccec7477fb25245d30cb.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0308_jpg.rf.f60ec6a23c5e121c027535eb94ba1209.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0309_jpg.rf.8ff0e98227a6a44889982c9f7f88f376.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0310_jpg.rf.2465a6cf041d12eb419c1b08597cdb3e.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0311_jpg.rf.a786048f30421efc2b825bba490d0ff9.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0312_jpg.rf.427fe23d8c75d7dbe2d60b0361293481.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0313_jpg.rf.498d28f69747088649d26a4a52b3b791.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0314_jpg.rf.c34fbbd4f9a3fc789829419cb389667a.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0315_jpg.rf.3b59042b0f9b8e83f32e0aadfc5327b9.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0320_jpg.rf.24d4ebeed6995ff54f29697139bd4ace.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0323_jpg.rf.9298cbd788bb6b7ec2b6e00bc59ee901.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0324_jpg.rf.1b9e1cd915d873250be7d2763d52a288.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0328_jpg.rf.d3a5a5e181c8676c1947f18bedf3fc8d.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0329_jpg.rf.f1cb255ced1b45f67b52a4e1c87b094b.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0330_jpg.rf.422c16fe2cb24797279c855930329b78.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0331_jpg.rf.90b8db39c70ea96240c84d1dee1abf19.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__valid__Untitled-video-Made-with-Clipchamp_mp4-0321_jpg.rf.a0d83027c6a4fea9d40c3a7227130701.jpg": [
+      3,
+      7
+    ],
+    "waste_detection_v3__valid__Untitled-video-Made-with-Clipchamp_mp4-0322_jpg.rf.50f7c49d8ba817340d12aaf34e7bd60a.jpg": [
+      3,
+      7
+    ]
+  }
+}

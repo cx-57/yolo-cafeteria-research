@@ -1,0 +1,72 @@
+{
+  "dataset_fingerprint": "3a92a28252f41d815805ebfe8b5b246a7bec0a2c3f559d3cc09168a70f0a1d8a",
+  "validation_protocol": "26f85903b7f46f6b2261088eee1f933338532f5cc5cba6f7ae3c1ce85ed290a2",
+  "candidates": {
+    "filtered_three_class": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/weights/best.pt",
+      "weights_sha256": "ed78743eeecffdfb8d6aa69aac7d528199500ecc4d637e0ac82113607dd0bd09",
+      "metrics": {
+        "per_class": {
+          "plate": {
+            "precision": 0.9767287170789811,
+            "recall": 0.542016806722689,
+            "AP50": 0.8077854164823495,
+            "AP50_95": 0.6394495770228278,
+            "objects": 238
+          },
+          "wrapper": {
+            "precision": 0.8886144207403873,
+            "recall": 0.8191489361702128,
+            "AP50": 0.8634805326273074,
+            "AP50_95": 0.5954876301160754,
+            "objects": 94
+          }
+        },
+        "overall": {
+          "precision": 0.9326715689096843,
+          "recall": 0.6805828714464509,
+          "AP50": 0.8356329745548284,
+          "AP50_95": 0.6174686035694517
+        }
+      }
+    },
+    "two_class_epoch1": {
+      "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/two-class90/train/weights/best_min_ap50.pt",
+      "weights_sha256": "e328f383e64190c50e527662d039263788c8724fdc6696db70dd2b40a73088ec",
+      "metrics": {
+        "per_class": {
+          "plate": {
+            "precision": 0.8652418860894141,
+            "recall": 0.7553803492595755,
+            "AP50": 0.8327256696117776,
+            "AP50_95": 0.6934339119772479,
+            "objects": 238
+          },
+          "wrapper": {
+            "precision": 0.9715996601695747,
+            "recall": 0.7279271863977982,
+            "AP50": 0.8318119465643312,
+            "AP50_95": 0.5873598026674685,
+            "objects": 94
+          }
+        },
+        "overall": {
+          "precision": 0.9184207731294944,
+          "recall": 0.7416537678286869,
+          "AP50": 0.8322688080880545,
+          "AP50_95": 0.6403968573223581
+        }
+      }
+    }
+  },
+  "validation_label_changes": [
+    {
+      "name": "plate__train__lvis_000000354530.jpg",
+      "before": [],
+      "after": [
+        "0 0.500000000 0.500000000 1.000000000 1.000000000"
+      ]
+    }
+  ],
+  "interpretation": "Both models re-evaluated on identical corrected labels; no training performed here."
+}

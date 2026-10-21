@@ -1,0 +1,15 @@
+{
+  "description": "One-epoch startup check from original pretrained YOLO11n. Fixed 80-epoch horizon, standard augmentation; budget checked after epoch completion.",
+  "target_min_ap50": 0.8,
+  "wall_limit_minutes": 1,
+  "training_args": {
+    "model": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11n.pt",
+    "data": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/capture-grouped-clean/data.yaml",
+    "epochs": 80,
+    "batch": 4,
+    "imgsz": 640,
+    "workers": 0,
+    "seed": 42,
+    "patience": 0
+  }
+}

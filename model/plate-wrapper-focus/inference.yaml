@@ -1,0 +1,8 @@
+model: /Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/weights/best.pt
+classes:
+- 0
+- 1
+imgsz: 640
+device: mps
+project: /Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/predictions
+name: cafeteria

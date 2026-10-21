@@ -1,0 +1,12 @@
+{
+  "epoch": 6,
+  "per_class_AP50": {
+    "plate": 0.790124771508999,
+    "wrapper": 0.8586323478914336,
+    "bottle": 0.3913229572092983
+  },
+  "minimum_AP50": 0.3913229572092983,
+  "target_AP50": 0.8,
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/capture-standard-control-e8/train/weights/best_min_ap50.pt",
+  "weights_sha256": "c9160cdd83c5758229122f09d391002530fb86f641bf4fd7e672c5655643ab13"
+}
