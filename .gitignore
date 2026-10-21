@@ -29,3 +29,7 @@ model/prediction-review*/
 data/nhs/
 data/training-v2/
 data/training-v2-*/
+
+# Generated plate/bottle-only dataset and trained checkpoints
+data/focus-two-class-900/
+model/focus-two-class-900/
