@@ -127,6 +127,7 @@ jobs:
           print("Plate images and every original label retained; experiment is NOT trained.")
           PY
       - name: Upload experiment integrity report
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: lvis-experiment-check
@@ -245,6 +246,7 @@ jobs:
           print("Still missing:", report["final_audit"]["missing_classes"])
           PY
       - name: Upload complete 3096-image V2 annotation audit corpus
+        if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[full-audit]')
         uses: actions/upload-artifact@v4
         with:
           name: full-v2-image-label-audit
@@ -340,6 +342,7 @@ jobs:
           print("V2 PHOTO REVIEW REGISTER PASS:", counts)
           PY
       - name: Upload full per-image V2 review queue
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: v2-per-image-review-queue
@@ -426,11 +429,13 @@ jobs:
           print(f"Created {len(records)}-photo contact sheet for manual label approval")
           PY
       - name: Upload weak-class candidate review contact sheet
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: weak-class-provisional-review
           path: /tmp/weak-class-provisional-review.jpg
       - name: Preserve Codex-reviewed V2 build report
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: codex-reviewed-v2-integrity
@@ -438,11 +443,13 @@ jobs:
             data/training-ci-v2-reviewed/v2_build.json
             data/training-ci-v2-reviewed/experiment_summary.json
       - name: Preserve real label scan report
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: real-label-diagnostics
           path: /tmp/yolo-ci-diagnostics/
       - name: Preserve split and class counts
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: split-summary
@@ -461,8 +468,8 @@ jobs:
         run: |
           python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
           python -m pip install ultralytics==8.4.175 PyYAML Pillow
-      - name: Run real upstream partial-label loss and gradient tests
-        run: python -m unittest discover -s tests -p "test_partial_labels.py" -v
+      - name: Run all pipeline and ML unit tests with installed dependencies
+        run: python -m unittest discover -s tests -v
       - name: One-epoch real-image training-loop smoke (untrained model)
         run: |
           python - <<'PY'
@@ -535,6 +542,7 @@ jobs:
         run: python tests/v2_real_smoke.py
       - name: Save V2 reviewed training smoke results
         if: always()
+        continue-on-error: true  # Optional upload; validation failures still fail CI.
         uses: actions/upload-artifact@v4
         with:
           name: v2-reviewed-real-training-smoke

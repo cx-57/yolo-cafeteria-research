@@ -1,9 +1,12 @@
 """Integrity and learned-head transfer for the two-class specialist."""
+import importlib.util
 import copy
 from pathlib import Path
 import sys
 import unittest
 import tempfile
+from types import SimpleNamespace
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
@@ -13,7 +16,23 @@ except ImportError:
     specialist = None
 
 
+ML_AVAILABLE = bool(importlib.util.find_spec('torch') and importlib.util.find_spec('ultralytics'))
+
+
 class SpecialistTests(unittest.TestCase):
+    def test_local_file_read_accepts_stat_without_macos_flags(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'source.bin'
+            path.write_bytes(b'payload')
+            with patch.object(Path, 'stat', return_value=SimpleNamespace(st_size=7)):
+                self.assertEqual(specialist.read_bytes(path), b'payload')
+
+    def test_offloaded_file_is_rejected_before_read(self):
+        with patch.object(Path, 'stat', return_value=SimpleNamespace(st_flags=0x40000000)), \
+                patch.object(Path, 'read_bytes', side_effect=AssertionError('must not read')):
+            with self.assertRaisesRegex(ValueError, 'iCloud'):
+                specialist.read_bytes(Path('/offloaded-source'))
+
     def test_packet_selection_rejects_regressing_below_utensil_milestone(self):
         self.assertEqual(specialist.packet_selection_score([.49,.8]),-1.)
         self.assertAlmostEqual(specialist.packet_selection_score([.71,.4]),.4)
@@ -37,6 +56,7 @@ class SpecialistTests(unittest.TestCase):
             self.assertEqual(r['image_path'],'/source/images/train/packet.jpg')
         self.assertEqual(len({r['name'] for r in result}),6)
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_coco_restart_keeps_backbone_and_uses_two_class_head(self):
         import torch
         from ultralytics.nn.tasks import DetectionModel
@@ -130,6 +150,7 @@ class SpecialistTests(unittest.TestCase):
         self.assertEqual(specialist.project_records(records,{'both.jpg':(3,7)}, {'both.jpg'}),
                          [r for r in projected if r['split']=='val'])
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_projection_preserves_decoded_boxes_and_target_scores(self):
         self.assertIsNotNone(specialist, 'Need learned output-channel projection')
         import torch

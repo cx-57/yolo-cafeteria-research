@@ -1,0 +1,27 @@
+{
+  "failed_ci_run": "https://github.com/cx-57/yolo-cafeteria-research/actions/runs/39862842102",
+  "root_causes": [
+    "ML-specific unit tests imported unavailable Torch/Ultralytics in lightweight job",
+    "macOS-only stat.st_flags read on Linux",
+    "optional artifact uploads failed due GitHub storage quota"
+  ],
+  "regression_red_observed": "Missing-flags stat regression raised AttributeError before the source fix",
+  "ml_suite": {
+    "tests": 235,
+    "skipped": 0,
+    "result": "passed"
+  },
+  "isolated_lightweight_suite": {
+    "tests": 235,
+    "skipped": 29,
+    "result": "passed",
+    "dependencies": [
+      "Pillow",
+      "PyYAML"
+    ]
+  },
+  "ml_coverage": "Full suite now also runs in the CPU ML integration job",
+  "review": "Read-only code review approved",
+  "hosted_ci": "pending push/rerun",
+  "optional_artifacts": "Upload failure does not change required test/build validation outcomes; large corpus archive is manual/full-audit opt-in"
+}

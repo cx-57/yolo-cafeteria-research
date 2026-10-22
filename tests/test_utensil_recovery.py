@@ -1,4 +1,5 @@
 """Safety and provenance checks for the separate recovery benchmark."""
+import importlib.util
 import hashlib
 import copy
 import json
@@ -14,6 +15,9 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import utensil_recovery as recovery
+
+
+ML_AVAILABLE = bool(importlib.util.find_spec('torch') and importlib.util.find_spec('ultralytics'))
 
 
 class RecoveryTests(unittest.TestCase):
@@ -46,6 +50,7 @@ class RecoveryTests(unittest.TestCase):
         self.assertFalse(trainer.stop)
         self.assertEqual(json.loads((output/'utensil_selection.json').read_text())['epoch'],1)
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_full_schedule_disables_native_early_stopping_without_changing_loader(self):
         from ultralytics.utils.torch_utils import EarlyStopping
         class Base:
@@ -105,6 +110,7 @@ class RecoveryTests(unittest.TestCase):
             with self.subTest(name=name, removed=removed), self.assertRaises(ValueError):
                 recovery.project(self.source / 'data.yaml', self.reviews)
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_reviewed_packet_absence_adds_negative_gradient_only_for_that_photo(self):
         import torch
         from partial_labels import CoveragePolicy, CoverageMaskedBCE
@@ -155,6 +161,7 @@ class RecoveryTests(unittest.TestCase):
         for key in ('epoch', 'updates', 'optimizer', 'ema'):
             self.assertEqual(clone[key], checkpoint[key])
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_validation_batch_override_preserves_training_loader_and_coverage_factory(self):
         self.assertTrue(hasattr(recovery, 'make_recovery_trainer'))
         class Base:
@@ -289,6 +296,7 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             recovery.validate_policy_extension(previous, revised)
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_rebenchmark_selection_uses_fresh_score_instead_of_inherited_ap(self):
         import torch
         previous = self.build()
@@ -435,6 +443,7 @@ class RecoveryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             recovery.revision_checkpoint({**checkpoint, 'optimizer': None}, self.root / 'bad', self.root / 'new.yaml')
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_resume_options_pass_coverage_factory_before_saved_arguments_load(self):
         from partial_labels import validate_training_options
         from ultralytics.cfg import get_cfg

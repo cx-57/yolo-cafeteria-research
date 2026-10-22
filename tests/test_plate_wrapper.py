@@ -16,6 +16,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import focus_three_class as focus
 
 
+ML_AVAILABLE = bool(importlib.util.find_spec('torch') and importlib.util.find_spec('ultralytics'))
+
+
 class PlateWrapperTests(unittest.TestCase):
     def implementation(self):
         self.assertIsNotNone(importlib.util.find_spec('plate_wrapper'),
@@ -216,6 +219,7 @@ class PlateWrapperTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 scale(checkpoint, Path('/tmp/new-output'), Path('/tmp/data'), factor)
 
+    @unittest.skipUnless(ML_AVAILABLE, 'requires ML dependencies; covered by ml-integration')
     def test_lr_branch_writes_new_provenance_and_retains_verified_best(self):
         module = self.implementation()
         import torch

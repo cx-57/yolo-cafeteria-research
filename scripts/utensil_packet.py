@@ -33,7 +33,7 @@ WEIGHTS_SHA = '5cf0eca1767d703b1172ffaf616e8f8d9d43c98e93863946bcd61f122e516f48'
 
 def read_bytes(path):
     path = Path(path)
-    if path.stat().st_flags & 0x40000000:
+    if getattr(path.stat(), 'st_flags', 0) & 0x40000000:
         raise ValueError(f'iCloud file is not downloaded: {path}')
     raw = path.read_bytes()
     if len(raw) != path.stat().st_size:
