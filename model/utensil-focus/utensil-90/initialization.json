@@ -1,0 +1,18 @@
+{
+  "source": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/weights/yolo11x.pt",
+  "source_sha": "7bc158aa95c0ebfdd87f70f01653c1131b93e92522dbe15c228bcd742e773a24",
+  "weights_sha": "d23046a30478cb9cb6c0e8518dfe1b67568d695139347efcf2233cd273cde923",
+  "preserved_COCO_classes": [
+    42,
+    43,
+    44
+  ],
+  "decoded_boxes_identical": true,
+  "union_scores_identical": true,
+  "MPS_pooling_forward_and_backward_verified": true,
+  "architecture": "Original YOLO11x with three retained COCO utensil logits reduced by exact maximum before the native one-class detection loss. No custom Python layers.",
+  "dataset_fingerprint": "997c3ababf46a51a2d5997a8d6879c6406ec6983bd0d7fe6054d1654f287e53e",
+  "independent_test": false,
+  "source_download_url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo11x.pt",
+  "purpose": "Standalone one-class utensil detector preserving pretrained fork/knife/spoon union before NMS."
+}

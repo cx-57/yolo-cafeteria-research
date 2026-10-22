@@ -1,0 +1,18 @@
+{
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs/v2-control-n-reviewed-baseline/weights/best.pt",
+  "source_sha": "963954534d23cd82760357faffa78a982a06b7ff9ee49efcf0be230e5c512105",
+  "weights_sha": "94ef877f4fecb7eaa9263bbdb8426b794e4d921bb141bc2406623a3ef87f5c73",
+  "original_class_ids": [
+    0,
+    4,
+    6
+  ],
+  "names": [
+    "food",
+    "hinged_container",
+    "drink_carton"
+  ],
+  "decoded_box_and_score_equivalence_verified": true,
+  "additional_training": false,
+  "interpretation": "Target-only head projected from an existing fine-tuned checkpoint; no new accuracy gain is claimed."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "interrupted during epoch 5 validation by full disk",
+  "completed_epochs": [
+    {
+      "epoch": 1,
+      "utensil_AP50": 0.6499939147640671
+    },
+    {
+      "epoch": 2,
+      "utensil_AP50": 0.5962861579877835
+    },
+    {
+      "epoch": 3,
+      "utensil_AP50": 0.6531903665444542
+    },
+    {
+      "epoch": 4,
+      "utensil_AP50": 0.7547916542935252
+    }
+  ],
+  "last_completed_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/coverage-unfreeze-v12/last_resume.pt",
+  "selected_retained": {
+    "epoch": 0,
+    "AP50": 0.771251839115728,
+    "weights_sha": "be5aaf1b04a73715e02707f6ad5f9adfb6ae4bbc6d1b40a90ea82773a7ead1cd"
+  },
+  "recovered_download_cache_bytes": 1006900000,
+  "localized_identical_data": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/utensil-v12"
+}

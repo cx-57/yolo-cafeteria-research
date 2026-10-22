@@ -1,0 +1,8 @@
+{
+  "images": 764,
+  "utensil_boxes": 296,
+  "identical_target_validation": true,
+  "validation_identity_sha256": "2be0967a693de278a3ecb95cd4aba822101ab5a56ac3d39af9e10a074c7aab67",
+  "baseline_manifest": "data/utensil-packet-focus/meal-scenes-v10/manifest.json",
+  "independent_test": false
+}

@@ -1,0 +1,54 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/food-carton-container-specialist/specialist.pt",
+  "weights_sha": "94ef877f4fecb7eaa9263bbdb8426b794e4d921bb141bc2406623a3ef87f5c73",
+  "source_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs/v2-control-n-reviewed-baseline/weights/best.pt",
+  "source_checkpoint_sha": "963954534d23cd82760357faffa78a982a06b7ff9ee49efcf0be230e5c512105",
+  "split": "val",
+  "names": [
+    "food",
+    "hinged_container",
+    "drink_carton"
+  ],
+  "per_class": {
+    "food": {
+      "precision": 0.9507794658475544,
+      "recall": 0.8261904761904761,
+      "AP50": 0.9203226535704042,
+      "AP50_95": 0.6195788063484653,
+      "objects": 840
+    },
+    "hinged_container": {
+      "precision": 0.9861777607251803,
+      "recall": 1.0,
+      "AP50": 0.995,
+      "AP50_95": 0.7542379829305144,
+      "objects": 47
+    },
+    "drink_carton": {
+      "precision": 0.965958574409124,
+      "recall": 0.9703504043126685,
+      "AP50": 0.9821699986606697,
+      "AP50_95": 0.7889534748056873,
+      "objects": 371
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.9676386003272862,
+    "metrics/recall(B)": 0.9321802935010481,
+    "metrics/mAP50(B)": 0.9658308840770246,
+    "metrics/mAP50-95(B)": 0.7209234213615557,
+    "fitness": 0.7209234213615557
+  },
+  "validation_images": 591,
+  "source_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/training-v2-codex-reviewed",
+  "source_dataset_fingerprint": "4fd836887d626867c316e56156b7f4ca31076ef482ce84013b35eb30b377d291",
+  "validation_images_and_target_boxes_preserved": true,
+  "train_val_identical_byte_or_pixel_overlap": false,
+  "imgsz": 640,
+  "test_time_augmentation": false,
+  "additional_training": false,
+  "all_targets_at_least_85pct_AP50": true,
+  "annotation_status": "Provisional inherited reviewed annotations; fresh inference does not independently certify semantic completeness.",
+  "independent_test": false,
+  "elapsed_seconds": 20.76912366599936
+}

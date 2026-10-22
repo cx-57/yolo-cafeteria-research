@@ -1,0 +1,19 @@
+{
+  "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/weights/yolo11x.pt",
+  "weights_sha": "7bc158aa95c0ebfdd87f70f01653c1131b93e92522dbe15c228bcd742e773a24",
+  "target": "utensil",
+  "mapping": "COCO fork/knife/spoon merged by per-anchor maximum before NMS; packet score always zero.",
+  "classes": [
+    0
+  ],
+  "imgsz": 640,
+  "test_time_augmentation": true,
+  "pretrained_only": true,
+  "independent_test": false,
+  "validation_images": 764,
+  "validation_utensil_boxes": 296,
+  "precision": 0.9098517379318244,
+  "recall": 0.847972972972973,
+  "AP50": 0.9215209479485792,
+  "AP50_95": 0.6253876310483037
+}

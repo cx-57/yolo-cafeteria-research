@@ -1,0 +1,36 @@
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+YOLO11n summary (fused): 101 layers, 2,582,737 parameters, 585 gradients, 6.4 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 204.6±171.8 MB/s, size: 62.3 KB)
+
+val: New cache created: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/food-carton-container-specialist/labels/val.cache
+
+                   all        591       1258      0.968      0.932      0.966      0.721
+                  food        234        840      0.951      0.826       0.92       0.62
+      hinged_container         47         47      0.986          1      0.995      0.754
+          drink_carton        351        371      0.966       0.97      0.982      0.789
+Speed: 0.5ms preprocess, 6.0ms inference, 0.0ms loss, 12.2ms postprocess per image
+Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/food-carton-container-specialist/saved-model-verification/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.04s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.721
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.965
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.858
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.618
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.739
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.769
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.773
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.685
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.791
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.985
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.898
+Results saved to /Users/Charles1/Desktop/yolo-cafeteria-research/model/food-carton-container-specialist/saved-model-verification
+SPECIALIST_VERIFIED {"weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/food-carton-container-specialist/specialist.pt", "weights_sha": "94ef877f4fecb7eaa9263bbdb8426b794e4d921bb141bc2406623a3ef87f5c73", "source_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs/v2-control-n-reviewed-baseline/weights/best.pt", "source_checkpoint_sha": "963954534d23cd82760357faffa78a982a06b7ff9ee49efcf0be230e5c512105", "split": "val", "names": ["food", "hinged_container", "drink_carton"], "per_class": {"food": {"precision": 0.9507794658475544, "recall": 0.8261904761904761, "AP50": 0.9203226535704042, "AP50_95": 0.6195788063484653, "objects": 840}, "hinged_container": {"precision": 0.9861777607251803, "recall": 1.0, "AP50": 0.995, "AP50_95": 0.7542379829305144, "objects": 47}, "drink_carton": {"precision": 0.965958574409124, "recall": 0.9703504043126685, "AP50": 0.9821699986606697, "AP50_95": 0.7889534748056873, "objects": 371}}, "overall": {"metrics/precision(B)": 0.9676386003272862, "metrics/recall(B)": 0.9321802935010481, "metrics/mAP50(B)": 0.9658308840770246, "metrics/mAP50-95(B)": 0.7209234213615557, "fitness": 0.7209234213615557}, "validation_images": 591, "source_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/training-v2-codex-reviewed", "source_dataset_fingerprint": "4fd836887d626867c316e56156b7f4ca31076ef482ce84013b35eb30b377d291", "validation_images_and_target_boxes_preserved": true, "train_val_identical_byte_or_pixel_overlap": false, "imgsz": 640, "test_time_augmentation": false, "additional_training": false, "all_targets_at_least_85pct_AP50": true, "annotation_status": "Provisional inherited reviewed annotations; fresh inference does not independently certify semantic completeness.", "independent_test": false, "elapsed_seconds": 20.76912366599936}

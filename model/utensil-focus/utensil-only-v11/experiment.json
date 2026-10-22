@@ -1,0 +1,14 @@
+{
+  "target": "utensil",
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/meal-scenes-v10/train/weights/last.pt",
+  "source_sha": "5e4aa473548560abac3a77727e25313aa8dad4c3804a204000edbdf9787d4dc7",
+  "dataset_fingerprint": "bfdaecc4b55ed0e521788b5206d441e396f029e91aa4c8db1efc64bd6170549b",
+  "classes": [
+    0
+  ],
+  "epochs": 8,
+  "freeze": 23,
+  "lr0": 0.0001,
+  "selection": "Native best fitness: utensil AP50-95 only",
+  "interpretation": "Existing two-output head retained; only utensil annotations supervise training and only utensil predictions are evaluated. Packet accuracy is no longer an objective. Fresh optimizer; unchanged development validation."
+}

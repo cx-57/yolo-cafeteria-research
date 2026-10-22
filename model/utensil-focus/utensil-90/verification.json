@@ -1,0 +1,35 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/utensil-90/utensil-yolo11x.pt",
+  "weights_sha": "d23046a30478cb9cb6c0e8518dfe1b67568d695139347efcf2233cd273cde923",
+  "target": "utensil",
+  "classes": [
+    0
+  ],
+  "model": "YOLO11x with exact COCO fork/knife/spoon maximum represented as a native one-class head",
+  "pretrained_only": true,
+  "imgsz": 640,
+  "test_time_augmentation": true,
+  "nms_iou": 0.7,
+  "max_det": 300,
+  "metric_min_confidence": 0.001,
+  "device": "mps",
+  "half": false,
+  "dataset_fingerprint": "997c3ababf46a51a2d5997a8d6879c6406ec6983bd0d7fe6054d1654f287e53e",
+  "validation_images": 764,
+  "validation_utensil_boxes": 296,
+  "validation_unchanged": true,
+  "independent_test": false,
+  "precision": 0.9098517379318244,
+  "recall": 0.847972972972973,
+  "AP50": 0.9215209479485792,
+  "AP50_95": 0.6253876310483037,
+  "elapsed_seconds": 404.65991466700143,
+  "goal_90pct_AP50_met": true,
+  "raw_metrics": {
+    "metrics/precision(B)": 0.9098517379318244,
+    "metrics/recall(B)": 0.847972972972973,
+    "metrics/mAP50(B)": 0.9215209479485792,
+    "metrics/mAP50-95(B)": 0.6253876310483037,
+    "fitness": 0.6253876310483037
+  }
+}

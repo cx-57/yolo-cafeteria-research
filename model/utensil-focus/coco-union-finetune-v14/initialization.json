@@ -1,0 +1,16 @@
+{
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11s.pt",
+  "source_sha": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+  "weights_sha": "ea28e6167945f05b641a5a3387fd34bcaf91483fca04f4fab34c1b6839346527",
+  "preserved_COCO_classes": [
+    42,
+    43,
+    44
+  ],
+  "decoded_boxes_identical": true,
+  "union_scores_identical": true,
+  "MPS_pooling_forward_and_backward_verified": true,
+  "architecture": "Original YOLO11s with three retained COCO utensil logits reduced by exact maximum before the native one-class detection loss. No custom Python layers.",
+  "dataset_fingerprint": "997c3ababf46a51a2d5997a8d6879c6406ec6983bd0d7fe6054d1654f287e53e",
+  "independent_test": false
+}

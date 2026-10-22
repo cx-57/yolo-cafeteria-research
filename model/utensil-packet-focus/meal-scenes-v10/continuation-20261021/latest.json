@@ -1,0 +1,30 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/meal-scenes-v10/train/weights/last.pt",
+  "weights_sha": "b2e02b6617004e07eccfbd89d10dcd330a4431049f238dfd6b30b7a97c72720b",
+  "split": "val",
+  "dataset_fingerprint": "bfdaecc4b55ed0e521788b5206d441e396f029e91aa4c8db1efc64bd6170549b",
+  "independent_test": false,
+  "imgsz": 640,
+  "test_time_augmentation": false,
+  "classes": {
+    "utensil": {
+      "precision": 0.8827683026118184,
+      "recall": 0.5945945945945946,
+      "AP50": 0.7282952467827017,
+      "AP50_95": 0.4693020270523989
+    },
+    "condiment_packet": {
+      "precision": 0.22968956380324718,
+      "recall": 0.40476190476190477,
+      "AP50": 0.20206800436555286,
+      "AP50_95": 0.14328210788863296
+    }
+  },
+  "overall": {
+    "metrics/precision(B)": 0.5562289332075327,
+    "metrics/recall(B)": 0.4996782496782497,
+    "metrics/mAP50(B)": 0.4651816255741273,
+    "metrics/mAP50-95(B)": 0.30629206747051596,
+    "fitness": 0.30629206747051596
+  }
+}

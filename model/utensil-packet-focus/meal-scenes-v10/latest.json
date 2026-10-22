@@ -1,6 +1,6 @@
 {
   "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/meal-scenes-v10/train/weights/last.pt",
-  "weights_sha": "b2e02b6617004e07eccfbd89d10dcd330a4431049f238dfd6b30b7a97c72720b",
+  "weights_sha": "5e4aa473548560abac3a77727e25313aa8dad4c3804a204000edbdf9787d4dc7",
   "split": "val",
   "dataset_fingerprint": "bfdaecc4b55ed0e521788b5206d441e396f029e91aa4c8db1efc64bd6170549b",
   "independent_test": false,
@@ -8,23 +8,23 @@
   "test_time_augmentation": false,
   "classes": {
     "utensil": {
-      "precision": 0.8827683026118184,
-      "recall": 0.5945945945945946,
-      "AP50": 0.7282952467827017,
-      "AP50_95": 0.4693020270523989
+      "precision": 0.9021360137237368,
+      "recall": 0.6452702702702703,
+      "AP50": 0.7691080126386092,
+      "AP50_95": 0.488257179141554
     },
     "condiment_packet": {
-      "precision": 0.22968956380324718,
-      "recall": 0.40476190476190477,
-      "AP50": 0.20206800436555286,
-      "AP50_95": 0.14328210788863296
+      "precision": 0.2703160370975754,
+      "recall": 0.42857142857142855,
+      "AP50": 0.2311214499960238,
+      "AP50_95": 0.14566805323247495
     }
   },
   "overall": {
-    "metrics/precision(B)": 0.5562289332075327,
-    "metrics/recall(B)": 0.4996782496782497,
-    "metrics/mAP50(B)": 0.4651816255741273,
-    "metrics/mAP50-95(B)": 0.30629206747051596,
-    "fitness": 0.30629206747051596
+    "metrics/precision(B)": 0.586226025410656,
+    "metrics/recall(B)": 0.5369208494208494,
+    "metrics/mAP50(B)": 0.5001147313173164,
+    "metrics/mAP50-95(B)": 0.3169626161870144,
+    "fitness": 0.3169626161870144
   }
 }

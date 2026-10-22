@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: /Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/meal-scenes-v10/initial.pt
+model: /Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/meal-scenes-v10/last_resume.pt
 data: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/meal-scenes-v10/data.yaml
 epochs: 80
 time: null
@@ -25,7 +25,7 @@ single_cls: false
 rect: false
 cos_lr: false
 close_mosaic: 10
-resume: false
+resume: /Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/meal-scenes-v10/last_resume.pt
 amp: true
 fraction: 1.0
 profile: false
