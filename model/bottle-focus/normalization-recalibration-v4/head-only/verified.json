@@ -1,0 +1,17 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/normalization-recalibration-v4/head-only/recalibrated.pt",
+  "weights_sha": "71cdde2befc512b8370b74d531644963d79e4f61db9149120b32ba4c06eb342a",
+  "AP50": 0.5151259266758084,
+  "AP50_95": 0.35516361574452404,
+  "precision": 0.4550138576067329,
+  "recall": 0.5970149253731343,
+  "imgsz": 640,
+  "batch": 4,
+  "nms_iou": 0.7,
+  "test_time_augmentation": false,
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "independent_test": false
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "training-only diagnostic; no validation images",
+  "photos": [
+    "trash_detection__test__000017_jpg.rf.fe29771db49c1aacd3097f751409a173.jpg",
+    "trash_detection__test__000023_jpg.rf.b16a9fb7e7d6693f7fd46f1d6063f56f.jpg",
+    "trash_detection__train__000001_JPG.rf.7760a277f9bc601f3820278f87951f11.jpg",
+    "trash_detection__train__000001_jpg.rf.af3c63c9f2df2b2a8183129f1a07f5ee.jpg",
+    "plate__train__lvis_000000001455.jpg",
+    "plate__train__lvis_000000004386.jpg",
+    "plate__train__lvis_000000009908.jpg",
+    "plate__train__lvis_000000011042.jpg"
+  ],
+  "models": {
+    "before": {
+      "checkpoint": "plastic-specialist-s-v3/initial.pt",
+      "mean_abs_channel_shift_in_running_std": 0.3390891876188107,
+      "mean_abs_log_variance_ratio": 0.521433815243654,
+      "observations": 384
+    },
+    "after": {
+      "checkpoint": "plastic-specialist-s-v3/last_resume.pt",
+      "mean_abs_channel_shift_in_running_std": 0.7481500119126091,
+      "mean_abs_log_variance_ratio": 0.4545132288088401,
+      "observations": 384
+    }
+  }
+}

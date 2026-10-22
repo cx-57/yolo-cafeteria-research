@@ -1,0 +1,9 @@
+{
+  "reason": "Eight completed epochs; frozen-backbone AP50 plateau after epoch 2; retain best and epoch-8 optimizer checkpoint and test unfreezing later features",
+  "completed_epochs": 8,
+  "best": {
+    "epoch": 2,
+    "AP50": 0.6718804798250907,
+    "weights_sha": "07a08ff5c0df81834283ab45d837fa3345af3f6fd1cca6a8466c13ccce24fade"
+  }
+}

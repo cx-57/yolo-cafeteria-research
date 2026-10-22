@@ -1,0 +1,17 @@
+{
+  "target": "bottle",
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/validation-now/bottle-yolo11x.pt",
+  "weights_sha": "f397b2456395fefcdd311797ded3ed6773f1d4f8ae71f1ecd854e9fff9b1de2e",
+  "split": "val",
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "imgsz": 640,
+  "test_time_augmentation": false,
+  "precision": 0.48996583377482944,
+  "recall": 0.582089552238806,
+  "AP50": 0.4020720224193248,
+  "AP50_95": 0.31361726979963295,
+  "independent_test": false
+}

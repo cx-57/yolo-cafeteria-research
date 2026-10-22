@@ -1,0 +1,31 @@
+{
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/plastic-specialist-s-v3/initial.pt",
+  "source_sha": "07a08ff5c0df81834283ab45d837fa3345af3f6fd1cca6a8466c13ccce24fade",
+  "weights_sha": "71cdde2befc512b8370b74d531644963d79e4f61db9149120b32ba4c06eb342a",
+  "training_images": 1056,
+  "validation_images_used": 0,
+  "batch": 8,
+  "batchnorm_layers": [
+    "model.23.cv2.0.0.bn",
+    "model.23.cv2.0.1.bn",
+    "model.23.cv2.1.0.bn",
+    "model.23.cv2.1.1.bn",
+    "model.23.cv2.2.0.bn",
+    "model.23.cv2.2.1.bn",
+    "model.23.cv3.0.0.0.bn",
+    "model.23.cv3.0.0.1.bn",
+    "model.23.cv3.0.1.0.bn",
+    "model.23.cv3.0.1.1.bn",
+    "model.23.cv3.1.0.0.bn",
+    "model.23.cv3.1.0.1.bn",
+    "model.23.cv3.1.1.0.bn",
+    "model.23.cv3.1.1.1.bn",
+    "model.23.cv3.2.0.0.bn",
+    "model.23.cv3.2.0.1.bn",
+    "model.23.cv3.2.1.0.bn",
+    "model.23.cv3.2.1.1.bn"
+  ],
+  "estimator": "Cumulative mean of batch statistics over one shuffled pass",
+  "learned_parameters_unchanged": true,
+  "learned_parameters_sha": "a03536ff9498ad8406f4bab236c1e80d59ba698137ba6e85ee337a36ef5c63d6"
+}

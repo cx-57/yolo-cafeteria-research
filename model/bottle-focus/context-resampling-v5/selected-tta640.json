@@ -1,0 +1,17 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/context-resampling-v5/best_bottle.pt",
+  "weights_sha": "c82beeff12003d53264e66eeb63e6126d59cb26856e839aeb526c53100e6d210",
+  "AP50": 0.7132614097315216,
+  "AP50_95": 0.5077887020756016,
+  "precision": 0.7687380376132324,
+  "recall": 0.6268656716417911,
+  "imgsz": 640,
+  "batch": 1,
+  "nms_iou": 0.7,
+  "test_time_augmentation": true,
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "independent_test": false
+}
