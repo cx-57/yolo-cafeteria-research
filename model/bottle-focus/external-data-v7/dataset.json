@@ -1,0 +1,700 @@
+{
+  "added": [
+    {
+      "id": "lvis_000000390374",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000390374.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000390374.txt",
+      "image_sha": "f6d161a70e16a4b2d066cb57b82df62137b882b6cc90d23c63307930244d3932",
+      "rows": [
+        "0 0.939804688 0.759004684 0.030546875 0.146299766"
+      ],
+      "source": {
+        "flickr_url": "http://farm6.staticflickr.com/5286/5363032674_49f3121faa_z.jpg",
+        "id": 390374,
+        "neg_category_ids": [
+          828,
+          256,
+          965,
+          5,
+          838,
+          384,
+          893,
+          1118,
+          119
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 1,
+        "coco_url": "http://images.cocodataset.org/train2017/000000390374.jpg",
+        "date_captured": "2013-11-21 20:17:50",
+        "height": 427
+      },
+      "group": "lvis_coco_390374",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000247259",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000247259.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000247259.txt",
+      "image_sha": "5de27a405a951f71186f03722f79986d0b3eb83ea233162c9cfa54962d0274fc",
+      "rows": [
+        "0 0.894390625 0.558843750 0.029000000 0.117687500",
+        "0 0.103851563 0.540052083 0.021140625 0.052270833",
+        "0 0.494460938 0.536489583 0.018265625 0.042479167"
+      ],
+      "source": {
+        "flickr_url": "http://farm4.staticflickr.com/3029/3063567245_75c0f4f324_z.jpg",
+        "id": 247259,
+        "neg_category_ids": [
+          783,
+          629,
+          759,
+          305,
+          33,
+          203,
+          62,
+          616,
+          550,
+          246,
+          161,
+          533,
+          647
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 5,
+        "coco_url": "http://images.cocodataset.org/train2017/000000247259.jpg",
+        "date_captured": "2013-11-24 05:00:17",
+        "height": 480
+      },
+      "group": "lvis_coco_247259",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000314190",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000314190.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000314190.txt",
+      "image_sha": "075f230bbee56fe42033817a034cdcca76dfcf1810701f9357dea01523fce31f",
+      "rows": [
+        "0 0.505679688 0.625925926 0.026046875 0.096920078",
+        "0 0.471242188 0.611150097 0.023609375 0.098206628",
+        "0 0.579796875 0.638226121 0.025531250 0.072514620"
+      ],
+      "source": {
+        "flickr_url": "http://farm9.staticflickr.com/8474/8093570409_aa22e4fa41_z.jpg",
+        "id": 314190,
+        "neg_category_ids": [
+          325,
+          104,
+          241,
+          1108,
+          1194,
+          1176,
+          355,
+          573,
+          336
+        ],
+        "not_exhaustive_category_ids": [
+          1052
+        ],
+        "width": 640,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000314190.jpg",
+        "date_captured": "2013-11-21 02:17:08",
+        "height": 513
+      },
+      "group": "lvis_coco_314190",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000437412",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000437412.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000437412.txt",
+      "image_sha": "bec0976ef8e4e9f5334242fe948bad90067fb30bcc2478f2776ce3098c6acc5d",
+      "rows": [
+        "0 0.895117188 0.441564706 0.209765625 0.494470588",
+        "0 0.397828125 0.074152941 0.092937500 0.148305882"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4049/4716482126_979dfa1104_z.jpg",
+        "id": 437412,
+        "neg_category_ids": [
+          218,
+          898,
+          175,
+          636,
+          7,
+          612,
+          226,
+          353,
+          18,
+          183,
+          493,
+          1090,
+          406,
+          624,
+          140,
+          627
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 2,
+        "coco_url": "http://images.cocodataset.org/train2017/000000437412.jpg",
+        "date_captured": "2013-11-21 05:36:06",
+        "height": 425
+      },
+      "group": "lvis_coco_437412",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000243824",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000243824.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000243824.txt",
+      "image_sha": "4e433ca2992e17e47b451bcd6f497be3b36c308554ffda3626fef4f993b06cf0",
+      "rows": [
+        "0 0.397867187 0.666625000 0.087484375 0.272083333"
+      ],
+      "source": {
+        "flickr_url": "http://farm4.staticflickr.com/3344/4558294944_14b1380ce2_z.jpg",
+        "id": 243824,
+        "neg_category_ids": [
+          102,
+          77,
+          263,
+          353,
+          244,
+          1012,
+          510,
+          163,
+          118
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 3,
+        "coco_url": "http://images.cocodataset.org/train2017/000000243824.jpg",
+        "date_captured": "2013-11-21 05:53:49",
+        "height": 480
+      },
+      "group": "lvis_coco_243824",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000334291",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000334291.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000334291.txt",
+      "image_sha": "5e22831a6fee616c4707957885b3f3dd28cb5158c7bd9d6217f7237dc1a2637c",
+      "rows": [
+        "0 0.061140625 0.441935146 0.043843750 0.163661088"
+      ],
+      "source": {
+        "flickr_url": "http://farm9.staticflickr.com/8219/8302017576_2620ebfc9a_z.jpg",
+        "id": 334291,
+        "neg_category_ids": [
+          828,
+          21,
+          50,
+          1020,
+          811,
+          27,
+          327,
+          419,
+          353,
+          330,
+          399,
+          708,
+          731,
+          426,
+          471,
+          97
+        ],
+        "not_exhaustive_category_ids": [
+          346,
+          793
+        ],
+        "width": 640,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000334291.jpg",
+        "date_captured": "2013-11-14 19:45:53",
+        "height": 478
+      },
+      "group": "lvis_coco_334291",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000039099",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000039099.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000039099.txt",
+      "image_sha": "f752fe43eaef8b5976c04c5ebde75488ea2ef6663b108b5ec89c1f3a83d6e0d4",
+      "rows": [
+        "0 0.526710937 0.187981221 0.034859375 0.186807512"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4104/4990766302_7b2fd4ac9a_z.jpg",
+        "id": 39099,
+        "neg_category_ids": [
+          453,
+          325,
+          435,
+          152,
+          777,
+          1104,
+          794,
+          1082,
+          936,
+          939
+        ],
+        "not_exhaustive_category_ids": [
+          45
+        ],
+        "width": 640,
+        "license": 3,
+        "coco_url": "http://images.cocodataset.org/train2017/000000039099.jpg",
+        "date_captured": "2013-11-19 18:04:40",
+        "height": 426
+      },
+      "group": "lvis_coco_39099",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000507154",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000507154.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000507154.txt",
+      "image_sha": "bbd8fbc36f7fe49e665fc4a8450a8e771f8e2e8c1a66bee9e4e016e36c61b4a3",
+      "rows": [
+        "0 0.375984375 0.320520833 0.013781250 0.037666667",
+        "0 0.721671875 0.307000000 0.011937500 0.048333333",
+        "0 0.748265625 0.209729167 0.011656250 0.028708333",
+        "0 0.412359375 0.344739583 0.016906250 0.062312500",
+        "0 0.435742187 0.758697917 0.046890625 0.184062500",
+        "0 0.982617188 0.316479167 0.032828125 0.062250000",
+        "0 0.345000000 0.337229167 0.013687500 0.061208333"
+      ],
+      "source": {
+        "flickr_url": "http://farm9.staticflickr.com/8176/8034655381_ee423544f7_z.jpg",
+        "id": 507154,
+        "neg_category_ids": [
+          451,
+          965,
+          693,
+          220,
+          901,
+          695,
+          1076,
+          417,
+          697,
+          613,
+          32,
+          990,
+          660,
+          579
+        ],
+        "not_exhaustive_category_ids": [
+          252,
+          19
+        ],
+        "width": 640,
+        "license": 5,
+        "coco_url": "http://images.cocodataset.org/train2017/000000507154.jpg",
+        "date_captured": "2013-11-25 19:25:22",
+        "height": 480
+      },
+      "group": "lvis_coco_507154",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000144438",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000144438.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000144438.txt",
+      "image_sha": "f2f52c24c4f537460c0a87d3a232c1ddb009baa4ee3079c453174094e629cbcc",
+      "rows": [
+        "0 0.040140625 0.918968750 0.080281250 0.162062500"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4081/4914852625_e248fb1c2a_z.jpg",
+        "id": 144438,
+        "neg_category_ids": [
+          99,
+          587,
+          521,
+          81,
+          716,
+          422,
+          134,
+          889,
+          314,
+          510,
+          576,
+          600,
+          624,
+          685
+        ],
+        "not_exhaustive_category_ids": [
+          157
+        ],
+        "width": 640,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000144438.jpg",
+        "date_captured": "2013-11-21 01:02:30",
+        "height": 480
+      },
+      "group": "lvis_coco_144438",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000176726",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000176726.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000176726.txt",
+      "image_sha": "4fa5d2a906534675e469cae35ea4fbe0d575edfb4cef11c6fc419ba72b0b21a8",
+      "rows": [
+        "0 0.131953125 0.163354167 0.143250000 0.244416667"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4123/4892089178_f4cb8b6c41_z.jpg",
+        "id": 176726,
+        "neg_category_ids": [
+          367,
+          301,
+          1075,
+          80,
+          956,
+          446,
+          68,
+          1203
+        ],
+        "not_exhaustive_category_ids": [
+          297
+        ],
+        "width": 640,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000176726.jpg",
+        "date_captured": "2013-11-20 12:37:34",
+        "height": 480
+      },
+      "group": "lvis_coco_176726",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000435152",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000435152.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000435152.txt",
+      "image_sha": "b2f995ecea29d58219773b15c652d41e149f5885f5bea94d8a2726e50111428a",
+      "rows": [
+        "0 0.640656250 0.094916667 0.087250000 0.189833333"
+      ],
+      "source": {
+        "flickr_url": "http://farm8.staticflickr.com/7397/9198225241_d5dd2144aa_z.jpg",
+        "id": 435152,
+        "neg_category_ids": [
+          558,
+          742,
+          720,
+          746,
+          292,
+          753,
+          497
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 1,
+        "coco_url": "http://images.cocodataset.org/train2017/000000435152.jpg",
+        "date_captured": "2013-11-24 22:59:53",
+        "height": 480
+      },
+      "group": "lvis_coco_435152",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000444028",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000444028.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000444028.txt",
+      "image_sha": "ff98d4ecb95833de83fe3c4a97f64d9b72ebb188b608dc7d80f1be70791efa0f",
+      "rows": [
+        "0 0.594273437 0.850655738 0.021171875 0.096908665",
+        "0 0.558085938 0.838255269 0.020671875 0.099320843"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4036/4513434705_cd69e2e28c_z.jpg",
+        "id": 444028,
+        "neg_category_ids": [
+          280,
+          733,
+          2,
+          75,
+          3,
+          718,
+          704,
+          116,
+          272,
+          801,
+          730,
+          191
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 3,
+        "coco_url": "http://images.cocodataset.org/train2017/000000444028.jpg",
+        "date_captured": "2013-11-18 03:34:35",
+        "height": 427
+      },
+      "group": "lvis_coco_444028",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000475533",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000475533.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000475533.txt",
+      "image_sha": "c20b02441807bfa0e25e0e744dcef22b7898c6d371ca536f5bcb7ac8a0af3b1e",
+      "rows": [
+        "0 0.272552693 0.525765625 0.083231850 0.144156250"
+      ],
+      "source": {
+        "flickr_url": "http://farm3.staticflickr.com/2854/9567750328_da390a0c52_z.jpg",
+        "id": 475533,
+        "neg_category_ids": [
+          539,
+          125,
+          1078,
+          292,
+          92,
+          213,
+          277,
+          497
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 427,
+        "license": 2,
+        "coco_url": "http://images.cocodataset.org/train2017/000000475533.jpg",
+        "date_captured": "2013-11-18 08:05:54",
+        "height": 640
+      },
+      "group": "lvis_coco_475533",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000336171",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000336171.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000336171.txt",
+      "image_sha": "20c9dca2537b2d192eac54dd53d0b163c84a3737fabbbda995461f49fc06a4ee",
+      "rows": [
+        "0 0.577716628 0.525054688 0.070000000 0.105859375",
+        "0 0.248196721 0.437203125 0.050210773 0.034406250"
+      ],
+      "source": {
+        "flickr_url": "http://farm3.staticflickr.com/2501/3960909773_d9f6d45049_z.jpg",
+        "id": 336171,
+        "neg_category_ids": [
+          1169,
+          534,
+          740,
+          29,
+          423,
+          548,
+          1084,
+          772,
+          356,
+          337,
+          362,
+          961,
+          1019
+        ],
+        "not_exhaustive_category_ids": [
+          751
+        ],
+        "width": 427,
+        "license": 1,
+        "coco_url": "http://images.cocodataset.org/train2017/000000336171.jpg",
+        "date_captured": "2013-11-24 06:00:30",
+        "height": 640
+      },
+      "group": "lvis_coco_336171",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000144431",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000144431.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000144431.txt",
+      "image_sha": "af2fc74a99760738db00e2ae2e1cd9565d5a807aa20c82977772cb8751458a4e",
+      "rows": [
+        "0 0.359218750 0.160035129 0.093437500 0.320070258"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4020/4396921779_d2b3dd856b_z.jpg",
+        "id": 144431,
+        "neg_category_ids": [
+          634,
+          28,
+          308,
+          316,
+          357,
+          750,
+          643,
+          706
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000144431.jpg",
+        "date_captured": "2013-11-23 03:05:59",
+        "height": 427
+      },
+      "group": "lvis_coco_144431",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000187952",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000187952.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000187952.txt",
+      "image_sha": "64531d1bdf8a0a6a66aad0b792a4f2bfc1da81311c2cce46d10ca8e818e5460c",
+      "rows": [
+        "0 0.404523437 0.250104167 0.031296875 0.068250000",
+        "0 0.427195313 0.259281250 0.036640625 0.050604167",
+        "0 0.584726562 0.310302083 0.037765625 0.169395833"
+      ],
+      "source": {
+        "flickr_url": "http://farm5.staticflickr.com/4099/4884638096_f1e3c895a0_z.jpg",
+        "id": 187952,
+        "neg_category_ids": [
+          896,
+          1121,
+          433,
+          947,
+          948,
+          1173,
+          268,
+          752,
+          1164
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 640,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000187952.jpg",
+        "date_captured": "2013-11-24 03:02:35",
+        "height": 480
+      },
+      "group": "lvis_coco_187952",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000377205",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000377205.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000377205.txt",
+      "image_sha": "1ed8243a808af31b9ce2b498d3e5c382f4abd563d151f59110724a8a8e7ea1a9",
+      "rows": [
+        "0 0.704941452 0.600078125 0.034379391 0.060531250",
+        "0 0.924098361 0.597148437 0.032786885 0.065890625",
+        "0 0.362751756 0.600328125 0.034262295 0.071593750"
+      ],
+      "source": {
+        "flickr_url": "http://farm8.staticflickr.com/7094/7164471065_f3527c5b28_z.jpg",
+        "id": 377205,
+        "neg_category_ids": [
+          813,
+          1191,
+          483,
+          86,
+          798,
+          891,
+          914,
+          512,
+          532,
+          1021
+        ],
+        "not_exhaustive_category_ids": [],
+        "width": 427,
+        "license": 1,
+        "coco_url": "http://images.cocodataset.org/train2017/000000377205.jpg",
+        "date_captured": "2013-11-22 21:26:22",
+        "height": 640
+      },
+      "group": "lvis_coco_377205",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000095213",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000095213.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000095213.txt",
+      "image_sha": "037c107b86df9e4e5f4c25f79af4f7c712ba0087b9d587dd6bce199305439017",
+      "rows": [
+        "0 0.164989583 0.475187500 0.024145833 0.047281250"
+      ],
+      "source": {
+        "flickr_url": "http://farm9.staticflickr.com/8245/8520807368_7a99a91939_z.jpg",
+        "id": 95213,
+        "neg_category_ids": [
+          581,
+          325,
+          173,
+          203,
+          59,
+          138,
+          774,
+          274,
+          189,
+          1019
+        ],
+        "not_exhaustive_category_ids": [
+          713
+        ],
+        "width": 480,
+        "license": 1,
+        "coco_url": "http://images.cocodataset.org/train2017/000000095213.jpg",
+        "date_captured": "2013-11-14 18:59:50",
+        "height": 640
+      },
+      "group": "lvis_coco_95213",
+      "human_verified": false
+    },
+    {
+      "id": "lvis_000000202657",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/images/train/lvis_000000202657.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-external-v7/labels/train/lvis_000000202657.txt",
+      "image_sha": "82fa232a9a08209538f1ee69c6c574f230da06cedde56a532dd7d38e1a42b19f",
+      "rows": [
+        "0 0.636191626 0.796500000 0.020016103 0.040781250"
+      ],
+      "source": {
+        "flickr_url": "http://farm1.staticflickr.com/26/42748566_37b05b3755_z.jpg",
+        "id": 202657,
+        "neg_category_ids": [
+          1096,
+          102,
+          1027,
+          153,
+          1179,
+          1180,
+          337,
+          252
+        ],
+        "not_exhaustive_category_ids": [
+          1108
+        ],
+        "width": 621,
+        "license": 4,
+        "coco_url": "http://images.cocodataset.org/train2017/000000202657.jpg",
+        "date_captured": "2013-11-18 06:13:25",
+        "height": 640
+      },
+      "group": "lvis_coco_202657",
+      "human_verified": false
+    }
+  ],
+  "added_images": 19,
+  "added_boxes": 36,
+  "training_unique_images": 1075,
+  "training_exposures": 1504,
+  "training_listing_sha": "f75bcf26a50a2bd60edf37a4a7532fbd70c91bae2a33a535ba51ee88e18319db",
+  "config": {
+    "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation",
+    "train": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/external-data-v7/training-exposures.txt",
+    "val": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val",
+    "names": [
+      "bottle"
+    ]
+  },
+  "visual_review_sha": "65180c0bd1ea6b077e62806995c066a2aea8e6250fe31248f95d2b9d06352ce9",
+  "fixed_source_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "validation_images": 246,
+  "validation_bottle_boxes": 67,
+  "independent_test": false
+}
