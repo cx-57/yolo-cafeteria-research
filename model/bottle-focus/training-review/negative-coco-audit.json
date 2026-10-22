@@ -1,0 +1,1666 @@
+{
+  "weights_sha": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+  "model_source": "COCO-pretrained YOLO11s; broad bottle category including glass",
+  "COCO_class": 39,
+  "training_negative_images": 754,
+  "original_verified_absence_flags": {
+    "False": 670,
+    "True": 84
+  },
+  "review_candidates": 75,
+  "confidence": 0.3,
+  "nms_iou": 0.7,
+  "imgsz": 640,
+  "test_time_augmentation": false,
+  "validation_used_for_selection": false,
+  "predictions_are_ground_truth": false,
+  "records": [
+    {
+      "name": "plate__train__lvis_000000444397.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000444397.jpg",
+      "sha": "0eddc76ba8b00ff1257a38df346254c7dd55469c0e04423c451f6b07ef1c82e7",
+      "boxes": [
+        {
+          "xyxy": [
+            194.6639404296875,
+            0.19842529296875,
+            337.0716552734375,
+            283.1219482421875
+          ],
+          "confidence": 0.9360244274139404
+        },
+        {
+          "xyxy": [
+            62.319793701171875,
+            0.24575042724609375,
+            104.94033813476562,
+            106.2076187133789
+          ],
+          "confidence": 0.7098764181137085
+        }
+      ],
+      "max_confidence": 0.9360244274139404,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__val__lvis_000000234091.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__val__lvis_000000234091.jpg",
+      "sha": "b386f2f6de68e44be29d9e2b4bfecb25f822a12b8af2ca51145b75dd4b95c5e3",
+      "boxes": [
+        {
+          "xyxy": [
+            309.210693359375,
+            0.7660388350486755,
+            412.861572265625,
+            340.53265380859375
+          ],
+          "confidence": 0.9180265665054321
+        }
+      ],
+      "max_confidence": 0.9180265665054321,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000113905.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000113905.jpg",
+      "sha": "5de85d6cf80e867c4135d32dae9631f6e02d09d8d90e38ada2a3998a6c67c48a",
+      "boxes": [
+        {
+          "xyxy": [
+            455.06884765625,
+            0.9287185668945312,
+            555.17822265625,
+            160.13720703125
+          ],
+          "confidence": 0.8994768261909485
+        }
+      ],
+      "max_confidence": 0.8994768261909485,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000078695.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000078695.jpg",
+      "sha": "d623ca0ec65274a41714a0051769432d613798d14ed54ccc4290a59d346a7415",
+      "boxes": [
+        {
+          "xyxy": [
+            437.76593017578125,
+            0.75262451171875,
+            616.0819702148438,
+            249.75405883789062
+          ],
+          "confidence": 0.8754904270172119
+        }
+      ],
+      "max_confidence": 0.8754904270172119,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000079754.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000079754.jpg",
+      "sha": "d6648264d4b80b23820e809e2f7bcc8fe77ab8ed230e03cfd21a0f4b7b47b999",
+      "boxes": [
+        {
+          "xyxy": [
+            0.022396087646484375,
+            342.83599853515625,
+            44.44894790649414,
+            452.8358154296875
+          ],
+          "confidence": 0.8701989054679871
+        },
+        {
+          "xyxy": [
+            124.9887924194336,
+            307.6246337890625,
+            177.05953979492188,
+            397.09844970703125
+          ],
+          "confidence": 0.604322075843811
+        },
+        {
+          "xyxy": [
+            203.1079864501953,
+            297.6451416015625,
+            228.7822723388672,
+            350.7899169921875
+          ],
+          "confidence": 0.3780829608440399
+        },
+        {
+          "xyxy": [
+            177.82644653320312,
+            313.4581298828125,
+            206.6663818359375,
+            379.019287109375
+          ],
+          "confidence": 0.32957229018211365
+        }
+      ],
+      "max_confidence": 0.8701989054679871,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000202855.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000202855.jpg",
+      "sha": "0aec2524640f4fcd03413af04e03cff090205edcff37bf030b8be824f1be39e3",
+      "boxes": [
+        {
+          "xyxy": [
+            325.6202392578125,
+            307.60650634765625,
+            356.97509765625,
+            393.68511962890625
+          ],
+          "confidence": 0.8670269250869751
+        },
+        {
+          "xyxy": [
+            45.64472961425781,
+            305.8233947753906,
+            122.57762145996094,
+            421.8122253417969
+          ],
+          "confidence": 0.7956531643867493
+        },
+        {
+          "xyxy": [
+            413.88702392578125,
+            139.28823852539062,
+            435.91790771484375,
+            191.28280639648438
+          ],
+          "confidence": 0.7552798390388489
+        },
+        {
+          "xyxy": [
+            366.3778076171875,
+            132.44522094726562,
+            391.3023681640625,
+            196.38455200195312
+          ],
+          "confidence": 0.7427857518196106
+        },
+        {
+          "xyxy": [
+            22.685035705566406,
+            336.78179931640625,
+            80.80441284179688,
+            464.79083251953125
+          ],
+          "confidence": 0.6706596612930298
+        },
+        {
+          "xyxy": [
+            345.9280700683594,
+            122.76193237304688,
+            367.7997741699219,
+            191.42123413085938
+          ],
+          "confidence": 0.6575184464454651
+        },
+        {
+          "xyxy": [
+            331.33599853515625,
+            139.71353149414062,
+            347.2100830078125,
+            179.64434814453125
+          ],
+          "confidence": 0.555973470211029
+        },
+        {
+          "xyxy": [
+            385.66339111328125,
+            132.56723022460938,
+            398.83636474609375,
+            195.435302734375
+          ],
+          "confidence": 0.3793642222881317
+        },
+        {
+          "xyxy": [
+            475.0146179199219,
+            137.98672485351562,
+            491.0962219238281,
+            172.65240478515625
+          ],
+          "confidence": 0.352224200963974
+        }
+      ],
+      "max_confidence": 0.8670269250869751,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000001455.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000001455.jpg",
+      "sha": "8f4a1d0c7aaa40a0ca0f0fd0af425d67cf60bbd956bca8fcea231a77c0a85a55",
+      "boxes": [
+        {
+          "xyxy": [
+            272.0672302246094,
+            6.271696090698242,
+            310.42315673828125,
+            94.70587158203125
+          ],
+          "confidence": 0.8637354969978333
+        }
+      ],
+      "max_confidence": 0.8637354969978333,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000309539.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000309539.jpg",
+      "sha": "f85d29cca1008481afb3dbe8b19c8509bdded534aed7597ef361e04aaade6dd7",
+      "boxes": [
+        {
+          "xyxy": [
+            566.7698974609375,
+            0.5715484619140625,
+            639.6309814453125,
+            145.12937927246094
+          ],
+          "confidence": 0.8536354303359985
+        }
+      ],
+      "max_confidence": 0.8536354303359985,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000530259.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000530259.jpg",
+      "sha": "ad35a3ad6c16d6d49af08db886ad8c824740212b3fb9bc2ec98aa80d90cc8421",
+      "boxes": [
+        {
+          "xyxy": [
+            0.1523895263671875,
+            0.6016082763671875,
+            50.50017166137695,
+            96.99909973144531
+          ],
+          "confidence": 0.8500639796257019
+        }
+      ],
+      "max_confidence": 0.8500639796257019,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000511345.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000511345.jpg",
+      "sha": "955298ab912a37c7700e124337ea0e27ede417b1d737cad11ec78daea7ed1b49",
+      "boxes": [
+        {
+          "xyxy": [
+            450.3585205078125,
+            312.6019287109375,
+            479.9932861328125,
+            410.4246826171875
+          ],
+          "confidence": 0.8417776226997375
+        },
+        {
+          "xyxy": [
+            431.05377197265625,
+            356.69073486328125,
+            453.15338134765625,
+            423.24896240234375
+          ],
+          "confidence": 0.6870508193969727
+        },
+        {
+          "xyxy": [
+            414.203369140625,
+            338.97869873046875,
+            438.502685546875,
+            407.28338623046875
+          ],
+          "confidence": 0.6490107774734497
+        },
+        {
+          "xyxy": [
+            280.93902587890625,
+            258.89447021484375,
+            296.3343505859375,
+            305.06915283203125
+          ],
+          "confidence": 0.48345503211021423
+        },
+        {
+          "xyxy": [
+            312.7721252441406,
+            257.82025146484375,
+            322.9636535644531,
+            280.44317626953125
+          ],
+          "confidence": 0.4634063243865967
+        },
+        {
+          "xyxy": [
+            44.664817810058594,
+            224.33096313476562,
+            57.355804443359375,
+            258.63079833984375
+          ],
+          "confidence": 0.4120427966117859
+        }
+      ],
+      "max_confidence": 0.8417776226997375,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000245577.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000245577.jpg",
+      "sha": "ff0c05d39c6f42c969a8e18934a632cdf20195a1113d2a0c7fb63c5478fc25b3",
+      "boxes": [
+        {
+          "xyxy": [
+            460.8655700683594,
+            22.388671875,
+            639.8140869140625,
+            171.70001220703125
+          ],
+          "confidence": 0.8251405954360962
+        }
+      ],
+      "max_confidence": 0.8251405954360962,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000336954.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000336954.jpg",
+      "sha": "fa4159ef635a614b9aa60cd39e1b25f8ba7d51db6dd4f87b37c7a6188725e882",
+      "boxes": [
+        {
+          "xyxy": [
+            338.12493896484375,
+            87.00730895996094,
+            457.46099853515625,
+            244.2307586669922
+          ],
+          "confidence": 0.8240954875946045
+        },
+        {
+          "xyxy": [
+            332.70745849609375,
+            0.28973388671875,
+            479.98992919921875,
+            96.71422576904297
+          ],
+          "confidence": 0.6020707488059998
+        }
+      ],
+      "max_confidence": 0.8240954875946045,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000540059.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000540059.jpg",
+      "sha": "0ed419d4e4d25ab0460ede630d6a29d9d6d4f2bc0b8e6d6d5f7fe328e99a0b1a",
+      "boxes": [
+        {
+          "xyxy": [
+            21.682785034179688,
+            308.374755859375,
+            59.05012512207031,
+            396.50555419921875
+          ],
+          "confidence": 0.8204920291900635
+        }
+      ],
+      "max_confidence": 0.8204920291900635,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000075628.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000075628.jpg",
+      "sha": "4f1c78e84b0830581ffbbe49f65b6e15f446424baaca41cad2171faf4e2a188c",
+      "boxes": [
+        {
+          "xyxy": [
+            604.2811279296875,
+            0.65911865234375,
+            639.8074951171875,
+            100.711669921875
+          ],
+          "confidence": 0.8167750239372253
+        }
+      ],
+      "max_confidence": 0.8167750239372253,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "dry_wet_waste__test__plastic463_jpg.rf.cff69e0781d9a0179913eba8db95dca5.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__test__plastic463_jpg.rf.cff69e0781d9a0179913eba8db95dca5.jpg",
+      "sha": "f724a716f553080033e39506eaa55b960e713670f38dfaaf84286a4a70166d8e",
+      "boxes": [
+        {
+          "xyxy": [
+            179.48597717285156,
+            140.9907989501953,
+            377.06939697265625,
+            383.42108154296875
+          ],
+          "confidence": 0.8004034161567688
+        }
+      ],
+      "max_confidence": 0.8004034161567688,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000560532.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000560532.jpg",
+      "sha": "3e13df26af69c135e00f8d3b3d1d3421966432c24c1210752c10743d73bb6b8c",
+      "boxes": [
+        {
+          "xyxy": [
+            565.1168212890625,
+            0.538330078125,
+            639.6925048828125,
+            148.65237426757812
+          ],
+          "confidence": 0.8000755310058594
+        }
+      ],
+      "max_confidence": 0.8000755310058594,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000580685.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000580685.jpg",
+      "sha": "e32bdf6a674c842465d53fb07e900c6d96948690bd8d062dc5f83407cccd4087",
+      "boxes": [
+        {
+          "xyxy": [
+            498.5050048828125,
+            31.47125244140625,
+            600.4771728515625,
+            203.208984375
+          ],
+          "confidence": 0.7857558727264404
+        }
+      ],
+      "max_confidence": 0.7857558727264404,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000106272.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000106272.jpg",
+      "sha": "4d858894c996edbef123530bb8fb5c5a8431565239107532e023acdc0ce839b9",
+      "boxes": [
+        {
+          "xyxy": [
+            323.55010986328125,
+            337.06927490234375,
+            378.15740966796875,
+            425.665283203125
+          ],
+          "confidence": 0.7844591736793518
+        },
+        {
+          "xyxy": [
+            491.7293701171875,
+            311.87713623046875,
+            543.53125,
+            399.34515380859375
+          ],
+          "confidence": 0.7157378792762756
+        }
+      ],
+      "max_confidence": 0.7844591736793518,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "condiments__valid__464161_0_jpg.rf.4a614ec1409421f983f4e75fc04b05e3.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464161_0_jpg.rf.4a614ec1409421f983f4e75fc04b05e3.jpg",
+      "sha": "54e46138bf68f55b9553d242ee9c19255c4ca87cc94cd279378339ec5f4bb524",
+      "boxes": [
+        {
+          "xyxy": [
+            392.9499206542969,
+            680.4005737304688,
+            885.3552856445312,
+            1358.521484375
+          ],
+          "confidence": 0.7823318243026733
+        }
+      ],
+      "max_confidence": 0.7823318243026733,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000324338.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000324338.jpg",
+      "sha": "8a1fddeedade85e76caa463b1c9ff86da8ecf5d03b1efcd73f27508a96260e69",
+      "boxes": [
+        {
+          "xyxy": [
+            371.7366943359375,
+            172.1176300048828,
+            400.2845458984375,
+            240.87847900390625
+          ],
+          "confidence": 0.7759286165237427
+        }
+      ],
+      "max_confidence": 0.7759286165237427,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000125597.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000125597.jpg",
+      "sha": "68288f26327bfd7c9e5ad322a3aac270b120642e246b31c59c37761242a5c47a",
+      "boxes": [
+        {
+          "xyxy": [
+            122.73214721679688,
+            21.43243408203125,
+            194.5869140625,
+            203.88482666015625
+          ],
+          "confidence": 0.763960063457489
+        }
+      ],
+      "max_confidence": 0.763960063457489,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "trash_detection__train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg",
+      "sha": "e75991e78b2fd6b16b832f22ad0ee4ed4d86d75e295097f620a13dfb6c1e3c5f",
+      "boxes": [
+        {
+          "xyxy": [
+            154.7672119140625,
+            287.8228454589844,
+            186.0714111328125,
+            368.6064758300781
+          ],
+          "confidence": 0.7494852542877197
+        },
+        {
+          "xyxy": [
+            265.30548095703125,
+            286.108154296875,
+            297.62103271484375,
+            380.3228759765625
+          ],
+          "confidence": 0.6093772649765015
+        },
+        {
+          "xyxy": [
+            373.2705383300781,
+            275.2260437011719,
+            402.0802307128906,
+            401.4202575683594
+          ],
+          "confidence": 0.5764819383621216
+        },
+        {
+          "xyxy": [
+            409.4815368652344,
+            309.96112060546875,
+            449.8982238769531,
+            400.03460693359375
+          ],
+          "confidence": 0.43644940853118896
+        },
+        {
+          "xyxy": [
+            211.54449462890625,
+            279.17779541015625,
+            240.20208740234375,
+            378.12628173828125
+          ],
+          "confidence": 0.41537654399871826
+        },
+        {
+          "xyxy": [
+            240.24526977539062,
+            302.7369384765625,
+            267.1441345214844,
+            380.2825927734375
+          ],
+          "confidence": 0.35905593633651733
+        },
+        {
+          "xyxy": [
+            185.68324279785156,
+            279.0076904296875,
+            214.23316955566406,
+            367.13543701171875
+          ],
+          "confidence": 0.3240112364292145
+        },
+        {
+          "xyxy": [
+            316.57220458984375,
+            277.48681640625,
+            346.19744873046875,
+            382.4161376953125
+          ],
+          "confidence": 0.3165217339992523
+        }
+      ],
+      "max_confidence": 0.7494852542877197,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010069000_jpg.rf.89148db6509d73cda216904a95a6786b.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010069000_jpg.rf.89148db6509d73cda216904a95a6786b.jpg",
+      "sha": "864aa1bd5b95a8636f7921caf8390d9fbda6089bc51d2bc868f2226451673279",
+      "boxes": [
+        {
+          "xyxy": [
+            294.91900634765625,
+            0.3038734495639801,
+            379.333251953125,
+            69.41065979003906
+          ],
+          "confidence": 0.7452390789985657
+        }
+      ],
+      "max_confidence": 0.7452390789985657,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__024424000_jpg.rf.fbe45a51dc1ae2a4ae1bf142720a2da3.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__024424000_jpg.rf.fbe45a51dc1ae2a4ae1bf142720a2da3.jpg",
+      "sha": "de28a6eae594b5fab5d805aba4e21f6753adcf28fde3ffbc67a1e7dced629195",
+      "boxes": [
+        {
+          "xyxy": [
+            316.53509521484375,
+            14.063894271850586,
+            406.3291320800781,
+            108.7739028930664
+          ],
+          "confidence": 0.735664427280426
+        }
+      ],
+      "max_confidence": 0.735664427280426,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000421639.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000421639.jpg",
+      "sha": "84945ad9c35c90218309717ddcb24c0c94205be7524359b1a3d7b8c02837e7e2",
+      "boxes": [
+        {
+          "xyxy": [
+            580.1156005859375,
+            92.62872314453125,
+            639.7996826171875,
+            259.42413330078125
+          ],
+          "confidence": 0.7336171865463257
+        },
+        {
+          "xyxy": [
+            476.0307922363281,
+            43.314544677734375,
+            562.725830078125,
+            194.943115234375
+          ],
+          "confidence": 0.4920008182525635
+        },
+        {
+          "xyxy": [
+            476.6453857421875,
+            8.634483337402344,
+            583.4569091796875,
+            195.61563110351562
+          ],
+          "confidence": 0.39335110783576965
+        }
+      ],
+      "max_confidence": 0.7336171865463257,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000553075.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000553075.jpg",
+      "sha": "8a9bae48825a56b86918cdc77dd66f991c4b8e43b9b9225b62651f886beb6194",
+      "boxes": [
+        {
+          "xyxy": [
+            0.06963610649108887,
+            0.39190053939819336,
+            67.71354675292969,
+            79.33796691894531
+          ],
+          "confidence": 0.7124850749969482
+        }
+      ],
+      "max_confidence": 0.7124850749969482,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000203734.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000203734.jpg",
+      "sha": "4dd1a31ae340c2b8363d8e17b5effbbf3b77274c4e93ea6f82a1291fbb836dd3",
+      "boxes": [
+        {
+          "xyxy": [
+            0.10135078430175781,
+            430.90289306640625,
+            18.858116149902344,
+            476.61175537109375
+          ],
+          "confidence": 0.7119398713111877
+        }
+      ],
+      "max_confidence": 0.7119398713111877,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000140304.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000140304.jpg",
+      "sha": "1d199aef31ad87a3391472def7b5a0149a9a7a97588fc830a7db35b876af970b",
+      "boxes": [
+        {
+          "xyxy": [
+            48.469913482666016,
+            63.306976318359375,
+            141.0341796875,
+            170.11502075195312
+          ],
+          "confidence": 0.6933429837226868
+        },
+        {
+          "xyxy": [
+            0.0,
+            116.81889343261719,
+            95.65069580078125,
+            225.80596923828125
+          ],
+          "confidence": 0.6661299467086792
+        }
+      ],
+      "max_confidence": 0.6933429837226868,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000559247.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000559247.jpg",
+      "sha": "84fa11ae6278b2d958373bb6072b1a84552bcece84f530d61819c845b55ef5e4",
+      "boxes": [
+        {
+          "xyxy": [
+            432.0051574707031,
+            271.5753173828125,
+            452.9924011230469,
+            318.55224609375
+          ],
+          "confidence": 0.6894463300704956
+        }
+      ],
+      "max_confidence": 0.6894463300704956,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000039446.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000039446.jpg",
+      "sha": "48b0253c37cb2db9f7a2b9cc10f363d699f9d9f7ded9fc50e81b4f14e0490055",
+      "boxes": [
+        {
+          "xyxy": [
+            347.2872314453125,
+            336.9818115234375,
+            370.50048828125,
+            388.1805419921875
+          ],
+          "confidence": 0.6840229034423828
+        }
+      ],
+      "max_confidence": 0.6840229034423828,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010261000_jpg.rf.584af80ad5af6e4fbe3b094b229712f6.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010261000_jpg.rf.584af80ad5af6e4fbe3b094b229712f6.jpg",
+      "sha": "14e98c79817ce397ab9c0eacd0cc36441a8544d73c2ce2ed321813171f177228",
+      "boxes": [
+        {
+          "xyxy": [
+            293.5169982910156,
+            0.16910399496555328,
+            368.9302978515625,
+            97.73992919921875
+          ],
+          "confidence": 0.6791541576385498
+        }
+      ],
+      "max_confidence": 0.6791541576385498,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000564337.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000564337.jpg",
+      "sha": "3907593d345a92626a60e10af669e68283beceb0f2da9c644079b120bb7cba62",
+      "boxes": [
+        {
+          "xyxy": [
+            351.620361328125,
+            143.40972900390625,
+            461.60540771484375,
+            295.9963073730469
+          ],
+          "confidence": 0.659008800983429
+        },
+        {
+          "xyxy": [
+            72.00933837890625,
+            49.275390625,
+            181.5946044921875,
+            268.49383544921875
+          ],
+          "confidence": 0.3237779438495636
+        }
+      ],
+      "max_confidence": 0.659008800983429,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+      "sha": "4809d665a107fd22c17da5abe69ad0bf4036d667f022306af9341bd7aac38638",
+      "boxes": [
+        {
+          "xyxy": [
+            154.89794921875,
+            444.26763916015625,
+            278.36602783203125,
+            519.2507934570312
+          ],
+          "confidence": 0.6509085893630981
+        }
+      ],
+      "max_confidence": 0.6509085893630981,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000241408.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000241408.jpg",
+      "sha": "04040107bae7675a2ce9ed128521a01a09a06c52a5de7e7b3822803790ce08cc",
+      "boxes": [
+        {
+          "xyxy": [
+            606.5736694335938,
+            163.51931762695312,
+            638.3269653320312,
+            211.27291870117188
+          ],
+          "confidence": 0.6405128836631775
+        },
+        {
+          "xyxy": [
+            52.981658935546875,
+            105.17524719238281,
+            66.57743072509766,
+            145.35487365722656
+          ],
+          "confidence": 0.5574162006378174
+        },
+        {
+          "xyxy": [
+            63.98987579345703,
+            162.9463653564453,
+            116.81005096435547,
+            240.92352294921875
+          ],
+          "confidence": 0.48991575837135315
+        }
+      ],
+      "max_confidence": 0.6405128836631775,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010261001_jpg.rf.b4167ca47daa172fdb53cec73400ae6a.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010261001_jpg.rf.b4167ca47daa172fdb53cec73400ae6a.jpg",
+      "sha": "cd68436ef495352c8eec30ec6974a6af59262c7b6a75bbfec084cd509f3ff421",
+      "boxes": [
+        {
+          "xyxy": [
+            304.8634948730469,
+            0.1733551025390625,
+            391.43328857421875,
+            111.77658081054688
+          ],
+          "confidence": 0.6266544461250305
+        }
+      ],
+      "max_confidence": 0.6266544461250305,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__024505002_jpg.rf.ae4f7f9fb9846995530a8963de8561d6.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__024505002_jpg.rf.ae4f7f9fb9846995530a8963de8561d6.jpg",
+      "sha": "57136a9f610c9e0e28f84025c300027fdae04622a231b02f70c7d17f29dc905b",
+      "boxes": [
+        {
+          "xyxy": [
+            322.3187255859375,
+            17.356775283813477,
+            411.0452575683594,
+            110.78273010253906
+          ],
+          "confidence": 0.6263523101806641
+        }
+      ],
+      "max_confidence": 0.6263523101806641,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010410001_jpg.rf.1b0e5d4ceaa3dc8f2187489e7a566130.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010410001_jpg.rf.1b0e5d4ceaa3dc8f2187489e7a566130.jpg",
+      "sha": "2f62c1d4037bcb91439358922225d6a91bf1cc7d94c253c586ecf6304e38d348",
+      "boxes": [
+        {
+          "xyxy": [
+            333.4102783203125,
+            0.2564544677734375,
+            439.7708740234375,
+            158.03944396972656
+          ],
+          "confidence": 0.6154826879501343
+        }
+      ],
+      "max_confidence": 0.6154826879501343,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010102001_jpg.rf.3cef8fa8ac291fce7b172ee08eff0ded.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010102001_jpg.rf.3cef8fa8ac291fce7b172ee08eff0ded.jpg",
+      "sha": "a77ceeeb6d1a99a5ad70df732136d905bdbfb5261cb544c09aa6a1ce5704cace",
+      "boxes": [
+        {
+          "xyxy": [
+            294.2355651855469,
+            0.261709600687027,
+            399.330322265625,
+            81.98845672607422
+          ],
+          "confidence": 0.5901805758476257
+        }
+      ],
+      "max_confidence": 0.5901805758476257,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0035_jpg.rf.1057949c7e95e99579a92862306bd901.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0035_jpg.rf.1057949c7e95e99579a92862306bd901.jpg",
+      "sha": "4da4a17e3a078d7c24a09c4af4c524f451e28987536cad54a6396d5c70fc48e9",
+      "boxes": [
+        {
+          "xyxy": [
+            677.504150390625,
+            279.0282897949219,
+            1227.0867919921875,
+            719.8414306640625
+          ],
+          "confidence": 0.5886672139167786
+        }
+      ],
+      "max_confidence": 0.5886672139167786,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__023480000_jpg.rf.5135d413221817ad177d7fa89c8f08f7.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__023480000_jpg.rf.5135d413221817ad177d7fa89c8f08f7.jpg",
+      "sha": "aa96adc0296c8e930160fcbe16af88899a5bb9b6b5f43cb35b8d20971fa74da1",
+      "boxes": [
+        {
+          "xyxy": [
+            312.64703369140625,
+            38.897178649902344,
+            399.5557861328125,
+            128.57135009765625
+          ],
+          "confidence": 0.5685169100761414
+        }
+      ],
+      "max_confidence": 0.5685169100761414,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000034056.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000034056.jpg",
+      "sha": "52de80d82d576dd2406d3e166c0d41769eeaf8dd60e2712ca655365f0a3ee7c7",
+      "boxes": [
+        {
+          "xyxy": [
+            0.0,
+            384.1961669921875,
+            27.333251953125,
+            458.2901611328125
+          ],
+          "confidence": 0.5490699410438538
+        }
+      ],
+      "max_confidence": 0.5490699410438538,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000230745.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000230745.jpg",
+      "sha": "9213832444b096af533b84f9df3231e315dd609bc5b0a074d0359b1d81d65dec",
+      "boxes": [
+        {
+          "xyxy": [
+            483.98028564453125,
+            278.2188720703125,
+            519.6550903320312,
+            388.593505859375
+          ],
+          "confidence": 0.5423626899719238
+        }
+      ],
+      "max_confidence": 0.5423626899719238,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "food_american__test__images_jpg.rf.2e1375c3d05007414011f60f20dd3797.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__test__images_jpg.rf.2e1375c3d05007414011f60f20dd3797.jpg",
+      "sha": "0f3c95af765b504c931780837dc900452d9a42411f5afb9337be2c908f0701e7",
+      "boxes": [
+        {
+          "xyxy": [
+            10.443209648132324,
+            0.09418100863695145,
+            66.71451568603516,
+            77.23621368408203
+          ],
+          "confidence": 0.5353325605392456
+        }
+      ],
+      "max_confidence": 0.5353325605392456,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "waste_detection_v3__train__2024-02-05_12-22-34_000_mov-0005_jpg.rf.9c053fc301d2f3d44e00e677afe4f4d8.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-22-34_000_mov-0005_jpg.rf.9c053fc301d2f3d44e00e677afe4f4d8.jpg",
+      "sha": "d9d4fab45772ab134bb7aeb2be0160e999a3782624b287d8c616103c0d4e11ea",
+      "boxes": [
+        {
+          "xyxy": [
+            552.1148071289062,
+            194.28416442871094,
+            1914.82958984375,
+            722.585693359375
+          ],
+          "confidence": 0.5019831657409668
+        }
+      ],
+      "max_confidence": 0.5019831657409668,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010606000_jpg.rf.2ea5035c26df46fbe10632e60d0a92b6.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010606000_jpg.rf.2ea5035c26df46fbe10632e60d0a92b6.jpg",
+      "sha": "8b6e1d7b7a401221702de7a1759a325082f06aefa8d54e9047dc860fe5366fd0",
+      "boxes": [
+        {
+          "xyxy": [
+            314.2571105957031,
+            0.1372634917497635,
+            403.67022705078125,
+            89.257080078125
+          ],
+          "confidence": 0.5014328956604004
+        }
+      ],
+      "max_confidence": 0.5014328956604004,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010715001_jpg.rf.9472cded8b43324174a4ec3b559087dc.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010715001_jpg.rf.9472cded8b43324174a4ec3b559087dc.jpg",
+      "sha": "c7f13311508b989802ca9cdebc8d892c10b28e47bdeb347d07ef8a903437e365",
+      "boxes": [
+        {
+          "xyxy": [
+            291.95745849609375,
+            0.24173583090305328,
+            391.886474609375,
+            114.3677978515625
+          ],
+          "confidence": 0.498503178358078
+        }
+      ],
+      "max_confidence": 0.498503178358078,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__011003001_jpg.rf.5c5b352dd6a7a8a143e6665aa8f9a0f3.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__011003001_jpg.rf.5c5b352dd6a7a8a143e6665aa8f9a0f3.jpg",
+      "sha": "74c154dd8f626704f028f82561da62ed2d4abb270cc8c50aca6e1f05a227ac16",
+      "boxes": [
+        {
+          "xyxy": [
+            284.4053649902344,
+            0.12291869521141052,
+            378.16693115234375,
+            135.7109832763672
+          ],
+          "confidence": 0.49018576741218567
+        }
+      ],
+      "max_confidence": 0.49018576741218567,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__025014002_jpg.rf.d1c79ebdf91a1613f7a46a5c7c46e73b.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__025014002_jpg.rf.d1c79ebdf91a1613f7a46a5c7c46e73b.jpg",
+      "sha": "9b9cff5c0e2c6a5dc8225d7252f84987bb1a0248e6bd58f70245f2fe76684783",
+      "boxes": [
+        {
+          "xyxy": [
+            321.1969299316406,
+            34.60746765136719,
+            404.0162048339844,
+            118.43001556396484
+          ],
+          "confidence": 0.4801585078239441
+        }
+      ],
+      "max_confidence": 0.4801585078239441,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000538368.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000538368.jpg",
+      "sha": "d06424c046b197dc61f4d5bd86eb23402538f6182ed462d2e2c3d4b36542e6a7",
+      "boxes": [
+        {
+          "xyxy": [
+            329.7967224121094,
+            50.747703552246094,
+            402.3474426269531,
+            141.53353881835938
+          ],
+          "confidence": 0.47598448395729065
+        }
+      ],
+      "max_confidence": 0.47598448395729065,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__val__lvis_000000356276.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__val__lvis_000000356276.jpg",
+      "sha": "92e0c405f3afcc6663dc6b91fd90969b51d409285183190a0de0b2d7a787c7a1",
+      "boxes": [
+        {
+          "xyxy": [
+            451.3931884765625,
+            1.2158393859863281,
+            499.87322998046875,
+            119.34078216552734
+          ],
+          "confidence": 0.4638730585575104
+        }
+      ],
+      "max_confidence": 0.4638730585575104,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010210001_jpg.rf.3f17d1616e4ee006e5cde507ce18691c.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010210001_jpg.rf.3f17d1616e4ee006e5cde507ce18691c.jpg",
+      "sha": "c65d720e712fbff49324404b40dfd8bebb10765099a06ca0d0180c1d34599fa1",
+      "boxes": [
+        {
+          "xyxy": [
+            311.7800598144531,
+            0.22648315131664276,
+            398.42218017578125,
+            113.10091400146484
+          ],
+          "confidence": 0.4327925145626068
+        }
+      ],
+      "max_confidence": 0.4327925145626068,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000516828.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000516828.jpg",
+      "sha": "fa7a7e52540c758207cf74052c49504104572870a26fb5df5f3dfea73d8ffe2a",
+      "boxes": [
+        {
+          "xyxy": [
+            0.3027629554271698,
+            1.2258554697036743,
+            46.50407409667969,
+            125.18987274169922
+          ],
+          "confidence": 0.4314208924770355
+        }
+      ],
+      "max_confidence": 0.4314208924770355,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000174888.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000174888.jpg",
+      "sha": "4d57e0b2e7e457460ea0ecbf3248f9ac18a2644403be2882bf09952043de020d",
+      "boxes": [
+        {
+          "xyxy": [
+            84.59786224365234,
+            373.85333251953125,
+            97.27347564697266,
+            413.93463134765625
+          ],
+          "confidence": 0.4240802824497223
+        },
+        {
+          "xyxy": [
+            52.02582550048828,
+            377.4949035644531,
+            67.85550689697266,
+            418.1683044433594
+          ],
+          "confidence": 0.32630079984664917
+        }
+      ],
+      "max_confidence": 0.4240802824497223,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0092_jpg.rf.75023d061b8ce5ea3d6541efcc2a9255.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0092_jpg.rf.75023d061b8ce5ea3d6541efcc2a9255.jpg",
+      "sha": "0f1a6d8ebf52bc6d2d62d3620abb3a1b6285668576a3f6314fcc80bcd4f2ce52",
+      "boxes": [
+        {
+          "xyxy": [
+            517.4185180664062,
+            265.4772644042969,
+            1444.6512451171875,
+            987.4443969726562
+          ],
+          "confidence": 0.4144912362098694
+        }
+      ],
+      "max_confidence": 0.4144912362098694,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010330000_jpg.rf.7a709c66f432cb127456cdbd770200f8.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010330000_jpg.rf.7a709c66f432cb127456cdbd770200f8.jpg",
+      "sha": "45cd88af19b33c89b4f588c18ee9cfe30cf97df91d7540bdf82abfac71ce418c",
+      "boxes": [
+        {
+          "xyxy": [
+            325.07843017578125,
+            0.3914962708950043,
+            416.8919982910156,
+            77.54084777832031
+          ],
+          "confidence": 0.40561264753341675
+        }
+      ],
+      "max_confidence": 0.40561264753341675,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__024261000_jpg.rf.893f42d91298d780765d0194dc9b6d10.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__024261000_jpg.rf.893f42d91298d780765d0194dc9b6d10.jpg",
+      "sha": "bb61fb4ccbdff2ce22ff371c011fb8fc53e0369259828db4371a47362850e1db",
+      "boxes": [
+        {
+          "xyxy": [
+            323.1756591796875,
+            18.748188018798828,
+            409.2490234375,
+            111.54267120361328
+          ],
+          "confidence": 0.4037649631500244
+        }
+      ],
+      "max_confidence": 0.4037649631500244,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010360000_jpg.rf.530b88f466564132f4a94e95d816457a.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010360000_jpg.rf.530b88f466564132f4a94e95d816457a.jpg",
+      "sha": "0c1ebe2930f66521032785ef21cf5b6b0b18c750a56f3504e40630f6f74dff92",
+      "boxes": [
+        {
+          "xyxy": [
+            320.8385925292969,
+            0.2144828736782074,
+            409.3863525390625,
+            76.18317413330078
+          ],
+          "confidence": 0.40250611305236816
+        }
+      ],
+      "max_confidence": 0.40250611305236816,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010376000_jpg.rf.739098b91a77d099ef761419ee0500f3.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010376000_jpg.rf.739098b91a77d099ef761419ee0500f3.jpg",
+      "sha": "7867381f29ef8fe6dc1fa5c0c32bcb3660cb87fdf18b702cbca8f29f3f854b9d",
+      "boxes": [
+        {
+          "xyxy": [
+            317.8575134277344,
+            0.312124639749527,
+            406.6612854003906,
+            76.01229858398438
+          ],
+          "confidence": 0.39691388607025146
+        }
+      ],
+      "max_confidence": 0.39691388607025146,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010245001_jpg.rf.84a11771df684b810bfaaf3cf8aa5f44.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010245001_jpg.rf.84a11771df684b810bfaaf3cf8aa5f44.jpg",
+      "sha": "581e0efb206053509530ee230ad089e926d3ef34ee4aec265d8b4e46eaa56d19",
+      "boxes": [
+        {
+          "xyxy": [
+            306.8404846191406,
+            0.15955504775047302,
+            393.2853698730469,
+            107.7562026977539
+          ],
+          "confidence": 0.3941073417663574
+        }
+      ],
+      "max_confidence": 0.3941073417663574,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010669000_jpg.rf.49928d8ef0426161f9d1e2765d3c6129.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010669000_jpg.rf.49928d8ef0426161f9d1e2765d3c6129.jpg",
+      "sha": "678fd043aa4fb04aaa349dbb847e01b9527e770f889fda5b3324c2fa5b14129c",
+      "boxes": [
+        {
+          "xyxy": [
+            307.90484619140625,
+            0.21249084174633026,
+            390.5809326171875,
+            78.12223815917969
+          ],
+          "confidence": 0.3928319215774536
+        }
+      ],
+      "max_confidence": 0.3928319215774536,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010210000_jpg.rf.7786e2eee6df5968cb3b9cd0990a1818.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010210000_jpg.rf.7786e2eee6df5968cb3b9cd0990a1818.jpg",
+      "sha": "b48685509c099846be6bb47fcda326c7cd0b672fe7339519d95443dfeeadd779",
+      "boxes": [
+        {
+          "xyxy": [
+            309.81744384765625,
+            0.17297057807445526,
+            406.44744873046875,
+            110.45386505126953
+          ],
+          "confidence": 0.3810688555240631
+        }
+      ],
+      "max_confidence": 0.3810688555240631,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010418000_jpg.rf.809aa7bc05332430c4ec61f5f9f680dd.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010418000_jpg.rf.809aa7bc05332430c4ec61f5f9f680dd.jpg",
+      "sha": "5910e16123dedd9e6017fc3f12e35f33f7100d727531e939f467d1f22665cbae",
+      "boxes": [
+        {
+          "xyxy": [
+            315.7666320800781,
+            0.21481932699680328,
+            407.3787841796875,
+            99.83134460449219
+          ],
+          "confidence": 0.3796676695346832
+        }
+      ],
+      "max_confidence": 0.3796676695346832,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "trash_detection__valid__000072_JPG.rf.57d2f9a3608df138c2f5bc7f26a8c7c5.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__valid__000072_JPG.rf.57d2f9a3608df138c2f5bc7f26a8c7c5.jpg",
+      "sha": "316b01b825c3159bdd8632255059235abec70441d94ba57879890e08f8889dfa",
+      "boxes": [
+        {
+          "xyxy": [
+            182.87451171875,
+            254.39352416992188,
+            364.5347900390625,
+            370.5064392089844
+          ],
+          "confidence": 0.3722633719444275
+        }
+      ],
+      "max_confidence": 0.3722633719444275,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010346000_jpg.rf.df89ffdfe42f663a95f656a7c88af663.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010346000_jpg.rf.df89ffdfe42f663a95f656a7c88af663.jpg",
+      "sha": "8c4656343bce3e430b018e2e3d338917ee80a20df0c8035142e4785fcf742da3",
+      "boxes": [
+        {
+          "xyxy": [
+            311.48175048828125,
+            0.10899047553539276,
+            409.2204284667969,
+            92.82762145996094
+          ],
+          "confidence": 0.3637188673019409
+        }
+      ],
+      "max_confidence": 0.3637188673019409,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "trash_detection__train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg",
+      "sha": "7118972d951be38c80c4725b4905626875ccc9eb52122250a4028ea36c48f10b",
+      "boxes": [
+        {
+          "xyxy": [
+            319.40692138671875,
+            386.818115234375,
+            471.98126220703125,
+            472.40283203125
+          ],
+          "confidence": 0.3566087782382965
+        }
+      ],
+      "max_confidence": 0.3566087782382965,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__023530002_jpg.rf.9a036496a8afc9f022628b8e7517da8c.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__023530002_jpg.rf.9a036496a8afc9f022628b8e7517da8c.jpg",
+      "sha": "1ee02d96562fd281104e9e22df45e0a52bb54b9a46c6254ccd4d00b0f7042891",
+      "boxes": [
+        {
+          "xyxy": [
+            60.24427032470703,
+            0.3730926513671875,
+            174.8335723876953,
+            228.06536865234375
+          ],
+          "confidence": 0.3478425145149231
+        }
+      ],
+      "max_confidence": 0.3478425145149231,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch_asian__010232000_jpg.rf.75aad2a7f8eea02350f248982b7f45f2.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch_asian__010232000_jpg.rf.75aad2a7f8eea02350f248982b7f45f2.jpg",
+      "sha": "a61c459909aa9e88d4746efed9c645344afe58f9bfdb4b986bf46fb6dbedca01",
+      "boxes": [
+        {
+          "xyxy": [
+            327.3051452636719,
+            0.2898757755756378,
+            443.3001403808594,
+            144.62252807617188
+          ],
+          "confidence": 0.34359097480773926
+        }
+      ],
+      "max_confidence": 0.34359097480773926,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000127339.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000127339.jpg",
+      "sha": "7d16b189ffcafb718cdde7a9a6ccb751d6df5051bfefecb7ddd2cb5ec92c55d4",
+      "boxes": [
+        {
+          "xyxy": [
+            18.586349487304688,
+            90.8013916015625,
+            90.15406799316406,
+            201.8681640625
+          ],
+          "confidence": 0.34060126543045044
+        }
+      ],
+      "max_confidence": 0.34060126543045044,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__010733001_jpg.rf.07744f242e1a9247bfe5c5d66993fb81.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__010733001_jpg.rf.07744f242e1a9247bfe5c5d66993fb81.jpg",
+      "sha": "3a044313a47f2d30868da87dbdd6c382e106673375f0be5ee05f4d42bb579a85",
+      "boxes": [
+        {
+          "xyxy": [
+            270.19342041015625,
+            0.207203671336174,
+            344.1888122558594,
+            102.40782928466797
+          ],
+          "confidence": 0.33463403582572937
+        }
+      ],
+      "max_confidence": 0.33463403582572937,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000066129.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000066129.jpg",
+      "sha": "d510e36300c8da5274ed0f2057d43fa5e367ff1bc11a638ec23a839a0f7c8c42",
+      "boxes": [
+        {
+          "xyxy": [
+            8.64780044555664,
+            105.87655639648438,
+            57.59609603881836,
+            195.03250122070312
+          ],
+          "confidence": 0.3335634469985962
+        }
+      ],
+      "max_confidence": 0.3335634469985962,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "condiments__train__464148_0_jpg.rf.c0bd0088d5eebbe7b724909eea7941b3.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464148_0_jpg.rf.c0bd0088d5eebbe7b724909eea7941b3.jpg",
+      "sha": "24a1983654280ce5bec1061fe037f6d5f3fc084ece96ee7bb1485baeb84fcb4e",
+      "boxes": [
+        {
+          "xyxy": [
+            434.7912902832031,
+            483.88836669921875,
+            704.8768310546875,
+            1062.0504150390625
+          ],
+          "confidence": 0.3162574768066406
+        }
+      ],
+      "max_confidence": 0.3162574768066406,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__train__lvis_000000368986.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000368986.jpg",
+      "sha": "714996f2af6fcb942179e0047d6b0f3bd552834aad082e5d32a39642ae802630",
+      "boxes": [
+        {
+          "xyxy": [
+            620.3114013671875,
+            69.52590942382812,
+            639.7547607421875,
+            227.80401611328125
+          ],
+          "confidence": 0.3147599697113037
+        }
+      ],
+      "max_confidence": 0.3147599697113037,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__011115001_jpg.rf.43de0bcb8e07f73f018051aaaf277be9.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__011115001_jpg.rf.43de0bcb8e07f73f018051aaaf277be9.jpg",
+      "sha": "d14b180342eb263a6f19ba0b667ba815ad1f5f2ed56bf9796635165e141be957",
+      "boxes": [
+        {
+          "xyxy": [
+            285.2176513671875,
+            0.2718673646450043,
+            371.5475158691406,
+            125.39385986328125
+          ],
+          "confidence": 0.31167009472846985
+        }
+      ],
+      "max_confidence": 0.31167009472846985,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "plate__val__lvis_000000232489.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__val__lvis_000000232489.jpg",
+      "sha": "2aa8b4f0f7498c5cda3170ed3de9cd1421e7cd2f6e33bb2e7c9da9a519151283",
+      "boxes": [
+        {
+          "xyxy": [
+            413.51068115234375,
+            0.24221038818359375,
+            542.6663208007812,
+            47.98670196533203
+          ],
+          "confidence": 0.3067724108695984
+        }
+      ],
+      "max_confidence": 0.3067724108695984,
+      "status": "requires_visual_review; predictions are not labels"
+    },
+    {
+      "name": "school_lunch__025055001_jpg.rf.316ce68d81e2b2f0a1643d383c5d0d55.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/school_lunch__025055001_jpg.rf.316ce68d81e2b2f0a1643d383c5d0d55.jpg",
+      "sha": "60cbd6ce07e696f040fee8b11cb477ab7068d8fc991e6ae016460cf92772ecea",
+      "boxes": [
+        {
+          "xyxy": [
+            322.12548828125,
+            21.032384872436523,
+            401.7372131347656,
+            108.6090087890625
+          ],
+          "confidence": 0.30020415782928467
+        }
+      ],
+      "max_confidence": 0.30020415782928467,
+      "status": "requires_visual_review; predictions are not labels"
+    }
+  ]
+}

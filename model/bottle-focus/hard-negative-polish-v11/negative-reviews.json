@@ -1,0 +1,117 @@
+{
+  "reviewer": "Codex AI visual review",
+  "human_verified": false,
+  "specialist_candidates_reviewed": 14,
+  "COCO_candidates_reviewed": 75,
+  "training_negative_images_screened": 754,
+  "confirmed_missing_label_images": 1,
+  "holds": [
+    {
+      "name": "plate__train__lvis_000000079754.jpg",
+      "image_sha": "d6648264d4b80b23820e809e2f7bcc8fe77ab8ed230e03cfd21a0f4b7b47b999",
+      "reason": "Uncertain container/material scope in kitchen background; held rather than forced negative.",
+      "confirmed_missing_label": false
+    },
+    {
+      "name": "plate__train__lvis_000000203734.jpg",
+      "image_sha": "4dd1a31ae340c2b8363d8e17b5effbbf3b77274c4e93ea6f82a1291fbb836dd3",
+      "reason": "Cropped edge bottle and dark drinking bottle have uncertain material; held pending clearer review.",
+      "confirmed_missing_label": false
+    },
+    {
+      "name": "plate__train__lvis_000000202855.jpg",
+      "image_sha": "0aec2524640f4fcd03413af04e03cff090205edcff37bf030b8be824f1be39e3",
+      "reason": "Crowded party table has uncertain mixed bottle materials; held rather than forced negative.",
+      "confirmed_missing_label": false
+    },
+    {
+      "name": "plate__train__lvis_000000336954.jpg",
+      "image_sha": "fa4159ef635a614b9aa60cd39e1b25f8ba7d51db6dd4f87b37c7a6188725e882",
+      "reason": "Transparent repurposed counter container has uncertain beverage-bottle scope.",
+      "confirmed_missing_label": false
+    },
+    {
+      "name": "plate__train__lvis_000000174888.jpg",
+      "image_sha": "4d57e0b2e7e457460ea0ecbf3248f9ac18a2644403be2882bf09952043de020d",
+      "reason": "Confirmed missing plastic drinks bottles in shop window; original empty bottle labels retained and photo excluded from this training copy.",
+      "confirmed_missing_label": true
+    }
+  ],
+  "hard_negatives": [
+    {
+      "name": "waste_detection_v3__train__Untitled-video-Made-with-Clipchamp_mp4-0049_jpg.rf.93d71eb64a140f00a0a8d3c1dd687936.jpg",
+      "image_sha": "0baa196c1c0db1c746f2956f5c5b4b3fd019382ea4322d454b2bcf592b9e136c",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+      "image_sha": "4809d665a107fd22c17da5abe69ad0bf4036d667f022306af9341bd7aac38638",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "plate__train__lvis_000000001455.jpg",
+      "image_sha": "8f4a1d0c7aaa40a0ca0f0fd0af425d67cf60bbd956bca8fcea231a77c0a85a55",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "waste_detection_v3__train__2024-02-05_12-24-06_000_mov-0001_jpg.rf.f6158c34be5c51170b3ddc55410af195.jpg",
+      "image_sha": "80855fe32928ed34173ebc495ac283fc9cef60df3c6332e67d32ccd6ada3840b",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "plate__train__lvis_000000075628.jpg",
+      "image_sha": "4f1c78e84b0830581ffbbe49f65b6e15f446424baaca41cad2171faf4e2a188c",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "plate__train__lvis_000000530259.jpg",
+      "image_sha": "ad35a3ad6c16d6d49af08db886ad8c824740212b3fb9bc2ec98aa80d90cc8421",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "trash_detection__train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg",
+      "image_sha": "7118972d951be38c80c4725b4905626875ccc9eb52122250a4028ea36c48f10b",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "trash_detection__valid__000072_JPG.rf.57d2f9a3608df138c2f5bc7f26a8c7c5.jpg",
+      "image_sha": "316b01b825c3159bdd8632255059235abec70441d94ba57879890e08f8889dfa",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "plate__train__lvis_000000511345.jpg",
+      "image_sha": "955298ab912a37c7700e124337ea0e27ede417b1d737cad11ec78daea7ed1b49",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "dry_wet_waste__valid__trash108_jpg.rf.68756299209a2c34ffbc94d097e143b0.jpg",
+      "image_sha": "aa11be5b5eeca58c3af413c8945e13be440ede3c7a5029b1c0a1068c775e34a4",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "plate__train__lvis_000000230745.jpg",
+      "image_sha": "9213832444b096af533b84f9df3231e315dd609bc5b0a074d0359b1d81d65dec",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    },
+    {
+      "name": "plate__train__lvis_000000559247.jpg",
+      "image_sha": "84fa11ae6278b2d958373bb6072b1a84552bcece84f530d61819c845b55ef5e4",
+      "repeat": 4,
+      "reason": "AI visual review: non-target wrapper/foil, glass beverage bottle, non-beverage bottle, aerosol or footwear; preserve as hard negative."
+    }
+  ],
+  "validation_used": false,
+  "original_data_modified": false,
+  "limitation": "Model-dependent proposals at confidence >=0.3; not exhaustive proof of every training absence. Source verified_absence flags refer to the original three-class source."
+}

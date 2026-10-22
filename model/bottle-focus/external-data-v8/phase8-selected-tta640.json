@@ -1,0 +1,19 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/external-data-v8/phase8-best_bottle.pt",
+  "weights_sha": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
+  "AP50": 0.8075136048857041,
+  "AP50_95": 0.6339223694614862,
+  "precision": 0.8022763281778055,
+  "recall": 0.7313432835820896,
+  "imgsz": 640,
+  "batch": 1,
+  "nms_iou": 0.7,
+  "test_time_augmentation": true,
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "independent_test": false,
+  "snapshot_epoch": 8,
+  "source_verification": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/external-data-v8/selected-tta640.json"
+}

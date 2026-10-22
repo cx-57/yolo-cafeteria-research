@@ -22,6 +22,12 @@
   },
   "ml_coverage": "Full suite now also runs in the CPU ML integration job",
   "review": "Read-only code review approved",
-  "hosted_ci": "pending push/rerun",
+  "hosted_ci": {
+    "run_id": 39863909649,
+    "url": "https://github.com/cx-57/yolo-cafeteria-research/actions/runs/39863909649",
+    "tests": "success",
+    "ml_integration": "success",
+    "readme_900_image_build": "success"
+  },
   "optional_artifacts": "Upload failure does not change required test/build validation outcomes; large corpus archive is manual/full-audit opt-in"
 }
