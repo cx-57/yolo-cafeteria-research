@@ -1,0 +1,42 @@
+{
+  "source_dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/all-reviewed-stack",
+  "source_fingerprint": "2f089e1570c5d6d0438760c55fe92dc6a641006c9f5d9fdd7a80e1dd3a080893",
+  "classes": [
+    "plate",
+    "bottle"
+  ],
+  "counts": {
+    "train": {
+      "images": 774,
+      "negatives": 245,
+      "objects": {
+        "plate": 368,
+        "bottle": 330
+      },
+      "class_images": {
+        "plate": 239,
+        "bottle": 301
+      }
+    },
+    "val": {
+      "images": 126,
+      "negatives": 10,
+      "objects": {
+        "plate": 137,
+        "bottle": 45
+      },
+      "class_images": {
+        "plate": 86,
+        "bottle": 36
+      }
+    }
+  },
+  "relocated_checkout_build_verified": true,
+  "original_source_configuration_and_manifest_unchanged": true,
+  "original_source_hashes": {
+    "data.yaml": "89701f1931498d3fe8d28b760c4d59f182f30db7cd77b23d7ab03322a47789c6",
+    "manifest.json": "4e823fce53efceacdbbd986eeffc73e86039a696b996548c002cefa46c910e04"
+  },
+  "model_training_performed": false,
+  "independent_test": false
+}

@@ -558,9 +558,13 @@ def regroup(args):
     verify(args.data)
 
 
-def verify(data):
+def verify(data, *, allow_relocated=False):
+    """Audit local files; optionally ignore an old absolute root for read-only derivation."""
     manifest = json.loads((data / 'manifest.json').read_text())
     spec = yaml.safe_load((data / 'data.yaml').read_text())
+    if (allow_relocated and isinstance(spec, dict) and
+            isinstance(spec.get('path'), str) and Path(spec['path']).is_absolute()):
+        spec = {**spec, 'path': str(data.resolve())}
     if spec != dict(path=str(data.resolve()), train='images/train', val='images/val', names=NAMES):
         raise ValueError('Dataset YAML changed')
     records = manifest['records']

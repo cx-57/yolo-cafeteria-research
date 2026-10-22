@@ -269,7 +269,7 @@ class FrozenExperimentTests(unittest.TestCase):
         files = [Path(v) for v in
                  Path(yaml.safe_load(dataset.read_text())["train"]).read_text().splitlines()]
         self.assertEqual(len(files), 6)  # Three weak originals, each with 2 views.
-        self.assertTrue(all(p.parent == focus/"images/train" for p in files))
+        self.assertTrue(all(p.parent.samefile(focus/"images/train") for p in files))
         for stem in ("meal__plate", "meal__wrapper", "meal__bottle"):
             self.assertEqual(sum(path.stem.startswith(stem) for path in files), 2)
         self.assertEqual(

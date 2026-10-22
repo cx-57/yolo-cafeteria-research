@@ -29,6 +29,16 @@ obsolete wrapper score. The existing historical experimental AP50 numbers
 are *not* scores for this untrained plate/bottle-only model. No independent
 NHS test performance has been established.
 
+The 900-image derivation is also built and verified in GitHub Actions. It
+retains 774 training and 126 validation photos, with 368/330 training
+plate/bottle boxes and 137/45 validation plate/bottle boxes. After removing
+wrapper boxes, 245 training and 10 validation photos are negatives.
+
+The separate bottle-only specialist uses a different, fixed 246-image
+validation set with 67 bottle boxes. Its [verified model settings and
+scores](model/bottle-focus/verified-incumbent/verification.json) do not
+describe the plate/bottle-only model above.
+
 **Goal:** detect 11 cafeteria item types with YOLO11n. The model recognizes objects; NHS recycling/compost/trash rules are a separate step.
 
 ## Clean layout
@@ -53,7 +63,9 @@ model/
 tests/                  # automated checks
 ```
 
-Only `model/README.md` is committed: the model weights and training outputs are created after running training.
+Model weights (`*.pt`) remain local and Git-ignored. Selected experiment
+scripts, metrics, and audit artifacts are committed; generated datasets and
+model checkpoints are created by the corresponding workflows.
 
 ## V2 redesign (research and experiments)
 

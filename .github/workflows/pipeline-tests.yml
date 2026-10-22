@@ -19,6 +19,23 @@ jobs:
         run: python -m pip install Pillow PyYAML
       - name: Run offline synthetic pipeline tests
         run: python -m unittest discover -s tests -v
+      - name: Build and verify the README plate-bottle dataset
+        run: |
+          python scripts/focus_two_class.py build
+          python scripts/focus_two_class.py verify
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          manifest = json.loads(Path("data/focus-two-class-900/manifest.json").read_text())
+          counts = manifest["counts"]
+          assert counts["train"]["images"] == 774, counts
+          assert counts["val"]["images"] == 126, counts
+          assert len(manifest["records"]) == 900
+          assert counts["train"]["negatives"] > 0
+          assert counts["val"]["negatives"] > 0
+          print("Verified README workflow: 900 original photos retained, plate=0, bottle=1.")
+          print("Wrapper-only photos remain negatives; no model accuracy is claimed.")
+          PY
       - name: Build full default 1x corpus without training
         run: python scripts/train.py --build-only
       - name: Verify 80/20 of originals and 1x training views

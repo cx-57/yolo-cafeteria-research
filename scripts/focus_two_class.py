@@ -52,7 +52,7 @@ def summarize(records):
 
 
 def original_records(source):
-    verified = verify_three(source)
+    verified = verify_three(source, allow_relocated=True)
     return verified, {(r["split"], r["name"]): r for r in verified["records"]}
 
 
@@ -191,11 +191,29 @@ def evaluate(data, output, checkpoint, device, name):
             list(map(int, metrics.nt_per_class)) !=
             [manifest["counts"]["val"]["objects"][n] for n in NAMES]):
         raise ValueError("Validation support changed")
-    scores = {NAMES[i]: dict(AP50=float(box.ap50[j]), AP50_95=float(box.ap[j]),
-                             precision=float(box.p[j]), recall=float(box.r[j]))
-              for j, i in enumerate(indices)}
+    vectors = {key: list(getattr(box, key)) for key in ("ap50", "ap", "p", "r")}
+    if any(len(values) != len(indices) for values in vectors.values()):
+        raise ValueError("Validation AP rows do not align with supported classes")
+    macros = dict(ap50=float(box.map50), ap=float(box.map), p=float(box.mp), r=float(box.mr))
+    values = list(macros.values()) + [float(v) for row in vectors.values() for v in row]
+    if any(not math.isfinite(v) or not 0 <= v <= 1 for v in values):
+        raise ValueError("Validation contains invalid or nonfinite metrics")
+    for key, value in macros.items():
+        if not math.isclose(sum(float(v) for v in vectors[key]) / len(indices), value,
+                            abs_tol=0.001):
+            raise ValueError("Validation macro disagrees with per-class " + key)
+    verify(data)
+    scores = {}
+    for j, i in enumerate(indices):
+        p, r = float(vectors["p"][j]), float(vectors["r"][j])
+        scores[NAMES[i]] = dict(AP50=float(vectors["ap50"][j]), AP50_95=float(vectors["ap"][j]),
+                               precision=p, recall=r, F1=2*p*r/(p+r) if p+r else 0.0,
+                               objects=manifest["counts"]["val"]["objects"][NAMES[i]])
     result = dict(per_class=scores, mAP50=float(box.map50),
                   mAP50_95=float(box.map), weights=str(checkpoint),
+                  weights_sha256=digest(checkpoint), imgsz=640, batch=4,
+                  test_time_augmentation=False, independent_test=False,
+                  validation_images=manifest["counts"]["val"]["images"],
                   source_dataset_fingerprint=manifest["source_fingerprint"],
                   note="Development validation only; not an independent NHS test")
     (output / name / "metrics.json").write_text(json.dumps(result, indent=2) + "\n")
