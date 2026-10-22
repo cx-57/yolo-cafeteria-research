@@ -1,0 +1,9 @@
+{
+  "sample_size": 24,
+  "sampling": "12 seeded random positive closeups from each of dry_wet_waste and waste_detection_v3, train only",
+  "reviewer": "Codex AI visual review",
+  "human_verified": false,
+  "label_definition": "plastic beverage bottle",
+  "sample_outcome": "All 24 sampled photos appear to match the target definition; no training exclusions made from this sample.",
+  "limitation": "Many repeated white-background or hand-held views; sample does not establish correctness of every source photograph."
+}

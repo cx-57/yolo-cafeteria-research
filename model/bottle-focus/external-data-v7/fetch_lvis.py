@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import json
 import random
+import os
 import re
 import subprocess
 from PIL import Image,ImageOps,ImageDraw
@@ -38,12 +39,15 @@ if __name__=='__main__':
         known.update(int(x) for x in re.findall(r'lvis_(\d+)',p.name))
     candidates=[r for r in INDEX['candidates'] if r['original']['id'] not in known and 1162 not in r['original'].get('not_exhaustive_category_ids',[]) and 1<=len(r['annotations'])<=8]
     random.Random(42).shuffle(candidates)
-    selected=candidates[:60]
+    offset=int(os.environ.get('BOTTLE_OFFSET','0'))
+    count=int(os.environ.get('BOTTLE_COUNT','60'))
+    prefix=os.environ.get('BOTTLE_ROUND','lvis')
+    selected=candidates[offset:offset+count]
     records=[]
     with ThreadPoolExecutor(max_workers=6) as pool:
         for r in pool.map(fetch,selected):
             records.append(r);print('LVIS_DOWNLOAD',len(records),r['id'],r['status'],flush=True)
-    (RUN/'lvis-downloads.json').write_text(json.dumps(records,indent=2)+'\n')
+    (RUN/(prefix+'-downloads.json')).write_text(json.dumps(records,indent=2)+'\n')
     good=[r for r in records if r['status']=='unreviewed']
     for start in range(0,len(good),6):
         sheet=Image.new('RGB',(1536,1000),'white');d=ImageDraw.Draw(sheet)
@@ -52,4 +56,4 @@ if __name__=='__main__':
             for k,a in enumerate(r['annotations']):
                 x,y,w,h=a['bbox'];draw.rectangle((x,y,x+w,y+h),outline='red',width=2);draw.text((x,y),str(k),fill='red',stroke_width=1,stroke_fill='white')
             im=ImageOps.contain(im,(504,450));x=j%3*512;y=j//3*500;sheet.paste(im,(x,y));d.text((x+2,y+455),f"{start+j}: {r['id']} {len(r['annotations'])} boxes",fill='black')
-        sheet.save(RUN/f'lvis-preview-{start:03d}.jpg',quality=90)
+        sheet.save(RUN/f'{prefix}-preview-{start:03d}.jpg',quality=90)

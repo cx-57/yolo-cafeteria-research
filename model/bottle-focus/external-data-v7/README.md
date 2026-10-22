@@ -22,3 +22,7 @@ PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scri
 ```
 
 The detector starts from the immutable verified YOLO11s bottle checkpoint. Later feature layers adapt at AdamW learning rate 0.00001; pretrained BatchNorm running statistics remain fixed. No independent NHS test result is claimed. LVIS photos overlap the COCO pretraining domain and are training supplements only.
+
+## Second candidate round
+
+Another 60 disjoint source IDs were attempted: 35 decoded at native dimensions, 16 downloads failed, and 9 had invalid dimensions/content. AI visual review selected 16 photos with 29 bottle boxes after the same validation screen. These are not part of the running 19-photo trial. `../external-data-v8/` combines both rounds into a separately verified 35-photo / 65-box supplement; it has not been trained. The first trial remains unchanged.

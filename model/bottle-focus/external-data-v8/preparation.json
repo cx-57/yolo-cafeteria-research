@@ -1,0 +1,10 @@
+{
+  "source_rounds": [
+    "external-data-v7",
+    "external-data-v7/round2-visual-reviews.json"
+  ],
+  "added_images": 35,
+  "added_boxes": 65,
+  "human_verified": false,
+  "training_status": "prepared only; not trained"
+}
