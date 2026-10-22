@@ -50,6 +50,10 @@ if __name__ == '__main__':
         print('BOTTLE_EPOCH', trainer.epoch + 1, 'AP50', score, flush=True)
         shutil.copy2(trainer.last, RUN / 'last_resume.pt')
         s.save(RUN / 'progress.json', dict(epoch=trainer.epoch + 1, AP50=score))
+        trained_selection = RUN / 'trained-selection.json'
+        if not trained_selection.exists() or score > s.load(trained_selection)['AP50']:
+            shutil.copy2(trainer.last, RUN / 'best_trained_bottle.pt')
+            s.save(trained_selection, dict(epoch=trainer.epoch + 1, AP50=score, weights_sha=s.sha(RUN / 'best_trained_bottle.pt')))
         if score > s.load(RUN / 'selection.json')['AP50']:
             shutil.copy2(trainer.last, RUN / 'best_bottle.pt')
             s.save(RUN / 'selection.json', dict(epoch=trainer.epoch + 1, AP50=score, weights_sha=s.sha(RUN / 'best_bottle.pt')))

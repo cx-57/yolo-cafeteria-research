@@ -59,12 +59,16 @@ AI-assisted visual reviews are explicitly not human verification.
 Validation remains fixed at 246 photos / 67 boxes. A separate 548-photo
 Mendeley source was sampled and rejected as supplied after 24 photos
 showed repeated scenes and incomplete/out-of-bounds annotations.
-New-data training results are pending.
+The 19-photo supplement trial completed six epochs without beating its
+starting ordinary AP50; the original checkpoint was retained. A combined
+35-photo / 65-box supplement is now being tested with the feature layers
+frozen and only the detection head adapting at learning rate 0.00003.
+These new-data results remain pending.
 
 Run using the existing local runtime:
 
 ```sh
-PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scripts BOTTLE_PHASE_EPOCHS=8 .venv/bin/python -u model/bottle-focus/gentle-feature-adaptation-v6/run.py
+PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scripts BOTTLE_PHASE_EPOCHS=6 .venv/bin/python -u model/bottle-focus/external-data-v8/run.py
 ```
 
 The cached dataset is prepared by
