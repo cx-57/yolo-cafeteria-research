@@ -1,0 +1,19 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/context-resampling-v5/phase16-averaged-bottle.pt",
+  "weights_sha": "0bd113f7899b05cf13f7f6ccdd4300f9c96b180ba30c532b7668623a5811a387",
+  "AP50": 0.7272733733052357,
+  "AP50_95": 0.5276799323896441,
+  "precision": 0.5913826726609883,
+  "recall": 0.7776571692706717,
+  "imgsz": 640,
+  "batch": 1,
+  "nms_iou": 0.7,
+  "test_time_augmentation": true,
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "independent_test": false,
+  "snapshot_epoch": 16,
+  "source_verification": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/context-resampling-v5/averaged-tta640.json"
+}
