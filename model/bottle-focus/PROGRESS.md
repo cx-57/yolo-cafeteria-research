@@ -1,8 +1,6 @@
 # Bottle specialist experiments — 2026-10-23
 
-Target: at least **85% bottle AP50**. Best freshly verified result at this
-snapshot: **84.0784%**, using a saved single-class YOLO11s checkpoint at
-640 pixels with ordinary CPU inference, batch 4 and NMS IoU 0.5. The target has not been reached.
+Current user target: **90% bottle AP50 and at least 64% AP50–95**, aiming toward 70% localization where supported. Both must come from the same saved checkpoint and inference settings. Do not force the target. Best AP50-first incumbent remains **84.0784% / 60.9019%** at ordinary640, CPU batch4, NMS0.5; a retained balanced checkpoint has **84.0711% / 62.0606%** at ordinary640, MPS batch4, NMS0.5. Neither meets the joint target.
 
 The fixed development validation set has **246 images and 67 bottle boxes**.
 All validation images, bottle annotations and splits are preserved.
@@ -252,3 +250,26 @@ tests observed failure, then passed after adding preflight verification.
 Incomplete interrupted phases require a matching fresh report before
 more training. All 235 project tests and four continuation tests pass.
 The controller is launched; V29 results are pending.
+
+## Joint-metric continuation
+
+V29 completed nine epochs and three saved-model checks. Its best retained
+pair was 84.0521% / 60.4837%; no localization improvement. The old 85%
+controller was superseded after its phase completed, with optimizer and
+weights preserved. This is not a convergence claim.
+
+V30 uses the balanced V19 checkpoint and training-only focus crops.
+Independent visual review left one source photo's attached packaging extent
+uncertain; it and its derived views are held, without editing any source or
+validation label. Final copy: 1,114 original photos / 470 source boxes,
+187 crop views from 102 sources, 1,956 exposures,1,301 distinct image views
+and 731 view annotations. Crop QA previews were generated before that hold.
+
+Separate AP50, localization and native joint winners are saved; the latest
+checkpoint is also checked. Fresh immutable weights are evaluated at
+ordinary640/batch4/NMS0.5. Nondominated metric pairs are retained, and the
+legacy incumbent is replaced only when neither metric declines. Exact
+90%/64% joint success, plateau, schedule and storage stops are distinct.
+A reviewed restart bug that bypassed plateau was reproduced and fixed.
+Six focused joint-policy tests pass; full project verification is recorded
+in the experiment directory. No V30 accuracy improvement is yet claimed.

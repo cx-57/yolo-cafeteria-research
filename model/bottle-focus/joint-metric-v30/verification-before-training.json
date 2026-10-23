@@ -1,0 +1,23 @@
+{
+  "project_tests": 235,
+  "focused_joint_tests": 6,
+  "failures": 0,
+  "skipped": 0,
+  "red_green_observed": true,
+  "project_test_log_sha": "8a184e674adb5214120ebbc312931830c16aee6103e0d54d32116d893bde5cd0",
+  "validation_images": 246,
+  "bottle_boxes": 67,
+  "all_validation_image_and_label_hashes_unchanged": true,
+  "frozen_manifest_sha": "0a6ba6bff3de2c104e648a49f5b216d5bb34a1757690a05cafd611ea9cd7e35f",
+  "initial_weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+  "fresh_baseline_AP50": 0.8407106817291071,
+  "fresh_baseline_AP50_95": 0.620605656065828,
+  "original_training_photos": 1114,
+  "original_training_bottle_boxes": 470,
+  "training_image_views": 1301,
+  "training_view_annotations": 731,
+  "training_exposures": 1956,
+  "cropped_views": 187,
+  "review": "Independent code review and separate image QA. Plateau restart P2 fixed by observed failing lifecycle test and full green suite.",
+  "target_achieved": false
+}

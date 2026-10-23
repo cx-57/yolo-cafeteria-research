@@ -1,0 +1,15 @@
+[
+  {
+    "name": "trash_detection__train__000032_JPG.rf.cbf03a9b729557ed636289ae8c39e1e3.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000032_JPG.rf.cbf03a9b729557ed636289ae8c39e1e3.jpg",
+    "image_sha": "b86a2e7c8d15fb78e05eec1b3257dcae9efe8d67a560d20e9cf8a4f4d0ad5c9d",
+    "label_sha": "f5cd2c93a83c0ef2740d3e1618e915cc4f42b8996af83f6299bda3069cf8b653",
+    "rows": [
+      "0 0.39195261 0.65058211 0.12622549 0.17432598"
+    ],
+    "reason": "Uncertain object extent/attached packaging: white/red strip crosses crushed bottle; not a confirmed incomplete box. Hold photo and derived views for this training-only trial.",
+    "reviewer": "Codex visual AI review plus independent review_readme_workflow",
+    "human_verified": false,
+    "source_changed": false
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "epoch": 1,
+  "only_detection_head_trainable": true,
+  "all_BatchNorm_statistics_fixed": true,
+  "normalization_modules": 81
+}
