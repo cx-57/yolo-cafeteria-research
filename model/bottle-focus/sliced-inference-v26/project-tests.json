@@ -1,0 +1,8 @@
+{
+  "tests_passed": 235,
+  "skipped": 0,
+  "log_sha256": "487f51a5b5c5d7c1634bcf36bd9ccde649913a121ae9877df7604ae5679451ef",
+  "geometry_tests_passed": 2,
+  "incumbent_source_and_cache_hashes_unchanged": true,
+  "incumbent_weights_sha": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289"
+}

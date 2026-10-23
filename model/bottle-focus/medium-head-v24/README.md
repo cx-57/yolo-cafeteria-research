@@ -1,6 +1,7 @@
 # Larger pretrained bottle specialist
 
-Training started; baseline and training results are pending. Use official YOLO11m weights
+Completed six head-only epochs; best epoch 3. Fresh saved-model AP50 was
+68.8293% ordinary / 72.7199% augmented (640 pixels, NMS IoU 0.7). Use official YOLO11m weights
 from the pinned upstream release URL in download.json. Project COCO bottle
 class 39 into a single output, checking decoded boxes exactly and bottle
 scores within float32 tolerance on a non-square real-model input.

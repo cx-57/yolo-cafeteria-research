@@ -1,4 +1,4 @@
-# Bottle specialist experiments — 2026-10-22
+# Bottle specialist experiments — 2026-10-23
 
 Target: at least **85% bottle AP50**. Best freshly verified result at this
 snapshot: **84.0784%**, using a saved single-class YOLO11s checkpoint at
@@ -145,7 +145,7 @@ The context-balanced run completed 12 epochs; epoch 3 remained best. Its saved m
 
 Regression-only and classification-only branch blends scored 83.7310% and 83.8528%; both were rejected. A half parameter average of the 84.0711% quality model and the context-balanced epoch-3 head reached **84.0784%** on a fresh CPU evaluation. The frozen backbone and BatchNorm statistics were identical. This normal single-model checkpoint is the current incumbent. Default NMS IoU 0.7 reduced its AP50 to 83.3168%.
 
-The larger `medium-head-v24` trial has now started from official pretrained YOLO11m weights with 20,053,779 parameters after single-class projection. A real non-square input confirmed unchanged decoded boxes and the original COCO bottle scores. It uses the exact V20 reviewed data and fixed validation, head-only training, fixed BatchNorm statistics, learning rate 0.0001, 640 pixels and batch 2. Baseline and training results are pending; the 84.0784% smaller-model incumbent is protected.
+The larger `medium-head-v24` trial has now started from official pretrained YOLO11m weights with 20,053,779 parameters after single-class projection. A real non-square input confirmed unchanged decoded boxes and the original COCO bottle scores. It uses the exact V20 reviewed data and fixed validation, head-only training, fixed BatchNorm statistics, learning rate 0.0001, 640 pixels and batch 2. The six-epoch head phase finished; epoch 3 remained best. Fresh ordinary/augmented checks reached 68.8293%/72.7199%. The 84.0784% smaller-model incumbent is protected.
 
 Run using the existing local runtime:
 
@@ -156,3 +156,30 @@ PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scri
 The cached dataset is prepared by
 `validation-now/prepare_data_snapshot.py`. Individual experiment directories
 contain their scripts, configurations, metrics, hashes and evaluation output.
+
+## Paper-informed continuation
+
+The original higher-scoring papers and their training/data differences are
+recorded in [PAPER_REVIEW_20261023.md](PAPER_REVIEW_20261023.md). Numerically
+higher external scores are not head-to-head results on our fixed set.
+The small incumbent scored 83.6731% with ordinary NMS 0.6 on MPS, so that
+setting was rejected. A matched ordinary MPS batch-one, NMS 0.5 control
+scored 83.4980%. Official SAHI 0.12.8 sliced inference at original resolution
+(384-pixel slices, 25% overlap, full-image prediction, NMS 0.5) scored
+76.3749% and was rejected. All 246 source images and 67 boxes were retained;
+740 slices and 246 additional full-image predictions were traced. Two
+independent coordinate tests, including the actual YOLO loader, passed.
+
+The V25 medium-model feature adaptation has started from the immutable
+V24 phase-six best snapshot, SHA e01fc63b…8934. It unfreezes from layer 10,
+uses AdamW 0.00001, fixed BatchNorm statistics, training batch 1 with nbs 16,
+640 pixels, and up to 100 total epochs with mosaic disabled in the last ten.
+Six-epoch review phases preserve optimizer state. Results remain pending;
+this is a paper-informed experiment, not an exact paper replication.
+
+A fourth LVIS staging/review batch yielded 40 usable photos. Initial AI
+review marked 20 eligible; second review held three more for ambiguous
+identity/partial targets or incomplete box coverage. **17 photos / 20 boxes**
+remain eligible candidates. None has entered V24 or V25 training. The
+validation-overlap heuristic flagged another already-held candidate. All
+reviews are AI assisted and are not human verification.
