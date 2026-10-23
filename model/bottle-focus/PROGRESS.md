@@ -273,3 +273,9 @@ legacy incumbent is replaced only when neither metric declines. Exact
 A reviewed restart bug that bypassed plateau was reproduced and fixed.
 Six focused joint-policy tests pass; full project verification is recorded
 in the experiment directory. No V30 accuracy improvement is yet claimed.
+
+V30 completed three epochs before iCloud offloaded its 165-byte localization
+selection ledger. Checkpoints and optimizer were intact. A bounded small-JSON
+materialization fix passed 237 project tests and six joint-policy tests,
+with independent review. Recovery validates saved candidates before further
+training; this operational fix is not an accuracy improvement.

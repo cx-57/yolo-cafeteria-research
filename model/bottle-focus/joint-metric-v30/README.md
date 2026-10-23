@@ -42,5 +42,11 @@ tradeoffs, checkpoint choices, artifact integrity, plateaus and restart.
 
 The freshly reloaded V30 baseline confirmed84.0711% AP50 and62.0606%
 AP50–95 on the unchanged246/67 data. Live checks verified head-only
-training and all81 BatchNorm statistics fixed. The first phase is active;
-no trained-model improvement or target achievement is claimed.
+training and all81 BatchNorm statistics fixed. The first phase completed three epochs, then stopped when iCloud offloaded
+a 165-byte checkpoint-selection ledger. Checkpoints and optimizer remain
+intact. The metadata reader now permits OS materialization of JSON up to
+1 MiB while preserving complete-byte validation and strict binary guards.
+All 237 project tests and six joint-policy tests pass; independent code
+review found no blocking issues. The restarted controller first freshly
+validates saved candidates, then resumes its bounded screening policy.
+No trained-model improvement or target achievement is claimed.

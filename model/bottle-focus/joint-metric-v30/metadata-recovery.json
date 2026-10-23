@@ -1,0 +1,16 @@
+{
+  "incident": "iCloud offloaded 165-byte localization-selection.json after epoch 3; saved checkpoints intact",
+  "observed_flags": "0x40000060",
+  "fix": "Allow OS materialization for nonempty JSON <=1 MiB, retaining complete-byte validation and strict offloaded binary/large JSON rejection",
+  "project_tests": 237,
+  "focused_joint_tests": 6,
+  "failures": 0,
+  "skipped": 0,
+  "red_green_observed": true,
+  "project_test_log_sha": "7b9441292b935c4db938e18691888ed8503d90f04d41eb67d832bcd5348f0e4d",
+  "focused_test_log_sha": "89178e8f9696387ada193da7f10f85fd923e09f9e4b855df7c7bd5aad99733a3",
+  "review": "Independent read-only review found no blocking issues; flag simulation tests do not automate actual File Provider hydration",
+  "recovery": "Controller runs fresh saved-candidate evaluation before any further training",
+  "epoch_at_recovery": 3,
+  "target_achieved": false
+}

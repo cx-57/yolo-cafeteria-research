@@ -33,7 +33,11 @@ WEIGHTS_SHA = '5cf0eca1767d703b1172ffaf616e8f8d9d43c98e93863946bcd61f122e516f48'
 
 def read_bytes(path):
     path = Path(path)
-    if getattr(path.stat(), 'st_flags', 0) & 0x40000000:
+    status = path.stat()
+    # File Provider can offload newly written checkpoint ledgers between epochs.
+    # A bounded JSON read lets macOS materialize metadata; binary sources remain strict.
+    small_metadata = path.suffix.lower() == '.json' and 0 < status.st_size <= 1024 * 1024
+    if getattr(status, 'st_flags', 0) & 0x40000000 and not small_metadata:
         raise ValueError(f'iCloud file is not downloaded: {path}')
     raw = path.read_bytes()
     if len(raw) != path.stat().st_size:

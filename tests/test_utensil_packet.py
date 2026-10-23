@@ -33,6 +33,21 @@ class SpecialistTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'iCloud'):
                 specialist.read_bytes(Path('/offloaded-source'))
 
+    def test_small_offloaded_json_is_materialized_with_complete_bytes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'selection.json';payload=b'{"epoch": 3}\n';path.write_bytes(payload)
+            stat=SimpleNamespace(st_flags=0x40000000,st_size=len(payload))
+            with patch.object(Path,'stat',return_value=stat):
+                self.assertEqual(specialist.load(path),{'epoch':3})
+                self.assertEqual(specialist.read_bytes(path),payload)
+            with patch.object(Path,'stat',return_value=SimpleNamespace(st_flags=0x40000000,st_size=len(payload)+1)):
+                with self.assertRaisesRegex(ValueError,'Incomplete'):specialist.read_bytes(path)
+
+    def test_large_offloaded_json_still_rejects_automatic_download(self):
+        stat=SimpleNamespace(st_flags=0x40000000,st_size=2*1024*1024)
+        with patch.object(Path,'stat',return_value=stat),patch.object(Path,'read_bytes',side_effect=AssertionError('must not download large metadata')):
+            with self.assertRaisesRegex(ValueError,'iCloud'):specialist.read_bytes(Path('/large-audit.json'))
+
     def test_packet_selection_rejects_regressing_below_utensil_milestone(self):
         self.assertEqual(specialist.packet_selection_score([.49,.8]),-1.)
         self.assertAlmostEqual(specialist.packet_selection_score([.71,.4]),.4)
