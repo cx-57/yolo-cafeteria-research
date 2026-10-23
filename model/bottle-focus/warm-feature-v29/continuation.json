@@ -1,0 +1,8 @@
+{
+  "target_AP50": 0.85,
+  "phase_epochs": 3,
+  "max_epochs": 40,
+  "phases": [],
+  "status": "running",
+  "current_phase_log": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/warm-feature-v29/phase-from-0-1792793564420943000.log"
+}

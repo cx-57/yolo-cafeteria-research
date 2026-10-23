@@ -1,0 +1,27 @@
+{
+  "project_suite": {
+    "tests": 235,
+    "failures": 0,
+    "skipped": 0,
+    "log": "/tmp/bottle-continuation-full-suite.log",
+    "log_sha": "ef450ffb299eb3e10b476ee47eab565eb58745e4c804fdab04cf06d5155dcd26"
+  },
+  "continuation_tests": {
+    "tests": 4,
+    "failures": 0,
+    "red_green_observed": true,
+    "coverage": [
+      "checkpoint/protocol/audit binding",
+      "native AP does not override fresh AP",
+      "restart after target does not train",
+      "interrupted phase blocks unverified resume"
+    ]
+  },
+  "review": "Independent read-only review; restart P2 fixed with observed RED -> GREEN and green full suite",
+  "launch_condition": {
+    "v28_saved_ordinary_AP50": 0.834062987488852,
+    "validation_images": 246,
+    "bottle_boxes": 67
+  },
+  "training_result_pending": true
+}

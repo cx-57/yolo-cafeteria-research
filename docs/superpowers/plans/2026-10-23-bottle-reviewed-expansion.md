@@ -22,8 +22,8 @@
 
 - [x] Add tests of source admission and real box projection, including mismatched screen/image/annotation rejection. Observe RED, implement minimal admission helper, observe GREEN.
 - [x] Build and verify the separate V28 training copy, proving validation and incumbent unchanged. Run the full project suite.
-- [ ] Prepare pinned incumbent initialization and launch the six-epoch training phase with live trainability/BN checks.
-- [ ] Freshly validate selected/trained saved weights; promote only verified improvement. Review and commit code, provenance and actual results.
+- [x] Prepare pinned incumbent initialization and launch the six-epoch training phase with live trainability/BN checks.
+- [x] Freshly validate selected/trained saved weights; promote only verified improvement. Review and commit code, provenance and actual results.
 
 ## Ledger
 
@@ -31,3 +31,20 @@
 
 - Independent review found inherited addition counts; corrected to distinguish new17/20, prior57/109 and cumulative74/129. No exposure changes.
 - The baseline candidate uses copyfile so a read-only immutable source does not make the mutable selection checkpoint read-only.
+
+## Conditional warm-feature follow-up
+
+V28 native scores through epoch4 remain below initialization. Prepare V29
+using exactly V28 data and the same immutable incumbent initialization,
+unfreeze all features, keep BatchNorm fixed, lower AdamW to0.000001 and
+review after three epochs of the same40-epoch schedule. This adapts the
+paper's full-feature idea to a strong warm start and Mac microbatch limits.
+The coupled learning-rate/trainability changes are a deliberate stability
+choice, not an isolated causal test. Launch only after V28 fresh checks
+fail to reach85%; preserve both runs and all optimizer states. V29 must
+automatically perform a fresh ordinary0.5 saved trained-model check.
+
+- V28 completed 6 epochs; freshly checked trained AP50=0.834062987488852, below the protected 0.8407836865245171. Preserved phase 6 artifacts.
+- V29 sustained execution replaces manual prompts: three-epoch phases, maximum 40 epochs, exact saved-model target 0.85. No success claim on a below-target schedule end.
+- Final review P2 fixed: preflight an existing V29 success before training; incomplete interrupted phases stop for fresh verification. Both actual lifecycle tests observed RED then GREEN; four continuation tests and 235 project tests passed.
+- The V29 controller is launched. Its accuracy result remains pending.

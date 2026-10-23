@@ -25,3 +25,10 @@ annotation and duplicate-review rejection. The full project suite passed
 235 tests with no skips. Independent review caught inherited addition
 counts in the audit; these now explicitly distinguish new, prior and
 cumulative additions.
+
+Completed six epochs. Best native trained epoch 1 scored 82.3511% AP50;
+fresh saved trained-model ordinary640/batch4/NMS0.5 scored 83.4063%.
+The selected model remains initialization (83.3168% at NMS0.7; TTA 82.4785%).
+The protected 84.0784% incumbent was not replaced. Phase 6 snapshots and
+fresh trained-model verification are retained. This is a short screen,
+not a claim of convergence or proof that the new photos cannot help.

@@ -234,3 +234,21 @@ admission and on reuse. Two admission tests passed after observed RED;
 all 235 project tests passed without skips. The planned head-only trial
 starts from immutable V23 alpha0.5 weights with low-rate AdamW; original
 validation and incumbent weights remain unchanged.
+
+V28 completed its six-epoch head-only phase. Best native trained epoch 1
+was 82.3511%; fresh ordinary640/batch4/NMS0.5 verification of the saved
+trained checkpoint scored 83.4063%, SHA 7b26bf57…33b6e. Initialization
+remains selected, and the 84.0784% incumbent is unchanged. Exact saved
+backbone and BatchNorm statistics were checked unchanged. Phase 6
+snapshots and metrics are archived.
+
+V29 starts from the same immutable incumbent and exact V28 data, unfreezes
+all features at AdamW 0.000001, and keeps BatchNorm statistics fixed.
+Its sustained controller runs three-epoch phases through at most 40 epochs,
+automatically checks saved ordinary640/batch4/NMS0.5 weights, archives
+results, and stops only at an exact 85% crossing or an honestly reported
+below-target schedule end. Review found a restart-after-success bug;
+tests observed failure, then passed after adding preflight verification.
+Incomplete interrupted phases require a matching fresh report before
+more training. All 235 project tests and four continuation tests pass.
+The controller is launched; V29 results are pending.

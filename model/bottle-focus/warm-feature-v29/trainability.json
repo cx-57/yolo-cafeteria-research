@@ -1,0 +1,7 @@
+{
+  "epoch": 1,
+  "all_feature_parameters_trainable": true,
+  "all_BatchNorm_running_statistics_fixed": true,
+  "trainable_parameters": 9428163,
+  "normalization_modules": 81
+}

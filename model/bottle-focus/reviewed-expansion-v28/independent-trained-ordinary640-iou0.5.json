@@ -1,0 +1,23 @@
+{
+  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/reviewed-expansion-v28/best_trained_bottle.pt",
+  "weights_sha": "7b26bf571f26aa4cdbbf88aaad61af606bcc8dc4b15209a4851011b8b0e33b6e",
+  "AP50": 0.834062987488852,
+  "AP50_95": 0.6093278191106067,
+  "precision": 0.790963732954125,
+  "recall": 0.790662715483093,
+  "imgsz": 640,
+  "batch": 4,
+  "nms_iou": 0.5,
+  "test_time_augmentation": false,
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "independent_test": false,
+  "ultralytics_version": "8.4.175",
+  "training_dataset_audit_sha": "c5f10f6b414c156529e983ddb806aaeedfbbfe83cd665676933f8568838ac86b",
+  "selected_epoch": 1,
+  "external_training_used": true,
+  "external_training_used_scope": "This trial supplement; initialization may contain earlier external training.",
+  "external_human_verified": false
+}
