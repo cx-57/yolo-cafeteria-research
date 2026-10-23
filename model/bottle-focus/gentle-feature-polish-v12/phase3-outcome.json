@@ -1,0 +1,19 @@
+{
+  "completed_epochs": 3,
+  "stopped_during_epoch": 4,
+  "reason": "Native AP50 declined across all three completed epochs; interrupt rather than extend regression.",
+  "native_scores": [
+    0.8022175377153571,
+    0.7691766207114944,
+    0.7611667672232909
+  ],
+  "control_retained": {
+    "epoch": 0,
+    "AP50": 0.8302202780221584,
+    "weights_sha": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571"
+  },
+  "optimizer_state": "last_resume.pt through epoch 3",
+  "validation_images": 246,
+  "validation_bottle_objects": 67,
+  "independent_test": false
+}

@@ -1,0 +1,18 @@
+{
+  "completed_epochs": 6,
+  "selected": {
+    "epoch": 0,
+    "AP50": 0.8302202780221584,
+    "weights_sha": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571"
+  },
+  "best_trained": {
+    "epoch": 5,
+    "AP50": 0.8102270867615496,
+    "weights_sha": "c97bd51f4e8d74244ad8eab5e6c7d9f41e309d3e79d0f3919d79e61e2261d301"
+  },
+  "improved_ordinary_baseline": false,
+  "validation_images": 246,
+  "validation_bottle_objects": 67,
+  "independent_test": false,
+  "note": "Control retained; completed head-only quality-copy trial did not improve ordinary validation. A trained-candidate augmented evaluation is still pending."
+}

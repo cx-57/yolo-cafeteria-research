@@ -1,0 +1,5 @@
+path: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation
+train: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/expanded-context-v13/training-exposures.txt
+val: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val
+names:
+- bottle

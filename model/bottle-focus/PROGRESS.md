@@ -1,8 +1,8 @@
 # Bottle specialist experiments — 2026-10-22
 
 Target: at least **85% bottle AP50**. Best freshly verified result at this
-snapshot: **83.3489%**, using a saved single-class YOLO11s checkpoint at
-640 pixels with test-time augmentation and NMS IoU 0.5. The target has not been reached.
+snapshot: **83.6832%**, using a saved single-class YOLO11s checkpoint at
+640 pixels with ordinary inference and NMS IoU 0.5. The target has not been reached.
 
 The fixed development validation set has **246 images and 67 bottle boxes**.
 All validation images, bottle annotations and splits are preserved.
@@ -22,7 +22,8 @@ These are development results, with no independent test claim.
 | YOLO11s gentle feature adaptation, best of eight epochs | 82.08% | 82.14% |
 | Same checkpoint, NMS IoU 0.5 | — | 82.65% |
 | YOLO11s head-only 35-photo supplement, best of six epochs | 82.99% | 80.75% |
-| Half/half head average, TTA NMS IoU 0.5 | 83.02% | **83.35%** |
+| Half/half head average, TTA NMS IoU 0.5 | 83.02% | 83.35% |
+| Same head average, ordinary NMS IoU 0.5 | **83.68%** | — |
 
 All scores are independently reloaded evaluations. The non-averaged
 head-only checkpoint’s training-time validation score was 83.05%; the saved-model score above takes precedence.
@@ -81,12 +82,25 @@ The latest `hard-negative-polish-v11` trial uses 41 external photos with
 80 bottle boxes, five reviewed training-photo holds and 12 repeated hard
 negatives. A training-only scan found one definite missing-bottle-label photo
 and four uncertain photos; no original data or validation labels were changed.
-Mosaic is disabled and scale jitter is 0.25. Its results remain pending.
+Mosaic is disabled and scale jitter is 0.25. Six epochs completed without
+improving the ordinary control; the best newly trained native score was
+81.02%. The original saved checkpoint is retained. The
+`gentle-feature-polish-v12` trial unfroze layers 10 onward at learning
+rate 0.000003 on the exact same training copy. Its native AP50 declined
+80.22% / 76.92% / 76.12% across three completed epochs, so epoch four was
+interrupted; optimizer state through epoch three and the control are retained.
+
+The `expanded-context-v13` trial adds 16 further reviewed LVIS photos with
+29 boxes (57 external photos / 109 boxes total), retains the five quality
+holds, and removes extra hard-negative repeats. It uses 1,108 unique photos /
+1,651 exposures and the previously successful head settings: freeze 23,
+AdamW 0.00003, mosaic 0.5, scale 0.5, fixed BatchNorm running statistics.
+Its result is pending; all validation bytes and labels remain unchanged.
 
 Run using the existing local runtime:
 
 ```sh
-PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scripts BOTTLE_PHASE_EPOCHS=6 .venv/bin/python -u model/bottle-focus/hard-negative-polish-v11/run.py
+PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scripts BOTTLE_PHASE_EPOCHS=6 .venv/bin/python -u model/bottle-focus/expanded-context-v13/run.py
 ```
 
 The cached dataset is prepared by

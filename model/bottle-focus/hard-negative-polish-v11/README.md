@@ -1,6 +1,7 @@
 # Full-resolution head polishing with reviewed hard negatives
 
-Training has started; no result is claimed yet. The starting saved detector is
+Six epochs completed without beating the ordinary control. The best newly
+trained native AP50 was 81.02%; the control was retained. See phase6-outcome.json. The starting saved detector is
 the independently verified 83.35% AP50 half/half head average. Its ordinary
 inference baseline is 83.02%; scores use the unchanged 246-photo / 67-box
 bottle development benchmark. No independent NHS test result exists.
