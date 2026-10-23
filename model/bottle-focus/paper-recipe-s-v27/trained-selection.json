@@ -1,5 +1,5 @@
 {
-  "epoch": 2,
-  "AP50": 0.2982044206008413,
-  "weights_sha": "5cc632e31e0a596d8e2bc0f21a646e6d66db63cfcf69dbb20e7927026f1719e5"
+  "epoch": 18,
+  "AP50": 0.6438358245926337,
+  "weights_sha": "aabf5f18682bcd1fbb638dcc0e7068ad2b0eb8fc52c7c7cafe877b359c27c3b8"
 }

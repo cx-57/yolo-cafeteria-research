@@ -219,3 +219,18 @@ retained; no corrected score or 85% achievement is claimed.
 V27 has completed four epochs; native AP50 increased to 46.1055%. The complete
 20-epoch run remains active, with fresh saved-model validation scheduled by
 the runner. Commit 4a099127 passed both GitHub Pipeline tests jobs.
+
+V27 has now completed all 20 planned epochs. Epoch 18 was best natively
+(64.3836% AP50); freshly reloaded selected weights reached 64.5471% ordinary
+and 62.7979% augmented AP50, both at NMS0.7. Phase-20 snapshots are preserved.
+The hardware-adapted paper recipe did not beat the 84.0784% specialist;
+this does not isolate the effect of learning rate from initialization and
+normalization differences.
+
+V28 admits the 17 round-four reviewed photos / 20 boxes to a separate
+training copy: 1,115 unique photos / 471 boxes / 1,964 exposures. Source
+image bytes, annotations, reviews and overlap screens are checked before
+admission and on reuse. Two admission tests passed after observed RED;
+all 235 project tests passed without skips. The planned head-only trial
+starts from immutable V23 alpha0.5 weights with low-rate AdamW; original
+validation and incumbent weights remain unchanged.

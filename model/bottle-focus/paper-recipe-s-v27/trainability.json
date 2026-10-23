@@ -1,5 +1,5 @@
 {
-  "epoch": 3,
+  "epoch": 20,
   "frozen_parameters": [
     "model.23.dfl.conv.weight"
   ],

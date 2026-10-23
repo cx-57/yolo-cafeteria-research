@@ -1,0 +1,20 @@
+{
+  "full_project_suite": {
+    "command": "PYTHONPATH=<cached-runtime>:$PWD/scripts .venv/bin/python -m unittest discover -s tests -v",
+    "tests": 235,
+    "failures": 0,
+    "skipped": 0,
+    "log": "/tmp/bottle-v28-full-suite.log",
+    "log_sha": "d640724ae314f47bfde1748f219f81b82b40300075960f6f7abb8e68cbe69322"
+  },
+  "admission_tests": {
+    "tests": 2,
+    "red": "Both failed because the reviewed admission helper was missing",
+    "green": "Both passed, including four independent provenance corruptions rejected"
+  },
+  "training_unique_images": 1115,
+  "training_unique_bottle_boxes": 471,
+  "training_exposures": 1964,
+  "validation_images": 246,
+  "validation_bottle_boxes": 67
+}

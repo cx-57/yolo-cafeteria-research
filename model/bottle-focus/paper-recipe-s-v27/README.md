@@ -22,3 +22,13 @@ The fresh baseline is 26.9615% AP50. Live checks verify 9,428,163 trainable
 parameters and 81 training-mode BatchNorm modules. The complete planned run is 20 epochs, with optimizer/state and best
 weights saved each epoch and fresh saved-model checks afterward. A native
 85% crossing triggers early saved-model verification.
+
+Completed all 20 epochs. Best native epoch was 18 (64.3836% AP50).
+Fresh saved-model ordinary640/batch4/NMS0.7 scored 64.5471%; native TTA
+batch1/NMS0.7 scored 62.7979%. Selected weight SHA aabf5f18…c3b8.
+Both are below the protected 84.0784% incumbent. Phase-20 snapshots retain
+the selected weights and reports; optimizer state remains in last_resume.pt.
+This hardware-adapted full-model recipe did not outperform our specialist.
+It does not isolate learning rate from initialization, BatchNorm microbatch
+or architecture differences and is not evidence that full fine-tuning
+cannot help under other settings.
