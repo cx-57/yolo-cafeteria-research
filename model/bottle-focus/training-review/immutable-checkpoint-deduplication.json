@@ -1,0 +1,95 @@
+{
+  "file_paths_preserved": true,
+  "all_hashes_verified_after_linking": true,
+  "mutable_checkpoints_and_resume_states_excluded": true,
+  "duplicate_logical_bytes_removed": 444276073,
+  "reconstruction": "To restore an independent writable copy, copy the retained bytes to a new temporary file, replace the desired alias, then restore its original mode.",
+  "groups": [
+    {
+      "sha": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "paths": [
+        "model/bottle-focus/external-data-v7/initial.pt",
+        "model/bottle-focus/external-data-v7/phase6-best_bottle.pt",
+        "model/bottle-focus/context-balance-v20/initial.pt",
+        "model/bottle-focus/external-data-v8/initial.pt",
+        "model/bottle-focus/scope-clean-feature-v14/initial.pt",
+        "model/bottle-focus/gentle-feature-adaptation-v6/phase8-best_bottle.pt",
+        "model/bottle-focus/gentle-feature-adaptation-v6/phase13-best_bottle.pt"
+      ],
+      "canonical": "model/bottle-focus/external-data-v7/phase6-best_bottle.pt",
+      "original_modes": {
+        "model/bottle-focus/external-data-v7/initial.pt": 420,
+        "model/bottle-focus/external-data-v7/phase6-best_bottle.pt": 420,
+        "model/bottle-focus/context-balance-v20/initial.pt": 420,
+        "model/bottle-focus/external-data-v8/initial.pt": 420,
+        "model/bottle-focus/scope-clean-feature-v14/initial.pt": 420,
+        "model/bottle-focus/gentle-feature-adaptation-v6/phase8-best_bottle.pt": 420,
+        "model/bottle-focus/gentle-feature-adaptation-v6/phase13-best_bottle.pt": 420
+      },
+      "read_only": true
+    },
+    {
+      "sha": "cdf9333bf999ee6863cdde52083106b613922dc70953bf6d7ada51d8dc36cb46",
+      "bytes": 24158661,
+      "paths": [
+        "model/bottle-focus/context-balance-v20/phase6-best_bottle.pt",
+        "model/bottle-focus/context-head-soup-v23/source-epoch3.pt"
+      ],
+      "canonical": "model/bottle-focus/context-balance-v20/phase6-best_bottle.pt",
+      "original_modes": {
+        "model/bottle-focus/context-balance-v20/phase6-best_bottle.pt": 420,
+        "model/bottle-focus/context-head-soup-v23/source-epoch3.pt": 420
+      },
+      "read_only": true
+    },
+    {
+      "sha": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
+      "bytes": 24158661,
+      "paths": [
+        "model/bottle-focus/external-data-v8/phase8-best_bottle.pt",
+        "model/bottle-focus/external-data-v8/phase6-best_bottle.pt"
+      ],
+      "canonical": "model/bottle-focus/external-data-v8/phase6-best_bottle.pt",
+      "original_modes": {
+        "model/bottle-focus/external-data-v8/phase8-best_bottle.pt": 420,
+        "model/bottle-focus/external-data-v8/phase6-best_bottle.pt": 420
+      },
+      "read_only": true
+    },
+    {
+      "sha": "2598452b187af36fee6beca460561a0de8d77ab9d46fdb4391153c9bf101d3d7",
+      "bytes": 24160773,
+      "paths": [
+        "model/bottle-focus/gentle-feature-adaptation-v6/initial.pt",
+        "model/bottle-focus/context-resampling-v5/phase23-best_bottle.pt"
+      ],
+      "canonical": "model/bottle-focus/context-resampling-v5/phase23-best_bottle.pt",
+      "original_modes": {
+        "model/bottle-focus/gentle-feature-adaptation-v6/initial.pt": 420,
+        "model/bottle-focus/context-resampling-v5/phase23-best_bottle.pt": 420
+      },
+      "read_only": true
+    },
+    {
+      "sha": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "paths": [
+        "model/bottle-focus/hard-negative-polish-v11/initial.pt",
+        "model/bottle-focus/hard-negative-polish-v11/phase6-best_bottle.pt",
+        "model/bottle-focus/expanded-context-v13/initial.pt",
+        "model/bottle-focus/expanded-context-v13/phase6-best_bottle.pt",
+        "model/bottle-focus/gentle-feature-polish-v12/initial.pt"
+      ],
+      "canonical": "model/bottle-focus/expanded-context-v13/phase6-best_bottle.pt",
+      "original_modes": {
+        "model/bottle-focus/hard-negative-polish-v11/initial.pt": 420,
+        "model/bottle-focus/hard-negative-polish-v11/phase6-best_bottle.pt": 420,
+        "model/bottle-focus/expanded-context-v13/initial.pt": 420,
+        "model/bottle-focus/expanded-context-v13/phase6-best_bottle.pt": 420,
+        "model/bottle-focus/gentle-feature-polish-v12/initial.pt": 420
+      },
+      "read_only": true
+    }
+  ]
+}

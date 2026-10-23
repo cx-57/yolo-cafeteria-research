@@ -11,7 +11,7 @@ with tempfile.TemporaryDirectory(prefix='bottle-initialization-') as temporary:
     ledger=m.s.load(m.RUN/'initialization.json');assert ledger['weights_sha']==expected
     assert Path(ledger['source']).resolve()==RUN.parent/'gentle-feature-adaptation-v6/phase8-best_bottle.pt'
     before=(m.RUN/'initialization.json').read_bytes();m.initialize();assert (m.RUN/'initialization.json').read_bytes()==before
-    m.INITIAL.write_bytes(b'foreign checkpoint')
+    m.INITIAL.unlink();m.INITIAL.write_bytes(b'foreign checkpoint')
     try:m.initialize()
     except AssertionError:pass
     else:raise AssertionError('Foreign existing initialization was accepted')

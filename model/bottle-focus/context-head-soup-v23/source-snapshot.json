@@ -1,0 +1,10 @@
+{
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/context-balance-v20/best_trained_bottle.pt",
+  "snapshot": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/context-head-soup-v23/source-epoch3.pt",
+  "selection": {
+    "epoch": 3,
+    "AP50": 0.8344408174052969,
+    "weights_sha": "cdf9333bf999ee6863cdde52083106b613922dc70953bf6d7ada51d8dc36cb46"
+  },
+  "training_dataset_audit_sha": "22e499169eca07881c3ca181e592e747a4ef57fda1d759c3881abe8c1731d00c"
+}

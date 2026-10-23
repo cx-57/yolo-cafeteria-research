@@ -1,0 +1,7 @@
+{
+  "tests_passed": 2,
+  "regression_and_classification_outputs_match_intended_sources_exactly": true,
+  "source_weight_files_unchanged": true,
+  "implementation_sha": "8d61d470bb41602d39e714f5a23999d5613916a584e9d2d278b5cc5d90f323f6",
+  "test_sha": "ba343adcb74fba5ccf70d76cab9abc92c23d29666cc4944edecddada9c52b6df"
+}

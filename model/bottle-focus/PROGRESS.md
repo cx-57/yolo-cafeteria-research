@@ -1,8 +1,8 @@
 # Bottle specialist experiments — 2026-10-22
 
 Target: at least **85% bottle AP50**. Best freshly verified result at this
-snapshot: **84.0711%**, using a saved single-class YOLO11s checkpoint at
-640 pixels with ordinary inference and NMS IoU 0.5. The target has not been reached.
+snapshot: **84.0784%**, using a saved single-class YOLO11s checkpoint at
+640 pixels with ordinary CPU inference, batch 4 and NMS IoU 0.5. The target has not been reached.
 
 The fixed development validation set has **246 images and 67 bottle boxes**.
 All validation images, bottle annotations and splits are preserved.
@@ -25,7 +25,9 @@ These are development results, with no independent test claim.
 | Half/half head average, TTA NMS IoU 0.5 | 83.02% | 83.35% |
 | Same head average, ordinary NMS IoU 0.5 | 83.68% | — |
 | Head interpolation alpha 0.75, ordinary NMS IoU 0.5 | 83.73% | — |
-| Quarter quality-head blend, ordinary NMS IoU 0.5 | **84.07%** | 80.68% |
+| Quarter quality-head blend, ordinary NMS IoU 0.5 | 84.07% | 80.68% |
+| Context-balanced head, best saved model of 12 epochs, NMS IoU 0.5 | 83.14% | — |
+| Half context/quality head average, CPU ordinary NMS IoU 0.5 | **84.08%** | — |
 
 All scores are independently reloaded evaluations. The non-averaged
 head-only checkpoint’s training-time validation score was 83.05%; the saved-model score above takes precedence.
@@ -35,7 +37,7 @@ serialized at half precision, so the two scores need not match exactly.
 The verified incumbent is retained locally at
 `verified-incumbent/bottle.pt`; its settings and SHA-256 are recorded in
 [`verified-incumbent/verification.json`](verified-incumbent/verification.json).
-SHA-256: `88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518`.
+SHA-256: `2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289`.
 Existing Git ignores exclude model weight files; reports and experiment code
 are versioned, while checkpoints remain local.
 
@@ -139,7 +141,11 @@ appear once; there are 1,896 exposures. It uses seed 43, pinned edab
 initialization and the frozen-feature head recipe at 0.00003. The verified
 84.07% global incumbent is protected. A half/half quality-head blend is
 checked on CPU with its device explicit; it scored 83.45% and was rejected.
-The context-balanced training result remains pending.
+The context-balanced run completed 12 epochs; epoch 3 remained best. Its saved model reached 83.1407% ordinary AP50 at NMS IoU 0.5 and 82.6453% augmented AP50 at NMS IoU 0.7. Phase-12 checkpoints and reports are preserved.
+
+Regression-only and classification-only branch blends scored 83.7310% and 83.8528%; both were rejected. A half parameter average of the 84.0711% quality model and the context-balanced epoch-3 head reached **84.0784%** on a fresh CPU evaluation. The frozen backbone and BatchNorm statistics were identical. This normal single-model checkpoint is the current incumbent. Default NMS IoU 0.7 reduced its AP50 to 83.3168%.
+
+The larger `medium-head-v24` trial has now started from official pretrained YOLO11m weights with 20,053,779 parameters after single-class projection. A real non-square input confirmed unchanged decoded boxes and the original COCO bottle scores. It uses the exact V20 reviewed data and fixed validation, head-only training, fixed BatchNorm statistics, learning rate 0.0001, 640 pixels and batch 2. Baseline and training results are pending; the 84.0784% smaller-model incumbent is protected.
 
 Run using the existing local runtime:
 
