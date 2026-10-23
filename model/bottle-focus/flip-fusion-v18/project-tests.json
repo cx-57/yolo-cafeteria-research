@@ -1,0 +1,9 @@
+{
+  "tests": 235,
+  "result": "OK",
+  "failures": 0,
+  "errors": 0,
+  "log_sha": "8e6004dd443bb803f0c3ef423e598f2b4d45bfdd36f47caccde6539240b356a2",
+  "fusion_tests": 5,
+  "fusion_test_result": "OK"
+}

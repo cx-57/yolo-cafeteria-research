@@ -1,7 +1,7 @@
 # Bottle specialist experiments — 2026-10-22
 
 Target: at least **85% bottle AP50**. Best freshly verified result at this
-snapshot: **83.6832%**, using a saved single-class YOLO11s checkpoint at
+snapshot: **84.0711%**, using a saved single-class YOLO11s checkpoint at
 640 pixels with ordinary inference and NMS IoU 0.5. The target has not been reached.
 
 The fixed development validation set has **246 images and 67 bottle boxes**.
@@ -23,7 +23,9 @@ These are development results, with no independent test claim.
 | Same checkpoint, NMS IoU 0.5 | — | 82.65% |
 | YOLO11s head-only 35-photo supplement, best of six epochs | 82.99% | 80.75% |
 | Half/half head average, TTA NMS IoU 0.5 | 83.02% | 83.35% |
-| Same head average, ordinary NMS IoU 0.5 | **83.68%** | — |
+| Same head average, ordinary NMS IoU 0.5 | 83.68% | — |
+| Head interpolation alpha 0.75, ordinary NMS IoU 0.5 | 83.73% | — |
+| Quarter quality-head blend, ordinary NMS IoU 0.5 | **84.07%** | 80.68% |
 
 All scores are independently reloaded evaluations. The non-averaged
 head-only checkpoint’s training-time validation score was 83.05%; the saved-model score above takes precedence.
@@ -33,7 +35,7 @@ serialized at half precision, so the two scores need not match exactly.
 The verified incumbent is retained locally at
 `verified-incumbent/bottle.pt`; its settings and SHA-256 are recorded in
 [`verified-incumbent/verification.json`](verified-incumbent/verification.json).
-SHA-256: `42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571`.
+SHA-256: `88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518`.
 Existing Git ignores exclude model weight files; reports and experiment code
 are versioned, while checkpoints remain local.
 
@@ -95,12 +97,54 @@ The `expanded-context-v13` trial adds 16 further reviewed LVIS photos with
 holds, and removes extra hard-negative repeats. It uses 1,108 unique photos /
 1,651 exposures and the previously successful head settings: freeze 23,
 AdamW 0.00003, mosaic 0.5, scale 0.5, fixed BatchNorm running statistics.
-Its result is pending; all validation bytes and labels remain unchanged.
+Six epochs completed, best native 81.46%; independently reloaded augmented
+AP50 was 78.35%. It did not improve the incumbent. V11 and V12 newly
+trained candidates also scored 82.29% and 80.81% with augmented inference
+and NMS 0.5. All validation bytes and labels remain unchanged.
+
+The full 124-photo original context-positive cohort was reviewed with
+targeted crops. Ten photos / fourteen boxes were conservatively held for
+uncertain material/type; these are not ten confirmed label errors. The
+`scope-clean-feature-v14` trial uses the five prior negative holds plus those
+ten context holds, the same 57 external photos / 109 boxes, 1,098 unique
+photos / 1,611 exposures, and 451 unique training bottle boxes. It starts
+from the pinned pre-soup V6 checkpoint (edab…); the 83.68% global incumbent
+remains protected. Later features adapt at 0.00001 with mosaic 0.5, scale
+0.5 and fixed BatchNorm statistics. Native AP50 fell 76.67% / 71.36%
+in two completed epochs, so epoch three was interrupted and the control
+retained.
+
+A fixed four-view rotation TTA test (0/90/180/270 degrees, full resolution,
+NMS 0.5) reached 76.81% and was rejected. Both independent geometry/model
+integrity tests and all 235 project tests passed; 246 adapter calls were
+verified. Two neighboring head interpolation points, alpha 0.25 and 0.75,
+are being evaluated as ordinary single saved models under the same settings
+as the incumbent alpha 0.5. Alpha 0.25 scored 82.98%; alpha 0.75 scored
+83.73%. Four-view rotation Weighted Boxes Fusion scored 83.12%;
+two-view original/horizontal-flip fusion scored 80.89%. Both were rejected;
+geometry/fusion tests and the full 235-test project suite passed.
+
+The fixed quality-head blend uses 0.75 of the alpha-0.75 V8 head average
+and 0.25 of the V11 quality-trained head. Frozen backbone tensors and all
+BatchNorm statistics were identical. Freshly reloaded ordinary inference
+reached 84.0711%; default augmented inference reached 80.6760%. The exact
+ordinary checkpoint is retained. This winner combines V8 and V11 lineage;
+the V11 branch used 41 external photos / 80 boxes and five negative-image
+holds. Later 57-photo and 15-hold copies are separate trials.
+
+The active `context-balance-v20` trial retains the scope-screened 1,098
+unique-photo / 451-box pool, repeats 114 original context photos eight
+times, and includes every other photo once. Its 57 external photos each
+appear once; there are 1,896 exposures. It uses seed 43, pinned edab
+initialization and the frozen-feature head recipe at 0.00003. The verified
+84.07% global incumbent is protected. A half/half quality-head blend is
+checked on CPU with its device explicit; it scored 83.45% and was rejected.
+The context-balanced training result remains pending.
 
 Run using the existing local runtime:
 
 ```sh
-PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scripts BOTTLE_PHASE_EPOCHS=6 .venv/bin/python -u model/bottle-focus/expanded-context-v13/run.py
+PYTHONPATH=/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312:$PWD/scripts BOTTLE_PHASE_EPOCHS=6 .venv/bin/python -u model/bottle-focus/context-balance-v20/run.py
 ```
 
 The cached dataset is prepared by

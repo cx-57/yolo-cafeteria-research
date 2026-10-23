@@ -1,10 +1,10 @@
 {
   "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/verified-incumbent/bottle.pt",
-  "weights_sha": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
-  "AP50": 0.8368319528758054,
-  "AP50_95": 0.605158155728242,
-  "precision": 0.8614230946377613,
-  "recall": 0.7422849829709685,
+  "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+  "AP50": 0.8407106817291071,
+  "AP50_95": 0.620605656065828,
+  "precision": 0.8466705171756312,
+  "recall": 0.7611940298507462,
   "imgsz": 640,
   "batch": 4,
   "nms_iou": 0.5,
@@ -14,12 +14,12 @@
   "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
   "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
   "averaging": {
-    "alpha": 0.5,
-    "initial": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/external-data-v8/initial.pt",
-    "initial_sha": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
-    "trained": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/external-data-v8/phase6-best_bottle.pt",
-    "trained_sha": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
-    "weights_sha": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+    "alpha": 0.25,
+    "initial": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/head-interpolation-v16/alpha0.75-bottle.pt",
+    "initial_sha": "e222b49cb8671bc33d085e82afb77087645924fdb5e9018c63ef9d3a3e0277ec",
+    "trained": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/hard-negative-polish-v11/best_trained_bottle.pt",
+    "trained_sha": "c97bd51f4e8d74244ad8eab5e6c7d9f41e309d3e79d0f3919d79e61e2261d301",
+    "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
     "changed_state_keys": [
       "model.23.cv2.0.0.conv.weight",
       "model.23.cv2.0.0.bn.weight",
@@ -86,14 +86,17 @@
     ],
     "frozen_backbone_identical": true,
     "BatchNorm_running_statistics_identical": true,
-    "training_dataset_audit_sha": "2c2acfa9bed25932592530b1197fffc3bcb51acdfe7c1267c374ab9a1873bb3a",
+    "training_dataset_audit_shas": [
+      "2c2acfa9bed25932592530b1197fffc3bcb51acdfe7c1267c374ab9a1873bb3a",
+      "a550a901c6cce037846c0945e5b76372b2d23963bac97ac1f8bbecb1f6379e89"
+    ],
     "external_training_used": true,
     "external_human_verified": false,
     "independent_test": false
   },
   "independent_test": false,
   "ultralytics_version": "8.4.175",
-  "source_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/head-average-v9/averaged-bottle.pt",
-  "source_verification": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/head-average-v9/ordinary-iou0.5.json",
+  "source_checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt",
+  "source_verification": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-head-blend-v19/alpha0.25-ordinary640-iou0.5.json",
   "runtime_cache_copy": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/weights/bottle-best-verified.pt"
 }

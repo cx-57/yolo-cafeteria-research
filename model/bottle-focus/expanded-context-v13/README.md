@@ -1,6 +1,8 @@
 # Expanded context training
 
-Prepared trial; no score claimed. Adds 16 AI-reviewed LVIS photos with
+Six epochs completed without improving the saved control. Best newly trained
+native AP50 was 81.46%; independent TTA/NMS 0.5 evaluation was 78.35%.
+See phase6-outcome.json. Adds 16 AI-reviewed LVIS photos with
 29 source bottle boxes to the existing 41-photo / 80-box supplement.
 Source image bytes, full source annotations, review reasons, and conservative
 validation-overlap screening are recorded. One source reflection box is

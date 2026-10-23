@@ -1,0 +1,72 @@
+{
+  "note": "Removed byte-identical generated train/weights copies from inactive trials; all unique model bytes and resume optimizer states remain at retained paths. Copies can be reconstructed with shutil.copy2.",
+  "reclaimed_bytes": 390841579,
+  "records": [
+    {
+      "duplicate": "model/bottle-focus/context-resampling-v5/train/weights/last.pt",
+      "retained": "model/bottle-focus/context-resampling-v5/last_resume.pt",
+      "sha256": "83eb97216aa46562aaef7a7909f8f44239601d81a1f695f873ef7868f0c73575",
+      "bytes": 24161285
+    },
+    {
+      "duplicate": "model/bottle-focus/external-data-v7/train/weights/last.pt",
+      "retained": "model/bottle-focus/external-data-v7/last_resume.pt",
+      "sha256": "a2c8be16b06d38b63d424f68bd87f77339890ba1391569d8554da6ccd5ac46b6",
+      "bytes": 49177065
+    },
+    {
+      "duplicate": "model/bottle-focus/external-data-v8/train/weights/last.pt",
+      "retained": "model/bottle-focus/external-data-v8/last_resume.pt",
+      "sha256": "a89530f2fa103dcc0c5d69f128492fd9a69bf40caf74b12d7dd7c8f39e85cd34",
+      "bytes": 24159365
+    },
+    {
+      "duplicate": "model/bottle-focus/external-data-v8/train/weights/best.pt",
+      "retained": "model/bottle-focus/external-data-v8/best_bottle.pt",
+      "sha256": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
+      "bytes": 24158661
+    },
+    {
+      "duplicate": "model/bottle-focus/gentle-feature-adaptation-v6/train/weights/last.pt",
+      "retained": "model/bottle-focus/gentle-feature-adaptation-v6/last_resume.pt",
+      "sha256": "ca3f59d67d2505c50b356960352bf81bd1ef3d41589d18193e52d12cb9ca204f",
+      "bytes": 49178089
+    },
+    {
+      "duplicate": "model/bottle-focus/gentle-feature-polish-v12/train/weights/last.pt",
+      "retained": "model/bottle-focus/gentle-feature-polish-v12/last_resume.pt",
+      "sha256": "c05d7fa50c9944a0229f8d51bcc9140944f290a310fb2be4e1a64f28b6dab173",
+      "bytes": 49176745
+    },
+    {
+      "duplicate": "model/bottle-focus/gentle-feature-polish-v12/train/weights/best.pt",
+      "retained": "model/bottle-focus/gentle-feature-polish-v12/best_trained_bottle.pt",
+      "sha256": "a6f160688909e1215db250a65e3551783a638050bb3515b389b07f448abcc84f",
+      "bytes": 49176425
+    },
+    {
+      "duplicate": "model/bottle-focus/hard-negative-polish-v11/train/weights/last.pt",
+      "retained": "model/bottle-focus/hard-negative-polish-v11/last_resume.pt",
+      "sha256": "45f056cbe0c8105ed8e9abf83846096b29eb5e37c0b19682ad35c609ee11b2fc",
+      "bytes": 24159045
+    },
+    {
+      "duplicate": "model/bottle-focus/hard-negative-polish-v11/train/weights/best.pt",
+      "retained": "model/bottle-focus/hard-negative-polish-v11/best_trained_bottle.pt",
+      "sha256": "c97bd51f4e8d74244ad8eab5e6c7d9f41e309d3e79d0f3919d79e61e2261d301",
+      "bytes": 24158917
+    },
+    {
+      "duplicate": "model/bottle-focus/plastic-specialist-s-v2/train/weights/last.pt",
+      "retained": "model/bottle-focus/plastic-specialist-s-v2/last_resume.pt",
+      "sha256": "1fb3d5190fadd0b9a53ca1dba0088eea5e1967ade9f6f65a3101d7d24d63b9b4",
+      "bytes": 24159301
+    },
+    {
+      "duplicate": "model/bottle-focus/plastic-specialist-s-v3/train/weights/last.pt",
+      "retained": "model/bottle-focus/plastic-specialist-s-v3/last_resume.pt",
+      "sha256": "57d48d4cec9641ab4e93461f6a8e7959064dc2aa60f3769f4ab998962d1cc649",
+      "bytes": 49176681
+    }
+  ]
+}

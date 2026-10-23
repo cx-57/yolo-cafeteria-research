@@ -1,0 +1,7 @@
+{
+  "fresh_copy": true,
+  "reuse_same_provenance": true,
+  "foreign_checkpoint_rejected": true,
+  "source_unchanged": true,
+  "weights_sha": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63"
+}
