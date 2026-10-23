@@ -50,3 +50,9 @@ All 237 project tests and six joint-policy tests pass; independent code
 review found no blocking issues. The restarted controller first freshly
 validates saved candidates, then resumes its bounded screening policy.
 No trained-model improvement or target achievement is claimed.
+
+Recovery freshly verified selected epoch 1 at83.8031% AP50 /61.4286%
+AP50–95 and latest epoch 3 at82.5968% /60.2242%. Neither improves the
+balanced baseline. The controller reconciled phase3 and resumed from its
+optimizer checkpoint; stale-phase count is1 of3. Benchmark and protected
+incumbent weights remain unchanged.

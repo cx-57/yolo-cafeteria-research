@@ -4,7 +4,27 @@
   "aspirational_AP50_95": 0.7,
   "phase_epochs": 3,
   "max_epochs": 40,
-  "phases": [],
+  "phases": [
+    {
+      "reference": [
+        0.8407106817291071,
+        0.620605656065828
+      ],
+      "stale_phases": 1,
+      "status": "running",
+      "best_AP50": 0.8407106817291071,
+      "best_AP50_95": 0.620605656065828,
+      "completed_epoch": 3
+    }
+  ],
   "status": "running",
-  "current_phase_log": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/phase-1792797415238388000.log"
+  "current_phase_log": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/phase-1792799189074016000.log",
+  "reference": [
+    0.8407106817291071,
+    0.620605656065828
+  ],
+  "stale_phases": 1,
+  "best_AP50": 0.8407106817291071,
+  "best_AP50_95": 0.620605656065828,
+  "completed_epoch": 3
 }

@@ -279,3 +279,8 @@ selection ledger. Checkpoints and optimizer were intact. A bounded small-JSON
 materialization fix passed 237 project tests and six joint-policy tests,
 with independent review. Recovery validates saved candidates before further
 training; this operational fix is not an accuracy improvement.
+
+Recovery fresh phase3 checks: selected epoch1 =83.8031% /61.4286%;
+latest epoch3 =82.5968% /60.2242%. No gain over84.0711% /62.0606%.
+The controller reconciled phase3 with stale count1 and resumed its next
+three-epoch phase; the exact joint target remains unmet.
