@@ -183,3 +183,26 @@ identity/partial targets or incomplete box coverage. **17 photos / 20 boxes**
 remain eligible candidates. None has entered V24 or V25 training. The
 validation-overlap heuristic flagged another already-held candidate. All
 reviews are AI assisted and are not human verification.
+
+The V25 adaptation was preserved after two completed epochs (native AP50
+66.2860% and 68.0283%); neither beat its initialization. Its selected saved
+checkpoint remains the 68.8293%/72.7199% ordinary/augmented baseline. This
+was a short screen, not a claim that the planned 100-epoch recipe converged.
+
+Inspection of the actual WaDaBa author notebook found a distinct fully
+trainable recipe: effective AdamW 0.000909, 20 epochs and nbs 64; requested
+0.01 was ignored by auto. Its output logs 3,200/800 images, not an observed
+11,000-image YOLO run. The new `paper-recipe-s-v27` control uses those
+optimizer/schedule settings on our unchanged data, with YOLO11s/batch 4
+for this Mac. It starts from fresh projected COCO b28f0550, whose saved
+baseline AP50 is 26.9615%. Live checks confirm all 9,428,163 feature/head
+parameters trainable (only DFL fixed) and all 81 BatchNorm modules training.
+Training is active; no result is claimed for its pending epochs.
+
+The V27 control's first two native validation scores are 28.7408% and
+29.8204%; these are not freshly reloaded scores and do not replace the
+84.0784% saved incumbent. A rounded-prediction replay of small/medium
+2:1 weighted fusion scored 79.8197%, versus its replayed small-model
+control of 83.4997% (fresh control 83.4980%). This replay is exploratory
+only, not live two-model inference or an independently validated ensemble;
+it did not justify diverting the active training run.

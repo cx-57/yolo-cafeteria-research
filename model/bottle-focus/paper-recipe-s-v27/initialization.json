@@ -1,0 +1,13 @@
+{
+  "architecture": "YOLO11s",
+  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/plastic-specialist-s-v2/initial.pt",
+  "source_sha": "b28f055085711a1e264f5420aa90442fc57f6384535cbb0252c75ee38a155cb8",
+  "weights_sha": "b28f055085711a1e264f5420aa90442fc57f6384535cbb0252c75ee38a155cb8",
+  "COCO_projection": {
+    "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/weights/yolo11s.pt",
+    "source_sha": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    "weights_sha": "b28f055085711a1e264f5420aa90442fc57f6384535cbb0252c75ee38a155cb8",
+    "COCO_class": 39,
+    "decoded_output_preserved": true
+  }
+}

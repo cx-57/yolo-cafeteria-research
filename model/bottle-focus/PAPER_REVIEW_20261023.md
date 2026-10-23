@@ -29,3 +29,5 @@ photos at 384 pixels with 25% overlap and retain full-image predictions. Check
 coordinates against the actual native loader before using the unchanged
 validator. If it fails, retain the ordinary model and proceed to sustained
 feature adaptation; do not change validation to reach the target.
+
+The authors' pinned [YOLO11m notebook](https://github.com/sumn2u/wadaba-analysis/blob/2a2fa0e0c280deb1505ba43167c32422558b697d/plastic-object-detection-wadaba-yolo-11m.ipynb) gives a more concrete recipe: effective AdamW 0.000909, all features trainable, 20 epochs, batch 16 and nbs 64. The requested 0.01 was ignored by auto. Its log has 3,200/800 images, so the paper's oversampling description does not establish the actual YOLO input size. V27 adapts this recipe to YOLO11s/batch 4; all local differences and source hashes are recorded.

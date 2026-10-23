@@ -1,0 +1,35 @@
+{
+  "exploratory_replay_only": true,
+  "fresh_model_inference": false,
+  "validation_images": 246,
+  "bottle_objects": 67,
+  "small_replayed": {
+    "AP50": 0.8349966215573301,
+    "AP50_95": 0.606949083913943
+  },
+  "ensemble_replayed": {
+    "AP50": 0.7981971191071113,
+    "AP50_95": 0.6060292584450371
+  },
+  "small_saved_model_AP50": 0.8349801121233678,
+  "control_difference": 1.650943396236393e-05,
+  "wbf": {
+    "weights": [
+      2,
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.001
+  },
+  "sources": [
+    {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/context-head-soup-v23/evaluations/ordinary-batch1-iou0.5-mps/predictions.json",
+      "sha": "b024d371c6478a8759225c06f12e0a226e477751f18d112af1dc6766900aba91"
+    },
+    {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/medium-head-v24/evaluations/selected/predictions.json",
+      "sha": "98972f608a127cebaa4145a057d8b3fcb40d48ec95b5dfe44d3cc7b9995b4bd0"
+    }
+  ],
+  "limitations": "Rounded exported boxes/confidences and different source batch sizes/NMS settings. Any apparent gain requires live two-model validation on unchanged data; never promote from this screen."
+}
