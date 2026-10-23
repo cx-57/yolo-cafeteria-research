@@ -1,0 +1,428 @@
+{
+  "source": "model/bottle-focus/context-head-soup-v23/evaluations/ordinary-batch1-iou0.5-mps/predictions.json",
+  "source_sha": "b024d371c6478a8759225c06f12e0a226e477751f18d112af1dc6766900aba91",
+  "diagnostic_only": true,
+  "annotation_changes": false,
+  "records": [
+    {
+      "name": "plate__val__lvis_000000396596.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__val__lvis_000000396596.jpg",
+      "image_sha": "c812213d814ee21ccb6c4ec274acd86e8ea466f17c77956722b552a1b76ac471",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__val__lvis_000000396596",
+          "file_name": "plate__val__lvis_000000396596.jpg",
+          "category_id": 1,
+          "bbox": [
+            527.442,
+            0.0,
+            84.772,
+            123.008
+          ],
+          "score": 0.72033
+        },
+        {
+          "image_id": "plate__val__lvis_000000396596",
+          "file_name": "plate__val__lvis_000000396596.jpg",
+          "category_id": 1,
+          "bbox": [
+            129.66,
+            0.0,
+            77.316,
+            101.088
+          ],
+          "score": 0.29316
+        },
+        {
+          "image_id": "plate__val__lvis_000000396596",
+          "file_name": "plate__val__lvis_000000396596.jpg",
+          "category_id": 1,
+          "bbox": [
+            105.974,
+            0.184,
+            37.699,
+            101.151
+          ],
+          "score": 0.14045
+        }
+      ],
+      "max_score": 0.72033
+    },
+    {
+      "name": "plate__train__lvis_000000468276.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000468276.jpg",
+      "image_sha": "600a18c4aaff26f2f1b9d5025b51d0bba5fe973859cc5de987be7d1b98567839",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000468276",
+          "file_name": "plate__train__lvis_000000468276.jpg",
+          "category_id": 1,
+          "bbox": [
+            529.657,
+            0.0,
+            109.912,
+            178.364
+          ],
+          "score": 0.51858
+        }
+      ],
+      "max_score": 0.51858
+    },
+    {
+      "name": "plate__train__lvis_000000375347.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000375347.jpg",
+      "image_sha": "160ddd91da41257d585706394d77e9da6d2019bbac4103015f604e0f6fe847da",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000375347",
+          "file_name": "plate__train__lvis_000000375347.jpg",
+          "category_id": 1,
+          "bbox": [
+            256.829,
+            0.0,
+            78.439,
+            170.449
+          ],
+          "score": 0.48064
+        }
+      ],
+      "max_score": 0.48064
+    },
+    {
+      "name": "plate__val__lvis_000000478257.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__val__lvis_000000478257.jpg",
+      "image_sha": "99650c4f53bb0af8bb602938aaa7a06ed5c88d93c7c1283c6dade546911baaf0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__val__lvis_000000478257",
+          "file_name": "plate__val__lvis_000000478257.jpg",
+          "category_id": 1,
+          "bbox": [
+            180.039,
+            191.55,
+            31.638,
+            66.333
+          ],
+          "score": 0.35416
+        }
+      ],
+      "max_score": 0.35416
+    },
+    {
+      "name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+      "image_sha": "ea74e468152e68c59b5c116175c06d7c25c48492edb5fce39dff58b3c6f83fee",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b",
+          "file_name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+          "category_id": 1,
+          "bbox": [
+            343.754,
+            330.045,
+            80.49,
+            58.979
+          ],
+          "score": 0.35092
+        },
+        {
+          "image_id": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b",
+          "file_name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+          "category_id": 1,
+          "bbox": [
+            559.174,
+            426.762,
+            80.826,
+            95.558
+          ],
+          "score": 0.29843
+        },
+        {
+          "image_id": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b",
+          "file_name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+          "category_id": 1,
+          "bbox": [
+            392.086,
+            324.662,
+            31.604,
+            47.642
+          ],
+          "score": 0.06927
+        },
+        {
+          "image_id": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b",
+          "file_name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+          "category_id": 1,
+          "bbox": [
+            344.859,
+            378.663,
+            35.196,
+            12.669
+          ],
+          "score": 0.05811
+        },
+        {
+          "image_id": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b",
+          "file_name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+          "category_id": 1,
+          "bbox": [
+            271.397,
+            307.135,
+            65.045,
+            50.42
+          ],
+          "score": 0.05537
+        }
+      ],
+      "max_score": 0.35092
+    },
+    {
+      "name": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+      "image_sha": "ecdfaff72f908dac322e8e2766d1187c33a967527be04d4637961933b8ee6821",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5",
+          "file_name": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+          "category_id": 1,
+          "bbox": [
+            252.802,
+            275.45,
+            132.748,
+            87.084
+          ],
+          "score": 0.29733
+        }
+      ],
+      "max_score": 0.29733
+    },
+    {
+      "name": "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+      "image_sha": "1fe23659df69508c71e80fbda21f038631ea3233927c2fea61943e13320f4eb3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf",
+          "file_name": "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+          "category_id": 1,
+          "bbox": [
+            256.914,
+            303.464,
+            332.057,
+            202.497
+          ],
+          "score": 0.28961
+        }
+      ],
+      "max_score": 0.28961
+    },
+    {
+      "name": "plate__train__lvis_000000505234.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000505234.jpg",
+      "image_sha": "38b01830ccbef98497dde2a7ee17da8d0566edcd6da837093dc3148eaa89f90e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000505234",
+          "file_name": "plate__train__lvis_000000505234.jpg",
+          "category_id": 1,
+          "bbox": [
+            0.043,
+            295.734,
+            24.876,
+            126.186
+          ],
+          "score": 0.21779
+        }
+      ],
+      "max_score": 0.21779
+    },
+    {
+      "name": "plate__train__lvis_000000097922.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000097922.jpg",
+      "image_sha": "410f6992ed4a5480b2eccc990f803302fef0f4910bd458f1f9d06299e1a9fe54",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000097922",
+          "file_name": "plate__train__lvis_000000097922.jpg",
+          "category_id": 1,
+          "bbox": [
+            235.536,
+            14.553,
+            30.601,
+            72.486
+          ],
+          "score": 0.19365
+        }
+      ],
+      "max_score": 0.19365
+    },
+    {
+      "name": "school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd.jpg",
+      "image_sha": "4122ae187c3990549fbfe58c3ef8e1907e501479fab0bfb964aaa68bcb1cccaa",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd",
+          "file_name": "school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd.jpg",
+          "category_id": 1,
+          "bbox": [
+            334.315,
+            25.388,
+            89.147,
+            82.949
+          ],
+          "score": 0.16389
+        }
+      ],
+      "max_score": 0.16389
+    },
+    {
+      "name": "plate__train__lvis_000000521088.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000521088.jpg",
+      "image_sha": "f937c463b8aa931dc0b262a8d1c7447cdce2ed3c67d585c76fd17645565d06f6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000521088",
+          "file_name": "plate__train__lvis_000000521088.jpg",
+          "category_id": 1,
+          "bbox": [
+            231.267,
+            342.069,
+            21.099,
+            32.931
+          ],
+          "score": 0.12174
+        },
+        {
+          "image_id": "plate__train__lvis_000000521088",
+          "file_name": "plate__train__lvis_000000521088.jpg",
+          "category_id": 1,
+          "bbox": [
+            174.462,
+            91.022,
+            19.141,
+            35.848
+          ],
+          "score": 0.09099
+        }
+      ],
+      "max_score": 0.12174
+    },
+    {
+      "name": "plate__train__lvis_000000456761.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000456761.jpg",
+      "image_sha": "f30ff10bf5ed406b2159e62d05017190a51da784274ce1cc14242fda92c43ecd",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000456761",
+          "file_name": "plate__train__lvis_000000456761.jpg",
+          "category_id": 1,
+          "bbox": [
+            2.939,
+            0.222,
+            40.52,
+            107.487
+          ],
+          "score": 0.11627
+        }
+      ],
+      "max_score": 0.11627
+    },
+    {
+      "name": "plate__train__lvis_000000470115.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000470115.jpg",
+      "image_sha": "29057bd5b2d2758dfff89a43bbae92de9bbd7142607d13c9652375fc4e08ccc8",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000470115",
+          "file_name": "plate__train__lvis_000000470115.jpg",
+          "category_id": 1,
+          "bbox": [
+            357.023,
+            141.576,
+            26.434,
+            73.062
+          ],
+          "score": 0.06657
+        }
+      ],
+      "max_score": 0.06657
+    },
+    {
+      "name": "plate__val__lvis_000000004180.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__val__lvis_000000004180.jpg",
+      "image_sha": "a9420113c8a2f15047abc2bbeff9ca1d2c7270990e73ffa354554bfd6f13e187",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__val__lvis_000000004180",
+          "file_name": "plate__val__lvis_000000004180.jpg",
+          "category_id": 1,
+          "bbox": [
+            415.927,
+            332.012,
+            58.574,
+            40.847
+          ],
+          "score": 0.05887
+        }
+      ],
+      "max_score": 0.05887
+    },
+    {
+      "name": "plate__train__lvis_000000384981.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000384981.jpg",
+      "image_sha": "092a23b9e9aac59d0b899b670db417f5076ddffddd08a86d10d5ca211722c14c",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000384981",
+          "file_name": "plate__train__lvis_000000384981.jpg",
+          "category_id": 1,
+          "bbox": [
+            430.299,
+            145.694,
+            35.319,
+            58.25
+          ],
+          "score": 0.0534
+        }
+      ],
+      "max_score": 0.0534
+    },
+    {
+      "name": "plate__train__lvis_000000454225.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/val/plate__train__lvis_000000454225.jpg",
+      "image_sha": "38a479fd6b1bef4847a4bf7fdbe29b7c8322f893bfb868df4509bc1c650cf365",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "predictions": [
+        {
+          "image_id": "plate__train__lvis_000000454225",
+          "file_name": "plate__train__lvis_000000454225.jpg",
+          "category_id": 1,
+          "bbox": [
+            245.147,
+            221.354,
+            38.258,
+            65.7
+          ],
+          "score": 0.05253
+        }
+      ],
+      "max_score": 0.05253
+    }
+  ]
+}

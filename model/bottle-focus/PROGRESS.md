@@ -206,3 +206,16 @@ The V27 control's first two native validation scores are 28.7408% and
 control of 83.4997% (fresh control 83.4980%). This replay is exploratory
 only, not live two-model inference or an independently validated ensemble;
 it did not justify diverting the active training run.
+
+A separate read-only validation review found one visibly unannotated clear
+water bottle in a photo with an empty label and one strong visual glass-versus-
+plastic scope mismatch among the labeled positives. Both received a second
+AI review; material identity is not physically verified. Other ambiguous
+containers remain uncertain. All 246 image hashes and label rows still match
+the frozen manifest and protected weights are unchanged. See validation-review
+for evidence, source hashes and review limits. Historical 246/67 scores are
+retained; no corrected score or 85% achievement is claimed.
+
+V27 has completed four epochs; native AP50 increased to 46.1055%. The complete
+20-epoch run remains active, with fresh saved-model validation scheduled by
+the runner. Commit 4a099127 passed both GitHub Pipeline tests jobs.

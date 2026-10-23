@@ -1,0 +1,185 @@
+{
+  "annotation_changes": false,
+  "frozen_validation_images": 246,
+  "frozen_bottle_objects": 67,
+  "proposal_sha": "752c9b333219c5358b24322905a5cc8201d88a4f0259be2b119632abaa1267ed",
+  "confirmed_missing_target_photos": 1,
+  "records": [
+    {
+      "index": 0,
+      "name": "plate__val__lvis_000000396596.jpg",
+      "image_sha": "c812213d814ee21ccb6c4ec274acd86e8ea466f17c77956722b552a1b76ac471",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Condiment jars/bottles beside pizza; not plastic beverage targets.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 1,
+      "name": "plate__train__lvis_000000468276.jpg",
+      "image_sha": "600a18c4aaff26f2f1b9d5025b51d0bba5fe973859cc5de987be7d1b98567839",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Amber glass beverage bottle.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 2,
+      "name": "plate__train__lvis_000000375347.jpg",
+      "image_sha": "160ddd91da41257d585706394d77e9da6d2019bbac4103015f604e0f6fe847da",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Amber beer bottle appears glass.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 3,
+      "name": "plate__val__lvis_000000478257.jpg",
+      "image_sha": "99650c4f53bb0af8bb602938aaa7a06ed5c88d93c7c1283c6dade546911baaf0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Rounded red-top condiment/grinder/container; no clear disposable drink bottle evidence.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 4,
+      "name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+      "image_sha": "ea74e468152e68c59b5c116175c06d7c25c48492edb5fce39dff58b3c6f83fee",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Flexible packaging/bag mistaken for a bottle.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 5,
+      "name": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+      "image_sha": "ecdfaff72f908dac322e8e2766d1187c33a967527be04d4637961933b8ee6821",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Crumpled flexible packaging.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 6,
+      "name": "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+      "image_sha": "1fe23659df69508c71e80fbda21f038631ea3233927c2fea61943e13320f4eb3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Flexible branded packaging/wrapper.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 7,
+      "name": "plate__train__lvis_000000505234.jpg",
+      "image_sha": "38b01830ccbef98497dde2a7ee17da8d0566edcd6da837093dc3148eaa89f90e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Condiment bottle at left edge.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 8,
+      "name": "plate__train__lvis_000000097922.jpg",
+      "image_sha": "410f6992ed4a5480b2eccc990f803302fef0f4910bd458f1f9d06299e1a9fe54",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Visa-branded non-beverage dispenser/container.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 9,
+      "name": "school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd.jpg",
+      "image_sha": "4122ae187c3990549fbfe58c3ef8e1907e501479fab0bfb964aaa68bcb1cccaa",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "uncertain_material_or_type",
+      "reason": "School dairy package; container material/type unresolved.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 10,
+      "name": "plate__train__lvis_000000521088.jpg",
+      "image_sha": "f937c463b8aa931dc0b262a8d1c7447cdce2ed3c67d585c76fd17645565d06f6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "uncertain_material_or_type",
+      "reason": "Tiny background containers; material/type unresolved.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 11,
+      "name": "plate__train__lvis_000000456761.jpg",
+      "image_sha": "f30ff10bf5ed406b2159e62d05017190a51da784274ce1cc14242fda92c43ecd",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "uncertain_material_or_type",
+      "reason": "Canada Dry beverage container; PET versus glass unresolved from this image.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 12,
+      "name": "plate__train__lvis_000000470115.jpg",
+      "image_sha": "29057bd5b2d2758dfff89a43bbae92de9bbd7142607d13c9652375fc4e08ccc8",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Store sign mistaken for bottle.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 13,
+      "name": "plate__val__lvis_000000004180.jpg",
+      "image_sha": "a9420113c8a2f15047abc2bbeff9ca1d2c7270990e73ffa354554bfd6f13e187",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Food/wrapping held by child.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 14,
+      "name": "plate__train__lvis_000000384981.jpg",
+      "image_sha": "092a23b9e9aac59d0b899b670db417f5076ddffddd08a86d10d5ca211722c14c",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "confirmed_missing_target",
+      "reason": "Clear disposable PET water bottle with ribbed body, green screw cap and water label is present but unannotated.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    },
+    {
+      "index": 15,
+      "name": "plate__train__lvis_000000454225.jpg",
+      "image_sha": "38a479fd6b1bef4847a4bf7fdbe29b7c8322f893bfb868df4509bc1c650cf365",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "finding": "non_target_prediction",
+      "reason": "Paper beverage cup mistaken for bottle.",
+      "reviewer": "Codex AI visual review",
+      "secondary_review": "review_readme_workflow independently confirmed photo14 and uncertainty9-11",
+      "human_verified": false
+    }
+  ]
+}

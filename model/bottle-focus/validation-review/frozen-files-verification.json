@@ -1,0 +1,1489 @@
+{
+  "validation_images": 246,
+  "bottle_boxes": 67,
+  "manifest_sha": "0a6ba6bff3de2c104e648a49f5b216d5bb34a1757690a05cafd611ea9cd7e35f",
+  "source_dataset_fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+  "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+  "all_image_hashes_match_frozen_manifest": true,
+  "all_label_rows_match_frozen_manifest": true,
+  "incumbent_weights_sha": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+  "incumbent_and_runtime_weights_unchanged": true,
+  "files": [
+    {
+      "name": "school_lunch__010136000_jpg.rf.8393d70ce4e2e817f57324fcde13c99c.jpg",
+      "image_sha": "8428afb23b33e1cb7d627fc1b5e45ecf7d7b5020123ef25c2795f2ea926b9788",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000010_JPG.rf.f30df122f5615106511115643853ea8a.jpg",
+      "image_sha": "4dea33eac39a53ee8815fecac13ce5493582525e23482ceafa20fdc7071f3e68",
+      "label_sha": "a033dc719f7d28df247fd98eb61d929c4790347fec4bf39e9c188cb990a8fee7",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000021_jpg.rf.69beb13282d945c74658eb2329e95417.jpg",
+      "image_sha": "2243fdf28996c5feb9675ee417311b0cd6a7525ef176c292a06eb655c40c6b37",
+      "label_sha": "5ca0cfa4f208ba0ec53f362c712a6aaa445ede5d18feae6b040135cdfc72c57f",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000029_jpg.rf.bb5e2dac4437552962000a20a4c0b1a7.jpg",
+      "image_sha": "d53d7f1c98bdd6e89d855f4105c531d5eb223f7f2669336c253e9c8d3d5e317a",
+      "label_sha": "f9f0abc929bbddc11942c04947af78273e367250355069b4eafaf6100567dad6",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000037_JPG.rf.7ce5844905e941f713561bf61c19df09.jpg",
+      "image_sha": "0aec72efc38c26851a039e7c2c9ec19e726948dd4af8688a30d5159ed07ee86c",
+      "label_sha": "d77d758141762b510675cc043bbbb2f65b7aeb2d9b7ab43eb16f1be69c0f23c4",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__train__000037_JPG.rf.d0e10276ca28382ca2330a1091865784.jpg",
+      "image_sha": "3d6f20c658ca29935a41a6e356bc86ce0523d6fd66c825c6e32c69581714a2a0",
+      "label_sha": "be8d42df4e18ab3ffb8cd6e6aa4507c4ef89969dac4fb969f03a38fecf4906ff",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000037_jpg.rf.38cb5de90e63fee1eadd43d9a10b3e87.jpg",
+      "image_sha": "38ffc0847cf334e0c7a04c459f33a1230d10c7f9df1828ad0ef0b6375beb72d4",
+      "label_sha": "09afb07570c0a40894e8fed8a991d0187f75b4a0958646825ab6e21205bed211",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000060_JPG.rf.d922106a6ee42d82b6432fa4680419eb.jpg",
+      "image_sha": "dfae1fb5a3e3f898fe8c3c57b61136c14f3898c7485a6f4dda99a6384612fc67",
+      "label_sha": "70e3c4661e1dd86a8b6c8e38aee45eab4f1746d16b599dc2563ae49e553d274b",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000076_JPG.rf.a3c816db12bd9827fab2bd89205d1a4c.jpg",
+      "image_sha": "b7a319963a850e5e61912df5914ac8880197273d9f833546716d825afaf23de8",
+      "label_sha": "0612c1056ccc945b1b00f0d0637eeb92a357e4286d5155185a271fbb01227266",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000076_JPG.rf.afaf5a3cb45a4d737f6d4ae3ad894d1a.jpg",
+      "image_sha": "77371ce0bda2f16b2f6966a347c00c89cf7ab508ea10f1b3cd98eefeacb348b2",
+      "label_sha": "10a693029eca74ec36e25d29e6d1c206ba68530a63579b8ed52275dc29999036",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000076_jpg.rf.a2f33c6e827affcd6b8bd19660f2b7ba.jpg",
+      "image_sha": "11da0871db7b36924da59855addef07dc8406b8be4f7084a13d2ef228765300a",
+      "label_sha": "5f7bd6ae334789853422fa6627471b730c0f6dd9fcf07f30eb9c262816b1b879",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg",
+      "image_sha": "0d3037fb1ce98359a761b57fb8b8543f0b0d1a5adef43f7c316f58e687829f72",
+      "label_sha": "0408006e4659a82b9a8ca8d438b703f482a1bf657183c7898145ef6b15427aaa",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__train__000097_jpg.rf.f04c44037b55c5ad9c3d09592e4f416f.jpg",
+      "image_sha": "30c68a6d9478ee5eb93271b2ff8098fc012dc73f7db25d2151a68c4c00ba326e",
+      "label_sha": "0a37ba9b913613d3f6e7c1ce09bce03e7a2d0c29a101188c1cfceddacd2f3134",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000104_JPG.rf.34c828534c535f976e2765ac029f054d.jpg",
+      "image_sha": "bf745ea1c25f6fff9750be6df6ae8eef1b322a6f70af24b4ea6393a59e065bb7",
+      "label_sha": "10b618527294306ac32ed31a2786a3d412dca9b679da0c8655894e4eff258fe2",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000010_jpg.rf.65151e2c489484904191cd6bb6e256f4.jpg",
+      "image_sha": "1b6963d9ce30d6fc57483b2cb411c6a08ca21d9ac63f74a0911e5617968d4dda",
+      "label_sha": "4be64d511202af4105f9e499d0a11f409f3d0cec74dbfe551b42d64a34677326",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000015_JPG.rf.23f8ea96baaa5f01d2eb6d96585fc991.jpg",
+      "image_sha": "3acbda857fd36551dba58813b8df563760f60b0bb471bc7bc5ba5284721f2edd",
+      "label_sha": "4a87f74fe7d98834139901c9fc6a24375a1d982c0f256b0031b350f779854400",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000015_jpg.rf.61f2aaa1d5605f18b2bfdc8344ed6831.jpg",
+      "image_sha": "6fbca1da668c7c78e0643aae29396fe33dd12c5aa4ecaa5659aea4573ead26dc",
+      "label_sha": "ee0ca8689342b23e0156a988db7ab5019ad9922e85f3912e16352eea3d78de82",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000015_jpg.rf.7aad4048821dc898779f5cac5ccd1f8b.jpg",
+      "image_sha": "ea74e468152e68c59b5c116175c06d7c25c48492edb5fce39dff58b3c6f83fee",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__valid__000021_JPG.rf.8d9fbc48ea02f5a916a5f7d62f00fde2.jpg",
+      "image_sha": "a39f2ec0f8482f578988af692d730286e4b3e7bd4053c2ebbdbd435cc884d11d",
+      "label_sha": "9fe2c714b7dc1330d6e1b70052c644eda89fb3c8d54a5231665b22c6ecb03889",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000029_JPG.rf.1470570600355315dd0a5cf67f841ab0.jpg",
+      "image_sha": "4da916436ebee121e536571b6591f3cb9afc8b65f9fc4e6a50c1c446f568f51f",
+      "label_sha": "f22db299fd154328a7a44ac2cd742451f27bd87649bbfda14be9e87eeeafa5ea",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__valid__000029_jpg.rf.164c529bd3b291e1f8c99d8c1914af36.jpg",
+      "image_sha": "9586c850db5f7bce09dda3f0997bc9282e3e262f4247d0617cb088b9809645e3",
+      "label_sha": "fda6b188a93588fa917f05aebb2418683b549128ae07e9fb7e07035a92b59ca4",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__train__lvis_000000008160.jpg",
+      "image_sha": "461e471d7c610d23abfb0286a140e353985503d6ba2c06dc3f0c919f1f443cf0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000027493.jpg",
+      "image_sha": "ca003669f9a4fd4f96ceb429f1c14df3196d5c2257de369f40f1e622b54a8fa0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000028314.jpg",
+      "image_sha": "bdf2f29f424f7335e043ff6bccd289a2709a5f963c2279acd43eb5d10fe87478",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000041279.jpg",
+      "image_sha": "85c65fdd64ea280086978b5fb5382d0ab504e0ed304e97d27f8de4ff0d561c71",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000072646.jpg",
+      "image_sha": "f7a1e36e3e78c917594a117bcccffd834a5cd633fdd754ddc3f61cdfb3cb12a7",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000087593.jpg",
+      "image_sha": "4b3e69568524c56e95f0c17265b606aaa4b5be43415c69df04b831cd96f36dee",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000091952.jpg",
+      "image_sha": "99488e9a84bae8d43e92f12f012b7d8451125691e6cc80bf0efc02a6e27d0c11",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000095062.jpg",
+      "image_sha": "6606396c059ba2eab1d94568a136e49cfbab649b2b65800f579df74b58eda549",
+      "label_sha": "7aa00dec3e04747d4aaf593d6d56bf41adc79b6e6cbd644edc645e9a33059222",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__train__lvis_000000097922.jpg",
+      "image_sha": "410f6992ed4a5480b2eccc990f803302fef0f4910bd458f1f9d06299e1a9fe54",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000107770.jpg",
+      "image_sha": "ba76a1c7e9e4cdb8e83d8e1423dbecf4f8ee2920ca61278d0331d4c2d7d69892",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000112044.jpg",
+      "image_sha": "391556fa8714c310ec21810f5bd60111d1fb0c58f7d024c5ef8418f0daa59a74",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000127256.jpg",
+      "image_sha": "2c0fd9315e0b538e5f420bb87648e045f8cdcfee9f5678a74fc6230809648270",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000143143.jpg",
+      "image_sha": "2bace51c162204b2266a8b072f7c48e6871d5ce6226c9458ec5164bbbedf6097",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000147983.jpg",
+      "image_sha": "205d922de82b559cd5556faa799ea53d5eab2a37addf07eff63a3ea8755acd3a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000156133.jpg",
+      "image_sha": "396151db7b67b3ed158286ec298b02d4e7ba1770f82cd2c59c1dfd22cbdce671",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000182906.jpg",
+      "image_sha": "3a00d232cc9437b4d199170ab758865c6e7414fa34bbf93201482c284a8c5ae0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000187120.jpg",
+      "image_sha": "2f9314d63ca247244e82125f8b10362da13814ce9e7a6ab9231c9b1e17a4978a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000226102.jpg",
+      "image_sha": "5224050d0a73de7e0b942797aaf988f2d8a50e9e3892006c2191b979918e177b",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000236295.jpg",
+      "image_sha": "f4c15aeeb72697e3c85cd7620264fb1a8d7ddc92915aa0924fb2d370adf737d1",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000249839.jpg",
+      "image_sha": "e71b4b9ecd0ca98e8af74fd4a8bcba69690d4ccb5b67d95e43b6b77882d47f62",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000250498.jpg",
+      "image_sha": "a9e290ee20398803e78d4b8fbf3a06e50b357714e6d1ddbec8ca637814fcd768",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000273053.jpg",
+      "image_sha": "dd2cefc45cbb89fa03516a4fc17108bd839d2e0c536de4e956455d70aafa75a7",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000274804.jpg",
+      "image_sha": "f1caa95fed35c3c065e097ef5b385de9491507df4752dc29e583f70210408479",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000282143.jpg",
+      "image_sha": "a61225292e2a6ab6126a21bad73c20852b83156be3fb3b84482b891a6cff9f7e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000305152.jpg",
+      "image_sha": "74c9bc27a34906bde144f4422af4c8b1e858f88dc3c3bbc0e1b2b8bcd4dc8d9e",
+      "label_sha": "52d2912fc84e40c56724a5cca794abcbe36e8f85f08533a968925fa5de7b883e",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__train__lvis_000000313155.jpg",
+      "image_sha": "add01728fba679dd393bf18c06535524319fb88a3cc0206334bbffa8800ff74a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000326335.jpg",
+      "image_sha": "f7316caeda93458cda11591af2ecf2502613f038a05edb6906d9c44914cc2a77",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000335815.jpg",
+      "image_sha": "66fa87f54ee1a02e3a5124cea451194141ed4a51b1b6f872bdc95eaff9ea5c45",
+      "label_sha": "e47482b5311acff96763980461b1d72757db7c34533d10df43c1476050d580bf",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__train__lvis_000000345218.jpg",
+      "image_sha": "bce24faefcf0b44c93bc9905b2c733bf601a0175c79a3ed0e3e18e86c0164981",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000354530.jpg",
+      "image_sha": "87f22f998c6580c8036e75304c2bab720efe04a12a12e369525d5550282e69b3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000355159.jpg",
+      "image_sha": "d5573edd460804ee88a9b28f8baa6dce6f6660dcef9fd2f471137a54210d546a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000375347.jpg",
+      "image_sha": "160ddd91da41257d585706394d77e9da6d2019bbac4103015f604e0f6fe847da",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000378860.jpg",
+      "image_sha": "db047cb8678bd16842216c4ee99d5c6a20844147a05ce230e9f4b65de259e486",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000384671.jpg",
+      "image_sha": "58d313b7053ff966400e9785a0b59e37566b86686bb9654bc8a6e4832fca76b0",
+      "label_sha": "edf5cdcdeb1562a7838a44bcb9c55d3c91c52838c1485ac387e8f6c10181c52b",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__train__lvis_000000384981.jpg",
+      "image_sha": "092a23b9e9aac59d0b899b670db417f5076ddffddd08a86d10d5ca211722c14c",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000434623.jpg",
+      "image_sha": "c202a54395f1a739080f6cf65080cdca46c9eb0b3ede69d8b7a7457d20099e8f",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000437923.jpg",
+      "image_sha": "57bf9d37c8bde3887e02066310799f95b7a7d8f546f1a866e91cbba7cc4794d8",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000454225.jpg",
+      "image_sha": "38a479fd6b1bef4847a4bf7fdbe29b7c8322f893bfb868df4509bc1c650cf365",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000456761.jpg",
+      "image_sha": "f30ff10bf5ed406b2159e62d05017190a51da784274ce1cc14242fda92c43ecd",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000461953.jpg",
+      "image_sha": "78c6acd7ff0ecd0e3984187c514610ae964feb082716462b78e6e5b29192669b",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000468276.jpg",
+      "image_sha": "600a18c4aaff26f2f1b9d5025b51d0bba5fe973859cc5de987be7d1b98567839",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000470115.jpg",
+      "image_sha": "29057bd5b2d2758dfff89a43bbae92de9bbd7142607d13c9652375fc4e08ccc8",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000471842.jpg",
+      "image_sha": "2786a541e950b11b57aa0c94cc8237add3e91c04de9ef8447a0eba08179abb4e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000479350.jpg",
+      "image_sha": "8ca52d1c818432ff30a3042668cf2b5c92134c754a34f03c540a78dc008c8df6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000487491.jpg",
+      "image_sha": "7a52450689a9eb1f7f7f049207f09fbf2ec53e1757e98ed78cae19d5bc67c411",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000488363.jpg",
+      "image_sha": "672bda4d57738fb7442ca3a3ce29c1d7390d3b83c0ad466cdcc4db52f07d95ed",
+      "label_sha": "305ca2cd78b4bf503bdc90211993f8651aec37acf57bb09df706b57c26967590",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__train__lvis_000000488373.jpg",
+      "image_sha": "8864babddfd11d257cea4ea5c3f49b37e453ed465c27ad4f33e25da74471fc2d",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000495095.jpg",
+      "image_sha": "0b41e481114a80887fe0e09606453ef9ef681fb856a20e01f9eb0afebeffa41a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000499705.jpg",
+      "image_sha": "85592f00f0fb4eb7ef263559043ba1d02e94716f3d62e36b668d0564b82d368a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000505234.jpg",
+      "image_sha": "38b01830ccbef98497dde2a7ee17da8d0566edcd6da837093dc3148eaa89f90e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000513775.jpg",
+      "image_sha": "9f1e2b7280163b580d5ae2e7d101cd2383348d96d316047011cc15ca33ce0305",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000515662.jpg",
+      "image_sha": "efad1d43e0d5e7863799d09069bf46ca646168f3a8edb2def3d26c1be1cd76c1",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000521088.jpg",
+      "image_sha": "f937c463b8aa931dc0b262a8d1c7447cdce2ed3c67d585c76fd17645565d06f6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000523370.jpg",
+      "image_sha": "ad457c68fd17431856e9c859d5f7f41a53c128bdd8dda00b555af33c5775012f",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000529929.jpg",
+      "image_sha": "66260b92dab0d4004ac39cb602f27ec2201cf64019363bfb557a08b6f6026d73",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000533976.jpg",
+      "image_sha": "126364261b6c99e22f4a983b361f48a7603af0927d8a8dce3cfd56a1ef190fe6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000534543.jpg",
+      "image_sha": "1fb01194a4402f43ec0a7773fddb8d2901df9ba15b805e1cf35546c04547ffbe",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000552467.jpg",
+      "image_sha": "02ebaeb24a7fc27bfb27a5f3a9023677aebd88cb87f7da6c6fb01eab6f903f10",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000562906.jpg",
+      "image_sha": "f5ba139588b54162e3dccaddf7621571a1052ec3e3b3236066cc7b32152dccf0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__train__lvis_000000569001.jpg",
+      "image_sha": "59080bb87c5a1229a9830c79372fc694755e54128c382df4d6563159fd4f19b6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000004180.jpg",
+      "image_sha": "a9420113c8a2f15047abc2bbeff9ca1d2c7270990e73ffa354554bfd6f13e187",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000036260.jpg",
+      "image_sha": "32ea9dd260e4559ef50baf1b77735f2a7aeb844433e5e60596d566af7dc97e3b",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000056288.jpg",
+      "image_sha": "6f98dd8e6b6c0d301919aa847ddfc0b9356914219349ea67942b1afbebbd68f9",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000059526.jpg",
+      "image_sha": "90b80895f32c8706495842321c91b30d7506ae00952f98b88c8470bc076c06ab",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000083761.jpg",
+      "image_sha": "d38a56e90b56cb72387c354e22425c803cfdfba5a61c6e8addc58eb40d1b40e4",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000109798.jpg",
+      "image_sha": "8fafbfb6d1c320f9efc59291748c0b9a730726db311364c03280b2de39fe656f",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000145680.jpg",
+      "image_sha": "aaf1bfe58736fb0c10dced9e8c9b09227773597167b81961b6f5efe38eb6c4b9",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000180101.jpg",
+      "image_sha": "079670676d766b9e53cc1e35c1d90ad1ae6f80849498912153c9fa7001a0c934",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000200718.jpg",
+      "image_sha": "e22cbe0f41d47204388d92e3cb81446435c2b69711e36540348224f828f83660",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000218554.jpg",
+      "image_sha": "5beb2b82946f313bf67570655cc1bc5434552ee43e39ff558ac4e4abebe46f6a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000238795.jpg",
+      "image_sha": "ba3416a8b2d15a01df4c196a4ab7c5b6052530cfdd799dbc0f0a636766d694a6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000272426.jpg",
+      "image_sha": "9602378dfb7df327874ee896e5f2d6a25293ceda0dacddbd009d8a8c6ed4d5a0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000283113.jpg",
+      "image_sha": "d444572c6cd9f27d8004c547146737e250088841e74a5cf36a139a7585f4712e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000293311.jpg",
+      "image_sha": "f6d8638b799b25970ec63a72707bf3126116a47b081143a36354c229fb59fb2e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000310459.jpg",
+      "image_sha": "3cf0bae7340f9173b16102540c4c1f14a35ef4b09feb5832229d6b3961b80b13",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000358770.jpg",
+      "image_sha": "02dcba871aea830f74df0a607c3ddc4e560aaf4e8c1d99e2958956ea2048fc8f",
+      "label_sha": "b9632b4f67e64e95aabaeb72e0a394956c29b2c32c2cd6987649d571baa925bf",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "plate__val__lvis_000000380525.jpg",
+      "image_sha": "294ed11825f7320fba0f6e79b12431f506ae6366310817dd7d5fa35d9fa39b11",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000396596.jpg",
+      "image_sha": "c812213d814ee21ccb6c4ec274acd86e8ea466f17c77956722b552a1b76ac471",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000406550.jpg",
+      "image_sha": "043ea06e2407eecb3457549899d0d3cb8fa7cfab35d852ed708cf408dff060ce",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000478257.jpg",
+      "image_sha": "99650c4f53bb0af8bb602938aaa7a06ed5c88d93c7c1283c6dade546911baaf0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "plate__val__lvis_000000538513.jpg",
+      "image_sha": "35eb01e92067fe0906cdd4ce647aac871dbeb4edd17e455a1cf3df76d833f000",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010037000_jpg.rf.df39e985a18dc633b7b3f30202d416f3.jpg",
+      "image_sha": "a2f5648e637da57097da3fdcf6d9bcff6b20b811c7b3be81c946687f8cd44d26",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010136001_jpg.rf.8a9132053805dd903b77f69216f27b0a.jpg",
+      "image_sha": "e1c88b34502abfec54b0de7fe2c1f96147cda6ccbf08c44a0179c161529c2628",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010177000_jpg.rf.7b8442cb4d7f17bb2cfe04d7b5b7de40.jpg",
+      "image_sha": "8bd83ac77e9d72e517b69b04931e882a2611d0de66499668f45b49dc6265cfe3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010199000_jpg.rf.f27ba0e74fa976f2d4253300eb31bc8e.jpg",
+      "image_sha": "fbd4ebcca0ad785ad7f2b03f50b26d866919a1753a7bc35c931d387919c68460",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010243000_jpg.rf.0e4d466a0001b4a4438e973cfa1d76d8.jpg",
+      "image_sha": "e38631658bc5dc1f2d6f9feb3d252d7987ea8088c2b9ac3f8eb21de346918c98",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010252001_jpg.rf.ffe0d67f4a60b0eaa84df689c28592ad.jpg",
+      "image_sha": "3f4992df25d47775e534fd7ff9a4651706dc9fb2c7b6d6485e369098c70cf26e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010363000_jpg.rf.c4b582e924f680b5ac0eaae78d99aded.jpg",
+      "image_sha": "43825d15288836d309b50225afaa9eb61d63179e474d7931d3cceae532c8cc4c",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010373000_jpg.rf.220ca0b46c113475f47be65b397d0058.jpg",
+      "image_sha": "60d36695669e4c64b9192c5bf72e36dd0f64a32d2a299f552b4332e64fa0b264",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010476000_jpg.rf.7c9316480b4e186b3e2c704e73c665b6.jpg",
+      "image_sha": "f9a7b3d2550f494b009a6777474d4e1ffd542ea0c43a8546264a1ae8bf65ea77",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010538000_jpg.rf.c53e238702a23d5edef038e04c86ea8e.jpg",
+      "image_sha": "cb4e06c1c7ecc6fa19fe2603399fb1a24fd088bd4e3c5ace9a85f14e29a529fe",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010548000_jpg.rf.24555c802dbc53622af17c10437f9b59.jpg",
+      "image_sha": "f44a24aab3360e4dc136f763923630289d5199402ad6bcbbd7d1f88bd019f792",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010645000_jpg.rf.3c349896660db60a04fc71ef01ab253e.jpg",
+      "image_sha": "fb8f294bdf0c8f909cb9aa89f909f141ffce048cc24d7a3e390981d128214f21",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010645001_jpg.rf.ea941a8b50838375c229d5c7bef9a3f5.jpg",
+      "image_sha": "72fbc007d77f7be56941983aa57a60cf4e29fb7d09e9174299958d4aaa85f228",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010716000_jpg.rf.931292f4e0b14c6a9af686632cc347d7.jpg",
+      "image_sha": "714492e95d42ee7110f04f211fef2309d34142981f622fd95baeeb9f8e2a13a4",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010846001_jpg.rf.ca35bcbb0fd1b06d5851e469a8713b42.jpg",
+      "image_sha": "7c1abeaf19044d05f1a5649dbf55eefb8333b4c4d657b1ee7a405cd20e85a90b",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010859001_jpg.rf.e0879ff5e58139645147d9f8123ac131.jpg",
+      "image_sha": "ebfb0ebcbcc95ec5ba5dcfee33fd43888f83897139f52cd56adf608523cf7da8",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010874000_jpg.rf.9268ebb4a38714168c26cf46899dc376.jpg",
+      "image_sha": "77dd29ede9a4fd3fee63f05f365c1d6afb6b04a2004131362ad1e88312667ca3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010961000_jpg.rf.b79c5e22251f5fdcd02acfdd1ac32c36.jpg",
+      "image_sha": "afbbdd838670cdf5e3f8a5604246f0a220a4e3f30bb75fdd248e434548876290",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__010996000_jpg.rf.89bd1e0471d43e4242cdccff23872520.jpg",
+      "image_sha": "69ad9b2dd6dc931fecf40fa3708ea175892165173d0ffc411b858e2717aeeb1b",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__011057000_jpg.rf.fa6fd4d50216ddafdfc885f2af9b9463.jpg",
+      "image_sha": "910fbe4deffc61ae197f8868a977000a4bdb682c00ac64e1eba26b04d0113c67",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__011102000_jpg.rf.57b2a7ebe42e66fce1c21ba1f8b8158f.jpg",
+      "image_sha": "4a1e3e9ff052853756a1aaea91714c45bca3e2dbeb4b51278cf0586cc7929c3b",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__011138001_jpg.rf.1b0d5b6cbba86ed6a03c17e58497c88f.jpg",
+      "image_sha": "f6c4a94b6319d9488fa269e88a5e3f748e8423d7b7a5e07121f3c5f0ed79f5ea",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020266002_jpg.rf.4e32670761b6389911223e2cc1c01f61.jpg",
+      "image_sha": "f31c6abb4231650a002d2bb9fe0cf926560a64170fdaf632d1daeb86d1c9c9c7",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020273000_jpg.rf.a6a3d5127060901cc5bd5b561d18b435.jpg",
+      "image_sha": "3e2ad1bcade6ce8ca70f78a4e3e391d139e4f5ff73a4a96020d0ffef3faf0d4a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020280002_jpg.rf.a00b92b71cf024717fe6dbbb0b01e10d.jpg",
+      "image_sha": "0362bce6749117db70b3e9452d91d3220bf0755a332c4b158a3ef18d938b76da",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020401002_jpg.rf.20fc7d37be07f7674aea666a40c3b5c0.jpg",
+      "image_sha": "cbf64a1fcc40fe43e6f11b9a30fc52a4df4cdc1477ef4f65bd31e8476c2dd891",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020402002_jpg.rf.e7864e15da42a116496ccdf7dc2fe5df.jpg",
+      "image_sha": "edfbd1b9206c0256e96f1bfa8f4c59996e5b9a7e359cacd0f08d21145558cc0c",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020465002_jpg.rf.6317625bb2abb452a29c4d1ac079e736.jpg",
+      "image_sha": "3859dda74c793dd3be99919a1808a3b779f6302ddb67f5744460d42e2d943398",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020473000_jpg.rf.17bfc8fd58ed6b228051b53adbb824ba.jpg",
+      "image_sha": "5b7c0d6aa2757dc54bd659a7d1921ab4a5018dc6c473fb6e23e0b4a54acce1d6",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020477002_jpg.rf.86aca1e7f881251a3f16965d4b993ada.jpg",
+      "image_sha": "d68ed4034eb58d17047ebe706db8e09f0ef25b415822fa30b48377bb64257214",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020502000_jpg.rf.4c86f82a922547aa04898bcef95824f3.jpg",
+      "image_sha": "270ca6033dc639a44b2ae6dc81d853f425344fad142209a9dc11f37106747fc0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020509001_jpg.rf.ce18629b9782dd1fffee6489587c7475.jpg",
+      "image_sha": "023f6b2e9937c8a047bf9825724044326f37a1012adf37c95662e14ec7dfc2b5",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020530001_jpg.rf.d6f73719f76852630a98fe18c8fa4267.jpg",
+      "image_sha": "2cb626dbe6b3a130586fed6150b30240680e5d36050d89c1879ec87bc2551286",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020551001_jpg.rf.2b19d2e9d5d9670fef603e2029928aff.jpg",
+      "image_sha": "ed195861a08569c591eb279afd17e22febca31b7c966c5951e8cf9774ea37574",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__020554002_jpg.rf.0473c318fc7b75f6ca8d100614f5fdfd.jpg",
+      "image_sha": "26c26d3af4b9f7950bb22635a410aa0a219314c41ba34fac97935b0b41256e54",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021060001_jpg.rf.d39772229afbbfe1af101965d664f40c.jpg",
+      "image_sha": "4ef6b805bce377ecb127c7b1bea9844c94e762a4fb52683ccb23d155a1a6a505",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021072000_jpg.rf.4de8ed3de6659e5103b663f27d7fde4d.jpg",
+      "image_sha": "9f0a90d1c4bf007fed2bf96e93989db0cadf4696c30f8f00eee554b9dfc3ea14",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021109002_jpg.rf.ad96c3ffb69f45b7a8a369d6985c9bbc.jpg",
+      "image_sha": "d99bfd3584b4d530366528b4474988af1c563b2dbc449dc81c6b03852c6b1399",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021272000_jpg.rf.ebe0bd8dbe8973ba05cc49f64302903f.jpg",
+      "image_sha": "f121b819d58ab191c298a30105a8462720833f8b22bc94d9d115494e9b6a46ad",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021306002_jpg.rf.d1b81ced878eef9a0b1a69c1ce0835ab.jpg",
+      "image_sha": "3b1dbeb15e6d90a28bed9e2e6efdbf10ed44d9458c00d156eca811b39e5d8735",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021313002_jpg.rf.f5d4c95a243a47ebbfa191835339b546.jpg",
+      "image_sha": "34528d0fc0c6f5e532b5c7c97fbf598f185be88f8e3ebf525c6058fc066b20d7",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021314002_jpg.rf.f1c07ee61c46004c95572cb815803bfd.jpg",
+      "image_sha": "c1911a20599e9f852dc5a6ec0d6a29ff094e14dd7c776ae916f23fd19143461f",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021402002_jpg.rf.b16381410b3cac042bdb4c57fed1b70a.jpg",
+      "image_sha": "25d2c352cc728b15437142b522057f2f60a24742b0ad68993cab63a5e6ff0514",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021414000_jpg.rf.7a245c0d06bb29356b2be533754ec7ae.jpg",
+      "image_sha": "7378fedd96879ea175091b18146eb5cdcda24a9119e7b9bb87597eec423e4b3e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021451000_jpg.rf.e69ca07282f2d7f4f07c7cf959415887.jpg",
+      "image_sha": "dbb3221fac20297a10ee8115f5b832417a4e8f51eb96aea382a9c47b1128657e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__021551000_jpg.rf.4b95820d5819150166f0ae5dd05a8a9b.jpg",
+      "image_sha": "da92c9b93881cc18dde365bc825266b6c1e8e0740f93a16e20f134121d4a7019",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022027002_jpg.rf.edf5f2ddc3fd12c06277c24eef804e42.jpg",
+      "image_sha": "7a4afa4016c7962bd4331bb622f4bf6157036e3306109fd87618666560ddfbb1",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022256002_jpg.rf.80fa47aa3b77d1a304c5c4b6077a4128.jpg",
+      "image_sha": "e309be70bfa92be2c05373912a2e6063204805955ea4f443a2b5b4b8e17286a2",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022266000_jpg.rf.33eb1daa1090f66719b7e0ee588eb29e.jpg",
+      "image_sha": "4fe314c6f98ce5865bd2954543841392b4795c955402e710851dcee8c8b3a5b4",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022266002_jpg.rf.66fb8ff2961752188ce0c74d74d202fd.jpg",
+      "image_sha": "ac37d6ea96b33f9f7fc484154ded5e71749a92bbb7ddccf27912c6f33f2a6435",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022271000_jpg.rf.d6c5c6a416c6b473c45ff6cac25958a6.jpg",
+      "image_sha": "65fad109cb43eeba7f14c9c3bef7f39da603de827fa15aaadbb70ad57925fefa",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022312002_jpg.rf.8c86833c521a51ff79385f8e67a06a53.jpg",
+      "image_sha": "fd213e93617ccf05296706e238e914b44a6fb6dae1fa9d057bd6882e748b512a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022475002_jpg.rf.af41d8ccb4bc1acf9c64df5d34387b12.jpg",
+      "image_sha": "7b5fa7fd687d75a70d0a5fe036e87b3d0240ab543bb746b1d82f74437f855ee9",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__022570002_jpg.rf.479bae7de5d86addae77aa1d63dcd46a.jpg",
+      "image_sha": "f87866e9d124a6257a2ce2e7d663b81d69ce6cf52e6f5ff6c3c3785104b2c644",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023052002_jpg.rf.4a87d2ef3bf2f046c345c2add396bdd1.jpg",
+      "image_sha": "fcacf583c4d975eb745ee056d7a81a5704a20906230ef122bcc6380ee0f0fc0a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023114001_jpg.rf.388b9f12de5c0cb77435a47b9a59049a.jpg",
+      "image_sha": "08c53f62e79a168bdd552046f27a8545ca85145295adfe8535cc98353d2d34fd",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023215002_jpg.rf.a0baf6fc03cafaea6eb93a4947c2e8ca.jpg",
+      "image_sha": "821b461b90cf9dabfd9121793ce83ec334aa068bf8a454e4f5aa4c10e424a533",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023269002_jpg.rf.757f15e5bd2f79afddb54c64e878b2eb.jpg",
+      "image_sha": "c60dbefb9d0ec81df2bd942db1053cdf8fc41fb77baeb494d0bc1d27c4ca5b86",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023303002_jpg.rf.7d502f2a8594b2daad6c4929b5d479f7.jpg",
+      "image_sha": "70918733e66385971e4d8b4c71c9a0596bfbb806dd2756b7ceebc6cebdea82ea",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023310002_jpg.rf.01c6546bc4113c363db0e797c0a5a45f.jpg",
+      "image_sha": "28efeb09b61f0ce3266fe4510f95e257c6dca0926b39ad00ede964e184919dbf",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023425002_jpg.rf.6ef238ca19a6dbd73b909313d4343c25.jpg",
+      "image_sha": "3c47ead092e567c0a5a4304e6b6f5653a8c2c14b845af39af68307e97132ded3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023469002_jpg.rf.24557bd06dd3335646a24f0f633f8f16.jpg",
+      "image_sha": "dabc5157e765389d561e46ab0c7b729a08d1f890b08ea93c063b35dabf63de3a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023568002_jpg.rf.d093a046310c756891c85745adea9adc.jpg",
+      "image_sha": "bc93aab66cf833315c5cd0a76dff1a02d4521d135cb3857dfe483cb469c48690",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__023570000_jpg.rf.7fce55c00b3fc32ba15d585e4be94caa.jpg",
+      "image_sha": "7c371b9b25323b61f2541feaf00d023118360187cfcf69cc4d6564f420ba794f",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024016002_jpg.rf.2f2a11b7be7dd9f4568b85e9dd771e44.jpg",
+      "image_sha": "8e628b53e1fcd1e9e31492a0588cc041e0832067d811c230aa27eb4d9d60b3fe",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024064002_jpg.rf.17726e3abbce56029aa8a3f9623d6339.jpg",
+      "image_sha": "d4de15d8671070f7c290100235c41b6310d20e8a1212aeafc0fce7c1f20eafe4",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024069000_jpg.rf.a2c1f1e5aae601c188387c0fcbf40eea.jpg",
+      "image_sha": "ced76887a66e8b6902d77197040531f9c2611b962caf7ae7f00dcdc5c21d1b95",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024112002_jpg.rf.14daabbcfc306268ad4b3c09ac034a7d.jpg",
+      "image_sha": "bc53aee199b7965bc0489a92e7aa6d1c7ac2e09a5556829da951e38297fc3209",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024118000_jpg.rf.b6357c19e73c85fee8f0917bd40b08f1.jpg",
+      "image_sha": "bced027e8720f1b882724f4386034974cf9b8373ba581c59e39e88614502fa49",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024167001_jpg.rf.f02372678d064dcf241b6bc2ad5c3db9.jpg",
+      "image_sha": "dad04effcfa5c30f012954e6c76383f7560032cfc983954ea3005946c0e7981e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024228002_jpg.rf.63f38f93b027511956b96395c87294f0.jpg",
+      "image_sha": "58c459de43de8e10a1c73540b6409e37013cddfba6490b810dccc74b21c04bc5",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024276001_jpg.rf.2a9d7edab7b2fedd8667b0a13a4a2fe0.jpg",
+      "image_sha": "130db13b0656251e5c6b5d7da7c204d2c5b56a1e7c4d3688ab39f134f47c2b8e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024318002_jpg.rf.e4c456f683352bbefe033045cb81a640.jpg",
+      "image_sha": "a77dc0fcf790385e611be4b6b26d9005bcece17a3c662e2b702b2d5efa0a825d",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024411002_jpg.rf.13463e357f28ececa6ef36969cfc517f.jpg",
+      "image_sha": "838c70ff667aff3f23b0e0bee4a53f3beca17de72bade2f166caebbb8d8f487a",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024451000_jpg.rf.5de34d5d2298d4ba626f3a355671f43f.jpg",
+      "image_sha": "078bc781f9df048c96b355c5b671f556997cb8ef45eebb807640520d1fcb9497",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024472000_jpg.rf.9a6489436e1ad7321d3514adcd80ebec.jpg",
+      "image_sha": "cf957d1dec458b3a7c1310c8cc683040dcafcf9d0b17e0dca4bac01d3314ce99",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__024529001_jpg.rf.384179ee4335675c1c6d27fdd6c1e0de.jpg",
+      "image_sha": "1c25192b89974a031cf943f7d4c0f128bd3dd007c07afb1cb6847af6df1da7ca",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025028002_jpg.rf.850c34355585c0ab0059b0781b8d70e4.jpg",
+      "image_sha": "b314f393a3fbf17a0e73dd38b763bbde16dbc76afa71899d388e9e2a2cbd82ce",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025120000_jpg.rf.20131bebe0664617aeb1c8c393c047c6.jpg",
+      "image_sha": "e1ad62f3850f379a0bbe41320528d07fef4ef5c369d6775a73c38772fe170115",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025159002_jpg.rf.4b4a76d0766959cc50a1431e12be77fa.jpg",
+      "image_sha": "bad5d2c203d8dce53e00e0a84311588f101bd8e232986330a4f7508906402b33",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025178001_jpg.rf.f7fd071028c2b903fd345833e79a5acd.jpg",
+      "image_sha": "a4d59a7a497a63bbcb448982595dd113f509d4841b2b72508b1972f059db7cd0",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025229000_jpg.rf.0ab5014f8e392e3f952f2a1feb571445.jpg",
+      "image_sha": "b935e00f24400d133b49c4d26703c5df0fa615c65c070efb81c8e70bea9dc8dd",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025254002_jpg.rf.19f0b8fcf5e8d98dc064f97b7c627e15.jpg",
+      "image_sha": "86c14da3c9c1a94ec557ceb7db853b4079f5d68e22491d848eafb43d3e29e9ea",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025301000_jpg.rf.4201d4456f172d45190b7c0c05712d05.jpg",
+      "image_sha": "258bbd8431bcece344c731e23fe872c4660679d392c2707b14980d67a95b43be",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025411000_jpg.rf.ba8ee9e4d916bc5ded345e375a58ac7e.jpg",
+      "image_sha": "a5e1eb617b9c5416cb9f3b6bc957f9e231a76d35d61259072a1ef8930fa46efa",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025457000_jpg.rf.b88c3db0dbae3638b7d0e2587f0bf239.jpg",
+      "image_sha": "d39ca9b6589fbee9ae5b21f564f794ccb5efa005ca2275e81e4338853e2c55f2",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025458002_jpg.rf.7bbc15726a832fa8ce29ed73a3c057dd.jpg",
+      "image_sha": "4122ae187c3990549fbfe58c3ef8e1907e501479fab0bfb964aaa68bcb1cccaa",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025512001_jpg.rf.4c8ab4661704faede5090ee0aab7161e.jpg",
+      "image_sha": "b7bbcd78a4d5f3166fc63c621ead8a5f19af480db698bc91720615fbac3bd93e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__025558002_jpg.rf.9f7bca903bc722c213cc0fae50a754ea.jpg",
+      "image_sha": "c7165ed6ec44a52194bd2e8d0520cdc09477a233273c51ae37415c9bf0aaf48f",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026027000_jpg.rf.70304a5d313d2d72b29767a538989331.jpg",
+      "image_sha": "1527b27db317babf09116d09f11cf195dfce8d9d866993b5f2ca36a9c4c1fffb",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026054000_jpg.rf.55704f20c94543d7666ae81de0e42819.jpg",
+      "image_sha": "40a836bda9fe47724ad0fb94db8be5b7a77c96016def032713a485dbdffcac72",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026062002_jpg.rf.ed396e0c94e1b98fc8cfe0e752b0054b.jpg",
+      "image_sha": "c6e7e4864f3b23940c51e30f6c31730180aa74743f9940033e9972c320db26bc",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026170001_jpg.rf.06031e2dc3ce25f2165a98dabdf28baa.jpg",
+      "image_sha": "147bd353417c775b09711acb75d0d49398c6eb0ff8d1768c49f1dabec1094039",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026180000_jpg.rf.1fdddc83009f877db115892995879e1a.jpg",
+      "image_sha": "b488378764634571b4db889c9e2af085ed607279ef081e9ba8aff083038055b5",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026279002_jpg.rf.047e93daeb7af060efa27a5c00c7a427.jpg",
+      "image_sha": "7c80ed41c018091b8dc826255473d97353a5e66009b156d50792cadc1ff10d53",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026309002_jpg.rf.dfbb15ae0418152f4f7e644339190fc8.jpg",
+      "image_sha": "76ceed5fc854d7533bf14360ecdcb76be2c4fac984f6a75346b70c152dd635eb",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026402002_jpg.rf.677377d379ab2be1df5be03f60c99bc3.jpg",
+      "image_sha": "5306a244f173850cfe0bcca017ff8e9730277982a0bfe0a9b6cc2d3187900ffa",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026425002_jpg.rf.82264197050e01b78caf5309047d4c91.jpg",
+      "image_sha": "1e4c65e4ad7db5bd3e89b327d40f82d1f53650dd01736b2610b1dab4ac54ff3e",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026511002_jpg.rf.1cac6a1aa06bb9401c48df8465449558.jpg",
+      "image_sha": "68ada104e26e1c8f5ff617b4517f3d16d8ea4a7df19b95707403f31ffceb5fd3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__026513001_jpg.rf.8a9029393ccf57a557806b782bd50ece.jpg",
+      "image_sha": "f5aafbd6e81e46e274c3e687de3b641428ab654a77b4f002869b0bee07792334",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__027014001_jpg.rf.7f9e3cbc07f88c8cb5f15698c2c0c397.jpg",
+      "image_sha": "f6e39adbbeee372a8e575cd4788b9d2ac45efffeeccb9b6a16569abde7e75e81",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__027206001_jpg.rf.76d4975e5e1efa2adec3344930d20a43.jpg",
+      "image_sha": "2f070d8a0bf426ea521c9124fae312917038a24fc4c4cefe0ceb409921c96c7d",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__027211002_jpg.rf.980e4547c0e0ed8f294c8f12fe27fdd9.jpg",
+      "image_sha": "9d92a946ee4246f9f14e4f52b460910354c52dc0be5784c82094677067194f88",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__027225002_jpg.rf.6e95a3f2775df1cfe42f344ed48ca69e.jpg",
+      "image_sha": "40bc3ca25cb1afd8dc4df21394b66f4b84e750a87212ec99ee5f733a33551227",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__027264002_jpg.rf.2048cb5cb9706d8bfc2e22f231db487b.jpg",
+      "image_sha": "7b5e03a8adf110f21c87ba6c2ecd38dd4f8bac92f3e4aa3e40cfcb5d7b876bb3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "school_lunch__027278000_jpg.rf.bfd78a4391862446e22dc979efff6dcf.jpg",
+      "image_sha": "faddf17bd7c6f48c7bdacfa664ea28dbd8b7e31b61be30987026dda82bad88c3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000000_jpg.rf.60001464ff00fb29b29f601c72ceca33.jpg",
+      "image_sha": "f0dc51ba688c38cdc089db6c25f61bae37f42c1c7552f49a09c92f717bcf1a16",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000002_jpg.rf.bf205561a718dfe8856abaeb7ed1179c.jpg",
+      "image_sha": "49a7c72c3c483e0a3cf213368860440d00583d7af3f7e171a32165c44e5c0723",
+      "label_sha": "8512a2efa47431adbae9c0cbbdd70804d172b21667f504de6fc60a14ab2b679a",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg",
+      "image_sha": "b5ea609359bfa84650536b1207d6db350411e070973278dfe7c7959315f39e50",
+      "label_sha": "38ca1240bdb91dc89b3be3bf1799f38253c7f9401280889583d6a4e53e73a699",
+      "bottle_boxes": 3
+    },
+    {
+      "name": "trash_detection__train__000009_jpg.rf.660beb4a1d02726cfdd3f11d24924395.jpg",
+      "image_sha": "f2ed62aa1c8dd4005bed289875c91a74f5d9fc8f7e710510af944d43ec79f392",
+      "label_sha": "addc1d5fb8a6d9ce7b117be4bb491b04b0809e185888a06b1668261c33b6227a",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000012_jpg.rf.a9afee671774b7c67ce14cb2a0cbc20f.jpg",
+      "image_sha": "16bfccd96db338d1a139908dc005ffbb3b6b3d4c58d5d7465c718e519de779f1",
+      "label_sha": "de580d8ad3577df2d3619439760acefdede4f75c9b87bf57129a6a09f26ec18c",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000016_JPG.rf.6a36c0567a53d01e53a958e26c42cfd5.jpg",
+      "image_sha": "edf78b884b8a46d9fa29d337e8cc59c236a5788f259ba7ae2e9756cc77bc83a9",
+      "label_sha": "50467fe0349d4459000fbfc3f52a5d8549f20a2e14ad65fcee4e723f126f9424",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000016_JPG.rf.ecc4b4f26f1754062e51d8798202a49f.jpg",
+      "image_sha": "f760edc62d7ba04cb6dd47797a49f2929726dd1a0a5e150d70ab47811f5c1d73",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000020_JPG.rf.43fa54851aa7cb82b4062e2b73a800f0.jpg",
+      "image_sha": "16e48e01333924d622315f062919b883bdc322f93f73e1d336a60d553e788e0c",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000024_jpg.rf.cafbefe7cc10faf1ce56ce34ff2b0dcc.jpg",
+      "image_sha": "2f11a7f66c1836ff0ba9709b93850c2ae2ad2695af934de76850c629963af5d6",
+      "label_sha": "f35c79463ddca2dbf76ce797b511b37fe1d223466b57037fdb68f8f7aa2f1baf",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000025_jpg.rf.054985cb09540f07754928b945943f9e.jpg",
+      "image_sha": "137759fef69e3c546f29427f79fe9d387f0baf65ccca6228066fb801479ba519",
+      "label_sha": "f37108e14b8da6243fd8ff0c76a831094147c675ee7d61c66f07ee2fdfd6e6b6",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000030_jpg.rf.d96502ce6c0cefd2c1e73ad2208657fa.jpg",
+      "image_sha": "636c1b6b13898838859a9d030c31e20045490c113764a612d661a6ee21707a62",
+      "label_sha": "f73922af6d82647400c9c93c051b3cd159b5c28d763ad9c6b2802c12060f16b0",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000055_JPG.rf.d1954379e8b71077e28f2a6d6fe458bd.jpg",
+      "image_sha": "f0f501b7b45b824f4c331731f2337bc6799f4d9280aca379d7e1e02660dfd587",
+      "label_sha": "de02a7ba80329f34a5ebfca21024426e75319973a3c5f1fee97c0ce2a9447c93",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__train__000055_jpg.rf.29dacaafe4c7e56a1bae80e830784b02.jpg",
+      "image_sha": "50e02b00de82f8dfacaefb6684200f98547a21376a511434e0fee847295b9256",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000055_jpg.rf.b2c81b6606551a74b266d68e87b95bbf.jpg",
+      "image_sha": "1fe23659df69508c71e80fbda21f038631ea3233927c2fea61943e13320f4eb3",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__000058_JPG.rf.0808bdd137e833711ef8d38b68cb5103.jpg",
+      "image_sha": "c2199081d6c21e44de08d7ab17b6d6fe9610f5612bef6f9e1b49b0f3205e5e68",
+      "label_sha": "5f560bc1223ab1bbd90abd9a4b6c361a56819946f1709a60f01f66e01b5de9c3",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000058_JPG.rf.1fc27d0bbaaed624a92504e831f05147.jpg",
+      "image_sha": "6db1b2f0b6cdab21dc4a47dafa9e349597047e530fa436136873bb94c5aa652a",
+      "label_sha": "934e27d2dd5c7e52adb12e1c8690cf761ce4581653668b4d5a677c964096ded6",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__train__000069_JPG.rf.1c9cd9d7dffaf61d8f7bbe46fe92072b.jpg",
+      "image_sha": "3492913263191894fcacaa1fd3ead25eff5fd6e779ac02666b339bab620ee81e",
+      "label_sha": "26efe2792f8989f230a33dbe52c7ccf18470992eecf3b9967c8ebb32d5ee9865",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__train__000069_jpg.rf.9e1208a47846a8f81ba1e14c374f9be3.jpg",
+      "image_sha": "599b7ff80c0a95c9adec295ac3f18f13e5fb5b43379ee5d43f143706139fff9f",
+      "label_sha": "61fc8e5957b080cfe39c18e643515d78771aca459fae90af2455a2f37ce269e2",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000075_jpg.rf.014d149f3354f835ae2cae1cd14712af.jpg",
+      "image_sha": "7e2d79095dfeea0f5768b545dd659060b2654d430c7ab66bf1c875e6e06793d0",
+      "label_sha": "a7fc620545e04a4bfe599ec22f7dd7090e727e94ad8e0731e0b3e4f9855af71c",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000080_JPG.rf.ee8b74c562071be84d103d2a0d23da5a.jpg",
+      "image_sha": "1716b7dca5dc770de775d4322840f777b0ebe98587319302fc780421d8f9d5ab",
+      "label_sha": "f50884b24fe1bb617f3923dcbf290cebfb3f801af448c1567d86a6c902c38a95",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000085_jpg.rf.4a050c9f98a731e747081fc7443ff9e3.jpg",
+      "image_sha": "a0d8f4a5391fae0de9ff852abe2de69a4b1c7b99be75f5840cf5b0bc96e25cf7",
+      "label_sha": "0ea1de42ea989adc51ae6ba6c5ff269349fb14fc6093d9521394a4086bb8d72f",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000086_jpg.rf.6c2d9c7286493ce70bd8f452c9e6712a.jpg",
+      "image_sha": "e1b5a85d44352550b130b44b968b51a4998641f6733e55e0d42aa3d0cea07f56",
+      "label_sha": "d0d5bdf3eba2b82ea995eb4ae16405ca7d0f1d99a081342473a45bea0ee3359b",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000087_JPG.rf.9c76faa7891baa4452f391b1391247f2.jpg",
+      "image_sha": "f7ad8fec02d2ecc585db2dc1501c9de890f239028dfae09fe90efca8bcb6f2ce",
+      "label_sha": "b343a5eb4c4a55a8055f5deb3c4703ceaedc7234d206f22e0e2339b5412cbdbd",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000087_jpg.rf.77221350fa41f94d0bafc9d7d5b83789.jpg",
+      "image_sha": "7c19fef5b2ee7c5be36fb1f9ede168094caa4af5382356066dba805deb36dd60",
+      "label_sha": "8d8d5f1869b72a47eb8061d175b1f97f3f477b0d5b1d8f074c28447daab06843",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000099_jpg.rf.f43206241c3a7fcb24588317484e95ca.jpg",
+      "image_sha": "83b2cd7fa8ebedb0db107aaa6d5c039603da19be7e17de0c5b2afadc25cbbccf",
+      "label_sha": "dd709c752ff9ef21bce2f11c488ddab10c3e90cc1905349c38e792c686b181b4",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__000100_JPG.rf.0cb3669d5133eec48582ce72acbbc8d3.jpg",
+      "image_sha": "aa8de89a3f1ef2878efa73a9b7f6a5ab7c6e98cac31676fd992d70726c03fdd6",
+      "label_sha": "d81bfd145981a3df61f476f9ad7c5d7ce26699f54fa8289a4984bceda0cca272",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__train__000114_JPG.rf.cb9cb4314ce2d8760df783fe22eb6c05.jpg",
+      "image_sha": "edf466e201cced2f058e18667e05c6f0b0ef9b8d456aa14da23870be1f1ec623",
+      "label_sha": "c8f281f6537a4d9d7858549a7663881204d728f1eec11a64f0f82cc363d4f46d",
+      "bottle_boxes": 3
+    },
+    {
+      "name": "trash_detection__train__000135_JPG.rf.a62714a7a78e37b7ffa7bcd395c217c3.jpg",
+      "image_sha": "8c9defe285470bb425d3741f05ad73008385667b1a363336db4ab52b8747af06",
+      "label_sha": "423538aeb61c24378106823d40f7e7bc8bec4cfeef6402ddbf3c66e7e8811891",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__train__IMG_5041_JPG.rf.901be6623abcbb2175088693769f2de8.jpg",
+      "image_sha": "5eae9cd0efc37564a5643ab18dd98eb2309a0d60a445b3a176a361ee1d0100bd",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__train__IMG_5053_JPG.rf.8964f94d6aa1f48d8ed3d624b0bb7331.jpg",
+      "image_sha": "3107c4ed3983f51a8c4ac19c7c2a7984bbb954e831156ade2e8ab79bf3e66703",
+      "label_sha": "a5847b9dda840d14d9339ff3c85610fe6c35b68546f8c939c36702b8f67b426a",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000000_jpg.rf.6b5474f189fcd47c95dcbafadde1fc39.jpg",
+      "image_sha": "b5a7256ed81e8ff16394756e43965bdc8a2ad8f5df3e0440a8c450957b2580e5",
+      "label_sha": "1ae9860bf002ba8352f6705c1683678c2f8cb90ff2d3a42a0f1ddaf7acdb62ca",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000012_jpg.rf.75c5fdec27471daa465f28785b93ecc1.jpg",
+      "image_sha": "3fa3f4effb34c0098528131bb0ad9585ca768fb02d22102b1cd95c003b36674a",
+      "label_sha": "43a4683dd0576027e2ff785a868aa0630df0ddf8ea1e31ce8404b55d7f1a0541",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000022_JPG.rf.dd06df32128261ba6594966187229787.jpg",
+      "image_sha": "866ff2cc539dfc0af7247df3339b65549d2ebcaf60575f93373ec01fbb1985a6",
+      "label_sha": "9f1f66fc0bf728ca603e83bac0358182d7de7ec77dc8792bf01ce2399abf795e",
+      "bottle_boxes": 2
+    },
+    {
+      "name": "trash_detection__valid__000061_jpg.rf.2332b025600a7b61eb098d4488c96958.jpg",
+      "image_sha": "22f7da330285cffce544a4d9f1e1471aa01dc875a788110216b67b8f8300eeea",
+      "label_sha": "670581104aacb551c2baa99742dcc5fea4fdffceb2d64abf3948dc1951501453",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+      "image_sha": "ecdfaff72f908dac322e8e2766d1187c33a967527be04d4637961933b8ee6821",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    },
+    {
+      "name": "trash_detection__valid__000085_JPG.rf.e52f2fa27b2c28d66a5300c297d0f7cd.jpg",
+      "image_sha": "fe17de34bec2d013b6bb5791d9ee17d242267f93a233c2156a46d3edaeee23d5",
+      "label_sha": "7062a1bee295f7031d57f21a5134e66e53f0072b8a8a9878f78a82bfa2671976",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__000115_JPG.rf.ed87a8b811064104ead06d7b00f30d3c.jpg",
+      "image_sha": "cafd213431543e575b60a4ac46089565c68e231031b874fa847c023e6efdc961",
+      "label_sha": "0a8ba7b0e144bb2314bc2f9177875f53797755119fb2b409cc41bb32df32dca9",
+      "bottle_boxes": 1
+    },
+    {
+      "name": "trash_detection__valid__IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.jpg",
+      "image_sha": "628ab3998f122146cf21845c22adcd0c980baf09ac0339e00fcb93c8f8452e87",
+      "label_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bottle_boxes": 0
+    }
+  ]
+}
