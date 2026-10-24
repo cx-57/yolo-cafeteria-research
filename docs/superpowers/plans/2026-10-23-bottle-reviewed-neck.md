@@ -25,8 +25,8 @@ Reject changed source bytes/annotations, duplicate accepted photos, held overlap
 - [x] Test new admission on changed bytes, altered annotations, held overlaps and duplicate records; observe RED then implement minimal admission.
 - [x] Build V31 full-image data from V30’s conservative source holds and admitted new photos, preserving all frozen validation bytes; verify source and exposure accounting.
 - [x] Configure V31 from balanced88877...1518. AdamW1e-5, freeze11, fixed BN, batch4/nbs16,640,seed43,mosaic0.5,scale0.5,40epoch schedule in3epoch phases. Retain AP50/localization/joint/latest roles and fresh validation.
-- [ ] Run project and focused checks, obtain independent review, fix material findings, push concrete artifacts.
-- [ ] After V30’s current phase has a saved/fresh result, supersede it if still unhelpful; launch V31 and check live layer guards. Continue assessing actual joint metrics.
+- [x] Run project and focused checks, obtain independent review, fix material findings, push concrete artifacts.
+- [x] After V30’s current phase has a saved/fresh result, supersede it if still unhelpful; launch V31 and check live layer guards. Continue assessing actual joint metrics.
 
 ## Ledger
 

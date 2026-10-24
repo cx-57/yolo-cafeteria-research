@@ -1,0 +1,10 @@
+{
+  "target_AP50": 0.9,
+  "minimum_AP50_95": 0.64,
+  "aspirational_AP50_95": 0.7,
+  "phase_epochs": 3,
+  "max_epochs": 40,
+  "phases": [],
+  "status": "running",
+  "current_phase_log": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/reviewed-neck-v31/phase-1792800586054363000.log"
+}
