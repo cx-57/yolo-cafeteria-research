@@ -23,6 +23,7 @@ jobs:
         run: |
           python -m unittest discover -s model/bottle-focus/reviewed-neck-v31 -p test_admission.py -v
           python -m unittest discover -s model/bottle-focus/reviewed-neck-v31 -p test_policy.py -v
+          python -m unittest discover -s model/bottle-focus/reviewed-background-v33 -v
       - name: Build and verify the README plate-bottle dataset
         run: |
           python scripts/focus_two_class.py build

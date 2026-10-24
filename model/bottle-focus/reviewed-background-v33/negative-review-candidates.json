@@ -1,0 +1,758 @@
+[
+  {
+    "index": 0,
+    "name": "condiments__train__464122_0_jpg.rf.962d58608576425f97087f8885069bc1.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464122_0_jpg.rf.962d58608576425f97087f8885069bc1.jpg",
+    "image_sha": "7f20f1dded4547bd44b034edd4a8cd3f6c0024ac75723d63e1b5e5217ce3f8a5",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 1,
+    "name": "condiments__train__464124_0_jpg.rf.ec4732df5eb1dc7ca418cfec31745303.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464124_0_jpg.rf.ec4732df5eb1dc7ca418cfec31745303.jpg",
+    "image_sha": "01c7db9a81549ee4d468d09ebd511429151326f62b323f01a0a22723614e0cdf",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 2,
+    "name": "condiments__train__464125_0_jpg.rf.7d749e15f00eac7ac568f58785d1f3f8.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464125_0_jpg.rf.7d749e15f00eac7ac568f58785d1f3f8.jpg",
+    "image_sha": "5f56aff293e521d218a883f34cd3e95a5f0863798e2ef4f6414b7119c71ce4ec",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 3,
+    "name": "condiments__train__464126_0_jpg.rf.a93df2b5afecb1d6e064f418705c2420.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464126_0_jpg.rf.a93df2b5afecb1d6e064f418705c2420.jpg",
+    "image_sha": "741111c16cbe8fee3809f0f276e44dbdfda89b43074ad5fa8160358aae9e73b7",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 4,
+    "name": "condiments__train__464127_0_jpg.rf.65ce9eec1bacc8c806e8318aa23d14fe.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464127_0_jpg.rf.65ce9eec1bacc8c806e8318aa23d14fe.jpg",
+    "image_sha": "d0145ccf392b81f44436f22ca573f02a5b3418cd22c468eb29077072ae540348",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 5,
+    "name": "condiments__train__464128_0_jpg.rf.014bb9e0fbd87f44a88f713501796243.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464128_0_jpg.rf.014bb9e0fbd87f44a88f713501796243.jpg",
+    "image_sha": "709175c38db5a11e88bfbcd9c953b362e278ed50b814ec7ac33f707f810e0d4f",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 6,
+    "name": "condiments__train__464129_0_jpg.rf.d1926d9e21e18079c8c84e9b853fc621.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464129_0_jpg.rf.d1926d9e21e18079c8c84e9b853fc621.jpg",
+    "image_sha": "24fe3f18252d7b57201a968d5d742eb3f9a43ac8d0be4ba16a3097cb0bcafc1f",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 7,
+    "name": "condiments__train__464130_0_jpg.rf.1004a294f6a799582ab9e71d5abfee08.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464130_0_jpg.rf.1004a294f6a799582ab9e71d5abfee08.jpg",
+    "image_sha": "7c25bd49a397b0e8b697155e1b68775b375a1927387c4d612745889f761b6bec",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 8,
+    "name": "condiments__train__464132_0_jpg.rf.fd84493b639f79f3604289c95279aa1e.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464132_0_jpg.rf.fd84493b639f79f3604289c95279aa1e.jpg",
+    "image_sha": "898ce17345235ad384cb8cc4c83a2a7500b5d78b3d681b2185ec9de2883ad6d0",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 9,
+    "name": "condiments__train__464133_0_jpg.rf.46ab44e52ff52a9d0da14d6092ebd575.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464133_0_jpg.rf.46ab44e52ff52a9d0da14d6092ebd575.jpg",
+    "image_sha": "289c9c072b1f93101eabdb977388410f096123109a517c003dfa5a0f5aeac122",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 10,
+    "name": "condiments__train__464134_0_jpg.rf.a773f4901e140a1c0274c74a2378cefd.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464134_0_jpg.rf.a773f4901e140a1c0274c74a2378cefd.jpg",
+    "image_sha": "4318e0fa947988ae8f8b2bf7401985e1db81100e0757f84b342daafd4aa37bde",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 11,
+    "name": "condiments__train__464135_0_jpg.rf.80b04f20d76ae39d9bbf30410e97b251.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464135_0_jpg.rf.80b04f20d76ae39d9bbf30410e97b251.jpg",
+    "image_sha": "949d3ef751d946f5eaca11b301c8feb1dbaa2b9fce27a7ba0130e7a5f048fa76",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 12,
+    "name": "condiments__train__464136_0_jpg.rf.7ba2c6dd2e67f009313e1ee90bfe98e3.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464136_0_jpg.rf.7ba2c6dd2e67f009313e1ee90bfe98e3.jpg",
+    "image_sha": "eb9cc57021b868a7e24d47684cb4d96393786d3cdcc3d0f751d0d4815899cbd6",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 13,
+    "name": "condiments__train__464138_0_jpg.rf.cb7f3995b7cdf4bb7ede91cac89c876e.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464138_0_jpg.rf.cb7f3995b7cdf4bb7ede91cac89c876e.jpg",
+    "image_sha": "bb080740ba7bf555a3b07b36ad7c5e0cb7929e045f0a4020ed5e2516bea8e8c4",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 14,
+    "name": "condiments__train__464140_0_jpg.rf.16b189ccab5ac0cae253b55468cab928.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464140_0_jpg.rf.16b189ccab5ac0cae253b55468cab928.jpg",
+    "image_sha": "94f9cfc93cca028c43275498de404cdc7fb6357128342cbeb5c7e0b7b5836ab5",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 15,
+    "name": "condiments__train__464141_0_jpg.rf.9e898de98b2fd3e9c227a75bd74547c9.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464141_0_jpg.rf.9e898de98b2fd3e9c227a75bd74547c9.jpg",
+    "image_sha": "d0284833786549cabb5d88cf556fc380984773b242be01b93ec560e656d9b079",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 16,
+    "name": "condiments__train__464142_0_jpg.rf.5205a723090775ebd283d8310ee63963.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464142_0_jpg.rf.5205a723090775ebd283d8310ee63963.jpg",
+    "image_sha": "9cf76ed775f80f7fbcc0c28f0f4c6e297a0c6b99e629a30045b4d300f3a1b60f",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 17,
+    "name": "condiments__train__464143_0_jpg.rf.d6a0a23686c6a6dbad7639c7e1b4becd.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464143_0_jpg.rf.d6a0a23686c6a6dbad7639c7e1b4becd.jpg",
+    "image_sha": "e1600b292f608d91f520ca5742ae407602660f89adafead34d28b7db39eb255a",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 18,
+    "name": "condiments__train__464144_0_jpg.rf.67a8fb60f13f18efdfefd27589bd8476.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464144_0_jpg.rf.67a8fb60f13f18efdfefd27589bd8476.jpg",
+    "image_sha": "23b3aa055d5d8852b2ef73ad2cdbbc04daee009462974a32a367aa563da8bce7",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 19,
+    "name": "condiments__train__464145_0_jpg.rf.9081577227e63e5c02a6e70d54aff444.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464145_0_jpg.rf.9081577227e63e5c02a6e70d54aff444.jpg",
+    "image_sha": "fd3d4862c136abd2f07e755311aea589838a41876921f9a0e4a5758fa0c65b1d",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 20,
+    "name": "condiments__train__464147_0_jpg.rf.5cf99c67fcac6f3795b41d8503dd2841.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464147_0_jpg.rf.5cf99c67fcac6f3795b41d8503dd2841.jpg",
+    "image_sha": "8cbb3c7343697812ad5cf17e25aa06120ba7220755c8761b602f0c8b525bfaec",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 21,
+    "name": "condiments__train__464148_0_jpg.rf.c0bd0088d5eebbe7b724909eea7941b3.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464148_0_jpg.rf.c0bd0088d5eebbe7b724909eea7941b3.jpg",
+    "image_sha": "24a1983654280ce5bec1061fe037f6d5f3fc084ece96ee7bb1485baeb84fcb4e",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 22,
+    "name": "condiments__train__464149_0_jpg.rf.fb7e14494d41256dc203012eec2846b4.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464149_0_jpg.rf.fb7e14494d41256dc203012eec2846b4.jpg",
+    "image_sha": "a28267e31d2eada7a111da0de1b7abd1b6e62bb25cc140b5c1f9feca1f734ed2",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 23,
+    "name": "condiments__train__464150_0_jpg.rf.03fbcbfa725bd40a14578f0393a83e8c.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464150_0_jpg.rf.03fbcbfa725bd40a14578f0393a83e8c.jpg",
+    "image_sha": "ecd944954c0c9da5936562800fe2e1a77839e1e8642c5ecac2d0bd7d359ef9ee",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 24,
+    "name": "condiments__train__464152_0_jpg.rf.95b874ccec66385e2bbc3c6bed938cc7.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464152_0_jpg.rf.95b874ccec66385e2bbc3c6bed938cc7.jpg",
+    "image_sha": "0da2b925f411593a039d16b5803f521438d8bc2ae05fb3ce0fb7d3ceca172153",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 25,
+    "name": "condiments__train__464153_0_jpg.rf.0909d96821f6b8a75ef05297fdf76218.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464153_0_jpg.rf.0909d96821f6b8a75ef05297fdf76218.jpg",
+    "image_sha": "795b7cf1d73f303262689eb240ebf0bbd012dc05bfa15b7197e500653ac6f714",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 26,
+    "name": "condiments__train__464156_0_jpg.rf.8bece950f78c750eae6b44efa8587a45.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464156_0_jpg.rf.8bece950f78c750eae6b44efa8587a45.jpg",
+    "image_sha": "fa5ef7a89cd4c0e434e87f8ab674f2abcea622343e73aa2f02b7bf801e3a0329",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 27,
+    "name": "condiments__train__464157_0_jpg.rf.60e14f33bbe0b2923c1b401afc4d1e0b.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464157_0_jpg.rf.60e14f33bbe0b2923c1b401afc4d1e0b.jpg",
+    "image_sha": "f16ed32473c5b33ad60c2799afdf0bd71ec7c8be3e4d1bf8de99e78950b22c00",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 28,
+    "name": "condiments__train__464158_0_jpg.rf.4b15b051bc55fab71a0b8810705e598b.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464158_0_jpg.rf.4b15b051bc55fab71a0b8810705e598b.jpg",
+    "image_sha": "e8a27e8e53153dbf15b1b00bf09136ed3190f40398e7d39969c0861b3a91647e",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 29,
+    "name": "condiments__train__464160_0_jpg.rf.c5ceb42bbb18a91e97e8fc628436b3f7.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464160_0_jpg.rf.c5ceb42bbb18a91e97e8fc628436b3f7.jpg",
+    "image_sha": "4b1722691cbedc2ef4dcc4bfc1ac1fa7d4e2973ab7dfd65b50ed2a6e9ed6761f",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 30,
+    "name": "condiments__train__464162_0_jpg.rf.419c8e90c2377cac2ebcf2e222848bbb.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464162_0_jpg.rf.419c8e90c2377cac2ebcf2e222848bbb.jpg",
+    "image_sha": "3998bcca6bb3285fcd1735064248d34ea39ed5820e695d65009df7a7a469de4c",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 31,
+    "name": "condiments__train__464163_0_jpg.rf.6b2ee407a9cdcb57cbb56f598dc4216f.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464163_0_jpg.rf.6b2ee407a9cdcb57cbb56f598dc4216f.jpg",
+    "image_sha": "131a4a773bb148fe27f72868f30206471e7a151d3759c0a345d8f39f49483cfd",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 32,
+    "name": "condiments__train__464164_0_jpg.rf.f81a3dbf58354bc704c546aa21fbd291.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464164_0_jpg.rf.f81a3dbf58354bc704c546aa21fbd291.jpg",
+    "image_sha": "fea410aa6851bcce091b5b2e3b4b3d6638d7dc246cc69b37c86dc9b47f1b8d21",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 33,
+    "name": "condiments__train__464165_0_jpg.rf.1f80632d22648fc8f12b23b855c51fcd.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__train__464165_0_jpg.rf.1f80632d22648fc8f12b23b855c51fcd.jpg",
+    "image_sha": "c3170f7b253dcba9d9a435129d22f0f5df69d1c0835df438fc790a41a647e18e",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 34,
+    "name": "condiments__valid__464121_0_jpg.rf.89ba9bc337a30804ab8689bd8757ca82.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464121_0_jpg.rf.89ba9bc337a30804ab8689bd8757ca82.jpg",
+    "image_sha": "98603ff19dafa4a3c8f75f5f3f8f671f6fe03b7cd24ce13aad2a19fab9281332",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 35,
+    "name": "condiments__valid__464123_0_jpg.rf.9ecbdec92a10d988ad80cb6925d7f792.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464123_0_jpg.rf.9ecbdec92a10d988ad80cb6925d7f792.jpg",
+    "image_sha": "c88feb288e2719a8b1e1d12013a6ac585647b9bdf079328f988046e1fca5a612",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 36,
+    "name": "condiments__valid__464131_0_jpg.rf.9942f0d299459b9e0cbc8fe9dcab0c22.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464131_0_jpg.rf.9942f0d299459b9e0cbc8fe9dcab0c22.jpg",
+    "image_sha": "a42f697c9bd230daf225a359a1a3f8e137c5e1b10d27cd0abba679cb1ea02078",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 37,
+    "name": "condiments__valid__464137_0_jpg.rf.48c208afe5a44303b115bc6103b716f8.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464137_0_jpg.rf.48c208afe5a44303b115bc6103b716f8.jpg",
+    "image_sha": "8093a70d906eb456b54e4a0896c70af14727b91e99b3f3efba38e57d82f07679",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 38,
+    "name": "condiments__valid__464139_0_jpg.rf.0bfa2fdf258df1d212c049995b350ba8.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464139_0_jpg.rf.0bfa2fdf258df1d212c049995b350ba8.jpg",
+    "image_sha": "76b4d99ce23e618511e82aae889e64c0e30e433789ef06fd9f825f5c256a9077",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 39,
+    "name": "condiments__valid__464151_0_jpg.rf.0c4411c124196eb54092031f19c521f2.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464151_0_jpg.rf.0c4411c124196eb54092031f19c521f2.jpg",
+    "image_sha": "cabd7f652a32297b4c43d5d48438baf249087c07ebb4ab7d0a1345a958260ef3",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 40,
+    "name": "condiments__valid__464154_0_jpg.rf.1a89d3678064302e4cd10fa28aeee899.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464154_0_jpg.rf.1a89d3678064302e4cd10fa28aeee899.jpg",
+    "image_sha": "90620712c95322804fe9a6cd89ccaccadd12f2e5fb16223a6c962fd6f10050bc",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 41,
+    "name": "condiments__valid__464155_0_jpg.rf.b0aa0caee027f4072f1f07fb6e0e77cb.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464155_0_jpg.rf.b0aa0caee027f4072f1f07fb6e0e77cb.jpg",
+    "image_sha": "9465e2cba00cf351fdd18984d1c0c8e7de2453947d3d024fc752fbce5d42f957",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 42,
+    "name": "condiments__valid__464159_0_jpg.rf.edd2d8dbbf6d06b89e9a78c0bf5b6359.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464159_0_jpg.rf.edd2d8dbbf6d06b89e9a78c0bf5b6359.jpg",
+    "image_sha": "c6c59b2d40d372980d9d74b86b02c7a5e3d6362e45b4718b8012f42bddc989f8",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 43,
+    "name": "condiments__valid__464161_0_jpg.rf.4a614ec1409421f983f4e75fc04b05e3.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/condiments__valid__464161_0_jpg.rf.4a614ec1409421f983f4e75fc04b05e3.jpg",
+    "image_sha": "54e46138bf68f55b9553d242ee9c19255c4ca87cc94cd279378339ec5f4bb524",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 44,
+    "name": "dry_wet_waste__test__paper60_jpg.rf.73d291a8166688bf2c5608b92092418f.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__test__paper60_jpg.rf.73d291a8166688bf2c5608b92092418f.jpg",
+    "image_sha": "66d55709ed7211f74f4d95814d3d4d5b3da56b5aed5d30b89126cb1c0047d7cf",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 45,
+    "name": "dry_wet_waste__train__paper191_jpg.rf.a2f073f30f0e628c0f1cb3405c90077f.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__paper191_jpg.rf.a2f073f30f0e628c0f1cb3405c90077f.jpg",
+    "image_sha": "92b418ade1626a64a599122be1185752ee8d46c7a3ea06d24fbfd9caa6d896ca",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 46,
+    "name": "dry_wet_waste__train__paper528_jpg.rf.671a8f48554d5bdc824dfb5e9a7562e5.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__paper528_jpg.rf.671a8f48554d5bdc824dfb5e9a7562e5.jpg",
+    "image_sha": "331a41748ef05594967a3b4d573e64ffbe3b1282e10821f9e8b7f89a6fdfa8c5",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 47,
+    "name": "dry_wet_waste__train__paper538_jpg.rf.c3d5b8043687ba0f72e92a82e44b39aa.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__paper538_jpg.rf.c3d5b8043687ba0f72e92a82e44b39aa.jpg",
+    "image_sha": "debe7fbc574af537ae658bc60807db1cffeebd1a90d9fec1502aff719523b6b4",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 48,
+    "name": "dry_wet_waste__train__paper63_jpg.rf.d5f2acae59c3188321f106cb261a9d53.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__paper63_jpg.rf.d5f2acae59c3188321f106cb261a9d53.jpg",
+    "image_sha": "964885f139cdf990d72377660e59192edeeddb213f1fa07353adec3262bf2f62",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 49,
+    "name": "dry_wet_waste__train__plastic145_jpg.rf.dbb90ea58ec02e96ec51ff122d74e091.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic145_jpg.rf.dbb90ea58ec02e96ec51ff122d74e091.jpg",
+    "image_sha": "707f45a2f4ccaa4c6ba2f8a838c83e2a5af70a4d2328bdc790bbc87952d1f8f9",
+    "original_verified_absence": true,
+    "original_review_status": "corrected_and_signed_off",
+    "original_review_reason": "Opaque squeeze-shaped household/personal-care bottle, not a plastic beverage bottle under 11-class ontology; remove incorrect positive and keep negative image."
+  },
+  {
+    "index": 50,
+    "name": "dry_wet_waste__train__plastic345_jpg.rf.bf1ac00a95ee498c3f8108790bd72246.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic345_jpg.rf.bf1ac00a95ee498c3f8108790bd72246.jpg",
+    "image_sha": "0e009a3d981c3c61c93ef577b1b4d82f852bc2b7029b85007b26cbb367827146",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 51,
+    "name": "dry_wet_waste__valid__trash88_jpg.rf.ad622b5e17a57d26a64353030cb3691b.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__trash88_jpg.rf.ad622b5e17a57d26a64353030cb3691b.jpg",
+    "image_sha": "954581b1e30f497d6218b0afb6a660f737732cc26dbafc3b28f612ddb6e99304",
+    "original_verified_absence": true,
+    "original_review_status": "corrected_and_signed_off",
+    "original_review_reason": "Visually checked all visible objects in this isolated source photo. Source wrapper label is wrong: transparent reusable zip-top storage bag, not food/snack packaging. Remove class-8 false positive and keep negative photo."
+  },
+  {
+    "index": 52,
+    "name": "food_american__test__download_jpg.rf.5c6383bb584eb0d354c44cf2ba48a6db.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__test__download_jpg.rf.5c6383bb584eb0d354c44cf2ba48a6db.jpg",
+    "image_sha": "6196c35ffca740cadb5d6017885f0d723348542af82acf9737ddc9decca404b6",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 53,
+    "name": "food_american__test__images_jpg.rf.8725f085ad0ededab7494a40cdf72491.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__test__images_jpg.rf.8725f085ad0ededab7494a40cdf72491.jpg",
+    "image_sha": "fbc37119c13aec53a5796fee233230995c5726ff423d04560bc409b29bad208f",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 54,
+    "name": "food_american__test__images_jpg.rf.bf08e877a83399f5dc79acec8f19877a.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__test__images_jpg.rf.bf08e877a83399f5dc79acec8f19877a.jpg",
+    "image_sha": "ea318ab9f7a2203e7ea9ec7be2f81bc6d70ad59d9c078311ffb486fe85124143",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 55,
+    "name": "food_american__train__2m1httswwdu41_webp.rf.55630b0c8ec003ee4900d68eab802bbe.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__2m1httswwdu41_webp.rf.55630b0c8ec003ee4900d68eab802bbe.jpg",
+    "image_sha": "0a27132f7e5a6fc0676c0b47c60658ae3521c8ca29f1eea608c1a80c6f17e793",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 56,
+    "name": "food_american__train__3-16_png.rf.dac88c9539225132ee07b229eeb92204.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__3-16_png.rf.dac88c9539225132ee07b229eeb92204.jpg",
+    "image_sha": "beea2769e7dede1969021ecc67dd632f21aba660fb241b4875f835e402e86372",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 57,
+    "name": "food_american__train__download_jpg.rf.338119416af2ab7f5a4777f3aa6fcd3e.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__download_jpg.rf.338119416af2ab7f5a4777f3aa6fcd3e.jpg",
+    "image_sha": "5ccba03cdb50efbef4476b46ffb02a6806dc9c3c95e6c880a8469cc2ee8d35a0",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 58,
+    "name": "food_american__train__download_jpg.rf.69af084c6f657aae6cb53fb448c69dfd.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__download_jpg.rf.69af084c6f657aae6cb53fb448c69dfd.jpg",
+    "image_sha": "9d55026ab5d045c0188129d35176fff2f1c3d51ea410fe400101d7cea260026b",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 59,
+    "name": "food_american__train__download_jpg.rf.96e3fa67b86bee33aa431fa38d52ad7f.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__download_jpg.rf.96e3fa67b86bee33aa431fa38d52ad7f.jpg",
+    "image_sha": "31435649f3e1db3ee2d6a9c5f266804012b7606cac8818d8ad7e753f1ee774dd",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 60,
+    "name": "food_american__train__images_jpg.rf.0653523d0d9581b6ddde2a3d58f72373.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__images_jpg.rf.0653523d0d9581b6ddde2a3d58f72373.jpg",
+    "image_sha": "14f6b0e2efc262675d9fce48c2c5f85c1ed0941b38efd5ae8c2effc0f5572187",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 61,
+    "name": "food_american__train__images_jpg.rf.138836a52138e46a6afff40a31fadac3.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__images_jpg.rf.138836a52138e46a6afff40a31fadac3.jpg",
+    "image_sha": "7071f97276b1b3b25cf0a80b105f3d33bba34ee0aeaa09ac294a64681eaa2c8c",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 62,
+    "name": "food_american__train__images_jpg.rf.27e5ce52d5650e34e6dfff7f3452c2fa.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__images_jpg.rf.27e5ce52d5650e34e6dfff7f3452c2fa.jpg",
+    "image_sha": "a66a6d83b8a6db705d9a1dfb90b144a54f19f4da3c183479c0b7b4264d8e8179",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 63,
+    "name": "food_american__train__images_jpg.rf.4339270eba128c4719f0e51a1f21b002.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/food_american__train__images_jpg.rf.4339270eba128c4719f0e51a1f21b002.jpg",
+    "image_sha": "5f87d9967081fe112f08239f8b79fc3afaac99a9964749eddc0781f75eaefef2",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 64,
+    "name": "plate__val__lvis_000000482706.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__val__lvis_000000482706.jpg",
+    "image_sha": "e572fd5562fbafc50ed9edc105b24a6aea668a0496e3ce8a05cee221b917c91b",
+    "original_verified_absence": true,
+    "original_review_status": "corrected_and_signed_off",
+    "original_review_reason": "Removed false plate annotation on orange clownfish wall decoration; no target instances present."
+  },
+  {
+    "index": 65,
+    "name": "trash_detection__train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000014_jpg.rf.0d5db07b5ac582dd1fee75dc308a8e3f.jpg",
+    "image_sha": "e75991e78b2fd6b16b832f22ad0ee4ed4d86d75e295097f620a13dfb6c1e3c5f",
+    "original_verified_absence": true,
+    "original_review_status": "corrected_and_signed_off",
+    "original_review_reason": "Source bottle box actually encloses an aluminum drink can in a planter with other cans. False bottle label removed by checksum-locked V2 override."
+  },
+  {
+    "index": 66,
+    "name": "trash_detection__train__000065_JPG.rf.e8f094809b383b1d6e1154daf88ae932.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000065_JPG.rf.e8f094809b383b1d6e1154daf88ae932.jpg",
+    "image_sha": "a7a1fc1fd07bac5dedc6edca43e771615ff9244b4a8ea6261227212028d13a6e",
+    "original_verified_absence": true,
+    "original_review_status": "corrected",
+    "original_review_reason": "Both bottle boxes are condiment bottles with red dispensing caps; excluded. Carrier shopping bag is outside flexible food-wrapper target."
+  },
+  {
+    "index": 67,
+    "name": "trash_detection__train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000071_JPG.rf.b8904a096ccefc3bae63334a5d622255.jpg",
+    "image_sha": "7118972d951be38c80c4725b4905626875ccc9eb52122250a4028ea36c48f10b",
+    "original_verified_absence": true,
+    "original_review_status": "corrected_and_signed_off",
+    "original_review_reason": "Original source bottle annotation actually labels a rubber shoe sole with shoe-tread pattern. Replaced annotation with no target objects in V2, V1 preserved."
+  },
+  {
+    "index": 68,
+    "name": "trash_detection__train__000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000079_JPG.rf.4cd668b298e55a4f716e2224b29cff80.jpg",
+    "image_sha": "eb005f2026f7542af0b15f802a9c6c832331051972f1b4e38c94ec198b443f1b",
+    "original_verified_absence": true,
+    "original_review_status": "corrected",
+    "original_review_reason": "Removed both glass beverage bottles; cartons and carrier bag are outside the three target classes."
+  },
+  {
+    "index": 69,
+    "name": "trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+    "image_sha": "4809d665a107fd22c17da5abe69ad0bf4036d667f022306af9341bd7aac38638",
+    "original_verified_absence": true,
+    "original_review_status": "corrected",
+    "original_review_reason": "Removed two glass beverage bottles incorrectly mapped to plastic bottle; other visible beverage containers are metal cans/glass."
+  },
+  {
+    "index": 70,
+    "name": "utensil__1217_jpg.rf.04447ef0499e84e7b7d462591bea29b6.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/utensil__1217_jpg.rf.04447ef0499e84e7b7d462591bea29b6.jpg",
+    "image_sha": "15ae7b2ba6b7315173add093b98f593cbe21777a4cfaf18f6fdf1ca10be1169c",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 71,
+    "name": "utensil__1236_jpg.rf.34aa336b091ab6f49093dbadfb15a6b1.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/utensil__1236_jpg.rf.34aa336b091ab6f49093dbadfb15a6b1.jpg",
+    "image_sha": "a8d872d20bea90cc0151c2f319e3c7e5715d6bdaa879dd0fe789f2e17d910026",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 72,
+    "name": "utensil__1244_jpg.rf.2f12e3a054ca32c565ab312f7596a7cc.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/utensil__1244_jpg.rf.2f12e3a054ca32c565ab312f7596a7cc.jpg",
+    "image_sha": "114297a38e2a73270f6fb8fce3803134563b8bb978bb4b9e7d5e70b6dbbe863e",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 73,
+    "name": "utensil__IMG_20231109_141023_jpg.rf.6e80fc64956f4574a1c389f224fcce9d.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/utensil__IMG_20231109_141023_jpg.rf.6e80fc64956f4574a1c389f224fcce9d.jpg",
+    "image_sha": "a361ca7c55e3f109990b5448e02980b276fe8dc4835e61008f672f1241c071f5",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 74,
+    "name": "utensil__WhatsApp-Image-2022-01-20-at-4-23-13-PM-5-_jpeg_jpg.rf.08f108df446ba7db2147cbb570ade023.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/utensil__WhatsApp-Image-2022-01-20-at-4-23-13-PM-5-_jpeg_jpg.rf.08f108df446ba7db2147cbb570ade023.jpg",
+    "image_sha": "f30a07e1e6bd4d468f3fdfcaca8199e06c30b5145db30fcc00806c4a3f47c6aa",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 75,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-30_000_mov-0002_jpg.rf.504478b2baf4ea02073543cb94cc15b9.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-30_000_mov-0002_jpg.rf.504478b2baf4ea02073543cb94cc15b9.jpg",
+    "image_sha": "8391cb94ffbdc0da3d294635869043132d0971b167a0e352019bc62a7601c35b",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 76,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-30_000_mov-0003_jpg.rf.17341727efc2c8e2a3bfcab9a2e1b51e.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-30_000_mov-0003_jpg.rf.17341727efc2c8e2a3bfcab9a2e1b51e.jpg",
+    "image_sha": "b02cfb2719e7fba5a21dcc0469a79dcfdd39ac8b8a3b45881f0eba5e99785d92",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 77,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-30_000_mov-0004_jpg.rf.309d322e9e4ad8530323ee86588d0247.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-30_000_mov-0004_jpg.rf.309d322e9e4ad8530323ee86588d0247.jpg",
+    "image_sha": "d5569ec9ef66e6c03924148715f0393ee3d6ebd091a4c3811443516e2f8bad6a",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 78,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0000_jpg.rf.933d121799d6567b7997da2e3908b877.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0000_jpg.rf.933d121799d6567b7997da2e3908b877.jpg",
+    "image_sha": "f7eccaa487367d867c11dbf4847da0a4d4cb73740633c906083f40a8a0dea6d4",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 79,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0001_jpg.rf.7393910d01a988e90a3d970a7fd824a4.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0001_jpg.rf.7393910d01a988e90a3d970a7fd824a4.jpg",
+    "image_sha": "d4fd07a7002e69986a2a461dad5c1476228fec51c296c072a3d13efefd2a4832",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 80,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0003_jpg.rf.05ca2b6e566f5afa0dccf9d60f3e96b2.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0003_jpg.rf.05ca2b6e566f5afa0dccf9d60f3e96b2.jpg",
+    "image_sha": "15e302ba91a52d3711dc117cce6caac7de5a0dca265491626e01bd09b6537e5d",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 81,
+    "name": "waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0005_jpg.rf.982d5958d5d40ae2084c4751735e38c6.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-12-47_000_mov-0005_jpg.rf.982d5958d5d40ae2084c4751735e38c6.jpg",
+    "image_sha": "d6f8eddf4da6e625b691a31a23d3a8bdbe832e592d30728ae681deb52b22d724",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 82,
+    "name": "waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0002_jpg.rf.b2456461190a8d8d499b46048ba8ced0.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-13-21_000_mov-0002_jpg.rf.b2456461190a8d8d499b46048ba8ced0.jpg",
+    "image_sha": "470ac6963d6e3e67094b2644a3f88b349d6253701c516e9fcb0128fdac05d094",
+    "original_verified_absence": true,
+    "original_review_status": "full_verified",
+    "original_review_reason": "No complete target review"
+  },
+  {
+    "index": 83,
+    "name": "waste_detection_v3__train__2024-02-05_12-17-36_000_mov-0028_jpg.rf.5523e7d063a48b78463abbb2f7c53357.jpg",
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/waste_detection_v3__train__2024-02-05_12-17-36_000_mov-0028_jpg.rf.5523e7d063a48b78463abbb2f7c53357.jpg",
+    "image_sha": "ffb0e4bd9fa9e30d034c3cde4b7a04c2761469528fdc4085001b1d9461744f19",
+    "original_verified_absence": true,
+    "original_review_status": "corrected_and_signed_off",
+    "original_review_reason": "Single orange aluminum beverage can was incorrectly labeled wrapper (class 8); fully reviewed photo has no target positives, corrected V2 complete label is empty."
+  }
+]

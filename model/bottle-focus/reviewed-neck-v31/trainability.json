@@ -1,5 +1,5 @@
 {
-  "epoch": 1,
+  "epoch": 3,
   "backbone_parameters_fixed": true,
   "neck_and_head_trainable": true,
   "trainable_layer_indices": [

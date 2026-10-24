@@ -1,0 +1,727 @@
+{
+  "validation_images": 246,
+  "candidate_count": 60,
+  "records": [
+    {
+      "id": "0006289e4f292bcd",
+      "sha": "6e7c3af836d8c385e6ad1b3b377c3710a57fb8bf12c68afb01f2f0ea9086318d",
+      "pixels": "2e4fd1490fb79bd765803743724d5f5328dd5985184d6e3a9b01dd8852ff7c19",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__021060001_jpg.rf.d39772229afbbfe1af101965d664f40c.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0014f46781cc0b65",
+      "sha": "26f423336a93659fa58451a7758abb46d2d465491f848e7ded74b35b59a233c8",
+      "pixels": "251150b20c4cf138db7787216ef9bd0a281114b860da0a46dbaf02423d621ef6",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "plate__train__lvis_000000355159.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0025cecdac634ec0",
+      "sha": "8abe5040ba20cdf6ddacef4644fe0a3085d10e814c0fb837eff3a27515125018",
+      "pixels": "dce9ab403fc2d7321eed614a5abcafed536fbc29372341a857de71a5194332e0",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "plate__val__lvis_000000004180.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00274a6266607dad",
+      "sha": "c8c7279790b8b1d5d5d3d689c9a94fb57068d84adf1f90159531342ff9b74c4e",
+      "pixels": "00e711defb56352e3698be90a77cf2e66372b55ce3fa908da86e88e031601b05",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        19,
+        "school_lunch__025457000_jpg.rf.b88c3db0dbae3638b7d0e2587f0bf239.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "003cabf44cf6119f",
+      "sha": "9e3172484d441a747205aa2a2502ece5de99e7ecf27c33f9932e9782a4f38242",
+      "pixels": "17020aeff0dde1a4ebbe37d640aa659fbc2c0db6facab5fe4fc1427d1b52da65",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "trash_detection__valid__000010_jpg.rf.65151e2c489484904191cd6bb6e256f4.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "004834d670b0e561",
+      "sha": "0cf44c0fc33da2d462a3c11d48f7bd9493a809fdb438fcbad2b2cc792eadb557",
+      "pixels": "a3182f4c594dfd957029d6e3316e2c42d007b2ed8855eb4e0f2254c7048a7c67",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "school_lunch__026170001_jpg.rf.06031e2dc3ce25f2165a98dabdf28baa.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "005bb95d8bcc5288",
+      "sha": "802b66eae7b6852715f894c545855fa78372e1ec50d912e441f8c593132b8783",
+      "pixels": "3305d7f9ab9a464507352c282a8b25d9ee883a12c806b51790d4e1e6d6ddfb20",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "plate__train__lvis_000000091952.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "005d8c165e4065f6",
+      "sha": "1d11b1e92d921215380c4716a9f3195587e9a5ab85d41fb407a994e5a372545b",
+      "pixels": "85f47aab74c200b0aa79d0b5d28c4b5f9069a94c807fd0e9f887cc52f4c0a2c3",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        15,
+        "plate__train__lvis_000000495095.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "005dd48af2c877a7",
+      "sha": "420b2ebbee2a46c184050ab1956c1c14644984fbdf3ff9ef89aa84fe834146c4",
+      "pixels": "f97b7dbeeb406053aca60bfe6ef0c579da8f3f556a9b4fddca7e06fc50a08821",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        15,
+        "school_lunch__022027002_jpg.rf.edf5f2ddc3fd12c06277c24eef804e42.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "006e4e3f92746226",
+      "sha": "3aa22e83bf096b77b8123cdca0895b497f42f4fd7464769735f02390d8770635",
+      "pixels": "1b0fae5b2ca6b8295b7bf939c722daaae6d02f3f5104ae6c64062cefb5124649",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__train__lvis_000000534543.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "009f242264d629f8",
+      "sha": "c40a8832a677d773ef898ce0e385ff1d855f5d139cdcea530dab1f598d0a5d31",
+      "pixels": "4ae9d7e6fb066286567f3884c7ad8de6226940f16322355aec6d52178af4441e",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        18,
+        "trash_detection__valid__IMG_4860_JPG.rf.c7b7825de3bdb1c0c91baacf0710eb21.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "01022385e695493d",
+      "sha": "cc1db22e78db01bf8afab3402b4d56a001efd944b0cf35cb82c6a80aeb328b1b",
+      "pixels": "59bb83445203ea02309b5e02981252105919b51d7f73f292e93c4fb1574607dc",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        13,
+        "trash_detection__train__000010_JPG.rf.f30df122f5615106511115643853ea8a.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "01974aeb05de615f",
+      "sha": "2ae104af0919e318b30611a445ecc782882b9591164b62dc44a57d3ae76c590c",
+      "pixels": "732eced9ab15e20a963054d65adc91b9321544e9130ead3519fb02473b22c1a3",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__010859001_jpg.rf.e0879ff5e58139645147d9f8123ac131.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "01c2080908f3f703",
+      "sha": "a2e5e0dbc0771ec456a8ac76c806d0dd3a23297411ba77d0fac2d6c47651b090",
+      "pixels": "afe0a0998358ac5551bc041112f94b9fb26c3ba543d991a7e51ef355208f27b6",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        18,
+        "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "01e78af881ec1ec5",
+      "sha": "581c155deb996dba5b7718d7d0dd40a721a9c13e4c1dea964576ce4c7793bcb2",
+      "pixels": "875d29fa92de4bbd4365f21647589ead553c2e36a5709bb43c088133174879c1",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__train__lvis_000000282143.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0373e09acea451dd",
+      "sha": "ab57b9b291bb4e5f90301808e2f6935ba3c660baf493295e576bbd1154257720",
+      "pixels": "1c8ee16b81f8a3dc8bf5b93913b8bb96fdf22e95e044daf97c501783a8a97237",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "plate__val__lvis_000000218554.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "039f4ba0b748fe39",
+      "sha": "b4037358c2569f725c021458c2975a0c1f162a226b5c6098730eacb2136cce03",
+      "pixels": "3236f97846e1fbd60999059c8540d318220a5cc18ffeb669497bfe910a1c720f",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "school_lunch__011138001_jpg.rf.1b0d5b6cbba86ed6a03c17e58497c88f.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "05ced22764ec20d9",
+      "sha": "8be09d461d1e2a078c189568e2e16019ac2b185a9ba0f5aa62a25e604dd494e1",
+      "pixels": "f90f7070f262c33c6b2fb6c30e1cffeef4ef6046a89584f09605023787718a89",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        12,
+        "school_lunch__023310002_jpg.rf.01c6546bc4113c363db0e797c0a5a45f.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "05e9a7322da50dfa",
+      "sha": "68dbcf2ba2aa376812100dd559c4495eb1fe237d29eac0fa0df96f35f0ddaa36",
+      "pixels": "b8f62d30f53c3e2c3642a63a9d3c8b65bd6d4dfd69e5f134cd7639084cb44772",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "trash_detection__train__000010_JPG.rf.f30df122f5615106511115643853ea8a.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "060d2b801bbee671",
+      "sha": "3c96ec52688138bd628702184b3db62d266f2c4455ed0f907e945865ec8f0449",
+      "pixels": "e7ff135ad1f4fce78ed60eb0434347b86dc04aaa7325edae6c34875330cb7647",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__train__lvis_000000488373.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "063d2bd4c4a56080",
+      "sha": "5a4179710861e47e7d7effa14b8cde227c4848d1755a318248fa2ea27430c56a",
+      "pixels": "077793252d97b9eeefd90589a0867092a2bf8fc413f19878f7d82f9906c31c05",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "06f98421b247aa62",
+      "sha": "1d96d33741df81fcc932cabd545029c144dd541009ccde440aeb162f1f1e8abb",
+      "pixels": "76baed94bb5087377ffb3c5fa6b16899761dbcb8599b00ce24901c597db2208c",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        10,
+        "school_lunch__023310002_jpg.rf.01c6546bc4113c363db0e797c0a5a45f.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "08408a32b8dd95b1",
+      "sha": "bc8b5fec7ff7ba028c2f687cd2830325d768ca2014e5950ec223ac7bda60e837",
+      "pixels": "c86215c4cd442295178cc62e05947597dbf2b31062aca4c269984f4837b4825e",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        12,
+        "trash_detection__train__000021_jpg.rf.69beb13282d945c74658eb2329e95417.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "08a3ca6fd295df6b",
+      "sha": "3c97c7bc6ad7e8fe92f26cb9f6604a9b1f7c76bbb3edcca170c4f38af55ce229",
+      "pixels": "cb9c2976e36ad5d7c5456c930eaad97afea32eb0a2d50861781733b416fd024d",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__val__lvis_000000036260.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "095eb66c5afdbf2b",
+      "sha": "98cee5599b0c99c014fcc046957557eaa72394cfd5e4893c8945f36677a6dbe9",
+      "pixels": "79489ea51fcc9c92e76d72d8c6347f63aa0c3570a6fbb541ca5d720b1e47bbd6",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        12,
+        "plate__val__lvis_000000083761.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0ba055795c413cf4",
+      "sha": "f8dc9841745f3e89ce49afb5d7deaad6427a0cad2dcbb9ccf20af615eb90b9c5",
+      "pixels": "69328c9ac88155f7bebe2274cf22eda3538f7c773187c507bfa1ec8743a5c568",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        8,
+        "trash_detection__train__000021_jpg.rf.69beb13282d945c74658eb2329e95417.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": true
+    },
+    {
+      "id": "000d943e6e0bfc4d",
+      "sha": "1242cbb2d9a89a03502cf9342f1a79f06ffc1cadf66f7598f791865816487915",
+      "pixels": "dae73960263f2d1b771144d35fda297914551407f87cb2b70622dc2d693e42e1",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__023310002_jpg.rf.01c6546bc4113c363db0e797c0a5a45f.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00126f7b5c985110",
+      "sha": "0157b499321feb0b077cca3b1d6e9f2a616f6904043455a6304d15f833447308",
+      "pixels": "e23503a1aa6fd38045ca4ce29d3e093d8e43fd3d51e688f4d9958beb5f9952bb",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__021109002_jpg.rf.ad96c3ffb69f45b7a8a369d6985c9bbc.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00130c2588695b00",
+      "sha": "43f0a36cf6b6860009b11745619dc54f2fcbd2e8f750167b17775eb66b287519",
+      "pixels": "87ce24d6ba9982edb8a8eec1fccfb9cb6e7f406508473a8e8579e5a2530ad2d5",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "school_lunch__024112002_jpg.rf.14daabbcfc306268ad4b3c09ac034a7d.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00222a71f3ae10ef",
+      "sha": "ee7b851d911794fd210a3c3280477fa10195cb6afe6f38171e5675910a388ebf",
+      "pixels": "151acee6dab4363507ac3cdb9ce6ea35e58c79e27ea9efe4db1b7dd0cfdf7c80",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        11,
+        "trash_detection__train__000097_jpg.rf.f04c44037b55c5ad9c3d09592e4f416f.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0027b41fcd4fa63d",
+      "sha": "7e513933fe0d20b5f918b656de0bab36ee8024ea4ed7099b0a46496406edf3c5",
+      "pixels": "269d5ce02cad35889c14c4bfcc05d413ca95c8c3bb96c8ee0873abbeca7f11e7",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        13,
+        "school_lunch__020502000_jpg.rf.4c86f82a922547aa04898bcef95824f3.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0052c9cd2c99e3b6",
+      "sha": "5f5b9fec26822040b06d7c45205da0ea2f1a3e0bacedf45f26c67d1b9dc868c0",
+      "pixels": "313940f8964f527c0b04e16afd7d14f4e046f5e0868ce79db02290202f996823",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "trash_detection__valid__000012_jpg.rf.75c5fdec27471daa465f28785b93ecc1.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00548250a81be4fe",
+      "sha": "481eb74b4106527dc9a2db971fee7baa7dc8660a3dd6aa99129db2f5a6f3b335",
+      "pixels": "f4d4dc4ebe5504a79289f5af416a721f382b57173f025c99e14656ea783247f7",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__train__lvis_000000274804.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00579b185c2e5f94",
+      "sha": "cf462d4e8c76014698ec8a5756999a7d7dd7e01c5614d36423db16f72e2d6f2d",
+      "pixels": "25ea94c36ca5d765ec3522e16271103c442f5b5457ecd6187baab590d1ef5e60",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        15,
+        "school_lunch__022312002_jpg.rf.8c86833c521a51ff79385f8e67a06a53.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0057f689b5e06b0d",
+      "sha": "7454e1fc87eebd50af318339bc9633ffb212855f3f838f9b2e0292fd195b800e",
+      "pixels": "11429c04997dea0a7985643393fa40031752dfbed71fbc768769f7cec4ce9537",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__020401002_jpg.rf.20fc7d37be07f7674aea666a40c3b5c0.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "005f9567f94efa14",
+      "sha": "7a6704768454ed54e4337badd73c2f38708159811464f566fd6cffa079512265",
+      "pixels": "566bb20a5f0ae72f93d4b0c405a7c4c37a449cf2421ebabb6141c7386d8ba195",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "trash_detection__train__IMG_5053_JPG.rf.8964f94d6aa1f48d8ed3d624b0bb7331.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00609824ddc999d1",
+      "sha": "575a5cb667fe0601cc155e070c6f180712756f40bd392b7296006d635bd1ff93",
+      "pixels": "4b620f3c612454c24319bf6640a2b08067e75d846e80af38e680a80ece082e51",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__022570002_jpg.rf.479bae7de5d86addae77aa1d63dcd46a.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "006574c2e84b450a",
+      "sha": "8c82f7c89f64894ff637981282bd16bb022d3a927583618b874338109ebf5224",
+      "pixels": "91ebfdb3e296946a1ac7885aff2b216e117098f85613ed9de8648326e5bdf418",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        13,
+        "school_lunch__010645000_jpg.rf.3c349896660db60a04fc71ef01ab253e.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "006d36dadc702c3f",
+      "sha": "23e0e63de11ac74cc89ca4f27c526ab012b224f30f9cf29811ec21f5ab026160",
+      "pixels": "0627b06c6ba3409c7b6aee02f4b88beffb6129f1fce456c4cfc5f3b93b3e41e7",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        15,
+        "school_lunch__010199000_jpg.rf.f27ba0e74fa976f2d4253300eb31bc8e.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "007c2b920dd7d8fe",
+      "sha": "6de9f3625decafa30801f3c5ff63069a4b9d58ce0d2970028b6f53c2442e1f49",
+      "pixels": "4ce26eb20030df17af6d8f8a655a000d56f28168a364746722073bd6008c9980",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "trash_detection__train__000003_jpg.rf.a09e1be0feb717e4ba4a41113f9b0a4d.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00a309828c1dcb84",
+      "sha": "ff3428389cea6bbf9d506673a124c361410f2ed59a4ef09fbceca837e1dd1193",
+      "pixels": "0641a94aa8161f528e64e4b907f2d85cd4293be4133172c219a7f8577f780ef7",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "trash_detection__train__000010_JPG.rf.f30df122f5615106511115643853ea8a.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00a7bac3448128bc",
+      "sha": "c2022b31c5a55a74373a973c0473ed4af283919c8953d86cd28fd2359f655a2f",
+      "pixels": "15228d4e6cd93a3f17a6cc0206347113c6ac56ee77bf3c7ee8cf36b468ac212b",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        15,
+        "plate__train__lvis_000000384981.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00b8101d5ab27ebf",
+      "sha": "f2859edd76c861116688cb038b350a463aab916ab0ef241b951bcdc74c0dd66e",
+      "pixels": "2f0fdea2d1ba977f498042613f4c1c5f4cb04a5209d0da7a29dddf92a835a517",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        13,
+        "trash_detection__train__000010_JPG.rf.f30df122f5615106511115643853ea8a.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00ca6210cbd55121",
+      "sha": "a25d9bb34f597b64c4113d888c3baae6ec13592cd74533bba4dda3b74d8f5e1e",
+      "pixels": "ef652182311a6b6a49185129424eb9eebc3670269ea78c9cea85d067cce2962f",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "school_lunch__027225002_jpg.rf.6e95a3f2775df1cfe42f344ed48ca69e.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00cc08083b836937",
+      "sha": "f07e816fea21bc6803a08724d565b7f7ca3ad0fee372aa183ae01ae7c2f4e227",
+      "pixels": "dc13b7f56512a990e62bc4a4fda7dd5e08a3c2fe5dd692d394543cb389eede92",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        19,
+        "school_lunch__020473000_jpg.rf.17bfc8fd58ed6b228051b53adbb824ba.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00d7116c8766e477",
+      "sha": "487999bb18bbac65352594ca1697a997dcfbd9082e084271fe1676eea6968984",
+      "pixels": "850e493ce1af1af064a65aa8022c2be7ccc24c66adf3c179a7573126fb7c1212",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        15,
+        "plate__train__lvis_000000461953.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00e4c71045cbd238",
+      "sha": "6318c2cd2e322b2e9ab46fd49a28d78783fbc2539f08a5b6a7042aefd66ddcab",
+      "pixels": "7c0419c4c43626ddbb67de7c546e9e60f1ffdc5aba9fdced9f5bf518dfe8656a",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "school_lunch__025512001_jpg.rf.4c8ab4661704faede5090ee0aab7161e.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "00e5a2671b40540e",
+      "sha": "d928e09d190eb2e5cfae63798776b110b0f775827500f6476238f4d2b02680d1",
+      "pixels": "a4ec7bc1086e6a73258e8b293346d19dc587aadf60fb9ab17bfa7032efb52dce",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "plate__train__lvis_000000226102.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "010d10f950a36864",
+      "sha": "07ab4ad73a5fdbd5ea1da1fd2c6d656bc74cb0d89059fbf29482ae60403677c5",
+      "pixels": "6b3fcf60446df521818910404bd6dd08a6124879a254fc44cbc6aa24e28a267f",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        12,
+        "trash_detection__valid__000085_JPG.rf.e52f2fa27b2c28d66a5300c297d0f7cd.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0131e2638400a7ec",
+      "sha": "a4e773f29efeed630fc263bcb431d88d0717ab90bc2160102ef42f1f2f01884a",
+      "pixels": "5763cfe7c9c874f89a18918d8222fea5f2391c9073c98b66ce8a76696eba1cce",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        13,
+        "trash_detection__train__000076_JPG.rf.afaf5a3cb45a4d737f6d4ae3ad894d1a.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "01b6b370e77c7af9",
+      "sha": "6e77459549db4540603fce3747329d655429a8bdb79ffc702fae47346aaaa8e2",
+      "pixels": "cab6c0ef93e42e3f69906f903126757e3779e569350743df6893b6c84b418c58",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "school_lunch__023568002_jpg.rf.d093a046310c756891c85745adea9adc.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "01ecc81f6341e902",
+      "sha": "619ced9f700a190261584dacc3cd6c933093ceea248d1f943f905a27105b8ce2",
+      "pixels": "a7ee45380b03d4d406cb5b1e2342e6895f586669af9913f715a27ce72f76f70b",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "school_lunch__022271000_jpg.rf.d6c5c6a416c6b473c45ff6cac25958a6.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "022b8814de359348",
+      "sha": "f52b5c4ce4b126469c43f8e76468ee975ed776115d63793a404697a6d3817cfb",
+      "pixels": "03ab3bb39fd9e9798769e5f5e6de33141558d46d10059b5df0ac46f27013a010",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        19,
+        "trash_detection__train__000087_jpg.rf.77221350fa41f94d0bafc9d7d5b83789.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "024efea7e56e6a78",
+      "sha": "1849bb62013de679cce5f0f8c47e776dc92e9ab7b427b0452d73ae5fd04233d1",
+      "pixels": "618fbb24385d16c0a372e97a81580541490755549ff323f1f9bb14c80bfbb63c",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__train__lvis_000000095062.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0257963296ac6770",
+      "sha": "c78ff63cd6797911cb173bd54cb4a795f2ce036856efdf8377020296b1f46bc5",
+      "pixels": "c350d5ca355af783ec0d8a63abae8301470e992189620f7939193a01ae71dbcd",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        13,
+        "school_lunch__010199000_jpg.rf.f27ba0e74fa976f2d4253300eb31bc8e.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "025d1d913fbba147",
+      "sha": "6be370551fb0b6da38763ae69fb7e3b4255bdd9c8674923543cedb60241893bf",
+      "pixels": "6d05a4c358a65ce6e5fafa6fa50297e5738a7bb89edc46832e51d9aa44f1ab45",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        16,
+        "school_lunch__020465002_jpg.rf.6317625bb2abb452a29c4d1ac079e736.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "02760ec937c1eb02",
+      "sha": "3980835d732c9121dcac159a376e1f87c76dea8621584a03342103550bd5658b",
+      "pixels": "78ceb37209c1c18aceb86e3543b7b68c87af8c720d3ce5d3fd1cbf3573e7d742",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        14,
+        "school_lunch__023310002_jpg.rf.01c6546bc4113c363db0e797c0a5a45f.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "027d73be44466a90",
+      "sha": "417d081fd139e8247766d69262e09244060ecc359c21203e670cd0db7a829736",
+      "pixels": "7f6268ff852c0e3a8fc6cab895069e233b290ee63d8a7d5692149ddbb1b1f026",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "school_lunch__021060001_jpg.rf.d39772229afbbfe1af101965d664f40c.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "0282aad53553b7ae",
+      "sha": "6029afb1d94367c1632f712fae101e4497d789a23fefc1039845699c696567fe",
+      "pixels": "298941b032f8d71664124b66ec4fb205025d449ce45076bde9b4b6f93f517858",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        17,
+        "plate__train__lvis_000000041279.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    },
+    {
+      "id": "028ee005563ec20d",
+      "sha": "d1c0861720b184def655f7555f90c086f14218cfe645fe6930bfa1f0e0262949",
+      "pixels": "fd9e69ca34c4a09279f42c47ee29117f0195c88f848c92736594c55229c4809c",
+      "exact_duplicate": false,
+      "nearest_validation_dhash": [
+        10,
+        "trash_detection__train__000021_jpg.rf.69beb13282d945c74658eb2329e95417.jpg"
+      ],
+      "validation_feature_matches": [],
+      "hold": false
+    }
+  ],
+  "limitations": "Heuristic capture/near-duplicate screen; not proof of complete source independence."
+}

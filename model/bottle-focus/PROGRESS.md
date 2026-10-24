@@ -293,3 +293,13 @@ V31 prepares25 independently AI-reviewed photos/34 source boxes, giving
 1139full-image training photos/504boxes/2056exposures. BalancedV19 start;
 freeze11 preserves full backbone0–10 while neck/head train at1e-5, BNfixed.
 237 project tests and11focused checks pass. No new accuracy gain claimed.
+
+## Full training paused at user request (2026-10-24)
+
+V31 completed3epochs and fresh saved checks regressed: selected82.3376%/
+59.7363%,latest78.0905%/54.9265%. Preserved optimizer and archived trial.
+Protected balanced baseline remains84.0711%/62.0606%; target90%/64% unmet.
+V33 prepared579photos/538boxes/2148scheduled exposures, with166 newly
+AI-reviewed background photos and23new Open Images photos/34source boxes.
+237project/11focused checks pass; frozen246validation images/labels and
+protected checkpoints unchanged. V33/full training has not started.

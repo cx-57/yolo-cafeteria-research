@@ -1,0 +1,12 @@
+{
+  "validation_images": 246,
+  "bottle_boxes": 67,
+  "all_frozen_image_and_label_hashes_unchanged": true,
+  "frozen_manifest_sha": "0a6ba6bff3de2c104e648a49f5b216d5bb34a1757690a05cafd611ea9cd7e35f",
+  "protected_checkpoint_shas": {
+    "model/bottle-focus/verified-incumbent/bottle.pt": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+    "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518"
+  },
+  "full_training_started": false,
+  "pause_requested_by_user": true
+}
