@@ -1,0 +1,29 @@
+[
+  {
+    "id": "08408a32b8dd95b1",
+    "image_sha": "bc8b5fec7ff7ba028c2f687cd2830325d768ca2014e5950ec223ac7bda60e837",
+    "training_name": "dry_wet_waste__valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266.jpg",
+    "training_sha": "74e054e8759887c38f2ef85c9b2ba30546b3f518bc0a599e6192966cac762d97",
+    "resolution": "visually_different_photos",
+    "evidence": "Clear upright Ghadeer bottle vs sideways crushed green bottle; root and independent second AI verified different objects/photos.",
+    "scope": "Resolve dHash-only collisions before any monitor accuracy measurement; no exact or SIFT match"
+  },
+  {
+    "id": "004679845e543c06",
+    "image_sha": "94f5e34a8617a8ff2ff0a7427cda8d14e6e61e3a7363a676f7b47b4094ddb1e7",
+    "training_name": "school_lunch__021012000_jpg.rf.d6c4051de1450a44efcd91b52bc83aaa.jpg",
+    "training_sha": "bc5fbdedee7658d8ee2dbd37c19a14c2151bf2ec8ee5d47db231d7bded49d188",
+    "resolution": "visually_different_photos",
+    "evidence": "Glass Rioja bottle close-up vs school-lunch food tray; visually different photos.",
+    "scope": "Resolve dHash-only collisions before any monitor accuracy measurement; no exact or SIFT match"
+  },
+  {
+    "id": "004679845e543c06",
+    "image_sha": "94f5e34a8617a8ff2ff0a7427cda8d14e6e61e3a7363a676f7b47b4094ddb1e7",
+    "training_name": "school_lunch__021027001_jpg.rf.a5b0bdb133356c1f1febd9fd2d0764b7.jpg",
+    "training_sha": "a63c82bd5de7adbbad65b0dd606546aa97cb36abbb5ab19565f2378c4eefb397",
+    "resolution": "visually_different_photos",
+    "evidence": "Glass Rioja bottle close-up vs school-lunch food tray; visually different photos.",
+    "scope": "Resolve dHash-only collisions before any monitor accuracy measurement; no exact or SIFT match"
+  }
+]

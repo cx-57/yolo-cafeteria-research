@@ -303,3 +303,14 @@ V33 prepared579photos/538boxes/2148scheduled exposures, with166 newly
 AI-reviewed background photos and23new Open Images photos/34source boxes.
 237project/11focused checks pass; frozen246validation images/labels and
 protected checkpoints unchanged. V33/full training has not started.
+
+## Bounded monitor campaign resumed (2026-10-24)
+
+User resumed bottle experiments toward90% AP50 without overfitting; full
+training remains paused. V34 trains567photos/521boxes/2100exposures and
+uses a separate36photo/17box continuation monitor for epoch selection.
+Fixed9epoch ceiling, head-only/BNfixed. Predeclared monitor criterion, then
+one distinct final246/67 benchmark candidate. Source aliases/capturegroups
+removed, current+historical overlap screens reviewed.237project/10focused
+checks pass. A reviewed interrupted-report recovery P2 was fixed. Native
+monitor scores are never benchmark success. Trial launched; no gain yet.

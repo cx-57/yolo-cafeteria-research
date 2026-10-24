@@ -1,0 +1,491 @@
+{
+  "method": "APFS copy-on-write clones; independent inodes, bytes retained, no hard links",
+  "before_free_bytes": 3572584448,
+  "after_free_bytes": 5856894976,
+  "offloaded_or_unavailable_files_skipped": 0,
+  "files": [
+    {
+      "path": "model/bottle-focus/context-balance-v20/best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/best_bottle.pt",
+      "sha256": "cdf9333bf999ee6863cdde52083106b613922dc70953bf6d7ada51d8dc36cb46",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/context-balance-v20/phase12-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/best_bottle.pt",
+      "sha256": "cdf9333bf999ee6863cdde52083106b613922dc70953bf6d7ada51d8dc36cb46",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/context-balance-v20/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/best_bottle.pt",
+      "sha256": "cdf9333bf999ee6863cdde52083106b613922dc70953bf6d7ada51d8dc36cb46",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/context-head-soup-v23/source-epoch3.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/best_bottle.pt",
+      "sha256": "cdf9333bf999ee6863cdde52083106b613922dc70953bf6d7ada51d8dc36cb46",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v7/best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v7/initial.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v7/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v8/initial.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/gentle-feature-adaptation-v6/best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/gentle-feature-adaptation-v6/phase13-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/gentle-feature-adaptation-v6/phase8-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/scope-clean-feature-v14/best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/scope-clean-feature-v14/initial.pt",
+      "shared_source": "model/bottle-focus/context-balance-v20/initial.pt",
+      "sha256": "edab60c58fb8a1e941557b4bd84955a5208b75b476e0a587854d3e679e7d1c63",
+      "bytes": 49177257,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-expansion-v28/best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "bytes": 19183545,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-expansion-v28/initial.pt",
+      "shared_source": "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "bytes": 19183545,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-expansion-v28/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "bytes": 19183545,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/verified-incumbent/bottle.pt",
+      "shared_source": "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "bytes": 19183545,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/warm-feature-v29/best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "bytes": 19183545,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/warm-feature-v29/initial.pt",
+      "shared_source": "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "bytes": 19183545,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/context-resampling-v5/phase23-averaged-bottle.pt",
+      "shared_source": "model/bottle-focus/context-resampling-v5/averaged-bottle.pt",
+      "sha256": "54085228a8f8e1e95fb173db9834a76c50344d675b3778aa73e316eccc383519",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/context-resampling-v5/phase23-best_bottle.pt",
+      "shared_source": "model/bottle-focus/context-resampling-v5/best_bottle.pt",
+      "sha256": "2598452b187af36fee6beca460561a0de8d77ab9d46fdb4391153c9bf101d3d7",
+      "bytes": 24160773,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/gentle-feature-adaptation-v6/initial.pt",
+      "shared_source": "model/bottle-focus/context-resampling-v5/best_bottle.pt",
+      "sha256": "2598452b187af36fee6beca460561a0de8d77ab9d46fdb4391153c9bf101d3d7",
+      "bytes": 24160773,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/context-resampling-v5/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/context-resampling-v5/native-best-phase8.pt",
+      "sha256": "40e43253a83de1879310c54394a4ce60dfb8a736dd771e5a9cc8897b7d3e7387",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/expanded-context-v13/initial.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/expanded-context-v13/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/gentle-feature-polish-v12/best_bottle.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/gentle-feature-polish-v12/initial.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/hard-negative-polish-v11/best_bottle.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/hard-negative-polish-v11/initial.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/hard-negative-polish-v11/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/head-average-v9/averaged-bottle.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_bottle.pt",
+      "sha256": "42079f5ac4167c9c1f42627df4f6b175943b3ebff102d5ba342af48958f73571",
+      "bytes": 19183609,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/expanded-context-v13/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/expanded-context-v13/best_trained_bottle.pt",
+      "sha256": "47fe595669c5887f10933a2124a95d4e147bf6daf85cf2252bf29ca393c4d441",
+      "bytes": 24158917,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v8/best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/external-data-v8/best_bottle.pt",
+      "sha256": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v8/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/external-data-v8/best_bottle.pt",
+      "sha256": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/external-data-v8/phase8-best_bottle.pt",
+      "shared_source": "model/bottle-focus/external-data-v8/best_bottle.pt",
+      "sha256": "082bf8188cac9449d9d20cdad52cefd57c6d1125992dcc860d0428ab5a47b0e2",
+      "bytes": 24158661,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/joint-metric-v30/best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/best_localization_bottle.pt",
+      "sha256": "4ac490ae8c50c712ec27df5acf963ec48abb9edca623080b032ca9c49e97a6f9",
+      "bytes": 24158405,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/joint-metric-v30/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/best_localization_bottle.pt",
+      "sha256": "4ac490ae8c50c712ec27df5acf963ec48abb9edca623080b032ca9c49e97a6f9",
+      "bytes": 24158405,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/joint-metric-v30/verified-4ac490ae8c50c712ec27df5acf963ec48abb9edca623080b032ca9c49e97a6f9.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/best_localization_bottle.pt",
+      "sha256": "4ac490ae8c50c712ec27df5acf963ec48abb9edca623080b032ca9c49e97a6f9",
+      "bytes": 24158405,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/joint-metric-v30/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/initial.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/initial.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/initial.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/initial.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/initial.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/joint-metric-v30/verified-8d0bed8201a46fa91d2008020548553dbc3971f2a326754cecd7e85f1fc731d1.pt",
+      "shared_source": "model/bottle-focus/joint-metric-v30/last_resume.pt",
+      "sha256": "8d0bed8201a46fa91d2008020548553dbc3971f2a326754cecd7e85f1fc731d1",
+      "bytes": 24158981,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-feature-v25/initial.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_bottle.pt",
+      "sha256": "e01fc63b061fb002f44dd17210ba63d334188a27e000da2b72252c9c0db18934",
+      "bytes": 49051929,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-feature-v25/phase2-best_bottle.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_bottle.pt",
+      "sha256": "e01fc63b061fb002f44dd17210ba63d334188a27e000da2b72252c9c0db18934",
+      "bytes": 49051929,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-head-v24/best_bottle.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_bottle.pt",
+      "sha256": "e01fc63b061fb002f44dd17210ba63d334188a27e000da2b72252c9c0db18934",
+      "bytes": 49051929,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-head-v24/best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_bottle.pt",
+      "sha256": "e01fc63b061fb002f44dd17210ba63d334188a27e000da2b72252c9c0db18934",
+      "bytes": 49051929,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-head-v24/phase6-best_bottle.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_bottle.pt",
+      "sha256": "e01fc63b061fb002f44dd17210ba63d334188a27e000da2b72252c9c0db18934",
+      "bytes": 49051929,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-head-v24/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_bottle.pt",
+      "sha256": "e01fc63b061fb002f44dd17210ba63d334188a27e000da2b72252c9c0db18934",
+      "bytes": 49051929,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-feature-v25/last_resume.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_trained_bottle.pt",
+      "sha256": "534412363619c7e4b686f04c167401773a510849b01d6f8483c988cb8740058f",
+      "bytes": 104847599,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/medium-feature-v25/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/medium-feature-v25/best_trained_bottle.pt",
+      "sha256": "534412363619c7e4b686f04c167401773a510849b01d6f8483c988cb8740058f",
+      "bytes": 104847599,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/paper-recipe-s-v27/best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/paper-recipe-s-v27/best_bottle.pt",
+      "sha256": "aabf5f18682bcd1fbb638dcc0e7068ad2b0eb8fc52c7c7cafe877b359c27c3b8",
+      "bytes": 75966115,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/paper-recipe-s-v27/phase20-best_bottle.pt",
+      "shared_source": "model/bottle-focus/paper-recipe-s-v27/best_bottle.pt",
+      "sha256": "aabf5f18682bcd1fbb638dcc0e7068ad2b0eb8fc52c7c7cafe877b359c27c3b8",
+      "bytes": 75966115,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-s-v2/initial.pt",
+      "shared_source": "model/bottle-focus/paper-recipe-s-v27/initial.pt",
+      "sha256": "b28f055085711a1e264f5420aa90442fc57f6384535cbb0252c75ee38a155cb8",
+      "bytes": 19141201,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-s-v3/best_bottle.pt",
+      "shared_source": "model/bottle-focus/plastic-specialist-s-v2/best_bottle.pt",
+      "sha256": "07a08ff5c0df81834283ab45d837fa3345af3f6fd1cca6a8466c13ccce24fade",
+      "bytes": 24158533,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-s-v3/initial.pt",
+      "shared_source": "model/bottle-focus/plastic-specialist-s-v2/best_bottle.pt",
+      "sha256": "07a08ff5c0df81834283ab45d837fa3345af3f6fd1cca6a8466c13ccce24fade",
+      "bytes": 24158533,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-s-v3/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/plastic-specialist-s-v3/last_resume.pt",
+      "sha256": "57d48d4cec9641ab4e93461f6a8e7959064dc2aa60f3769f4ab998962d1cc649",
+      "bytes": 49176681,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-v1/last_resume.pt",
+      "shared_source": "model/bottle-focus/plastic-specialist-v1/best_bottle.pt",
+      "sha256": "a07161a96e9654cbcdfbf6199a7960f80374dbee8e4b741f072652a8f081bfb7",
+      "bytes": 133351958,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-v1/train-recovered/weights/best.pt",
+      "shared_source": "model/bottle-focus/plastic-specialist-v1/best_bottle.pt",
+      "sha256": "a07161a96e9654cbcdfbf6199a7960f80374dbee8e4b741f072652a8f081bfb7",
+      "bytes": 133351958,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/plastic-specialist-v1/train-recovered/weights/last.pt",
+      "shared_source": "model/bottle-focus/plastic-specialist-v1/best_bottle.pt",
+      "sha256": "a07161a96e9654cbcdfbf6199a7960f80374dbee8e4b741f072652a8f081bfb7",
+      "bytes": 133351958,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-expansion-v28/phase6-best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/reviewed-expansion-v28/best_trained_bottle.pt",
+      "sha256": "7b26bf571f26aa4cdbbf88aaad61af606bcc8dc4b15209a4851011b8b0e33b6e",
+      "bytes": 24158405,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-expansion-v28/train/weights/last.pt",
+      "shared_source": "model/bottle-focus/reviewed-expansion-v28/last_resume.pt",
+      "sha256": "971a121135eb57089af30100afa9660491cd58a9396efda9e99cca824e085131",
+      "bytes": 24159045,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/best_trained_bottle.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-v31/best_localization_bottle.pt",
+      "sha256": "501e2d6633f0e0fb9ab0e137e04e758c24c5b8fa6175cb95c57346efb407b12f",
+      "bytes": 43213287,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-v31/best_localization_bottle.pt",
+      "sha256": "501e2d6633f0e0fb9ab0e137e04e758c24c5b8fa6175cb95c57346efb407b12f",
+      "bytes": 43213287,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/verified-501e2d6633f0e0fb9ab0e137e04e758c24c5b8fa6175cb95c57346efb407b12f.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-v31/best_localization_bottle.pt",
+      "sha256": "501e2d6633f0e0fb9ab0e137e04e758c24c5b8fa6175cb95c57346efb407b12f",
+      "bytes": 43213287,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/train/weights/last.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-v31/last_resume.pt",
+      "sha256": "49649761437c76892d1afe5e14ac0e8c8b0cb4992fe14fb8ef6657a1e2314e62",
+      "bytes": 43213543,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/reviewed-neck-v31/verified-49649761437c76892d1afe5e14ac0e8c8b0cb4992fe14fb8ef6657a1e2314e62.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-v31/last_resume.pt",
+      "sha256": "49649761437c76892d1afe5e14ac0e8c8b0cb4992fe14fb8ef6657a1e2314e62",
+      "bytes": 43213543,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/scope-clean-feature-v14/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/scope-clean-feature-v14/best_trained_bottle.pt",
+      "sha256": "a42a8b85446460b388dc0cf8e09c13210c352c7acd08bc0122ea3a2adacbb6f5",
+      "bytes": 49176425,
+      "independent_inode": true
+    },
+    {
+      "path": "model/bottle-focus/warm-feature-v29/phase6-trained-bottle.pt",
+      "shared_source": "model/bottle-focus/warm-feature-v29/best_trained_bottle.pt",
+      "sha256": "e07fab6d6e1fbbbc4a70d90eb08528fca2c03b39590f566b6c804f2d019e4d23",
+      "bytes": 75964387,
+      "independent_inode": true
+    }
+  ]
+}
