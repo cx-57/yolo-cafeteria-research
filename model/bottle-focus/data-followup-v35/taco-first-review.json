@@ -1,0 +1,490 @@
+{
+  "status": "staged_only_no_training_admission",
+  "reviewer": "root_AI_whole_photo_and_target_crop_review",
+  "accepted_indices_pending_second_review_metadata_and_overlap": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    43,
+    44,
+    45,
+    46,
+    49,
+    50,
+    52,
+    54,
+    55,
+    58,
+    59
+  ],
+  "holds": {
+    "2": "Only flattened bottom fragment; target scope uncertain",
+    "11": "Flattened fragment lacks clear complete bottle appearance",
+    "12": "Glass-like smoothie bottle; whole photo scope hold",
+    "13": "Square jug/container uncertain beverage scope",
+    "23": "Very small picnic bottles; exhaustive target annotation uncertain",
+    "42": "Small compressed fragment material/shape uncertain",
+    "47": "Mixed glass spirits and PET annotation; whole photo hold",
+    "51": "Second dark annotated target and whole-photo scope uncertain",
+    "53": "Visually same capture/object arrangement as index18; retain only one pending duplicate screen",
+    "56": "Additional unannotated white container near boxed bottles uncertain scope",
+    "5": "geometry_or_orientation_hold",
+    "7": "geometry_or_orientation_hold",
+    "30": "geometry_or_orientation_hold",
+    "48": "geometry_or_orientation_hold",
+    "57": "geometry_or_orientation_hold"
+  },
+  "records": [
+    {
+      "index": 0,
+      "id": "taco_1147",
+      "sha": "163d05890c151dbfac0fbd6ba4f5517719496a6a99582997c8c6b7deb1fb7884",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 1,
+      "id": "taco_1112",
+      "sha": "ded7655323cc174c10cc228cde7f7d955b8e3edceaac48ae26ffcf0204ac4ea5",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 2,
+      "id": "taco_657",
+      "sha": "e8935ed8703a619b6e9f048a4f58de424a99b9e339271379ebfb298f39d69b1d",
+      "decision": "hold",
+      "note": "Only flattened bottom fragment; target scope uncertain"
+    },
+    {
+      "index": 3,
+      "id": "taco_391",
+      "sha": "ead5de139cba9f5f2be8de18ccaa1530dc550ce2130d127bfaf66e13a4a85ca0",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 4,
+      "id": "taco_1096",
+      "sha": "04fee5d30ef450aa8a5d0bb9426e04544903b1168d0efafab5830179271a3409",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 5,
+      "id": "taco_300",
+      "sha": null,
+      "decision": "hold",
+      "note": "geometry_or_orientation_hold"
+    },
+    {
+      "index": 6,
+      "id": "taco_75",
+      "sha": "7944d6089d7eb32473bf56061c97d3910299ed26fa03bbdf7431fe5b80f7143b",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 7,
+      "id": "taco_339",
+      "sha": null,
+      "decision": "hold",
+      "note": "geometry_or_orientation_hold"
+    },
+    {
+      "index": 8,
+      "id": "taco_1239",
+      "sha": "1d67d2a263478db176ae15c9e18346a2e456aa2ac197c1428f06084344b114bf",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 9,
+      "id": "taco_28",
+      "sha": "ca284c2d0b0559d479b5c63ce9cb3636dd4e6a1c3329fde095bb1b96678e59f6",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 10,
+      "id": "taco_113",
+      "sha": "5681b5a981c665a6ec1db45e6dbfeb0d9677c63cdf68042bed6e1dcca05f4167",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 11,
+      "id": "taco_102",
+      "sha": "6fe991d17d3e4f9314003668e06d4f8eab424b0e4632f53e116062191c53010a",
+      "decision": "hold",
+      "note": "Flattened fragment lacks clear complete bottle appearance"
+    },
+    {
+      "index": 12,
+      "id": "taco_12",
+      "sha": "cfc4f87f8141d912b21a12daee7e67eeee0025ae0c605c5d4c5a923f8181f936",
+      "decision": "hold",
+      "note": "Glass-like smoothie bottle; whole photo scope hold"
+    },
+    {
+      "index": 13,
+      "id": "taco_1341",
+      "sha": "8ae09327de53a4074b15302be96bb6e59f220b6c67a71461c2669f6483fd962d",
+      "decision": "hold",
+      "note": "Square jug/container uncertain beverage scope"
+    },
+    {
+      "index": 14,
+      "id": "taco_7",
+      "sha": "e6eca751ba1f66f6e1faabe46543d02ef31930ebb25103a03ad4dfa91b5c2894",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 15,
+      "id": "taco_1475",
+      "sha": "9e7b08d0fb9d2858b515132a4574154f002ebca2e23139bea0d96b93ee498911",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 16,
+      "id": "taco_1106",
+      "sha": "7f0a0454795666f13bc9f73a6b9065a9ad3aae754417cf9a263cf2423c2dac33",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 17,
+      "id": "taco_1405",
+      "sha": "0f566ae8d5c586bc99f93477097d4270dfcffa880c3e0a09877b58a7a17a7edc",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 18,
+      "id": "taco_1157",
+      "sha": "92b5c21397d05afbc21a2faa628f4d2ced48a8ec7f4a3fec16b94a20038f8526",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 19,
+      "id": "taco_111",
+      "sha": "87e66ddfd6b85246f6e600655d4bdfb988a1840644ec3ebb62db0b713b22fafb",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 20,
+      "id": "taco_1492",
+      "sha": "0be587210a0d575eedff184e442476e2f8c803532d3c73009da61e9f1c010417",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 21,
+      "id": "taco_1025",
+      "sha": "0215d0e6fc0b78df836d0530fd49fe36d5a989acda89a5ab393df19b6260b09a",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 22,
+      "id": "taco_1160",
+      "sha": "0f1d46a8580c814844783af544988eb744c774c18127966061d165e84036a5c0",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 23,
+      "id": "taco_176",
+      "sha": "79de0da603abd25937ac5e0a3439c712a7361991d7e96f79f50abcda5e71a3ea",
+      "decision": "hold",
+      "note": "Very small picnic bottles; exhaustive target annotation uncertain"
+    },
+    {
+      "index": 24,
+      "id": "taco_1345",
+      "sha": "6bfcf1c574e7790f130da49aba6db8dd589a56aee2aee9d42fb0d97cd03c92ef",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 25,
+      "id": "taco_1376",
+      "sha": "fa5a43b681d8eac61e4bbd60d2c2ed09f4fcd5de3ccd2aca929ba83833cb4a64",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 26,
+      "id": "taco_1045",
+      "sha": "3c736b41040245de0ea5c38c1b1f151c2d9ec72268aac3894018de1cc0b471e7",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 27,
+      "id": "taco_724",
+      "sha": "fc9f51829295d43366c3611859581a2aa87756bb092ed541cc7abdb8b9867a78",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 28,
+      "id": "taco_849",
+      "sha": "382e2e3873321bc1e8d62ce20572d9f7790376b0971edaf71d96bf5a878c82b0",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 29,
+      "id": "taco_198",
+      "sha": "06c177bd6c6df157984693ed49450f0fc3ec73e15acd74f6fd20c0ab39947000",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 30,
+      "id": "taco_348",
+      "sha": null,
+      "decision": "hold",
+      "note": "geometry_or_orientation_hold"
+    },
+    {
+      "index": 31,
+      "id": "taco_1227",
+      "sha": "62659b8a72bcc454a007bfdd71bd171aa1b2d7538258247eab06c6e2d2f35fe6",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 32,
+      "id": "taco_1469",
+      "sha": "d4b01724feb06bfe8d2138022d4b8c1b7a50ef41b3c8ce1bdd9cb75e489b549a",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 33,
+      "id": "taco_1268",
+      "sha": "1b48f25ee5b2fd7e1833b52184c70cddefa2c1f07f2e6b126ff954a6689e171b",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 34,
+      "id": "taco_717",
+      "sha": "9ed273545c722cae7e01154229e3a2ba3c158155183caba3fc4d0e84b3d45e22",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 35,
+      "id": "taco_1143",
+      "sha": "74d049e287d8c5e30769fa3424f4f37a3a2d68f26d6f6b52dadd5b018b83d0bf",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 36,
+      "id": "taco_1123",
+      "sha": "cd0500c322f246c46dd0372fdbd9ed3230a7bf58e9411bbae19e7e68824dfc76",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 37,
+      "id": "taco_860",
+      "sha": "65ca6294a339c281d10f15c9c41d8220170c6aabe681391a710043acd80a0c0a",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 38,
+      "id": "taco_1234",
+      "sha": "5b760bae32cfc278be38c45bc32e3c2e96691b2b5183869afb686ce5964b0088",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 39,
+      "id": "taco_148",
+      "sha": "374740bdaaa5392ea6dec8dcf62d72b0490848bb6d4d56bd5218ee80c9e4e768",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 40,
+      "id": "taco_394",
+      "sha": "4f3f220370b04c1f32d034b21c9d33b246c901467b916c1fa551c71b67266fe2",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 41,
+      "id": "taco_974",
+      "sha": "78d6f11c7ba828b1b2da538a8dd3506bb9e6884394383675d1c04366c0e21db0",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 42,
+      "id": "taco_1080",
+      "sha": "028e07535f2eaeddcceaf2e1e8065d10bfde4c9b247108402f4496de4caaf7a4",
+      "decision": "hold",
+      "note": "Small compressed fragment material/shape uncertain"
+    },
+    {
+      "index": 43,
+      "id": "taco_1145",
+      "sha": "4ea1af150c7af8493673c26c7b4cfba6ef68d74153c768b3cdd3e28c4d3771e9",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 44,
+      "id": "taco_443",
+      "sha": "095880050b05c63c2f8054513c6cf5b85859babc162c7d0b348910fe250715e1",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 45,
+      "id": "taco_1292",
+      "sha": "e701ac4a74743f1d9446968b798e0b877b023a97efe0cffcc13012ad6d213e37",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 46,
+      "id": "taco_1250",
+      "sha": "2e604ef4fc648262bbd15607e2156102821bc44a38781ac63184c16f2a4b5a99",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 47,
+      "id": "taco_1159",
+      "sha": "35ecfd4a74c3aa2a4c0fcaaf4462fc3e88a7b0658cd28bbd38d56dadfcbf0307",
+      "decision": "hold",
+      "note": "Mixed glass spirits and PET annotation; whole photo hold"
+    },
+    {
+      "index": 48,
+      "id": "taco_320",
+      "sha": null,
+      "decision": "hold",
+      "note": "geometry_or_orientation_hold"
+    },
+    {
+      "index": 49,
+      "id": "taco_276",
+      "sha": "8858538a9596442866130d56f850240effc290063065510be44934cee17c8964",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 50,
+      "id": "taco_875",
+      "sha": "4d27c064fbd440411802c4025d13d5f179c8ec07a797941a5ee1006b6746b49d",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 51,
+      "id": "taco_3",
+      "sha": "4772533d6482cbfcbd561dd7097d45cf60627288114b45fea03fee6af504c584",
+      "decision": "hold",
+      "note": "Second dark annotated target and whole-photo scope uncertain"
+    },
+    {
+      "index": 52,
+      "id": "taco_526",
+      "sha": "d9b6a5c038f21047b7d049e3e7066cdec3779b44b4f9de4f455e8b34f9712961",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 53,
+      "id": "taco_1131",
+      "sha": "23c9571d4ce45db32caf4b29297745dff83d11b34efe1dff39a4bc4bf9c676a2",
+      "decision": "hold",
+      "note": "Visually same capture/object arrangement as index18; retain only one pending duplicate screen"
+    },
+    {
+      "index": 54,
+      "id": "taco_291",
+      "sha": "af3bc3b2e33021f5e8cdc1811a6d1cd393faa453be7c4f013b722b81f4a122a7",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 55,
+      "id": "taco_2",
+      "sha": "c4cc0ff915b77363cd067dc094987e6832f046a555daa7c3bfef9d70db6e0d22",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 56,
+      "id": "taco_866",
+      "sha": "a24962c983df01e853f9ffe884e6b852c22412c40510125ecb9196e68f3af3d2",
+      "decision": "hold",
+      "note": "Additional unannotated white container near boxed bottles uncertain scope"
+    },
+    {
+      "index": 57,
+      "id": "taco_295",
+      "sha": null,
+      "decision": "hold",
+      "note": "geometry_or_orientation_hold"
+    },
+    {
+      "index": 58,
+      "id": "taco_729",
+      "sha": "0faa4085075e7e8d3d5a15a2bedf7b07411ab0a2d6bcd4a877cf66aeebc8650d",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    },
+    {
+      "index": 59,
+      "id": "taco_1333",
+      "sha": "d7a2ac8731604f2d71b0d9f684d97b66e7e89388aa4f3a63c428b704a6c31a44",
+      "decision": "candidate",
+      "note": "Whole-photo context and source target boxes reviewed; appears plastic beverage bottle, material not certified"
+    }
+  ]
+}

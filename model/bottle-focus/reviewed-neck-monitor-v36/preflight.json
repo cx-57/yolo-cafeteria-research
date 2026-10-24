@@ -1,0 +1,28 @@
+{
+  "verified_at": "2026-10-24T20:35:15.795348+00:00",
+  "project_tests": 237,
+  "focused_tests": 16,
+  "failures": 0,
+  "skipped": 0,
+  "project_log_sha": "f0e34966adeb4cf909557f07051831d99874ba2e87fd29e594c8892c6eee3f0d",
+  "focused_log_sha": "20d17b561f8a3c83bb7081eba126eab0d11dbf7d3541c4769949f7a1a7bbb713",
+  "dataset_sha": "468591c4582e36c0881ab94986cd409f7e429b9e3ac0d71856bc460fecd33d4b",
+  "declaration_sha": "1fc520bb0411ccedc765f8163aacb37343f5a00ccaec612a3130c59efb49b31b",
+  "frozen246_image_and_label_hashes_unchanged": true,
+  "protected_checkpoint_hashes": {
+    "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+    "model/bottle-focus/context-head-soup-v23/alpha0.5-bottle.pt": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+    "model/bottle-focus/verified-incumbent/bottle.pt": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+    "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/weights/bottle-best-verified.pt": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289"
+  },
+  "training_photos": 603,
+  "training_boxes": 561,
+  "training_exposures": 2244,
+  "monitor_images": 36,
+  "monitor_boxes": 17,
+  "monitor_sources_removed_from_training": true,
+  "monitor_is_not_independent_NHS_test": true,
+  "full_training_remains_paused": true,
+  "free_disk_bytes": 2452574208,
+  "review": "Independent V36 data/controller review found no concrete P1/P2; review identity SHAs additionally joined against original first-review records"
+}

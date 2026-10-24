@@ -1,0 +1,29 @@
+{
+  "reviewer": "review_readme_workflow_AI",
+  "status": "staged_only_pending_overlap",
+  "accepted_indices": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12,
+    14,
+    16,
+    17,
+    20,
+    22,
+    23,
+    25,
+    28
+  ],
+  "additional_holds": {
+    "27": "Source bbox excludes visible cap/neck; bbox top approximately y546 while visible cap starts approximately y507 in 768px image. Whole-photo hold; do not edit source box."
+  },
+  "photos": 17,
+  "boxes": 26,
+  "limitations": "AI visual review only; material not certified; overlap screening and admission validation pending; active V34 unchanged"
+}

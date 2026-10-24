@@ -1,0 +1,21 @@
+{
+  "reviewer": "review_readme_workflow_AI",
+  "accepted_indices": [
+    9,
+    17,
+    31,
+    43,
+    44,
+    46,
+    49,
+    50,
+    54,
+    56
+  ],
+  "holds": [
+    10,
+    30
+  ],
+  "status": "staged_only_pending_overlap",
+  "note": "Independent whole-photo visual review found no additional holds. No clear eligible disposable plastic drink bottle visible; material not certified."
+}

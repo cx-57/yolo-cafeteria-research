@@ -41,3 +41,19 @@ requires improvement without either metric regressing.237project and10
 focused checks passed locally, including actual no-inference recovery.
 Independent code review found the restartP2, fixed with RED→GREEN tests;
 re-review found no new concrete P1/P2. No new benchmark gain is claimed.
+
+Completed all9epochs. Fresh monitor initialization61.798470% /51.383497%;
+epoch7(native AP50/AP95 winner)80.084152% /63.732109%; latest9
+75.806109% /61.557233%. The predeclared sum selected epoch7,
+SHA641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.
+One new fixed-benchmark measurement gave82.432136% /60.044393%.
+Both are below the protected balanced84.071068% /62.060566%, so no
+promotion occurred.90/64 was not reached. Monitor progress did not transfer
+to the fixed benchmark; no generalization or absence-of-overfitting claim.
+
+Training classification loss fell from0.51352 to0.45249 while native monitor
+classification loss rose from8.93822 to12.4179; monitor mAP fluctuated.
+Training stopped at the declared limit rather than extending for a desired
+number. Preserve original files and the full completed declaration/choice.
+Full training remains paused. Any next bounded campaign must use a meaningful
+data/recipe change and a stronger monitor gate before another benchmark use.
