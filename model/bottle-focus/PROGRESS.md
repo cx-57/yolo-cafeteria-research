@@ -284,3 +284,12 @@ Recovery fresh phase3 checks: selected epoch1 =83.8031% /61.4286%;
 latest epoch3 =82.5968% /60.2242%. No gain over84.0711% /62.0606%.
 The controller reconciled phase3 with stale count1 and resumed its next
 three-epoch phase; the exact joint target remains unmet.
+
+## Continued bottle work, README workflow set aside
+
+V30 completed6epochs with no gain. Fresh selected83.8031%/61.4286%,
+latest81.7635%/59.0742%; optimizer retained and phase archived.
+V31 prepares25 independently AI-reviewed photos/34 source boxes, giving
+1139full-image training photos/504boxes/2056exposures. BalancedV19 start;
+freeze11 preserves full backbone0–10 while neck/head train at1e-5, BNfixed.
+237 project tests and11focused checks pass. No new accuracy gain claimed.

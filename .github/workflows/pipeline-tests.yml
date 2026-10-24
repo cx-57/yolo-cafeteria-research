@@ -19,6 +19,10 @@ jobs:
         run: python -m pip install Pillow PyYAML
       - name: Run offline synthetic pipeline tests
         run: python -m unittest discover -s tests -v
+      - name: Test bottle admission and saved-metric lifecycle
+        run: |
+          python -m unittest discover -s model/bottle-focus/reviewed-neck-v31 -p test_admission.py -v
+          python -m unittest discover -s model/bottle-focus/reviewed-neck-v31 -p test_policy.py -v
       - name: Build and verify the README plate-bottle dataset
         run: |
           python scripts/focus_two_class.py build
@@ -470,6 +474,8 @@ jobs:
           python -m pip install ultralytics==8.4.175 PyYAML Pillow
       - name: Run all pipeline and ML unit tests with installed dependencies
         run: python -m unittest discover -s tests -v
+      - name: Test bottle backbone, neck and BatchNorm guards
+        run: python -m unittest discover -s model/bottle-focus/reviewed-neck-v31 -v
       - name: One-epoch real-image training-loop smoke (untrained model)
         run: |
           python - <<'PY'

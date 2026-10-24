@@ -15,16 +15,29 @@
       "best_AP50": 0.8407106817291071,
       "best_AP50_95": 0.620605656065828,
       "completed_epoch": 3
+    },
+    {
+      "reference": [
+        0.8407106817291071,
+        0.620605656065828
+      ],
+      "stale_phases": 2,
+      "status": "running",
+      "best_AP50": 0.8407106817291071,
+      "best_AP50_95": 0.620605656065828,
+      "completed_epoch": 6
     }
   ],
-  "status": "running",
+  "status": "superseded_by_reviewed_neck_trial",
   "current_phase_log": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/phase-1792799189074016000.log",
   "reference": [
     0.8407106817291071,
     0.620605656065828
   ],
-  "stale_phases": 1,
+  "stale_phases": 2,
   "best_AP50": 0.8407106817291071,
   "best_AP50_95": 0.620605656065828,
-  "completed_epoch": 3
+  "completed_epoch": 6,
+  "superseding_experiment": "reviewed-neck-v31",
+  "reason": "Six completed epochs and fresh selected/latest checks show no gain; preserve optimizer, switch intervention instead of forcing head-only crops."
 }

@@ -1,0 +1,20 @@
+{
+  "project_tests": 237,
+  "focused_tests": 11,
+  "failures": 0,
+  "skipped": 0,
+  "red_green_observed": true,
+  "backbone_boundary_red_green_observed": true,
+  "project_log_sha": "ef5507bbb2888ac4514debfdb2fac45f5719b36976e65db61fef7f92a4fd8143",
+  "focused_log_sha": "75ee89659053e9aa8ba92f9acf1ad158e3c277c43545811e98c8fb3f42963007",
+  "training_photos": 1139,
+  "training_boxes": 504,
+  "training_exposures": 2056,
+  "new_photos": 25,
+  "new_boxes": 34,
+  "validation_images": 246,
+  "validation_boxes": 67,
+  "initial_weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+  "target_achieved": false,
+  "independent_review": "No concrete P1/P2 issues; provenance,25photo/34box admission,1139/504/2056 accounting,backbone boundary,BN guard and shared metric lifecycle reviewed"
+}
