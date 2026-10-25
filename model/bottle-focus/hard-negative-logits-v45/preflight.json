@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-25T21:32:44.615586+00:00",
+  "declaration_sha": "3dade78ffddc4470688a5a1848985093cdb61e61564d17f9b6f2ff2c8c30f143",
+  "training_photos": 533,
+  "training_boxes": 544,
+  "training_exposures": 1891,
+  "retention_photos": 24,
+  "retention_boxes": 16,
+  "mutable_parameters": 387,
+  "fixed_tensor_fingerprint": "4b8a0ce5e4eab36a668f512b4bbc85eb52ae08637e8a379eff96e5092890bdb5",
+  "frozen_benchmark_image_label_hashes_verified": 246,
+  "initial_weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+  "free_disk_bytes": 6363820032,
+  "training_started": false,
+  "synthetic_trainer_smoke_passed": true,
+  "focused_tests_log_sha": "ff1f499dbe908d4d2ae93a3c154de272b519a8a125d3dc442e99cabaca5a8fbd"
+}

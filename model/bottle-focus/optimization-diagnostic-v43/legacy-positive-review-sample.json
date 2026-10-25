@@ -1,0 +1,551 @@
+{
+  "seed": 20261025,
+  "scope": "Training-only diagnostic; no changes to frozen V44run or benchmark",
+  "source_photos": 139,
+  "sample": [
+    {
+      "id": "dry_wet_waste__train__plastic277_jpg.rf.6cc4705e230b3150aea142f3bccfe110",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic277_jpg.rf.6cc4705e230b3150aea142f3bccfe110.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic277_jpg.rf.6cc4705e230b3150aea142f3bccfe110.txt",
+      "image_sha": "98b2ffda4997039645141986ed340c3c65484dfb1094b4a5f35e820f930248b3",
+      "pixels": "c002bf9435c4387e4d14e42abb8a7b46c945719424890ccdf59b71844b5ff4da",
+      "source_group": "dry_wet_waste__plastic277_jpg",
+      "rows": [
+        "0 0.52000000 0.36000000 0.52000000 0.72000000"
+      ],
+      "source_rows": [
+        "0 0.52000000 0.36000000 0.52000000 0.72000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic277_jpg.rf.6cc4705e230b3150aea142f3bccfe110.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic277_jpg.rf.6cc4705e230b3150aea142f3bccfe110.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic381_jpg.rf.6afbdf9c806cee211520e1734681124f",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic381_jpg.rf.6afbdf9c806cee211520e1734681124f.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic381_jpg.rf.6afbdf9c806cee211520e1734681124f.txt",
+      "image_sha": "fff290804147bdf3cfecfe441c20b6ea82aa31abf59e20452a482260de5f8c56",
+      "pixels": "e3766481ce9d9b04fbb2534e32409e416c2a79828eaeb21ca6b652d4e76557f0",
+      "source_group": "dry_wet_waste__plastic381_jpg",
+      "rows": [
+        "0 0.50500000 0.48000000 0.81000000 0.48000000"
+      ],
+      "source_rows": [
+        "0 0.50500000 0.48000000 0.81000000 0.48000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic381_jpg.rf.6afbdf9c806cee211520e1734681124f.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic381_jpg.rf.6afbdf9c806cee211520e1734681124f.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic14_jpg.rf.33461bb3a7cd6ed10f022373090cb204",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic14_jpg.rf.33461bb3a7cd6ed10f022373090cb204.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic14_jpg.rf.33461bb3a7cd6ed10f022373090cb204.txt",
+      "image_sha": "1644f431b26cadf0af991199ccdd86cebaec8235f53fcc54bd1a80bea349d2f2",
+      "pixels": "1d07f2966af42dd66fb06e119c12a2bf80e4222a12d87e4c0e60d349993c9f4b",
+      "source_group": "dry_wet_waste__plastic14_jpg",
+      "rows": [
+        "0 0.483398438 0.397135417 0.767578125 0.794270833"
+      ],
+      "source_rows": [
+        "0 0.483398438 0.397135417 0.767578125 0.794270833"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic14_jpg.rf.33461bb3a7cd6ed10f022373090cb204.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic14_jpg.rf.33461bb3a7cd6ed10f022373090cb204.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic358_jpg.rf.cd468b4d3c566bdbcc7408da94109973",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic358_jpg.rf.cd468b4d3c566bdbcc7408da94109973.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic358_jpg.rf.cd468b4d3c566bdbcc7408da94109973.txt",
+      "image_sha": "c226936fb9a66c0e757579e869964dd67c969792bb6bd7f2ae90d67f8ee6227d",
+      "pixels": "4fd67f78940c6aa780b709cfea5e48d5618bbf663fa36b2d83d747e56d9e327b",
+      "source_group": "dry_wet_waste__plastic358_jpg",
+      "rows": [
+        "0 0.50000000 0.58000000 0.88000000 0.34000000"
+      ],
+      "source_rows": [
+        "0 0.50000000 0.58000000 0.88000000 0.34000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic358_jpg.rf.cd468b4d3c566bdbcc7408da94109973.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic358_jpg.rf.cd468b4d3c566bdbcc7408da94109973.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic470_jpg.rf.dbbd8326a4e6a546c455de6a7e2b517f",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic470_jpg.rf.dbbd8326a4e6a546c455de6a7e2b517f.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic470_jpg.rf.dbbd8326a4e6a546c455de6a7e2b517f.txt",
+      "image_sha": "90fabe658fcf81492011eac67145277ca24906a4aaed781a2eeef597cb6f269c",
+      "pixels": "37ae24bfb548df1cedc41220c50990047023efad0f1121ca15e4766bc7d7dd32",
+      "source_group": "dry_wet_waste__plastic470_jpg",
+      "rows": [
+        "0 0.418945313 0.466145833 0.587890625 0.723958333"
+      ],
+      "source_rows": [
+        "0 0.418945313 0.466145833 0.587890625 0.723958333"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic470_jpg.rf.dbbd8326a4e6a546c455de6a7e2b517f.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic470_jpg.rf.dbbd8326a4e6a546c455de6a7e2b517f.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic157_jpg.rf.e5317d14e41802870a8420b9d3508943",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic157_jpg.rf.e5317d14e41802870a8420b9d3508943.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic157_jpg.rf.e5317d14e41802870a8420b9d3508943.txt",
+      "image_sha": "91532a7ebcd3a493ac5465486497653a107f4cb718ca154068141016535bedd4",
+      "pixels": "853a15ba880e5e65363696fb5a16f2c6b7946297a2fa0696ebded74b222590b5",
+      "source_group": "dry_wet_waste__plastic157_jpg",
+      "rows": [
+        "0 0.660156250 0.597656250 0.679687500 0.804687500"
+      ],
+      "source_rows": [
+        "0 0.660156250 0.597656250 0.679687500 0.804687500"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic157_jpg.rf.e5317d14e41802870a8420b9d3508943.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic157_jpg.rf.e5317d14e41802870a8420b9d3508943.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic96_jpg.rf.cac70bf1dd345c9d8a308bb2519a2d70",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic96_jpg.rf.cac70bf1dd345c9d8a308bb2519a2d70.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic96_jpg.rf.cac70bf1dd345c9d8a308bb2519a2d70.txt",
+      "image_sha": "a0350689d7e0b467bd5fd2c681913dfbcb45c82d68529e63b05e3f36d3a63a5b",
+      "pixels": "2b4912522863d903876aa899972f8ed9ddb57b559af695510a6b0895d64aede2",
+      "source_group": "dry_wet_waste__plastic96_jpg",
+      "rows": [
+        "0 0.558593750 0.466145833 0.656250000 0.526041667"
+      ],
+      "source_rows": [
+        "0 0.558593750 0.466145833 0.656250000 0.526041667"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic96_jpg.rf.cac70bf1dd345c9d8a308bb2519a2d70.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic96_jpg.rf.cac70bf1dd345c9d8a308bb2519a2d70.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic313_jpg.rf.508c40df4dc688600dde90fedcd1a80e",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic313_jpg.rf.508c40df4dc688600dde90fedcd1a80e.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic313_jpg.rf.508c40df4dc688600dde90fedcd1a80e.txt",
+      "image_sha": "8af63d36684b7b7b741accc618897e2b0926bf2e47e0514041c76c8feefa1cf8",
+      "pixels": "7a9cba3915769f6ec57e987e0dd36f9e953db73356ac622349bc7d34d60ffb7b",
+      "source_group": "dry_wet_waste__plastic313_jpg",
+      "rows": [
+        "0 0.516601563 0.447916667 0.654296875 0.562500000"
+      ],
+      "source_rows": [
+        "0 0.516601563 0.447916667 0.654296875 0.562500000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic313_jpg.rf.508c40df4dc688600dde90fedcd1a80e.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic313_jpg.rf.508c40df4dc688600dde90fedcd1a80e.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic406_jpg.rf.3f85c1a60a2024a6c2ac168fee82411b",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic406_jpg.rf.3f85c1a60a2024a6c2ac168fee82411b.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic406_jpg.rf.3f85c1a60a2024a6c2ac168fee82411b.txt",
+      "image_sha": "a757686547b448c242c69d29e0d275202d88c38f90da022f0b9be25e86b87542",
+      "pixels": "5e144088d658781a6a82971d0413886425b019c91d981208a1ab3d063bb4fe61",
+      "source_group": "dry_wet_waste__plastic406_jpg",
+      "rows": [
+        "0 0.53000000 0.67500000 0.54000000 0.65000000"
+      ],
+      "source_rows": [
+        "0 0.53000000 0.67500000 0.54000000 0.65000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic406_jpg.rf.3f85c1a60a2024a6c2ac168fee82411b.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic406_jpg.rf.3f85c1a60a2024a6c2ac168fee82411b.txt"
+    },
+    {
+      "id": "dry_wet_waste__test__plastic379_jpg.rf.f099ac8a65d638545e22e569bd006d81",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__test__plastic379_jpg.rf.f099ac8a65d638545e22e569bd006d81.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__test__plastic379_jpg.rf.f099ac8a65d638545e22e569bd006d81.txt",
+      "image_sha": "0e148cbcdfa1196676ed64b55b27ed5ebd3b13b332aca4c17558bef645e719ed",
+      "pixels": "3ee5fb6a6e09fc6c7bb9a517d33821b5a3814758764b689d87d5d7f79abceabb",
+      "source_group": "dry_wet_waste__plastic379_jpg",
+      "rows": [
+        "0 0.53500000 0.50500000 0.71000000 0.47000000"
+      ],
+      "source_rows": [
+        "0 0.53500000 0.50500000 0.71000000 0.47000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__test__plastic379_jpg.rf.f099ac8a65d638545e22e569bd006d81.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__test__plastic379_jpg.rf.f099ac8a65d638545e22e569bd006d81.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic325_jpg.rf.7fd3cebdbf41ea7d522f910c3011d970",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic325_jpg.rf.7fd3cebdbf41ea7d522f910c3011d970.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic325_jpg.rf.7fd3cebdbf41ea7d522f910c3011d970.txt",
+      "image_sha": "b45d2645fa3738cca2abb2d3ccd2f13de0aa0aca0808837b687a081f5ad95875",
+      "pixels": "f2c77c5c05471ec9b2690bc3129ac6620bcebaea18cd1b57bdad39f0afba352d",
+      "source_group": "dry_wet_waste__plastic325_jpg",
+      "rows": [
+        "0 0.45000000 0.57500000 0.48000000 0.85000000"
+      ],
+      "source_rows": [
+        "0 0.45000000 0.57500000 0.48000000 0.85000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic325_jpg.rf.7fd3cebdbf41ea7d522f910c3011d970.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic325_jpg.rf.7fd3cebdbf41ea7d522f910c3011d970.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic360_jpg.rf.e72ec8cd3faa3d61dc235aeba1b9051a",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic360_jpg.rf.e72ec8cd3faa3d61dc235aeba1b9051a.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic360_jpg.rf.e72ec8cd3faa3d61dc235aeba1b9051a.txt",
+      "image_sha": "b1a89613ccd12a46a800248ee3fd9aacf7a23651a35b330cc3c544d6e72b2b9c",
+      "pixels": "caa6fed45b39545662447e17aa8beb8c17eca7ef9efc4019ca3e27c382841187",
+      "source_group": "dry_wet_waste__plastic360_jpg",
+      "rows": [
+        "0 0.499023438 0.459635417 0.587890625 0.414062500"
+      ],
+      "source_rows": [
+        "0 0.499023438 0.459635417 0.587890625 0.414062500"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic360_jpg.rf.e72ec8cd3faa3d61dc235aeba1b9051a.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic360_jpg.rf.e72ec8cd3faa3d61dc235aeba1b9051a.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic445_jpg.rf.29b98e397d7dd39a388fb7d2084fb4b4",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic445_jpg.rf.29b98e397d7dd39a388fb7d2084fb4b4.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic445_jpg.rf.29b98e397d7dd39a388fb7d2084fb4b4.txt",
+      "image_sha": "06f511f3f263c68b88df3da413392322c6615510bcc0844abf7e47fb822e94a5",
+      "pixels": "e742849d7c2046a680f9146fe14f28434df7dda1af2af872c275e1921bd46b58",
+      "source_group": "dry_wet_waste__plastic445_jpg",
+      "rows": [
+        "0 0.571289063 0.677083333 0.572265625 0.645833333"
+      ],
+      "source_rows": [
+        "0 0.571289063 0.677083333 0.572265625 0.645833333"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic445_jpg.rf.29b98e397d7dd39a388fb7d2084fb4b4.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic445_jpg.rf.29b98e397d7dd39a388fb7d2084fb4b4.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic7_jpg.rf.44517347594a785ef39cb3ed37b930ae",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic7_jpg.rf.44517347594a785ef39cb3ed37b930ae.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic7_jpg.rf.44517347594a785ef39cb3ed37b930ae.txt",
+      "image_sha": "45151f73acfc48a0a615351805f9c89681bc07f51deae974d9b13c1dea693190",
+      "pixels": "a5171a4842203e439b966907229642d7b0b5b7a681787e3894c31841ff40374b",
+      "source_group": "dry_wet_waste__plastic7_jpg",
+      "rows": [
+        "0 0.34650000 0.48500000 0.52100000 0.51600000"
+      ],
+      "source_rows": [
+        "0 0.34650000 0.48500000 0.52100000 0.51600000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic7_jpg.rf.44517347594a785ef39cb3ed37b930ae.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic7_jpg.rf.44517347594a785ef39cb3ed37b930ae.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic88_jpg.rf.2911dff609768de74587bb9344cefd03",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic88_jpg.rf.2911dff609768de74587bb9344cefd03.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic88_jpg.rf.2911dff609768de74587bb9344cefd03.txt",
+      "image_sha": "dc2f17263b4f5163d82bb958472d45da4b7e7b03381465a5c9fccb87d9157b38",
+      "pixels": "4c2f6edf757013d3317dfc006bf9acc2b6dcd4eee27ed7ade478b46d1280591d",
+      "source_group": "dry_wet_waste__plastic88_jpg",
+      "rows": [
+        "0 0.581054688 0.500000000 0.720703125 1.000000000"
+      ],
+      "source_rows": [
+        "0 0.581054688 0.500000000 0.720703125 1.000000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic88_jpg.rf.2911dff609768de74587bb9344cefd03.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic88_jpg.rf.2911dff609768de74587bb9344cefd03.txt"
+    },
+    {
+      "id": "dry_wet_waste__test__plastic135_jpg.rf.dfcb56d5e2bfe1ca7fd043c9f9d0b6ff",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__test__plastic135_jpg.rf.dfcb56d5e2bfe1ca7fd043c9f9d0b6ff.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__test__plastic135_jpg.rf.dfcb56d5e2bfe1ca7fd043c9f9d0b6ff.txt",
+      "image_sha": "a7196b6594344e85592f12606fee1e5e753b58efbc6bb25031a63b34e8fa7e60",
+      "pixels": "7dc17a8d5689702d23efae7f580fdde159140deb4b8edd0d8628270a34408b48",
+      "source_group": "dry_wet_waste__plastic135_jpg",
+      "rows": [
+        "0 0.49600000 0.50400000 0.36800000 0.47200000"
+      ],
+      "source_rows": [
+        "0 0.49600000 0.50400000 0.36800000 0.47200000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__test__plastic135_jpg.rf.dfcb56d5e2bfe1ca7fd043c9f9d0b6ff.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__test__plastic135_jpg.rf.dfcb56d5e2bfe1ca7fd043c9f9d0b6ff.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic376_jpg.rf.f8b4543e7cbc03c93221a78318ce2e46",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic376_jpg.rf.f8b4543e7cbc03c93221a78318ce2e46.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic376_jpg.rf.f8b4543e7cbc03c93221a78318ce2e46.txt",
+      "image_sha": "eab2f0e2e00c6fa46707658b1f41ba3d2c49d624e4ac4ff1c729c1c57e3a5672",
+      "pixels": "7e7a373af27b02c82f28226b1ecfcce1e73a937df32ef4c8330db8a7921bc3f8",
+      "source_group": "dry_wet_waste__plastic376_jpg",
+      "rows": [
+        "0 0.512695313 0.596354167 0.849609375 0.807291667"
+      ],
+      "source_rows": [
+        "0 0.512695313 0.596354167 0.849609375 0.807291667"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic376_jpg.rf.f8b4543e7cbc03c93221a78318ce2e46.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic376_jpg.rf.f8b4543e7cbc03c93221a78318ce2e46.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic47_jpg.rf.a773f24aa13c89c0a6889ce91374d69a",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic47_jpg.rf.a773f24aa13c89c0a6889ce91374d69a.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic47_jpg.rf.a773f24aa13c89c0a6889ce91374d69a.txt",
+      "image_sha": "ba1820a81d718629b9f45a5578e28dcea40e7ab7bd805e9fb379ee3c48c324f2",
+      "pixels": "af765d40435691aaa12c1110a1e344383001e197de3c58cf98eab5b66c42b648",
+      "source_group": "dry_wet_waste__plastic47_jpg",
+      "rows": [
+        "0 0.479492188 0.463541667 0.537109375 0.260416667"
+      ],
+      "source_rows": [
+        "0 0.479492188 0.463541667 0.537109375 0.260416667"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic47_jpg.rf.a773f24aa13c89c0a6889ce91374d69a.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic47_jpg.rf.a773f24aa13c89c0a6889ce91374d69a.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic189_jpg.rf.4e593aca243ea929b0ad9f6429c457b4",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic189_jpg.rf.4e593aca243ea929b0ad9f6429c457b4.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic189_jpg.rf.4e593aca243ea929b0ad9f6429c457b4.txt",
+      "image_sha": "926bdc95fe25ccdcfe32bfc6e85be0c507c17905e0190914f37a40f1dc672346",
+      "pixels": "706ceedd2a54a1a9beb593a6d48411c6ae7f023f60bc7228a4a67049086c4807",
+      "source_group": "dry_wet_waste__plastic189_jpg",
+      "rows": [
+        "0 0.5100000 0.5200000 0.8600000 0.6800000"
+      ],
+      "source_rows": [
+        "0 0.5100000 0.5200000 0.8600000 0.6800000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic189_jpg.rf.4e593aca243ea929b0ad9f6429c457b4.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic189_jpg.rf.4e593aca243ea929b0ad9f6429c457b4.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic439_jpg.rf.a3a17f443f2ee5a0da08a8154f20dbe2",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic439_jpg.rf.a3a17f443f2ee5a0da08a8154f20dbe2.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic439_jpg.rf.a3a17f443f2ee5a0da08a8154f20dbe2.txt",
+      "image_sha": "6820980a4676ca4d318a9ce1a25c7ddc1bb4759d297e968f2c765f9f38bf2a37",
+      "pixels": "8c80857a71bfd396fad9156fb276ba15254138676a494a76022b502ed0bfa3ea",
+      "source_group": "dry_wet_waste__plastic439_jpg",
+      "rows": [
+        "0 0.586914063 0.606770833 0.373046875 0.786458333"
+      ],
+      "source_rows": [
+        "0 0.586914063 0.606770833 0.373046875 0.786458333"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic439_jpg.rf.a3a17f443f2ee5a0da08a8154f20dbe2.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic439_jpg.rf.a3a17f443f2ee5a0da08a8154f20dbe2.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic370_jpg.rf.37366034d575ab3bf53ba39a227660f7",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic370_jpg.rf.37366034d575ab3bf53ba39a227660f7.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic370_jpg.rf.37366034d575ab3bf53ba39a227660f7.txt",
+      "image_sha": "54f8a3498061ffe707ac2d99506e4437a71b56bc37940cb7bad03acdaca81583",
+      "pixels": "b4932a79f29843370d90d057f7b692e3b01c880db3c0322177602643bcc0cd4e",
+      "source_group": "dry_wet_waste__plastic370_jpg",
+      "rows": [
+        "0 0.510742188 0.506510417 0.763671875 0.408854167"
+      ],
+      "source_rows": [
+        "0 0.510742188 0.506510417 0.763671875 0.408854167"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic370_jpg.rf.37366034d575ab3bf53ba39a227660f7.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic370_jpg.rf.37366034d575ab3bf53ba39a227660f7.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic286_jpg.rf.b7ae4884b91fab4cdebaba8e93d9cd07",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic286_jpg.rf.b7ae4884b91fab4cdebaba8e93d9cd07.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic286_jpg.rf.b7ae4884b91fab4cdebaba8e93d9cd07.txt",
+      "image_sha": "6a7160c0a0272ab845c6ce1b46161f37a38d1ad0f325e43d51255c45fe60576a",
+      "pixels": "111d9cc6879e03a5e009b24d8a5db75771a7f11a84ae4a7c2efbc58a6938403f",
+      "source_group": "dry_wet_waste__plastic286_jpg",
+      "rows": [
+        "0 0.516601563 0.546875000 0.669921875 0.906250000"
+      ],
+      "source_rows": [
+        "0 0.516601563 0.546875000 0.669921875 0.906250000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic286_jpg.rf.b7ae4884b91fab4cdebaba8e93d9cd07.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic286_jpg.rf.b7ae4884b91fab4cdebaba8e93d9cd07.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic51_jpg.rf.6a332b86eccf64176d57189fc956d31c",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic51_jpg.rf.6a332b86eccf64176d57189fc956d31c.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic51_jpg.rf.6a332b86eccf64176d57189fc956d31c.txt",
+      "image_sha": "5a8cac156a8d1344906362f79121248f066f4130756ad988e6d15b60c143e0e9",
+      "pixels": "43ca4253ade7d1171d13e8826b9e49df69cc0464b0cc2970dc5b941e1922078b",
+      "source_group": "dry_wet_waste__plastic51_jpg",
+      "rows": [
+        "0 0.356445313 0.587239583 0.576171875 0.825520833"
+      ],
+      "source_rows": [
+        "0 0.356445313 0.587239583 0.576171875 0.825520833"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic51_jpg.rf.6a332b86eccf64176d57189fc956d31c.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic51_jpg.rf.6a332b86eccf64176d57189fc956d31c.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic80_jpg.rf.1b806c1c140e066de60915a53218b438",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic80_jpg.rf.1b806c1c140e066de60915a53218b438.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic80_jpg.rf.1b806c1c140e066de60915a53218b438.txt",
+      "image_sha": "633b280aefe1bae42a3ef5d109d6e756db1450f1810a21063edd4dcb48e8507a",
+      "pixels": "00da55d2b313234f83a7219578a61f883d85f954af9319e88ff36e9f2a742a9d",
+      "source_group": "dry_wet_waste__plastic80_jpg",
+      "rows": [
+        "0 0.531250000 0.565104167 0.816406250 0.718750000"
+      ],
+      "source_rows": [
+        "0 0.531250000 0.565104167 0.816406250 0.718750000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic80_jpg.rf.1b806c1c140e066de60915a53218b438.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic80_jpg.rf.1b806c1c140e066de60915a53218b438.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266.txt",
+      "image_sha": "74e054e8759887c38f2ef85c9b2ba30546b3f518bc0a599e6192966cac762d97",
+      "pixels": "72c76553b5cd2eb4f238c997280f56731e2d1c523256bf7859a2c7724348bbf3",
+      "source_group": "dry_wet_waste__plastic391_jpg",
+      "rows": [
+        "0 0.66000000 0.50500000 0.68000000 0.91000000"
+      ],
+      "source_rows": [
+        "0 0.66000000 0.50500000 0.68000000 0.91000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic391_jpg.rf.b2a7a0b4b30ac46522e1e6085bcaa266.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic401_jpg.rf.903f762cf85ded1b26512970a4a87e8f",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic401_jpg.rf.903f762cf85ded1b26512970a4a87e8f.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic401_jpg.rf.903f762cf85ded1b26512970a4a87e8f.txt",
+      "image_sha": "8f73e85c7b15dad4dd07e9372a120f039590199c6d5c13e3d6cd8983ac1526bf",
+      "pixels": "d16174db9806fa67de0f8cd83a9d4f8f99291080d6018d260801226c11fcee9b",
+      "source_group": "dry_wet_waste__plastic401_jpg",
+      "rows": [
+        "0 0.492187500 0.514322917 0.609375000 0.325520833"
+      ],
+      "source_rows": [
+        "0 0.492187500 0.514322917 0.609375000 0.325520833"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic401_jpg.rf.903f762cf85ded1b26512970a4a87e8f.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic401_jpg.rf.903f762cf85ded1b26512970a4a87e8f.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic471_jpg.rf.bde2fa877aacab2d53d9df4e4dae496b",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic471_jpg.rf.bde2fa877aacab2d53d9df4e4dae496b.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic471_jpg.rf.bde2fa877aacab2d53d9df4e4dae496b.txt",
+      "image_sha": "0288a5328d7c8adddb6f037e7de2d05cfdcdc8d4b5e0c9db3bfb53db524befb0",
+      "pixels": "91e635c9a93655272a36d324f17bdab17706bdd7eecb8237bd4f08905252055a",
+      "source_group": "dry_wet_waste__plastic471_jpg",
+      "rows": [
+        "0 0.440429688 0.471354167 0.583984375 0.885416667"
+      ],
+      "source_rows": [
+        "0 0.440429688 0.471354167 0.583984375 0.885416667"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic471_jpg.rf.bde2fa877aacab2d53d9df4e4dae496b.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic471_jpg.rf.bde2fa877aacab2d53d9df4e4dae496b.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic421_jpg.rf.8cbf143cab3b4bfdd8817819a989b1b1",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic421_jpg.rf.8cbf143cab3b4bfdd8817819a989b1b1.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic421_jpg.rf.8cbf143cab3b4bfdd8817819a989b1b1.txt",
+      "image_sha": "d932774d60078385e4bf4507dc5f97c0dfae594ce61ff6f24f92bf3984b7de32",
+      "pixels": "ddd9912802277314cabe434cbf617b3146f420c36c7e36bbb03e28fe35122b2d",
+      "source_group": "dry_wet_waste__plastic421_jpg",
+      "rows": [
+        "0 0.488281250 0.514322917 0.683593750 0.445312500"
+      ],
+      "source_rows": [
+        "0 0.488281250 0.514322917 0.683593750 0.445312500"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic421_jpg.rf.8cbf143cab3b4bfdd8817819a989b1b1.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic421_jpg.rf.8cbf143cab3b4bfdd8817819a989b1b1.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic129_jpg.rf.a5678d8c6a779dd06c90691fddb57c2c",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic129_jpg.rf.a5678d8c6a779dd06c90691fddb57c2c.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic129_jpg.rf.a5678d8c6a779dd06c90691fddb57c2c.txt",
+      "image_sha": "33cd55af084fb66590386e9831d9ced45853978ebea0eb923a72e82416aa5fa9",
+      "pixels": "182e2304eb2d5a9f3c066f1d04c4477fb8aec312c84c9015f846a4c462d32b6f",
+      "source_group": "dry_wet_waste__plastic129_jpg",
+      "rows": [
+        "0 0.40650000 0.57000000 0.57100000 0.36000000"
+      ],
+      "source_rows": [
+        "0 0.40650000 0.57000000 0.57100000 0.36000000"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic129_jpg.rf.a5678d8c6a779dd06c90691fddb57c2c.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic129_jpg.rf.a5678d8c6a779dd06c90691fddb57c2c.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic21_jpg.rf.b5e6d212eb36a6d32c9c8f116f30eccf",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic21_jpg.rf.b5e6d212eb36a6d32c9c8f116f30eccf.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic21_jpg.rf.b5e6d212eb36a6d32c9c8f116f30eccf.txt",
+      "image_sha": "a4194ecf9b5042df063fc366df3b6a2c2bd8fe70acfe3ffd66477096ecdb4f02",
+      "pixels": "a5bfd607fb82b80292cd86ce50f38c4e75907da6b33e871ed80f45d69181b350",
+      "source_group": "dry_wet_waste__plastic21_jpg",
+      "rows": [
+        "0 0.575195313 0.514322917 0.849609375 0.523437500"
+      ],
+      "source_rows": [
+        "0 0.575195313 0.514322917 0.849609375 0.523437500"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic21_jpg.rf.b5e6d212eb36a6d32c9c8f116f30eccf.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic21_jpg.rf.b5e6d212eb36a6d32c9c8f116f30eccf.txt"
+    },
+    {
+      "id": "dry_wet_waste__train__plastic94_jpg.rf.14292840cad9bf9a4b0d177733e45396",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic94_jpg.rf.14292840cad9bf9a4b0d177733e45396.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic94_jpg.rf.14292840cad9bf9a4b0d177733e45396.txt",
+      "image_sha": "9e04988ac7b0231d6fedcdcfce4845fb2930db8dcaed990829c9432f440385d1",
+      "pixels": "11c811a7ff9af4af5db7a384e3b1f103c77df680d5ab5d6fccf685eac75e51e5",
+      "source_group": "dry_wet_waste__plastic94_jpg",
+      "rows": [
+        "0 0.514648438 0.526041667 0.748046875 0.411458333"
+      ],
+      "source_rows": [
+        "0 0.514648438 0.526041667 0.748046875 0.411458333"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__train__plastic94_jpg.rf.14292840cad9bf9a4b0d177733e45396.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__train__plastic94_jpg.rf.14292840cad9bf9a4b0d177733e45396.txt"
+    },
+    {
+      "id": "dry_wet_waste__valid__plastic440_jpg.rf.c2bc0ff935ea0b06292ad9a0bb86d4c0",
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic440_jpg.rf.c2bc0ff935ea0b06292ad9a0bb86d4c0.jpg",
+      "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic440_jpg.rf.c2bc0ff935ea0b06292ad9a0bb86d4c0.txt",
+      "image_sha": "4e7062ebac46c562586668c1321b3340d819b19e448755d7f77a585962e75609",
+      "pixels": "760130ba417ad2dcbb6b22499ef73087d0e7c570bfc17d7813d44e1c898cc356",
+      "source_group": "dry_wet_waste__plastic440_jpg",
+      "rows": [
+        "0 0.613281250 0.587239583 0.722656250 0.825520833"
+      ],
+      "source_rows": [
+        "0 0.613281250 0.587239583 0.722656250 0.825520833"
+      ],
+      "exposures": 1,
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/dry_wet_waste__valid__plastic440_jpg.rf.c2bc0ff935ea0b06292ad9a0bb86d4c0.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/dry_wet_waste__valid__plastic440_jpg.rf.c2bc0ff935ea0b06292ad9a0bb86d4c0.txt"
+    }
+  ]
+}

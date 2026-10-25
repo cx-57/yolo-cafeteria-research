@@ -1,0 +1,1342 @@
+{
+  "source_record_sha": "104cd3ca202bc1219b8c8590685b937aeb80c503f20c363e7f4731e83a29f771",
+  "source_dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+  "reviewer": "root_AI",
+  "human_verified": false,
+  "full_scene_reviewed": true,
+  "records": [
+    {
+      "index": 0,
+      "id": "external_bottle__coco_129599__lvis_000000129599",
+      "image_sha": "e7002cf1fe65412c3a10f1ac154f6bd9dda053efd8ad7fa2ca76a4706b037157",
+      "rows": [
+        "0 0.291376471 0.485015625 0.035223529 0.047218750",
+        "0 0.240294118 0.487976562 0.039741176 0.039359375",
+        "0 0.233588235 0.535203125 0.046094118 0.086156250",
+        "0 0.211058824 0.490695313 0.019435294 0.038078125",
+        "0 0.269635294 0.489046875 0.022517647 0.037250000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 1,
+      "id": "external_bottle__coco_13252__lvis_000000013252",
+      "image_sha": "48da42275bcb1665e5ee5e37d52c96f0c2e932dadc38a402e249729aef1d7f89",
+      "rows": [
+        "0 0.166507812 0.621920375 0.027734375 0.137985948",
+        "0 0.807351563 0.541159251 0.020171875 0.077681499"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 2,
+      "id": "external_bottle__coco_15148__lvis_000000015148",
+      "image_sha": "bd134be2a2075717af35fda989ed8ec7d8dd47536d012a11b159ef13471b3d64",
+      "rows": [
+        "0 0.214397496 0.835280374 0.025039124 0.128504673",
+        "0 0.552425665 0.853971963 0.028169014 0.100467290",
+        "0 0.977308294 0.808411215 0.045383412 0.037383178"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 3,
+      "id": "external_bottle__coco_15738__lvis_000000015738",
+      "image_sha": "2728bce1c0a351b05406741dc8fef6aa860a114ffc66011c85c10a3c4ba8c6bd",
+      "rows": [
+        "0 0.809941315 0.626148437 0.031525822 0.063953125"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 4,
+      "id": "external_bottle__coco_179642__lvis_000000179642",
+      "image_sha": "33fd21e7b4d7518615ac86e13ea66136d3f658fc68904a99d65a796058563d13",
+      "rows": [
+        "0 0.373210938 0.948594848 0.032578125 0.102810304",
+        "0 0.400859375 0.953173302 0.033281250 0.093653396"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 5,
+      "id": "external_bottle__coco_26053__lvis_000000026053",
+      "image_sha": "bd8eac9bfc696bc0e1621e5ce10b4ca5bff5db582f054cbdd90be74d3cf7d83e",
+      "rows": [
+        "0 0.718969555 0.459375000 0.042154567 0.084375000"
+      ],
+      "decision": "hold",
+      "note": "Possible unboxed orange-capped PET at frame edge; completeness unresolved"
+    },
+    {
+      "index": 6,
+      "id": "external_bottle__coco_264976__lvis_000000264976",
+      "image_sha": "c0874f1872f74843b259315326f9a638df503276d368948a1b2053320b69f9f0",
+      "rows": [
+        "0 0.140492187 0.713416667 0.083421875 0.234666667",
+        "0 0.241210938 0.819927083 0.080734375 0.219312500",
+        "0 0.594781250 0.731750000 0.070687500 0.246791667",
+        "0 0.187531250 0.678010417 0.063906250 0.207354167"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 7,
+      "id": "external_bottle__coco_36123__lvis_000000036123",
+      "image_sha": "140bcad3e4ef8a71f6a2d276456e12274986107475e2f41dd199c22cfc320f66",
+      "rows": [
+        "0 0.628330000 0.519234234 0.018140000 0.084594595",
+        "0 0.329100000 0.584174174 0.026440000 0.106906907",
+        "0 0.122320000 0.700180180 0.043600000 0.152072072",
+        "0 0.752040000 0.554789790 0.023240000 0.099669670"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 8,
+      "id": "external_bottle__coco_43344__lvis_000000043344",
+      "image_sha": "a3e2720baf1f3050d6e1112a98a3c7d73f407ba1efa34396d967ea5800721487",
+      "rows": [
+        "0 0.821039063 0.816030445 0.032046875 0.138524590",
+        "0 0.815281250 0.513149883 0.031781250 0.139039813",
+        "0 0.642109375 0.513946136 0.030593750 0.140632319",
+        "0 0.321703125 0.477318501 0.030968750 0.093278689",
+        "0 0.629867187 0.466955504 0.020203125 0.051943794"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 9,
+      "id": "external_bottle__coco_61843__lvis_000000061843",
+      "image_sha": "8f4847f36c320b769e97fb393e0d608195609f7f38fb2f46dc8ca177d882ecaf",
+      "rows": [
+        "0 0.637492188 0.464274005 0.023546875 0.103583138",
+        "0 0.516960937 0.472880562 0.033046875 0.096487119",
+        "0 0.441484375 0.582611241 0.031593750 0.123957845",
+        "0 0.808890625 0.414707260 0.017843750 0.073161593"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 10,
+      "id": "external_bottle__coco_94544__lvis_000000094544",
+      "image_sha": "0a3aa18d581e32fc2f3614c5267dc5515efc7ce82d4c3ac33123d9acb87fa8f2",
+      "rows": [
+        "0 0.806381733 0.873937500 0.026674473 0.024093750",
+        "0 0.754168618 0.876039063 0.011896956 0.033078125",
+        "0 0.836779859 0.892671875 0.031686183 0.045593750",
+        "0 0.856053864 0.897609375 0.026814988 0.067937500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 11,
+      "id": "external_bottle__river_023-india-plasticbottle3bash-bashir__river_023_clean",
+      "image_sha": "33b9c7b8026859ad7c1a824e6a90b8bbcc5eb3380eb0a055b33e74884fb11865",
+      "rows": [
+        "0 0.536706349 0.703703704 0.125992063 0.269841270",
+        "0 0.242063492 0.109126984 0.048611111 0.067460317",
+        "0 0.845734127 0.267195767 0.109126984 0.111111111"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 12,
+      "id": "external_bottle__taco_batch_2__taco_0700",
+      "image_sha": "ad6458d26bca4ee05822be05b0d96c73c95dbe13f5d881f3a03684de140af868",
+      "rows": [
+        "0 0.429330065 0.232230392 0.050653595 0.015318627"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 13,
+      "id": "external_bottle__taco_batch_2__taco_0701",
+      "image_sha": "31b68c17b23294b7bf0043b2419e1eb0ba8b05e51d04dd532a8712ee8d2079e4",
+      "rows": [
+        "0 0.517003676 0.384191176 0.033394608 0.016748366"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 14,
+      "id": "external_bottle__taco_batch_2__taco_0724",
+      "image_sha": "0917e35a4e88936ae147b9c31b43fa5ed51f7a0465f8b0a09c9f22abaa2fdb53",
+      "rows": [
+        "0 0.800449346 0.409926471 0.116421569 0.024509804"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 15,
+      "id": "external_bottle__taco_batch_2__taco_0729",
+      "image_sha": "21685e7379e644a549659f098f338a9e5d85d62ba4527c302840899e90a5d280",
+      "rows": [
+        "0 0.584763072 0.264246324 0.036356209 0.035845588"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 16,
+      "id": "external_bottle__taco_batch_2__taco_0764",
+      "image_sha": "6586d9ff7462adb0d2500e6cd928e88ddf4c40703c90959dc8cec4ba05481cd3",
+      "rows": [
+        "0 0.414163769 0.422385621 0.070818843 0.035947712",
+        "0 0.766835283 0.408905229 0.049004110 0.026143791"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 17,
+      "id": "external_bottle__taco_batch_3__taco_0789",
+      "image_sha": "c7da5f3c0332765eef75f3860d312e7d934a2ddaa5f179c9a05628e8559af637",
+      "rows": [
+        "0 0.544526144 0.280330882 0.080065359 0.017769608"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 18,
+      "id": "external_bottle__taco_batch_7__taco_1181",
+      "image_sha": "4060e7bad4534955ca0288df4883db1df9b9fd02f3e91c79761e0d898fbf291b",
+      "rows": [
+        "0 0.665416667 0.374750000 0.054166667 0.033500000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 19,
+      "id": "lvis_000000033571",
+      "image_sha": "c3b33ba94df5c1be2d5291b5f93de51d52cf43a0db94e035529c831b65a54164",
+      "rows": [
+        "0 0.604507812 0.095895833 0.063859375 0.191791667"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 20,
+      "id": "lvis_000000034439",
+      "image_sha": "cb4ee6936aca3a93eb2e3ea47247f631c3e165aba952a84b34c9a805a9c8648d",
+      "rows": [
+        "0 0.570078125 0.676615925 0.015093750 0.052622951",
+        "0 0.554773437 0.671721311 0.015984375 0.069484778"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 21,
+      "id": "lvis_000000036053",
+      "image_sha": "4326b1d0df1895054fb6cf2fd792da791a516254c310dbe31ca90facc89ffe62",
+      "rows": [
+        "0 0.950489583 0.584789062 0.099020833 0.169140625"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 22,
+      "id": "lvis_000000039099",
+      "image_sha": "f752fe43eaef8b5976c04c5ebde75488ea2ef6663b108b5ec89c1f3a83d6e0d4",
+      "rows": [
+        "0 0.526710937 0.187981221 0.034859375 0.186807512"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 23,
+      "id": "lvis_000000053169",
+      "image_sha": "f5c21d627f15c0d97df95cb43c077bb8b6c3ef7410bcbaa7711cfbd482139c7f",
+      "rows": [
+        "0 0.862578125 0.219281250 0.030093750 0.062562500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 24,
+      "id": "lvis_000000061459",
+      "image_sha": "3d18fc81e5b42ca95fba162e5c89c89525c1a61a18a19855ef0987aa98eb1783",
+      "rows": [
+        "0 0.667960937 0.242802083 0.023390625 0.059937500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 25,
+      "id": "lvis_000000061674",
+      "image_sha": "ce6ed1b1b1862e580da279a37a75da81659f4a75644ab2c7904b4cde4b51f02b",
+      "rows": [
+        "0 0.098156250 0.862343750 0.049020833 0.105093750"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 26,
+      "id": "lvis_000000063938",
+      "image_sha": "a897bf2eb848e2affa0d06c16f7944c1c3b60c31187236cd4dec4d75ecd6e306",
+      "rows": [
+        "0 0.479964789 0.365335937 0.039835681 0.077390625",
+        "0 0.259636150 0.380460937 0.043497653 0.089390625"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 27,
+      "id": "lvis_000000074080",
+      "image_sha": "800dabfa39ab53e6ffaf91d194fd93c2907d83790540b1074b8311f6f4cce9cc",
+      "rows": [
+        "0 0.623750000 0.526000000 0.038875000 0.174833333"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 28,
+      "id": "lvis_000000076893",
+      "image_sha": "f095fc4a2d8c725e882ebe00b69e7422f97bc344542654920045c2ccaef7e8ed",
+      "rows": [
+        "0 0.724566210 0.435718750 0.023150685 0.043375000",
+        "0 0.695422374 0.434835938 0.021073059 0.045265625"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 29,
+      "id": "lvis_000000088436",
+      "image_sha": "3e1e53346361a5eff0a8bc3f277d12f3e37dff8d3a0a0c946a5bcbfa27a06bd2",
+      "rows": [
+        "0 0.636632813 0.576406250 0.050578125 0.217937500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 30,
+      "id": "lvis_000000095213",
+      "image_sha": "037c107b86df9e4e5f4c25f79af4f7c712ba0087b9d587dd6bce199305439017",
+      "rows": [
+        "0 0.164989583 0.475187500 0.024145833 0.047281250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 31,
+      "id": "lvis_000000097391",
+      "image_sha": "5d49ee1a9fdcfd86a9dfe40b88d2080eafedaf89c07d8f43b829b22f326ec869",
+      "rows": [
+        "0 0.313773437 0.865916667 0.054484375 0.110500000",
+        "0 0.842906250 0.571750000 0.006375000 0.024333333"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 32,
+      "id": "lvis_000000110536",
+      "image_sha": "01769eadf307c437a434edd912eaf8a759afd4a72c918ae1efcf94c6015b1bc2",
+      "rows": [
+        "0 0.904773438 0.282540984 0.043203125 0.157822014"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 33,
+      "id": "lvis_000000113473",
+      "image_sha": "3e9506bf186c492050a9866e72b4a5713a375959e96a87e41e74ea39bef02a49",
+      "rows": [
+        "0 0.521320312 0.929968750 0.194140625 0.140062500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 34,
+      "id": "lvis_000000116887",
+      "image_sha": "5b8b6f593c6960f817cd8862def01b1224304a2af22e93f3ab8175c1f6dd040e",
+      "rows": [
+        "0 0.785419580 0.160421875 0.026736597 0.044187500",
+        "0 0.800897436 0.156210937 0.016666667 0.043234375",
+        "0 0.814452214 0.159484375 0.024708625 0.044750000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 35,
+      "id": "lvis_000000119129",
+      "image_sha": "7293e19d413ecf38ceaf60cc0661147cd489225cbac9f9003055b46519ccba26",
+      "rows": [
+        "0 0.249757813 0.796058091 0.032484375 0.103443983"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 36,
+      "id": "lvis_000000135626",
+      "image_sha": "68f381c098bf03a7e2f02ddb79d0b75530f6fb39e3eb10824e8405592eb9b1e2",
+      "rows": [
+        "0 0.757377049 0.523406250 0.115362998 0.031781250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 37,
+      "id": "lvis_000000144431",
+      "image_sha": "af2fc74a99760738db00e2ae2e1cd9565d5a807aa20c82977772cb8751458a4e",
+      "rows": [
+        "0 0.359218750 0.160035129 0.093437500 0.320070258"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 38,
+      "id": "lvis_000000144438",
+      "image_sha": "f2f52c24c4f537460c0a87d3a232c1ddb009baa4ee3079c453174094e629cbcc",
+      "rows": [
+        "0 0.040140625 0.918968750 0.080281250 0.162062500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 39,
+      "id": "lvis_000000145189",
+      "image_sha": "4ac97426d99f66de6c3cdd61b7b28ac4c17f49fff992aea82ba75d4894ae5f80",
+      "rows": [
+        "0 0.707000000 0.234304687 0.062416667 0.107328125"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 40,
+      "id": "lvis_000000152431",
+      "image_sha": "07793987457962b13bf225d251c12e4d469a18b08aec18ac9cb50dd54931de3b",
+      "rows": [
+        "0 0.602953125 0.782260417 0.029625000 0.076854167"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 41,
+      "id": "lvis_000000154379",
+      "image_sha": "399f8b01ee263d642e127e42f5a02695b291486edf05f988915e88aa1e897431",
+      "rows": [
+        "0 0.942708333 0.689218750 0.113083333 0.270125000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 42,
+      "id": "lvis_000000155449",
+      "image_sha": "bd4d64482cfca8f7ef1386ae3d6df7976ea0fcf6c9eed83d771fdc44d1dfaba9",
+      "rows": [
+        "0 0.396117187 0.712581301 0.045734375 0.029227642",
+        "0 0.888328125 0.874278455 0.025437500 0.096727642",
+        "0 0.174640625 0.549664634 0.005437500 0.017987805"
+      ],
+      "decision": "hold",
+      "note": "One small station target is too blurred to verify scope/completeness"
+    },
+    {
+      "index": 43,
+      "id": "lvis_000000158105",
+      "image_sha": "aa560143218742d0f9db31840e1c6de7db95bc246107a7ba1dccaf3121825455",
+      "rows": [
+        "0 0.510541667 0.546093750 0.075791667 0.110281250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 44,
+      "id": "lvis_000000160089",
+      "image_sha": "28b18b2eb47a2ebecb00bb2bdc022c82ada7943c72a6873cf97c308cd556247a",
+      "rows": [
+        "0 0.616312500 0.621670040 0.018593750 0.084028340"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 45,
+      "id": "lvis_000000163713",
+      "image_sha": "144b9e6e908eb4da0474852748173f102c963ed997d599c70e2aa0dbbd180c08",
+      "rows": [
+        "0 0.268117188 0.689110070 0.039546875 0.170210773",
+        "0 0.314546875 0.688384075 0.038250000 0.173911007",
+        "0 0.279640625 0.672224824 0.025812500 0.170257611"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 46,
+      "id": "lvis_000000165610",
+      "image_sha": "82290c5b0f7446f6e639b4e77a9e80147171412de23d98eab1ed5d505056e22e",
+      "rows": [
+        "0 0.708250000 0.444539062 0.081791667 0.154421875"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 47,
+      "id": "lvis_000000176726",
+      "image_sha": "4fa5d2a906534675e469cae35ea4fbe0d575edfb4cef11c6fc419ba72b0b21a8",
+      "rows": [
+        "0 0.131953125 0.163354167 0.143250000 0.244416667"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 48,
+      "id": "lvis_000000185097",
+      "image_sha": "43f10bc8155a6046c09e34acc2cd3c4ae013fb0b791d5334e1354f22109c3cfe",
+      "rows": [
+        "0 0.467531250 0.458708333 0.017562500 0.084291667"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 49,
+      "id": "lvis_000000185686",
+      "image_sha": "21e837e97c9da2e8c4c2bdf2e117fe9e4fbda2e08cb2c34173145ce4f9fbf573",
+      "rows": [
+        "0 0.976429688 0.825105386 0.047140625 0.196252927"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 50,
+      "id": "lvis_000000186816",
+      "image_sha": "cf7db95e9476564930e3b0ce789df5358921bfb6eed818e7194e1486b9d653dc",
+      "rows": [
+        "0 0.223617188 0.440337838 0.047953125 0.177123552",
+        "0 0.768367187 0.437567568 0.061140625 0.159961390"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 51,
+      "id": "lvis_000000187952",
+      "image_sha": "64531d1bdf8a0a6a66aad0b792a4f2bfc1da81311c2cce46d10ca8e818e5460c",
+      "rows": [
+        "0 0.404523437 0.250104167 0.031296875 0.068250000",
+        "0 0.427195313 0.259281250 0.036640625 0.050604167",
+        "0 0.584726562 0.310302083 0.037765625 0.169395833"
+      ],
+      "decision": "hold",
+      "note": "Several office target identities/box extents unresolved in native crops"
+    },
+    {
+      "index": 52,
+      "id": "lvis_000000193193",
+      "image_sha": "e474fcab491c4b0db14a0388a30991bc12379eb1caf3b7587698448af8e17382",
+      "rows": [
+        "0 0.310046875 0.626927083 0.037812500 0.160354167"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 53,
+      "id": "lvis_000000194820",
+      "image_sha": "c4cf9e3ddf076886cf05a6e5a2e489e33f9f108dbb2030192b027cde86fcc025",
+      "rows": [
+        "0 0.901781250 0.363843750 0.078031250 0.132354167",
+        "0 0.906757812 0.290583333 0.062296875 0.150000000",
+        "0 0.854546875 0.307958333 0.078218750 0.140791667"
+      ],
+      "decision": "hold",
+      "note": "Dark three-bottle materials unresolved; do not relabel as negatives"
+    },
+    {
+      "index": 54,
+      "id": "lvis_000000200583",
+      "image_sha": "35323cab23e48550509779d395fdd2f2b20845268829995a4f648b2826a18735",
+      "rows": [
+        "0 0.798572939 0.400421875 0.098372093 0.210968750"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 55,
+      "id": "lvis_000000202657",
+      "image_sha": "82fa232a9a08209538f1ee69c6c574f230da06cedde56a532dd7d38e1a42b19f",
+      "rows": [
+        "0 0.636191626 0.796500000 0.020016103 0.040781250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 56,
+      "id": "lvis_000000202843",
+      "image_sha": "4178d4427485358ecbf89b011cb1724607e54b771bac5b318c1c9352865bba61",
+      "rows": [
+        "0 0.195765625 0.856032864 0.017531250 0.071408451"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 57,
+      "id": "lvis_000000204863",
+      "image_sha": "32d9e93e2c74753a97c1ad1c6a3d823b8bc4079342290124b14bb1ea940ee101",
+      "rows": [
+        "0 0.768929688 0.760677083 0.041546875 0.151895833"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 58,
+      "id": "lvis_000000205794",
+      "image_sha": "887adf7f98cf8b2e3b8c8c3c05c72cba5b737d80c240eb6ac416b2d8e9d6f3cd",
+      "rows": [
+        "0 0.410679687 0.346281250 0.015078125 0.038562500",
+        "0 0.417804687 0.332916667 0.014046875 0.037750000",
+        "0 0.402007813 0.328822917 0.012140625 0.048895833"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 59,
+      "id": "lvis_000000231786",
+      "image_sha": "6fd160bc1c4aa2e3f7d56a353aef1e68bbd4c3c2a89c1a57d1b1dbe5299a2d69",
+      "rows": [
+        "0 0.419062500 0.488265625 0.061833333 0.149437500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 60,
+      "id": "lvis_000000241124",
+      "image_sha": "9b3e9165d97ab1956402d171cb8c33b01d9bf7f5db63aa7fc51e210dcd54e536",
+      "rows": [
+        "0 0.600070312 0.417818372 0.034609375 0.107035491"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 61,
+      "id": "lvis_000000243824",
+      "image_sha": "4e433ca2992e17e47b451bcd6f497be3b36c308554ffda3626fef4f993b06cf0",
+      "rows": [
+        "0 0.397867187 0.666625000 0.087484375 0.272083333"
+      ],
+      "decision": "hold",
+      "note": "Annotated condiment/glass foreground bottle with unboxed eligible pink-capped PET behind; mixed/ incomplete target supervision"
+    },
+    {
+      "index": 62,
+      "id": "lvis_000000247259",
+      "image_sha": "5de27a405a951f71186f03722f79986d0b3eb83ea233162c9cfa54962d0274fc",
+      "rows": [
+        "0 0.894390625 0.558843750 0.029000000 0.117687500",
+        "0 0.103851563 0.540052083 0.021140625 0.052270833",
+        "0 0.494460938 0.536489583 0.018265625 0.042479167"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 63,
+      "id": "lvis_000000260181",
+      "image_sha": "e3491525da7e4717726a71cbed1b97121f28357e930039656b24f19efa3aae64",
+      "rows": [
+        "0 0.635656250 0.903015625 0.065145833 0.144312500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 64,
+      "id": "lvis_000000266773",
+      "image_sha": "1cd7bd9ea1be842f922881ba5fc68bd0976deb1a88b19d8c558fd646cf5c5136",
+      "rows": [
+        "0 0.222890625 0.419742188 0.023710938 0.038984375",
+        "0 0.953632812 0.368000000 0.024375000 0.063000000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 65,
+      "id": "lvis_000000287221",
+      "image_sha": "ec819855b0d30106584390a9c204920342f60f792667bfac873092a3c0011d78",
+      "rows": [
+        "0 0.979757813 0.333406250 0.040484375 0.211437500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 66,
+      "id": "lvis_000000309528",
+      "image_sha": "aad736e7d48b06d2b62fdbc6f24a83613ec271ea3d0c9480770636ecb87f2205",
+      "rows": [
+        "0 0.658161593 0.890937500 0.124988290 0.218125000",
+        "0 0.577517564 0.889390625 0.140234192 0.204562500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 67,
+      "id": "lvis_000000314190",
+      "image_sha": "075f230bbee56fe42033817a034cdcca76dfcf1810701f9357dea01523fce31f",
+      "rows": [
+        "0 0.505679688 0.625925926 0.026046875 0.096920078",
+        "0 0.471242188 0.611150097 0.023609375 0.098206628",
+        "0 0.579796875 0.638226121 0.025531250 0.072514620"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 68,
+      "id": "lvis_000000318888",
+      "image_sha": "ac97449d9cd82e332e4aa44ab5022497a8b8f344f7e4d8dd5986a14e1a8a6bc5",
+      "rows": [
+        "0 0.754390625 0.807812500 0.046062500 0.092500000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 69,
+      "id": "lvis_000000321011",
+      "image_sha": "b396e3f19e04bea48e45e0bd30a07739848fbeb55c2c2acd0340a8e0492555b5",
+      "rows": [
+        "0 0.713079625 0.712046875 0.039039813 0.063312500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 70,
+      "id": "lvis_000000334291",
+      "image_sha": "5e22831a6fee616c4707957885b3f3dd28cb5158c7bd9d6217f7237dc1a2637c",
+      "rows": [
+        "0 0.061140625 0.441935146 0.043843750 0.163661088"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 71,
+      "id": "lvis_000000334714",
+      "image_sha": "d8c6d6da9db076fbb7b9a26829743014c1cf37d9e50ca7ae003d3757ae38c325",
+      "rows": [
+        "0 0.897632813 0.654218750 0.021359375 0.086187500",
+        "0 0.905078125 0.620979167 0.013125000 0.030541667",
+        "0 0.918210937 0.656531250 0.021640625 0.086937500",
+        "0 0.275890625 0.700822917 0.026000000 0.096187500"
+      ],
+      "decision": "hold",
+      "note": "Additional possible PET beyond four annotated bottles; completeness unresolved"
+    },
+    {
+      "index": 72,
+      "id": "lvis_000000336171",
+      "image_sha": "20c9dca2537b2d192eac54dd53d0b163c84a3737fabbbda995461f49fc06a4ee",
+      "rows": [
+        "0 0.577716628 0.525054688 0.070000000 0.105859375",
+        "0 0.248196721 0.437203125 0.050210773 0.034406250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 73,
+      "id": "lvis_000000351577",
+      "image_sha": "5a5ffd215a5806c6758398b0befaabf527cff5f5c2b9fde04fca3886dc02eed2",
+      "rows": [
+        "0 0.606320313 0.840304450 0.035453125 0.148196721",
+        "0 0.635734375 0.850058548 0.037281250 0.148220141"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 74,
+      "id": "lvis_000000356344",
+      "image_sha": "708bbba3d23a04a13097755177ec079f293824645962ea528418bef6f454775b",
+      "rows": [
+        "0 0.138992188 0.685387789 0.078609375 0.127607261",
+        "0 0.756234375 0.076996700 0.039375000 0.072772277"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 75,
+      "id": "lvis_000000361490",
+      "image_sha": "b930dfc37a4201029a1b6c2bb73a69d0a8dadea556c18cf674e5fc48e4a1d0e1",
+      "rows": [
+        "0 0.089968750 0.554168490 0.018312500 0.071444201",
+        "0 0.108375000 0.544781182 0.018093750 0.053326039"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 76,
+      "id": "lvis_000000364031",
+      "image_sha": "89b37678d8d4cf223548bc7a7d2b989d8e3488c71187ac7f5ce64d4131fc3edf",
+      "rows": [
+        "0 0.744625000 0.690937500 0.064812500 0.101291667"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 77,
+      "id": "lvis_000000365582",
+      "image_sha": "338073bace1d05e91ff67cd95e02bd8dd69698bf138186066bc757ad5678de28",
+      "rows": [
+        "0 0.504330544 0.538750000 0.031422594 0.076718750",
+        "0 0.535041841 0.538398437 0.029916318 0.075546875"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 78,
+      "id": "lvis_000000370953",
+      "image_sha": "295f90933a9c14a179a8d181f045dd4472b4a62678ef9ba31688de71092c021a",
+      "rows": [
+        "0 0.795085938 0.042739583 0.091890625 0.085479167"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 79,
+      "id": "lvis_000000371652",
+      "image_sha": "458b64e1cbbc556bda7e1d6788ee43eb75afea731e5ff6d93799e9c5c40774f5",
+      "rows": [
+        "0 0.381757812 0.125614583 0.068796875 0.246270833"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 80,
+      "id": "lvis_000000377205",
+      "image_sha": "1ed8243a808af31b9ce2b498d3e5c382f4abd563d151f59110724a8a8e7ea1a9",
+      "rows": [
+        "0 0.704941452 0.600078125 0.034379391 0.060531250",
+        "0 0.924098361 0.597148437 0.032786885 0.065890625",
+        "0 0.362751756 0.600328125 0.034262295 0.071593750"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 81,
+      "id": "lvis_000000377513",
+      "image_sha": "16de3f46df7f4b2d55521fc6f9471f8ffb0acc0010fcb991e13598d5b2016f81",
+      "rows": [
+        "0 0.505539063 0.307197917 0.052109375 0.255270833",
+        "0 0.702101562 0.299187500 0.061796875 0.251666667",
+        "0 0.843398437 0.345822917 0.065765625 0.280062500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 82,
+      "id": "lvis_000000387206",
+      "image_sha": "f0eb26a9c57dca1081439b4c2278e89b94cdd3e05930fcdc7284f669abd85712",
+      "rows": [
+        "0 0.241531250 0.739861111 0.008500000 0.036166667"
+      ],
+      "decision": "hold",
+      "note": "Small station target material/scope unresolved"
+    },
+    {
+      "index": 83,
+      "id": "lvis_000000390374",
+      "image_sha": "f6d161a70e16a4b2d066cb57b82df62137b882b6cc90d23c63307930244d3932",
+      "rows": [
+        "0 0.939804688 0.759004684 0.030546875 0.146299766"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 84,
+      "id": "lvis_000000392506",
+      "image_sha": "9ac82d20c78af3960df43a0a093bc4e11c83fa222531504f713badad086211e2",
+      "rows": [
+        "0 0.868937500 0.517960938 0.060291667 0.085234375",
+        "0 0.917895833 0.544718750 0.050125000 0.074906250",
+        "0 0.923427083 0.625843750 0.153145833 0.076593750"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 85,
+      "id": "lvis_000000415393",
+      "image_sha": "87fd7cfcfca4120e67c108e8adfa969094fde1834a8261ce3f1d944f75d2a15f",
+      "rows": [
+        "0 0.675804688 0.506894118 0.014859375 0.051623529"
+      ],
+      "decision": "hold",
+      "note": "Tiny background target scope unresolved"
+    },
+    {
+      "index": 86,
+      "id": "lvis_000000421360",
+      "image_sha": "8e315a18dd8f0b313e766501387bd53d058f9a0d8d4a6dc536f7e6b74c7ab517",
+      "rows": [
+        "0 0.222257813 0.801276347 0.042546875 0.198571429",
+        "0 0.253984375 0.883548009 0.049718750 0.223067916",
+        "0 0.628515625 0.718501171 0.039125000 0.051522248",
+        "0 0.103921875 0.787985948 0.042593750 0.184449649",
+        "0 0.158296875 0.853618267 0.048437500 0.167704918",
+        "0 0.509437500 0.703524590 0.035718750 0.071873536",
+        "0 0.596375000 0.727107728 0.033062500 0.078384075",
+        "0 0.199546875 0.894367681 0.051218750 0.191451991"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 87,
+      "id": "lvis_000000424105",
+      "image_sha": "3cc6b351941143000b458ff8566751d954fbe454b7190fdb6049d5b1a1ce1198",
+      "rows": [
+        "0 0.507986842 0.641898437 0.102815789 0.132984375"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 88,
+      "id": "lvis_000000429971",
+      "image_sha": "7a30952d6061cc0e12fb4a23461c120ec827bf7c2f1b6353253c88370f296f21",
+      "rows": [
+        "0 0.735208333 0.549539063 0.027000000 0.067703125",
+        "0 0.189666667 0.541906250 0.032541667 0.071937500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 89,
+      "id": "lvis_000000430702",
+      "image_sha": "684a5b27dd38e48a0139bbce43ca55860e0ff4ea74a23bf478e70d6ab9e681b5",
+      "rows": [
+        "0 0.473664063 0.923968668 0.085484375 0.152062663"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 90,
+      "id": "lvis_000000435152",
+      "image_sha": "b2f995ecea29d58219773b15c652d41e149f5885f5bea94d8a2726e50111428a",
+      "rows": [
+        "0 0.640656250 0.094916667 0.087250000 0.189833333"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 91,
+      "id": "lvis_000000437412",
+      "image_sha": "bec0976ef8e4e9f5334242fe948bad90067fb30bcc2478f2776ce3098c6acc5d",
+      "rows": [
+        "0 0.895117188 0.441564706 0.209765625 0.494470588",
+        "0 0.397828125 0.074152941 0.092937500 0.148305882"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 92,
+      "id": "lvis_000000437516",
+      "image_sha": "9e3e9ec8077639c91aa2e75ae92a008cac10d34532ac9d3f78f8d86896a7e181",
+      "rows": [
+        "0 0.725632319 0.550343750 0.026346604 0.045406250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 93,
+      "id": "lvis_000000444028",
+      "image_sha": "ff98d4ecb95833de83fe3c4a97f64d9b72ebb188b608dc7d80f1be70791efa0f",
+      "rows": [
+        "0 0.594273437 0.850655738 0.021171875 0.096908665",
+        "0 0.558085938 0.838255269 0.020671875 0.099320843"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 94,
+      "id": "lvis_000000452113",
+      "image_sha": "2dccee06b01940933a3d33ae84c053521f37726ff9cc684f673767305132e587",
+      "rows": [
+        "0 0.027375000 0.589637002 0.034906250 0.150983607"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 95,
+      "id": "lvis_000000467138",
+      "image_sha": "3745cb1e15ff0e98542b8929e80ee88ed2e8e2cf88eac9c39f7fe957bc880a22",
+      "rows": [
+        "0 0.862529274 0.214187500 0.033161593 0.075656250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 96,
+      "id": "lvis_000000472478",
+      "image_sha": "9ca277d5a9ab3bee52299ce266a36099c38033f9221fa1958b432ba43e9e922c",
+      "rows": [
+        "0 0.968645833 0.283804687 0.062708333 0.302609375"
+      ],
+      "decision": "hold",
+      "note": "Boundary-cropped target material/outline insufficiently visible"
+    },
+    {
+      "index": 97,
+      "id": "lvis_000000475533",
+      "image_sha": "c20b02441807bfa0e25e0e744dcef22b7898c6d371ca536f5bcb7ac8a0af3b1e",
+      "rows": [
+        "0 0.272552693 0.525765625 0.083231850 0.144156250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 98,
+      "id": "lvis_000000480536",
+      "image_sha": "2fee7ca5d1a6dbc1edcebbfe44ce441418449e6e34a9ddd6d520f706e10e2d51",
+      "rows": [
+        "0 0.707867187 0.728185012 0.115734375 0.332716628"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 99,
+      "id": "lvis_000000501388",
+      "image_sha": "34c5a002d47341820a4fe5d85f3c5d750cd0e96ff6b60e811822533656f21055",
+      "rows": [
+        "0 0.654718750 0.859976415 0.123968750 0.280047170"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 100,
+      "id": "lvis_000000501824",
+      "image_sha": "4493e7ba0ae20eb2b3104c7d357c1aa5a31c7037c8daddfa60a6177bd81c0b4e",
+      "rows": [
+        "0 0.304015625 0.808313817 0.010875000 0.046135831"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 101,
+      "id": "lvis_000000503972",
+      "image_sha": "934401f0a20f85a4f6b53a69bf0c300b3ccf9477f0fbb1f64d604ef8054cea5d",
+      "rows": [
+        "0 0.093195312 0.458050089 0.071671875 0.267549195"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 102,
+      "id": "lvis_000000507154",
+      "image_sha": "bbd8fbc36f7fe49e665fc4a8450a8e771f8e2e8c1a66bee9e4e016e36c61b4a3",
+      "rows": [
+        "0 0.375984375 0.320520833 0.013781250 0.037666667",
+        "0 0.721671875 0.307000000 0.011937500 0.048333333",
+        "0 0.748265625 0.209729167 0.011656250 0.028708333",
+        "0 0.412359375 0.344739583 0.016906250 0.062312500",
+        "0 0.435742187 0.758697917 0.046890625 0.184062500",
+        "0 0.982617188 0.316479167 0.032828125 0.062250000",
+        "0 0.345000000 0.337229167 0.013687500 0.061208333"
+      ],
+      "decision": "hold",
+      "note": "One of seven partly hidden small targets remains unresolved"
+    },
+    {
+      "index": 103,
+      "id": "lvis_000000507875",
+      "image_sha": "231572d8d7f5527ea80b6ecb6a9adca1ad494e0765827564188dd3bc21df81f3",
+      "rows": [
+        "0 0.306437500 0.780781250 0.028458333 0.156281250"
+      ],
+      "decision": "hold",
+      "note": "Very narrow frame-edge target insufficiently visible"
+    },
+    {
+      "index": 104,
+      "id": "lvis_000000509379",
+      "image_sha": "9887b1a4ab40cc12d8a4e45c0d54446e502a861450414bb41cdf95e5a26866bb",
+      "rows": [
+        "0 0.698398437 0.604305882 0.018015625 0.073364706"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 105,
+      "id": "lvis_000000513806",
+      "image_sha": "baa4ead020b59ae33e3d6ca9701dbac91b08614fbc92180e47a2f0bd1c374ad8",
+      "rows": [
+        "0 0.760520833 0.578460938 0.139458333 0.277421875"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 106,
+      "id": "lvis_000000518932",
+      "image_sha": "b79ed6fb616137a75395ba51e5e30fa12f1a58ce9351fab57cbb638d5d5121a2",
+      "rows": [
+        "0 0.336030445 0.916921875 0.206487119 0.166156250"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 107,
+      "id": "lvis_000000521014",
+      "image_sha": "bb66abcbde9fcad1a13a7a5c31eb6aa86b482eb30612af824acfabd15577336a",
+      "rows": [
+        "0 0.054429688 0.454604167 0.040796875 0.103666667"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 108,
+      "id": "lvis_000000523684",
+      "image_sha": "10c597c72933f22c53a551d4d5c5fdc2c3573b53fd08765fd89797da6dd8710c",
+      "rows": [
+        "0 0.767062500 0.292295082 0.059593750 0.178782201",
+        "0 0.664820313 0.334168618 0.154140625 0.119672131",
+        "0 0.891085938 0.260210773 0.086609375 0.329274005"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 109,
+      "id": "lvis_000000549849",
+      "image_sha": "99bb99d82b6fa213b3576c85d45a7ac350a2865378498d74f0ef8f4c8e80ce99",
+      "rows": [
+        "0 0.018679688 0.436687500 0.026984375 0.053500000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 110,
+      "id": "lvis_000000562014",
+      "image_sha": "138b09489828d8335e205748e1eff1bf3aa243b040eed4dd320b3bd324706f8d",
+      "rows": [
+        "0 0.543607214 0.652484375 0.085290581 0.142187500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 111,
+      "id": "lvis_000000578391",
+      "image_sha": "200d4a5cb8c4960714e3b6cf63e190937e414e36f8372ef870910828ea956bfa",
+      "rows": [
+        "0 0.628531250 0.776885417 0.049281250 0.188479167"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 112,
+      "id": "plate__train__lvis_000000072866",
+      "image_sha": "c81551ce82c1cab28c3fd42d37cd0914109d8fa0c27d62dcbe0924529b94d566",
+      "rows": [
+        "0 0.020047170 0.617968750 0.040094340 0.157812500",
+        "0 0.062500000 0.611718750 0.054245283 0.160937500",
+        "0 0.108490566 0.617968750 0.066037736 0.148437500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 113,
+      "id": "plate__train__lvis_000000168422",
+      "image_sha": "aa119ceb37b8f9f6f6270acdf216a2cc005f13ce471b30cdb31634029bfce192",
+      "rows": [
+        "0 0.115625000 0.249218750 0.231250000 0.498437500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 114,
+      "id": "plate__train__lvis_000000193062",
+      "image_sha": "af3b3d24ff0b34d51ad1fb8662952f3a7c6b1a901c73b6469ccf6a3c567fec89",
+      "rows": [
+        "0 0.061000000 0.182952183 0.122000000 0.365904366",
+        "0 0.347000000 0.142411642 0.126000000 0.284823285"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 115,
+      "id": "plate__train__lvis_000000229233",
+      "image_sha": "c05e87e67e57e04740d8e725dca8b547ce88c608d4b5d0d3af804620ad4d59c9",
+      "rows": [
+        "0 0.315000000 0.501000000 0.060000000 0.290000000"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 116,
+      "id": "plate__train__lvis_000000334476",
+      "image_sha": "1cdf152d328a1175629c3643e67194cda41b874935dbeeb7915c7465522a14fb",
+      "rows": [
+        "0 0.085416667 0.201562500 0.170833333 0.403125000"
+      ],
+      "decision": "hold",
+      "note": "Blue container material/outline unresolved in boundary crop"
+    },
+    {
+      "index": 117,
+      "id": "plate__train__lvis_000000363727",
+      "image_sha": "123b13035515f0cda4b813d70a7aa7f5e594d92f9d7f619b845906ef26e89929",
+      "rows": [
+        "0 0.721093750 0.107058824 0.104687500 0.214117647"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 118,
+      "id": "plate__train__lvis_000000379820",
+      "image_sha": "298de714a7b95a0bd581dbce5a23706ff7e70c8199945bdbfe4d476a8e5eeed1",
+      "rows": [
+        "0 0.221875000 0.583550914 0.043750000 0.143603133",
+        "0 0.363281250 0.524804178 0.042187500 0.161879896",
+        "0 0.391406250 0.567885117 0.042187500 0.169712794",
+        "0 0.449218750 0.520887728 0.039062500 0.143603133",
+        "0 0.485156250 0.505221932 0.039062500 0.127937337",
+        "0 0.532031250 0.498694517 0.042187500 0.140992167",
+        "0 0.526562500 0.808093995 0.050000000 0.180156658"
+      ],
+      "decision": "hold",
+      "note": "Bottle count/completeness unresolved in picnic crowd"
+    },
+    {
+      "index": 119,
+      "id": "plate__train__lvis_000000422040",
+      "image_sha": "188bcea90e70d0cb94c40b5a89a00d1a46d25eed7663f36b243989080607c199",
+      "rows": [
+        "0 0.745833333 0.705468750 0.091666667 0.173437500",
+        "0 0.862500000 0.678125000 0.100000000 0.190625000",
+        "0 0.938541667 0.833593750 0.106250000 0.145312500"
+      ],
+      "decision": "hold",
+      "note": "Visible background PET bottles omitted from foreground-only annotations"
+    },
+    {
+      "index": 120,
+      "id": "plate__train__lvis_000000451800",
+      "image_sha": "c9c23635056b153cdb9f70d5c486b9547f636d402f6323fede7e485c4770960f",
+      "rows": [
+        "0 0.528906250 0.139583333 0.167187500 0.279166667"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    },
+    {
+      "index": 121,
+      "id": "plate__train__lvis_000000453552",
+      "image_sha": "4bcf2783a6f028ca647128a6f0695ce157cd82de2ae65e4dd349ed1064ba5491",
+      "rows": [
+        "0 0.020047170 0.635937500 0.040094340 0.146875000",
+        "0 0.070754717 0.644531250 0.056603774 0.167187500",
+        "0 0.122641509 0.638281250 0.056603774 0.151562500"
+      ],
+      "decision": "retain",
+      "note": "Whole scene and annotated targets reviewed; visible targets appear to be disposable plastic drink bottles. Native crops inspected where needed."
+    }
+  ],
+  "held_indices": [
+    5,
+    42,
+    51,
+    53,
+    61,
+    71,
+    82,
+    85,
+    96,
+    102,
+    103,
+    116,
+    118,
+    119
+  ],
+  "confirmed_negative_indices": [],
+  "limitations": "AI appearance only, not material certification. Whole uncertain photos/groups held, no source or validation-label edits."
+}

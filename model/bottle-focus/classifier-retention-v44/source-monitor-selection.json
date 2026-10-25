@@ -1,0 +1,224 @@
+{
+  "reference": [
+    0.995,
+    0.9077698412698414,
+    0.6179846971598125,
+    0.5138349672711655,
+    0.4756057496682884,
+    0.28203331388425823
+  ],
+  "candidates": [
+    {
+      "role": "initial",
+      "epoch": 0,
+      "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "values": [
+        0.995,
+        0.9077698412698414,
+        0.6179846971598125,
+        0.5138349672711655,
+        0.4756057496682884,
+        0.28203331388425823
+      ]
+    },
+    {
+      "role": "ap50",
+      "epoch": 1,
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691.pt",
+      "weights_sha": "5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691",
+      "values": [
+        0.995,
+        0.9206153846153848,
+        0.7744521603816118,
+        0.6297618179879099,
+        0.48395074224021595,
+        0.26043029689608643
+      ],
+      "reports": [
+        {
+          "weights_sha": "5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691",
+          "cohort": {
+            "name": "retention",
+            "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/classifier-retention-v44/data.yaml",
+            "photos": 24,
+            "boxes": 16,
+            "fingerprint": "92c249d7644b45d923b20916ecbb4c993a2522bd2a0c9e9eccd18662f5a13150",
+            "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+            "previously_seen_by_initial_and_v42": true
+          },
+          "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+          "declaration_sha": "6a169b8a2b7245ba5225effa658e3fe068613548c400d5eed99df858da200f3d",
+          "imgsz": 640,
+          "batch": 4,
+          "nms_iou": 0.5,
+          "test_time_augmentation": false,
+          "device": "mps",
+          "ultralytics_version": "8.4.175",
+          "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691.pt",
+          "AP50": 0.995,
+          "AP50_95": 0.9206153846153848,
+          "precision": 0.9952622021159141,
+          "recall": 1.0,
+          "independent_NHS_test": false
+        },
+        {
+          "weights_sha": "5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691",
+          "cohort": {
+            "name": "openimages",
+            "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/data.yaml",
+            "photos": 36,
+            "boxes": 17,
+            "fingerprint": "1662f8caeec4275e7fdca7c26e89bed6c346227800743fdc20937310e8f0e3d5",
+            "dataset_sha": "93d9ffa64fbd16a4fbcf68a031e6cf8c6b7acd4e8dad14df813be1a83e0b1140"
+          },
+          "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+          "declaration_sha": "6a169b8a2b7245ba5225effa658e3fe068613548c400d5eed99df858da200f3d",
+          "imgsz": 640,
+          "batch": 4,
+          "nms_iou": 0.5,
+          "test_time_augmentation": false,
+          "device": "mps",
+          "ultralytics_version": "8.4.175",
+          "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691.pt",
+          "AP50": 0.7744521603816118,
+          "AP50_95": 0.6297618179879099,
+          "precision": 0.6301811431658447,
+          "recall": 0.8823529411764706,
+          "independent_NHS_test": false
+        },
+        {
+          "weights_sha": "5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691",
+          "cohort": {
+            "name": "litter",
+            "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/data.yaml",
+            "photos": 32,
+            "boxes": 18,
+            "fingerprint": "acf8fd5f6133981c8aae103cf343d9fd04728fc069d23436b5849fbc90b84dd3",
+            "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319"
+          },
+          "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+          "declaration_sha": "6a169b8a2b7245ba5225effa658e3fe068613548c400d5eed99df858da200f3d",
+          "imgsz": 640,
+          "batch": 4,
+          "nms_iou": 0.5,
+          "test_time_augmentation": false,
+          "device": "mps",
+          "ultralytics_version": "8.4.175",
+          "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-5821b23bd37455009cefaea2f6a095d2ff5f986bd290e99fd418cab887287691.pt",
+          "AP50": 0.48395074224021595,
+          "AP50_95": 0.26043029689608643,
+          "precision": 0.5669133041435058,
+          "recall": 0.6111111111111112,
+          "independent_NHS_test": false
+        }
+      ]
+    },
+    {
+      "role": "latest",
+      "epoch": 6,
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7.pt",
+      "weights_sha": "7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7",
+      "values": [
+        0.995,
+        0.92075,
+        0.8313403263403263,
+        0.6730293040293039,
+        0.4930589266450917,
+        0.26384511866235166
+      ],
+      "reports": [
+        {
+          "weights_sha": "7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7",
+          "cohort": {
+            "name": "retention",
+            "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/classifier-retention-v44/data.yaml",
+            "photos": 24,
+            "boxes": 16,
+            "fingerprint": "92c249d7644b45d923b20916ecbb4c993a2522bd2a0c9e9eccd18662f5a13150",
+            "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+            "previously_seen_by_initial_and_v42": true
+          },
+          "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+          "declaration_sha": "6a169b8a2b7245ba5225effa658e3fe068613548c400d5eed99df858da200f3d",
+          "imgsz": 640,
+          "batch": 4,
+          "nms_iou": 0.5,
+          "test_time_augmentation": false,
+          "device": "mps",
+          "ultralytics_version": "8.4.175",
+          "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7.pt",
+          "AP50": 0.995,
+          "AP50_95": 0.92075,
+          "precision": 0.9934045744091405,
+          "recall": 1.0,
+          "independent_NHS_test": false
+        },
+        {
+          "weights_sha": "7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7",
+          "cohort": {
+            "name": "openimages",
+            "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/data.yaml",
+            "photos": 36,
+            "boxes": 17,
+            "fingerprint": "1662f8caeec4275e7fdca7c26e89bed6c346227800743fdc20937310e8f0e3d5",
+            "dataset_sha": "93d9ffa64fbd16a4fbcf68a031e6cf8c6b7acd4e8dad14df813be1a83e0b1140"
+          },
+          "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+          "declaration_sha": "6a169b8a2b7245ba5225effa658e3fe068613548c400d5eed99df858da200f3d",
+          "imgsz": 640,
+          "batch": 4,
+          "nms_iou": 0.5,
+          "test_time_augmentation": false,
+          "device": "mps",
+          "ultralytics_version": "8.4.175",
+          "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7.pt",
+          "AP50": 0.8313403263403263,
+          "AP50_95": 0.6730293040293039,
+          "precision": 0.6540654862395046,
+          "recall": 0.9411764705882353,
+          "independent_NHS_test": false
+        },
+        {
+          "weights_sha": "7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7",
+          "cohort": {
+            "name": "litter",
+            "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/data.yaml",
+            "photos": 32,
+            "boxes": 18,
+            "fingerprint": "acf8fd5f6133981c8aae103cf343d9fd04728fc069d23436b5849fbc90b84dd3",
+            "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319"
+          },
+          "dataset_sha": "a9644dbbf1a96171e5c072835d830822bceea50bcb0b21b993023cd7f2dfe9e7",
+          "declaration_sha": "6a169b8a2b7245ba5225effa658e3fe068613548c400d5eed99df858da200f3d",
+          "imgsz": 640,
+          "batch": 4,
+          "nms_iou": 0.5,
+          "test_time_augmentation": false,
+          "device": "mps",
+          "ultralytics_version": "8.4.175",
+          "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/weights/verified-7b3f35dfff03c2e5b02ae9f7d2a60e31ae721e836ab5c7b388a9d1b19b9ff4a7.pt",
+          "AP50": 0.4930589266450917,
+          "AP50_95": 0.26384511866235166,
+          "precision": 0.6588733618006432,
+          "recall": 0.6111111111111112,
+          "independent_NHS_test": false
+        }
+      ]
+    }
+  ],
+  "chosen": {
+    "role": "initial",
+    "epoch": 0,
+    "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+    "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+    "values": [
+      0.995,
+      0.9077698412698414,
+      0.6179846971598125,
+      0.5138349672711655,
+      0.4756057496682884,
+      0.28203331388425823
+    ]
+  }
+}

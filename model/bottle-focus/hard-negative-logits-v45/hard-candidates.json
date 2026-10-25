@@ -1,0 +1,550 @@
+[
+  {
+    "id": "commons_86795335",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_86795335.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_86795335.txt",
+    "image_sha": "54209db62f8111b36c3c814e9a7de0cc9f59e67ec827c4a95a162fc6c3b6030a",
+    "pixels": "9e263dcba39ba1663201907dc4dd7b3ecfb9adade6ae80524755de7d0ecbf0fc",
+    "source_group": "commons/86795335",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_86795335.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_86795335.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          291.3369140625,
+          285.2600402832031,
+          845.55126953125,
+          524.0704956054688
+        ],
+        "score": 0.9544953107833862
+      }
+    ],
+    "maximum_false_detection_score": 0.9544953107833862
+  },
+  {
+    "id": "commons_105655362",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_105655362.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_105655362.txt",
+    "image_sha": "27e7d63ae16979ae69634204e25c376fa7f8aa3c030a929c0fe83097fdb67a80",
+    "pixels": "9dcf02f8c414f20c19977c179adca4f1743118ed1a79c9ffe68fd95b491a59ab",
+    "source_group": "commons/105655362",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_105655362.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_105655362.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          727.3037109375,
+          270.1354064941406,
+          1098.823486328125,
+          468.1556701660156
+        ],
+        "score": 0.942467987537384
+      },
+      {
+        "xyxy": [
+          563.3341064453125,
+          350.0955810546875,
+          906.5452880859375,
+          536.7611694335938
+        ],
+        "score": 0.9322673678398132
+      },
+      {
+        "xyxy": [
+          0.0,
+          289.3359680175781,
+          471.0717468261719,
+          755.8612060546875
+        ],
+        "score": 0.6614997386932373
+      }
+    ],
+    "maximum_false_detection_score": 0.942467987537384
+  },
+  {
+    "id": "trash_detection__train__000067_jpg.rf.3b56849481858b7edd3d6e562e23d3be",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/trash_detection__train__000067_jpg.rf.3b56849481858b7edd3d6e562e23d3be.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/trash_detection__train__000067_jpg.rf.3b56849481858b7edd3d6e562e23d3be.txt",
+    "image_sha": "f7012085d293e7c38b775bc0248bdf7977e57c8ce80f771d499bd977842a6296",
+    "pixels": "529e796f262869339aa9eb66de5e3666f821fc0836e38b4b6bbfb7c476d07a5c",
+    "source_group": "trash_detection__000067_jpg",
+    "rows": [],
+    "source_rows": [
+      "0 0.60471491 0.57687500 0.37280702 0.11975000"
+    ],
+    "exposures": 8,
+    "review_index": 39,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/images/train/trash_detection__train__000067_jpg.rf.3b56849481858b7edd3d6e562e23d3be.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/labels/train/trash_detection__train__000067_jpg.rf.3b56849481858b7edd3d6e562e23d3be.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          267.5624084472656,
+          331.77301025390625,
+          504.1639099121094,
+          405.39324951171875
+        ],
+        "score": 0.9412442445755005
+      }
+    ],
+    "maximum_false_detection_score": 0.9412442445755005
+  },
+  {
+    "id": "commons_61869021",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_61869021.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_61869021.txt",
+    "image_sha": "5d903f837bfe63d5a6965b6123427acd0da5e68ce5170531dd83d5fec15919cc",
+    "pixels": "10fd8ee8b1ca5325b161260fe3f3d0d4a8b85c5f00ed00bfd0cbe6cdaa69248c",
+    "source_group": "commons/61869021",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_61869021.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_61869021.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          766.5421142578125,
+          485.9478454589844,
+          927.8201904296875,
+          565.7227783203125
+        ],
+        "score": 0.8739885091781616
+      }
+    ],
+    "maximum_false_detection_score": 0.8739885091781616
+  },
+  {
+    "id": "commons_55127028",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_55127028.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_55127028.txt",
+    "image_sha": "5cf21068c24b4451a98f027f550e61230d4ce88320dd4eb77e3ef663ede051e4",
+    "pixels": "8a0bdbdd824e20dc5ae1ae5e0c8dab4f5432fc67b76a828bf3e0e79436a86f9f",
+    "source_group": "commons/55127028",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_55127028.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_55127028.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          614.181640625,
+          56.71417236328125,
+          1238.3515625,
+          310.0009765625
+        ],
+        "score": 0.8111277222633362
+      },
+      {
+        "xyxy": [
+          431.7635498046875,
+          473.7515869140625,
+          778.126953125,
+          677.02197265625
+        ],
+        "score": 0.7859204411506653
+      }
+    ],
+    "maximum_false_detection_score": 0.8111277222633362
+  },
+  {
+    "id": "commons_27950227",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_27950227.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_27950227.txt",
+    "image_sha": "8260287d2cd2bc3e90aad2112e132d1a25a7547717bc7300f44b7e149665a578",
+    "pixels": "e50967c37b48dd66496a9ff60bc03ef6da25b38a83bd9d3c497d4361c50b5e23",
+    "source_group": "commons/27950227",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_27950227.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_27950227.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          235.0091552734375,
+          506.4942626953125,
+          376.89080810546875,
+          615.2025146484375
+        ],
+        "score": 0.7787462472915649
+      },
+      {
+        "xyxy": [
+          546.7178955078125,
+          491.799072265625,
+          665.3604736328125,
+          747.47314453125
+        ],
+        "score": 0.4755648970603943
+      },
+      {
+        "xyxy": [
+          412.995361328125,
+          143.21490478515625,
+          515.3890991210938,
+          269.2170104980469
+        ],
+        "score": 0.3552238345146179
+      },
+      {
+        "xyxy": [
+          988.3214721679688,
+          468.24151611328125,
+          1103.428466796875,
+          629.5331420898438
+        ],
+        "score": 0.26881149411201477
+      },
+      {
+        "xyxy": [
+          520.12451171875,
+          182.7174072265625,
+          631.420654296875,
+          376.59246826171875
+        ],
+        "score": 0.185970738530159
+      },
+      {
+        "xyxy": [
+          893.5032958984375,
+          392.82470703125,
+          981.8577880859375,
+          479.98822021484375
+        ],
+        "score": 0.1699782907962799
+      },
+      {
+        "xyxy": [
+          1255.33935546875,
+          158.24664306640625,
+          1279.634521484375,
+          251.3062744140625
+        ],
+        "score": 0.10933540761470795
+      }
+    ],
+    "maximum_false_detection_score": 0.7787462472915649
+  },
+  {
+    "id": "commons_77876408",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_77876408.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_77876408.txt",
+    "image_sha": "deb432acba70d6ca63bfbc5c0726af48639f183050a64a38b00b547ae3a81090",
+    "pixels": "cff31e6537342dc86f89555efd29619203fad611edc38090b78181ebf9037ab7",
+    "source_group": "commons/77876408",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_77876408.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_77876408.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          221.66827392578125,
+          350.1894226074219,
+          1015.8336791992188,
+          696.8228149414062
+        ],
+        "score": 0.7425510287284851
+      }
+    ],
+    "maximum_false_detection_score": 0.7425510287284851
+  },
+  {
+    "id": "openimages__train__0018f8f854761fd8",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__0018f8f854761fd8.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__0018f8f854761fd8.txt",
+    "image_sha": "0154dcbc9a1bce3db8514036b03a120bfc17661ac1496ebe95904859c1720498",
+    "pixels": "774aa5a08462789eca51969609249e2ed53498ce560525a12bc1fb0e57dd1e7e",
+    "source_group": "openimages/0018f8f854761fd8",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__0018f8f854761fd8.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__0018f8f854761fd8.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          521.7724609375,
+          394.1866149902344,
+          577.3976440429688,
+          521.4373779296875
+        ],
+        "score": 0.7334244251251221
+      },
+      {
+        "xyxy": [
+          532.981201171875,
+          305.86199951171875,
+          583.0180053710938,
+          450.55633544921875
+        ],
+        "score": 0.3546600341796875
+      },
+      {
+        "xyxy": [
+          479.0810546875,
+          396.3872985839844,
+          523.8357543945312,
+          481.52215576171875
+        ],
+        "score": 0.24354948103427887
+      },
+      {
+        "xyxy": [
+          416.28961181640625,
+          350.4639587402344,
+          461.108154296875,
+          417.89520263671875
+        ],
+        "score": 0.11082851886749268
+      }
+    ],
+    "maximum_false_detection_score": 0.7334244251251221
+  },
+  {
+    "id": "commons_87541597",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_87541597.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_87541597.txt",
+    "image_sha": "18f8a529722004f551469395ea1228de825bf1d462b7e49d630983eb93f25248",
+    "pixels": "f14eb597a94da63e709520df175c7c348dcf75bf20568c2967f441a2eed4299c",
+    "source_group": "commons/87541597",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_87541597.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_87541597.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          243.52882385253906,
+          522.173095703125,
+          1065.496826171875,
+          1386.0589599609375
+        ],
+        "score": 0.7320762872695923
+      }
+    ],
+    "maximum_false_detection_score": 0.7320762872695923
+  },
+  {
+    "id": "commons_55127030",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_55127030.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_55127030.txt",
+    "image_sha": "9c713fd1826e9f3f8fb7cb97764ec5b62d289b8c92cf859a6df8218a636d0f3e",
+    "pixels": "7b2e932edd0f26deeff38cc345caf9d48edffbcd3ccdc34a6f8f4d639d41614c",
+    "source_group": "commons/55127030",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_55127030.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_55127030.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          326.4009094238281,
+          90.4644775390625,
+          1116.54248046875,
+          597.8707275390625
+        ],
+        "score": 0.7193924188613892
+      }
+    ],
+    "maximum_false_detection_score": 0.7193924188613892
+  },
+  {
+    "id": "openimages__train__005666aa098abe8e",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__005666aa098abe8e.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__005666aa098abe8e.txt",
+    "image_sha": "d6c8a8b55eba108cfd86cab3072d1420c7dd7781934c71d4b1c9a683ec7eaee1",
+    "pixels": "6f8940a4af4d74b1b10197629e58b75d62037408101cc84f3399d20747694c37",
+    "source_group": "openimages/005666aa098abe8e",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__005666aa098abe8e.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__005666aa098abe8e.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          53.28319549560547,
+          432.6802673339844,
+          351.5880432128906,
+          1023.1349487304688
+        ],
+        "score": 0.6768020391464233
+      }
+    ],
+    "maximum_false_detection_score": 0.6768020391464233
+  },
+  {
+    "id": "commons_88001960",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_88001960.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_88001960.txt",
+    "image_sha": "a003100b5011b091031cd21931155bd9fde5a8a025a90b5c178e985cc1bf7fd3",
+    "pixels": "592febcee7d8c9ef73d7ecaa636168b0b37cab81cbf0341328106fdbae74f500",
+    "source_group": "commons/88001960",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_88001960.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_88001960.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          513.4681396484375,
+          628.3175048828125,
+          856.0296020507812,
+          1063.074462890625
+        ],
+        "score": 0.6717725992202759
+      }
+    ],
+    "maximum_false_detection_score": 0.6717725992202759
+  },
+  {
+    "id": "openimages__train__0051803283b6bef6",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__0051803283b6bef6.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__0051803283b6bef6.txt",
+    "image_sha": "7775572d848b597baba9aad2b4ddaf67c6dabdf4df129104ed8f3b178653d4bc",
+    "pixels": "24a57ef71c26464fac9341c515acccc3b06a65cfc608d6be3a1bb47dcd0e834a",
+    "source_group": "openimages/0051803283b6bef6",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__0051803283b6bef6.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__0051803283b6bef6.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          0.852832019329071,
+          17.581640243530273,
+          380.22723388671875,
+          1024.0
+        ],
+        "score": 0.6309034824371338
+      },
+      {
+        "xyxy": [
+          600.9469604492188,
+          0.23159179091453552,
+          766.9924926757812,
+          784.5096435546875
+        ],
+        "score": 0.266458123922348
+      }
+    ],
+    "maximum_false_detection_score": 0.6309034824371338
+  },
+  {
+    "id": "commons_137736965",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_137736965.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_137736965.txt",
+    "image_sha": "40ccfd271249035a123a4ee3d9b40b6a5c2af19979ae2f3ddd47223259ae8b06",
+    "pixels": "e143dcbcc700c2a583a683283bff22feea4a5db6ef2ceb58918bb88460dd20fb",
+    "source_group": "commons/137736965",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/images/train/commons_137736965.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/labels/train/commons_137736965.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          534.7966918945312,
+          367.9272766113281,
+          898.3455200195312,
+          1136.0496826171875
+        ],
+        "score": 0.6061083078384399
+      }
+    ],
+    "maximum_false_detection_score": 0.6061083078384399
+  },
+  {
+    "id": "openimages__train__0057c1a116e7603a",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__0057c1a116e7603a.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__0057c1a116e7603a.txt",
+    "image_sha": "bfb0423dda368ba992d2bdc0fb21040152204c52f6f144478b02f2fc4e29c840",
+    "pixels": "0fd3456a266b0c8652b1eaab48dea676b0ec60afc7d5a361b29f7ff53f7b050f",
+    "source_group": "openimages/0057c1a116e7603a",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 4,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/images/train/openimages__train__0057c1a116e7603a.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/labels/train/openimages__train__0057c1a116e7603a.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          381.43927001953125,
+          401.3046875,
+          410.49432373046875,
+          450.1197204589844
+        ],
+        "score": 0.5499064326286316
+      },
+      {
+        "xyxy": [
+          768.50927734375,
+          336.37103271484375,
+          786.7305908203125,
+          379.40130615234375
+        ],
+        "score": 0.39394909143447876
+      },
+      {
+        "xyxy": [
+          517.9683837890625,
+          455.9978942871094,
+          534.0128173828125,
+          524.548095703125
+        ],
+        "score": 0.3066805303096771
+      },
+      {
+        "xyxy": [
+          485.9505920410156,
+          166.03866577148438,
+          502.45050048828125,
+          219.67529296875
+        ],
+        "score": 0.1476001739501953
+      }
+    ],
+    "maximum_false_detection_score": 0.5499064326286316
+  },
+  {
+    "id": "plate__train__lvis_000000001455",
+    "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000001455.jpg",
+    "source_label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/plate__train__lvis_000000001455.txt",
+    "image_sha": "8f4a1d0c7aaa40a0ca0f0fd0af425d67cf60bbd956bca8fcea231a77c0a85a55",
+    "pixels": "514aea9e496c226e618b25570e30be91e5da239e6f245abae873cecca331769d",
+    "source_group": "plate__lvis_000000001455.jpg",
+    "rows": [],
+    "source_rows": [],
+    "exposures": 5,
+    "reviewed_old_negative": true,
+    "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/images/train/plate__train__lvis_000000001455.jpg",
+    "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/labels/train/plate__train__lvis_000000001455.txt",
+    "predictions": [
+      {
+        "xyxy": [
+          271.798583984375,
+          6.7523064613342285,
+          310.485595703125,
+          95.15876770019531
+        ],
+        "score": 0.5429056882858276
+      }
+    ],
+    "maximum_false_detection_score": 0.5429056882858276
+  }
+]

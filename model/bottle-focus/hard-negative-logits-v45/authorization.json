@@ -1,0 +1,8 @@
+{
+  "declaration_sha": "3dade78ffddc4470688a5a1848985093cdb61e61564d17f9b6f2ff2c8c30f143",
+  "optimization_authorized": true,
+  "maximum_epochs_authorized": 20,
+  "experiment_epochs": 3,
+  "user_instruction": "Optimize bottle after regression; user explicitly confirmed only disposable plastic drink bottles",
+  "scope": "Three-epoch hard-negative calibration under20epoch cap; unchanged original benchmark"
+}
