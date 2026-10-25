@@ -1,0 +1,25 @@
+{
+  "weights_sha": "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013",
+  "cohort": {
+    "name": "openimages",
+    "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/data.yaml",
+    "photos": 36,
+    "boxes": 17,
+    "fingerprint": "1662f8caeec4275e7fdca7c26e89bed6c346227800743fdc20937310e8f0e3d5",
+    "dataset_sha": "93d9ffa64fbd16a4fbcf68a031e6cf8c6b7acd4e8dad14df813be1a83e0b1140"
+  },
+  "dataset_sha": "ccaacc22a7a51f1b6b3f464f1bf97da704df415f4f99b2133438055105bebeac",
+  "declaration_sha": "8a95028e1c3dbbea9c7fb03157917fcde9bf60c6be74e1b140186b5ef1a1c418",
+  "imgsz": 640,
+  "batch": 4,
+  "nms_iou": 0.5,
+  "test_time_augmentation": false,
+  "device": "mps",
+  "ultralytics_version": "8.4.175",
+  "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/weights/verified-95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013.pt",
+  "AP50": 0.8866666666666666,
+  "AP50_95": 0.722070698051948,
+  "precision": 0.7015896511786426,
+  "recall": 0.8823529411764706,
+  "independent_NHS_test": false
+}

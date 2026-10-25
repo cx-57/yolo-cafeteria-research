@@ -1,0 +1,10 @@
+{
+  "declaration_sha": "8a95028e1c3dbbea9c7fb03157917fcde9bf60c6be74e1b140186b5ef1a1c418",
+  "progress": {
+    "epoch": 17,
+    "AP50": 0.7676625446815133,
+    "AP50_95": 0.4966582407401437,
+    "metric_source": "combined_development_monitor",
+    "weights_sha": "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+  }
+}

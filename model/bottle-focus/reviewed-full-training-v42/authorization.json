@@ -1,0 +1,5 @@
+{
+  "full_training_authorized": true,
+  "user_instruction": "Start the prepared bottle training run, capped at 20 epochs.",
+  "declaration_sha": "8a95028e1c3dbbea9c7fb03157917fcde9bf60c6be74e1b140186b5ef1a1c418"
+}

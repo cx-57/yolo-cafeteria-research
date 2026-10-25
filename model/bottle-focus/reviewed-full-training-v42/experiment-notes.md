@@ -13,3 +13,9 @@ A promotion requires both original benchmark AP metrics to meet or exceed84.0710
 The runner checks a declaration-bound authorization receipt before any training. No authorization or training-start file has been created. At least2GiBfree is required. APFS byte-identical copy-on-write sharing recovered space while retaining every checkpoint/image/native-library file and independent inodes; storage receipts record byte hashes.
 
 Verification:12focused V42tests,18V40tests and237root tests pass. Independent read-only review found no concrete P1/P2 findings, including final declaration/preflight hashes. Actual runner invocation without authorization exited at the pause guard before dataset traversal/training. All246original benchmark image/label hashes and both protected checkpoint SHAs match. Remote CI is not verified; prior account billing/spending failure remains external.
+
+## Completed outcome
+
+The20epoch cap stopped early at17epochs (native combined-monitor localization peaked at7; patience10). Source-separated retention selected epoch17, SHA95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013. Its single unchanged246photo/67box original benchmark measured79.397105% AP50 /57.972517% AP50–95, below the protected84.071068% /62.060566% initialization. No promotion and no90% move-on. OpenImages monitor88.666667%/72.207070% and litter69.152469%/32.682188% were source-only gains, not original benchmark accuracy.
+
+V43 cached prediction analysis diagnoses false-positive overconfidence; V44 prepares classifier-only training with exact geometry protection, reviewed training-only holds/correction, and a source-matched retention cohort. Completed V42 code/data/declaration/checkpoints remain unchanged.
