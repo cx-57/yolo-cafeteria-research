@@ -2,7 +2,7 @@
   "root_suite": {
     "tests": 237,
     "passed": true,
-    "log_sha256": "ebde1275a2bf954d679595b2a772c5723ca5f836999407d45f571262cac741ec"
+    "log_sha256": "d216ced570eaeca5e05a3499bc6b968c217446d19dd2f6b947759cfa83927595"
   },
   "v42_focused": {
     "tests": 12,
@@ -13,15 +13,16 @@
     "tests": 18,
     "passed": true
   },
-  "independent_review": "Two read-only review passes: no concrete P1/P2 findings; final declaration and preflight hashes checked",
+  "independent_review": "Prior full pipeline review found no concrete P1/P2; this update only caps epochs at20, uses that cap in the epoch assertion and refreshes records",
   "actual_pause_guard": {
     "process_exit": 1,
     "reason": "Expected ValueError requiring explicit declaration-bound user authorization",
     "log_sha256": "b15fe44a0cd7349137ce826508244c39a82d5c5d038bfb03605db47877546094",
     "training_start_created": false
   },
-  "declaration_sha": "bb2ef57a34c4a047bac36619c290c6db2982490fb2fb07079a7e0640fc4de755",
-  "preflight_sha": "d2049259f97aa093b105fa0f69a78f77646dece67e9f253b90169fe696fc7cc9",
+  "declaration_sha": "8a95028e1c3dbbea9c7fb03157917fcde9bf60c6be74e1b140186b5ef1a1c418",
+  "preflight_sha": "32f92b29ec8c12241b2c497689bab454a5b0335ca5bde1021eb493fbcebff92b",
   "full_training_started": false,
-  "remote_CI_verified": false
+  "remote_CI_verified": false,
+  "configured_max_epochs": 20
 }

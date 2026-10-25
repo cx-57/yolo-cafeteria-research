@@ -4,7 +4,7 @@ The user requested90% validated AP50 before moving on, without overfitting, and 
 
 Prepared dataset:725unique source photos,700bottle boxes,2732scheduled training exposures. It preserves all603V36parents/561boxes/2244exposures, adding58OpenImages positives,29fresh litter positives and35reviewed absence backgrounds. New source repeats are2/8/4respectively; repeats are not independent photos. All68permanent monitor photos, byte/pixel aliases and available source groups are excluded. Source boxes remain unchanged and full frames are used.
 
-Recipe:40epochs maximum with patience10, all YOLO11s features trainable from balanced88877bbf…, BatchNorm running statistics fixed, AdamW1e-5,batch4/nbs16,640,MPS,seed43,mosaic.3,scale.5,translate.1,close_mosaic10,cosine LR. This is a hypothesis to test, not a predicted90% result. Previous small-data short trials regressed; V40 also showed poor localization on fresh litter.
+Recipe:20epochs maximum with patience10, all YOLO11s features trainable from balanced88877bbf…, BatchNorm running statistics fixed, AdamW1e-5,batch4/nbs16,640,MPS,seed43,mosaic.3,scale.5,translate.1,close_mosaic10,cosine LR. This is a hypothesis to test, not a predicted90% result. Previous small-data short trials regressed; V40 also showed poor localization on fresh litter.
 
 Native checkpoint retention uses the combined68photo/35box monitor. Fresh final selection evaluates at most3distinct trained checkpoints on both cohorts separately, ranks minimum AP change then mean change versus the balanced initialization, and keeps the initial model eligible. All four source metrics must be nonregressing and mean improvement≥.01 before one original benchmark candidate may be evaluated. The original benchmark cannot choose epochs.
 

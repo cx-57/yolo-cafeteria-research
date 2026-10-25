@@ -12,7 +12,7 @@ sha=build.sha;save=build.save;load=lambda p:json.loads(Path(p).read_text())
 WEIGHTS=build.CACHE/'weights'
 SOURCE=Path('/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt')
 INITIAL_SHA='88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518'
-RECIPE=dict(epochs=40,batch=4,nbs=16,imgsz=640,device='mps',workers=0,optimizer='AdamW',lr0=1e-5,warmup_bias_lr=0.,warmup_epochs=1.,seed=43,patience=10,freeze=0,plots=False,save=True,mosaic=.3,close_mosaic=10,scale=.5,translate=.1,cos_lr=True)
+RECIPE=dict(epochs=20,batch=4,nbs=16,imgsz=640,device='mps',workers=0,optimizer='AdamW',lr0=1e-5,warmup_bias_lr=0.,warmup_epochs=1.,seed=43,patience=10,freeze=0,plots=False,save=True,mosaic=.3,close_mosaic=10,scale=.5,translate=.1,cos_lr=True)
 def trainability(model):
  trainable=[(n,p) for n,p in model.named_parameters() if p.requires_grad]
  counts={role:sum(p.numel() for n,p in trainable if lo<=int(n.split('.')[1])<hi) for role,lo,hi in [('backbone',0,11),('neck',11,23),('head',23,24)]}
@@ -44,7 +44,7 @@ def main():
  def completed(trainer):
   _,_,a,b=trainer.validator.metrics.box.class_result(0)
   point=dict(epoch=trainer.epoch+1,AP50=float(a),AP50_95=float(b),metric_source='combined_development_monitor')
-  assert 1<=point['epoch']<=40 and 0<=point['AP50_95']<=point['AP50']<=1
+  assert 1<=point['epoch']<=RECIPE['epochs'] and 0<=point['AP50_95']<=point['AP50']<=1
   for role,key in [('ap50','AP50'),('localization','AP50_95')]:
    path=RUN/f'native-{role}.json';old=load(path) if path.exists() else None
    if old is None or point[key]>old[key]:

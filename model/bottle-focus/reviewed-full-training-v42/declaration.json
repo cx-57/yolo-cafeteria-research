@@ -9,7 +9,7 @@
     "partition.py": "bbcc431b4656ab328c6c3111fa1ddfc11de8c58339965c25b2d85a37270e70c3",
     "preflight.py": "5d83efc8382d48bce8b9872c7a1d016eeab1559e3380604f3075654b99f68089",
     "protocol.py": "514b560ee8ff9c9408213da16d11a562fb46542af0cc676bf38544638909bda4",
-    "run.py": "f98decc19bca82050291ad564eb7e7f68a2974358e3233f875d21127f980d065",
+    "run.py": "1a609865279d5a2040de451958f3cd73e25e571519f2865cc9f6646d17b724f3",
     "sources.py": "77fb618314f57cb10fa3d747f733fdddd2d75ef7d7b910ce52dcfd0d042325d9"
   },
   "reference_shas": {
@@ -48,7 +48,7 @@
     "source-coverage-diagnostic-v40/scale.py": "2ab9471877ae5a66217e1dd2847850a0bff0b96aa201f5515fbf290e6a0eb6bd"
   },
   "recipe": {
-    "epochs": 40,
+    "epochs": 20,
     "batch": 4,
     "nbs": 16,
     "imgsz": 640,

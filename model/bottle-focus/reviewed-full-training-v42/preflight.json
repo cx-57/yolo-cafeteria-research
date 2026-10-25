@@ -1,6 +1,6 @@
 {
-  "verified_at": "2026-10-25T15:29:06.275570+00:00",
-  "declaration_sha": "bb2ef57a34c4a047bac36619c290c6db2982490fb2fb07079a7e0640fc4de755",
+  "verified_at": "2026-10-25T16:13:00.353273+00:00",
+  "declaration_sha": "8a95028e1c3dbbea9c7fb03157917fcde9bf60c6be74e1b140186b5ef1a1c418",
   "dataset_sha": "ccaacc22a7a51f1b6b3f464f1bf97da704df415f4f99b2133438055105bebeac",
   "training_photos": 725,
   "training_bottle_boxes": 700,
@@ -19,7 +19,7 @@
   "manifest_sha": "0a6ba6bff3de2c104e648a49f5b216d5bb34a1757690a05cafd611ea9cd7e35f",
   "balanced_weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
   "legacy_weights_sha": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
-  "free_disk_bytes": 2312929280,
+  "free_disk_bytes": 6558781440,
   "full_training_started": false,
   "model_inference_performed": false,
   "authorization_record_exists": false

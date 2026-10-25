@@ -4,7 +4,7 @@
 
 **Goal:** Prepare a reproducible larger bottle training run seeking validated90% AP50 while retaining localization quality; pause before launching full training as the user requested.
 
-**Architecture:** Preserve V36 training lineage and add only twice AI-reviewed, provenance-joined, overlap-screened V37/V38/V39/V41 sources outside both permanent monitors. Train all YOLO11s features from the protected balanced incumbent, with frozen BatchNorm statistics and a bounded40-epoch budget. Select using source-separated monitors; the original246-photo benchmark can evaluate at most one final candidate after monitor gates pass.
+**Architecture:** Preserve V36 training lineage and add only twice AI-reviewed, provenance-joined, overlap-screened V37/V38/V39/V41 sources outside both permanent monitors. Train all YOLO11s features from the protected balanced incumbent, with frozen BatchNorm statistics and a bounded20-epoch budget. Select using source-separated monitors; the original246-photo benchmark can evaluate at most one final candidate after monitor gates pass.
 
 **Tech stack:** Python3.12, Ultralytics8.4.175, PyTorch MPS, Pillow, unittest.
 
@@ -16,7 +16,7 @@
 - Balanced incumbent84.071068% /62.060566% remains protected; no promotion unless both original benchmark metrics are nonregressing for the same checkpoint.
 - Old36-photo monitor and new32-photo litter diagnostic, source groups, byte/pixel aliases remain permanently excluded from training. Monitors are development evidence, not independent NHS tests.
 - No source box edits, no synthetic crops, no new validation threshold/TTA sweeps. Source repeats are exposures, not new independent photos.
-- Recipe: YOLO11s balanced88877bbf… init, all layers trainable except fixed DFL, BatchNorm running statistics fixed, max40epochs, patience10, AdamW1e-5, batch4/nbs16,640,MPS,workers0,seed43,mosaic.3,scale.5,translate.1,close_mosaic10,warmup1,cosineLR.
+- Recipe: YOLO11s balanced88877bbf… init, all layers trainable except fixed DFL, BatchNorm running statistics fixed, max20epochs, patience10, AdamW1e-5, batch4/nbs16,640,MPS,workers0,seed43,mosaic.3,scale.5,translate.1,close_mosaic10,warmup1,cosineLR.
 - Preserve2244 old exposures; new OpenImages twice, litter positives eight times, backgrounds four times. Expected725unique photos and2732exposures, final counts derived and verified.
 - Combined68-photo monitor retains native bestAP50/bestAP95/latest; freshly evaluate at most3 distinct trained checkpoints on each separate cohort. Rank by minimum of four AP deltas against the initial model, tie by mean delta then earliest epoch. Require all four nonregressing and mean gain≥.01 before one original benchmark inference. Initial weights remain an eligible no-change outcome.
 - Stop on insufficient disk before training (<2GiB), preserve optimizer/resume and selected checkpoints, never delete unique weights to free space.
