@@ -1,0 +1,13 @@
+.F
+======================================================================
+FAIL: test_actual_parameters_and_bn_guard_backbone_neck_and_head (test_trainability.TrainabilityTests.test_actual_parameters_and_bn_guard_backbone_neck_and_head)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/reviewed-neck-v31/test_trainability.py", line 24, in test_actual_parameters_and_bn_guard_backbone_neck_and_head
+    with self.assertRaises(AssertionError):guard.audit(model)
+AssertionError: AssertionError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.015s
+
+FAILED (failures=1)

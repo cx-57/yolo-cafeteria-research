@@ -1,0 +1,14 @@
+START_JOINT_PHASE 0
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/continue_training.py", line 51, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/continue_training.py", line 44, in main
+    print('START_JOINT_PHASE',before,flush=True);execute()
+                                                 ^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/continue_training.py", line 26, in execute
+    with log.open('w') as output:subprocess.run(command,env=dict(os.environ,BOTTLE_PHASE_EPOCHS='3'),stdout=output,stderr=subprocess.STDOUT,check=True)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python', '/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/run.py']' returned non-zero exit status 1.

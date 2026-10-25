@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/initial.pt
+model: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/last_resume.pt
 data: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/data.yaml
 epochs: 40
 time: null
@@ -25,7 +25,7 @@ single_cls: false
 rect: false
 cos_lr: false
 close_mosaic: 0
-resume: false
+resume: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/joint-metric-v30/last_resume.pt
 amp: true
 fraction: 1.0
 profile: false

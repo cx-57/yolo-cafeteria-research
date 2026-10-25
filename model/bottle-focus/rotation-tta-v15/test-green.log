@@ -1,0 +1,7 @@
+test_four_views_keep_identity_scores_and_model_state (test_rotation_tta.NativePredictionIntegrity.test_four_views_keep_identity_scores_and_model_state) ... ok
+test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.621s
+
+OK

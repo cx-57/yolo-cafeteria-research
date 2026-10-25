@@ -1,0 +1,52 @@
+test_both_views_preserve_consistent_confidence (test_fusion.FusionBehavior.test_both_views_preserve_consistent_confidence) ... FAIL
+test_clips_outside_box_to_non_square_frame (test_fusion.FusionBehavior.test_clips_outside_box_to_non_square_frame) ... FAIL
+test_empty_views_return_valid_empty_detection_tensors (test_fusion.FusionBehavior.test_empty_views_return_valid_empty_detection_tensors) ... ok
+test_native_validator_fuses_two_prediction_segments (test_fusion.FusionBehavior.test_native_validator_fuses_two_prediction_segments) ... FAIL
+test_two_supporting_views_rank_above_single_view_false_alarm (test_fusion.FusionBehavior.test_two_supporting_views_rank_above_single_view_false_alarm) ... FAIL
+
+======================================================================
+FAIL: test_both_views_preserve_consistent_confidence (test_fusion.FusionBehavior.test_both_views_preserve_consistent_confidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/flip-fusion-v18/test_fusion.py", line 21, in test_both_views_preserve_consistent_confidence
+    torch.testing.assert_close(out['conf'],torch.tensor([.8]))
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: The values for attribute 'shape' do not match: torch.Size([0]) != torch.Size([1]).
+
+======================================================================
+FAIL: test_clips_outside_box_to_non_square_frame (test_fusion.FusionBehavior.test_clips_outside_box_to_non_square_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/flip-fusion-v18/test_fusion.py", line 30, in test_clips_outside_box_to_non_square_frame
+    torch.testing.assert_close(out['bboxes'],torch.tensor([[0.,0.,20.,50.]]))
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: The values for attribute 'shape' do not match: torch.Size([0, 4]) != torch.Size([1, 4]).
+
+======================================================================
+FAIL: test_native_validator_fuses_two_prediction_segments (test_fusion.FusionBehavior.test_native_validator_fuses_two_prediction_segments)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/flip-fusion-v18/test_fusion.py", line 39, in test_native_validator_fuses_two_prediction_segments
+    torch.testing.assert_close(out['conf'],torch.tensor([.6]))
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 1 / 1 (100.0%)
+Greatest absolute difference: 0.19999998807907104 at index (0,) (up to 1e-05 allowed)
+Greatest relative difference: 0.3333333134651184 at index (0,) (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_two_supporting_views_rank_above_single_view_false_alarm (test_fusion.FusionBehavior.test_two_supporting_views_rank_above_single_view_false_alarm)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/flip-fusion-v18/test_fusion.py", line 13, in test_two_supporting_views_rank_above_single_view_false_alarm
+    self.assertEqual(len(out['conf']),2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.082s
+
+FAILED (failures=4)

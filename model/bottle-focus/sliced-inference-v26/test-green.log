@@ -1,0 +1,8 @@
+.Fast image access ✅ (ping: 0.0±0.0 ms, read: 637.9±0.0 MB/s, size: 15.2 KB)
+[KScanning /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpq8m38scw/labels... 1 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1/1 289.8it/s 0.0s
+New cache created: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpq8m38scw/labels.cache
+.
+----------------------------------------------------------------------
+Ran 2 tests in 0.499s
+
+OK

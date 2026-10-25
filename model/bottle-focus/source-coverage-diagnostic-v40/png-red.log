@@ -1,0 +1,22 @@
+...E.....
+======================================================================
+ERROR: test_png_with_exif_access_can_be_verified_without_loading_order_error (test_admission.AdmissionTests.test_png_with_exif_access_can_be_verified_without_loading_order_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/test_admission.py", line 16, in test_png_with_exif_access_can_be_verified_without_loading_order_error
+    self.assertEqual(len(self.admit()['rows']),1)
+                         ^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/test_admission.py", line 36, in admit
+    return a.admit(self.source,self.review,self.official,self.screen,**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/admission.py", line 26, in admit
+    w,h=picture.size;picture.verify()
+                     ^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/.venv/lib/python3.12/site-packages/PIL/PngImagePlugin.py", line 854, in verify
+    raise RuntimeError(msg)
+RuntimeError: verify must be called directly after open
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.034s
+
+FAILED (errors=1)

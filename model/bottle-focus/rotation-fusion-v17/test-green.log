@@ -1,0 +1,10 @@
+test_all_four_views_preserve_consistent_confidence (test_fusion.FusionBehavior.test_all_four_views_preserve_consistent_confidence) ... ok
+test_clips_outside_box_to_non_square_frame (test_fusion.FusionBehavior.test_clips_outside_box_to_non_square_frame) ... ok
+test_empty_views_return_valid_empty_detection_tensors (test_fusion.FusionBehavior.test_empty_views_return_valid_empty_detection_tensors) ... ok
+test_native_validator_fuses_four_prediction_segments (test_fusion.FusionBehavior.test_native_validator_fuses_four_prediction_segments) ... ok
+test_two_supporting_views_rank_above_single_view_false_alarm (test_fusion.FusionBehavior.test_two_supporting_views_rank_above_single_view_false_alarm) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.044s
+
+OK

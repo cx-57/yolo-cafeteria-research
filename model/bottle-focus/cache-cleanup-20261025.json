@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-10-25T15:53:37.010176+00:00",
+  "before_free_bytes": 2331054080,
+  "removed": [
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/Chrome/Profile 1/Code Cache",
+      "logical_bytes": 382590155
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/Chrome/Default/Cache",
+      "logical_bytes": 771313507
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/Chrome/Default/Code Cache",
+      "logical_bytes": 381699386
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/Chrome/System Profile/Code Cache",
+      "logical_bytes": 144
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Browser/Cache",
+      "logical_bytes": 351357244
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Browser/Code Cache",
+      "logical_bytes": 101535364
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Browser/GPUCache",
+      "logical_bytes": 1642864
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Browser/DawnGraphiteCache",
+      "logical_bytes": 557424
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Browser/DawnWebGPUCache",
+      "logical_bytes": 557424
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Default/Cache",
+      "logical_bytes": 57957247
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Default/Code Cache",
+      "logical_bytes": 19722306
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Default/GPUCache",
+      "logical_bytes": 1642864
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Default/DawnGraphiteCache",
+      "logical_bytes": 557424
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/com.spotify.client/Default/DawnWebGPUCache",
+      "logical_bytes": 557424
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/AndroidStudio2026.2.1/caches",
+      "logical_bytes": 201149462
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/AndroidStudio2026.2.1/index",
+      "logical_bytes": 236984129
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/AndroidStudio2026.2.1/tmp",
+      "logical_bytes": 23140
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/lunarclient-updater/update.zip",
+      "logical_bytes": 126880017
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/lunarclient-updater/pending",
+      "logical_bytes": 127014438
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Homebrew/downloads",
+      "logical_bytes": 0
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Homebrew/api",
+      "logical_bytes": 46911421
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Homebrew/api-source",
+      "logical_bytes": 0
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/Homebrew/portable-ruby-4.0.7_1.big_sur.bottle.tar.gz",
+      "logical_bytes": 12245103
+    }
+  ],
+  "errors": [
+    {
+      "path": "/Users/Charles1/Library/Caches/Google/Chrome/Profile 1/Cache",
+      "error": "[Errno 66] Directory not empty: 'Cache_Data'"
+    }
+  ],
+  "scope": "Regenerable app disk caches, IDE indexes, downloaded installers; preserve profiles, sessions, storage, datasets, models, source and runtime",
+  "after_free_bytes": 6575996928,
+  "active_browser_cache_remaining_bytes": 3345911,
+  "final_free_bytes": 6612525056
+}

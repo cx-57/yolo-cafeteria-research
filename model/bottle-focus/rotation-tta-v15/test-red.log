@@ -1,0 +1,60 @@
+test_four_views_keep_identity_scores_and_model_state (test_rotation_tta.NativePredictionIntegrity.test_four_views_keep_identity_scores_and_model_state) ... FAIL
+test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) ... 
+  test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) (k=1) ... FAIL
+  test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) (k=2) ... FAIL
+  test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) (k=3) ... FAIL
+
+======================================================================
+FAIL: test_four_views_keep_identity_scores_and_model_state (test_rotation_tta.NativePredictionIntegrity.test_four_views_keep_identity_scores_and_model_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/rotation-tta-v15/test_rotation_tta.py", line 39, in test_four_views_keep_identity_scores_and_model_state
+    self.assertEqual(combined.shape,(1,5,count*4))
+AssertionError: torch.Size([1, 5, 252]) != (1, 5, 1008)
+
+======================================================================
+FAIL: test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) (k=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/rotation-tta-v15/test_rotation_tta.py", line 23, in test_non_square_box_round_trip_and_score_preservation
+    torch.testing.assert_close(restored,original,rtol=0,atol=0)
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not equal!
+
+Mismatched elements: 8 / 10 (80.0%)
+Greatest absolute difference: 59.0 at index (0, 0, 1)
+Greatest relative difference: 29.5 at index (0, 0, 1)
+
+======================================================================
+FAIL: test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) (k=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/rotation-tta-v15/test_rotation_tta.py", line 23, in test_non_square_box_round_trip_and_score_preservation
+    torch.testing.assert_close(restored,original,rtol=0,atol=0)
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not equal!
+
+Mismatched elements: 4 / 10 (40.0%)
+Greatest absolute difference: 92.0 at index (0, 0, 1)
+Greatest relative difference: 46.0 at index (0, 0, 1)
+
+======================================================================
+FAIL: test_non_square_box_round_trip_and_score_preservation (test_rotation_tta.RotationGeometry.test_non_square_box_round_trip_and_score_preservation) (k=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/rotation-tta-v15/test_rotation_tta.py", line 23, in test_non_square_box_round_trip_and_score_preservation
+    torch.testing.assert_close(restored,original,rtol=0,atol=0)
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/testing/_comparison.py", line 1689, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not equal!
+
+Mismatched elements: 8 / 10 (80.0%)
+Greatest absolute difference: 59.0 at index (0, 1, 1)
+Greatest relative difference: 0.9672130942344666 at index (0, 1, 1)
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.320s
+
+FAILED (failures=4)
