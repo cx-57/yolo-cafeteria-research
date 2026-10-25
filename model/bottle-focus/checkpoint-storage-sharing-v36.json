@@ -1,0 +1,121 @@
+{
+  "method": "APFS copy-on-write clones; independent inodes; all bytes retained, no hard links",
+  "verified_at": "2026-10-25T14:06:35.935887+00:00",
+  "before_free_bytes": 1380954112,
+  "after_free_bytes": 1862025216,
+  "skipped": [],
+  "files": [
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/initial.pt",
+      "shared_source": "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "shared_source": "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/initial.pt",
+      "shared_source": "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "shared_source": "model/bottle-focus/quality-head-blend-v19/alpha0.25-bottle.pt",
+      "sha256": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "bytes": 19184054,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/monitor-campaign-v34/verified-641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.pt",
+      "sha256": "641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942",
+      "bytes": 24153797,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/best-monitor-ap50.pt",
+      "shared_source": "model/bottle-focus/monitor-campaign-v34/verified-641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.pt",
+      "sha256": "641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942",
+      "bytes": 24153797,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/best-monitor-localization.pt",
+      "shared_source": "model/bottle-focus/monitor-campaign-v34/verified-641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.pt",
+      "sha256": "641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942",
+      "bytes": 24153797,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/verified-641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.pt",
+      "shared_source": "model/bottle-focus/monitor-campaign-v34/verified-641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.pt",
+      "sha256": "641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942",
+      "bytes": 24153797,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/train/weights/best.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-monitor-v36/verified-4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.pt",
+      "sha256": "4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93",
+      "bytes": 43208871,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/best-monitor-ap50.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-monitor-v36/verified-4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.pt",
+      "sha256": "4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93",
+      "bytes": 43208871,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/best-monitor-localization.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-monitor-v36/verified-4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.pt",
+      "sha256": "4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93",
+      "bytes": 43208871,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.pt",
+      "shared_source": "model/bottle-focus/reviewed-neck-monitor-v36/verified-4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.pt",
+      "sha256": "4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93",
+      "bytes": 43208871,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/last_resume.pt",
+      "shared_source": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/train/weights/last.pt",
+      "sha256": "1db1f70e9e84f677435117889cd1a1f2722236dec6fd2c841fc0998c0b4b2891",
+      "bytes": 24154053,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/verified-1db1f70e9e84f677435117889cd1a1f2722236dec6fd2c841fc0998c0b4b2891.pt",
+      "shared_source": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/train/weights/last.pt",
+      "sha256": "1db1f70e9e84f677435117889cd1a1f2722236dec6fd2c841fc0998c0b4b2891",
+      "bytes": 24154053,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/last_resume.pt",
+      "shared_source": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/train/weights/last.pt",
+      "sha256": "4cc10be4b3791b10a7b4188aa7ffc06778fe76b4312c4c11059d499364f0f96f",
+      "bytes": 43208999,
+      "independent_inode": true
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-4cc10be4b3791b10a7b4188aa7ffc06778fe76b4312c4c11059d499364f0f96f.pt",
+      "shared_source": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/train/weights/last.pt",
+      "sha256": "4cc10be4b3791b10a7b4188aa7ffc06778fe76b4312c4c11059d499364f0f96f",
+      "bytes": 43208999,
+      "independent_inode": true
+    }
+  ]
+}

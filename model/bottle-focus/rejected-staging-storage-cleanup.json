@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-10-25T14:30:12.169577+00:00",
+  "files": [
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-staging-v35/taco_295.image",
+      "bytes": 7467969,
+      "sha256": "8841dbe72434260c7270f90802e87c4961f5fd552fae6cb0f2287ebcac4a3a60",
+      "reason": "Task-generated source staging file rejected before image admission; source URL retained in downloads ledger",
+      "actual_dimensions": [
+        5312,
+        2988
+      ],
+      "exif_orientation": 6,
+      "format": "JPEG"
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-staging-v35/taco_300.image",
+      "bytes": 6613221,
+      "sha256": "5ae4956a00b76eb619e1f1c7a9828414df0f11180f7a4ba4a87aa5d648b1ad79",
+      "reason": "Task-generated source staging file rejected before image admission; source URL retained in downloads ledger",
+      "actual_dimensions": [
+        5312,
+        2988
+      ],
+      "exif_orientation": 6,
+      "format": "JPEG"
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-staging-v35/taco_320.image",
+      "bytes": 10874087,
+      "sha256": "9468e8ff7a36878df6b017360a6256fed1d395b21fbdb304dbec5a3e7dc1913d",
+      "reason": "Task-generated source staging file rejected before image admission; source URL retained in downloads ledger",
+      "actual_dimensions": [
+        5312,
+        2988
+      ],
+      "exif_orientation": 6,
+      "format": "JPEG"
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-staging-v35/taco_339.image",
+      "bytes": 5314500,
+      "sha256": "b1311a077c8242cfcc630817c60d9ccb80ebf948c3dbc7ddf91a1835838c54c8",
+      "reason": "Task-generated source staging file rejected before image admission; source URL retained in downloads ledger",
+      "actual_dimensions": [
+        4128,
+        3096
+      ],
+      "exif_orientation": 6,
+      "format": "JPEG"
+    },
+    {
+      "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-staging-v35/taco_348.image",
+      "bytes": 3956360,
+      "sha256": "6d3cc8a8d7fb4a32cf0ce733d8621628da87dc5bf1dd15eeed46323d807456cb",
+      "reason": "Task-generated source staging file rejected before image admission; source URL retained in downloads ledger",
+      "actual_dimensions": [
+        2976,
+        3968
+      ],
+      "exif_orientation": 0,
+      "format": "JPEG"
+    }
+  ],
+  "bytes": 34226137,
+  "before_free_bytes": 1321582592,
+  "scope": "Only task-generated .image staging files rejected before image admission, never named in admitted/screened image paths; trained checkpoints and source .jpg/.png files retained",
+  "after_free_bytes": 1356025856
+}

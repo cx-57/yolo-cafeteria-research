@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-25T15:04:26.585998+00:00",
+  "models": [
+    {
+      "role": "balanced",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "old_monitor_reference": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/monitor-initial.json",
+      "old_monitor_reference_sha": "3c734bf6b03236cc3f1a3da7fa6c16373991dbc1580a0f55b8b86ec4626746c8"
+    },
+    {
+      "role": "v34",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/weights/verified-641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942.pt",
+      "weights_sha": "641d162e111ad497a36717ababf5da912cda3de38c79ab8b1443ebe5555ba942",
+      "old_monitor_reference": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/monitor-ap50.json",
+      "old_monitor_reference_sha": "3874d035913cf0b41a8616f8e81963d3b0a95d5b7477ae02b8494adde90034ea"
+    },
+    {
+      "role": "v36",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.pt",
+      "weights_sha": "4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93",
+      "old_monitor_reference": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/reviewed-neck-monitor-v36/monitor-ap50.json",
+      "old_monitor_reference_sha": "ef1bf13a043e60c85b2a173b7b62f8e5ff7a4397102b10dfe200b731db64579f"
+    }
+  ],
+  "model_evaluation_limit": 3,
+  "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319",
+  "data_yaml_sha": "b33fa569e820f4f89d402c87a8202d1b12663d7487b36b14069cbfd094cad99d",
+  "cohort_fingerprint": "acf8fd5f6133981c8aae103cf343d9fd04728fc069d23436b5849fbc90b84dd3",
+  "code_shas": {
+    "run.py": "fe566b0e45becc38582beb7627e058eed7be8f14f79e4192d2194f337f6b2cf1",
+    "build.py": "ce536038d3145339e89160951958658f9e618c1d7ddf4439be86e51c8fc8f108",
+    "compile_sources.py": "944c821f0353b7f4badcc18926a7ab12b83691e1c645e715288442fb0752977a",
+    "admission.py": "354eac07f10ef50407c685d5b71f9e1aeaccc501b11fd74a6f7af15571cdb051",
+    "reserve.py": "2b922d1f65083f5d3aea5a3d7442566d696c739e11f4f70a73af780990c4d15c",
+    "scale.py": "2ab9471877ae5a66217e1dd2847850a0bff0b96aa201f5515fbf290e6a0eb6bd",
+    "protocol.py": "c2416a0fd3b6baad0661e4aea9f11b7b9dc714bd2a00b3d8c262ae5b8fc0a0de",
+    "../data-followup-v35/screen_followup.py": "79d87758c21f0d0c822ca242f61923f9dc8f7d3c217a095949e3744e13362b4e",
+    "../monitor-campaign-v34/selection.py": "4381be47c1cccffea45a2115e7716ba49a24adcf6f89666e447742a935d82a68"
+  },
+  "photos": 32,
+  "bottle_objects": 18,
+  "imgsz": 640,
+  "batch": 4,
+  "nms_iou": 0.5,
+  "test_time_augmentation": false,
+  "original_benchmark_inference_allowed": false,
+  "training_allowed": false,
+  "full_training_paused": true,
+  "independent_NHS_test": false,
+  "move_on_requires_original_benchmark_AP50": 0.9,
+  "selection_source_only_before_measurements": true
+}

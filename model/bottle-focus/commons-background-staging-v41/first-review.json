@@ -1,0 +1,730 @@
+{
+  "status": "staged_only_pending_independent_absence_review_and_overlap",
+  "reviewer": "root_AI_whole_scene_absence_review",
+  "accepted_indices_pending_second_review_and_overlap": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    49,
+    52,
+    53,
+    55,
+    58,
+    59,
+    61,
+    62,
+    63,
+    66,
+    69,
+    71,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "holds": {
+    "0": "Mixed cleanup debris/handheld containers; absence uncertain",
+    "4": "Several possible plastic containers in litter",
+    "5": "Blue object behind tree; absence uncertain",
+    "10": "Clear plastic Coke bottle present",
+    "18": "Distant hillside litter; absence uncertain",
+    "22": "Broken glass/fragments; conservative whole-photo hold",
+    "30": "Dense fence vegetation/litter; absence uncertain",
+    "47": "Display of packaging rather than a litter scene",
+    "48": "Illustrated poster rather than scene photo",
+    "50": "Small roadside containers; absence uncertain",
+    "51": "Overflowing bin; target absence uncertain",
+    "54": "Same sign/vegetation scene with ambiguous blue object",
+    "56": "Large mixed dumping pile; absence uncertain",
+    "57": "Mixed bin contents and scattered containers; absence uncertain",
+    "60": "Dense litter/vegetation; absence uncertain",
+    "64": "Beverage bottle visible in branches",
+    "67": "Transparent green object may be bottle fragment",
+    "68": "Mixed dumping pile; bottles/absence uncertain",
+    "70": "Beverage containers/bottles in stadium litter",
+    "73": "Dumped containers/bags; absence uncertain",
+    "9": "download_or_geometry_hold: ",
+    "12": "download_or_geometry_hold: ",
+    "36": "download_or_geometry_hold: ",
+    "37": "download_or_geometry_hold: ",
+    "39": "download_or_geometry_hold: ",
+    "46": "download_or_geometry_hold: ",
+    "65": "download_or_geometry_hold: ",
+    "72": "download_or_geometry_hold: "
+  },
+  "records": [
+    {
+      "index": 0,
+      "id": "commons_57493129",
+      "sha": "b63c042aaf7e3a095702fe30d5ee52597a7993db81115b181a50c45f0b0572d1",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Mixed cleanup debris/handheld containers; absence uncertain"
+    },
+    {
+      "index": 1,
+      "id": "commons_47502534",
+      "sha": "0d94a5a52f8974a6f39afed20a46b8a1af8e1888724b27824d89b63c6530ec13",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 2,
+      "id": "commons_87373711",
+      "sha": "3719cf7a126f3937fac01c9db962487cfc3380a973257589117d8669d542fde4",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 3,
+      "id": "commons_88237015",
+      "sha": "b949a19fcfb0c0241e9be5de41f3c11991f4e19e14d3bf91a436e4952d922a6f",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 4,
+      "id": "commons_132910288",
+      "sha": "a78a2da4ade3e4aadca0de5589bbd8b482a0faf6357d5dc4daa6d9033d184773",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Several possible plastic containers in litter"
+    },
+    {
+      "index": 5,
+      "id": "commons_100435517",
+      "sha": "585186fe6243c34d9548f413910970f077b777b2e667414e05139142dadb2766",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Blue object behind tree; absence uncertain"
+    },
+    {
+      "index": 6,
+      "id": "commons_27950227",
+      "sha": "8260287d2cd2bc3e90aad2112e132d1a25a7547717bc7300f44b7e149665a578",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 7,
+      "id": "commons_6498918",
+      "sha": "29e1466ab266382349a8c399f3080b21d347a5165e5fc8397a6777f16d3ad7ea",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 8,
+      "id": "commons_96827418",
+      "sha": "46ae0ace498134b20a5235abeefa4993e23443729fd3f8e89763c87e4916e298",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 9,
+      "id": "commons_390950",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 10,
+      "id": "commons_87485653",
+      "sha": "96347af872a0aee852871b97c48d27928729b68f49c453c557565395e6135386",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Clear plastic Coke bottle present"
+    },
+    {
+      "index": 11,
+      "id": "commons_1895435",
+      "sha": "0401ae1b2d251429dcad189b5f51733bb701eed40b2061d4cd984f88e996f2d9",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 12,
+      "id": "commons_71357132",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 13,
+      "id": "commons_77876408",
+      "sha": "deb432acba70d6ca63bfbc5c0726af48639f183050a64a38b00b547ae3a81090",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 14,
+      "id": "commons_61869021",
+      "sha": "5d903f837bfe63d5a6965b6123427acd0da5e68ce5170531dd83d5fec15919cc",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 15,
+      "id": "commons_87335432",
+      "sha": "0afc4547573d54b461e018ae9b7569483dcd0f8e05b087e8e311206e1d2e3076",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 16,
+      "id": "commons_148585374",
+      "sha": "066cf3864f8dd33d58f99df60f013c60463bd4b1ea1bd74e3120d1ec2f5fcc8e",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 17,
+      "id": "commons_55127030",
+      "sha": "9c713fd1826e9f3f8fb7cb97764ec5b62d289b8c92cf859a6df8218a636d0f3e",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 18,
+      "id": "commons_108192610",
+      "sha": "455cdad824f7303c2cd55e6cc2b66888612ebbbad15bca05b1ceaff256b5bc8e",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Distant hillside litter; absence uncertain"
+    },
+    {
+      "index": 19,
+      "id": "commons_55127428",
+      "sha": "7122bcbc87a2e74583c010b7f9658a7fd695bf8e805b48d4f5b9c00c4d8043ed",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 20,
+      "id": "commons_47502507",
+      "sha": "3dd3a9c3c0efdefa027195a0b46740a414b0bc7d391062e5e7c48879f0695334",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 21,
+      "id": "commons_42290786",
+      "sha": "a83207e607a2d1d4b2304d54fb5d2dac4e5819907ecac55f899470f873fd64fa",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 22,
+      "id": "commons_146233763",
+      "sha": "85055df0135d63e1b73073c15ac1ee37c926a3dd9fd899ab40955689df144986",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Broken glass/fragments; conservative whole-photo hold"
+    },
+    {
+      "index": 23,
+      "id": "commons_97123794",
+      "sha": "21beaea4fc22130a496fbbeeb6f77953fecf6290f5ddbb6692b69ef4fc709a4a",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 24,
+      "id": "commons_59149783",
+      "sha": "06e5a0961af98534f6d992f0b22a85962a32e4126e3b97d0f1f6ee983b63711f",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 25,
+      "id": "commons_96876664",
+      "sha": "c13531fc271e59c0225edca97e8f8d5f85a99c6fae7572328562209268b025a6",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 26,
+      "id": "commons_55127034",
+      "sha": "ec498ccfd02f1bd3903fb36ab9d75091b17bc174638bd74f230141ad35a5c202",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 27,
+      "id": "commons_162723443",
+      "sha": "03644ab6b778382ede78008d27ce7c68dcb8af90fb008491e767cd534626312f",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 28,
+      "id": "commons_55127026",
+      "sha": "db99445a913722f0bd9823352238e2163f05e68ef1715068a664c1a9e70e0607",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 29,
+      "id": "commons_125127503",
+      "sha": "60543b12ef1c146aaceaaca8eb5649db3e9aa0e20dff6ae9983a524787eff0be",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 30,
+      "id": "commons_125420869",
+      "sha": "aefdb3fc74d003b4f8b0d9ae7fa1ca235c47ded5612bd459c60685e2debee1a9",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Dense fence vegetation/litter; absence uncertain"
+    },
+    {
+      "index": 31,
+      "id": "commons_133807579",
+      "sha": "027739230798c3006c70871797464a029f847d1d319a7b9e8771801bb1d05a95",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 32,
+      "id": "commons_181627306",
+      "sha": "ab853ecaff84743bf2f6608b980a970c38c574d4ad1f70282349c51ce52b0158",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 33,
+      "id": "commons_25438384",
+      "sha": "ea992833a6dac73a81602a45464df9bbed3c6e4a09b878c481ae51c7f3607aa4",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 34,
+      "id": "commons_78854609",
+      "sha": "83eb38bd4aa4a98ae6b1244319d3ce03296f799641ebb9cc7c4f4c8250928d77",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 35,
+      "id": "commons_86795335",
+      "sha": "54209db62f8111b36c3c814e9a7de0cc9f59e67ec827c4a95a162fc6c3b6030a",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 36,
+      "id": "commons_77424206",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 37,
+      "id": "commons_49194617",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 38,
+      "id": "commons_88001960",
+      "sha": "a003100b5011b091031cd21931155bd9fde5a8a025a90b5c178e985cc1bf7fd3",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 39,
+      "id": "commons_1504579",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 40,
+      "id": "commons_105655362",
+      "sha": "27e7d63ae16979ae69634204e25c376fa7f8aa3c030a929c0fe83097fdb67a80",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 41,
+      "id": "commons_47502541",
+      "sha": "d560119463e8fc7ed5b9d701dab482a03c20d7f4acfc1bb977c6d3cd23891410",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 42,
+      "id": "commons_97123793",
+      "sha": "05a9c51853d0b85cda3d38d1830ec8b354c5ffbda18d9dda5b7936335a491747",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 43,
+      "id": "commons_119374717",
+      "sha": "a668b0c5cae6d13c10790a8dda141b4d8231cd482c92319001ea27ae84723aa1",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 44,
+      "id": "commons_55127031",
+      "sha": "c6601714c27535ad57bce4be90457e2d43ee8dd84cf37f21c473c34cf2e1c24c",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 45,
+      "id": "commons_88237061",
+      "sha": "3b36f61e9cfce72ed99fd86eb9e4e93a2ca589a96d975487176aae24e39f335d",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 46,
+      "id": "commons_29239679",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 47,
+      "id": "commons_95731011",
+      "sha": "3e22b52bc7a4dec58bb51af04ecc0ea4138685c7f78113e998b78c4bed1300a2",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Display of packaging rather than a litter scene"
+    },
+    {
+      "index": 48,
+      "id": "commons_169125307",
+      "sha": "02d56e128eb906cba196eef6725c7bde30054ebabc0f34867c944bd4615773e9",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Illustrated poster rather than scene photo"
+    },
+    {
+      "index": 49,
+      "id": "commons_197020093",
+      "sha": "49f772b9a266004a663a402495af66f9221fbba834b3dde54a640e3aa58da960",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 50,
+      "id": "commons_151513549",
+      "sha": "7352a16fbff267845df7551562abe376353a00db347fcf3860219006cdf237ab",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Small roadside containers; absence uncertain"
+    },
+    {
+      "index": 51,
+      "id": "commons_132910284",
+      "sha": "f785367947ddecfc8a6c6c592cddd0bdb7e1630ad3dae243af85eaccf14592b8",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Overflowing bin; target absence uncertain"
+    },
+    {
+      "index": 52,
+      "id": "commons_137736965",
+      "sha": "40ccfd271249035a123a4ee3d9b40b6a5c2af19979ae2f3ddd47223259ae8b06",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 53,
+      "id": "commons_87540097",
+      "sha": "7555f478f5d30403c64c06cb882d07b9833be7cb74734a95b2e7c4e5906ee96a",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 54,
+      "id": "commons_100435525",
+      "sha": "bc5719f811576eba4f8ef077f76192ace27e970d39e9279099978fb909f50bb1",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Same sign/vegetation scene with ambiguous blue object"
+    },
+    {
+      "index": 55,
+      "id": "commons_78295420",
+      "sha": "c373a94d509fbaf228b780a8f9a0e5d9784abcbd21e68954626171e6e16a0abe",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 56,
+      "id": "commons_178512573",
+      "sha": "0a911847032aa35d8a9421cef259d80cf4c40633605b8ac174a88d97b98070d5",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Large mixed dumping pile; absence uncertain"
+    },
+    {
+      "index": 57,
+      "id": "commons_132910278",
+      "sha": "cf2fc1b10a56adb26b5a1c090dd528cda5ec441b065c305ad1f0212f45eacdb0",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Mixed bin contents and scattered containers; absence uncertain"
+    },
+    {
+      "index": 58,
+      "id": "commons_175303376",
+      "sha": "2c4698ea90651dae2def660403e43f03f5bc7c4038eb1a1465da307b79b2316b",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 59,
+      "id": "commons_156775263",
+      "sha": "e18909a6fc2214146738edab67345bda9d9fb11c5bcf8eb85d781da4181db117",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 60,
+      "id": "commons_132910294",
+      "sha": "bf0c264b32d4512f73fd96ce5b8fe45625f89f3aa98aeb6b221734f9ac19453e",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Dense litter/vegetation; absence uncertain"
+    },
+    {
+      "index": 61,
+      "id": "commons_104629337",
+      "sha": "89ecd3ef9ae6e1e7b5724e6169c56eba5e3293e47628acf62281679998d82e82",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 62,
+      "id": "commons_87540303",
+      "sha": "b30f9bdd6b90c44dcab88b8a8b76a2fd8c51502af88336a91b075799044dd7bd",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 63,
+      "id": "commons_11763663",
+      "sha": "94ce8517c13073ed7064a8cd528fdde3ff010e3f6974067b8772464b0ba51541",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 64,
+      "id": "commons_11100320",
+      "sha": "1abf08659d4852f9935776ca400fd3c771ad8d7c9ac330837d892619205e736d",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Beverage bottle visible in branches"
+    },
+    {
+      "index": 65,
+      "id": "commons_71356984",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 66,
+      "id": "commons_125126681",
+      "sha": "380a954c9adf837dfe1e489957a7a3989286b32a22364abb5fccb50804fd61f1",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 67,
+      "id": "commons_54657094",
+      "sha": "ed16a2044d664214eb8b6162c976edc0d43140afc8e6b8f78c4c4b7983e7b3a4",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Transparent green object may be bottle fragment"
+    },
+    {
+      "index": 68,
+      "id": "commons_89184705",
+      "sha": "a74e6e3f48503f6502fe1293f765fded79862eeb0f6520261ce0b1daa3bac5ed",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Mixed dumping pile; bottles/absence uncertain"
+    },
+    {
+      "index": 69,
+      "id": "commons_55127028",
+      "sha": "5cf21068c24b4451a98f027f550e61230d4ce88320dd4eb77e3ef663ede051e4",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 70,
+      "id": "commons_89605017",
+      "sha": "2544485bae3e0e27e1c13ba62fad8d8a1610191bb97d68ac61482e0b7cfe1e3e",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Beverage containers/bottles in stadium litter"
+    },
+    {
+      "index": 71,
+      "id": "commons_47502980",
+      "sha": "5d843264bda0fd7cbf20401b47d15e77248d96308f6a870ec8fa5e8823155130",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 72,
+      "id": "commons_116048308",
+      "sha": null,
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "download_or_geometry_hold: "
+    },
+    {
+      "index": 73,
+      "id": "commons_132910299",
+      "sha": "13f585bb3ed99f7cfa82f646513e380d8a210d969cc7121dd89f2ba7db4d9193",
+      "decision": "hold",
+      "verified_absence": false,
+      "note": "Dumped containers/bags; absence uncertain"
+    },
+    {
+      "index": 74,
+      "id": "commons_13310277",
+      "sha": "e2bd9420950fdfddb6407f59ce2a45921b887c3e25438917a43a57eac4870cab",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 75,
+      "id": "commons_54763508",
+      "sha": "47a197f5ee5fa03656b0179f6ebf9ff28c0da88bd3b53dae5be0dd8d8bf8ff7b",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 76,
+      "id": "commons_55127032",
+      "sha": "4512fc4dc2bc5ef41a27471ba68cfe079d93821351c1b4d1edd3bbb7b03e9f6e",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 77,
+      "id": "commons_122611723",
+      "sha": "96804112b8af37305018140b3f7d1ae08650347df7d85bb2412756895794df02",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 78,
+      "id": "commons_57454626",
+      "sha": "ef796ef31380ae31d30f81ee48edb3dee55f86590e3e1a013ac4c3cbf45a6acc",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    },
+    {
+      "index": 79,
+      "id": "commons_87541597",
+      "sha": "18f8a529722004f551469395ea1228de825bf1d462b7e49d630983eb93f25248",
+      "decision": "candidate",
+      "verified_absence": true,
+      "note": "No clear disposable plastic beverage bottle visible; full scene reviewed, appearance only"
+    }
+  ]
+}

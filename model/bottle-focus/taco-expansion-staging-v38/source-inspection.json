@@ -1,0 +1,9 @@
+{
+  "source_url": "https://raw.githubusercontent.com/pedropro/TACO/master/data/annotations_unofficial.json",
+  "source_sha256": "eebe9c774fdf3918c130613d9336fb165bc32dd3ee07c9cc92bf1945e3a6fcf3",
+  "images": 3831,
+  "annotations": 8334,
+  "novel_clear_photos": 488,
+  "status": "staged_only_unreviewed_community_annotations",
+  "training_admission": false
+}

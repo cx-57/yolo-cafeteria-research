@@ -1,0 +1,7 @@
+{
+  "epoch": 9,
+  "AP50": 0.7810726428043502,
+  "AP50_95": 0.6193041917432162,
+  "metric_source": "continuation_monitor",
+  "monitor_fingerprint": "1662f8caeec4275e7fdca7c26e89bed6c346227800743fdc20937310e8f0e3d5"
+}

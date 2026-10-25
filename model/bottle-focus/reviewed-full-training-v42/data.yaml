@@ -1,0 +1,5 @@
+path: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42
+train: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/reviewed-full-training-v42/training-exposures.txt
+val: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/reviewed-full-training-v42/monitor-images.txt
+names:
+- bottle

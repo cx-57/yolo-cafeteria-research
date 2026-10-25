@@ -1,0 +1,23 @@
+{
+  "benchmark_positive_photos_by_source": {
+    "trash_detection": 49,
+    "plate": 6
+  },
+  "benchmark_bottle_objects_by_source": {
+    "trash_detection": 61,
+    "plate": 6
+  },
+  "monitor_positive_photos_by_source": {
+    "Open Images": 12
+  },
+  "monitor_negative_photos_by_source": {
+    "Open Images": 24
+  },
+  "current_training_photos": {
+    "negative": 175,
+    "positive": 428
+  },
+  "diagnostic_only": true,
+  "new_benchmark_inference": false,
+  "interpretation": "The 36-photo monitor consists entirely of newly acquired Open Images scenes, whereas the fixed benchmark has the listed distinct source families. Two monitor-selected continuations regressed on the fixed benchmark. This supports investigating source-domain coverage, not changing benchmark labels/split or declaring independent accuracy."
+}

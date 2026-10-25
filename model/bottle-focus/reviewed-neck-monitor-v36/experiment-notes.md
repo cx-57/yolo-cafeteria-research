@@ -48,3 +48,18 @@ freeze10. Layer11 is parameter-free Upsample; neck checks use parameter indices
 11–22. Independent code/data review and follow-up identity-join review found no
 concrete P1/P2. Frozen246 photo/label/manifest hashes and protected weight hashes
 were rechecked unchanged. Runtime checkpoints stay outside iCloud.
+
+Completed9epochs. Fresh monitor winner epoch8:
+80.895850% AP50 /63.940008% AP50–95,
+SHA4afd31080d871eea5993aade1fb871697cdc009e5b2f2f77c75e3b11d5c41e93.
+This passed the previously declared monitor gate, so exactly one new candidate
+used the fixed benchmark. Result81.917030% /59.389091%: both regressed against
+the protected balanced model, which was retained.90/64 remains unmet. No full
+training was started and no extra epochs or benchmark candidates were added.
+
+Coverage diagnostic using source labels only (no further inference) found
+61/67 benchmark bottle boxes in trash_detection and6/67 in plate, whereas all
+12 positive monitor photos are Open Images. Both V34/V36 improved that monitor
+without transferring to the fixed benchmark. This motivates reviewing broader
+fresh litter scenes and monitor coverage before another training choice. It
+does not justify changing benchmark labels/split or claiming independence.
