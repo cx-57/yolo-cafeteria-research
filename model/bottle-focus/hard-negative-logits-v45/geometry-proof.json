@@ -1,0 +1,11 @@
+{
+  "epoch": 3,
+  "fixed_tensor_fingerprint": "4b8a0ce5e4eab36a668f512b4bbc85eb52ae08637e8a379eff96e5092890bdb5",
+  "training_model_fixed": true,
+  "EMA_fixed": true,
+  "saved_checkpoint_fixed": true,
+  "classifier_logits_only": true,
+  "mutable_parameter_tensors": 6,
+  "classifier_features_fixed": true,
+  "all_BatchNorm_buffers_fixed": true
+}

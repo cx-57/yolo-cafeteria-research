@@ -1,0 +1,20 @@
+{
+  "chosen": {
+    "role": "initial",
+    "epoch": 0,
+    "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+    "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+    "values": [
+      0.995,
+      0.9077698412698414,
+      0.6179846971598125,
+      0.5138349672711655,
+      0.4756057496682884,
+      0.28203331388425823
+    ]
+  },
+  "retention_and_source_gates_passed": false,
+  "original_benchmark_used": false,
+  "declaration_sha": "3dade78ffddc4470688a5a1848985093cdb61e61564d17f9b6f2ff2c8c30f143",
+  "independent_NHS_test": false
+}

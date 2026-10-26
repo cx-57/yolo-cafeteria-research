@@ -1,0 +1,8 @@
+{
+  "alpha": 0.5,
+  "weights_sha": "3e1b2bb3e92ab4b4262d5fb9e147cdad1aaff884ffbaec0c159836d886cd67a2",
+  "declaration_sha": "48efa58fa800a2496941f6762d4ae9cb563a2fc844033552e7054dde7cdc32a0",
+  "mutable_tensors": 6,
+  "protected_tensor_fingerprint": "4b8a0ce5e4eab36a668f512b4bbc85eb52ae08637e8a379eff96e5092890bdb5",
+  "roundtrip_exact": true
+}

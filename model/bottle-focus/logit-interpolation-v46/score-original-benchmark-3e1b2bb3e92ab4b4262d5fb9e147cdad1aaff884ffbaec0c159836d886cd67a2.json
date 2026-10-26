@@ -1,0 +1,25 @@
+{
+  "weights_sha": "3e1b2bb3e92ab4b4262d5fb9e147cdad1aaff884ffbaec0c159836d886cd67a2",
+  "cohort": {
+    "name": "original-benchmark",
+    "yaml": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-capture-validation/data.yaml",
+    "photos": 246,
+    "boxes": 67,
+    "fingerprint": "6668d2b7f0b16243640c14efdbb6bdffbb7f83fc880459befd58e8afcbfa2296",
+    "validation_protocol": "29423591896198d41f5bd16392b51f06c7c3d7254f8a903b3dda74569cfe7de7",
+    "dataset_sha": "0a6ba6bff3de2c104e648a49f5b216d5bb34a1757690a05cafd611ea9cd7e35f"
+  },
+  "declaration_sha": "48efa58fa800a2496941f6762d4ae9cb563a2fc844033552e7054dde7cdc32a0",
+  "imgsz": 640,
+  "batch": 4,
+  "nms_iou": 0.5,
+  "test_time_augmentation": false,
+  "device": "mps",
+  "ultralytics_version": "8.4.175",
+  "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-logit-interpolation-v46/alpha-0.5.pt",
+  "AP50": 0.8333835299701133,
+  "AP50_95": 0.6107259715823302,
+  "precision": 0.8477849004236987,
+  "recall": 0.7481899626863903,
+  "independent_NHS_test": false
+}
