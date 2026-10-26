@@ -1,0 +1,102 @@
+{
+  "weights_shas": [
+    "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+    "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+  ],
+  "cohort": {
+    "name": "litter",
+    "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/data.yaml",
+    "photos": 32,
+    "boxes": 18,
+    "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319"
+  },
+  "settings": {
+    "imgsz": 640,
+    "batch": 4,
+    "device": "mps",
+    "workers": 0,
+    "augment": true,
+    "iou": 0.5,
+    "conf": 0.001
+  },
+  "fusion": {
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.001,
+    "conf_type": "avg",
+    "weights": [
+      1,
+      1
+    ],
+    "allows_overflow": false
+  },
+  "declaration_sha": "68fa19500f270bf126949a1729cdee477bde720284361094c3a40ef8637c7c45",
+  "image_transforms": [
+    "identity"
+  ],
+  "ultralytics_version": "8.4.175",
+  "AP50": 0.588807142857143,
+  "AP50_95": 0.32463595238095244,
+  "precision": 0.725008891366641,
+  "recall": 0.6111111111111112,
+  "trace": {
+    "calls": 8,
+    "shapes": [
+      [
+        4,
+        3,
+        448,
+        672
+      ],
+      [
+        4,
+        3,
+        512,
+        672
+      ],
+      [
+        4,
+        3,
+        672,
+        672
+      ],
+      [
+        4,
+        3,
+        672,
+        512
+      ],
+      [
+        4,
+        3,
+        672,
+        512
+      ],
+      [
+        4,
+        3,
+        672,
+        512
+      ],
+      [
+        4,
+        3,
+        672,
+        512
+      ],
+      [
+        4,
+        3,
+        672,
+        320
+      ]
+    ]
+  },
+  "fused_images": 32,
+  "speed_ms_per_image": {
+    "preprocess": 0.3429804696679639,
+    "inference": 47.53579690623155,
+    "loss": 0.0007174062375270296,
+    "postprocess": 28.383322875015438
+  },
+  "independent_NHS_test": false
+}

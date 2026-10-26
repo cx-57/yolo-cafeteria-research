@@ -1,0 +1,126 @@
+DUAL_MODEL_PREFLIGHT 1f0ee700e0f59fddebf1364eebecc9f05977cc6263aa7662bfa09bcb98d5f08c
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3298.2±1211.7 MB/s, size: 98.5 KB)
+[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/labels/val.cache... 24 images, 8 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 7.7Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━━────────── 1/6 3.4s/it 1.0s<16.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 2/6 1.2s/it 1.5s<4.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 3/6 1.4it/s 1.9s<2.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━━──── 4/6 1.7it/s 2.3s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 83% ━━━━━━━━━━── 5/6 2.0it/s 2.7s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 6/6 2.0it/s 3.0s
+                   all         24         16      0.996          1      0.995      0.947
+Speed: 0.4ms preprocess, 98.2ms inference, 0.0ms loss, 16.9ms postprocess per image
+Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/retention/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.00s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.946
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.931
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.907
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.950
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.950
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.950
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.911
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.938
+Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/retention[0m
+DUAL_MODEL_SCORE retention 0.995 0.9465000000000001
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 287.4±66.9 MB/s, size: 352.6 KB)
+[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-monitor-v34/labels/val.cache... 36 images, 24 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 36/36 37.7Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 1/9 1.4s/it 0.4s<10.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 2/9 1.5it/s 0.7s<4.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 3/9 1.8it/s 1.1s<3.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 4/9 2.1it/s 1.5s<2.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 5/9 2.2it/s 1.9s<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━━──── 6/9 2.3it/s 2.3s<1.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 77% ━━━━━━━━━─── 7/9 2.5it/s 2.6s<0.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 88% ━━━━━━━━━━╸─ 8/9 2.6it/s 3.0s<0.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 9/9 2.7it/s 3.3s
+                   all         36         17      0.612      0.834      0.816      0.691
+Speed: 0.3ms preprocess, 64.7ms inference, 0.0ms loss, 16.4ms postprocess per image
+Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/openimages/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.00s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.692
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.817
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.817
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.400
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.714
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.624
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.871
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.871
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.800
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.875
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 1.000
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 1.000
+Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/openimages[0m
+DUAL_MODEL_SCORE openimages 0.8156739610963749 0.690972140739585
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 260.2±81.9 MB/s, size: 2391.2 KB)
+[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40/labels/val.cache... 32 images, 16 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 33.6Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 1/8 1.3s/it 0.4s<9.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 2/8 1.3it/s 0.8s<4.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━──────── 3/8 1.3it/s 1.5s<3.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 4/8 1.4it/s 2.2s<2.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 62% ━━━━━━━───── 5/8 1.4it/s 2.9s<2.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 6/8 1.5it/s 3.4s<1.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━── 7/8 1.9it/s 3.8s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 1.9it/s 4.3s
+                   all         32         18      0.724      0.611      0.589      0.322
+Speed: 0.4ms preprocess, 69.2ms inference, 0.0ms loss, 14.5ms postprocess per image
+Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/litter/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.00s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.323
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.588
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.227
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.326
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.461
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.778
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.389
+Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/litter[0m
+DUAL_MODEL_SCORE litter 0.588807142857143 0.32152285714285717
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1146.1±360.0 MB/s, size: 4970.2 KB)
+[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val.cache... 8 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 8/8 4.2Mit/s 0.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 2.2s/it 0.7s<2.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 1.6it/s 1.2s
+                   all          8          9      0.576      0.667      0.503      0.354
+Speed: 0.4ms preprocess, 69.9ms inference, 0.0ms loss, 15.7ms postprocess per image
+Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/fresh-litter/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.00s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.354
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.354
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.356
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.500
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.500
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.500
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.667
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.556
+Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/evaluations/fresh-litter[0m
+DUAL_MODEL_SCORE fresh-litter 0.5026666666666667 0.354175
+DUAL_MODEL_OUTCOME {'weights_shas': ['88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518', '95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013'], 'ensemble': True, 'source_gates_passed': False, 'original_benchmark_used': False, 'declaration_sha': '1f0ee700e0f59fddebf1364eebecc9f05977cc6263aa7662bfa09bcb98d5f08c', 'independent_NHS_test': False}

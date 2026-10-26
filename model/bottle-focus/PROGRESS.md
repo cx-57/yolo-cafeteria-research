@@ -1,5 +1,8 @@
 # Bottle specialist experiments — 2026-10-23
 
+Latest verified result (2026-10-25local;2026-10-26UTC): **two-model ensemble85.3558%AP50/62.1329%AP50–95**, same246photos/67boxes. Exactrecipeinbest-ensemble/recipe.json. Thisisnotasingle-checkpointscore;single-modelbalanced84.0711/62.0606remainsunchanged. AllfourdevelopmentcohortsourcegatespassedbeforeoneV51mainprobe. Latestuser20minaspiration86–87/~65notfullymet. V52devicebugfixedinV53,whichfailedsourcegatesandskippedmain;ensembleretained. Nooptimizertrainingduringthis20minwindow.
+
+
 Current user target: **90% bottle AP50 and at least 64% AP50–95**, aiming toward 70% localization where supported. Both must come from the same saved checkpoint and inference settings. Do not force the target. Best AP50-first incumbent remains **84.0784% / 60.9019%** at ordinary640, CPU batch4, NMS0.5; a retained balanced checkpoint has **84.0711% / 62.0606%** at ordinary640, MPS batch4, NMS0.5. Neither meets the joint target.
 
 The fixed development validation set has **246 images and 67 bottle boxes**.

@@ -1,0 +1,68 @@
+.E..
+======================================================================
+ERROR: test_installed_head_survives_deepcopy_and_dtype_transfer (test_quality.QualityTests.test_installed_head_survives_deepcopy_and_dtype_transfer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/test_quality.py", line 22, in test_installed_head_survives_deepcopy_and_dtype_transfer
+    with torch.no_grad():out=clone(torch.rand(1,3,96,128,dtype=torch.float64))[0]
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/tasks.py", line 162, in forward
+    return self.predict(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/tasks.py", line 179, in predict
+    return self._predict_once(x, profile, embed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/tasks.py", line 201, in _predict_once
+    x = m(x)  # run
+        ^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/head.py", line 201, in forward
+    y = self._inference(preds["one2one" if self.end2end else "one2many"] if "one2one" in preds else preds)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v53/quality.py", line 15, in adjusted
+    out=original(raw);weight=certainty(raw['boxes'],self.reg_max);assert weight.shape==(out.shape[0],1,out.shape[2])
+        ^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/head.py", line 216, in _inference
+    dbox = self._get_decode_boxes(x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/head.py", line 226, in _get_decode_boxes
+    dbox = self.decode_bboxes(self.dfl(x["boxes"]), self.anchors.unsqueeze(0), x.get("angle")) * self.strides
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/block.py", line 81, in forward
+    return self.conv(x.view(b, 4, self.c1, a).transpose(2, 1).softmax(1)).view(b, 4, a)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/conv.py", line 560, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+RuntimeError: expected scalar type Double but found Float
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.723s
+
+FAILED (errors=1)

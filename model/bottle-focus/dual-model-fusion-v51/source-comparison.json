@@ -1,0 +1,535 @@
+{
+  "controls": [
+    {
+      "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "cohort": {
+        "name": "retention",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/box-projection-v48/data.yaml",
+        "photos": 24,
+        "boxes": 16,
+        "fingerprint": "92c249d7644b45d923b20916ecbb4c993a2522bd2a0c9e9eccd18662f5a13150",
+        "dataset_sha": "9acb0615ca0b7121bed5d7767db1d1072f5e256811c53cc386957f77bee47139",
+        "previously_seen_by_initial": true
+      },
+      "imgsz": 640,
+      "settings": {
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": false,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "declaration_sha": "1e7c9fcf52fbfd13a346e539e026f3e3e2c91fa4c652f58cc4ef76cd3ee32988",
+      "ultralytics_version": "8.4.175",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "AP50": 0.995,
+      "AP50_95": 0.9077698412698414,
+      "precision": 0.9961766676577058,
+      "recall": 1.0,
+      "speed_ms_per_image": {
+        "preprocess": 0.4957083747285651,
+        "inference": 70.47922216588631,
+        "loss": 0.00016145895642694086,
+        "postprocess": 23.8836232504885
+      },
+      "independent_NHS_test": false
+    },
+    {
+      "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "cohort": {
+        "name": "openimages",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/data.yaml",
+        "photos": 36,
+        "boxes": 17,
+        "dataset_sha": "93d9ffa64fbd16a4fbcf68a031e6cf8c6b7acd4e8dad14df813be1a83e0b1140"
+      },
+      "imgsz": 640,
+      "settings": {
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": false,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "declaration_sha": "1e7c9fcf52fbfd13a346e539e026f3e3e2c91fa4c652f58cc4ef76cd3ee32988",
+      "ultralytics_version": "8.4.175",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "AP50": 0.6179846971598125,
+      "AP50_95": 0.5138349672711655,
+      "precision": 0.481250142499483,
+      "recall": 0.8823529411764706,
+      "speed_ms_per_image": {
+        "preprocess": 0.3129999729733552,
+        "inference": 24.378766194179963,
+        "loss": 0.00013891743340839943,
+        "postprocess": 12.196900444703514
+      },
+      "independent_NHS_test": false
+    },
+    {
+      "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "cohort": {
+        "name": "litter",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/data.yaml",
+        "photos": 32,
+        "boxes": 18,
+        "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319"
+      },
+      "imgsz": 640,
+      "settings": {
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": false,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "declaration_sha": "1e7c9fcf52fbfd13a346e539e026f3e3e2c91fa4c652f58cc4ef76cd3ee32988",
+      "ultralytics_version": "8.4.175",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "AP50": 0.4756057496682884,
+      "AP50_95": 0.28203331388425823,
+      "precision": 0.5547516993483455,
+      "recall": 0.6111111111111112,
+      "speed_ms_per_image": {
+        "preprocess": 0.3862199996547133,
+        "inference": 24.333774751085002,
+        "loss": 0.0001406247065460775,
+        "postprocess": 11.321418000534322
+      },
+      "independent_NHS_test": false
+    },
+    {
+      "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+      "cohort": {
+        "name": "fresh-litter",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/resolution-monitor-v50/data.yaml",
+        "photos": 8,
+        "boxes": 9,
+        "fingerprint": "ba927633e1c35e7e044eb9d8517c9f96b70c8a9bd34287e6347e5779115b7268",
+        "dataset_sha": "1a594bbf2a4f98fc4fc05928c5d544981f50ef1f9e577fe087fed1fde576c1c5",
+        "previously_trained": false,
+        "positive_only": true
+      },
+      "imgsz": 640,
+      "settings": {
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": false,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "declaration_sha": "1e7c9fcf52fbfd13a346e539e026f3e3e2c91fa4c652f58cc4ef76cd3ee32988",
+      "ultralytics_version": "8.4.175",
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "AP50": 0.4971428571428572,
+      "AP50_95": 0.3226428571428572,
+      "precision": 0.6990683405643738,
+      "recall": 0.5555555555555556,
+      "speed_ms_per_image": {
+        "preprocess": 0.38094800038379617,
+        "inference": 20.850364500802243,
+        "loss": 0.00035937409847974777,
+        "postprocess": 14.96552599928691
+      },
+      "independent_NHS_test": false
+    }
+  ],
+  "candidate_reports": [
+    {
+      "weights_shas": [
+        "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+        "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+      ],
+      "cohort": {
+        "name": "retention",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/box-projection-v48/data.yaml",
+        "photos": 24,
+        "boxes": 16,
+        "fingerprint": "92c249d7644b45d923b20916ecbb4c993a2522bd2a0c9e9eccd18662f5a13150",
+        "dataset_sha": "9acb0615ca0b7121bed5d7767db1d1072f5e256811c53cc386957f77bee47139",
+        "previously_seen_by_initial": true
+      },
+      "settings": {
+        "imgsz": 640,
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": true,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "fusion": {
+        "iou_thr": 0.55,
+        "skip_box_thr": 0.001,
+        "conf_type": "avg",
+        "weights": [
+          1,
+          1
+        ],
+        "allows_overflow": false
+      },
+      "declaration_sha": "68fa19500f270bf126949a1729cdee477bde720284361094c3a40ef8637c7c45",
+      "image_transforms": [
+        "identity"
+      ],
+      "ultralytics_version": "8.4.175",
+      "AP50": 0.995,
+      "AP50_95": 0.953,
+      "precision": 0.9964508108404999,
+      "recall": 1.0,
+      "trace": {
+        "calls": 6,
+        "shapes": [
+          [
+            4,
+            3,
+            512,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ]
+        ]
+      },
+      "fused_images": 24,
+      "speed_ms_per_image": {
+        "preprocess": 1.088947957517424,
+        "inference": 37.12045141704342,
+        "loss": 0.0005573316836186374,
+        "postprocess": 57.28778820775915
+      },
+      "independent_NHS_test": false
+    },
+    {
+      "weights_shas": [
+        "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+        "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+      ],
+      "cohort": {
+        "name": "openimages",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/monitor-campaign-v34/data.yaml",
+        "photos": 36,
+        "boxes": 17,
+        "dataset_sha": "93d9ffa64fbd16a4fbcf68a031e6cf8c6b7acd4e8dad14df813be1a83e0b1140"
+      },
+      "settings": {
+        "imgsz": 640,
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": true,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "fusion": {
+        "iou_thr": 0.55,
+        "skip_box_thr": 0.001,
+        "conf_type": "avg",
+        "weights": [
+          1,
+          1
+        ],
+        "allows_overflow": false
+      },
+      "declaration_sha": "68fa19500f270bf126949a1729cdee477bde720284361094c3a40ef8637c7c45",
+      "image_transforms": [
+        "identity"
+      ],
+      "ultralytics_version": "8.4.175",
+      "AP50": 0.819572746521476,
+      "AP50_95": 0.6940692701581541,
+      "precision": 0.6164901838287277,
+      "recall": 0.8516508593036448,
+      "trace": {
+        "calls": 9,
+        "shapes": [
+          [
+            4,
+            3,
+            448,
+            672
+          ],
+          [
+            4,
+            3,
+            448,
+            672
+          ],
+          [
+            4,
+            3,
+            512,
+            672
+          ],
+          [
+            4,
+            3,
+            512,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            448
+          ]
+        ]
+      },
+      "fused_images": 36,
+      "speed_ms_per_image": {
+        "preprocess": 0.3424560551745041,
+        "inference": 40.08166319464282,
+        "loss": 0.00040044526233234344,
+        "postprocess": 30.721119194721624
+      },
+      "independent_NHS_test": false
+    },
+    {
+      "weights_shas": [
+        "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+        "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+      ],
+      "cohort": {
+        "name": "litter",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/data.yaml",
+        "photos": 32,
+        "boxes": 18,
+        "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319"
+      },
+      "settings": {
+        "imgsz": 640,
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": true,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "fusion": {
+        "iou_thr": 0.55,
+        "skip_box_thr": 0.001,
+        "conf_type": "avg",
+        "weights": [
+          1,
+          1
+        ],
+        "allows_overflow": false
+      },
+      "declaration_sha": "68fa19500f270bf126949a1729cdee477bde720284361094c3a40ef8637c7c45",
+      "image_transforms": [
+        "identity"
+      ],
+      "ultralytics_version": "8.4.175",
+      "AP50": 0.588807142857143,
+      "AP50_95": 0.32463595238095244,
+      "precision": 0.725008891366641,
+      "recall": 0.6111111111111112,
+      "trace": {
+        "calls": 8,
+        "shapes": [
+          [
+            4,
+            3,
+            448,
+            672
+          ],
+          [
+            4,
+            3,
+            512,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            672
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            320
+          ]
+        ]
+      },
+      "fused_images": 32,
+      "speed_ms_per_image": {
+        "preprocess": 0.3429804696679639,
+        "inference": 47.53579690623155,
+        "loss": 0.0007174062375270296,
+        "postprocess": 28.383322875015438
+      },
+      "independent_NHS_test": false
+    },
+    {
+      "weights_shas": [
+        "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+        "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+      ],
+      "cohort": {
+        "name": "fresh-litter",
+        "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/resolution-monitor-v50/data.yaml",
+        "photos": 8,
+        "boxes": 9,
+        "fingerprint": "ba927633e1c35e7e044eb9d8517c9f96b70c8a9bd34287e6347e5779115b7268",
+        "dataset_sha": "1a594bbf2a4f98fc4fc05928c5d544981f50ef1f9e577fe087fed1fde576c1c5",
+        "previously_trained": false,
+        "positive_only": true
+      },
+      "settings": {
+        "imgsz": 640,
+        "batch": 4,
+        "device": "mps",
+        "workers": 0,
+        "augment": true,
+        "iou": 0.5,
+        "conf": 0.001
+      },
+      "fusion": {
+        "iou_thr": 0.55,
+        "skip_box_thr": 0.001,
+        "conf_type": "avg",
+        "weights": [
+          1,
+          1
+        ],
+        "allows_overflow": false
+      },
+      "declaration_sha": "68fa19500f270bf126949a1729cdee477bde720284361094c3a40ef8637c7c45",
+      "image_transforms": [
+        "identity"
+      ],
+      "ultralytics_version": "8.4.175",
+      "AP50": 0.5026666666666667,
+      "AP50_95": 0.354175,
+      "precision": 0.5754721026762372,
+      "recall": 0.6666666666666666,
+      "trace": {
+        "calls": 2,
+        "shapes": [
+          [
+            4,
+            3,
+            672,
+            512
+          ],
+          [
+            4,
+            3,
+            672,
+            512
+          ]
+        ]
+      },
+      "fused_images": 8,
+      "speed_ms_per_image": {
+        "preprocess": 0.5125416246301029,
+        "inference": 43.14720312322606,
+        "loss": 0.0001667485776124522,
+        "postprocess": 36.27769275226456
+      },
+      "independent_NHS_test": false
+    }
+  ],
+  "baseline_values": [
+    0.995,
+    0.9077698412698414,
+    0.6179846971598125,
+    0.5138349672711655,
+    0.4756057496682884,
+    0.28203331388425823,
+    0.4971428571428572,
+    0.3226428571428572
+  ],
+  "candidate_values": [
+    0.995,
+    0.953,
+    0.819572746521476,
+    0.6940692701581541,
+    0.588807142857143,
+    0.32463595238095244,
+    0.5026666666666667,
+    0.354175
+  ],
+  "gate_passed": true
+}

@@ -1,0 +1,85 @@
+Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2671.4±490.7 MB/s, size: 109.9 KB)
+[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44/labels/val.cache... 24 images, 8 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 8.4Mit/s 0.0s
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v52/campaign.py", line 76, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--prepare',action='store_true');main(parser.parse_args().prepare)
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v52/campaign.py", line 65, in main
+    cohorts=prior.cohorts(prior.verify_monitor());baseline=controls(cohorts);reports=[evaluate(c) for c in cohorts]
+                                                                                      ^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v52/campaign.py", line 52, in evaluate
+    metrics=model.val(validator=FlipFusionValidator,data=cohort['yaml'],classes=[0],save_json=True,plots=False,project=str(RUN/'evaluations'),name=cohort['name'],**SETTINGS)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/engine/model.py", line 645, in val
+    validator(model=self.model)
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/engine/validator.py", line 238, in __call__
+    model.warmup(imgsz=(1 if pt else self.args.batch, self.data["channels"], imgsz, imgsz))  # warmup
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/autobackend.py", line 387, in warmup
+    self.forward(im)  # warmup model
+    ^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/autobackend.py", line 342, in forward
+    y = self.backend.forward(im, **forward_kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/backends/pytorch.py", line 96, in forward
+    return self.model(im, augment=augment, embed=embed, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/tasks.py", line 162, in forward
+    return self.predict(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/tasks.py", line 179, in predict
+    return self._predict_once(x, profile, embed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/tasks.py", line 201, in _predict_once
+    x = m(x)  # run
+        ^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/head.py", line 201, in forward
+    y = self._inference(preds["one2one" if self.end2end else "one2many"] if "one2one" in preds else preds)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/quality-fusion-v52/quality.py", line 15, in adjusted
+    out=original(raw);weight=certainty(raw['boxes'],self.reg_max);assert weight.shape==(out.shape[0],1,out.shape[2])
+        ^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/head.py", line 216, in _inference
+    dbox = self._get_decode_boxes(x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/head.py", line 226, in _get_decode_boxes
+    dbox = self.decode_bboxes(self.dfl(x["boxes"]), self.anchors.unsqueeze(0), x.get("angle")) * self.strides
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/ultralytics/nn/modules/block.py", line 81, in forward
+    return self.conv(x.view(b, 4, self.c1, a).transpose(2, 1).softmax(1)).view(b, 4, a)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/py312/torch/nn/modules/conv.py", line 560, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+RuntimeError: Input type (MPSFloatType) and weight type (torch.FloatTensor) should be the same

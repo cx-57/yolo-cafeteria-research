@@ -1,0 +1,72 @@
+{
+  "models": [
+    {
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+      "sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518"
+    },
+    {
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-full-v42/weights/verified-95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013.pt",
+      "sha": "95370c9b321b57feebbf11204b51a7a8393085dd80bb0ae483b0a1a1f2433013"
+    }
+  ],
+  "settings": {
+    "imgsz": 640,
+    "batch": 4,
+    "device": "mps",
+    "workers": 0,
+    "augment": true,
+    "iou": 0.5,
+    "conf": 0.001
+  },
+  "fusion": {
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.001,
+    "conf_type": "avg",
+    "weights": [
+      1,
+      1
+    ],
+    "allows_overflow": false
+  },
+  "quality": {
+    "statistic": "mean_per_side_top2_DFL_probability_mass",
+    "exponent": 0.5,
+    "reg_max": 16
+  },
+  "code_shas": {
+    "campaign.py": "9afba60dea68c291c9edeb94c14a85f004dcc1d2d395cc2d1652678c281a69b1",
+    "dual.py": "52fac3c1a5283567350c1840a4e80ca391adfe0f3649c09b3cc4bff949cf89b4",
+    "fusion.py": "f65d21445b5ae686580cccd26d0c493aa2d3e08eb807aa7da2a49f37b147c293",
+    "protocol.py": "4bb44918c303a57fba8f3d97168297f047ded2e15b7e555ae4fdd6c0088889c6",
+    "quality.py": "294a15f0d02c97f045284eab81ce9a9d0d657e618918cea0ee9affe2a9929590",
+    "vendor_wbf.py": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9"
+  },
+  "reference_shas": {
+    "resolution-monitor-v50/declaration.json": "1e7c9fcf52fbfd13a346e539e026f3e3e2c91fa4c652f58cc4ef76cd3ee32988",
+    "resolution-monitor-v50/campaign.py": "2591d5f143b6558befc6734212c360ad984944190f4a8716d19a7edec7421b2d",
+    "resolution-monitor-v50/protocol.py": "4bb44918c303a57fba8f3d97168297f047ded2e15b7e555ae4fdd6c0088889c6",
+    "resolution-monitor-v50/dataset.json": "1a594bbf2a4f98fc4fc05928c5d544981f50ef1f9e577fe087fed1fde576c1c5",
+    "reviewed-full-training-v42/campaign-result.json": "585de9e2171e44204acf751d51e679d20e9a4a4eb6045f69dff54f0a35ab2bb1",
+    "quality-fusion-v53/source.json": "fe3988d307177b4046a038347545f82a96310673dbea6a520933a83627843268",
+    "dual-model-fusion-v51/declaration.json": "68fa19500f270bf126949a1729cdee477bde720284361094c3a40ef8637c7c45",
+    "dual-model-fusion-v51/campaign-result.json": "52d2e3c37b0d1126cfb1f0268129c1f3e23c16670e046700c2f4b792d42d194a",
+    "dual-model-fusion-v51/score-retention.json": "660b6f18872d4c28aef974b919b0ade734eb1ac39d4ec5894dc043152e391182",
+    "dual-model-fusion-v51/score-openimages.json": "4576263c55eabb643ff3764c575fa99b468f4941b58a2491f3eacb8390fb547b",
+    "dual-model-fusion-v51/score-litter.json": "391c31e4b3f8c1ca05c92645be1adcd7009f2863b0d9a2ca77c950636f970fd1",
+    "dual-model-fusion-v51/score-fresh-litter.json": "f16dd3169f69cb74e669ed1cbbb14faafb5f46668aaa6322985475997bb1d137"
+  },
+  "maximum_candidates": 1,
+  "maximum_original_candidates": 1,
+  "no_training": true,
+  "image_transforms": [
+    "identity"
+  ],
+  "ultralytics_augment_argument_used_for_custom_dual_forward": true,
+  "ultralytics_version": "8.4.175",
+  "gate": {
+    "retention_tolerance": 0.005,
+    "other_six_metrics_nonregression": true,
+    "other_mean_gain": 0.01
+  },
+  "independent_NHS_test": false
+}

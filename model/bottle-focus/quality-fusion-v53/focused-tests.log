@@ -1,0 +1,36 @@
+..........Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 CPU (Apple M1)
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 414.7±355.2 MB/s, size: 36.2 KB)
+[K[34m[1mval: [0mScanning /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpoatmq_gw/labels/val... 2 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 2/2 727.8it/s 0.0s
+[34m[1mval: [0mNew cache created: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpoatmq_gw/labels/val.cache
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 13.0it/s 0.1s
+                   all          2          2          0          0          0          0
+Speed: 0.2ms preprocess, 28.3ms inference, 0.0ms loss, 0.5ms postprocess per image
+Saving /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpoatmq_gw/smoke/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.00s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+Results saved to [1m/private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpoatmq_gw/smoke[0m
+.
+----------------------------------------------------------------------
+Ran 11 tests in 1.891s
+
+OK
