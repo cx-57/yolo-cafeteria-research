@@ -1,0 +1,5 @@
+path: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-box-projection-v48
+train: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/box-projection-v48/training-exposures.txt
+val: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/box-projection-v48/retention-images.txt
+names:
+- bottle

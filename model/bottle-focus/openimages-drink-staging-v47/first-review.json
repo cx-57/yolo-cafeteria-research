@@ -1,0 +1,704 @@
+{
+  "source_downloads_sha": "7dead629789d90f96f0d371a3ce130064cbc0035c6364f2b11e2e84b1bed405f",
+  "target_scope": "disposable_plastic_drink_bottles",
+  "reviewer": "root_AI",
+  "human_verified": false,
+  "accepted_indices": [
+    1,
+    4,
+    6,
+    7,
+    9,
+    11,
+    13,
+    14,
+    16,
+    17,
+    18,
+    23,
+    28,
+    30,
+    31,
+    32,
+    35,
+    36,
+    37,
+    40,
+    41,
+    45,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    57,
+    59,
+    60,
+    62,
+    67,
+    68,
+    69,
+    73,
+    74,
+    75,
+    78,
+    79
+  ],
+  "records": [
+    {
+      "index": 0,
+      "id": "307087998f000542",
+      "sha": "41216d2fe6171a29ac6b83b93580e33339e04fbb62eb380bfbb6076659d7cdda",
+      "decision": "hold",
+      "reason": "Four source boxes include apparent overlapping parts/duplicates around left bottle necks; hold geometry ambiguity.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 1,
+      "id": "221b6d0ea0a8b5e5",
+      "sha": "65d1c27f6496a28ebdd9889997eafdc553d442e4ee0e070f09d6c7413cd752f1",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 2,
+      "id": "62f7a8d46ac2dc04",
+      "sha": "87cba3ea81c6b302f92a90d08a1db3c809e1bbbf7d3e8710124c9deb9db16f39",
+      "decision": "hold",
+      "reason": "Black/white overlapping bottles: foreground material/type and target coverage uncertain.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 3,
+      "id": "3323d7d480b3b42a",
+      "sha": "45746481666a915f20ab741b9b0d24432c24fca6e6ba1199781ec44dfe79d966",
+      "decision": "hold",
+      "reason": "Reusable wide-mouth sports bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 4,
+      "id": "538ae64147b793d3",
+      "sha": "a0b0239ce4846da8d5ef9e579efc680b0c3a8347b555c633876880eea6059414",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 5,
+      "id": "4c922fc510f0a687",
+      "sha": "b39605f75354bd4dfc6d3321feeb4bd2fb2111b13b520b442323b9ace9001cca",
+      "decision": "hold",
+      "reason": "Reusable insulated sports container.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 6,
+      "id": "2b8ff2e1060f7ebc",
+      "sha": "77089873dbbaa85449e3b500c0a05ee204f8fbf4d52c910a329ffb16a14ea941",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 7,
+      "id": "1c0c11fdba21088b",
+      "sha": "bf5f0f54558473aef164d6ad287831676f542a2cc9630a8bbb5a08f98fb92d6f",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 8,
+      "id": "62716ba494668d77",
+      "sha": "e039a48491d2b6fd6c0d0565232e53e8333bcfd622d6d55cf1bc2fea025c65fa",
+      "decision": "hold",
+      "reason": "Source box appears to exclude cap on left rear bottle in enlarged view.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 9,
+      "id": "17262af391331c4f",
+      "sha": "143bc29dfc6e09e5c97ea02c271919bca42b8d6dd0a9ff35fda5341e4e0be170",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 10,
+      "id": "3169601cf3721f97",
+      "sha": "7908e44ef568d99baf656c9615f58fa80786a33fb270b9898b7e357169fec4a0",
+      "decision": "hold",
+      "reason": "Source positives include nonbeverage hot-sauce bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 11,
+      "id": "647190139ab362de",
+      "sha": "8a45e4049bba2fbfd366c9a173e206b56dc412db1aeddc2c38b372b37d28e53e",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 12,
+      "id": "3e9a37133dc6c320",
+      "sha": "3653ab6e25c9a995a57313c3f04497926ed8537949dbea07388cfdb79c714771",
+      "decision": "hold",
+      "reason": "Yellow-cap narrow bottles: material uncertain in native detail.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 13,
+      "id": "1c13596cb24b09a2",
+      "sha": "c16f88dfb7632bf08321f2e37513d34d02afdb2f07fc260bf62c57e14d678f8a",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 14,
+      "id": "402f85d9ff905064",
+      "sha": "92d831dc0639154b6456c1150f44ab298e58c1fcf06e929d800b10df733584d9",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 15,
+      "id": "3c054a12f0ffd149",
+      "sha": "d6e6ce8af574ef444891f5f9f10d79bb82ce7d302c16ea5b045d247269b2a6aa",
+      "decision": "hold",
+      "reason": "Mixed generic labels include glass spirits bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 16,
+      "id": "190318dc64969c22",
+      "sha": "06226911bf7bbb6e00b600bb739a9532dacfcb82fa7bd788e8d832b8894318c0",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 17,
+      "id": "63f50d64c883cbd3",
+      "sha": "7d2bb00db53ee03231dbc67428500647c53805a0b87367969cd14217f820b0fe",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 18,
+      "id": "3d8d5d9dbaafbe21",
+      "sha": "b6243b2260adb937ed77775a05f6027e0975cf4ce63277024af15995eccfc471",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 19,
+      "id": "6516325f46bda854",
+      "sha": "fc88955598c3950142c494039f50c77e90f9c794e5d1a8a0d9622672a8916dfa",
+      "decision": "hold",
+      "reason": "Additional background blue-label water bottle appears unlabeled.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 20,
+      "id": "4de008c70962ce5c",
+      "sha": "005410e6890edbc409e02c6ed4f7030f748110fd293b977db0e2c715c5d2f63a",
+      "decision": "hold",
+      "reason": "Mixed glass/plastic generic source boxes.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 21,
+      "id": "67260abfae275666",
+      "sha": "8357729b279c31aad66c19e45b50e796dffd7aec3ead6bb1eee6c32c539f7ce7",
+      "decision": "hold",
+      "reason": "Several green bottles have uncertain glass/plastic material.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 22,
+      "id": "6235ad6c85ced204",
+      "sha": "3fbc6eedbfc7c7a1f438c697bec03e60085759b6b92e0dc457602827df21d15b",
+      "decision": "hold",
+      "reason": "Mixed water PET and dark wine-like glass target.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 23,
+      "id": "13a4da03f8f4fcb0",
+      "sha": "b468fcee6c86d289e04cc2232079262e10d9c21cd8e94756fc4a15e9c49f5dd7",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 24,
+      "id": "2b0bbc8f88dc9279",
+      "sha": "8fa1fbe1ce78cf8d4448c8ae7db60a20f8ac9510a179dc84f49122f15069820a",
+      "decision": "hold",
+      "reason": "Second boxed container appears glass carafe; uncertain mixed material.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 25,
+      "id": "34e9de4d4a07b27c",
+      "sha": "605ebc9b56adf24d49eefce65fc78b5e9ae1c038b415355ea7e1ba4c458f0a99",
+      "decision": "hold",
+      "reason": "Water source box visibly excludes blue cap.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 26,
+      "id": "33aaff69531ad81a",
+      "sha": "7d8967b5620c2305fca71167902a845954f730797928488c3c45d610735da2d5",
+      "decision": "hold",
+      "reason": "Wine/glass generic positives mixed with water PET.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 27,
+      "id": "0bf6b6ac50230a00",
+      "sha": "d89368e1c5aac8a7d24f5e703093bcb245a0b05aebf74390476c97b1660eeaa8",
+      "decision": "hold",
+      "reason": "Mixed beer glass and plastic soft drink generic positives.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 28,
+      "id": "5f0133ea215a7edb",
+      "sha": "97e5e0387328b2a02a47132b60302219650a269fcb47e6573f48b08bb76e1a6f",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 29,
+      "id": "26e678ccd57d043b",
+      "sha": "ed784cd11fec22fa5029095de6e99a517e0beadd8e2508d87dbf04d0ed23a1f3",
+      "decision": "hold",
+      "reason": "Blurred partial left source target cannot be established as eligible bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 30,
+      "id": "5afde5f18f83fefd",
+      "sha": "213b2a4370a6a056ad10b3274e0919b9a4c0f166c6578292696cbaffb11426a2",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 31,
+      "id": "2529b38104507fd0",
+      "sha": "2a434ab0d4ffef468a8cf0b424472a185ee84884392df58b920ad24f60244539",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 32,
+      "id": "6b1abe86068990ba",
+      "sha": "753d6cd4bc0b8468439bf6d46e9ddd520654eba5a51eeed7c3885a0226d771fd",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 33,
+      "id": "56136958dc82c278",
+      "sha": "38f9dd4e9af67633f2508a35cda22d790006ae605e5b2176421c8a37d139d336",
+      "decision": "hold",
+      "reason": "Possible unboxed far meeting-table bottles; completeness unresolved.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 34,
+      "id": "0e7e146b7d59e9a8",
+      "sha": "28486c9489460ffd7196d382939d24be6ee5a19191c1399b7283aa4bf273c402",
+      "decision": "hold",
+      "reason": "Perrier-like green-neck bottle material uncertain.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 35,
+      "id": "2005d7945b0f32ee",
+      "sha": "664295ffbccbd424fa6edbfb5f6101494e49b37fb48f73c116bdd18fb090c19d",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 36,
+      "id": "1efd2019b5e19418",
+      "sha": "c30e9e4ae8d78f211a9784a9a192ce56a9f8a6c894c2ca0d620a36b202ba0f38",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 37,
+      "id": "1554b2dbbee36fb8",
+      "sha": "a4301e7208af5d8aab6ce32bcfec2b91f32060e1c107caed261f11456a9df6c7",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 38,
+      "id": "58a61bee8c83679d",
+      "sha": "8620cc4f8db0c794969f9af90d0d099ae8c827842a1ca496274d48c67baf1643",
+      "decision": "hold",
+      "reason": "Thick clear glass/reusable water container.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 39,
+      "id": "10187d2e3db4aabe",
+      "sha": "b2923835ba9b6f0aed334d5b48e0a0037a783ea0a65c11d4591eb2b1507286ad",
+      "decision": "hold",
+      "reason": "Reusable green sports bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 40,
+      "id": "6acdd68b90a7cd4f",
+      "sha": "1e6b8675602786da7146411c685e4eb4038edd68c0d6b951be6098a8d5ea9efb",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 41,
+      "id": "68149fa1595370a7",
+      "sha": "a97d8cde1cd60491a9a2685986646c5cbee3c53bc583392e2de64b15e032d357",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 42,
+      "id": "2fc7ba6221d4c5c5",
+      "sha": "f31d8ea164905ac42ad201d4e96d3995b23ce853e4521aec3695880cded64c9c",
+      "decision": "hold",
+      "reason": "Source positives include condiment bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 43,
+      "id": "203715e488c6cb83",
+      "sha": "68f7f536ac6db13f5c67157848085c7df8e2e97065adbad086ecb910324c9fe2",
+      "decision": "hold",
+      "reason": "Mixed glass wine and plastic water positives.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 44,
+      "id": "689a3af7fb9a7525",
+      "sha": "a42df08d394231262ed774c090f9a71b01cddf7bbc527c3966d94099d82c6f2a",
+      "decision": "hold",
+      "reason": "Bottom-edge second target is too partial for scope/completeness.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 45,
+      "id": "4d0e88c26ab1641b",
+      "sha": "de02d3b5f784dc1c8831d1678dc02795608d91e96bf9e4113fcfb77c79337375",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 46,
+      "id": "5c7f7050e696ed6f",
+      "sha": "8640f54fb4f89800130ca8dc3c0eb35605ef114e817a61deb14a4f3bbf0bbad0",
+      "decision": "hold",
+      "reason": "Source positives include spray/toiletry containers and jar.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 47,
+      "id": "2a06f5614060e3b6",
+      "sha": "27a923d13343558c622aea310963d07700ebe2eb77abd3e69053a9e23c20d9da",
+      "decision": "hold",
+      "reason": "Generic positives appear thick glass water containers; uncertain material.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 48,
+      "id": "55894aef37f63be8",
+      "sha": "1ec9c164e1016e9066dc1c8f9845e47d08b8b8c7884745edef5fe1399c886993",
+      "decision": "hold",
+      "reason": "Six tiny source boxes cannot all be resolved confidently.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 49,
+      "id": "658ff9b3b9104b9d",
+      "sha": "9d890df92bea6d4545a50c87edb1303059b61b08db47aaff340621dc71574b3a",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 50,
+      "id": "4c528de6b5a05a54",
+      "sha": "6ed4376556ee4c8e651656697727b1a5b6df42038668bb9c2f23d6a2a7d6647a",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 51,
+      "id": "3ec2489e9f2fa8ac",
+      "sha": "aede8aa6d9c81090de0769e651f067ec2249d9a80cec081544f900fec226ff0f",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 52,
+      "id": "1e061c25247e7ad0",
+      "sha": "7e900e88043551967d75534178b6b8e6f91c1e4ee00e2517a32b5d30a909ca2c",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 53,
+      "id": "64d88c703779441e",
+      "sha": "288d36f5a1d31b8a473d58173f56b34c9212c4674f38e9fda27350d888f5f3fd",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 54,
+      "id": "281f803d404387bd",
+      "sha": "389d7ae86b28d8b2d503595c5020116cb75f76e3e50ce4ef4f76fcfd09a35e3c",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 55,
+      "id": "5fc5092c610ffeeb",
+      "sha": "ded12703c326fd3f003be0f75e9fc20f34512848345680043e23833eb406ac61",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 56,
+      "id": "391d3846e47c36b0",
+      "sha": "3cdf64f413a1cfe25b69356f0637c0cfa3b1af7c105854343f383ac97c859ec2",
+      "decision": "hold",
+      "reason": "Mixed tall glass/milk-like foreground and PET rear generic labels.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 57,
+      "id": "2254cb57220851e8",
+      "sha": "bf6d743a5515644c204b47a6d064eef13c106b76f4abb331e4e8e672d314f7bb",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 58,
+      "id": "6c61f85ad9f82666",
+      "sha": "8501361b1030662c31dac29b7e9fc4f11e3f91dc583ee417f0726cca8a718c53",
+      "decision": "hold",
+      "reason": "Glass beer source targets mixed with water PET.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 59,
+      "id": "117c4a2c6d0c9a62",
+      "sha": "5e9d2938e84785eea7f3003ecca4c6ca94e15bf212d5412730d3653613670baa",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 60,
+      "id": "644d075f17a7a859",
+      "sha": "17f2e4dfba97e30b3b79705ae091dfcd1127bceb53d34fcfd6138fee4b214e17",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 61,
+      "id": "1098d914f1cba27f",
+      "sha": "61860c1cb223536fcf7b9a964734f34fd473bedf790296ee2a99cf2d5350de3f",
+      "decision": "hold",
+      "reason": "Dense long table: many distant possible PETs beyond six labels.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 62,
+      "id": "67cc50e2522a880a",
+      "sha": "a16195f446f7ddd942e726d82c6ea8b5fe10aaebdeb1238cb83a5efbf15ee9cf",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 63,
+      "id": "5bfa64ba29034fa4",
+      "sha": "f89ef4237c3a3f5c2e1f359a78d74a83306063d9f564fd99fba9a4d69ed8247e",
+      "decision": "hold",
+      "reason": "Reusable sippy/training cup.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 64,
+      "id": "3aa80d027ffdba19",
+      "sha": "b3055b0d727478af0676c4e660961930d7831d1eb3862dde36dc47d27faca80c",
+      "decision": "hold",
+      "reason": "Mixed reusable sports bottle among generic targets.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 65,
+      "id": "3af21d0d16caea71",
+      "sha": "5c0a291c004dab32ee74dace3e6787e34da3573d67262d651c3a675d2b545341",
+      "decision": "hold",
+      "reason": "Green glass beer target; reusable unboxed container also present.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 66,
+      "id": "5de8d84745e74c18",
+      "sha": "f7fc501f5cae3d28e0926a16f9e45abf57a40dcba519a3370b62120d1040d55b",
+      "decision": "hold",
+      "reason": "Reusable cycling sports bottle.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 67,
+      "id": "5fe6a39902a51dae",
+      "sha": "3de800d5e6bed4e39026ba256fd07a4b67cb2d0a9718cb86af54e80bba3fb0b9",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 68,
+      "id": "40c1247f797fce2a",
+      "sha": "5ed47a4a763868f15dfd3c3716ba99bf660dd376b95da13b5e2feef33a7c2e0d",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 69,
+      "id": "373b4696a9083b1c",
+      "sha": "68919185a949171a3ecd86774fe9977fb433d7a3fe17fe9279a302da610e19b8",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 70,
+      "id": "1cf3ce93183f6dcc",
+      "sha": "a49a485e88627784e0a99036b7ecd134b88bfb2423c5951af52f673178f25cde",
+      "decision": "hold",
+      "reason": "Mixed foreground PET and distant dark glass bottles.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 71,
+      "id": "4eefe37f9037c874",
+      "sha": "5e3e251e7389e9cb26d23cb92f9052370d3db0e4edb318a66f566dfd3177bda5",
+      "decision": "hold",
+      "reason": "Possible additional unboxed foreground partial PET.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 72,
+      "id": "2d03e9209087fee8",
+      "sha": "12685f25c0bb148cbd381e160767c2d9c20a8d1968d60fbf10e0a9c0064eb450",
+      "decision": "hold",
+      "reason": "Mixed glass/beer generic targets.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 73,
+      "id": "60b150568a57718c",
+      "sha": "d9d611ee9daa1338c52b2602c9463c0230e8dc3afb79e52a579c48bdc541645e",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 74,
+      "id": "1b30d0352d050d12",
+      "sha": "736c5d64a8932051b204ef4f7a786e5f7e16b11352e6323781baf620ba8dd042",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 75,
+      "id": "22a00fe49a5c304c",
+      "sha": "a0c1114878421cec0a3160afb489c4fcec23a02806f604d1440cc74ee681551b",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 76,
+      "id": "5ecb263aea42f366",
+      "sha": "d36e295718dd31412ac33e0c3fa4a7dc403ca945a57af6a40005bd0074378bb9",
+      "decision": "hold",
+      "reason": "Rendered/illustrated bottle; not a source photograph.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 77,
+      "id": "3c8a7d7824c84668",
+      "sha": "b3f39227fe8f854ec7538199ce1bb6917778eb516819478088d3640358ae4b47",
+      "decision": "hold",
+      "reason": "Mixed brown glass and water PET positives.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 78,
+      "id": "472b034115255af0",
+      "sha": "45e32d5b3307ef37b4aff9d8a5e4580280a26e22374d737a8a235342893664b2",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    },
+    {
+      "index": 79,
+      "id": "0c01b18c1e5f1128",
+      "sha": "0e02285f5833872b56966029ef5891e8c616320b194dc7ec8fb3f2939685b784",
+      "decision": "candidate",
+      "reason": "Visible disposable plastic drink bottle(s); full-scene review found no clear extra eligible target or geometry issue at inspected resolution.",
+      "whole_scene_reviewed": true
+    }
+  ],
+  "detail_indices": [
+    0,
+    1,
+    2,
+    8,
+    12,
+    17,
+    33,
+    52,
+    68,
+    78
+  ],
+  "limitations": "RGB visual scope judgment and whole-scene review at displayed/native-selected detail resolution, not polymer certification. Whole-photo holds; no annotations edited; independent second review may add holds. No admission/model measurement."
+}

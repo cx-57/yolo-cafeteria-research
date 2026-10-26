@@ -1,0 +1,11 @@
+{
+  "declaration_sha": "2c1f91af71ba3664cba73337aa33fde54d8ddb37b8e184edfd859a1afbae7ead",
+  "training_photos": 567,
+  "training_boxes": 595,
+  "training_exposures": 2027,
+  "new_photos": 34,
+  "mutable_parameters": 12480,
+  "fixed_tensor_fingerprint": "3eed2dd117487aa0327216817d52dd14d148bb845ad9dec5eb02cb54e5687a80",
+  "frozen_benchmark_image_label_hashes_verified": 246,
+  "training_started": false
+}

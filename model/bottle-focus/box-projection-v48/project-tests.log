@@ -1,0 +1,1262 @@
+.............................................Frozen split: 9 training originals, 17 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpolghct3a/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 2 additional boxes; skipped 2 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp8_2qxi7w/data/training-revised/data.yaml
+Frozen split: 9 training originals, 9 views; 2 validation originals, 2 views
+Accepted 1 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmph1q3weso/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpscxxxgsa/data/training-revised/data.yaml
+Frozen split: 9 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpr7z5unzt/data/training-repeat-control/data.yaml
+Frozen split: 9 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpr7z5unzt/data/training-revised/data.yaml
+Frozen split: 8 training originals, 14 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmps8b9nl56/data/training-revised/data.yaml
+Frozen split: 8 training originals, 8 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: data/training-revised/data.yaml
+Weak-class fast subset: 4 of 8 training views (50.0%).
+Selected 3 weak original groups + 1 strong-class replay groups. Validation unchanged.
+Prepared subset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpl9vmp2o6/data/training-revised/data.yaml
+Frozen split: 8 training originals, 11 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp76havblu/data/focus/data.yaml
+Weak-class fast subset: 6 of 11 training views (54.5%).
+Selected 3 weak original groups + 0 strong-class replay groups. Validation unchanged.
+Prepared subset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp76havblu/data/training-revised/data.yaml
+Per-class AP50: {'plate': 0.99, 'wrapper': 0.99, 'bottle': 0.61} minimum: 0.61
+Per-class AP50: {'plate': 0.81, 'wrapper': 0.82, 'bottle': 0.83} minimum: 0.81
+....Per-class AP50: {'plate': 0.8, 'wrapper': 0.8, 'bottle': 0.8} minimum: 0.8
+....Integrity passed: 3 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 2,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+...............Integrity passed: 3 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 2,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 2,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 2,
+      "bottle": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Integrity passed: 3 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 2,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 2,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 2,
+      "bottle": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Built two-class dataset: {'train': {'images': 2, 'negatives': 1, 'objects': {'plate': 1, 'bottle': 1}, 'class_images': {'plate': 1, 'bottle': 1}}, 'val': {'images': 1, 'negatives': 0, 'objects': {'plate': 1, 'bottle': 1}, 'class_images': {'plate': 1, 'bottle': 1}}}
+Integrity passed: 3 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 2,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 2,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 2,
+      "bottle": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+...................../Users/Charles1/Desktop/yolo-cafeteria-research/tests/test_partial_labels.py:76: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  self.assertGreater(float(losses[0, 0, 1]), 0)
+......Built two-class dataset: {'train': {'images': 3, 'negatives': 1, 'objects': {'plate': 1, 'bottle': 1}, 'class_images': {'plate': 1, 'bottle': 1}}, 'val': {'images': 2, 'negatives': 0, 'objects': {'plate': 1, 'bottle': 1}, 'class_images': {'plate': 1, 'bottle': 1}}}
+{
+  "per_class": {
+    "plate": {
+      "AP50": 0.92,
+      "AP50_95": 0.65,
+      "precision": 0.9,
+      "recall": 0.8,
+      "F1": 0.8470588235294118,
+      "objects": 137
+    },
+    "bottle": {
+      "AP50": 0.86,
+      "AP50_95": 0.55,
+      "precision": 0.8,
+      "recall": 0.7,
+      "F1": 0.7466666666666666,
+      "objects": 45
+    }
+  },
+  "mAP50": 0.89,
+  "mAP50_95": 0.6,
+  "weights": "/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmptex5ucyn/model.pt",
+  "weights_sha256": "3292ea0cbec4d911af228ae0ed4bb75182bec5356e6a439564af8e20c75f4d0a",
+  "imgsz": 640,
+  "batch": 4,
+  "test_time_augmentation": false,
+  "independent_test": false,
+  "validation_images": 126,
+  "source_dataset_fingerprint": "reviewed-900",
+  "note": "Development validation only; not an independent NHS test"
+}
+Scanned 1 images; overlay images saved: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmptmx24c6b/output
+Eligible target images: {'plate': 1, 'napkin': 0}
+Possible wrong-class overlaps: 0 (see wrong_class_candidates.csv)
+Scanned 1 images; overlay images disabled: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmptmx24c6b/full-report
+Eligible target images: {'plate': 1}
+Possible wrong-class overlaps: 0 (see wrong_class_candidates.csv)
+Overriding model.yaml nc=80 with nc=11
+............Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+.Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 2,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 2,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 2,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+....Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+..usage: plate_wrapper.py [-h] [--source SOURCE] [--data DATA] [--model MODEL]
+                        [--review-files [REVIEW_FILES ...]] [--rebaseline]
+                        [--epochs EPOCHS] [--target TARGET]
+                        [--minutes MINUTES] [--resume]
+                        [--continue-from CONTINUE_FROM] [--lr-scale LR_SCALE]
+                        [--weights WEIGHTS]
+                        {build,verify,baseline,train,evaluate}
+plate_wrapper.py: error: Changing learning rates requires --continue-from and a new --model directory
+....Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 2,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1
+    }
+  }
+}
+Integrity passed: 4 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
+{
+  "train": {
+    "images": 3,
+    "negatives": 1,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 2
+    }
+  },
+  "val": {
+    "images": 1,
+    "negatives": 0,
+    "objects": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    },
+    "class_images": {
+      "plate": 1,
+      "wrapper": 1,
+      "bottle": 1
+    }
+  }
+}
+........................................Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpjbh20if6/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpfo5dcapb/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmplzw26xxo/model/runs/comparison/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp_nlhwn21/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpfk1q5fg5/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpd3w3bdna/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpd3w3bdna/model/runs/chosen/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmplzkmjo94/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpofsruz1i/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpmcoqg04h/model/runs/fit_validation/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+WARNING: explicitly using unpinned Ultralytics 8.4.80 (not a controlled or reproducible benchmark)
+Results: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpmuwt_jkc/model/runs/evaluation_val/metrics.json
+INCOMPLETE CLASS COVERAGE: AP undefined for plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+INSUFFICIENT VALIDATION SUPPORT (<30 objects): food, hinged_container
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Conservatively grouped 1 audited candidate pairs; skipped 1 out-of-corpus pairs. Candidate pairs do not prove duplicates.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+46 originals: 37 train, 9 val, 37 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+60 originals: 48 train, 12 val, 48 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+46 originals: 37 train, 9 val, 37 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+46 originals: 37 train, 9 val, 37 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: .....plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 360 training views (10x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+45 originals: 36 train, 9 val, 36 training views (1x)
+No test photos included. Collect independent NHS test photos.
+Conservatively grouped 1 audited candidate pairs; skipped 0 out-of-corpus pairs. Candidate pairs do not prove duplicates.
+Missing training classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Missing validation classes: plate, paper_boat, utensil, hinged_container, napkin, drink_carton, condiment_packet, wrapper, bottle, bowl
+Overriding model.yaml nc=80 with nc=2
+Transferred 493/499 items from pretrained weights
+........Overriding model.yaml nc=80 with nc=11
+.......Recovery AP50: {'utensil': 0.8, 'napkin': 0.3}
+Recovery AP50: {'utensil': 0.7, 'napkin': 0.9}
+....{
+  "image_counts": {
+    "train": 3,
+    "val": 4
+  },
+  "counts": {
+    "train": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 1,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    },
+    "val": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 2,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    }
+  },
+  "fingerprint": "ad76c1faf4ee5c14dc8b9a13b5c32a64e4b2053770d06bcafe8e5913488af003",
+  "interpretation": "Development validation; compare AP only with identical validation images, labels and inference settings. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Limited: 1 annotated validation packet(s); small support does not establish packet accuracy."
+}
+Integrity passed: original source files preserved; reviewed target corrections reproduced; no recorded capture/original/hash/pixel split overlap.
+...Recovery AP50: {'utensil': 0.9, 'condiment_packet': 0.9}
+...Recovery AP50: {'utensil': 0.8, 'condiment_packet': 0.1}
+Recovery AP50: {'utensil': 0.7, 'condiment_packet': 0.6}
+Recovery AP50: {'utensil': 0.9, 'condiment_packet': 0.2}
+.......{
+  "image_counts": {
+    "train": 3,
+    "val": 3
+  },
+  "counts": {
+    "train": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 1,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    },
+    "val": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 2,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 0,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    }
+  },
+  "fingerprint": "7c44dee9157f73be1a886140144e1007e39a7012e47dc3ca478c122f3803d22f",
+  "interpretation": "Development validation; compare AP only with identical validation images, labels and inference settings. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Unsupported: no packet validation annotations; the 44 original packet photos stay together as one background batch."
+}
+Integrity passed: original source files preserved; reviewed target corrections reproduced; no recorded capture/original/hash/pixel split overlap.
+Training views verified: 3 images; all 3 eligible target-positive images retained; 0 held photos excluded; validation unchanged.
+Prepared training revision: {'changed_validation_images': 1, 'added_objects': {'utensil': 1}, 'validation_unchanged': False}
+..{
+  "image_counts": {
+    "train": 3,
+    "val": 3
+  },
+  "counts": {
+    "train": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 1,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 1,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    },
+    "val": {
+      "food": 0,
+      "plate": 0,
+      "paper_boat": 0,
+      "utensil": 2,
+      "hinged_container": 0,
+      "napkin": 1,
+      "drink_carton": 0,
+      "condiment_packet": 0,
+      "wrapper": 0,
+      "bottle": 0,
+      "bowl": 0
+    }
+  },
+  "fingerprint": "7c44dee9157f73be1a886140144e1007e39a7012e47dc3ca478c122f3803d22f",
+  "interpretation": "Development validation; compare AP only with identical validation images, labels and inference settings. Source labels remain provisional outside targeted reviews.",
+  "condiment_validation": "Unsupported: no packet validation annotations; the 44 original packet photos stay together as one background batch."
+}
+Integrity passed: original source files preserved; reviewed target corrections reproduced; no recorded capture/original/hash/pixel split overlap.
+........Training views verified: 3 images; all 3 eligible target-positive images retained; 1 held photos excluded; validation unchanged.
+.Training views verified: 3 images; all 3 eligible target-positive images retained; 0 held photos excluded; validation unchanged.
+.......Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 1 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp0p9yyc26/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp0p9yyc26/training-v2/data.yaml
+Provisional: True
+Codex-reviewed food additions and 1 reviewed replacement annotation files applied to V2 copies
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bottle', 'bowl'], 'val': ['paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpzo5ozrny/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpzo5ozrny/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpzo5ozrny/training-v2/data.yaml --model yolo11n.pt --name v2-control-n-e100 --eval-name v2-control-n-e100-evaluation --epochs 100 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+....V2 image-level review queue: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp_s7n5de9/review_log_queue.csv
+Review counts: {'full_image_verified': 1, 'food_only_verified': 0, 'not_verified': 1} total 2
+V2 image-level review queue: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp_s7n5de9/superseded_review.csv
+Review counts: {'full_image_verified': 1, 'food_only_verified': 0, 'not_verified': 1} total 2
+Frozen split: 2 training originals, 2 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp080y802g/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp080y802g/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpltng0kuo/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpltng0kuo/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpltng0kuo/training-v2/data.yaml --model yolo11n.pt --name v2-no-mosaic-n-e10 --eval-name v2-no-mosaic-n-e10-evaluation --epochs 10 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0 --close-mosaic 10 --workers 0 --patience 0
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpltng0kuo/training-v2/data.yaml --model yolo11n.pt --name v2-coverage-n-e10 --eval-name v2-coverage-n-e10-evaluation --epochs 10 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0 --close-mosaic 10 --workers 0 --patience 0 --coverage-policy /Users/Charles1/Desktop/yolo-cafeteria-research/data/audits/model_revisions_2026-10-12/source_coverage.json
+.Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpsrbe_ivc/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpsrbe_ivc/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpsrbe_ivc/training-v2/data.yaml --model yolo11n.pt --name v2-control-n-e2 --eval-name v2-control-n-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+..............Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpdo9dgjtv/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpdo9dgjtv/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+V2 image-level review queue: /var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp2vx8ax0x/generated_review_queue.csv
+Review counts: {'full_image_verified': 1, 'food_only_verified': 1, 'not_verified': 0} total 2
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpb66__djs/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpb66__djs/training-v2/data.yaml
+Provisional: False
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': [], 'val': [], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 2 validation originals, 2 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1gac1g3r/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1gac1g3r/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp82dxas6j/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp82dxas6j/training-v2/data.yaml
+Provisional: False
+Independent test set: yes
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': [], 'val': [], 'test': []}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp94c42xwt/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp94c42xwt/training-v2/data.yaml
+Provisional: False
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 1 validation copies into V2 train
+Missing classes: {'train': [], 'val': [], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1kj06z4s/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp1kj06z4s/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 3 validation originals, 3 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmplapgyza8/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmplapgyza8/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Resolved 1 leaking photo groups by moving 2 validation copies into V2 train
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbyyrbp_x/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbyyrbp_x/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbyyrbp_x/training-v2/data.yaml --model yolo11n.pt --name v2-control-n-e2 --eval-name v2-control-n-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbyyrbp_x/training-v2/data.yaml --model yolo11n.pt --name v2-weighted-n-e2 --eval-name v2-weighted-n-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0 --cls-pw 0.25
+Training: /Users/Charles1/Desktop/yolo-cafeteria-research/.venv/bin/python /Users/Charles1/Desktop/yolo-cafeteria-research/scripts/train.py /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpbyyrbp_x/training-v2/data.yaml --model yolo11s.pt --name v2-control-s-e2 --eval-name v2-control-s-e2-evaluation --epochs 2 --batch 2 --imgsz 640 --seed 42 --device cpu --optimizer AdamW --lr0 0.0007 --lrf 0.1 --cos-lr --mosaic 0.3 --close-mosaic 10 --workers 0 --patience 0
+.....
+----------------------------------------------------------------------
+Ran 237 tests in 5.423s
+
+OK
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp7t2yd4yw/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmp7t2yd4yw/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': [], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}
+Frozen split: 1 training originals, 1 views; 1 validation originals, 1 views
+Accepted 0 additional boxes; skipped 0 overlaps
+Prepared experiment: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpq5doilgb/training-v2/data.yaml
+V2 dataset: /private/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpq5doilgb/training-v2/data.yaml
+Provisional: True
+Independent test set: no (validation only)
+Missing classes: {'train': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'bottle', 'bowl'], 'val': ['food', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl'], 'test': ['food', 'plate', 'paper_boat', 'utensil', 'hinged_container', 'napkin', 'drink_carton', 'condiment_packet', 'wrapper', 'bottle', 'bowl']}

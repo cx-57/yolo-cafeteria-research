@@ -1,0 +1,14 @@
+.F.
+======================================================================
+FAIL: test_real_box_step_changes_boxes_but_preserves_scores_and_fixed_tensors (test_geometry.GeometryTests.test_real_box_step_changes_boxes_but_preserves_scores_and_fixed_tensors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/box-projection-v48/test_geometry.py", line 12, in test_real_box_step_changes_boxes_but_preserves_scores_and_fixed_tensors
+    self.assertEqual(len(names),6);self.assertEqual(sum(p.numel() for n,p in model.named_parameters() if n in names),12480)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 387 != 12480
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.196s
+
+FAILED (failures=1)
