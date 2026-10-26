@@ -1,0 +1,93 @@
+{
+  "reviewer": "review_readme_workflow_AI",
+  "human_verified": false,
+  "source_downloads_sha": "a64cc2606fd225d47e734d4d8174bd31718f9c664ecda4d3d0065b78ce7c0d7e",
+  "prior_independent_review_sha": "ecc782b5ff065f9ca936bf80361f03b0048aedbb1daa8b9dd18d2effe90bddd5",
+  "records": [
+    {
+      "index": 1,
+      "id": "taco_unofficial_2968",
+      "image_sha": "d63e13aaad36a2cdbe1f4a16ee0f59e5e1ab3d187443d376e5bd3639df48a39b",
+      "decision": "hold",
+      "reason": "Additional unboxed opaque white container is yogurt/pot-like in enlarged crop; not a confirmed bottle, but keep conservative whole-photo completeness/type hold."
+    },
+    {
+      "index": 5,
+      "id": "taco_unofficial_1157",
+      "image_sha": "5fd004776e4fde8fd9f5abb180dd742e6be4a2348ef1522086eafaf54fffbb71",
+      "decision": "hold",
+      "reason": "At least target1 visible blue cap extends left of source bbox; target0 is very close to boundary. Strict complete-extent admission fails."
+    },
+    {
+      "index": 8,
+      "id": "taco_unofficial_1534",
+      "image_sha": "40ea0d10c53c79ce016b8db34d373aa5c015e70ca40f7b251d5cfafe80d0405c",
+      "decision": "candidate",
+      "reason": "Thin-line native-coordinate crop shows upper-right blue cap within bbox; no concrete cap omission confirmed. Whole-photo original review otherwise stands."
+    },
+    {
+      "index": 34,
+      "id": "taco_unofficial_1287",
+      "image_sha": "88f1aded1552994596491aa98ee8cf6996dd07740cbe3fa0ed62a8ed44d6065e",
+      "decision": "hold",
+      "reason": "Blue cap slightly extends left beyond source bbox; strict extent hold."
+    },
+    {
+      "index": 37,
+      "id": "taco_unofficial_2772",
+      "image_sha": "ea612a827ce421c6fd81757b68fc2dfa711c30a9256b85304da87af667a56795",
+      "decision": "hold",
+      "reason": "Blue cap at RIGHT end extends beyond right source boundary; direction correction to initial concern."
+    },
+    {
+      "index": 39,
+      "id": "taco_unofficial_2366",
+      "image_sha": "9148d4667d17fa112f43c99a6e44a47886d5414620c02178bb3ea62a8a886a09",
+      "decision": "hold",
+      "reason": "Red cap at left extends slightly outside source bbox."
+    },
+    {
+      "index": 40,
+      "id": "taco_unofficial_383",
+      "image_sha": "59dcc14eaa24d0d3f9f31d3c8b3149cf4b6c51dcd6945253a99074b384fd3a4d",
+      "decision": "candidate",
+      "reason": "Thin-line source-coordinate crop contains complete visible Highland blue cap and bottle. Cap clipping not substantiated."
+    },
+    {
+      "index": 51,
+      "id": "taco_unofficial_3807",
+      "image_sha": "498d9c22516594aeb34224aa9c30af7f4bfd480ac7be99bf210b58b84da7c590",
+      "decision": "candidate",
+      "reason": "Thin-line source-coordinate crop contains teal cap comfortably inside left boundary; cap clipping not substantiated."
+    },
+    {
+      "index": 58,
+      "id": "taco_unofficial_1798",
+      "image_sha": "62b63c5fb80bca59ea2fe87fac7baf824ce07207e296cd9b0b6b4c958f630b1f",
+      "decision": "hold",
+      "reason": "Upper-right suspected extra PET resolves as cobblestones in enlarged context; no confirmed missing bottle. Lower-right black cap/neck may cross bottom source bound slightly, so strict extent uncertainty hold."
+    }
+  ],
+  "revised_independent_candidate_indices": [
+    2,
+    8,
+    9,
+    17,
+    22,
+    29,
+    40,
+    51
+  ],
+  "scope": "Follow-up only; original independent ledger preserved. Final source admission requires intersection with root review and all provenance/geometry/overlap gates.",
+  "evidence_shas": {
+    "followup-extents.jpg": "79df3d9371bc17368fe11ff60cf3b160a1084fb1c687310aac888a1ccbf62532",
+    "followup-5-8.jpg": "de311a40398932586b7fe1f0ddbc22f1985062c39156a01847dd390a7ffd03f9",
+    "followup-1-white.jpg": "24ca0b78d5ea2294f47e10e714fa924b8659a05649c9e99b85c8928b71f483e5",
+    "target-crops-032.jpg": "d9626855f1ec99d2c7342e11d8cdca1a130a3cb4d4f7a5f208a97145d4a69d09",
+    "target-crops-040.jpg": "30f3928cdb7b484a2d9c4e2c4c5ee513706168761ea831c178f7f6278a0c2027",
+    "target-crops-048.jpg": "c86a8f475f41e6d20fea4cc3ef29763fefbd09fe8ea85f8ccc7718bf6b249443",
+    "target-crops-000.jpg": "d6d38c6016eca16b42fdf1788f2a7b7b3ed157d3773739a2fc4b2e6bad0821b2",
+    "target-crops-008.jpg": "c2c21994ac2475a4b7135ebd24c790f1c810e18bfac8b61d8ac9ed03168b965c"
+  },
+  "limitations": "AI appearance review; small extent judgments remain conservative. No boxes/source labels edited."
+}

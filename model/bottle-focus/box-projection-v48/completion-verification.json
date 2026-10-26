@@ -1,0 +1,20 @@
+{
+  "declaration_sha": "2c1f91af71ba3664cba73337aa33fde54d8ddb37b8e184edfd859a1afbae7ead",
+  "saved_checkpoints": [
+    {
+      "role": "first",
+      "sha": "0bc8182cead8e9c3d877c48b1f46fb004da9d0d46055fd6db7c150aa7754c296",
+      "protected_state_verified": true
+    },
+    {
+      "role": "latest",
+      "sha": "4d6a561bbc6dfdcd7c1629bdc10d69a50a62617bf5b0a4acdb61e3ad1d0cff5a",
+      "protected_state_verified": true
+    }
+  ],
+  "frozen_benchmark_image_label_hashes_verified": 246,
+  "initial_weights_unchanged": true,
+  "original_benchmark_used": false,
+  "incumbent_AP50": 0.8407106817291071,
+  "incumbent_AP50_95": 0.620605656065828
+}

@@ -1,0 +1,150 @@
+{
+  "initial_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+  "records": [
+    {
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-box-projection-v48/weights/best-ap50.pt",
+      "weights_sha": "0bc8182cead8e9c3d877c48b1f46fb004da9d0d46055fd6db7c150aa7754c296",
+      "tensors": [
+        {
+          "name": "model.23.cv2.0.2.bias",
+          "changed": 21,
+          "total": 64,
+          "max_delta": 0.000244140625,
+          "mean_delta": 4.1097402572631836e-05
+        },
+        {
+          "name": "model.23.cv2.0.2.weight",
+          "changed": 3820,
+          "total": 4096,
+          "max_delta": 0.0003414154052734375,
+          "mean_delta": 7.732892117928714e-05
+        },
+        {
+          "name": "model.23.cv2.1.2.bias",
+          "changed": 18,
+          "total": 64,
+          "max_delta": 0.000244140625,
+          "mean_delta": 4.2825937271118164e-05
+        },
+        {
+          "name": "model.23.cv2.1.2.weight",
+          "changed": 3875,
+          "total": 4096,
+          "max_delta": 0.00042724609375,
+          "mean_delta": 8.473909110762179e-05
+        },
+        {
+          "name": "model.23.cv2.2.2.bias",
+          "changed": 10,
+          "total": 64,
+          "max_delta": 0.000244140625,
+          "mean_delta": 2.574920654296875e-05
+        },
+        {
+          "name": "model.23.cv2.2.2.weight",
+          "changed": 3767,
+          "total": 4096,
+          "max_delta": 0.00030612945556640625,
+          "mean_delta": 7.040727359708399e-05
+        }
+      ]
+    },
+    {
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-box-projection-v48/weights/best-localization.pt",
+      "weights_sha": "0bc8182cead8e9c3d877c48b1f46fb004da9d0d46055fd6db7c150aa7754c296",
+      "tensors": [
+        {
+          "name": "model.23.cv2.0.2.bias",
+          "changed": 21,
+          "total": 64,
+          "max_delta": 0.000244140625,
+          "mean_delta": 4.1097402572631836e-05
+        },
+        {
+          "name": "model.23.cv2.0.2.weight",
+          "changed": 3820,
+          "total": 4096,
+          "max_delta": 0.0003414154052734375,
+          "mean_delta": 7.732892117928714e-05
+        },
+        {
+          "name": "model.23.cv2.1.2.bias",
+          "changed": 18,
+          "total": 64,
+          "max_delta": 0.000244140625,
+          "mean_delta": 4.2825937271118164e-05
+        },
+        {
+          "name": "model.23.cv2.1.2.weight",
+          "changed": 3875,
+          "total": 4096,
+          "max_delta": 0.00042724609375,
+          "mean_delta": 8.473909110762179e-05
+        },
+        {
+          "name": "model.23.cv2.2.2.bias",
+          "changed": 10,
+          "total": 64,
+          "max_delta": 0.000244140625,
+          "mean_delta": 2.574920654296875e-05
+        },
+        {
+          "name": "model.23.cv2.2.2.weight",
+          "changed": 3767,
+          "total": 4096,
+          "max_delta": 0.00030612945556640625,
+          "mean_delta": 7.040727359708399e-05
+        }
+      ]
+    },
+    {
+      "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-box-projection-v48/train/weights/last.pt",
+      "weights_sha": "4d6a561bbc6dfdcd7c1629bdc10d69a50a62617bf5b0a4acdb61e3ad1d0cff5a",
+      "tensors": [
+        {
+          "name": "model.23.cv2.0.2.bias",
+          "changed": 29,
+          "total": 64,
+          "max_delta": 0.00048828125,
+          "mean_delta": 0.00011530518531799316
+        },
+        {
+          "name": "model.23.cv2.0.2.weight",
+          "changed": 3977,
+          "total": 4096,
+          "max_delta": 0.0007014274597167969,
+          "mean_delta": 0.00016464732470922172
+        },
+        {
+          "name": "model.23.cv2.1.2.bias",
+          "changed": 31,
+          "total": 64,
+          "max_delta": 0.0009765625,
+          "mean_delta": 0.00013998150825500488
+        },
+        {
+          "name": "model.23.cv2.1.2.weight",
+          "changed": 3983,
+          "total": 4096,
+          "max_delta": 0.0009765625,
+          "mean_delta": 0.00017537348321639001
+        },
+        {
+          "name": "model.23.cv2.2.2.bias",
+          "changed": 22,
+          "total": 64,
+          "max_delta": 0.00048828125,
+          "mean_delta": 9.72747802734375e-05
+        },
+        {
+          "name": "model.23.cv2.2.2.weight",
+          "changed": 3960,
+          "total": 4096,
+          "max_delta": 0.0006103515625,
+          "mean_delta": 0.00015166669618338346
+        }
+      ]
+    }
+  ],
+  "no_additional_benchmark_inference": true
+}

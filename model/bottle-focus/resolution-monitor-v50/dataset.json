@@ -1,0 +1,141 @@
+{
+  "monitor_records": [
+    {
+      "id": "taco_unofficial_807",
+      "source_index": 2,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_807.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_807.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_807.txt",
+      "image_sha": "e343817f720b574db1d81e2000812613e982e6906b6e2ff37f8bf10d383d6035",
+      "pixels": "db64d273138d6afded8b60268061cd225d8d0a28ce3fcc4ad4c2bd57ec1b9bce",
+      "source_group": "flickr/49042772721",
+      "rows": [
+        "0 0.591583333 0.522000000 0.108500000 0.216500000",
+        "0 0.347333333 0.436125000 0.081333333 0.166750000"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_1534",
+      "source_index": 8,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_1534.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_1534.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_1534.txt",
+      "image_sha": "40ea0d10c53c79ce016b8db34d373aa5c015e70ca40f7b251d5cfafe80d0405c",
+      "pixels": "55c5292ff5b51d582cecdd1c768de332f78ae0c5c84dfc68c170af0465ddafd5",
+      "source_group": "flickr/49056094511",
+      "rows": [
+        "0 0.641789650 0.483393000 0.183333367 0.142187500"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_637",
+      "source_index": 9,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_637.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_637.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_637.txt",
+      "image_sha": "66f012d948c13338bf119b8835e09ddb31ec13a55b8a95ca427d7d7ba4cf7e35",
+      "pixels": "f27c77281db3b23f2124275f7067f6d42abf3f221ac9d573ee764fdfcaa9fec2",
+      "source_group": "flickr/48758785837",
+      "rows": [
+        "0 0.481164400 0.500781250 0.472602780 0.117187500"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_3775",
+      "source_index": 17,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_3775.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_3775.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_3775.txt",
+      "image_sha": "1567451e7dd007da69d4c266f3810369458ea069ac409bffed9caea8b5603a13",
+      "pixels": "698bbb52aecd44a363ac5393e2a778f35a7e235b34f90b9b3e949549a293eabf",
+      "source_group": "flickr/49578892392",
+      "rows": [
+        "0 0.618750000 0.560937500 0.206250000 0.062500000"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_1866",
+      "source_index": 22,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_1866.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_1866.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_1866.txt",
+      "image_sha": "1281ad1abbd059633cfb7b5b03d6c768fea502e9dfc28e75d544210b4dcb6f96",
+      "pixels": "8ab499b28af68868dda95f63326129fb18abe7f1103fc4ea498d0c585ca3a165",
+      "source_group": "flickr/49042790366",
+      "rows": [
+        "0 0.261458333 0.520000000 0.068750000 0.081250000"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_2891",
+      "source_index": 29,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_2891.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_2891.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_2891.txt",
+      "image_sha": "1e6ab4fee3c95b9ad17c34a1c5267b5fc9121eca4e99b585408176e329a2c22d",
+      "pixels": "94b2bc4e1bc0c89e7b02d1f9d4c2c79ddbbfa03dfcef6a2203c218a63b4ed9b3",
+      "source_group": "flickr/49055578678",
+      "rows": [
+        "0 0.483333333 0.416406250 0.120833333 0.060937500"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_383",
+      "source_index": 40,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_383.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_383.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_383.txt",
+      "image_sha": "59dcc14eaa24d0d3f9f31d3c8b3149cf4b6c51dcd6945253a99074b384fd3a4d",
+      "pixels": "f314bb5923c05f480754e506025bbfceba39e1e740f206900346ab3e8d8a1e7a",
+      "source_group": "flickr/48781985777",
+      "rows": [
+        "0 0.258333333 0.767187500 0.108333333 0.190625000"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    },
+    {
+      "id": "taco_unofficial_3807",
+      "source_index": 51,
+      "source_image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-taco-drink-staging-v49/taco_unofficial_3807.jpg",
+      "image": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/images/val/taco_unofficial_3807.jpg",
+      "label": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50/labels/val/taco_unofficial_3807.txt",
+      "image_sha": "498d9c22516594aeb34224aa9c30af7f4bfd480ac7be99bf210b58b84da7c590",
+      "pixels": "9e2b02e9afc1c22028556ea7cb0e0c9afe17e00370711f7d7dd86745e191a3ef",
+      "source_group": "flickr/49494211113",
+      "rows": [
+        "0 0.516629633 0.628849850 0.140666667 0.077500000"
+      ],
+      "previously_trained": false,
+      "human_verified": false
+    }
+  ],
+  "source_group_holds": [],
+  "monitor_photos": 8,
+  "monitor_boxes": 9,
+  "monitor_fingerprint": "ba927633e1c35e7e044eb9d8517c9f96b70c8a9bd34287e6347e5779115b7268",
+  "config": {
+    "path": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50",
+    "train": "images/val",
+    "val": "images/val",
+    "names": [
+      "bottle"
+    ]
+  },
+  "permanent_training_exclusion": true,
+  "no_training": true,
+  "positive_only_monitor": true,
+  "independent_NHS_test": false
+}

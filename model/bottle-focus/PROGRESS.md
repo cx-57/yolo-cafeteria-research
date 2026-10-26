@@ -314,3 +314,17 @@ one distinct final246/67 benchmark candidate. Source aliases/capturegroups
 removed, current+historical overlap screens reviewed.237project/10focused
 checks pass. A reviewed interrupted-report recovery P2 was fixed. Native
 monitor scores are never benchmark success. Trial launched; no gain yet.
+
+## Disposable drink-bottle scope and continued optimization (2026-10-25)
+
+User clarified onlydisposableplasticdrinkbottles; scope documented in docs/BOTTLE_TARGET_SCOPE.md. V42fullboundedrun regressed79.3971/57.9725 on original246/67benchmark. V44classifier-feature andV45terminalscore trials failed unchanged sourcegates and skipped original evaluation. V46halfV45epoch1logit interpolation passed sourcegates but main83.3384/61.0726 regressed; rejected. Protected balanced incumbent stays84.0711/62.0606;90%notreached. Source/retention high scores are not main benchmark scores.
+
+V47staged80previouslyuninspectedofficialOpenImagesphotos with complete source annotations,positivePlastic/Waterimage labels,metadata andfixedseed1143. Root/independentAIwhole-scene reviews jointly accepted35;conservativeoverlapscreen against1638protectedphotos held1,leaving34parents/51boxes. V48adds onlythesephotos to unchangedV45schedule:567photos/595boxes/2027exposures. All92developmentmonitorphotos andoriginal246benchmarkphotos preserved. Nooldlabelrepairs.
+
+V48launched bounded3epochAdamW1e-5terminalcv2boxprojection training frombalancedincumbent;6tensors/12480parameters withclassifier,features,BNandEMAprotectedstatefixed. Actualoptimizer/Trainer/savedcheckpoint checks and11focusedtests pass;independentreviewclean. Same retention/sourcegates,earlystop,max1originalcandidate,andjointpromotionfloors apply. NoV48accuracygainyet;full80epochmulticlasstrainingnotstarted. Publicmonitors are repeatedlyuseddevelopmentdata,not independentNHStesting.
+
+V48completed3epochs: freshfirstcheckpointmatchedallmonitorbaselines;latestlitter47.5631/26.7782regressedAP95. Sourcegatesfailed,originalbenchmarkskipped,protectedincumbent84.0711/62.0606unchanged. Actualsavedweightschangedandprotectedstate+246benchmarkfilesverifiedposttraining.
+
+V50reserves8newpreviouslyuntrainedlitterphotos/9boxes (V49indices2,8,9,17,22,29,40,51) afterdualAIQA,finiteboxchecks andoverlapscreenagainst1672protectedphotos. Newmonitorfingerprint ba927633e1c35e7e044eb9d8517c9f96b70c8a9bd34287e6347e5779115b7268. See permanent-monitor-registry.json: all100developmentmonitorphotos/groups/aliases remainexcludedfromfuturetraining. Single896ordinaryinferencecandidate onunchanged88877weights,matched640sourcecontrols; noaccuracygainyet.
+
+V50completed:896improvedOI75.3473/59.1387andoldlitter50.2088/28.7483,butretention93.5/88.3473andfreshlitter36.2952/19.1026regressedfrom640controls99.5/90.7770and49.7143/32.2643. Gatesfailed,originalbenchmarkskipped;incumbent84.0711/62.0606unchanged. Nooptimizersteps.

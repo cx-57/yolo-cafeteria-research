@@ -1,0 +1,33 @@
+{
+  "weights_sha": "88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518",
+  "cohort": {
+    "name": "litter",
+    "yaml": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/data.yaml",
+    "photos": 32,
+    "boxes": 18,
+    "dataset_sha": "c72fc38dc84f73cfa946ce8a3867c3c2a59087dfcf2d7ef5334da7e6ae25f319"
+  },
+  "imgsz": 896,
+  "settings": {
+    "batch": 4,
+    "device": "mps",
+    "workers": 0,
+    "augment": false,
+    "iou": 0.5,
+    "conf": 0.001
+  },
+  "declaration_sha": "1e7c9fcf52fbfd13a346e539e026f3e3e2c91fa4c652f58cc4ef76cd3ee32988",
+  "ultralytics_version": "8.4.175",
+  "weights": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-reviewed-neck-monitor-v36/weights/verified-88877bbf13c02a202811b6ca0a1ccdc2bde70b2916d366f4b67938df732d1518.pt",
+  "AP50": 0.5020877192982457,
+  "AP50_95": 0.28748327067669177,
+  "precision": 0.6235884914273268,
+  "recall": 0.6666666666666666,
+  "speed_ms_per_image": {
+    "preprocess": 0.43035415592385107,
+    "inference": 36.70205203070509,
+    "loss": 0.00023303118723561056,
+    "postprocess": 20.98855731310323
+  },
+  "independent_NHS_test": false
+}

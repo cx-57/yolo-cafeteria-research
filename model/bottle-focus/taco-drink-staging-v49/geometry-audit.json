@@ -1,0 +1,368 @@
+{
+  "source_downloads_sha": "a64cc2606fd225d47e734d4d8174bd31718f9c664ecda4d3d0065b78ce7c0d7e",
+  "audit_code_sha": "5ba598a952128e18b4d619d5f4d848ba008ef93f645f07100c383e7a35f8f4cb",
+  "records": [
+    {
+      "index": 0,
+      "id": "taco_unofficial_980",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 1,
+      "id": "taco_unofficial_2968",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 2,
+      "id": "taco_unofficial_807",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 3,
+      "id": "taco_unofficial_360",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 4,
+      "id": "taco_unofficial_3745",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 5,
+      "id": "taco_unofficial_1157",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 6,
+      "id": "taco_unofficial_2660",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 7,
+      "id": "taco_unofficial_3584",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 8,
+      "id": "taco_unofficial_1534",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 9,
+      "id": "taco_unofficial_637",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 10,
+      "id": "taco_unofficial_469",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 11,
+      "id": "taco_unofficial_1905",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 12,
+      "id": "taco_unofficial_3313",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 13,
+      "id": "taco_unofficial_707",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 14,
+      "id": "taco_unofficial_1583",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 15,
+      "id": "taco_unofficial_1466",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 16,
+      "id": "taco_unofficial_309",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 17,
+      "id": "taco_unofficial_3775",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 18,
+      "id": "taco_unofficial_1299",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 19,
+      "id": "taco_unofficial_3502",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 20,
+      "id": "taco_unofficial_3716",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 21,
+      "id": "taco_unofficial_3271",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 22,
+      "id": "taco_unofficial_1866",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 23,
+      "id": "taco_unofficial_96",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 24,
+      "id": "taco_unofficial_456",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 25,
+      "id": "taco_unofficial_2332",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 26,
+      "id": "taco_unofficial_531",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 27,
+      "id": "taco_unofficial_738",
+      "accepted_geometry": false,
+      "reason": "Invalid target source bbox: whole-photo hold"
+    },
+    {
+      "index": 28,
+      "id": "taco_unofficial_1999",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 29,
+      "id": "taco_unofficial_2891",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 30,
+      "id": "taco_unofficial_2199",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 31,
+      "id": "taco_unofficial_1954",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 32,
+      "id": "taco_unofficial_859",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 33,
+      "id": "taco_unofficial_2591",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 34,
+      "id": "taco_unofficial_1287",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 35,
+      "id": "taco_unofficial_3739",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 36,
+      "id": "taco_unofficial_1049",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 37,
+      "id": "taco_unofficial_2772",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 38,
+      "id": "taco_unofficial_1114",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 39,
+      "id": "taco_unofficial_2366",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 40,
+      "id": "taco_unofficial_383",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 41,
+      "id": "taco_unofficial_2613",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 42,
+      "id": "taco_unofficial_3292",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 43,
+      "id": "taco_unofficial_3583",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 44,
+      "id": "taco_unofficial_838",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 45,
+      "id": "taco_unofficial_1871",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 46,
+      "id": "taco_unofficial_3607",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 47,
+      "id": "taco_unofficial_2312",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 48,
+      "id": "taco_unofficial_922",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 49,
+      "id": "taco_unofficial_1172",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 50,
+      "id": "taco_unofficial_3054",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 51,
+      "id": "taco_unofficial_3807",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 52,
+      "id": "taco_unofficial_1764",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 53,
+      "id": "taco_unofficial_3036",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 54,
+      "id": "taco_unofficial_3578",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 55,
+      "id": "taco_unofficial_1710",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    },
+    {
+      "index": 56,
+      "id": "taco_unofficial_328",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 57,
+      "id": "taco_unofficial_3608",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 58,
+      "id": "taco_unofficial_1798",
+      "accepted_geometry": true,
+      "reason": "All target boxes finite, positive and within image"
+    },
+    {
+      "index": 59,
+      "id": "taco_unofficial_106",
+      "accepted_geometry": false,
+      "reason": "Photo/source/license download hold"
+    }
+  ],
+  "accepted": 45,
+  "no_source_boxes_edited": true
+}
