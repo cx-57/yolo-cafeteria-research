@@ -1,7 +1,0 @@
-{
-  "v1_dataset_sha256": "83455b7632d75857c3f53aa6e4e7900151f0343e7bf256633beec8d8770f592a",
-  "v1_weights_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/runs/yolo11n-corrected-baseline-100/weights/best.pt",
-  "v1_weights_sha256": "33a1974dd37df1b00d847c95ea2982c429e3ae62903003a740bba7580d9ac5c1",
-  "v1_image_count": 3096,
-  "new_work_scope": "V2 only"
-}

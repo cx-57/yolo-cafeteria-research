@@ -1,6 +1,0 @@
-{
-  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-joint-v6/train/weights/best_utensil.pt",
-  "source_sha": "5cf0eca1767d703b1172ffaf616e8f8d9d43c98e93863946bcd61f122e516f48",
-  "output_sha": "c837af1ad801a7307e898fc89061c3fc953a082bb16ad8dd1de80ea55f038e45",
-  "decoded_box_and_score_equivalence": true
-}

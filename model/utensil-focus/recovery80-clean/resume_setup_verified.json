@@ -1,8 +1,0 @@
-{
-  "start_epoch_one_based": 2,
-  "epoch_horizon": 80,
-  "optimizer_restored": true,
-  "ema_restored": true,
-  "coverage_loss_reconstructed": true,
-  "completed_new_training_epochs": 0
-}

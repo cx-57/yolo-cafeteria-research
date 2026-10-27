@@ -1,5 +1,0 @@
-{
-  "reason": "Visual review confirmed a plate-positive validation image was marked negative and three training images need class/box corrections. Historical metrics reproduce these old labels but are superseded for acceptance.",
-  "replacement": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/plate-wrapper-focus/reviewed-v2",
-  "evidence": "/Users/Charles1/Desktop/yolo-cafeteria-research/data/plate-wrapper-focus/label-corrections-v2.json"
-}

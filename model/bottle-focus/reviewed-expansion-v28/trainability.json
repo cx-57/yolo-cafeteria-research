@@ -1,7 +1,0 @@
-{
-  "epoch": 6,
-  "only_detection_head_trainable": true,
-  "all_BatchNorm_running_statistics_fixed": true,
-  "trainable_parameters": 819779,
-  "normalization_modules": 81
-}

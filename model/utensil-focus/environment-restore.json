@@ -1,8 +1,0 @@
-{
-  "version": "8.4.175",
-  "wheel_url": "https://files.pythonhosted.org/packages/a7/88/4ac9670886f1b6a53a950e058aabf77e89d9b35848033a11b8345b00c656/ultralytics-8.4.175-py3-none-any.whl",
-  "wheel_sha256": "16245f680cb6c27856398b3d78a4f4e43d583d0f0c65de0b22431526881b1e1d",
-  "restored": [],
-  "pending": [],
-  "method": "Restore only offloaded package files whose wheel bytes match installed distribution RECORD SHA256. No version change/dependency installation."
-}

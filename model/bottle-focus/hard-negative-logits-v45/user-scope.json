@@ -1,7 +1,0 @@
-{
-  "target": "disposable_plastic_drink_bottles",
-  "user_answer": "Only disposable plastic drink bottles",
-  "source": "Explicit user clarification in this conversation",
-  "glass_and_non_drink_containers_are_not_targets": true,
-  "benchmark_labels_unchanged": true
-}

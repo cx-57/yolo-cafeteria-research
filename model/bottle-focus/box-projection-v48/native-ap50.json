@@ -1,9 +1,0 @@
-{
-  "epoch": 1,
-  "AP50": 0.995,
-  "AP50_95": 0.9211031746031747,
-  "metric_source": "source_matched_retention_monitor",
-  "retention_fingerprint": "92c249d7644b45d923b20916ecbb4c993a2522bd2a0c9e9eccd18662f5a13150",
-  "declaration_sha": "2c1f91af71ba3664cba73337aa33fde54d8ddb37b8e184edfd859a1afbae7ead",
-  "weights_sha": "0bc8182cead8e9c3d877c48b1f46fb004da9d0d46055fd6db7c150aa7754c296"
-}

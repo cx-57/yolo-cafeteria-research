@@ -1,7 +1,0 @@
-{
-  "declaration_sha": "2c1f91af71ba3664cba73337aa33fde54d8ddb37b8e184edfd859a1afbae7ead",
-  "optimization_authorized": true,
-  "maximum_epochs_authorized": 20,
-  "experiment_epochs": 3,
-  "user_instruction": "Keep going with bottle optimization; only disposable plastic drink bottles"
-}

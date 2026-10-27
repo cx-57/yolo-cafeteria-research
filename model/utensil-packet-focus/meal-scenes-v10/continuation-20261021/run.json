@@ -1,7 +1,0 @@
-{
-  "started_at_utc": "2026-10-21T21:28:46.224698+00:00",
-  "command": "scripts/utensil_packet.py train --meal-scenes --resume --minutes 8",
-  "starting_completed_epoch": 3,
-  "validation_unchanged": true,
-  "purpose": "Continue meal-scene pilot; compare same-checkpoint per-class AP50 against selected baseline"
-}

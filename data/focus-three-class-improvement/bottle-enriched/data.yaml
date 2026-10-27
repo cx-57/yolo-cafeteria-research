@@ -1,7 +1,0 @@
-path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/bottle-enriched
-train: images/train
-val: images/val
-names:
-- plate
-- wrapper
-- bottle

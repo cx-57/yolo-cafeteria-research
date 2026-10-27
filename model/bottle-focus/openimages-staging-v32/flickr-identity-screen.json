@@ -1,7 +1,0 @@
-{
-  "lvis_index": "data/focus-three-class-improvement/bottle-candidates/additional_lvis_training_index.json",
-  "lvis_index_sha256": "d6f5e2d384fe292ba60cb32c57c7412d68268545ef560f615499ddc66a907692",
-  "known_flickr_photo_ids": 538,
-  "records": [],
-  "limitations": "Conservative original Flickr photo-ID match to all candidates in the existing LVIS source index, including unused sources. Not proof all other sources are disjoint."
-}

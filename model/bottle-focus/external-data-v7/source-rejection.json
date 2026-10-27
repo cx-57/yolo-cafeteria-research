@@ -1,6 +1,0 @@
-{
-  "source": "https://data.mendeley.com/datasets/tksn2jrckf/1",
-  "reviewed_sample": 24,
-  "admitted": 0,
-  "reason": "Repeated shop scenes and many unlabeled visible bottles; out-of-bounds annotations in sample images 10 and 23. Native EXIF display orientation was checked. Dataset not admitted as supplied."
-}

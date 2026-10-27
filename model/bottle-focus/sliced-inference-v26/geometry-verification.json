@@ -1,8 +1,0 @@
-{
-  "tests_passed": 2,
-  "known_non_square_anisotropic_resize_checked": true,
-  "actual_native_loader_labels_checked": true,
-  "original_image_and_label_unchanged": true,
-  "adapter_sha": "c03cffe29f84c643a46eca50258846a3bae67497877550d44819c0ba7956e777",
-  "test_sha": "fcfad6ed1aeb933ab4d20037a4e9e3c71e22246e0a04b1e07c21cfc7c6d7d0af"
-}

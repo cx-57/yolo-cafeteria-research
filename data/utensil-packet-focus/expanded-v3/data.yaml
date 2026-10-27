@@ -1,6 +1,0 @@
-names:
-- utensil
-- condiment_packet
-path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-packet-focus/expanded-v3
-train: images/train
-val: images/val

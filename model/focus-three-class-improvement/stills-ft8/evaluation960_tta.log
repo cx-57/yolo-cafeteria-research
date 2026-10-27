@@ -1,79 +1,0 @@
-Integrity passed: 619 images, validated boxes, verified negatives, no split leakage.
-{
-  "train": {
-    "images": 527,
-    "negatives": 6,
-    "objects": {
-      "plate": 217,
-      "wrapper": 166,
-      "bottle": 263
-    },
-    "class_images": {
-      "plate": 143,
-      "wrapper": 160,
-      "bottle": 243
-    }
-  },
-  "val": {
-    "images": 92,
-    "negatives": 0,
-    "objects": {
-      "plate": 89,
-      "wrapper": 8,
-      "bottle": 36
-    },
-    "class_images": {
-      "plate": 63,
-      "wrapper": 8,
-      "bottle": 29
-    }
-  }
-}
-Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
-YOLO11n summary (fused): 101 layers, 2,597,537 parameters, 0 gradients, 6.4 GFLOPs
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 4211.5±693.9 MB/s, size: 181.0 KB)
-[K[34m[1mval: [0mScanning /Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/reviewed-619/labels/val.cache... 92 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 92/92 29.7Mit/s 0.0s
-[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 4% ╸─────────── 1/23 4.9s/it 1.5s<1:47[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 8% ━─────────── 2/23 1.2it/s 1.7s<17.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 13% ━╸────────── 3/23 1.3it/s 2.4s<15.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 17% ━━────────── 4/23 1.9it/s 2.7s<9.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 21% ━━╸───────── 5/23 2.5it/s 2.9s<7.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 6/23 2.8it/s 3.2s<6.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 7/23 3.0it/s 3.5s<5.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 34% ━━━━──────── 8/23 3.2it/s 3.8s<4.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 39% ━━━━╸─────── 9/23 3.4it/s 4.0s<4.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 43% ━━━━━─────── 10/23 3.6it/s 4.3s<3.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 47% ━━━━━╸────── 11/23 3.7it/s 4.5s<3.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 52% ━━━━━━────── 12/23 3.6it/s 4.8s<3.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 13/23 3.0it/s 5.4s<3.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 14/23 3.0it/s 5.8s<3.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 65% ━━━━━━━╸──── 15/23 2.9it/s 6.1s<2.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 69% ━━━━━━━━──── 16/23 2.9it/s 6.5s<2.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 17/23 2.9it/s 6.8s<2.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 18/23 2.9it/s 7.2s<1.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 19/23 2.9it/s 7.5s<1.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 86% ━━━━━━━━━━── 20/23 2.9it/s 7.9s<1.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 91% ━━━━━━━━━━╸─ 21/23 2.9it/s 8.2s<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 95% ━━━━━━━━━━━─ 22/23 2.8it/s 8.6s<0.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 23/23 2.5it/s 9.3s
-                   all         92        133      0.603      0.663      0.671      0.511
-                 plate         63         89      0.747      0.685      0.722      0.531
-               wrapper          8          8      0.479      0.692      0.685      0.556
-                bottle         29         36      0.581      0.611      0.606      0.445
-Speed: 0.8ms preprocess, 83.8ms inference, 0.0ms loss, 2.3ms postprocess per image
-Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/stills-ft8/evaluation960_tta[0m
-{
-  "overall": {
-    "precision": 0.6025718748833566,
-    "recall": 0.6629547921333131,
-    "AP50": 0.6706836891929709,
-    "AP50_95": 0.5106387555773559
-  },
-  "per_class": {
-    "plate": {
-      "precision": 0.7472671351897883,
-      "recall": 0.6853932584269663,
-      "AP50": 0.7215021558562648,
-      "AP50_95": 0.5313365068592617,
-      "objects": 89
-    },
-    "wrapper": {
-      "precision": 0.4790400024952225,
-      "recall": 0.6923600068618619,
-      "AP50": 0.6846969696969698,
-      "AP50_95": 0.5560575757575759,
-      "objects": 8
-    },
-    "bottle": {
-      "precision": 0.5814084869650591,
-      "recall": 0.6111111111111112,
-      "AP50": 0.6058519420256783,
-      "AP50_95": 0.4445221841152301,
-      "objects": 36
-    }
-  },
-  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/focus-three-class-improvement/stills-ft8/train/weights/best.pt",
-  "weights_sha256": "2eb62ec6ba44559d0a8e65e59e88ebf3480debebd34ac7afa6079be5e1b3809c",
-  "dataset_fingerprint": "e24889633a3490e8b1f1afcd84e8ab01f9a58d633a313c55bd937028cba767d2",
-  "imgsz": 960,
-  "augment": true,
-  "interpretation": "Reviewed public validation; no independent test or improvement claim."
-}

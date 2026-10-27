@@ -1,7 +1,0 @@
-path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/meal-expanded
-train: train-replay.txt
-val: images/val
-names:
-- plate
-- wrapper
-- bottle

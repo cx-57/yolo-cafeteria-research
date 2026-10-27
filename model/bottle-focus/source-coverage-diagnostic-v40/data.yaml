@@ -1,5 +1,0 @@
-path: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40
-train: /dev/null
-val: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40/images/val
-names:
-- bottle

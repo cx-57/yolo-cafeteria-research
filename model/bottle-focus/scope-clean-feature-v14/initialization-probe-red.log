@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/scope-clean-feature-v14/probe_initialization.py", line 9, in <module>
-    m.initialize()
-    ^^^^^^^^^^^^
-AttributeError: module 'feature_trial' has no attribute 'initialize'

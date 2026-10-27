@@ -1,168 +1,0 @@
-Integrity passed: 1302 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
-{
-  "train": {
-    "images": 1056,
-    "negatives": 84,
-    "objects": {
-      "plate": 650,
-      "wrapper": 394,
-      "bottle": 356
-    },
-    "class_images": {
-      "plate": 521,
-      "wrapper": 381,
-      "bottle": 302
-    }
-  },
-  "val": {
-    "images": 246,
-    "negatives": 3,
-    "objects": {
-      "plate": 237,
-      "wrapper": 94,
-      "bottle": 67
-    },
-    "class_images": {
-      "plate": 186,
-      "wrapper": 90,
-      "bottle": 55
-    }
-  }
-}
-Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
-{
-  "train": {
-    "images": 1056,
-    "negatives": 368,
-    "objects": {
-      "plate": 650,
-      "wrapper": 395
-    },
-    "class_images": {
-      "plate": 520,
-      "wrapper": 382
-    }
-  },
-  "val": {
-    "images": 246,
-    "negatives": 48,
-    "objects": {
-      "plate": 238,
-      "wrapper": 94
-    },
-    "class_images": {
-      "plate": 187,
-      "wrapper": 90
-    }
-  }
-}
-Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
-YOLO11n summary (fused): 101 layers, 2,597,294 parameters, 0 gradients, 6.4 GFLOPs
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2938.7±2051.1 MB/s, size: 102.0 KB)
-[K[34m[1mval: [0mScanning /Users/Charles1/Desktop/yolo-cafeteria-research/data/plate-wrapper-focus/reviewed-v2/labels/val.cache... 246 images, 48 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 246/246 64.5Mit/s 0.0s
-[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 1% ──────────── 1/62 1.6s/it 0.5s<1:39[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 3% ──────────── 2/62 1.5it/s 0.8s<40.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 4% ╸─────────── 3/62 3.7it/s 0.9s<15.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 8% ╸─────────── 5/62 4.4it/s 1.2s<13.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 9% ━─────────── 6/62 4.3it/s 1.5s<13.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━╸────────── 8/62 6.6it/s 1.6s<8.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━╸────────── 10/62 8.5it/s 1.8s<6.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 19% ━━────────── 12/62 9.7it/s 2.0s<5.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 14/62 10.7it/s 2.1s<4.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 16/62 11.1it/s 2.3s<4.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 29% ━━━───────── 18/62 11.6it/s 2.4s<3.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 32% ━━━╸──────── 20/62 12.1it/s 2.6s<3.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 35% ━━━━──────── 22/62 12.3it/s 2.7s<3.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 38% ━━━━╸─────── 24/62 12.7it/s 2.9s<3.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 41% ━━━━━─────── 26/62 12.9it/s 3.0s<2.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 45% ━━━━━─────── 28/62 12.7it/s 3.2s<2.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 48% ━━━━━╸────── 30/62 12.3it/s 3.4s<2.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 51% ━━━━━━────── 32/62 12.2it/s 3.5s<2.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 54% ━━━━━━╸───── 34/62 12.2it/s 3.7s<2.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 58% ━━━━━━╸───── 36/62 12.3it/s 3.9s<2.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 61% ━━━━━━━───── 38/62 12.3it/s 4.0s<1.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 64% ━━━━━━━╸──── 40/62 12.4it/s 4.2s<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 42/62 12.2it/s 4.4s<1.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 69% ━━━━━━━━──── 43/62 10.0it/s 4.6s<1.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 72% ━━━━━━━━╸─── 45/62 10.3it/s 4.8s<1.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 47/62 10.9it/s 4.9s<1.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 79% ━━━━━━━━━─── 49/62 10.9it/s 5.1s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 51/62 10.7it/s 5.3s<1.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 85% ━━━━━━━━━━── 53/62 10.6it/s 5.5s<0.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 88% ━━━━━━━━━━╸─ 55/62 10.5it/s 5.7s<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 91% ━━━━━━━━━━━─ 57/62 10.7it/s 5.9s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 95% ━━━━━━━━━━━─ 59/62 10.9it/s 6.0s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 60/62 8.8it/s 6.3s<0.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 98% ━━━━━━━━━━━╸ 61/62 7.6it/s 6.5s<0.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 62/62 9.2it/s 6.7s
-                   all        246        332      0.921      0.817      0.892      0.714
-                 plate        187        238      0.926      0.773      0.886      0.757
-               wrapper         90         94      0.916      0.862      0.898      0.671
-Speed: 0.4ms preprocess, 8.6ms inference, 0.0ms loss, 10.4ms postprocess per image
-Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/lr-low/verification-20261019T025847Z[0m
-Integrity passed: 1302 images, validated boxes, verified negatives; no overlap in recorded hashes, originals, captures and reviewed scenes. Unreviewed related captures may remain.
-{
-  "train": {
-    "images": 1056,
-    "negatives": 84,
-    "objects": {
-      "plate": 650,
-      "wrapper": 394,
-      "bottle": 356
-    },
-    "class_images": {
-      "plate": 521,
-      "wrapper": 381,
-      "bottle": 302
-    }
-  },
-  "val": {
-    "images": 246,
-    "negatives": 3,
-    "objects": {
-      "plate": 237,
-      "wrapper": 94,
-      "bottle": 67
-    },
-    "class_images": {
-      "plate": 186,
-      "wrapper": 90,
-      "bottle": 55
-    }
-  }
-}
-Two-class integrity passed: all source images/splits retained; boxes validated; negatives reviewed; no recorded hash/original/capture/scene overlap. Unknown related captures may remain.
-{
-  "train": {
-    "images": 1056,
-    "negatives": 368,
-    "objects": {
-      "plate": 650,
-      "wrapper": 395
-    },
-    "class_images": {
-      "plate": 520,
-      "wrapper": 382
-    }
-  },
-  "val": {
-    "images": 246,
-    "negatives": 48,
-    "objects": {
-      "plate": 238,
-      "wrapper": 94
-    },
-    "class_images": {
-      "plate": 187,
-      "wrapper": 90
-    }
-  }
-}
-{
-  "per_class": {
-    "plate": {
-      "precision": 0.9259087068132921,
-      "recall": 0.773109243697479,
-      "AP50": 0.88573797673042,
-      "AP50_95": 0.7570223915875702,
-      "objects": 238
-    },
-    "wrapper": {
-      "precision": 0.9155330684988846,
-      "recall": 0.8617021276595744,
-      "AP50": 0.8976110613255035,
-      "AP50_95": 0.671244801459977,
-      "objects": 94
-    }
-  },
-  "overall": {
-    "precision": 0.9207208876560884,
-    "recall": 0.8174056856785268,
-    "AP50": 0.8916745190279618,
-    "AP50_95": 0.7141335965237737
-  },
-  "weights": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/lr-low/train/weights/verified-epoch12-2af4996928bc.pt",
-  "weights_sha256": "2af4996928bc9faa77917cca21c8cec6f02df7c229b510154517415360767129",
-  "dataset_fingerprint": "3a92a28252f41d815805ebfe8b5b246a7bec0a2c3f559d3cc09168a70f0a1d8a",
-  "validation_protocol": "26f85903b7f46f6b2261088eee1f933338532f5cc5cba6f7ae3c1ce85ed290a2",
-  "validation_images": 246,
-  "selected_epoch": 12,
-  "completed_epochs": 12,
-  "measured_at_utc": "2026-10-19T02:59:09.642695+00:00",
-  "fresh_inference": true,
-  "inference_directory": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/plate-wrapper-focus/lr-low/verification-20261019T025847Z",
-  "metric": "mean_AP50",
-  "minimum_mean_AP50": 0.88,
-  "preferred_mean_AP50": 0.9,
-  "minimum_met": true,
-  "preferred_met": false,
-  "independent_test": false,
-  "validation_used_for_model_selection": true,
-  "interpretation": "Development validation reused for tuning; not independent cafeteria accuracy. AP50 is not recall."
-}

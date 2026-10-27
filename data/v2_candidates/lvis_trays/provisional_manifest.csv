@@ -1,6 +1,0 @@
-image,label,split,session,reviewer,reviewed,complete
-val__000000082449.jpg,provisional_labels/val__000000082449.txt,train,lvis-tray-82449,AI-assisted-photo-review,no,no
-val__000000112486.jpg,provisional_labels/val__000000112486.txt,train,lvis-tray-112486,AI-assisted-photo-review,no,no
-val__000000185623.jpg,provisional_labels/val__000000185623.txt,train,lvis-tray-185623,AI-assisted-photo-review,no,no
-val__000000348519.jpg,provisional_labels/val__000000348519.txt,train,lvis-tray-348519,AI-assisted-photo-review,no,no
-val__000000557539.jpg,provisional_labels/val__000000557539.txt,train,lvis-tray-557539,AI-assisted-photo-review,no,no

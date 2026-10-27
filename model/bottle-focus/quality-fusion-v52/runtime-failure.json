@@ -1,6 +1,0 @@
-{
-  "status": "aborted_before_any_source_score",
-  "reason": "AutoBackend deepcopies model; captured bound head decoder remained on CPU after copied head moved to MPS",
-  "score_receipts_created": 0,
-  "incumbent_unchanged": true
-}

@@ -1,7 +1,0 @@
-{
-  "epoch": 7,
-  "AP50": 0.8075379118518422,
-  "AP50_95": 0.5213314319807785,
-  "metric_source": "combined_development_monitor",
-  "weights_sha": "0439ad61d4cd42e3c502b29013a2dc1cc556a39c0e27367f425534518d0b8058"
-}

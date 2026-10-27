@@ -1,35 +1,21 @@
-# Raw downloads and model outputs
-model/runs/
+# Local datasets, checkpoints, environments and generated output
+/data/
+/model/
+/weights/
+/runs/
+.venv/
+venv/
+.env
 *.pt
 *.onnx
 *.zip
 *.tar
 *.tar.gz
-
-# Python / OS
+# Rebuildable caches and OS metadata
 __pycache__/
-*.pyc
-.venv/
-venv/
-.env
+*.py[cod]
+*.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .DS_Store
-
-
-# Rebuilt from curated sources; never commit generated training copies
-data/training/
-data/training-grouped/
-data/audits/model_plateau_2026-10-11/ablation/
-
-# Temporary experiments and visual diagnostics (do not commit generated copies)
-data/training-revised/
-data/training-ci-revised/
-model/prediction-review*/
-
-# V2 generated data, including private local NHS still photos
-data/nhs/
-data/training-v2/
-data/training-v2-*/
-
-# Generated plate/bottle-only dataset and trained checkpoints
-data/focus-two-class-900/
-model/focus-two-class-900/

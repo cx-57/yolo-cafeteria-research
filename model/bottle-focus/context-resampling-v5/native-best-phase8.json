@@ -1,6 +1,0 @@
-{
-  "source": "model/bottle-focus/context-resampling-v5/train/weights/best.pt",
-  "weights_sha": "40e43253a83de1879310c54394a4ce60dfb8a736dd771e5a9cc8897b7d3e7387",
-  "saved_after_completed_epoch": 8,
-  "selection": "Native trainer fitness, retained for separate verification"
-}

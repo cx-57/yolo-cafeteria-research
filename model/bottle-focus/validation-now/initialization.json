@@ -1,8 +1,0 @@
-{
-  "source": "/Users/Charles1/Library/Caches/yolo-cafeteria-runtime/weights/yolo11x.pt",
-  "source_sha": "7bc158aa95c0ebfdd87f70f01653c1131b93e92522dbe15c228bcd742e773a24",
-  "weights_sha": "f397b2456395fefcdd311797ded3ed6773f1d4f8ae71f1ecd854e9fff9b1de2e",
-  "COCO_class": 39,
-  "decoded_boxes_and_bottle_scores_preserved": true,
-  "pretrained_only": true
-}

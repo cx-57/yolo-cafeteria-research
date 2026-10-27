@@ -1,7 +1,0 @@
-path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/reviewed-619
-train: /Users/Charles1/Desktop/yolo-cafeteria-research/data/focus-three-class-improvement/reviewed-619/train-balanced.txt
-val: images/val
-names:
-- plate
-- wrapper
-- bottle

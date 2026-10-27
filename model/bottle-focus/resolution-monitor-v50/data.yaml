@@ -1,5 +1,0 @@
-path: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-resolution-monitor-v50
-train: images/val
-val: images/val
-names:
-- bottle

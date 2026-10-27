@@ -1,7 +1,0 @@
-test_classification_only_preserves_initial_boxes_and_quality_scores (test_branch_mix.HeadBranchBehavior.test_classification_only_preserves_initial_boxes_and_quality_scores) ... ok
-test_regression_only_preserves_initial_scores_and_quality_boxes (test_branch_mix.HeadBranchBehavior.test_regression_only_preserves_initial_scores_and_quality_boxes) ... ok
-
-----------------------------------------------------------------------
-Ran 2 tests in 1.183s
-
-OK

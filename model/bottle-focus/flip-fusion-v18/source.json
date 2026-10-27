@@ -1,8 +1,0 @@
-{
-  "repository": "https://github.com/ZFTurbo/Weighted-Boxes-Fusion",
-  "path": "ensemble_boxes/ensemble_boxes_wbf.py",
-  "git_blob_sha": "a7bc296c004137933be48a84d6ef3e80b25c2c17",
-  "sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
-  "license": "MIT; see WBF_LICENSE.txt",
-  "modifications": "None; direct original source with only NumPy dependency."
-}

@@ -1,5 +1,0 @@
-path: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-classifier-retention-v44
-train: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/classifier-retention-v44/training-exposures.txt
-val: /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/classifier-retention-v44/retention-images.txt
-names:
-- bottle

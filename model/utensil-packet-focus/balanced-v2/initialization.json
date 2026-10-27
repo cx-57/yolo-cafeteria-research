@@ -1,6 +1,0 @@
-{
-  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/warm-low-v1/train/weights/last.pt",
-  "source_sha": "6bbef1fac81d66b140af07598c553695021e892d0f4158df58bd3889d7204870",
-  "output_sha": "14f36f1418280898dee39e42f420ae8fbdec099352b40f818b90e73f845e4c74",
-  "decoded_box_and_score_equivalence": true
-}

@@ -1,8 +1,0 @@
-{
-  "control": "JPEG re-encode of fixed validation image",
-  "mutual_matches": 125,
-  "inliers": 125,
-  "threshold": 6,
-  "passed": true,
-  "limitation": "Detects this duplicate control; does not prove capture independence. Related birthday capture excluded by visual review."
-}

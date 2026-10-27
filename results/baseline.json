@@ -1,0 +1,50 @@
+{
+  "AP50": 0.8499226914066471,
+  "AP50_95": 0.6097676269345671,
+  "images": 124,
+  "per_class": {
+    "food": {
+      "AP50": 0.9659762944584624,
+      "AP50_95": 0.6464266853337161,
+      "objects": 81
+    },
+    "plate": {
+      "AP50": 0.7640485924188927,
+      "AP50_95": 0.6200268087229572,
+      "objects": 49
+    },
+    "utensil": {
+      "AP50": 0.8103133815299823,
+      "AP50_95": 0.5429763119216829,
+      "objects": 65
+    },
+    "hinged_container": {
+      "AP50": 0.9888461538461539,
+      "AP50_95": 0.5846794039294039,
+      "objects": 12
+    },
+    "drink_carton": {
+      "AP50": 0.8931652996126682,
+      "AP50_95": 0.6457088126102509,
+      "objects": 29
+    },
+    "wrapper": {
+      "AP50": 0.8955588843337188,
+      "AP50_95": 0.6752985656367037,
+      "objects": 21
+    },
+    "bottle": {
+      "AP50": 0.8720999999999999,
+      "AP50_95": 0.743390238095238,
+      "objects": 11
+    },
+    "condiment_packet": {
+      "AP50": 0.6093729250532988,
+      "AP50_95": 0.41963418922658463,
+      "objects": 45
+    }
+  },
+  "independent_test": false,
+  "manifest_sha256": "ba822d1d3ec9fadc1922136d9c0b26458cae1bb42f6c646caf307f6f833e05b8",
+  "annotation_status": "Provisional AI-assisted full-eight coverage; inherited seven-class reviews plus new packet reviews and packet-positive full reviews. Development only; not human certified."
+}

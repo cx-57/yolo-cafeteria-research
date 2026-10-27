@@ -1,98 +1,0 @@
-Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
-YOLO11s summary (fused): 100 layers, 9,413,187 parameters, 0 gradients, 21.4 GFLOPs
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 6379.6±1660.2 MB/s, size: 949.6 KB)
-[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40/labels/val... 32 images, 16 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 3.0Kit/s 0.0s
-[34m[1mval: [0mNew cache created: /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40/labels/val.cache
-[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 1/8 4.7s/it 1.4s<33.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 2/8 1.5s/it 2.0s<8.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━──────── 3/8 1.2it/s 2.4s<4.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 4/8 1.5it/s 2.8s<2.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 62% ━━━━━━━───── 5/8 1.6it/s 3.4s<1.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 6/8 1.9it/s 3.8s<1.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━── 7/8 3.0it/s 4.0s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 1.8it/s 4.3s
-                   all         32         18      0.555      0.611      0.476      0.282
-Speed: 0.4ms preprocess, 74.8ms inference, 0.0ms loss, 11.0ms postprocess per image
-Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/evaluations/balanced/predictions.json...
-
-Evaluating faster-coco-eval mAP...
-Evaluate annotation type *bbox*
-COCOeval_opt.evaluate() finished...
-DONE (t=0.00s).
-Accumulating evaluation results...
-COCOeval_opt.accumulate() finished...
-DONE (t=0.00s).
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.283
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.476
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.191
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.285
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.383
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.417
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.417
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.417
- Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
- Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.278
-Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/evaluations/balanced[0m
-LITTER_DIAGNOSTIC_RESULT balanced 0.4756057496682884 0.28203331388425823
-Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
-YOLO11s summary (fused): 100 layers, 9,413,187 parameters, 0 gradients, 21.4 GFLOPs
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2288.4±1581.7 MB/s, size: 1503.4 KB)
-[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40/labels/val.cache... 32 images, 16 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 33.6Mit/s 0.0s
-[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 1/8 1.6it/s 0.2s<4.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 2/8 2.7it/s 0.4s<2.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━──────── 3/8 2.6it/s 0.8s<1.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 4/8 2.6it/s 1.2s<1.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 62% ━━━━━━━───── 5/8 2.5it/s 1.6s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 6/8 2.6it/s 2.0s<0.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━── 7/8 3.4it/s 2.2s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 3.2it/s 2.5s
-                   all         32         18      0.538      0.667      0.523      0.281
-Speed: 0.3ms preprocess, 27.6ms inference, 0.0ms loss, 10.7ms postprocess per image
-Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/evaluations/v34/predictions.json...
-
-Evaluating faster-coco-eval mAP...
-Evaluate annotation type *bbox*
-COCOeval_opt.evaluate() finished...
-DONE (t=0.00s).
-Accumulating evaluation results...
-COCOeval_opt.accumulate() finished...
-DONE (t=0.00s).
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.283
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.522
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.207
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.284
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.372
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.394
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.394
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.394
- Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.722
- Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.278
-Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/evaluations/v34[0m
-LITTER_DIAGNOSTIC_RESULT v34 0.5227022100706311 0.2812937343358396
-Ultralytics 8.4.175 🚀 Python-3.12.3 torch-2.14.1 MPS (Apple M1)
-YOLO11s summary (fused): 100 layers, 9,413,187 parameters, 0 gradients, 21.4 GFLOPs
-[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3572.5±2782.7 MB/s, size: 2734.3 KB)
-[K[34m[1mval: [0mScanning /Users/Charles1/Library/Caches/yolo-cafeteria-runtime/data/bottle-source-diagnostic-v40/labels/val.cache... 32 images, 16 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 32/32 19.2Mit/s 0.0s
-[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 1/8 1.4it/s 0.2s<4.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 2/8 2.4it/s 0.4s<2.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━──────── 3/8 2.5it/s 0.8s<2.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 4/8 2.5it/s 1.2s<1.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 62% ━━━━━━━───── 5/8 2.5it/s 1.6s<1.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 6/8 2.6it/s 1.9s<0.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━── 7/8 3.4it/s 2.1s<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 8/8 3.3it/s 2.4s
-                   all         32         18      0.595      0.667      0.507      0.249
-Speed: 0.3ms preprocess, 26.3ms inference, 0.0ms loss, 10.9ms postprocess per image
-Saving /Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/evaluations/v36/predictions.json...
-
-Evaluating faster-coco-eval mAP...
-Evaluate annotation type *bbox*
-COCOeval_opt.evaluate() finished...
-DONE (t=0.00s).
-Accumulating evaluation results...
-COCOeval_opt.accumulate() finished...
-DONE (t=0.00s).
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.250
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.507
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.176
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.251
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.378
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.428
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.428
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.428
- Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.778
- Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.333
-Results saved to [1m/Users/Charles1/Desktop/yolo-cafeteria-research/model/bottle-focus/source-coverage-diagnostic-v40/evaluations/v36[0m
-LITTER_DIAGNOSTIC_RESULT v36 0.5067516831293921 0.2486796795911347
-SOURCE_DIAGNOSTIC_COMPLETE

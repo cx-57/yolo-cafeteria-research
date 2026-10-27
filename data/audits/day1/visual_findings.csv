@@ -1,7 +1,0 @@
-image,kind,note,status,sample_index
-utensil/images/1239_jpg.rf.cf9944466bc8878f435b2046777c02b1.jpg,incomplete_visible_target_annotations,Four white utensils are visible. Two original boxes preserved; two missing boxes added after full-resolution review.,repaired,4
-utensil/images/1217_jpg.rf.04447ef0499e84e7b7d462591bea29b6.jpg,incomplete_visible_target_annotations,Retail pack/composite shows additional utensils outside the three boxes; inspect at full resolution.,needs_full_resolution_review,2
-tetra_pak/images/cart-117-_jpg.rf.aed7ccb8cc721662b55bd6a884e23175.jpg,domain_mismatch,Carton advertises 1.5 L; this violates the small single-serve NHS criterion.,quarantined_after_full_resolution_review,13
-tetra_pak/images/fruitjuice-36-_jpg.rf.a4204036c54d0723a7fcf6a33e801538.jpg,domain_mismatch,Advertising/product composite; prior strict review said to exclude mockups.,quarantined_after_full_resolution_review,20
-trash_detection/images/train__000090_jpg.rf.73d3f6dab3183f7c267d3f62ab8a22c1.jpg,possible_missing_wrapper,A green packet is visible in addition to the boxed object; determine if it is an NHS-like wrapper.,needs_full_resolution_review,15
-school_lunch/images/022406000_jpg.rf.583311225cab0a1b62ef2d4ddf893b03.jpg,packaged_food_ambiguity,Visible drinkable-yogurt cup is unboxed; do not label it as drink_carton without object review.,needs_full_resolution_review,12

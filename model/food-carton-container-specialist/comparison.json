@@ -1,8 +1,0 @@
-{
-  "AP50_change_percentage_points": {
-    "food": -0.0016865702166968255,
-    "hinged_container": 0.0,
-    "drink_carton": 0.0
-  },
-  "interpretation": "Output projection reproduced prior class AP50; the result is fresh saved-model validation, not a new training gain."
-}

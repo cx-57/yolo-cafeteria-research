@@ -1,6 +1,0 @@
-path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/utensil-only/coverage-v12
-train: images/train
-val: images/val
-names:
-- utensil
-- condiment_packet

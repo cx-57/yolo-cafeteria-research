@@ -1,7 +1,0 @@
-{
-  "epoch": 9,
-  "head_only": true,
-  "all_BatchNorm_statistics_fixed": true,
-  "normalization_modules": 81,
-  "native_validation_source": "continuation_monitor"
-}

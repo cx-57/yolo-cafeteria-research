@@ -1,8 +1,0 @@
-{
-  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/coco-restart-v5/best.pt",
-  "source_sha": "beccc88202818c4d2b2c6597d336eb43787bb2233eb5225df21e32aa7b897bbf",
-  "output_sha": "5b66d5eaf9f679341ca038c12d7785f3e51502ab429a3a28fcf730ab94564cb1",
-  "fresh_two_class_classifier": false,
-  "freeze_backbone": true,
-  "dataset_fingerprint": "4d345aaa25cb50880efaa9d8387ac066018e41236ce3cb3d275f188fef9ff3a8"
-}

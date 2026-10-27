@@ -1,5 +1,0 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
-nc: 9
-names: [lp_cup_lids, lp_paper_cup, lp_plastic_cup, napkin, rigid_plastic_container, rigid_plastic_lid, small_plastic_container, straw, utensil]

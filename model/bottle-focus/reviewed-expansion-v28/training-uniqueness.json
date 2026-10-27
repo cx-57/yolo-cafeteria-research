@@ -1,7 +1,0 @@
-{
-  "training_paths": 1115,
-  "distinct_image_sha256": 1115,
-  "byte_duplicates": [],
-  "new_source_ids_absent_from_original_training_names": true,
-  "limitations": "Byte and known source-ID checks do not prove absence of visual near-duplicates or shared scenes."
-}

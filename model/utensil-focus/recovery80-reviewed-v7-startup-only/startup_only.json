@@ -1,6 +1,0 @@
-{
-  "completed_epochs": 0,
-  "checkpoints": 0,
-  "previous_path": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-focus/recovery80-reviewed-v7",
-  "reason": "Startup files exist, but no results.csv or checkpoint. Preserved so the documented fresh-run path is available; no training process was active when inspected."
-}

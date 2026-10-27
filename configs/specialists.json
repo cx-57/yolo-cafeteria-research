@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "food-container-carton",
+      "weights": "weights/food-container-carton.pt",
+      "sha256": "94ef877f4fecb7eaa9263bbdb8426b794e4d921bb141bc2406623a3ef87f5c73",
+      "classes": [
+        "food",
+        "hinged_container",
+        "drink_carton"
+      ]
+    },
+    {
+      "id": "plate-wrapper",
+      "weights": "weights/plate-wrapper.pt",
+      "sha256": "f7055a6bddfaa2e84480afd7c875571333f7cb4e30b941236eb57857df85d8f1",
+      "classes": [
+        "plate",
+        "wrapper"
+      ]
+    },
+    {
+      "id": "utensil",
+      "weights": "weights/utensil.pt",
+      "sha256": "d23046a30478cb9cb6c0e8518dfe1b67568d695139347efcf2233cd273cde923",
+      "classes": [
+        "utensil"
+      ]
+    },
+    {
+      "id": "bottle",
+      "weights": "weights/bottle.pt",
+      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "classes": [
+        "bottle"
+      ]
+    },
+    {
+      "id": "packet",
+      "weights": "weights/packet.pt",
+      "sha256": "c3a01a6100c78ef13413a427fcd2713c1405b2d6c08c4defadd188afc5cc33ec",
+      "classes": [
+        "condiment_packet"
+      ]
+    }
+  ],
+  "independent_test": false
+}

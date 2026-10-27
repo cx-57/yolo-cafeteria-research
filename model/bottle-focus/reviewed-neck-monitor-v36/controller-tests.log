@@ -1,6 +1,0 @@
-........FINAL_FIXED_BENCHMARK_OUTCOME {"status": "monitor_gate_not_met_benchmark_skipped", "benchmark_report": null, "benchmark_reference": "/var/folders/49/9tp0qlvj60xdkskj9s4gxjtr0000gr/T/tmpd9mtqh85/joint-metric-v30/phase0-initial.json", "benchmark_reference_weights_sha": "ac1b5c0961a7269b6a053ee64276ed0e20a7f48aefb9f67519539d23aaf10149", "benchmark_reference_AP50": 0.8407, "benchmark_reference_AP50_95": 0.6206, "AP50": null, "AP50_95": null, "new_benchmark_measurement": false, "chosen_monitor_candidate_benchmarked": false, "chosen_weights_sha": "33fbcd8470eae125a265eb3f4375137f38ea4dc42f75ac09594bfe1a1c951af6", "chosen_monitor_role": "ap50", "chosen_epoch": 7, "training_dataset_audit_sha": "ed4ceb70873bf029f119caade0bb25bd7cb078cbbed6d40c2718ebdba2e90200", "monitor_fingerprint": "monitor", "selection_rule": "maximum monitor AP50+AP50-95; ties prefer initial then earliest", "monitor_gate": {"AP50": 0.8058415166393892, "AP50_95": 0.6373210856519369}, "full_training_started": false, "independent_NHS_test": false}
-........
-----------------------------------------------------------------------
-Ran 16 tests in 0.110s
-
-OK

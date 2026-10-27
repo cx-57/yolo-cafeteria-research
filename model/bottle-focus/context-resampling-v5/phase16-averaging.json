@@ -1,7 +1,0 @@
-{
-  "count": 8,
-  "first_epoch": 9,
-  "last_epoch": 16,
-  "weights_sha": "0bd113f7899b05cf13f7f6ccdd4300f9c96b180ba30c532b7668623a5811a387",
-  "method": "Arithmetic mean of saved epoch EMA parameters; BatchNorm running statistics remain fixed"
-}

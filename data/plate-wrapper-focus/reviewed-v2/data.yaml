@@ -1,6 +1,0 @@
-path: /Users/Charles1/Desktop/yolo-cafeteria-research/data/plate-wrapper-focus/reviewed-v2
-train: images/train
-val: images/val
-names:
-- plate
-- wrapper

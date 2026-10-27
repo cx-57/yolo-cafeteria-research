@@ -1,6 +1,0 @@
-{
-  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/expanded-v3/best.pt",
-  "source_sha": "b8f54411e9ffa87abd31d7e5c7a699f64c56112aec4e6df79220018cdd800100",
-  "output_sha": "4ae3259a4b805f453c6957f3f666c0f8169ff328fe1336775fbb2d19b4ad56b8",
-  "decoded_box_and_score_equivalence": true
-}

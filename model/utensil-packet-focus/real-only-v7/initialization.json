@@ -1,8 +1,0 @@
-{
-  "source": "/Users/Charles1/Desktop/yolo-cafeteria-research/model/utensil-packet-focus/head-only-v6/train/weights/last.pt",
-  "source_sha": "b2e54959d3cd4e2276cb8e96e555cd206af8ad281051e60afbd88dd3116a5d61",
-  "output_sha": "61dd4066f340eb71b6b0e901aab4a7d8352aa1aaf9d386afa24c1ec96607d182",
-  "fresh_two_class_classifier": false,
-  "freeze_backbone": true,
-  "dataset_fingerprint": "ee5af6aa293bab3a70848ed00f2f362ee1508f791a968612e4450f2d2147cfbc"
-}
