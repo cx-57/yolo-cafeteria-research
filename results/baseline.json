@@ -1,6 +1,6 @@
 {
   "AP50": 0.8842869437428398,
-  "AP50_95": 0.6369295466071361,
+  "AP50_95": 0.6369295466071362,
   "images": 124,
   "per_class": {
     "food": {
@@ -42,5 +42,5 @@
   "independent_test": false,
   "manifest_sha256": "eae316c918e3fdc5a55144646494bdef58cfc85793c9312ee4df4dd59217980c",
   "annotation_status": "Seven-class projection of the same provisional AI-assisted eight-class development annotations. All124images retained; packet annotations excluded at user request. Not an independent test.",
-  "metric_status": "Projected seven-class summary; fresh four-model verification pending."
+  "metric_status": "Fresh four-model native inference verified on the same 124 images."
 }
