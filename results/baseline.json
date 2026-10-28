@@ -1,6 +1,6 @@
 {
-  "AP50": 0.8499226914066471,
-  "AP50_95": 0.6097676269345671,
+  "AP50": 0.8842869437428398,
+  "AP50_95": 0.6369295466071361,
   "images": 124,
   "per_class": {
     "food": {
@@ -37,14 +37,10 @@
       "AP50": 0.8720999999999999,
       "AP50_95": 0.743390238095238,
       "objects": 11
-    },
-    "condiment_packet": {
-      "AP50": 0.6093729250532988,
-      "AP50_95": 0.41963418922658463,
-      "objects": 45
     }
   },
   "independent_test": false,
-  "manifest_sha256": "ba822d1d3ec9fadc1922136d9c0b26458cae1bb42f6c646caf307f6f833e05b8",
-  "annotation_status": "Provisional AI-assisted full-eight coverage; inherited seven-class reviews plus new packet reviews and packet-positive full reviews. Development only; not human certified."
+  "manifest_sha256": "eae316c918e3fdc5a55144646494bdef58cfc85793c9312ee4df4dd59217980c",
+  "annotation_status": "Seven-class projection of the same provisional AI-assisted eight-class development annotations. All124images retained; packet annotations excluded at user request. Not an independent test.",
+  "metric_status": "Projected seven-class summary; fresh four-model verification pending."
 }

@@ -1,6 +1,6 @@
 # Cafeteria object detection
 
-Five YOLO specialists detect eight classes:
+Four YOLO specialists detect seven classes:
 
 | Model | Classes |
 |---|---|
@@ -8,64 +8,50 @@ Five YOLO specialists detect eight classes:
 | Plate/wrapper | Plate, wrapper |
 | Utensil | Fork, knife and spoon union |
 | Bottle | Disposable plastic drink bottles |
-| Packet | Sauce, salt, pepper and sugar sachets |
-
-## Run
 
 ```sh
 ./scripts/run_specialists.sh predict /path/to/image.jpg --device mps --output runs/predictions.json
 ./scripts/run_specialists.sh evaluate --device mps --output runs/evaluation.json
-./scripts/run_specialists.sh train --epochs 40
 ```
 
-Prediction also accepts a directory. Use `--device cpu` for CPU inference.
-Output boxes are normalized `[x1,y1,x2,y2,confidence,class_id]`; class IDs are
-listed in `scripts/specialists.py`. The confidence floor is 0.001 for AP;
-filter confidence when displaying detections. All detectors use a single pass at 640 pixels,
-NMS IoU 0.7, and batch 1. Models load sequentially to limit memory.
+Prediction accepts an image or directory. Use `--device cpu` for CPU inference.
+Output is normalized `[x1,y1,x2,y2,confidence,class_id]`. IDs 0–6 retain their
+existing meanings: food, plate, utensil, hinged_container, drink_carton, wrapper,
+bottle. All four models use single-pass 640, NMS IoU 0.7 and batch 1, loading
+sequentially. The 0.001 confidence floor supports AP; filter scores for display.
 
-## Setup
+## Setup and assets
 
-Requires Python 3.12 and `pip install -r requirements.txt`. Install dependencies
-in an environment outside this repo, or use the existing local runtime on this
-Mac. Set `CAFETERIA_PYTHON` to select another Python executable.
+Requires Python 3.12 and `pip install -r requirements.txt`. The launcher uses the
+existing external environment on this Mac; set `CAFETERIA_PYTHON` to override it.
+Place the four pinned checkpoints in `weights/` using the filenames and hashes in
+[configs/specialists.json](configs/specialists.json). Weights are supplied separately
+and excluded from Git.
 
-Place the five pinned checkpoints in `weights/` using the filenames and hashes
-in [configs/specialists.json](configs/specialists.json). Training also needs
-`weights/yolo11s.pt` (the COCO-pretrained starting checkpoint). Weights are local
-assets, supplied separately and excluded from Git.
+Datasets, annotations and historical research live in the sibling
+`yolo-cafeteria-research-assets/` folder. Override with `CAFETERIA_STORAGE`.
+Runtime caches default to `~/Library/Caches/yolo-cafeteria-runtime/`;
+override with `CAFETERIA_RUNTIME`. Prediction only needs the four checkpoints.
+Evaluation defaults to external `artifacts/simple-specialists/shared-seven-active.json`;
+a custom manifest can be passed as a positional argument.
 
-Datasets, annotations and historical research are stored **outside this repo**:
-the sibling `yolo-cafeteria-research-assets/` folder next to this repo. Override with
-`CAFETERIA_STORAGE`. Runtime caches default to
-`~/Library/Caches/yolo-cafeteria-runtime/`; override with `CAFETERIA_RUNTIME`.
-On this Mac the existing data and checkpoints have already been preserved there.
+## Evaluation
 
-Evaluation defaults to the reviewed manifest under
-`artifacts/simple-specialists/shared-eight-reviewed.json` in the external store;
-a different manifest can be supplied as a positional argument. Prediction needs
-only the checkpoints. Training needs the reviewed V16 packet records in external
-`data/packet-focus/broad-v16/` and its prepared runtime source images. A fresh
-machine must be supplied those assets; code alone does not recreate the dataset.
+The seven retained classes score **88.43% mAP50 / 63.69% mAP50–95** on the same
+124 development images. This is the seven-class task after packet removal; model
+weights were not improved by dropping a class. These are provisional AI-assisted
+development results, not independent cafeteria test accuracy.
+See [evaluation notes](docs/evaluation.md) and [per-class results](results/baseline.json).
 
-## Results
-
-Shared 124-image development evaluation: **84.99% mAP50 / 60.98% mAP50–95**.
-These are provisional AI-assisted development results, not independent test
-accuracy. See [evaluation notes](docs/evaluation.md) and
-[per-class results](results/baseline.json). The later 40-epoch-cap packet candidate
-underperformed and was not promoted.
-
-Training separates fitting/monitor groups, uses early stopping and selects by
-monitor AP50–95. Only the selected checkpoint receives a final shared-development
-evaluation; the active model is preserved. Outputs go to ignored `runs/` and the
-external runtime. Keep the laptop lid open; the Mac launcher uses `caffeinate`.
+Condiment packet is retired from inference, evaluation and the active training
+entry point. Its code, tests, checkpoints and previous configuration are preserved
+externally under `history/packet-retired-20261027/`; earlier experiments and the
+rejected long-run candidate remain under `artifacts/packet-focus/`.
 
 ```sh
-python -m unittest discover -s tests -v
+python -B -m unittest discover -s tests -v
 ```
 
-The repo contains maintained code, config, focused tests and concise results.
-Datasets and old experiments are no longer committed as the active file tree.
-The external store's `history/` folder preserves the previous source, docs and
-cleanup audit. Git history is retained; no history rewrite was performed.
+Only maintained source, configuration, focused tests and concise results are in
+Git. Historical source/data/results and Git recovery copies remain outside the
+repo. Git commit history is preserved.

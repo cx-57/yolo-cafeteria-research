@@ -14,11 +14,5 @@ else
 fi
 export PYTHONPATH="$TASK_RUNTIME/py312:$TASK_ROOT/scripts${PYTHONPATH:+:$PYTHONPATH}"
 export YOLO_OFFLINE=true
-if [ "${1:-}" = train ]; then
-    shift
-    if command -v caffeinate >/dev/null 2>&1; then
-        exec caffeinate -i "$TASK_PYTHON" "$TASK_ROOT/scripts/packet_big_run.py" "$@"
-    fi
-    exec "$TASK_PYTHON" "$TASK_ROOT/scripts/packet_big_run.py" "$@"
-fi
+export PYTHONDONTWRITEBYTECODE=1
 exec "$TASK_PYTHON" "$TASK_ROOT/scripts/specialists.py" "$@"

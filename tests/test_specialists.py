@@ -7,6 +7,17 @@ import specialists as s
 
 
 class SpecialistTests(unittest.TestCase):
+    def test_active_pipeline_has_four_models_and_seven_stable_class_ids(self):
+        self.assertEqual(s.NAMES, ['food', 'plate', 'utensil', 'hinged_container',
+                                  'drink_carton', 'wrapper', 'bottle'])
+        models = s.read(s.CONFIG)['models']
+        self.assertEqual(len(models), 4)
+        self.assertEqual(sorted(c for m in models for c in m['classes']), sorted(s.NAMES))
+
+    def test_retired_packet_class_cannot_appear_in_predictions(self):
+        with self.assertRaises(ValueError):
+            s.validate_prediction_rows([[.1,.2,.3,.4,.9,7]])
+
     def test_mapping_discards_non_owned_classes_and_keeps_coordinates(self):
         rows = [[1, 2, 30, 40, .8, 0], [2, 3, 4, 5, .9, 1]]
         self.assertEqual(s.map_boxes(rows, ['utensil'], ['utensil']),
@@ -17,19 +28,19 @@ class SpecialistTests(unittest.TestCase):
             s.map_boxes([], ['glass'], ['bottle'])
 
     def test_evaluation_requires_complete_coverage_even_for_negative_images(self):
-        record = dict(name='a', rows=[], known_classes=list(range(7)))
+        record = dict(name='a', rows=[], known_classes=list(range(6)))
         with self.assertRaisesRegex(ValueError, 'coverage'):
-            s.validate_annotations([record], list(range(8)))
-        record['known_classes'] = list(range(8))
-        s.validate_annotations([record], list(range(8)))
+            s.validate_annotations([record], list(range(7)))
+        record['known_classes'] = list(range(7))
+        s.validate_annotations([record], list(range(7)))
 
     def test_invalid_and_duplicate_annotations_fail(self):
-        r = dict(name='a', rows=['7 .5 .5 -.2 .1'], known_classes=list(range(8)))
+        r = dict(name='a', rows=['6 .5 .5 -.2 .1'], known_classes=list(range(7)))
         with self.assertRaises(ValueError):
-            s.validate_annotations([r], list(range(8)))
+            s.validate_annotations([r], list(range(7)))
         r['rows'] = []
         with self.assertRaises(ValueError):
-            s.validate_annotations([r, r], list(range(8)))
+            s.validate_annotations([r, r], list(range(7)))
 
     def test_perfect_predictions_and_negative_false_positive(self):
         records = [dict(name='a', rows=['0 .5 .5 .2 .2']), dict(name='b', rows=[])]

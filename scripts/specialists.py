@@ -1,4 +1,4 @@
-"""Five frozen detectors, one eight-class output and common development evaluation."""
+"""Four frozen detectors, one seven-class output and common development evaluation."""
 import argparse
 import gc
 import hashlib
@@ -7,7 +7,7 @@ import math
 from pathlib import Path
 
 from storage import ROOT, EVALUATION, resolve_image
-NAMES = ['food', 'plate', 'utensil', 'hinged_container', 'drink_carton', 'wrapper', 'bottle', 'condiment_packet']
+NAMES = ['food', 'plate', 'utensil', 'hinged_container', 'drink_carton', 'wrapper', 'bottle']
 SETTINGS = dict(imgsz=640, batch=1, augment=False, conf=.001, iou=.7, max_det=300, half=False)
 CONFIG = ROOT / 'configs/specialists.json'
 

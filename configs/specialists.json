@@ -35,14 +35,6 @@
       "classes": [
         "bottle"
       ]
-    },
-    {
-      "id": "packet",
-      "weights": "weights/packet.pt",
-      "sha256": "c3a01a6100c78ef13413a427fcd2713c1405b2d6c08c4defadd188afc5cc33ec",
-      "classes": [
-        "condiment_packet"
-      ]
     }
   ],
   "independent_test": false

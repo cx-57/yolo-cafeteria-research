@@ -7,7 +7,7 @@ STORE = Path(os.environ.get('CAFETERIA_STORAGE', ROOT.parent / (ROOT.name + '-as
 DATA = STORE / 'data'
 ARTIFACTS = STORE / 'artifacts'
 RUNTIME = Path(os.environ.get('CAFETERIA_RUNTIME', Path.home() / 'Library/Caches/yolo-cafeteria-runtime'))
-EVALUATION = ARTIFACTS / 'simple-specialists/shared-eight-reviewed.json'
+EVALUATION = ARTIFACTS / 'simple-specialists/shared-seven-active.json'
 
 
 def resolve_image(path, root=ROOT, data=DATA):
