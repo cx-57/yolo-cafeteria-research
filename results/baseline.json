@@ -1,46 +1,58 @@
 {
-  "AP50": 0.8842869437428398,
-  "AP50_95": 0.6369295466071362,
-  "images": 124,
+  "AP50": 0.8569357614816059,
+  "AP50_95": 0.649040549488777,
+  "images": 186,
   "per_class": {
     "food": {
-      "AP50": 0.9659762944584624,
-      "AP50_95": 0.6464266853337161,
-      "objects": 81
+      "AP50": 0.9577255455565946,
+      "AP50_95": 0.6500697755834846,
+      "objects": 343
     },
     "plate": {
-      "AP50": 0.7640485924188927,
-      "AP50_95": 0.6200268087229572,
-      "objects": 49
+      "AP50": 0.8156136887656074,
+      "AP50_95": 0.6899041634616293,
+      "objects": 110
     },
     "utensil": {
-      "AP50": 0.8103133815299823,
-      "AP50_95": 0.5429763119216829,
-      "objects": 65
+      "AP50": 0.7493655956581344,
+      "AP50_95": 0.46774238800954515,
+      "objects": 101
     },
     "hinged_container": {
-      "AP50": 0.9888461538461539,
-      "AP50_95": 0.5846794039294039,
-      "objects": 12
+      "AP50": 0.995,
+      "AP50_95": 0.945,
+      "objects": 2
     },
     "drink_carton": {
-      "AP50": 0.8931652996126682,
-      "AP50_95": 0.6457088126102509,
-      "objects": 29
+      "AP50": 0.9284000370782618,
+      "AP50_95": 0.6519206748780891,
+      "objects": 94
     },
     "wrapper": {
-      "AP50": 0.8955588843337188,
-      "AP50_95": 0.6752985656367037,
-      "objects": 21
+      "AP50": 0.7747468785540175,
+      "AP50_95": 0.543111180697627,
+      "objects": 85
     },
     "bottle": {
-      "AP50": 0.8720999999999999,
-      "AP50_95": 0.743390238095238,
-      "objects": 11
+      "AP50": 0.7776985847586257,
+      "AP50_95": 0.5955356637910637,
+      "objects": 42
     }
   },
-  "independent_test": false,
-  "manifest_sha256": "eae316c918e3fdc5a55144646494bdef58cfc85793c9312ee4df4dd59217980c",
-  "annotation_status": "Seven-class projection of the same provisional AI-assisted eight-class development annotations. All124images retained; packet annotations excluded at user request. Not an independent test.",
-  "metric_status": "Fresh four-model native inference verified on the same 124 images."
+  "config_sha256": "df21df9c87d0edb48453d257f9097673fd0473cc73c9921a81b0f8a6b6af54b7",
+  "checkpoint_sha256": {
+    "food-container-carton": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+    "plate-wrapper": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+    "utensil": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+    "bottle": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289"
+  },
+  "model_image_sizes": {
+    "food-container-carton": 640,
+    "plate-wrapper": 640,
+    "utensil": 800,
+    "bottle": 640
+  },
+  "manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+  "annotation_status": "AI-reviewed repaired186 development validation; uncertainties retained; not human-certified",
+  "independent_test": false
 }

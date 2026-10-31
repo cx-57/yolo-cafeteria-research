@@ -1,0 +1,92 @@
+{
+  "training": {
+    "food-container-carton": {
+      "training_views": 405,
+      "epochs": 2,
+      "final_train_losses": {
+        "train/box_loss": 0.94822,
+        "train/cls_loss": 1.58867,
+        "train/dfl_loss": 1.3291
+      },
+      "validation_update_accepted": false
+    },
+    "plate-wrapper": {
+      "training_views": 627,
+      "epochs": 2,
+      "final_train_losses": {
+        "train/box_loss": 0.38241,
+        "train/cls_loss": 1.58027,
+        "train/dfl_loss": 0.52181
+      },
+      "validation_update_accepted": true
+    },
+    "utensil": {
+      "training_views": 421,
+      "epochs": 2,
+      "final_train_losses": {
+        "train/box_loss": 0.43482,
+        "train/cls_loss": 0.56103,
+        "train/dfl_loss": 0.72715
+      },
+      "validation_update_accepted": true
+    },
+    "bottle": {
+      "training_views": 592,
+      "epochs": 2,
+      "final_train_losses": {
+        "train/box_loss": 0.19673,
+        "train/cls_loss": 0.12868,
+        "train/dfl_loss": 0.38983
+      },
+      "validation_update_accepted": false
+    }
+  },
+  "school_training_views": 300,
+  "school_independent_training_photos": 16,
+  "trainable": "Final featureblock22 only; all other parameters and BN statistics frozen",
+  "lr0": 2e-06,
+  "nbs": 32,
+  "selected_models": [
+    "plate-wrapper",
+    "utensil"
+  ],
+  "validation": {
+    "AP50": 0.8569357614816059,
+    "AP50_95": 0.649040549488777,
+    "images": 186
+  },
+  "test": {
+    "AP50": 0.8704665362477227,
+    "AP50_95": 0.668425299145529,
+    "images": 248
+  },
+  "quality_eligible_secondary": {
+    "AP50": 0.9207628606089469,
+    "AP50_95": 0.698449857536926,
+    "images": 158
+  },
+  "historical_reference": {
+    "AP50": 0.9045515503710607,
+    "AP50_95": 0.6690560660914702,
+    "images": 124
+  },
+  "config_sha256": "df21df9c87d0edb48453d257f9097673fd0473cc73c9921a81b0f8a6b6af54b7",
+  "checkpoint_sha256": {
+    "food-container-carton": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+    "plate-wrapper": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+    "utensil": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+    "bottle": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289"
+  },
+  "validation_manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+  "test_manifest_sha256": "f1fdd09d538d146e2714f099ffd9dee6e7b90a198aca471a2081c125839e2859",
+  "push_gate": {
+    "threshold_AP50": 0.85,
+    "validation_passed": true,
+    "full_test_passed": true
+  },
+  "caveats": [
+    "Training losses are fit diagnostics, not held-out accuracy.",
+    "Validation/test have been exposed during development and annotation audit; independent generalization is not established.",
+    "Weights, datasets and receipts are external; source repo carries code/configuration and compact metrics."
+  ]
+}

@@ -7,6 +7,39 @@ import specialists as s
 
 
 class SpecialistTests(unittest.TestCase):
+    def test_model_resolution_overrides_leave_scoring_settings_and_other_models_unchanged(self):
+        config = dict(models=[], settings=dict(s.SETTINGS))
+        higher = dict(id='higher', settings=dict(imgsz=800))
+        ordinary = dict(id='ordinary')
+        resolved = s.inference_settings(config, higher)
+        self.assertEqual(resolved['imgsz'], 800)
+        self.assertEqual({k: v for k, v in resolved.items() if k != 'imgsz'},
+                         {k: v for k, v in s.SETTINGS.items() if k != 'imgsz'})
+        self.assertEqual(s.inference_settings(config, ordinary), s.SETTINGS)
+        self.assertEqual(config['settings'], s.SETTINGS)
+
+    def test_per_model_overrides_cannot_change_thresholds_or_silently_round_size(self):
+        for override in [dict(conf=.1), dict(iou=.5), dict(augment=True),
+                         dict(imgsz=799), dict(imgsz=0), dict(imgsz=True)]:
+            with self.assertRaises(ValueError):
+                s.inference_settings(dict(models=[]), dict(settings=override))
+
+    def test_mixed_resolution_receipts_require_explicit_correct_applied_profiles(self):
+        model = dict(id='higher', sha256='weights', settings=dict(imgsz=800))
+        config = dict(models=[model])
+        record = dict(name='a', sha256='image')
+        receipt = dict(names=s.NAMES, settings=s.SETTINGS, config_sha256='config',
+                       models=[model], box_format='normalized_xyxy_conf_class',
+                       images=[record], predictions={'a': []})
+        with self.assertRaises(ValueError):
+            s.validate_receipt(receipt, [record], config, 'config')
+        receipt['model_settings'] = {'higher': s.SETTINGS}
+        with self.assertRaises(ValueError):
+            s.validate_receipt(receipt, [record], config, 'config')
+        receipt['model_settings'] = {'higher': dict(s.SETTINGS, imgsz=800)}
+        self.assertEqual(s.validate_receipt(receipt, [record], config, 'config')['model_settings'],
+                         receipt['model_settings'])
+
     def test_active_pipeline_has_four_models_and_seven_stable_class_ids(self):
         self.assertEqual(s.NAMES, ['food', 'plate', 'utensil', 'hinged_container',
                                   'drink_carton', 'wrapper', 'bottle'])

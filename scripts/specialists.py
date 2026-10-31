@@ -12,8 +12,17 @@ SETTINGS = dict(imgsz=640, batch=1, augment=False, conf=.001, iou=.7, max_det=30
 CONFIG = ROOT / 'configs/specialists.json'
 
 
-def inference_settings(config):
-    return dict(SETTINGS, **config.get('settings', {}))
+def inference_settings(config, model=None):
+    settings = dict(SETTINGS, **config.get('settings', {}))
+    overrides = (model or {}).get('settings', {})
+    if not isinstance(overrides, dict) or set(overrides) - {'imgsz'}:
+        raise ValueError('Per-model settings may override image resolution only')
+    if 'imgsz' in overrides:
+        size = overrides['imgsz']
+        if type(size) is not int or size <= 0 or size % 32:
+            raise ValueError('Model image resolution must be a positive multiple of32')
+    settings.update(overrides)
+    return settings
 
 
 def sha(path):
@@ -104,6 +113,9 @@ def validate_receipt(value, records, config, config_sha):
     receipt = value.get('prediction_receipt', value)
     expected = dict(settings=inference_settings(config), config_sha256=config_sha, names=NAMES,
                     models=config['models'], box_format='normalized_xyxy_conf_class')
+    if any(model.get('settings') for model in config['models']) or 'model_settings' in receipt:
+        expected['model_settings'] = {model['id']: inference_settings(config, model)
+                                      for model in config['models']}
     if any(receipt.get(key) != value for key, value in expected.items()):
         raise ValueError('Prediction configuration or checkpoint provenance differs from frozen protocol')
     by_sha = {r['sha256']: r['name'] for r in receipt['images']}
@@ -140,9 +152,10 @@ def predict(records, device='cpu', config_path=CONFIG):
         print('Loading ' + spec['id'], flush=True)
         model = YOLO(str(ROOT / spec['weights']))
         map_boxes([], model.names, spec['classes'])
+        applied_settings = inference_settings(config, spec)
         for index, record in enumerate(records):
             result = model.predict(record['image_path'], device=device, workers=0,
-                                   verbose=False, **settings)[0]
+                                   verbose=False, **applied_settings)[0]
             rows = map_boxes(result.boxes.data.cpu().tolist(), model.names, spec['classes'])
             height, width = result.orig_shape
             for row in rows:
@@ -155,6 +168,7 @@ def predict(records, device='cpu', config_path=CONFIG):
         if device == 'mps':
             torch.mps.empty_cache()
     return dict(names=NAMES, settings=settings, device=device, config_sha256=sha(config_path),
+                model_settings={spec['id']: inference_settings(config, spec) for spec in models},
                 runtime=dict(torch=torch.__version__, ultralytics=ultralytics.__version__),
                 models=models, images=[{k: r[k] for k in ('name', 'sha256')} for r in records],
                 box_format='normalized_xyxy_conf_class', predictions=predictions)

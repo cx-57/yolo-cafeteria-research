@@ -4,7 +4,7 @@
     {
       "id": "food-container-carton",
       "weights": "weights/food-container-carton.pt",
-      "sha256": "94ef877f4fecb7eaa9263bbdb8426b794e4d921bb141bc2406623a3ef87f5c73",
+      "sha256": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
       "classes": [
         "food",
         "hinged_container",
@@ -14,7 +14,7 @@
     {
       "id": "plate-wrapper",
       "weights": "weights/plate-wrapper.pt",
-      "sha256": "f7055a6bddfaa2e84480afd7c875571333f7cb4e30b941236eb57857df85d8f1",
+      "sha256": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
       "classes": [
         "plate",
         "wrapper"
@@ -23,10 +23,13 @@
     {
       "id": "utensil",
       "weights": "weights/utensil.pt",
-      "sha256": "d23046a30478cb9cb6c0e8518dfe1b67568d695139347efcf2233cd273cde923",
+      "sha256": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
       "classes": [
         "utensil"
-      ]
+      ],
+      "settings": {
+        "imgsz": 800
+      }
     },
     {
       "id": "bottle",
