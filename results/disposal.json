@@ -1,14 +1,14 @@
 {
-  "policy_sha256": "d31bca791901468dbbc76f39e65fcf69a6bf0017a93a4d12e395702601954d66",
+  "policy_sha256": "62e167a094731c30e19c36a9776a16f69d7ffa43d99ad51abdf54d2228df64c7",
   "model_config_sha256": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
   "images": 248,
   "category_counts": {
-    "review": 544,
-    "compost": 337
+    "compost": 337,
+    "recycling": 173,
+    "review": 371
   },
   "classification_accuracy": null,
-  "limitation": "User-approved rule behavior only; no independent disposal-category ground truth.",
-  "unit_tests_passed": 36,
+  "limitation": "No independently verified bin labels. Recycling assignments are based on detected bottle/carton classes only and ignore actual contents; 93.64% is recycling-candidate detection precision, not correct disposal-bin accuracy.",
   "classifier_type": "rule_based_per_detection",
   "policy_approval": "User selected three bins with ambiguous items flagged",
   "real_school_smoke": {
@@ -20,7 +20,8 @@
       "compost": 3
     },
     "classification_accuracy": null,
-    "limitation": "User-approved rule behavior only; no independent disposal-category ground truth."
+    "limitation": "User-approved rule behavior only; no independent disposal-category ground truth.",
+    "historical_policy_only": true
   },
   "measured_sorting_proxy": {
     "measure": "End-to-end food-to-compost proxy against repaired object labels",
@@ -53,10 +54,12 @@
       "Unmatched automatic assignments include duplicate detections, wrong object detections or box IoU below0.5; these are not all proven wrong-material disposal decisions.",
       "Review is abstention and is never counted as correct sorting. Ground-truth misses remain in recall denominator.",
       "Historical checkpoint exposure and uncertain test annotations remain; this is an exposed development-set proxy, not independent generalization."
-    ]
+    ],
+    "historical_food_only_measurement": true,
+    "scope_note": "The stored review count of 544 is from the previous empty-required policy. The current policy projected total review count is 371; food proxy TP/FP totals are unchanged."
   },
   "recycling_candidate_recognition": {
-    "measure": "Bottle/carton recognition as candidates for recycling; final bin still conditional",
+    "measure": "Recognition of detected bottles/cartons as recycling candidates; bin suitability of filled/contaminated containers not verified",
     "images": 248,
     "threshold": 0.5,
     "matching": "Confidence-ordered one-to-one IoU>=0.5, matching within each reported group; thresholds unchanged",
@@ -104,8 +107,22 @@
       "Recognition is not final-bin sorting accuracy. Empty state is not inferred or assumed.",
       "No review case counts as correct automatic recycling.",
       "Historical image exposure and AI-assisted annotation uncertainty remain."
-    ]
+    ],
+    "projected_automatic_recycling_assignments_under_current_policy": 173,
+    "current_policy_ignores_empty_state": true
   },
   "carton_acceptance_user_confirmed": true,
-  "empty_container_confirmation_required": true
+  "empty_container_confirmation_required": false,
+  "category_counts_status": "Projected counts from existing frozen detections under new user-selected policy; not re-run through live inference. Based on reported 337 food automatic assignments plus 43 bottle and 130 carton predictions >=0.50.",
+  "category_counts_are_projected": true,
+  "previous_policy_counts": {
+    "policy_sha256": "d31bca791901468dbbc76f39e65fcf69a6bf0017a93a4d12e395702601954d66",
+    "category_counts": {
+      "review": 544,
+      "compost": 337
+    },
+    "notes": "Recorded under the prior rule that required empty-container confirmation."
+  },
+  "user_selected_policy_shortcut": "No empty-container confirmation for detected bottles/cartons at >=0.50; other ambiguous classes stay in review.",
+  "legacy_unit_tests_passed": 36
 }
