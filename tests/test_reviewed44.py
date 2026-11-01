@@ -57,11 +57,35 @@ class Reviewed44Tests(unittest.TestCase):
             self.assertEqual(0,len(all_info['excluded_photo_ids']))
             self.assertEqual(44,len(set(x['sha256'] for x in complete)))
 
+    def test_same_photos_in_different_order_still_match_by_exact_hash(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);bundle,review=self.setup_source(root)
+            review['images'].reverse()
+            rows,report=dataset_from_review(bundle,review,root/'out')
+            self.assertEqual(41,len(rows))
+            self.assertEqual(41,report['scored_photos'])
+            self.assertEqual('review44-01-',rows[0]['name'][:12])
+
+    def test_changed_photo_hash_is_not_silently_accepted(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);bundle,review=self.setup_source(root)
+            review['images'].reverse()
+            review['images'][0]['sha256']='0'*64
+            with self.assertRaisesRegex(ValueError,'DIFFERENT photo bytes'):
+                dataset_from_review(bundle,review,root/'out')
+
+    def test_duplicate_review_hash_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);bundle,review=self.setup_source(root)
+            review['images'][1]['sha256']=review['images'][0]['sha256']
+            with self.assertRaisesRegex(ValueError,'DIFFERENT photo bytes'):
+                dataset_from_review(bundle,review,root/'out')
+
     def test_image_identity_mismatch(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);bundle,review=self.setup_source(root)
             review['images'][12]['sha256']='0'*64
-            with self.assertRaisesRegex(ValueError,'identity'):
+            with self.assertRaisesRegex(ValueError,'DIFFERENT photo bytes'):
                 dataset_from_review(bundle,review,root/'out')
 
 if __name__=='__main__':
