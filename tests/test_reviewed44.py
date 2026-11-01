@@ -32,6 +32,40 @@ class Reviewed44Tests(unittest.TestCase):
             z.writestr('manifest.json',json.dumps(meta))
         return bundle,review
 
+    def test_ai_visual_labels_require_explicit_diagnostic_opt_in(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);bundle,review=self.setup_source(root)
+            for item in review['images']:
+                item['reviewed']=False
+                item['assistant_reviewed']=True
+                for box in item['boxes']:
+                    box['status']='AI_VISUAL_REVIEWED'
+            with self.assertRaisesRegex(ValueError,'not human-confirmed'):
+                dataset_from_review(bundle,review,root/'refuse')
+            records,summary=dataset_from_review(bundle,review,root/'allowed',
+                                                    allow_ai_review=True)
+            self.assertEqual(41,len(records))
+            self.assertEqual('AI_ASSISTANT_VISUAL_APPROXIMATE_NOT_HUMAN_VERIFIED',
+                              summary['label_quality'])
+            self.assertEqual({'assistant_visual_approximate':41},summary['review_methods'])
+            self.assertTrue(all(not x['review_verified_by_user'] for x in records))
+            with self.assertRaisesRegex(ValueError,'not human-confirmed'):
+                review['images'][0]['assistant_reviewed']=False
+                dataset_from_review(bundle,review,root/'refuse-incomplete',
+                                    allow_ai_review=True)
+
+    def test_ai_diagnostic_still_rejects_unreviewed_box(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);bundle,review=self.setup_source(root)
+            for item in review['images']:
+                item['reviewed']=False
+                item['assistant_reviewed']=True
+                for box in item['boxes']:
+                    box['status']='AI_VISUAL_REVIEWED'
+            review['images'][3]['boxes'][0]['status']='AI_DRAFT_UNVERIFIED'
+            with self.assertRaisesRegex(ValueError,'requires AI_VISUAL_REVIEWED'):
+                dataset_from_review(bundle,review,root/'out',allow_ai_review=True)
+
     def test_refuses_draft_box(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);bundle,review=self.setup_source(root)
