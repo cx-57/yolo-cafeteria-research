@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-01",
+  "status": "PROVISIONAL_SOURCE_SCREENING_NOT_INDEPENDENT_VALIDATION",
+  "frozen_models_changed": false,
+  "new_inference_or_training": false,
+  "batches": [
+    {
+      "source": "LeFood-Set v1",
+      "source_link": "https://data.mendeley.com/datasets/cchsk79jkt/1",
+      "locally_available_to_this_assistant": false,
+      "original_candidates_reviewed": 100,
+      "keep": 52,
+      "reject": 35,
+      "uncertain": 13,
+      "known_class_presence": {
+        "food": 51,
+        "plate": 52
+      },
+      "source_capture_history": "UNRESOLVED",
+      "human_disposal_labels": 0,
+      "reference": "results/image-selection-20261101.csv"
+    },
+    {
+      "source": "TrashBox public GitHub source categories",
+      "source_link": "https://github.com/nikhilvenkatkumsetty/TrashBox",
+      "locally_available_to_this_assistant": true,
+      "original_candidates_reviewed": 48,
+      "keep": 15,
+      "reject": 28,
+      "uncertain": 5,
+      "known_class_presence": {
+        "bottle": 9,
+        "drink_carton": 6
+      },
+      "source_license": "UNVERIFIED_ORIGINAL_WEB_IMAGE_RIGHTS",
+      "source_capture_history": "UNRESOLVED",
+      "human_disposal_labels": 0,
+      "ai_object_box_drafts": 27,
+      "ai_box_images": 14,
+      "ai_box_excluded_from_scoring": 3
+    },
+    {
+      "source": "Wikimedia Commons per-image license-screened photos",
+      "source_link": "https://commons.wikimedia.org",
+      "locally_available_to_this_assistant": true,
+      "original_candidates_reviewed": 38,
+      "keep": 29,
+      "reject": 4,
+      "uncertain": 5,
+      "known_class_presence": {
+        "utensil": 15,
+        "wrapper": 2,
+        "hinged_container": 12
+      },
+      "source_capture_history": "UNRESOLVED",
+      "human_disposal_labels": 0,
+      "license": "individual source metadata preserved per image",
+      "preserved_sha256": true,
+      "exact_matches_to_prior_accessible_15": 0,
+      "decoded_pixel_matches_to_prior_accessible_15": 0,
+      "near_dhash_flags_to_prior_accessible_15_or_selected": 0,
+      "sha_prefix_matches_to_prior_100_lefood_csv": 0
+    }
+  ],
+  "provisional_total": 96,
+  "class_coverage": "All seven classes represented visually but unevenly; only two wrapper photos from the Commons batch.",
+  "independently_certified_total": 0,
+  "human_verified_detection_labels": 0,
+  "verified_school_bin_truth": 0,
+  "validated_independent_detection_mAP": null,
+  "validated_correct_bin_accuracy": null,
+  "blockers": [
+    "Original 52 LeFood-Set photos and complete historical Mac image/model exposure record are inaccessible for full cross-source provenance checks.",
+    "Four frozen YOLO checkpoint files are on user's external local Mac assets; cannot run actual inference here.",
+    "All object-box drafts are AI-assisted and are not human-adjudicated ground truth.",
+    "No verified source-grounded school sorting-bin eligibility labels; source class does not decide recycle/compost/landfill.",
+    "All new public images are out-of-domain relative to new school cafeteria capture days.",
+    "Original rights of TrashBox's scraped photos remain unresolved."
+  ],
+  "disposal_policy_unchanged": true,
+  "research_recommendation": "Do not retrain yet or present these public photos as independent field results. Need sealed new school capture cohort, independently adjudicated seven-class boxes and school-grounded bin truth, followed by frozen checkpoint evaluation."
+}
