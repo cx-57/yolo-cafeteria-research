@@ -1,4 +1,4 @@
-# 44-photo manually reviewed development evaluation — V3 versus original
+# 44-photo review and V3 experimental comparison
 
 **Current status:** 44 source images and **104 AI-visual draft bounding boxes** are packaged in a standalone image review ZIP delivered in the conversation. Drafts are NOT human-verified ground truth. These same 44 public photographs were repeatedly inspected when building V2/V3/V4, so resulting scores are **development diagnostics**, not an independent test.
 
@@ -28,3 +28,14 @@ git pull --ff-only origin main
 For a genuinely **44-image** score rather than the default **41-image eligible subset**, thoroughly review all three previously excluded dense bottle photos, then append `--include-excluded` to the command.
 
 This produces original and V3 overall seven-class mAP50 and mAP50–95, per-class AP and side-by-side deltas. It does **not** retrain or change either model. Do not reuse reviewed 44-image outcomes for further model selection and then report this as a fresh independent test. A sealed, new school-captured cohort is needed for that claim.
+
+## Current provisional 41-photo V1 versus V3 result
+
+Using 41/44 photos with **AI-visual approximate labels** (not human-verified),
+original V1 obtained **46.25% mAP50 / 21.16% mAP50–95** and V3 obtained
+**44.78% mAP50 / 21.47% mAP50–95**. V3 fired on 8/12 hinged-candidate
+photos versus 4/12 for V1, but that count is **not verified class recall**.
+All 44 source photos had been inspected during development, so this is not
+independent testing. Default evaluation requires human review. The explicit
+`--allow-ai-reviewed` switch only enables an exploratory diagnostic; it must
+never be labeled as human-certified ground truth.
