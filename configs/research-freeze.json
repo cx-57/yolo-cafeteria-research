@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "source_commit": "defcc6156a4425daf1ae530757634cc541f3c267",
+  "purpose": "Paper-analysis freeze: no checkpoint, rule, threshold, class mapping or benchmark changes",
+  "protected_sha256": {
+    "configs/specialists.json": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
+    "configs/disposal.json": "62e167a094731c30e19c36a9776a16f69d7ffa43d99ad51abdf54d2228df64c7",
+    "requirements.txt": "f15cb3977cfe7a43c48dfafc294f5d9b09eec201c0563a75040e64bd34ae4001",
+    "results/baseline.json": "b9335b6f3994d564dbb30fbf45691dd9b88e73869ef099b0e0801a693dde1e5a",
+    "results/test.json": "eb15dccba6db6703f7ad07bd1abd8f51d192dea4dd30e19ab671dafc1e44a503",
+    "results/sorting-verification.json": "d4db5be653ad918f8cc0cba0d1142e7ffded95e30673073aa8bab9a2a08f6d9c",
+    "weights/food-container-carton.pt": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+    "weights/plate-wrapper.pt": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+    "weights/utensil.pt": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+    "weights/bottle.pt": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb"
+  },
+  "models": [
+    {
+      "id": "food-container-carton",
+      "weights": "weights/food-container-carton.pt",
+      "sha256": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+      "classes": [
+        "food",
+        "hinged_container",
+        "drink_carton"
+      ]
+    },
+    {
+      "id": "plate-wrapper",
+      "weights": "weights/plate-wrapper.pt",
+      "sha256": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+      "classes": [
+        "plate",
+        "wrapper"
+      ]
+    },
+    {
+      "id": "utensil",
+      "weights": "weights/utensil.pt",
+      "sha256": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+      "classes": [
+        "utensil"
+      ],
+      "settings": {
+        "imgsz": 800
+      }
+    },
+    {
+      "id": "bottle",
+      "weights": "weights/bottle.pt",
+      "sha256": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb",
+      "classes": [
+        "bottle"
+      ]
+    }
+  ],
+  "names": [
+    "food",
+    "plate",
+    "utensil",
+    "hinged_container",
+    "drink_carton",
+    "wrapper",
+    "bottle"
+  ],
+  "model_settings": {
+    "food-container-carton": {
+      "imgsz": 640,
+      "batch": 1,
+      "augment": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false
+    },
+    "plate-wrapper": {
+      "imgsz": 640,
+      "batch": 1,
+      "augment": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false
+    },
+    "utensil": {
+      "imgsz": 800,
+      "batch": 1,
+      "augment": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false
+    },
+    "bottle": {
+      "imgsz": 640,
+      "batch": 1,
+      "augment": false,
+      "conf": 0.001,
+      "iou": 0.7,
+      "max_det": 300,
+      "half": false
+    }
+  },
+  "sorting": {
+    "display_confidence": 0.25,
+    "automatic_confidence": 0.5,
+    "mapping": {
+      "food": "compost",
+      "plate": "review",
+      "utensil": "review",
+      "hinged_container": "review",
+      "drink_carton": "recycling",
+      "wrapper": "review",
+      "bottle": "recycling"
+    },
+    "emptiness_check": false
+  },
+  "manifests": {
+    "validation": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/validation-label-audit-20261030/audited-eligible.json",
+      "sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec"
+    },
+    "test": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/test-label-audit-20261031/audited-all248.json",
+      "sha256": "f1fdd09d538d146e2714f099ffd9dee6e7b90a198aca471a2081c125839e2859"
+    }
+  },
+  "preserve_originals": true,
+  "checkpoint_activation_authorized": false
+}

@@ -1,5 +1,12 @@
 # Cafeteria object detection
 
+Paper-writing materials are in [the research draft](docs/research-paper.md), with
+[a pinned research freeze](configs/research-freeze.json) and
+[the provenance/readiness audit](results/research-readiness.json). The models and
+sorting rules are frozen. Existing scores characterize exposed development data;
+no confirmed independent cohort or verified human disposal-bin labels were found.
+Actual real-world correct-bin accuracy remains unmeasured.
+
 Four YOLO specialists detect seven classes:
 
 | Model | Classes |
