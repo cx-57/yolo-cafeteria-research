@@ -11,7 +11,7 @@
   "sources": [
     "https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables"
   ],
-  "note": "Food goes to compost. Disposable plastic drink bottles and accepted school milk/juice cartons require explicit empty confirmation. Ambiguous materials and reusable items require review. verified enables the user-approved policy; it does not independently certify sorting accuracy.",
+  "note": "User-selected experimental sorting shortcut: food to compost; detected bottles and milk/juice cartons to recycling without checking whether empty; plates, utensils, wrappers, and hinged containers to review. Verified activates this owner-selected mapping only, not real-world disposal eligibility or independent accuracy.",
   "classes": {
     "food": {
       "category": "compost",
@@ -35,10 +35,8 @@
     },
     "drink_carton": {
       "category": "recycling",
-      "requires": [
-        "empty"
-      ],
-      "instruction": "Empty the milk or juice carton, then place it in recycling; the user confirmed school acceptance."
+      "requires": [],
+      "instruction": "Recycling candidate under user-selected shortcut; carton contents are not checked. Prior school acceptance confirmation covered empty cartons only."
     },
     "wrapper": {
       "category": "review",
@@ -47,14 +45,13 @@
     },
     "bottle": {
       "category": "recycling",
-      "requires": [
-        "empty"
-      ],
-      "instruction": "Empty the disposable plastic drink bottle and follow local recycling rules."
+      "requires": [],
+      "instruction": "Recycling candidate under user-selected shortcut; bottle contents are not checked. Confirm local acceptance before actual disposal."
     }
   },
-  "verification_basis": "User approved the three-bin policy and requested review of ambiguous items; not independent certification of material acceptance. User additionally confirmed that empty milk/juice cartons are accepted in school recycling.",
+  "verification_basis": "User explicitly requested automatic recycling for bottle and drink-carton detections without an emptiness check; previously confirmed school acceptance was for empty cartons only. This is an experimental sorting policy, not verified eligibility of filled containers.",
   "local_acceptance": {
     "drink_carton": true
-  }
+  },
+  "local_acceptance_note": "Carton acceptance was previously confirmed only for empty cartons. The new automatic suggestion does not establish acceptance of filled cartons or bottles."
 }
