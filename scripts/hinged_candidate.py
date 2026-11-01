@@ -69,7 +69,7 @@ def choose_train(records, seed=42, support_cap=250, background_cap=90):
     return chosen, len(hinged), min(background_cap,len(negatives))
 
 
-def export_dataset(info, out, repeat=3, support_cap=250, background_cap=90, seed=42):
+def export_dataset(info, out, repeat=3, support_cap=250, background_cap=90, seed=42, val_rows_by_sha=None):
     """Copy old training images/labels, remap owned classes, oversample ONLY
     hinged-positive training views (augmentation online; copies not new photos)."""
     if out.exists():
@@ -84,7 +84,17 @@ def export_dataset(info, out, repeat=3, support_cap=250, background_cap=90, seed
     index = []
     for split, records in [('train', chosen), ('val', val)]:
         for i, r in enumerate(records):
-            labels = parse_rows(r['label'])
+            if split == 'val' and val_rows_by_sha is not None:
+                if r['sha256'] not in val_rows_by_sha:
+                    raise ValueError('Frozen validation SHA missing from corrected manifest')
+                labels = []
+                for line in val_rows_by_sha[r['sha256']]:
+                    cols = line.split()
+                    if len(cols) != 5:
+                        raise ValueError('Invalid corrected validation row')
+                    labels.append((int(cols[0]),[float(x) for x in cols[1:]]))
+            else:
+                labels = parse_rows(r['label'])
             owned = [(MAP[c],values) for c, values in labels if c in MAP]
             repeats = repeat if split == 'train' and any(c == 1 for c,_ in owned) else 1
             for k in range(repeats):
@@ -143,11 +153,24 @@ def train(args, out):
                 raise ValueError('Stress image hash mismatch: '+row['path'])
     if train_sha & excluded:
         raise ValueError('Existing training split overlaps the 44-photo diagnostic cohort; do not train on these photos')
+    # Corrected embedded validation labels supersede stale disk labels for 109
+    # development photos. This cohort is *validation only*, never training.
+    frozen_val = s.read(EVALUATION)
+    baseline = s.read(DEFAULT_BASELINE)
+    if s.sha(EVALUATION) != baseline['manifest_sha256']:
+        raise ValueError('Frozen corrected validation manifest differs from baseline')
+    if frozen_val['names'] != s.NAMES:
+        raise ValueError('Frozen manifest class mapping changed')
+    s.validate_annotations(frozen_val['records'], frozen_val['evaluated_classes'])
+    val_rows_by_sha={r['sha256']: r['rows'] for r in frozen_val['records']}
+    if set(val_rows_by_sha) != val_sha or len(val_rows_by_sha) != len(frozen_val['records']):
+        raise ValueError('Training dataset val images do not match corrected 186-photo cohort')
     out.mkdir(parents=True)
     summary=export_dataset(info,out/'data',repeat=args.repeat, seed=args.seed,
-                           support_cap=args.support_cap, background_cap=args.background_cap)
+                           support_cap=args.support_cap, background_cap=args.background_cap,
+                           val_rows_by_sha=val_rows_by_sha)
     summary.update(dict(source_yaml=str(data_path),source_yaml_sha256=s.sha(data_path),stress_image_count=44,stress_train_overlap=0,
-                        original_frozen_checkpoint_sha256=protected['weights/food-container-carton.pt'],
+                        original_frozen_checkpoint_sha256=protected['weights/food-container-carton.pt'],corrected_validation_manifest_sha256=s.sha(EVALUATION),
                         epochs=args.epochs,learning_rate=args.lr,
                         status='TRAINING_CANDIDATE_NOT_PROMOTED',
                         warning='Validation has only two hinged-container objects. No independent improvement claim.'))
