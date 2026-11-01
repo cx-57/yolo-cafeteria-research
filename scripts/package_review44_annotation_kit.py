@@ -100,9 +100,13 @@ $('export').onclick=()=>{let payload={format:'CAFETERIA_PROVISIONAL_HUMAN_REVIEW
  a.href=url;a.download='cafeteria-review-export.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 $('import').onchange=async ev=>{let f=ev.target.files[0];if(!f)return;try{
  let imported=JSON.parse(await f.text());if(imported.format!=='CAFETERIA_PROVISIONAL_HUMAN_REVIEW_V1'||imported.images?.length!==44)throw Error('Not a 44 photo review JSON');
- for(let i=0;i<44;i++){let a=records[i],b=imported.images[i];if(a.id!==b.id||a.path!==b.path||a.sha256!==b.sha256||!Array.isArray(b.boxes))throw Error('Image identity changed at '+i);
- for(let item of b.boxes){let v=item.box_xyxy_normalized;if(!NAMES.includes(item.class_name)||!Array.isArray(v)||v.length!==4||!v.every(Number.isFinite)||v[0]<0||v[1]<0||v[2]>1||v[3]>1||v[0]>=v[2]||v[1]>=v[3])throw Error('Invalid box at '+i)}}
- imported.images.forEach((x,i)=>records[i]=x);load(at);alert('Review loaded; export again before leaving.')
+ // A different packaging order must not misattach annotations.
+ const byHash=new Map(imported.images.map(b=>[b.sha256,b]));
+ if(byHash.size!==44||records.some(a=>!byHash.has(a.sha256)))throw Error('Source image hashes differ from the 44 photo bundle');
+ for(let i=0;i<44;i++){let a=records[i],b=byHash.get(a.sha256);if(!Array.isArray(b.boxes))throw Error('Missing boxes at '+i);
+ for(let item of b.boxes){let v=item.box_xyxy_normalized;if(!NAMES.includes(item.class_name)||!Array.isArray(v)||v.length!==4||!v.every(Number.isFinite)||v[0]<0||v[1]<0||v[2]>1||v[3]>1||v[0]>=v[2]||v[1]>=v[3])throw Error('Invalid box at '+i)}
+ records[i]={...b,id:a.id,path:a.path,sha256:a.sha256};}
+ load(at);alert('Review loaded and matched by SHA256; export again before leaving.')
  }catch(err){alert('Cannot import: '+err.message)}ev.target.value=''};
 load(0);
 </script>"""
