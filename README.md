@@ -70,7 +70,7 @@ adaptation. The other three checkpoints were unchanged at that stage. Packet rem
 not improve weights. These are provisional AI-assisted development results, not
 independent cafeteria test accuracy.
 See [evaluation notes](docs/evaluation.md) for that historical cohort.
-The current release scores **90.46% / 66.91%** on that historical 124-photo
+The current release scores **91.87% / 68.12%** on that historical 124-photo
 retention benchmark; the repaired 186-photo set remains primary.
 
 The earlier school-photo audit is preserved separately. At the user's request, that
@@ -259,12 +259,11 @@ Optional `--contexts` remains available for extra per-detection facts, but
 The output records hashes, model configuration and per-object reasons.
 Detection confidence is not disposal-bin confidence.
 
-### Existing fixed development-cohort measurements
+### Verified fixed development-cohort measurements (November 1, 2026)
 
 The unchanged model predictions on **248 repaired development test photos**
-contain **881 detections** at the 0.25 display threshold. From the previously
-recorded class-specific counts at the unchanged 0.50 decision threshold, the
-**new rule is projected** to make:
+contain **881 detections** at the 0.25 display threshold. A verified replay and fresh inference with the active four checkpoints both
+produce these decisions at the unchanged 0.50 automatic threshold:
 
 | Decision | Detection count |
 |---|---:|
@@ -273,9 +272,12 @@ recorded class-specific counts at the unchanged 0.50 decision threshold, the
 | Review | 371 |
 | **Total** | **881** |
 
-This is a **reclassification of previously frozen detector outputs**, not
-fresh inference or a new end-to-end test run. Run the new policy locally to
-confirm these counts and obtain a policy-specific receipt.
+Fresh MPS inference reproduced every frozen prediction exactly. All four checkpoint
+bytes, active configuration metadata and all 248 image hashes were verified.
+Of emitted detections, **57.89% receive an automatic suggestion and 42.11%
+require review**. These percentages use emitted predictions, not labeled objects.
+Detailed validation/test results and provenance are in
+[verified measurements](results/sorting-verification.json).
 
 On the same exposed development cohort, the prior **food-to-compost object
 recognition proxy** measured **97.03% precision / 75.52% recall**. Separately,
@@ -293,31 +295,37 @@ unchanged. Detector scores are not affected by this disposal-rule update.
 
 ### Reproduce the sorting decision counts (no new YOLO inference)
 
-If you have the existing per-image frozen prediction JSON in the external assets
-folder, replay the currently selected no-empty-check rules directly:
+The matching receipt is external
+`artifacts/bottle-retention-20261031/test-active-confirmation.json`.
+The older `artifacts/frozen-test-20261031/evaluation.json` predates the active
+checkpoints and correctly fails configuration validation. Reproduce with a new
+output path (existing outputs are never overwritten):
 
 ```sh
-./scripts/run_specialists.sh replay /absolute/path/to/frozen-predictions.json \
-  --expected-images 248 --output /absolute/path/to/sorting-replayed.json
+./scripts/run_specialists.sh replay \
+  ../yolo-cafeteria-research-assets/artifacts/bottle-retention-20261031/test-active-confirmation.json \
+  --expected-images 248 --verify-images \
+  --manifest ../yolo-cafeteria-research-assets/artifacts/test-label-audit-20261031/audited-all248.json \
+  --output /tmp/sorting-replayed.json
 ```
 
-The replay verifies the active config and image identities stored in the receipt,
-but it cannot independently verify image pixels or checkpoint bytes by default.
-Use `--verify-images` if the original images exist locally. If the receipt uses
-different checkpoint/config hashes, replay stops rather than silently changing
-model versions. The projected 337 compost / 173 recycling / 371 review count
-above is **not** a verified replay until this command succeeds on the exact
-248-photo receipt.
+`--manifest` supplies file locations when receipt image names are not paths.
+Replay validates receipt/config metadata; image bytes are verified only with
+`--verify-images`. Checkpoint bytes were independently verified in this audit;
+fresh inference also verifies them. The confirmed replay receipt is external
+`artifacts/disposal-20261031/test248-no-empty-verified-20261101.json`.
+Fresh inference and sorting receipts, joint matching details and the reproducible
+measurement script are in that same folder with `20261101` filenames.
 
-The existing food and recycling-candidate recognition results can be combined
-arithmetically as a limited class-specific proxy:
-**489 correctly matched of 510 automatic decisions (95.88% precision)**,
-**489 of 624 labeled food/bottle/carton objects (78.37% recall)**,
-and **86.24% F1**. See
-[combined proxy and limitations](results/combined-sorting-proxy.json).
-This is **not verified correct-bin accuracy**: the original labels say what
-object is pictured, not whether its material/contents qualify for the school
-recycling stream. This aggregation does not replace a fresh joint matching pass.
+Class-specific matching confirms **489 correct object matches among 510 automatic
+suggestions: 95.88% precision, 78.37% recall and 86.24% F1** for food/bottle/carton.
+A separate **joint geometry-first** match of all emitted detections finds **483**
+correct automatic object matches: **94.71% precision, 77.40% recall and 85.19% F1**.
+The six differences arise when food/bottle boxes match overlapping wrapper labels
+before checking object class. Neither method measures actual disposal eligibility.
+Joint matching gives **52.92% automatic coverage of the 924 labeled objects**,
+30.95% matched review and 16.13% missed; 21 automatic and 85 review predictions
+are unmatched. See [methods, per-class metrics and limits](docs/sorting-evaluation.md).
 
 ### Weak-class optimization without regression
 
@@ -349,3 +357,9 @@ Use [the independent sorting evaluation protocol](docs/sorting-evaluation.md)
 to collect human-verified bin labels. Existing test photographs may have been
 exposed to training or model selection, and the repaired labels are AI-assisted,
 so the displayed numbers are not independent generalization estimates.
+
+The November 1 bottle trial was **rejected**: one classification-head-only epoch
+on 527 training images changed validation bottle AP50/AP50–95 from
+82.47%/62.00% to 77.95%/59.18%. Historical retention passed, but the primary
+regression gate failed. No candidate test scoring or automatic replacement occurred.
+See the [controlled comparison](docs/sorting-evaluation.md#controlled-bottle-candidate--rejected).

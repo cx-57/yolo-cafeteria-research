@@ -174,6 +174,54 @@ def predict(records, device='cpu', config_path=CONFIG):
                 box_format='normalized_xyxy_conf_class', predictions=predictions)
 
 
+def recognition_at_threshold(records, predictions, confidence=0.50, minimum_iou=0.50):
+    """Class-aware, confidence-ordered one-to-one object matches; never bin accuracy."""
+    from evaluate_sorting import iou
+    if (type(confidence) not in (int, float) or not math.isfinite(confidence)
+            or not 0 <= confidence <= 1 or type(minimum_iou) not in (int, float)
+            or not math.isfinite(minimum_iou) or not 0 < minimum_iou <= 1):
+        raise ValueError('Invalid recognition thresholds')
+    validate_annotations(records, list(range(len(NAMES))))
+    if set(predictions) != {r['name'] for r in records}:
+        raise ValueError('Prediction images differ from annotation cohort')
+    counts = {name: dict(tp=0, fp=0, fn=0) for name in NAMES}
+    for record in records:
+        targets = []
+        for row in record['rows']:
+            c, x, y, w, h = map(float, row.split())
+            targets.append(([x-w/2, y-h/2, x+w/2, y+h/2], int(c)))
+        rows = predictions[record['name']]
+        validate_prediction_rows(rows)
+        unmatched = set(range(len(targets)))
+        for row in sorted(rows, key=lambda r: r[4], reverse=True):
+            if row[4] < confidence:
+                continue
+            cls = int(row[5])
+            overlaps = [(iou(row[:4], targets[j][0]), j) for j in sorted(unmatched)
+                        if targets[j][1] == cls]
+            score, match = max(overlaps, default=(0, -1), key=lambda pair: (pair[0], -pair[1]))
+            if score >= minimum_iou:
+                unmatched.remove(match)
+                counts[NAMES[cls]]['tp'] += 1
+            else:
+                counts[NAMES[cls]]['fp'] += 1
+        for j in unmatched:
+            counts[NAMES[targets[j][1]]]['fn'] += 1
+
+    def summarize(items):
+        tp, fp, fn = (sum(item[key] for item in items) for key in ('tp', 'fp', 'fn'))
+        return dict(tp=tp, fp=fp, fn=fn, predictions=tp+fp, objects=tp+fn,
+                    precision=tp/(tp+fp) if tp+fp else None,
+                    recall=tp/(tp+fn) if tp+fn else None,
+                    f1=2*tp/(2*tp+fp+fn) if 2*tp+fp+fn else None)
+
+    return dict(confidence_threshold=confidence, minimum_box_iou=minimum_iou,
+                matching='Confidence-descending greedy one-to-one, exact object class required',
+                per_class={name: summarize([count]) for name, count in counts.items()},
+                micro=summarize(list(counts.values())),
+                limitation='Object recognition only; object labels do not establish disposal eligibility.')
+
+
 def score_predictions(records, predictions, classes):
     import numpy as np
     import torch
@@ -242,7 +290,8 @@ def main():
         receipt = read(args.predictions) if args.predictions else predict(records, args.device, args.config)
         receipt = validate_receipt(receipt, records, read(args.config), sha(args.config))
         result = score_predictions(records, receipt['predictions'], classes)
-        save(args.output, dict(result, independent_test=False, manifest_sha256=sha(args.manifest),
+        operating_point = recognition_at_threshold(records, receipt['predictions']) if set(classes) == set(range(7)) else None
+        save(args.output, dict(result, operating_point=operating_point, independent_test=False, manifest_sha256=sha(args.manifest),
                                annotation_status=manifest['annotation_status'], prediction_receipt=receipt))
         print(json.dumps({k: v for k, v in result.items()}, indent=2))
 

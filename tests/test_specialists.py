@@ -7,6 +7,32 @@ import specialists as s
 
 
 class SpecialistTests(unittest.TestCase):
+    def test_threshold_metrics_penalize_duplicates_misses_and_negative_images(self):
+        records = [dict(name='a', known_classes=list(range(7)), rows=[
+            '0 0.2 0.2 0.2 0.2', '6 0.7 0.7 0.2 0.2']),
+            dict(name='empty', known_classes=list(range(7)), rows=[])]
+        predictions = {'a': [[.1, .1, .3, .3, .9, 0],
+                              [.1, .1, .3, .3, .8, 0],
+                              [.6, .6, .8, .8, .49, 6]],
+                       'empty': [[.1, .1, .3, .3, .5, 6]]}
+        result = s.recognition_at_threshold(records, predictions)
+        self.assertEqual(result['per_class']['food']['tp'], 1)
+        self.assertEqual(result['per_class']['food']['fp'], 1)
+        self.assertEqual(result['per_class']['bottle']['fn'], 1)
+        self.assertEqual(result['per_class']['bottle']['fp'], 1)
+        self.assertAlmostEqual(result['micro']['precision'], 1/3)
+        self.assertAlmostEqual(result['micro']['recall'], .5)
+        self.assertAlmostEqual(result['micro']['f1'], .4)
+
+    def test_threshold_metrics_do_not_count_wrong_class_as_recognition(self):
+        records = [dict(name='a', known_classes=list(range(7)),
+                        rows=['0 0.2 0.2 0.2 0.2'])]
+        result = s.recognition_at_threshold(
+            records, {'a': [[.1, .1, .3, .3, .9, 6]]})
+        self.assertEqual(result['micro']['tp'], 0)
+        self.assertEqual(result['micro']['fp'], 1)
+        self.assertEqual(result['micro']['fn'], 1)
+
     def test_model_resolution_overrides_leave_scoring_settings_and_other_models_unchanged(self):
         config = dict(models=[], settings=dict(s.SETTINGS))
         higher = dict(id='higher', settings=dict(imgsz=800))

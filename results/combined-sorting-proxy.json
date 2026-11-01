@@ -1,9 +1,10 @@
 {
   "name": "Combined food/bottle/carton object-recognition proxy under current sorting shortcut",
-  "method": "Arithmetic combination of previously recorded class-specific one-to-one IoU>=0.50 matches at fixed detection threshold 0.50; no new inference, no independent bin ground truth.",
+  "method": "Verified replay and recomputed class-specific confidence-descending one-to-one IoU>=0.50 object matches at confidence>=0.50; not disposal-bin accuracy.",
   "source_files": [
     "results/disposal.json",
-    "results/test.json"
+    "results/test.json",
+    "results/sorting-verification.json"
   ],
   "images": 248,
   "emitted_predictions_at_display_threshold": 881,
@@ -20,7 +21,6 @@
   "recall_proxy": 0.7836538461538461,
   "f1_proxy": 0.8624338624338624,
   "correct_matches_over_all_924_labeled_objects": 0.5292207792207793,
-  "projected_review_predictions": 371,
   "review_fraction_of_emitted_predictions": 0.4211123723041998,
   "limitations": [
     "Not genuine three-bin classification accuracy. The calculation only compares food, bottle and carton object classes against existing AI-reviewed object annotations.",
@@ -28,7 +28,10 @@
     "Summing separately matched object groups does not run a new joint global matching pass, and cannot detect all cross-class localization conflicts.",
     "Plastic material, contamination, empty state and school bin eligibility are not independently labeled.",
     "Plates, utensils, wrappers and hinged containers are routed to review, and no class is routed automatically to landfill.",
-    "Actual policy replay is pending the external per-image frozen prediction receipt or model checkpoints; aggregate counts alone cannot reproduce per-image decisions."
+    "Joint geometry-first matching yields 483 correct automatic object matches, versus 489 class-specific matches; see results/sorting-verification.json. Neither is disposal-bin accuracy."
   ],
-  "independent_three_bin_accuracy": null
+  "independent_three_bin_accuracy": null,
+  "review_predictions": 371,
+  "automatic_fraction_of_emitted_predictions": 0.5788876276958003,
+  "replay_verified": true
 }

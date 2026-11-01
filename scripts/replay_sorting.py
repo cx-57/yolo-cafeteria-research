@@ -11,6 +11,16 @@ import disposal as d
 import specialists as s
 
 
+def verify_replay_images(receipt, manifest=None):
+    records = (manifest['records'] if manifest is not None else
+               [dict(image, image_path=image['name']) for image in receipt['images']])
+    expected = {(image['name'], image['sha256']) for image in receipt['images']}
+    if (len(records) != len(expected) or
+            {(r['name'], r['sha256']) for r in records} != expected):
+        raise ValueError('Image manifest differs from receipt cohort')
+    s.verify_images(records)
+
+
 def replay(payload, policy, config, config_sha, min_conf=0.25,
            expected_images=None):
     receipt = payload.get('prediction_receipt', payload)
@@ -38,6 +48,7 @@ def replay(payload, policy, config, config_sha, min_conf=0.25,
         category_counts=counts,
         images=len(decisions),
         detections=sum(counts.values()),
+        min_detection_confidence=min_conf,
         policy=policy,
         model_config_sha256=config_sha,
         decisions=decisions,
@@ -57,7 +68,11 @@ def main():
     parser.add_argument('--expected-images', type=int)
     parser.add_argument('--verify-images', action='store_true',
                         help='Also hash original image files, if available locally')
+    parser.add_argument('--manifest', type=Path,
+                        help='Annotation manifest providing image paths for --verify-images')
     args = parser.parse_args()
+    if args.manifest and not args.verify_images:
+        parser.error('--manifest requires --verify-images')
     if args.output.exists():
         parser.error('Refusing to overwrite output')
     config = s.read(s.CONFIG)
@@ -66,10 +81,12 @@ def main():
     result = replay(payload, policy, config, s.sha(s.CONFIG),
                     args.min_conf, args.expected_images)
     if args.verify_images:
-        s.verify_images([dict(name=im['name'], image_path=im['name'],
-                              sha256=im['sha256'])
-                         for im in result['prediction_receipt']['images']])
-        result['provenance_check'] += ' Original image bytes verified.'
+        verify_replay_images(result['prediction_receipt'],
+                             s.read(args.manifest) if args.manifest else None)
+        if args.manifest:
+            result['image_manifest_sha256'] = s.sha(args.manifest)
+        result['provenance_check'] = ('Frozen prediction receipt and active config metadata validated; '
+                                      'original image bytes verified. Model weight bytes not checked by replay.')
     result['policy_sha256'] = s.sha(args.rules)
     result['source_receipt_sha256'] = s.sha(args.receipt)
     s.save(args.output, result)

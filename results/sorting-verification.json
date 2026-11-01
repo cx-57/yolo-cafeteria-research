@@ -1,0 +1,539 @@
+{
+  "name": "Verified sorting replay and object-recognition proxies, 2026-11-01",
+  "git_start_commit": "4663c90b",
+  "images": 248,
+  "ground_truth_objects": 924,
+  "category_counts": {
+    "review": 371,
+    "compost": 337,
+    "recycling": 173
+  },
+  "detections": 881,
+  "model_config_sha256": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
+  "policy_sha256": "62e167a094731c30e19c36a9776a16f69d7ffa43d99ad51abdf54d2228df64c7",
+  "source_receipt": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/bottle-retention-20261031/test-active-confirmation.json",
+  "source_receipt_sha256": "01b8c6448b851b57f53768eff67fddefc6b4c927fb42603b4c1421c94c3e2848",
+  "manifest_sha256": "f1fdd09d538d146e2714f099ffd9dee6e7b90a198aca471a2081c125839e2859",
+  "validation_manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+  "checkpoint_verification": {
+    "food-container-carton": {
+      "expected": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+      "actual": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356"
+    },
+    "plate-wrapper": {
+      "expected": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+      "actual": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1"
+    },
+    "utensil": {
+      "expected": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+      "actual": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f"
+    },
+    "bottle": {
+      "expected": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb",
+      "actual": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb"
+    }
+  },
+  "all_248_image_bytes_verified": true,
+  "display_threshold": 0.25,
+  "automatic_confidence_threshold": 0.5,
+  "minimum_box_iou": 0.5,
+  "test": {
+    "AP50": 0.8778014568737538,
+    "AP50_95": 0.6723673911504443,
+    "images": 248,
+    "per_class": {
+      "food": {
+        "AP50": 0.8391215666091674,
+        "AP50_95": 0.5509185183214562,
+        "objects": 433
+      },
+      "plate": {
+        "AP50": 0.870409310643067,
+        "AP50_95": 0.7159985481886565,
+        "objects": 123
+      },
+      "utensil": {
+        "AP50": 0.860564110973734,
+        "AP50_95": 0.6125790736860253,
+        "objects": 98
+      },
+      "hinged_container": {
+        "AP50": 0.995,
+        "AP50_95": 0.9116666666666667,
+        "objects": 4
+      },
+      "drink_carton": {
+        "AP50": 0.9755264685605081,
+        "AP50_95": 0.742843990391792,
+        "objects": 134
+      },
+      "wrapper": {
+        "AP50": 0.8512967176597512,
+        "AP50_95": 0.5764054234374821,
+        "objects": 75
+      },
+      "bottle": {
+        "AP50": 0.752692023670048,
+        "AP50_95": 0.5961595173610312,
+        "objects": 57
+      }
+    },
+    "operating_point": {
+      "confidence_threshold": 0.5,
+      "minimum_box_iou": 0.5,
+      "matching": "Confidence-descending greedy one-to-one, exact object class required",
+      "per_class": {
+        "food": {
+          "tp": 327,
+          "fp": 10,
+          "fn": 106,
+          "predictions": 337,
+          "objects": 433,
+          "precision": 0.9703264094955489,
+          "recall": 0.7551963048498845,
+          "f1": 0.8493506493506493
+        },
+        "plate": {
+          "tp": 103,
+          "fp": 15,
+          "fn": 20,
+          "predictions": 118,
+          "objects": 123,
+          "precision": 0.8728813559322034,
+          "recall": 0.8373983739837398,
+          "f1": 0.8547717842323651
+        },
+        "utensil": {
+          "tp": 70,
+          "fp": 7,
+          "fn": 28,
+          "predictions": 77,
+          "objects": 98,
+          "precision": 0.9090909090909091,
+          "recall": 0.7142857142857143,
+          "f1": 0.8
+        },
+        "hinged_container": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 5,
+          "objects": 4,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888
+        },
+        "drink_carton": {
+          "tp": 129,
+          "fp": 1,
+          "fn": 5,
+          "predictions": 130,
+          "objects": 134,
+          "precision": 0.9923076923076923,
+          "recall": 0.9626865671641791,
+          "f1": 0.9772727272727273
+        },
+        "wrapper": {
+          "tp": 58,
+          "fp": 7,
+          "fn": 17,
+          "predictions": 65,
+          "objects": 75,
+          "precision": 0.8923076923076924,
+          "recall": 0.7733333333333333,
+          "f1": 0.8285714285714286
+        },
+        "bottle": {
+          "tp": 33,
+          "fp": 10,
+          "fn": 24,
+          "predictions": 43,
+          "objects": 57,
+          "precision": 0.7674418604651163,
+          "recall": 0.5789473684210527,
+          "f1": 0.66
+        }
+      },
+      "micro": {
+        "tp": 724,
+        "fp": 51,
+        "fn": 200,
+        "predictions": 775,
+        "objects": 924,
+        "precision": 0.9341935483870968,
+        "recall": 0.7835497835497836,
+        "f1": 0.8522660388463802
+      },
+      "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+    }
+  },
+  "validation": {
+    "AP50": 0.8636433164260234,
+    "AP50_95": 0.6525422104353948,
+    "images": 186,
+    "per_class": {
+      "food": {
+        "AP50": 0.9577255455565946,
+        "AP50_95": 0.6500697755834846,
+        "objects": 343
+      },
+      "plate": {
+        "AP50": 0.8156136887656074,
+        "AP50_95": 0.6899041634616293,
+        "objects": 110
+      },
+      "utensil": {
+        "AP50": 0.7493655956581344,
+        "AP50_95": 0.46774238800954515,
+        "objects": 101
+      },
+      "hinged_container": {
+        "AP50": 0.995,
+        "AP50_95": 0.945,
+        "objects": 2
+      },
+      "drink_carton": {
+        "AP50": 0.9284000370782618,
+        "AP50_95": 0.6519206748780891,
+        "objects": 94
+      },
+      "wrapper": {
+        "AP50": 0.7747468785540175,
+        "AP50_95": 0.543111180697627,
+        "objects": 85
+      },
+      "bottle": {
+        "AP50": 0.8246514693695477,
+        "AP50_95": 0.6200472904173895,
+        "objects": 42
+      }
+    },
+    "operating_point": {
+      "confidence_threshold": 0.5,
+      "minimum_box_iou": 0.5,
+      "matching": "Confidence-descending greedy one-to-one, exact object class required",
+      "per_class": {
+        "food": {
+          "tp": 306,
+          "fp": 6,
+          "fn": 37,
+          "predictions": 312,
+          "objects": 343,
+          "precision": 0.9807692307692307,
+          "recall": 0.892128279883382,
+          "f1": 0.934351145038168
+        },
+        "plate": {
+          "tp": 85,
+          "fp": 12,
+          "fn": 25,
+          "predictions": 97,
+          "objects": 110,
+          "precision": 0.8762886597938144,
+          "recall": 0.7727272727272727,
+          "f1": 0.821256038647343
+        },
+        "utensil": {
+          "tp": 67,
+          "fp": 10,
+          "fn": 34,
+          "predictions": 77,
+          "objects": 101,
+          "precision": 0.8701298701298701,
+          "recall": 0.6633663366336634,
+          "f1": 0.7528089887640449
+        },
+        "hinged_container": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "objects": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drink_carton": {
+          "tp": 88,
+          "fp": 6,
+          "fn": 6,
+          "predictions": 94,
+          "objects": 94,
+          "precision": 0.9361702127659575,
+          "recall": 0.9361702127659575,
+          "f1": 0.9361702127659575
+        },
+        "wrapper": {
+          "tp": 56,
+          "fp": 6,
+          "fn": 29,
+          "predictions": 62,
+          "objects": 85,
+          "precision": 0.9032258064516129,
+          "recall": 0.6588235294117647,
+          "f1": 0.7619047619047619
+        },
+        "bottle": {
+          "tp": 34,
+          "fp": 8,
+          "fn": 8,
+          "predictions": 42,
+          "objects": 42,
+          "precision": 0.8095238095238095,
+          "recall": 0.8095238095238095,
+          "f1": 0.8095238095238095
+        }
+      },
+      "micro": {
+        "tp": 638,
+        "fp": 48,
+        "fn": 139,
+        "predictions": 686,
+        "objects": 777,
+        "precision": 0.9300291545189504,
+        "recall": 0.8211068211068211,
+        "f1": 0.8721804511278195
+      },
+      "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+    }
+  },
+  "combined_automatic_class_specific_proxy": {
+    "tp": 489,
+    "fp": 21,
+    "fn": 135,
+    "precision": 0.9588235294117647,
+    "recall": 0.7836538461538461,
+    "f1": 0.8624338624338624
+  },
+  "automatic_fraction_of_emitted_predictions": 0.5788876276958003,
+  "review_fraction_of_emitted_predictions": 0.4211123723041998,
+  "correct_class_automatic_matches_over_all_labeled_objects": 0.5292207792207793,
+  "joint_geometry_matching": {
+    "matched_review": 286,
+    "missed_objects": 149,
+    "unmatched_review": 85,
+    "matched_automatic": 489,
+    "correct_object_automatic": 483,
+    "unmatched_automatic": 21,
+    "wrong_object_automatic": 6,
+    "matching": "All displayed predictions globally confidence-ordered, geometry-only IoU>=0.50, one-to-one before checking exact object class",
+    "automatic_coverage_of_labeled_objects": 0.5292207792207793,
+    "matched_review_fraction_of_labeled_objects": 0.30952380952380953,
+    "missed_fraction_of_labeled_objects": 0.16125541125541126,
+    "exact_object_automatic_precision": 0.9470588235294117,
+    "exact_object_automatic_recall": 0.7740384615384616,
+    "exact_object_automatic_f1": 0.8518518518518519,
+    "correct_object_automatic_over_all_labeled_objects": 0.5227272727272727
+  },
+  "actual_disposal_accuracy": null,
+  "independent_three_bin_accuracy": null,
+  "limitations": [
+    "Existing ground truth annotates objects, not actual disposal eligibility. No disposal labels were invented or inferred.",
+    "Class-specific proxy sums independently class-matched food/bottle/carton counts; joint geometry diagnostics separately expose cross-class competition.",
+    "AI-assisted annotations, inherited checkpoint exposure and repeated development inspection prevent an independent generalization claim.",
+    "Review is abstention; unseen objects and predictions below 0.25 are not emitted.",
+    "No landfill automation, material/contamination/emptiness recognition, or independent school sorting accuracy has been established.",
+    "Very small hinged-container support: two validation and four test objects."
+  ],
+  "fresh_inference": {
+    "predictions_identical_to_frozen_receipt": true,
+    "images": 248,
+    "device": "mps",
+    "receipt_sha256": "eb6d29b46af8ac787edce89bf9e2d702d5fb90ebf17a63dd1aa2f4c8db4b1c39"
+  },
+  "label_provenance_note": "Frozen manifest rows are authoritative. Referenced validation label files differ on 109/186 images (10 for bottle); original file hashes still match their recorded hashes. Frozen embedded corrections were copied for candidate validation; no originals changed.",
+  "candidate_trial": {
+    "decision": "Rejected; primary validation regression. Active checkpoints not replaced.",
+    "candidate_checkpoint_sha256": "3ed59991a56d32791c9be58c364c41119dfb85ab82c673b7dff02e6c630e6679",
+    "protocol_sha256": "a0b183901a38d2f80670eacdc8895bb02cd5bc8a57865e99c6fef2251cf98cd8",
+    "epochs": 1,
+    "trainable": "Bottle classification head only; backbone, box-head and all BN statistics retained at checkpoint precision",
+    "training_images": 527,
+    "positive_training_images": 271,
+    "negative_training_images": 256,
+    "heldout_identity_excluded_training_views": 48,
+    "seed": 42,
+    "lr0": 2e-05,
+    "comparisons": {
+      "validation": {
+        "images": 186,
+        "manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+        "before_bottle": {
+          "AP50": 0.8246514693695477,
+          "AP50_95": 0.6200472904173895,
+          "objects": 42
+        },
+        "after_bottle": {
+          "AP50": 0.7795075908963663,
+          "AP50_95": 0.5917882952808562,
+          "objects": 42
+        },
+        "before_macro": {
+          "AP50": 0.8636433164260234,
+          "AP50_95": 0.6525422104353948
+        },
+        "after_macro": {
+          "AP50": 0.8571941909298546,
+          "AP50_95": 0.6485052111301758
+        },
+        "candidate_operating_point": {
+          "tp": 27,
+          "fp": 11,
+          "fn": 15,
+          "predictions": 38,
+          "objects": 42,
+          "precision": 0.7105263157894737,
+          "recall": 0.6428571428571429,
+          "f1": 0.675
+        }
+      },
+      "historical": {
+        "images": 124,
+        "manifest_sha256": "eae316c918e3fdc5a55144646494bdef58cfc85793c9312ee4df4dd59217980c",
+        "before_bottle": {
+          "AP50": 0.971,
+          "AP50_95": 0.8281952380952381,
+          "objects": 11
+        },
+        "after_bottle": {
+          "AP50": 0.9799999999999999,
+          "AP50_95": 0.8370714285714284,
+          "objects": 11
+        },
+        "before_macro": {
+          "AP50": 0.9186801217996322,
+          "AP50_95": 0.6811710660914698
+        },
+        "after_macro": {
+          "AP50": 0.9199658360853464,
+          "AP50_95": 0.6824390933023543
+        },
+        "candidate_operating_point": {
+          "tp": 11,
+          "fp": 2,
+          "fn": 0,
+          "predictions": 13,
+          "objects": 11,
+          "precision": 0.8461538461538461,
+          "recall": 1.0,
+          "f1": 0.9166666666666666
+        }
+      }
+    },
+    "guard": {
+      "passed": false,
+      "target": "bottle",
+      "required_target_AP50_95_gain": 0.01,
+      "permitted_per_class_or_aggregate_regression": 0.002,
+      "baseline_images": 186,
+      "baseline_manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+      "delta": {
+        "bottle": {
+          "AP50": -0.04514388,
+          "AP50_95": -0.028259
+        },
+        "drink_carton": {
+          "AP50": 0.0,
+          "AP50_95": 0.0
+        },
+        "food": {
+          "AP50": 0.0,
+          "AP50_95": 0.0
+        },
+        "hinged_container": {
+          "AP50": 0.0,
+          "AP50_95": 0.0
+        },
+        "plate": {
+          "AP50": 0.0,
+          "AP50_95": 0.0
+        },
+        "utensil": {
+          "AP50": 0.0,
+          "AP50_95": 0.0
+        },
+        "wrapper": {
+          "AP50": 0.0,
+          "AP50_95": 0.0
+        }
+      },
+      "blockers": [
+        "bottle: AP50 regressed beyond tolerance",
+        "bottle: AP50_95 regressed beyond tolerance",
+        "Aggregate AP50 regressed",
+        "Aggregate AP50_95 regressed",
+        "bottle: AP50-95 improvement below minimum target gain"
+      ],
+      "caveat": "Validation-only development gate, not a claim of independent generalization. Do not train on test images or repeatedly select with test results. Promotion requires separate checks.",
+      "historical_retention": {
+        "passed": true,
+        "target": "bottle",
+        "required_target_AP50_95_gain": 0,
+        "permitted_per_class_or_aggregate_regression": 0.002,
+        "baseline_images": 124,
+        "baseline_manifest_sha256": "eae316c918e3fdc5a55144646494bdef58cfc85793c9312ee4df4dd59217980c",
+        "delta": {
+          "bottle": {
+            "AP50": 0.009,
+            "AP50_95": 0.00887619
+          },
+          "drink_carton": {
+            "AP50": 0.0,
+            "AP50_95": 0.0
+          },
+          "food": {
+            "AP50": 0.0,
+            "AP50_95": 0.0
+          },
+          "hinged_container": {
+            "AP50": 0.0,
+            "AP50_95": 0.0
+          },
+          "plate": {
+            "AP50": 0.0,
+            "AP50_95": 0.0
+          },
+          "utensil": {
+            "AP50": 0.0,
+            "AP50_95": 0.0
+          },
+          "wrapper": {
+            "AP50": 0.0,
+            "AP50_95": 0.0
+          }
+        },
+        "blockers": [],
+        "caveat": "Validation-only development gate, not a claim of independent generalization. Do not train on test images or repeatedly select with test results. Promotion requires separate checks."
+      }
+    },
+    "integrity": {
+      "all_protected_originals_and_active_files_unchanged": true,
+      "candidate_sha256": "3ed59991a56d32791c9be58c364c41119dfb85ab82c673b7dff02e6c630e6679",
+      "candidate_activated": false,
+      "test_scored": false
+    },
+    "candidate_scored_on_test": false,
+    "preflight_note": "Initial preflight stopped before training because frozen validation manifest corrections differ from referenced disk labels. Exact frozen manifest rows were then used for copied validation inputs; originals and scoring cohort unchanged.",
+    "artifact_directory": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/bottle-candidate-20261101"
+  },
+  "sort_cli_check": {
+    "images": 1,
+    "decisions_identical_to_replay": true,
+    "receipt_sha256": "86f4cfc0ec2c2e4b0d32a1be289bf01129c6762041b58d93373d81c8e1c0a304"
+  },
+  "verification": {
+    "unit_tests_passed": 53,
+    "unit_tests_failed": 0,
+    "unit_test_log_sha256": "e1c8941c366b33a3287d8534c3e5677fa1fab2972a6bd932fc1580be971c751a",
+    "independent_code_review": "No important findings; reviewer independently rehashed active weights, images, and all 1436 candidate-protected files and reproduced counts/metrics.",
+    "implementation_sha256": {
+      "scripts/replay_sorting.py": "628a8ce61b184cd2cc49c67a5d0346db08b2d2135d31ebd80aaddb3da4a61d69",
+      "scripts/specialists.py": "a205c6009c5f0fe868550a091a2d062b5b722cf92abf9569630ab5ad23bb696f",
+      "tests/test_replay_sorting.py": "42dd9c86e937995f51f5c9a72d67f3ba0503c6942157d8422b0cf27c210b6d52",
+      "tests/test_specialists.py": "d0b140d73b12400d50da207c072853eac0f2d6e8cfbb97941ea764687dc88a0c"
+    },
+    "recorded_protected_files_and_active_checkpoints_unchanged": true,
+    "entire_historical_archive_integrity_independently_verified": false,
+    "preservation_scope_note": "All 1436 recorded protected file hashes were rechecked, including active checkpoints and selected training/evaluation inputs. No pre-task inventory covers every historical asset; the whole archive has not been independently certified unchanged."
+  }
+}
