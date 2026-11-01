@@ -48,6 +48,15 @@ class CandidateGuardTests(unittest.TestCase):
         self.candidate["AP50_95"] = .54
         self.assertFalse(g.check_candidate(self.base, self.candidate, "bottle")["passed"])
 
+    def test_historical_retention_can_pass_without_extra_target_gain(self):
+        old = copy.deepcopy(self.base)
+        new = copy.deepcopy(self.base)
+        self.assertTrue(g.check_candidate(old, new, "bottle",
+                                          minimum_gain=0)["passed"])
+        new["per_class"]["food"]["AP50_95"] -= .005
+        self.assertFalse(g.check_candidate(old, new, "bottle",
+                                           minimum_gain=0)["passed"])
+
     def test_invalid_metrics_rejected(self):
         self.candidate["per_class"]["bottle"]["AP50"] = float("nan")
         with self.assertRaises(ValueError):
