@@ -1,4 +1,5 @@
 name: Download 29 YOLO-annotated hinged training photos
+# Rebuild image annotations from the immutable 64-source photo GitHub artifact.
 
 on:
   workflow_dispatch:
