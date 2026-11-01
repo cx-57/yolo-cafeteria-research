@@ -20,6 +20,10 @@ jobs:
         with:
           persist-credentials: true
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Create publication figures
         run: |
           python -m pip install --disable-pip-version-check matplotlib==3.10.1
