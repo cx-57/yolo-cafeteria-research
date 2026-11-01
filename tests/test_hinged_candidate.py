@@ -107,4 +107,36 @@ class HingedTests(unittest.TestCase):
         self.assertFalse(hint_matches('hinged_container_candidate',{'plate','food'}))
         self.assertFalse(hint_matches('wrapper',{'drink_carton'}))
 
+    def test_extra_annotated_checks_and_train_only(self):
+        import hashlib, zipfile
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            src=root/'extra.zip'
+            img=b'fake-image-bytes'
+            label=b'1 0.5 0.5 0.6 0.6\n'
+            image_hash=hashlib.sha256(img).hexdigest()
+            label_hash=hashlib.sha256(label).hexdigest()
+            entries=[]
+            with zipfile.ZipFile(src,'w') as z:
+                for i in range(29):
+                    photo=img+str(i).encode()
+                    digest=hashlib.sha256(photo).hexdigest()
+                    z.writestr(f'images/train/ex{i}.jpg',photo)
+                    z.writestr(f'labels/train/ex{i}.txt',label)
+                    entries.append(dict(image=f'images/train/ex{i}.jpg',
+                        label=f'labels/train/ex{i}.txt',image_sha256=digest,
+                        label_sha256=label_hash,source_gallery_index=i,
+                        boxes=[dict(class_id=1)]))
+                z.writestr('manifest.json',json.dumps(dict(
+                    status='AI_VISUAL_DRAFT_NOT_HUMAN_VERIFIED',
+                    classes=['food','hinged_container','drink_carton'],images=entries)))
+            dest=root/'out';(dest/'images/train').mkdir(parents=True)
+            (dest/'labels/train').mkdir(parents=True)
+            r=h.append_new_annotated_train(src,dest,set(),set(),repeat=2)
+            self.assertEqual(r['images_added'],29)
+            self.assertEqual(r['training_views_added'],58)
+            self.assertEqual(len(list((dest/'labels/train').glob('*.txt'))),58)
+            with self.assertRaisesRegex(ValueError,'overlaps'):
+                h.append_new_annotated_train(src,root/'out2',{entries[0]['image_sha256']},set(),repeat=2)
+
 if __name__=='__main__':unittest.main()
