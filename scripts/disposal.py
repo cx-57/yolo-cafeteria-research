@@ -104,8 +104,13 @@ def main():
                   model_config_sha256=receipt['config_sha256'],explicit_contexts=contexts,decisions=decisions,prediction_receipt=receipt,
                   limitation='Rule-based suggestions, not a trained material classifier. Detector confidence is not disposal confidence. School disposal ground truth has not been evaluated.')
     s.save(args.output,result)
-    print(json.dumps(dict(images=len(decisions),detections=sum(map(len,decisions.values())),
-                          needs_review=sum(r['needs_review'] for rows in decisions.values() for r in rows),output=str(args.output)),indent=2))
+    category_counts = {category: sum(r['category'] == category
+                                      for rows in decisions.values() for r in rows)
+                       for category in policy['categories']}
+    print(json.dumps(dict(images=len(decisions), detections=sum(map(len, decisions.values())),
+                          category_counts=category_counts,
+                          needs_review=category_counts.get('review', 0),
+                          output=str(args.output)), indent=2))
 
 
 if __name__ == '__main__':
