@@ -18,14 +18,15 @@ export PYTHONDONTWRITEBYTECODE=1
 case "${1:-}" in
     -h|--help)
         cat <<'EOF'
-Usage: run_specialists.sh {predict|evaluate|sort|explore|review44|precision|hinge|replay|guard|train|preview} [options]
+Usage: run_specialists.sh {predict|evaluate|sort|explore|review44|precision|precision-classwise|hinge|replay|guard|train|preview} [options]
 
 predict   Run the active four specialists.
 evaluate  Score a fixed annotated cohort.
 sort      Suggest disposal categories for individual detected objects.
 explore   Run unchanged models on unverified review ZIP and render visual report.
 review44  Score reviewed 44-image development diagnostics (V3 vs original).
-precision Select an overall-precision confidence threshold on validation; check fixed threshold on exposed test.
+precision Select a global-precision confidence threshold on validation; check fixed threshold on exposed test.
+precision-classwise Optimize per-class confidence cutoffs on validation, preserving recall.
 hinge     Train/evaluate a separate 3-class hinged-container candidate (never auto-promoted).
 replay    Apply sorting rules to a frozen prediction receipt, without inference.
 guard     Check a candidate evaluation for per-class validation regression.
@@ -47,6 +48,9 @@ EOF
     precision)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/precision_sweep.py" "$@" ;;
+    precision-classwise)
+        shift
+        exec "$TASK_PYTHON" "$TASK_ROOT/scripts/precision_per_class.py" "$@" ;;
     hinge)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/hinged_candidate.py" "$@" ;;
