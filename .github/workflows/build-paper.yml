@@ -39,16 +39,22 @@ jobs:
             --standalone \
             -o paper/cafeteria-waste-sorting.pdf
 
-      - name: Check nonempty, multipage PDF and essential research claims
+      - name: Validate PDF structure, page count, and claims
         run: |
-          test -s paper/cafeteria-waste-sorting.pdf
-          file paper/cafeteria-waste-sorting.pdf | grep -q 'PDF document'
-          pdfinfo paper/cafeteria-waste-sorting.pdf | grep -E '^Pages:'
-          pdftotext paper/cafeteria-waste-sorting.pdf paper/extracted.txt
-          grep -q '97.22%' paper/extracted.txt
-          grep -q '87.78%' paper/extracted.txt
-          grep -q 'independent' paper/extracted.txt
-          rm paper/extracted.txt
+          python -m pip install --disable-pip-version-check 'pypdf>=5,<7'
+          python - <<'PY'
+          from pathlib import Path
+          from pypdf import PdfReader
+          p = Path('paper/cafeteria-waste-sorting.pdf')
+          assert p.exists() and p.stat().st_size > 30_000
+          reader = PdfReader(str(p))
+          print('Rendered PDF pages:',len(reader.pages))
+          assert len(reader.pages) >= 8
+          full = ' '.join((pg.extract_text() or '') for pg in reader.pages)
+          for token in ('87.78', '97.22', 'independent'):
+              assert token in full, f'Missing manuscript token {token}'
+          print('PDF preflight passed:',p.stat().st_size,'bytes')
+          PY
 
       - name: Upload PDF as downloadable GitHub Actions artifact
         uses: actions/upload-artifact@v4
