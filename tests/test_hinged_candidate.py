@@ -88,4 +88,10 @@ class HingedTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'hinged'):
                 h.choose_train(info['records']['train'])
 
+    def test_source_hint_is_not_accuracy(self):
+        from compare_hinged_stress import hint_matches
+        self.assertTrue(hint_matches('hinged_container_candidate',{'hinged_container'}))
+        self.assertFalse(hint_matches('hinged_container_candidate',{'plate','food'}))
+        self.assertFalse(hint_matches('wrapper',{'drink_carton'}))
+
 if __name__=='__main__':unittest.main()
