@@ -18,12 +18,13 @@ export PYTHONDONTWRITEBYTECODE=1
 case "${1:-}" in
     -h|--help)
         cat <<'EOF'
-Usage: run_specialists.sh {predict|evaluate|sort|explore|hinge|replay|guard|train|preview} [options]
+Usage: run_specialists.sh {predict|evaluate|sort|explore|review44|hinge|replay|guard|train|preview} [options]
 
 predict   Run the active four specialists.
 evaluate  Score a fixed annotated cohort.
 sort      Suggest disposal categories for individual detected objects.
 explore   Run unchanged models on unverified review ZIP and render visual report.
+review44  Score only user-reviewed 44-image development diagnostics (V3 vs original).
 hinge     Train/evaluate a separate 3-class hinged-container candidate (never auto-promoted).
 replay    Apply sorting rules to a frozen prediction receipt, without inference.
 guard     Check a candidate evaluation for per-class validation regression.
@@ -39,6 +40,9 @@ EOF
     explore)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/explore_candidates.py" "$@" ;;
+    review44)
+        shift
+        exec "$TASK_PYTHON" "$TASK_ROOT/scripts/evaluate_reviewed44.py" "$@" ;;
     hinge)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/hinged_candidate.py" "$@" ;;
