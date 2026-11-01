@@ -126,6 +126,69 @@ def export_dataset(info, out, repeat=3, support_cap=250, background_cap=90, seed
                 train_hinged_oversampling=repeat, val_images=len(val), image_records=len(index))
 
 
+def append_new_annotated_train(extra_zip, output_dir, previous_shas, stress_shas, repeat=3):
+    """Append checksum-checked AI-visual draft images to training ONLY."""
+    extra_zip=Path(extra_zip).expanduser().resolve()
+    if not extra_zip.is_file():
+        raise FileNotFoundError(extra_zip)
+    added=[]
+    with zipfile.ZipFile(extra_zip) as z:
+        manifest=json.loads(z.read('manifest.json'))
+        if manifest.get('status')!='AI_VISUAL_DRAFT_NOT_HUMAN_VERIFIED':
+            raise ValueError('Refuse unsupported annotation status')
+        if manifest.get('classes')!=list(OWNED) or len(manifest.get('images',[]))!=29:
+            raise ValueError('Expected 29 training-only photos with unchanged three-class mapping')
+        seen=set()
+        for i,r in enumerate(manifest['images']):
+            image_name=r['image']
+            label_name=r['label']
+            if not image_name.startswith('images/train/') or not label_name.startswith('labels/train/'):
+                raise ValueError('Extra images must be training-only')
+            if '..' in Path(image_name).parts or '..' in Path(label_name).parts:
+                raise ValueError('Unsafe filename')
+            image=z.read(image_name)
+            label=z.read(label_name)
+            digest=hashlib.sha256(image).hexdigest()
+            if digest!=r['image_sha256'] or hashlib.sha256(label).hexdigest()!=r['label_sha256']:
+                raise ValueError('Extra image/label checksum mismatch')
+            if digest in seen or digest in previous_shas or digest in stress_shas:
+                raise ValueError('New candidate overlaps train/validation/test or stress photo')
+            seen.add(digest)
+            lines=label.decode('utf-8').splitlines()
+            classes=[]
+            for line in lines:
+                parts=line.split()
+                if len(parts)!=5:
+                    raise ValueError('Invalid extra YOLO annotation')
+                cls=float(parts[0])
+                if not cls.is_integer() or not 0<=cls<3:
+                    raise ValueError('Extra label outside three-class model')
+                x,y,w,h=map(float,parts[1:])
+                if not all(math.isfinite(v) for v in (x,y,w,h)) or w<=0 or h<=0 or x-w/2 < -1e-6 or y-h/2 < -1e-6 or x+w/2>1+1e-6 or y+h/2>1+1e-6:
+                    raise ValueError('Invalid extra bounding box')
+                classes.append(int(cls))
+            copies=repeat if 1 in classes else 1
+            for j in range(copies):
+                name=f'newhinged-{i:03d}-{j}-{digest[:12]}'+Path(image_name).suffix.lower()
+                dest_image=output_dir/'images/train'/name
+                dest_label=output_dir/'labels/train'/Path(name).with_suffix('.txt').name
+                if dest_image.exists() or dest_label.exists():
+                    raise FileExistsError(dest_image)
+                dest_image.write_bytes(image)
+                dest_label.write_bytes(label)
+                added.append(dict(image=str(dest_image),label=str(dest_label),
+                                  sha256=digest,classes=classes,
+                                  source_gallery_index=r['source_gallery_index'],
+                                  repeat=j,ai_visual_draft_not_ground_truth=True))
+    result=dict(images_added=len(manifest['images']),
+                positive_photos=sum(any(b['class_id']==1 for b in r['boxes']) for r in manifest['images']),
+                negative_photos=sum(not any(b['class_id']==1 for b in r['boxes']) for r in manifest['images']),
+                training_views_added=len(added),source_zip_sha256=s.sha(extra_zip),
+                image_records=added)
+    (output_dir/'extra-data-index.json').write_text(json.dumps(result,indent=2)+'\n')
+    return {k:v for k,v in result.items() if k!='image_records'}
+
+
 def train(args, out):
     if out.exists():
         raise FileExistsError('Refusing to overwrite existing candidate experiment: '+str(out))
@@ -169,6 +232,10 @@ def train(args, out):
     summary=export_dataset(info,out/'data',repeat=args.repeat, seed=args.seed,
                            support_cap=args.support_cap, background_cap=args.background_cap,
                            val_rows_by_sha=val_rows_by_sha)
+    if args.extra_annotated:
+        extra_stats=append_new_annotated_train(args.extra_annotated, out/'data',
+                        train_sha | val_sha | test_sha, excluded,repeat=args.repeat)
+        summary.update(extra_stats)
     summary.update(dict(source_yaml=str(data_path),source_yaml_sha256=s.sha(data_path),stress_image_count=44,stress_train_overlap=0,
                         original_frozen_checkpoint_sha256=protected['weights/food-container-carton.pt'],corrected_validation_manifest_sha256=s.sha(EVALUATION),
                         epochs=args.epochs,learning_rate=args.lr,
@@ -251,6 +318,7 @@ def main():
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--manifest',type=Path,default=EVALUATION)
     p.add_argument('--bundle',type=Path,help='Existing 44-image ZIP; required to exclude from training and for stress comparison')
+    p.add_argument('--extra-annotated',type=Path,help='Optional new 29-photo AI-assisted training-only YOLO annotated ZIP')
     p.add_argument('--device',choices=['cpu','mps'],default='mps')
     p.add_argument('--epochs',type=int,default=8)
     p.add_argument('--repeat',type=int,default=3)
