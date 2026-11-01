@@ -139,4 +139,69 @@ class HingedTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'overlaps'):
                 h.append_new_annotated_train(src,root/'out2',{entries[0]['image_sha256']},set(),repeat=2)
 
+    def test_v4_parent_checkpoint_provenance_and_comparison(self):
+        import copy
+        import specialists
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            parent=root/'v3'; (parent/'fit/weights').mkdir(parents=True)
+            w=parent/'fit/weights/best.pt';w.write_bytes(b'synthetic-v3-model')
+            baseline=specialists.read(specialists.ROOT/'results/baseline.json')
+            config=copy.deepcopy(specialists.read(specialists.CONFIG))
+            primary=next(x for x in config['models'] if x['id']=='food-container-carton')
+            primary['weights']=str(w.resolve())
+            primary['sha256']=specialists.sha(w)
+            (parent/'experiment.json').write_text(json.dumps(dict(
+                status='TRAINED_NOT_PROMOTED',candidate_weight=str(w),
+                candidate_sha256=specialists.sha(w),
+                original_frozen_checkpoint_sha256=baseline['checkpoint_sha256']['food-container-carton'],
+                corrected_validation_manifest_sha256=baseline['manifest_sha256'])))
+            (parent/'candidate-specialists.json').write_text(json.dumps(config))
+            (parent/'candidate-validation.json').write_text(json.dumps(baseline))
+            (parent/'stress-comparison').mkdir()
+            prior_stress=dict(images=44,
+                original_checkpoint_sha256=baseline['checkpoint_sha256']['food-container-carton'],
+                source_hint_image_counts={'hinged_container_candidate':12,'drink_carton':6},
+                class_hits_by_source_hint={
+                   'frozen': {'hinged_container_candidate':4,'drink_carton':5},
+                   'candidate': {'hinged_container_candidate':8,'drink_carton':6}})
+            (parent/'stress-comparison/comparison.json').write_text(json.dumps(prior_stress))
+            result=h.verify_parent_candidate(parent,baseline)
+            self.assertEqual(8,result['parent_stress_hinged_hits'])
+            self.assertEqual(specialists.sha(w),result['initial_weights_sha256'])
+            validation=h.parent_validation_report(parent,baseline,baseline)
+            self.assertAlmostEqual(0,validation['delta_AP50'])
+            fresh=copy.deepcopy(prior_stress)
+            fresh['class_hits_by_source_hint']['candidate']['hinged_container_candidate']=9
+            self.assertEqual(1,h.parent_stress_report(parent,fresh)['change'])
+            w.write_bytes(b'altered-unpinned')
+            with self.assertRaisesRegex(ValueError,'SHA'):
+                h.verify_parent_candidate(parent,baseline)
+
+    def test_v4_rejects_wrong_parent_class_head(self):
+        import copy
+        import specialists
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'fit/weights').mkdir(parents=True)
+            p=root/'fit/weights/best.pt';p.write_bytes(b'one')
+            baseline=specialists.read(specialists.ROOT/'results/baseline.json')
+            cfg=copy.deepcopy(specialists.read(specialists.CONFIG))
+            model=next(x for x in cfg['models'] if x['id']=='food-container-carton')
+            model['classes']=['food','plate','drink_carton']
+            model['weights']=str(p);model['sha256']=specialists.sha(p)
+            (root/'experiment.json').write_text(json.dumps(dict(
+                status='TRAINED_NOT_PROMOTED',candidate_weight=str(p),
+                candidate_sha256=specialists.sha(p),
+                original_frozen_checkpoint_sha256=baseline['checkpoint_sha256']['food-container-carton'],
+                corrected_validation_manifest_sha256=baseline['manifest_sha256'])))
+            (root/'candidate-specialists.json').write_text(json.dumps(cfg))
+            (root/'candidate-validation.json').write_text(json.dumps(baseline))
+            (root/'stress-comparison').mkdir()
+            (root/'stress-comparison/comparison.json').write_text(json.dumps(dict(
+                images=44,original_checkpoint_sha256=baseline['checkpoint_sha256']['food-container-carton'],
+                source_hint_image_counts={'hinged_container_candidate':12},
+                class_hits_by_source_hint={'candidate':{'hinged_container_candidate':8}})))
+            with self.assertRaisesRegex(ValueError,'three-class'):
+                h.verify_parent_candidate(root,baseline)
+
 if __name__=='__main__':unittest.main()
