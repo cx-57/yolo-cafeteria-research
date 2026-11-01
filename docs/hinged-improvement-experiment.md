@@ -21,7 +21,7 @@ reinitialize the class head as seven-class or train on the 44 public stress phot
 
 - Source: existing **training partition only** from
   `yolo-cafeteria-research-assets/data/combined-seven-school-oct29-20261031/data.yaml`.
-  The script checks exact image overlap with the existing validation/test splits.
+  The script checks exact image overlap with the existing validation/test splits and with every SHA-verified photo in the 44-image diagnostic ZIP. A matching training photo blocks the experiment.
 - Class remapping: old class IDs `food=0, hinged_container=3, drink_carton=4`
   become `food=0, hinged_container=1, drink_carton=2` for the original
   three-class checkpoint. Other objects are deliberately unlabeled
@@ -60,7 +60,8 @@ git pull --ff-only origin main
 
 CANDIDATE="$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/hinged-candidate-v2"
 
-./scripts/run_specialists.sh hinge train --out "$CANDIDATE" --device mps
+./scripts/run_specialists.sh hinge train --out "$CANDIDATE" --device mps \
+  --bundle "$HOME/Downloads/cafeteria-44-image-review-kit-github.zip"
 ./scripts/run_specialists.sh hinge evaluate --out "$CANDIDATE" --device mps
 ./scripts/run_specialists.sh hinge stress --out "$CANDIDATE" --device mps \
   --bundle "$HOME/Downloads/cafeteria-44-image-review-kit-github.zip"
