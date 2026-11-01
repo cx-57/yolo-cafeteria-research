@@ -1,0 +1,72 @@
+name: Download 29 YOLO-annotated hinged training photos
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/annotated-hinged-training.yml"
+      - "scripts/package_annotated_hinged.py"
+      - "configs/hinged-box-drafts-20261101.json"
+  push:
+    paths:
+      - ".github/workflows/annotated-hinged-training.yml"
+      - "scripts/package_annotated_hinged.py"
+      - "configs/hinged-box-drafts-20261101.json"
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  annotate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Download checksum-verified 64-photo source artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: new-hinged-container-photo-candidates-UNLABELED
+          run-id: 41332494158
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/source64
+      - name: Produce original-image 3-class YOLO annotations and visual overlays
+        run: |
+          python scripts/package_annotated_hinged.py \
+            --source "$RUNNER_TEMP/source64" \
+            --out "$RUNNER_TEMP/annotated29"
+      - name: Verify YOLO labels, image counts, hashes, and class mapping
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"annotated29"
+          m=json.loads((p/"manifest.json").read_text())
+          assert len(m["images"])==29
+          assert m["stats"]["box_totals"]=={"0":28,"1":24,"2":0}
+          assert len(list((p/"images/train").glob("*")))==29
+          assert len(list((p/"labels/train").glob("*")))==29
+          for r in m["images"]:
+              img=p/r["image"];lbl=p/r["label"]
+              assert hashlib.sha256(img.read_bytes()).hexdigest()==r["image_sha256"]
+              assert hashlib.sha256(lbl.read_bytes()).hexdigest()==r["label_sha256"]
+              for line in lbl.read_text().splitlines():
+                  c,x,y,w,h=map(float,line.split())
+                  assert c in [0,1,2] and 0<x<=1 and 0<y<=1 and 0<w<=1 and 0<h<=1
+                  assert x-w/2 >=-1e-6 and x+w/2<=1.000001
+                  assert y-h/2 >=-1e-6 and y+h/2<=1.000001
+          print("PASS: 29 original source images, 52 visual draft boxes")
+          PY
+      - name: Upload directly usable AI-annotated training ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: hinged-29-annotated-train-only-AI-DRAFT
+          path: ${{ runner.temp }}/annotated29/
+          retention-days: 30
+          compression-level: 6
+          if-no-files-found: error
