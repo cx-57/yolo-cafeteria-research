@@ -1,0 +1,61 @@
+name: Curated hinged-container training photo batch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/curated-hinged-batch.yml"
+      - "scripts/curate_hinged_new.py"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Fetch 64 previously staged, rights-screened photographs
+        uses: actions/download-artifact@v4
+        with:
+          name: new-hinged-container-photo-candidates-UNLABELED
+          run-id: 41332494158
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/source64
+      - name: Curate and SHA-verify relevant positives and negatives
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, pathlib, zipfile
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])/'source64'
+          with zipfile.ZipFile(pathlib.Path(os.environ['RUNNER_TEMP'])/'source.zip','w') as z:
+              for p in root.rglob('*'):
+                  if p.is_file():z.write(p,p.relative_to(root).as_posix())
+          PY
+          python scripts/curate_hinged_new.py \
+            --source "$RUNNER_TEMP/source.zip" \
+            --out "$RUNNER_TEMP/curated-hinged"
+          python - <<'PY'
+          import json,os,hashlib,pathlib
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])/'curated-hinged'
+          m=json.loads((root/'manifest.json').read_text())
+          assert m['photos']==29 and m['clamshell_photo_candidates']==21
+          assert m['negative_photo_candidates']==8 and not m['ready_to_train']
+          for r in m['images']:
+              assert hashlib.sha256((root/'images'/r['filename']).read_bytes()).hexdigest()==r['packaged_sha256']
+          print('PASS: 21 likely positive image photos + 8 visually chosen negatives; SHA integrity good')
+          PY
+      - name: Upload curated photo ZIP with HTML preview and attributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: curated-hinged-21-likely-8-negatives-UNLABELED
+          path: ${{ runner.temp }}/curated-hinged/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 6
