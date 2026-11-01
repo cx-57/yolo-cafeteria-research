@@ -1,0 +1,34 @@
+{
+  "name": "Combined food/bottle/carton object-recognition proxy under current sorting shortcut",
+  "method": "Arithmetic combination of previously recorded class-specific one-to-one IoU>=0.50 matches at fixed detection threshold 0.50; no new inference, no independent bin ground truth.",
+  "source_files": [
+    "results/disposal.json",
+    "results/test.json"
+  ],
+  "images": 248,
+  "emitted_predictions_at_display_threshold": 881,
+  "automatic_food_predictions": 337,
+  "automatic_recycling_candidate_predictions": 173,
+  "automatic_total": 510,
+  "correct_food_matches": 327,
+  "correct_bottle_carton_matches": 162,
+  "summed_correct_object_matches": 489,
+  "labeled_food_objects": 433,
+  "labeled_bottle_carton_objects": 191,
+  "labeled_supported_objects": 624,
+  "precision_proxy": 0.9588235294117647,
+  "recall_proxy": 0.7836538461538461,
+  "f1_proxy": 0.8624338624338624,
+  "correct_matches_over_all_924_labeled_objects": 0.5292207792207793,
+  "projected_review_predictions": 371,
+  "review_fraction_of_emitted_predictions": 0.4211123723041998,
+  "limitations": [
+    "Not genuine three-bin classification accuracy. The calculation only compares food, bottle and carton object classes against existing AI-reviewed object annotations.",
+    "Previously exposed development data; independent generalization has not been established.",
+    "Summing separately matched object groups does not run a new joint global matching pass, and cannot detect all cross-class localization conflicts.",
+    "Plastic material, contamination, empty state and school bin eligibility are not independently labeled.",
+    "Plates, utensils, wrappers and hinged containers are routed to review, and no class is routed automatically to landfill.",
+    "Actual policy replay is pending the external per-image frozen prediction receipt or model checkpoints; aggregate counts alone cannot reproduce per-image decisions."
+  ],
+  "independent_three_bin_accuracy": null
+}
