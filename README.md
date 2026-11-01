@@ -17,6 +17,8 @@ The checked 52-image ZIP remains in the external assets folder; these food/plate
 candidates are not a complete seven-class benchmark. Packaging refuses to overwrite
 an existing bundle; its source is `scripts/package_review_candidates.py`.
 
+The latest provisional image review and evaluation blockers are recorded in [the November 1 evaluation handoff](docs/evaluation-review-handoff-20261101.md) and [its machine-readable audit](results/provisional-screening-20261101.json). The conversation delivered a separate 44-photo offline review ZIP and its Python/HTML source toolkit; these image assets and tools are **not** part of this Git repository. No independent validation claims follow from the provisional photos.
+
 Four YOLO specialists detect seven classes:
 
 | Model | Classes |
