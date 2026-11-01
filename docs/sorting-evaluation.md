@@ -14,8 +14,10 @@ as a fraction of all object boxes. It is not sorting accuracy.
    Determine material, contamination, reuse and whether containers are empty
    from evidence and school acceptance rules. Resolve uncertain cases manually.
 3. Run the frozen sorting pipeline without changing thresholds or rules.
-4. Provide actual empty-container facts using the existing --contexts option if
-   you have them. With no such facts, bottles and cartons remain review items.
+4. The current user-selected rule assigns detected bottles and drink cartons
+   to recycling at confidence >= 0.50 **without checking emptiness**. This
+   experimental shortcut is not proof that filled containers are recyclable
+   locally. Preserve independent evidence of correct bin eligibility.
 5. Preserve photos with zero labeled items, and use identical image path keys.
 
 Run from the repository root:
