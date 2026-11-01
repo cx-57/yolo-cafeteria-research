@@ -2,6 +2,9 @@ name: Stage Wikimedia source candidates
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/stage-commons-candidates.yml"
   push:
     paths:
       - ".github/workflows/stage-commons-candidates.yml"
