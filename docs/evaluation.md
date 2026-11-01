@@ -350,3 +350,118 @@ critical/important issues; the code suite passed 29 tests. Training, release gat
 receipts, backups and rollback-test evidence remain external in
 `artifacts/release-training-20261031/`. Compact release metrics and checkpoint
 hashes are in `results/release.json`.
+
+
+## October 29 photos added to training
+
+Of 21 unique new originals (42 attachments including duplicates), blind review
+admitted four sharp photos with six food boxes. Seventeen remain held for blur
+or annotation uncertainty. The training pool now has 20 school originals with
+300 total school views, within 2,332 training views overall. Validation and test
+membership, image bytes and labels are unchanged. The entire capture day is
+assigned to training; held same-day photos cannot be treated as independent tests.
+
+A fixed two-epoch food/container/carton trial left food mAP50 essentially unchanged
+(95.7726% to 95.7763%) and reduced food mAP50–95 from 65.0070% to 64.9661%.
+It failed the predeclared per-class nonregression gate and was not activated.
+No test inference was used for this candidate. Receipts are external under
+`artifacts/school-new-20261031/`; active models and reported release scores remain
+unchanged.
+
+An ancestry audit confirms that 88 current validation photos and 90 current test
+photos occurred in the plate/wrapper ancestor's native training directory, with
+matching image hashes and existing label files. Current split isolation does not
+erase that inherited exposure. These scores are development benchmarks, not
+independent generalization estimates or proof against overfitting.
+
+At the user’s request, the four new originals were subsequently expanded to 100
+total views (25 each), adding 40 mild training variations. The current pool is
+2,372 training views, including 340 school views from 20 originals. This expansion
+does not change weights, validation or test labels, or the earlier trial result.
+
+
+## Zero-epoch cumulative evaluation after expansion
+
+Zero-epoch cumulative evaluation; values are mAP50 / mAP50–95 (%).
+
+| Class | Train | Validation | Test |
+|---|---:|---:|---:|
+| food | 92.51 / 64.92 | 95.77 / 65.01 | 83.91 / 55.09 |
+| plate | 51.70 / 43.97 | 81.56 / 68.99 | 87.04 / 71.60 |
+| utensil | 75.77 / 59.04 | 74.94 / 46.77 | 86.06 / 61.26 |
+| hinged_container | 74.33 / 53.36 | 99.50 / 94.50 | 99.50 / 91.17 |
+| drink_carton | 96.51 / 76.57 | 92.84 / 65.19 | 97.55 / 74.28 |
+| wrapper | 86.91 / 69.99 | 77.47 / 54.31 | 85.13 / 57.64 |
+| bottle | 86.50 / 74.08 | 77.77 / 59.55 | 70.13 / 56.86 |
+
+Training: 2,372 views (340 school views from 20 originals; four new originals contribute100 views). Validation186; full repaired test248. No training or model changes. Existing inherited plate/wrapper exposure means these are development benchmarks. Container support: only2 validation and4 test objects.
+
+
+## Bottle-only activation and disposal integration
+
+The stopped specialist run saved food at5 epochs, plate/wrapper at4, utensil at1
+and bottle at1. Only bottle passed both-metric paired validation retention,
+full repaired test retention and historical-reference retention. It was activated
+with the other three retained specialists and rollback preserved. Current primary
+validation:86.36%/65.25%; full248 test:87.78%/67.24%; historical124:91.87%/68.12%.
+Other new specialist checkpoints remain inactive. This remains an exposed
+development benchmark, not independent evidence of generalization.
+
+The disposal layer is a configurable rules-based per-object decision stage, not
+a trained material classifier. Its unit and integration tests verify software
+behavior; they do not measure disposal classification accuracy. On frozen248
+test predictions it processed881 detections above0.25, with provisional suggestions
+of371 compost and190 recycling and320 material-review cases. Because school rules
+are unconfirmed, every detection ultimately requires review. The four new photos
+also ran through fresh inference and disposal classification. Detailed outputs are
+external under `artifacts/disposal-20261031/`. No disposal labels were inferred
+from model predictions and reused as independent ground truth.
+
+
+The user subsequently selected compost/recycling/landfill with ambiguous items
+flagged. This enables the configured policy, with cartons additionally requiring
+explicit local-acceptance confirmation. Re-scoring the same frozen predictions
+produces337 compost decisions and544 reviews on248 photos; the four-photo smoke
+produces3 compost decisions and6 reviews. No empty-container facts were supplied,
+so bottles/cartons still require review. These counts do not measure correctness.
+The updated suite passes36 tests. Model weights and detector scores are unchanged.
+
+
+## Measured food-to-compost sorting proxy
+
+On the same248 repaired test photos and unchanged thresholds (display0.25,
+automatic0.50), confidence-ordered one-to-one matches at IoU≥0.5 link327 of337
+automatic compost decisions to433 existing food ground-truth boxes. Precision
+is97.03%, food recall75.52%, and F1 84.94%. Ten automatic decisions do not match
+a food box;106 labeled food servings are not correctly automatically sorted.
+Review is abstention:544 of881 emitted detections (61.75%) require review.
+Only327 of924 total labeled objects (35.39%) receive a correct measurable automatic
+assignment. No automatic recycling or landfill decisions were made without the
+required material/empty-container facts. This measures food-to-compost detection
+and user-approved mapping on exposed development labels, not independent three-bin
+classification accuracy. The other491 object labels lack independent disposal
+ground truth. Detailed matches and measurement recipe are external under
+`artifacts/disposal-20261031/sorting-measurement.json` and `measure_sorting.py`.
+
+
+## Recycling-candidate recognition
+
+Using the same248 repaired test photos, confidence≥0.50 and one-to-one box
+IoU≥0.5, bottles match33/43 predictions to57 labels (precision76.74%, recall57.89%,
+F1 66.00%). Cartons match129/130 predictions to134 labels (precision99.23%,
+recall96.27%, F1 97.73%). The collapsed bottle-or-carton group matches162/173
+predictions to191 labels (precision93.64%, recall84.82%, F1 89.01%).
+
+These are object-recognition proxies for potential recycling, not final disposal
+accuracy: labels do not establish empty state, accepted carton material or local
+rules. All190 bottle/carton predictions above the display threshold0.25 still
+require review when no facts are supplied. No threshold selection, new training
+or annotation edits were performed. Full matches and hashes are external under
+`artifacts/disposal-20261031/recycling-measurement.json`.
+
+
+The user confirmed that empty milk/juice cartons are accepted by school recycling.
+The current policy therefore removes the per-item local-acceptance question for
+cartons; explicit empty confirmation remains mandatory. Recognition metrics and
+model weights are unchanged. Prior frozen policy receipts retain their original
+hashes; updated decisions are saved as `test248-cartons-accepted.json`.

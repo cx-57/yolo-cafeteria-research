@@ -1,0 +1,60 @@
+{
+  "name": "User-selected compost / recycling / landfill policy",
+  "verified": true,
+  "categories": [
+    "compost",
+    "recycling",
+    "landfill",
+    "review"
+  ],
+  "automatic_confidence_threshold": 0.5,
+  "sources": [
+    "https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables"
+  ],
+  "note": "Food goes to compost. Disposable plastic drink bottles and accepted school milk/juice cartons require explicit empty confirmation. Ambiguous materials and reusable items require review. verified enables the user-approved policy; it does not independently certify sorting accuracy.",
+  "classes": {
+    "food": {
+      "category": "compost",
+      "requires": [],
+      "instruction": "Separate food from packaging and place food scraps in the compost bin."
+    },
+    "plate": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Check plate material, coating, contamination and local acceptance. Return reusable plates."
+    },
+    "utensil": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Return reusable utensils; identify disposable material and local acceptance."
+    },
+    "hinged_container": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Check whether the container is foam, rigid plastic, fiber or compostable, and whether it is accepted."
+    },
+    "drink_carton": {
+      "category": "recycling",
+      "requires": [
+        "empty"
+      ],
+      "instruction": "Empty the milk or juice carton, then place it in recycling; the user confirmed school acceptance."
+    },
+    "wrapper": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Identify paper, film or foil and check local rules; this detector does not recognize wrapper material."
+    },
+    "bottle": {
+      "category": "recycling",
+      "requires": [
+        "empty"
+      ],
+      "instruction": "Empty the disposable plastic drink bottle and follow local recycling rules."
+    }
+  },
+  "verification_basis": "User approved the three-bin policy and requested review of ambiguous items; not independent certification of material acceptance. User additionally confirmed that empty milk/juice cartons are accepted in school recycling.",
+  "local_acceptance": {
+    "drink_carton": true
+  }
+}

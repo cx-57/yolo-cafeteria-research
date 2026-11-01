@@ -1,6 +1,6 @@
 {
-  "AP50": 0.8569357614816059,
-  "AP50_95": 0.649040549488777,
+  "AP50": 0.8636433164260234,
+  "AP50_95": 0.6525422104353948,
   "images": 186,
   "per_class": {
     "food": {
@@ -34,17 +34,17 @@
       "objects": 85
     },
     "bottle": {
-      "AP50": 0.7776985847586257,
-      "AP50_95": 0.5955356637910637,
+      "AP50": 0.8246514693695477,
+      "AP50_95": 0.6200472904173895,
       "objects": 42
     }
   },
-  "config_sha256": "df21df9c87d0edb48453d257f9097673fd0473cc73c9921a81b0f8a6b6af54b7",
+  "config_sha256": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
   "checkpoint_sha256": {
     "food-container-carton": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
     "plate-wrapper": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
     "utensil": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
-    "bottle": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289"
+    "bottle": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb"
   },
   "model_image_sizes": {
     "food-container-carton": 640,
@@ -53,6 +53,7 @@
     "bottle": 640
   },
   "manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
-  "annotation_status": "AI-reviewed repaired186 development validation; uncertainties retained; not human-certified",
-  "independent_test": false
+  "independent_test": false,
+  "annotation_status": "Existing repaired AI-reviewed development labels; inherited training exposure remains",
+  "receipt_provenance": "Native candidate bottle predictions merged with unchanged native specialist predictions; all checkpoint hashes verified"
 }

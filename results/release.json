@@ -51,13 +51,13 @@
     "utensil"
   ],
   "validation": {
-    "AP50": 0.8569357614816059,
-    "AP50_95": 0.649040549488777,
+    "AP50": 0.8636433164260234,
+    "AP50_95": 0.6525422104353948,
     "images": 186
   },
   "test": {
-    "AP50": 0.8704665362477227,
-    "AP50_95": 0.668425299145529,
+    "AP50": 0.8778014568737538,
+    "AP50_95": 0.6723673911504443,
     "images": 248
   },
   "quality_eligible_secondary": {
@@ -70,12 +70,12 @@
     "AP50_95": 0.6690560660914702,
     "images": 124
   },
-  "config_sha256": "df21df9c87d0edb48453d257f9097673fd0473cc73c9921a81b0f8a6b6af54b7",
+  "config_sha256": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
   "checkpoint_sha256": {
     "food-container-carton": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
     "plate-wrapper": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
     "utensil": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
-    "bottle": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289"
+    "bottle": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb"
   },
   "validation_manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
   "test_manifest_sha256": "f1fdd09d538d146e2714f099ffd9dee6e7b90a198aca471a2081c125839e2859",
@@ -88,5 +88,331 @@
     "Training losses are fit diagnostics, not held-out accuracy.",
     "Validation/test have been exposed during development and annotation audit; independent generalization is not established.",
     "Weights, datasets and receipts are external; source repo carries code/configuration and compact metrics."
-  ]
+  ],
+  "latest_training_data_update": {
+    "dataset": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/data/combined-seven-school-oct29-20261031",
+    "manifest_sha256": "3eb8b52d6ca9603669b629c7b9aca5e09f9af2c50719e0c0c8b0ffb6be5c8b4b",
+    "new_originals_received": 21,
+    "new_originals_admitted": 4,
+    "new_originals_held": 17,
+    "admitted_names": [
+      "IMG_4066.jpg",
+      "IMG_4068.jpg",
+      "IMG_4081.jpg",
+      "IMG_4083.jpg"
+    ],
+    "school_training_originals": 20,
+    "school_training_views": 300,
+    "total_training_views": 2332,
+    "new_day": "2026-10-29",
+    "whole_capture_day_assigned_to_training": true,
+    "validation_test_membership_and_labels_unchanged": true,
+    "training_epochs": 2,
+    "trained_specialists": [
+      "food-container-carton"
+    ],
+    "candidate_macro_validation": {
+      "AP50": 0.8572177426973493,
+      "AP50_95": 0.6491749644633742
+    },
+    "candidate_food": {
+      "AP50": 0.9577627380544552,
+      "AP50_95": 0.6496614786221032,
+      "objects": 343
+    },
+    "previous_food": {
+      "AP50": 0.9577255455565946,
+      "AP50_95": 0.6500697755834846,
+      "objects": 343
+    },
+    "candidate_activated": false,
+    "activation_reason": "Food AP50-95 decreased slightly; predeclared per-class nonregression gate failed.",
+    "active_config_sha256": "df21df9c87d0edb48453d257f9097673fd0473cc73c9921a81b0f8a6b6af54b7",
+    "active_validation": {
+      "AP50": 0.8569357614816059,
+      "AP50_95": 0.649040549488777,
+      "images": 186
+    },
+    "test_inference_used_for_candidate": false,
+    "source_files_and_active_model_hashes_verified": true,
+    "warning": "Remaining same-day photos cannot serve as an independent test after this session entered training. Existing validation/test have known inherited plate/wrapper training exposure."
+  },
+  "latest_training_view_expansion": {
+    "new_originals": 4,
+    "views_per_new_original": 25,
+    "new_originals_total_views": 100,
+    "school_originals": 20,
+    "school_total_views": 340,
+    "total_training_views": 2372,
+    "weights_changed": false,
+    "validation_test_changed": false
+  },
+  "zero_epoch_cumulative_evaluation": {
+    "epochs": 0,
+    "training_includes_augmented_views": true,
+    "new_originals_views": 100,
+    "config_sha256": "df21df9c87d0edb48453d257f9097673fd0473cc73c9921a81b0f8a6b6af54b7",
+    "independent_test": false,
+    "results": {
+      "train": {
+        "AP50": 0.8060309377494452,
+        "AP50_95": 0.6313313503013899,
+        "images": 2372,
+        "per_class": {
+          "food": {
+            "AP50": 0.925127410063314,
+            "AP50_95": 0.6491895120606341,
+            "objects": 2501
+          },
+          "plate": {
+            "AP50": 0.5169957317356346,
+            "AP50_95": 0.4397160761699873,
+            "objects": 722
+          },
+          "utensil": {
+            "AP50": 0.7577229532544579,
+            "AP50_95": 0.5904126626661579,
+            "objects": 457
+          },
+          "hinged_container": {
+            "AP50": 0.7432521332823411,
+            "AP50_95": 0.5336290963420888,
+            "objects": 185
+          },
+          "drink_carton": {
+            "AP50": 0.9650709395201365,
+            "AP50_95": 0.7656634168177666,
+            "objects": 972
+          },
+          "wrapper": {
+            "AP50": 0.8690512029935923,
+            "AP50_95": 0.6999328872515633,
+            "objects": 316
+          },
+          "bottle": {
+            "AP50": 0.8649961933966408,
+            "AP50_95": 0.7407758008015312,
+            "objects": 293
+          }
+        }
+      },
+      "validation": {
+        "AP50": 0.8569357614816059,
+        "AP50_95": 0.649040549488777,
+        "images": 186,
+        "per_class": {
+          "food": {
+            "AP50": 0.9577255455565946,
+            "AP50_95": 0.6500697755834846,
+            "objects": 343
+          },
+          "plate": {
+            "AP50": 0.8156136887656074,
+            "AP50_95": 0.6899041634616293,
+            "objects": 110
+          },
+          "utensil": {
+            "AP50": 0.7493655956581344,
+            "AP50_95": 0.46774238800954515,
+            "objects": 101
+          },
+          "hinged_container": {
+            "AP50": 0.995,
+            "AP50_95": 0.945,
+            "objects": 2
+          },
+          "drink_carton": {
+            "AP50": 0.9284000370782618,
+            "AP50_95": 0.6519206748780891,
+            "objects": 94
+          },
+          "wrapper": {
+            "AP50": 0.7747468785540175,
+            "AP50_95": 0.543111180697627,
+            "objects": 85
+          },
+          "bottle": {
+            "AP50": 0.7776985847586257,
+            "AP50_95": 0.5955356637910637,
+            "objects": 42
+          }
+        }
+      },
+      "test": {
+        "AP50": 0.8704665362477227,
+        "AP50_95": 0.668425299145529,
+        "images": 248,
+        "per_class": {
+          "food": {
+            "AP50": 0.8391215666091674,
+            "AP50_95": 0.5509185183214562,
+            "objects": 433
+          },
+          "plate": {
+            "AP50": 0.870409310643067,
+            "AP50_95": 0.7159985481886565,
+            "objects": 123
+          },
+          "utensil": {
+            "AP50": 0.860564110973734,
+            "AP50_95": 0.6125790736860253,
+            "objects": 98
+          },
+          "hinged_container": {
+            "AP50": 0.995,
+            "AP50_95": 0.9116666666666667,
+            "objects": 4
+          },
+          "drink_carton": {
+            "AP50": 0.9755264685605081,
+            "AP50_95": 0.742843990391792,
+            "objects": 134
+          },
+          "wrapper": {
+            "AP50": 0.8512967176597512,
+            "AP50_95": 0.5764054234374821,
+            "objects": 75
+          },
+          "bottle": {
+            "AP50": 0.7013475792878301,
+            "AP50_95": 0.5685648733266242,
+            "objects": 57
+          }
+        }
+      }
+    }
+  },
+  "latest_bottle_activation": {
+    "epochs": 1,
+    "sha256": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb",
+    "config_sha256": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
+    "validation": {
+      "AP50": 0.8636433164260234,
+      "AP50_95": 0.6525422104353948,
+      "images": 186,
+      "per_class": {
+        "food": {
+          "AP50": 0.9577255455565946,
+          "AP50_95": 0.6500697755834846,
+          "objects": 343
+        },
+        "plate": {
+          "AP50": 0.8156136887656074,
+          "AP50_95": 0.6899041634616293,
+          "objects": 110
+        },
+        "utensil": {
+          "AP50": 0.7493655956581344,
+          "AP50_95": 0.46774238800954515,
+          "objects": 101
+        },
+        "hinged_container": {
+          "AP50": 0.995,
+          "AP50_95": 0.945,
+          "objects": 2
+        },
+        "drink_carton": {
+          "AP50": 0.9284000370782618,
+          "AP50_95": 0.6519206748780891,
+          "objects": 94
+        },
+        "wrapper": {
+          "AP50": 0.7747468785540175,
+          "AP50_95": 0.543111180697627,
+          "objects": 85
+        },
+        "bottle": {
+          "AP50": 0.8246514693695477,
+          "AP50_95": 0.6200472904173895,
+          "objects": 42
+        }
+      }
+    },
+    "test": {
+      "AP50": 0.8778014568737538,
+      "AP50_95": 0.6723673911504443,
+      "images": 248,
+      "per_class": {
+        "food": {
+          "AP50": 0.8391215666091674,
+          "AP50_95": 0.5509185183214562,
+          "objects": 433
+        },
+        "plate": {
+          "AP50": 0.870409310643067,
+          "AP50_95": 0.7159985481886565,
+          "objects": 123
+        },
+        "utensil": {
+          "AP50": 0.860564110973734,
+          "AP50_95": 0.6125790736860253,
+          "objects": 98
+        },
+        "hinged_container": {
+          "AP50": 0.995,
+          "AP50_95": 0.9116666666666667,
+          "objects": 4
+        },
+        "drink_carton": {
+          "AP50": 0.9755264685605081,
+          "AP50_95": 0.742843990391792,
+          "objects": 134
+        },
+        "wrapper": {
+          "AP50": 0.8512967176597512,
+          "AP50_95": 0.5764054234374821,
+          "objects": 75
+        },
+        "bottle": {
+          "AP50": 0.752692023670048,
+          "AP50_95": 0.5961595173610312,
+          "objects": 57
+        }
+      }
+    },
+    "historical_reference": {
+      "AP50": 0.9186801217996322,
+      "AP50_95": 0.6811710660914698,
+      "images": 124,
+      "per_class": {
+        "food": {
+          "AP50": 0.9685484000291654,
+          "AP50_95": 0.6830501909494707,
+          "objects": 81
+        },
+        "plate": {
+          "AP50": 0.755848336609705,
+          "AP50_95": 0.6148238997309804,
+          "objects": 49
+        },
+        "utensil": {
+          "AP50": 0.8963168160362562,
+          "AP50_95": 0.6069509271665253,
+          "objects": 65
+        },
+        "hinged_container": {
+          "AP50": 0.995,
+          "AP50_95": 0.6641130952380953,
+          "objects": 12
+        },
+        "drink_carton": {
+          "AP50": 0.9415088383838381,
+          "AP50_95": 0.7015286288053806,
+          "objects": 29
+        },
+        "wrapper": {
+          "AP50": 0.9025384615384614,
+          "AP50_95": 0.6695354826546003,
+          "objects": 21
+        },
+        "bottle": {
+          "AP50": 0.971,
+          "AP50_95": 0.8281952380952381,
+          "objects": 11
+        }
+      }
+    },
+    "rollback": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/bottle-retention-20261031/before-activation",
+    "other_specialists_unchanged": true
+  }
 }

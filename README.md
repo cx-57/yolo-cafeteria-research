@@ -41,11 +41,11 @@ a custom manifest can be passed as a positional argument.
 
 ## Evaluation
 
-The primary repaired validation set scores **85.69% mAP50 / 64.90% mAP50–95**
+The primary repaired validation set scores **86.36% mAP50 / 65.25% mAP50–95**
 with the active specialists. See [per-class results](results/baseline.json).
 Labels are AI-reviewed with documented uncertainties, not human certified.
 
-The release models score **87.05% mAP50 / 66.84% mAP50–95** on all
+The release models score **87.78% mAP50 / 67.24% mAP50–95** on all
 248 repaired test photos. The separate 158-photo subset meeting the existing
 blur/crop rules scores **92.08% / 69.84%**; it is a narrower cohort,
 not the full test split. See [test results and caveats](results/test.json) and
@@ -117,15 +117,23 @@ pretrained weights and reserve newly collected school days for independent testi
 ## Reviewed combined dataset
 
 Use the newer dataset at
-`../yolo-cafeteria-research-assets/data/combined-seven-cafeteria-crops-20261031/data.yaml`.
-It contains **2,332 training views, 186 validation photos and 248 test photos**.
-Training contains 2,048 real photos plus 284 school variations. The school portion
-is 300 views from **16 real training photos**, including nine reviewed, sharp
+`../yolo-cafeteria-research-assets/data/combined-seven-school-oct29-20261031/data.yaml`.
+It contains **2,372 training views, 186 validation photos and 248 test photos**.
+Training contains 2,052 real photos plus 320 school variations. The school portion
+is 340 views from **20 real training photos**, including nine reviewed, sharp
 cropped-food photos admitted for training only. Soft targets and bin scenes stay
 excluded. Exact quarter turns move boxes with the image; mild lighting variations
 add no objects or camera viewpoints. Augmentation never crosses splits.
 The dataset explicitly sets `allow_cropped_food_train: true`; the validator still
 rejects cropped food in validation/test and boxes outside the image in every split.
+The four October 29 originals contribute 100 views total (25 each).
+Four sharp photos from the October 29 submission entered training; 17 were held
+for blur or annotation uncertainty. The two-epoch food specialist trial was rejected
+because food mAP50–95 fell from 65.01% to 64.97%; active models are unchanged.
+The whole capture day belongs to training, so its remaining photos are not an
+independent test. Public training images are referenced from the previous working
+dataset; keep that dataset available.
+
 The prior seven-parent version remains available at
 `../yolo-cafeteria-research-assets/data/combined-seven-reviewed-20261031/data.yaml`.
 Quality filtering changes the original 80/10/10 proportions; surviving photos keep
@@ -216,3 +224,71 @@ python -B -m unittest discover -s tests -v
 Only maintained source, configuration, focused tests and concise results are in
 Git. Historical source/data/results and Git recovery copies remain outside the
 repo. Git commit history is preserved.
+
+
+## Disposal categories
+
+A rules-based classifier converts each object detection into a disposal decision.
+It adds no neural model and does not infer packaging material or whether a bottle
+is empty. Mixed photos retain separate decisions and boxes for every detection.
+
+```sh
+./scripts/run_specialists.sh sort /path/to/image.jpg --device mps --output /tmp/disposal.json
+```
+
+`configs/disposal.json` enables the user's selected compost / recycling / landfill
+policy. Food maps to compost; disposable plastic drink bottles map to recycling
+after explicit empty confirmation. School acceptance of empty milk/juice cartons is user-confirmed;
+cartons still require explicit empty confirmation. Plates, utensils, wrappers and hinged containers request
+material/local-acceptance review. Reusable items may need returning rather than
+disposal. No ambiguous object is automatically assigned to landfill.
+
+The `verified` flag enables this user-approved configuration; it is not independent
+certification of school acceptance or classification accuracy.
+[The EPA explains why local acceptance and material matter](https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables).
+
+Empty-container facts remain required for bottles/cartons even under a verified
+policy. Optional `--contexts /path/to/facts.json` supplies explicit facts scoped
+to an image's absolute path and its zero-based `detection_index` in the prediction
+receipt, for example `{"/path/to/image.jpg": {"0": {"empty": true}}}`.
+Supply facts only for that specific detection; they are not inferred from photos.
+
+The default display filter is 0.25; detections below 0.50 require review even under
+a verified policy. These are application thresholds, not changes to detector AP
+scoring. `detection_confidence` is not a disposal-confidence estimate. JSON output
+records the model hashes/settings, image hashes, rule hash, explicit facts,
+provisional suggestion, review reasons and instruction.
+
+Verification: 36 unit tests pass, including mixed scenes, unknown materials,
+per-detection facts and invalid inputs. Real inference ran on the four new school
+photos; integration also processed 881 detections on 248 repaired test photos.
+With the user-selected policy and no supplied container facts, 337 detections map
+to compost and 544 require review. On the four new photos, three map to compost
+and six require review. These are detection counts, not correctness scores.
+**Full three-bin classification accuracy has not been measured:** no independent
+disposal-category labels exist. A fixed-threshold food-to-compost proxy on the
+248-photo repaired test set matches327 of337 automatic assignments to existing
+food boxes at IoU≥0.5:97.03% precision,75.52% food recall and84.94% F1.
+Review is abstention, never a correct prediction;544 of881 emitted detections
+(61.75%) require review. These are development-set object-label-derived metrics,
+not independent material/disposal accuracy.
+
+The latest accepted model change is the one-epoch bottle update. Its paired
+validation AP50/AP50–95 rose from 77.77%/59.55% to 82.47%/62.00%; test rose from
+70.13%/56.86% to 75.27%/59.62%. Other specialists are retained. Full receipts and
+rollback files are external under `artifacts/bottle-retention-20261031/`.
+
+
+Recycling-candidate recognition on the same repaired248 test photos, at the
+unchanged confidence0.50 and one-to-one IoU≥0.5:
+
+| Object group | Correct / predicted | Precision | Recall |
+|---|---:|---:|---:|
+| Disposable bottle | 33 /43 | 76.74% | 57.89% (33/57) |
+| Drink carton | 129 /130 | 99.23% | 96.27% (129/134) |
+| Either object | 162 /173 | 93.64% | 84.82% (162/191) |
+
+These measure recognition of recycling candidates, not actual recycling-bin
+correctness or contents recognition. Without explicit empty-container facts and
+confirmation that containers are empty, final recycling decisions remain review cases.
+No detector thresholds, weights or labels were changed to obtain these results.

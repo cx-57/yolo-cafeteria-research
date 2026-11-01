@@ -18,16 +18,20 @@ export PYTHONDONTWRITEBYTECODE=1
 case "${1:-}" in
     -h|--help)
         cat <<'EOF'
-Usage: run_specialists.sh {predict|evaluate|train|preview} [options]
+Usage: run_specialists.sh {predict|evaluate|sort|train|preview} [options]
 
 predict   Run the active four specialists.
 evaluate  Score a fixed annotated cohort.
+sort      Suggest disposal categories for individual detected objects.
 train     Train a separate seven-class candidate with orientation augmentation.
 preview   Inspect native training augmentation and transformed label boxes.
 
 Use COMMAND --help for command-specific options. Training never auto-promotes models.
 EOF
         exit 0 ;;
+    sort)
+        shift
+        exec "$TASK_PYTHON" "$TASK_ROOT/scripts/disposal.py" "$@" ;;
     train|preview)
         # Disable PyTorch's MPS allocation cap for the authorized training runs.
         export PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0

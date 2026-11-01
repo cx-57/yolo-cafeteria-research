@@ -34,7 +34,7 @@
     {
       "id": "bottle",
       "weights": "weights/bottle.pt",
-      "sha256": "2cd1efe2d7c187df05ed223ba2a18e147393358179f223c264663a2114812289",
+      "sha256": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb",
       "classes": [
         "bottle"
       ]
