@@ -359,7 +359,7 @@ Crowded bottle images also exhibited overlapping boxes and cross-specialist labe
 These observations supply **qualitative failure-mode examples**, not evidence of a
 measured performance change or an authorization to retrain on a future holdout.
 Individual photo references and limitations are documented in
-[the visual audit](exploratory-44-visual-audit.md). These public images may be
+[the visual audit](https://github.com/cx-57/yolo-cafeteria-research/blob/archive/pre-cleanup-20261101/docs/exploratory-44-visual-audit.md). These public images may be
 out-of-distribution relative to actual cafeteria disposal scenes, and original
 source rights require review before reproducing them in a publication.
 
