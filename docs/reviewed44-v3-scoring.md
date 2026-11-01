@@ -12,18 +12,7 @@ This cohort contains 12 photos originally sourced as hinged-container candidates
 4. Click **Export** to download `cafeteria-review-export.json`. This is your reviewed object-label receipt. Image IDs and SHA-256 values must match the original ZIP.
 5. Run the code below. The program rejects unreviewed photos, unconfirmed AI boxes, mismatched images, invalid boxes or unavailable classes. It then evaluates BOTH frozen original and V3 against exactly the same labels and images.
 
-```bash
-cd ~/Desktop/yolo-cafeteria-research
-git pull --ff-only origin main
-
-./scripts/run_specialists.sh evaluate \
-  "$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/test-label-audit-20261031/audited-all248.json" \
-  --config "$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/hinged-candidate-v3-retry/candidate-specialists.json" \
-  --output "$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/hinged-candidate-v3-retry/test-248-v3.json" \
-  --device mps
-```
-
-**The above is the separate 248-image historical test, not the 44-image score.** For the **reviewed 44-source-photo evaluation**, run:
+For the **reviewed 44-source-photo evaluation**, run:
 
 ```bash
 cd ~/Desktop/yolo-cafeteria-research
