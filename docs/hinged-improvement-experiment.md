@@ -60,17 +60,11 @@ git pull --ff-only origin main
 
 CANDIDATE="$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/hinged-candidate-v2"
 
-./scripts/run_specialists.sh hinge train --out "$CANDIDATE" --device mps \
-  --bundle "$HOME/Downloads/cafeteria-44-image-review-kit-github.zip"
-./scripts/run_specialists.sh hinge evaluate --out "$CANDIDATE" --device mps
-./scripts/run_specialists.sh hinge stress --out "$CANDIDATE" --device mps \
+./scripts/run_specialists.sh hinge all --out "$CANDIDATE" --device mps \
   --bundle "$HOME/Downloads/cafeteria-44-image-review-kit-github.zip"
 ```
 
-The `train` command refuses any preexisting output folder; use a fresh
-versioned directory for each new experiment. If training completes but a
-subsequent evaluation fails, **do not repeat training**: troubleshoot the
-`evaluate` or `stress` command separately. The output is stored outside Git,
+The `all` command trains, runs the frozen 186-image validation comparison, and creates 12 side-by-side hinged-source image overlays in one sequence. It refuses any preexisting output folder; use a fresh versioned directory for each new experiment. If training completes but evaluation or comparison fails, **do not repeat training**: separately rerun `./scripts/run_specialists.sh hinge evaluate --out "$CANDIDATE"` or `./scripts/run_specialists.sh hinge stress --out "$CANDIDATE" --bundle "$HOME/Downloads/cafeteria-44-image-review-kit-github.zip"`. The output is stored outside Git,
 where the original source photos and checkpoints live.
 
 ## What to send back
