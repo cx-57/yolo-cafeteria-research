@@ -48,3 +48,9 @@ For collections without COCO labels, inspect source images manually instead; do 
 7. Freeze verified membership, annotation conventions and human labels before the first model inference. Do not revise selection based on outcomes. Preserve an independent final holdout on a separate capture day where feasible.
 
 **Required reporting:** number visually inspected, KEEP/REJECT/UNCERTAIN, per-class visible coverage, exact/near overlaps, independently certified (currently **zero**), human bin labels (currently **zero**), and a path to external contact sheets and ZIP. Do not promote an unresolved set to independent evaluation.
+
+## Network-enabled acquisition (November 1, 2026)
+
+A dedicated [GitHub Actions acquisition workflow](../.github/workflows/acquire-coxpwd-candidates.yml) is configured for **CoxPWD v3**. It downloads the public ZIP to the transient runner, selects at most 48 COCO-source-hint images (bottle, spoon, packet), creates a review CSV/contact sheet, and uploads a 7-day artifact named `coxpwd-provisional-candidates-not-independent`. The source photos are **not committed into Git**. The workflow triggers when its own file is pushed, and can be triggered manually from the Actions tab. **Do not assume a successful run merely because the workflow file exists**; inspect its run logs and artifact count.
+
+It cannot certify original-photo independence, human-reviewed class identities, cafeteria relevance, or disposal-bin ground truth. Every image remains `PENDING` review and `independent=NO`. Cartons and hinged containers are not sourced by CoxPWD category names and still require a distinct intake. The workflow does not run YOLO, label bins, retrain, or modify frozen checkpoints.
