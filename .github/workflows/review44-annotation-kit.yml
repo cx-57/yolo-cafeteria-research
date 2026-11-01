@@ -52,6 +52,8 @@ jobs:
           j=json.loads((p/'cafeteria-review-export.json').read_text())
           assert len(m['images'])==len(j['images'])==44
           assert sum(len(x['draft_boxes']) for x in m['images'])==104
+          first=next(x for x in m['images'] if x['path'].endswith('hinged_container_candidate_001_9cdebbf715f.jpg'))
+          assert first['draft_boxes'][0]['class_name']=='hinged_container', 'Draft boxes shifted onto wrong source photo'
           assert j['reviewed_image_count']==0
           assert all(not x['reviewed'] for x in j['images'])
           assert all(b['status']=='AI_DRAFT_UNVERIFIED' for x in j['images'] for b in x['boxes'])
