@@ -78,6 +78,14 @@ class HingedTests(unittest.TestCase):
             self.assertEqual(1,sum(x.read_text().startswith('1 ') for x in val_files))
             self.assertEqual(3,sum(not x.read_text().strip() for x in val_files))
 
+    def test_missing_corrected_validation_image_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            info=self.make_info(root/'src')
+            with self.assertRaisesRegex(ValueError,'corrected manifest'):
+                h.export_dataset(info,root/'snapshot',repeat=1,support_cap=1,
+                                 background_cap=1,val_rows_by_sha={})
+
     def test_cannot_reuse_output(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
