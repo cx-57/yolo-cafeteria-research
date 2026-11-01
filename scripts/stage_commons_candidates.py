@@ -32,7 +32,7 @@ def category_media(category):
     params = {
         "action":"query", "generator":"categorymembers",
         "gcmtitle":"Category:" + category, "gcmtype":"file", "gcmlimit":"100",
-        "prop":"imageinfo", "iiprop":"url|size|extmetadata", "iiurlwidth":"1000",
+        "prop":"imageinfo", "iiprop":"url|size|mime|extmetadata", "iiurlwidth":"1000",
         "format":"json", "formatversion":"2",
     }
     payload = json.loads(get(API + "?" + urlencode(params)))
