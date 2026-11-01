@@ -21,6 +21,8 @@ The latest provisional image review and evaluation blockers are recorded in [the
 
 For a **no-manual-labels exploratory run** on the 44-photo review ZIP, use [the frozen-model visual test instructions](docs/exploratory-44-run.md): `./scripts/run_specialists.sh explore ...`. This generates bounding-box overlays and prediction counts, **not** accuracy or independently verified waste-sorting performance.
 
+The [44-image exploratory visual audit](docs/exploratory-44-visual-audit.md) documents actual outside-source detection failures from the frozen models and a 0.62-confidence carton misclassification on a foil tray. The [research draft](docs/research-paper.md) explicitly labels this a qualitative stress test, not independent recognition or disposal accuracy.
+
 Four YOLO specialists detect seven classes:
 
 | Model | Classes |
