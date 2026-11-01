@@ -22,8 +22,6 @@ header-includes:
   - \fancyhead[L]{\footnotesize Cafeteria Waste-Sorting Research}
   - \fancyhead[R]{\footnotesize Research Preprint}
   - \fancyfoot[C]{\footnotesize \thepage}
-  - \usepackage{titlesec}
-  - \titleformat{\section}{\normalfont\large\bfseries}{\thesection}{.65em}{}
 ---
 
 
