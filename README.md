@@ -23,6 +23,8 @@ For a **no-manual-labels exploratory run** on the 44-photo review ZIP, use [the 
 
 The [44-image exploratory visual audit](docs/exploratory-44-visual-audit.md) documents actual outside-source detection failures from the frozen models and a 0.62-confidence carton misclassification on a foil tray. The [research draft](docs/research-paper.md) explicitly labels this a qualitative stress test, not independent recognition or disposal accuracy.
 
+For a **separate hinged-container improvement candidate**, see [the targeted three-class experiment](docs/hinged-improvement-experiment.md). It oversamples existing **training-only** hinged examples and uses plate-only negatives, then generates development validation and 44-photo side-by-side comparisons. The original four checkpoints and paper freeze remain unchanged; no new independent accuracy has been measured.
+
 Four YOLO specialists detect seven classes:
 
 | Model | Classes |
