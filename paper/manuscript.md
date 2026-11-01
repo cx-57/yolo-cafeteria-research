@@ -1,5 +1,5 @@
 ---
-title: '**Computer Vision for Cafeteria Waste-Sorting Assistance**'
+title: 'Cafeteria Waste Detection with Specialized YOLO11 Models and Selective Prediction'
 author: |
   Charles Xie  
   *Natick High School*  
@@ -36,19 +36,23 @@ header-includes:
 
 # Introduction
 
-A cafeteria tray can contain leftover food, a plastic fork, a drink carton, and a wrapper, all requiring different disposal decisions. Recognizing the objects is only part of the problem. Whether an item belongs in compost, recycling, or trash can depend on its material, whether it is empty or contaminated, and which items the school's waste contractor accepts. The U.S. Environmental Protection Agency likewise emphasizes that recycling requirements vary locally and that containers generally need to be empty and rinsed [6]. An image-based system that detects a bottle correctly may still recommend the wrong bin.
+At the end of a school lunch period, a single cafeteria tray may contain food scraps, disposable utensils, a drink carton, and plastic packaging. Although these items are visually distinguishable, they do not necessarily belong in the same disposal stream. An item's correct destination depends not only on what it looks like, but also on its material, contamination, remaining contents, and local collection requirements. The U.S. Environmental Protection Agency advises residents to verify local recycling rules and to empty and clean recyclable containers [1]. A camera may therefore recognize an object correctly without determining how it should be discarded.
 
-Object detection provides a useful starting point because it can identify several items within a single photograph rather than assigning one label to the entire scene. Yet a detection model has no inherent knowledge of a school's disposal rules. A practical system must distinguish between recognizing an item and deciding whether its destination can be suggested reliably. It must also account for objects that are missed entirely, since withholding a suggestion is not the same as disposing of the item correctly.
+Computer vision offers a way to identify several discarded items within a single image, even when they occur together rather than against an isolated background. Object detection is especially relevant because it produces separate locations and classes for the visible items. However, the predictions of a detection model are not equivalent to verified recycling or composting decisions. A useful assistance system must distinguish between confident object recognition, uncertain predictions that warrant human review, and objects that the model fails to detect.
 
-This study examines that distinction through a prototype built from four specialized YOLO11 detectors covering seven cafeteria-item classes. The detectors feed a rule-based policy that proposes composting or recycling for selected categories and defers other cases for manual review. We evaluate the frozen models on the available development data, investigate whether separate confidence thresholds for each class can reduce false detections, and audit the evidence behind the reported scores. Data independence and annotation quality are particularly important: strong performance on previously examined images does not establish how well the system will work on new cafeteria photographs.
+This study investigates that distinction through a prototype containing four specialized YOLO11 detectors and a rule-based disposal-suggestion layer. The detectors cover seven cafeteria-item classes, while the decision layer recommends composting or recycling for selected recognized categories and otherwise defers to manual review. We evaluate the frozen detectors on the available development images, examine whether class-specific confidence thresholds can reduce false-positive detections without retraining, and audit the provenance and limitations of the resulting measurements. The objective is to characterize what the existing recognition system can support, rather than to claim that its object predictions have already been validated as correct disposal decisions.
 
 ## Related Work
 
-Early work on automated waste recognition often framed the problem as image classification. Thung and Yang's TrashNet project, for example, classified photographs of individual discarded objects into six material-based categories [1]. Such datasets make waste recognition approachable, but they differ from crowded cafeteria scenes, where several objects may overlap or appear at very different scales. Proença and Simões addressed a related challenge with TACO, a dataset of litter photographed in context and annotated at the instance level [2]. Its emphasis on object localization is closer to the setting examined here, although identifying an object or material does not, by itself, determine whether a local recycling or composting program accepts it.
+Early research on automated waste recognition primarily approached the problem as image classification. Thung and Yang developed TrashNet to classify photographs of individual objects into six material-based categories, including glass, metal, paper, plastic, cardboard, and trash [2]. Their work demonstrated the potential of visual waste classification, but the images feature isolated objects against relatively simple backgrounds. Single, Iranmanesh, and Raad later introduced RealWaste, a dataset captured at an operating landfill, and examined how models trained on cleaner material imagery performed when confronted with more realistic waste conditions [3]. Together, these studies show that the appearance and collection context of waste matter when evaluating whether an image classifier can generalize beyond its source dataset.
 
-The broader object-detection literature offers established ways to measure recognition quality. The COCO benchmark introduced widely used evaluation procedures based on localization overlap and average precision [3], while the YOLO family provides single-stage detectors; this study uses YOLO11 implementations from Ultralytics [4]. Average precision summarizes performance across confidence thresholds, but a real system must choose which detections to act on. Precision at that chosen threshold can differ substantially from average precision, making both measurements relevant when interpreting waste-recognition results.
+Other work has shifted from whole-image classification to locating individual objects in more complex scenes. Proença and Simões introduced TACO, a dataset with instance annotations for litter photographed in its surrounding environment, and evaluated instance segmentation with Mask R-CNN [4]. Bashkirova and colleagues further developed ZeroWaste, a dataset of highly cluttered recycling-conveyor scenes containing deformable and overlapping materials, where conventional detection and segmentation methods face substantial challenges [5]. These studies motivate object-level localization for mixed waste scenes. Nevertheless, material categories, litter-instance masks, and cafeteria disposal eligibility are different targets: even an accurately localized object may require information that is not visible in a photograph before it can be assigned to a local bin.
 
-A related idea comes from selective classification, in which a model can abstain from making uncertain predictions. Geifman and El-Yaniv investigated how withholding predictions creates a trade-off between coverage and error among the predictions retained [5]. For cafeteria waste assistance, the same principle motivates class-dependent confidence thresholds and manual review. However, abstention does not resolve missed objects or incorrect disposal rules. This study therefore evaluates recognition, accepted-prediction coverage, and the limits of disposal suggestions separately, rather than treating a confident detection as evidence of a correctly sorted item.
+The object-detection approach used here follows the YOLO family, initially introduced by Redmon and colleagues as a unified framework for predicting object locations and categories from an image [6]. Standardized evaluation practices for object recognition were developed through benchmarks such as Microsoft COCO, which uses localization-sensitive average precision to assess detection quality [7]. The present system uses YOLO11 as implemented by Ultralytics [8]. These tools measure how well objects are recognized and localized, but average precision over a range of detection scores does not describe the precision or coverage of a specific operating threshold. For a decision-assistance prototype, that fixed-threshold behavior also matters.
+
+Research on selective classification offers a framework for systems that withhold uncertain predictions. Geifman and El-Yaniv investigated rejection based on classifier confidence [9] and subsequently developed SelectiveNet, which learns a rejection option jointly with the underlying prediction task [10]. The current study does not implement or claim to outperform either approach; instead, it applies the simpler idea of confidence-based selection to already trained detectors, comparing a shared cutoff against class-specific cutoffs. This distinction is important because higher precision among accepted detections can come at the expense of missed objects and lower coverage.
+
+Finally, evaluation design determines what those measurements can establish. The WILDS benchmark documents how performance can deteriorate when systems are tested across different sources and environments [11]. Kapoor and Narayanan similarly show that data leakage and evaluation design flaws can produce overly optimistic scientific conclusions [12]. These concerns are particularly relevant when waste images come from multiple public sources, model histories are not fully reconstructed, and nominal test images have been examined during development. Accordingly, this study separates development-set recognition results from the independent field evaluation still required to establish reliable cafeteria sorting performance.
 
 # Data and Annotation Provenance
 
@@ -182,7 +186,7 @@ $$
 P=\frac{TP}{TP+FP},\qquad R=\frac{TP}{TP+FN},\qquad F_1=\frac{2PR}{P+R}.
 $$
 
-Every comparison involving the 248-photo historical cohort remains a **development comparison** because the model lineage and earlier acceptance decisions exposed that cohort. The baseline AP computation uses the saved native prediction ranks down to confidence 0.001; threshold tuning changes only which detections are accepted at the operating point, not the frozen checkpoint or baseline AP.
+Because earlier model-selection decisions involved the 248-photo historical cohort, comparisons on those images must be treated as development evidence rather than independent test performance. This distinction follows established concerns about data leakage and test-set reuse in machine-learning research [12]. The baseline AP computation uses the saved native prediction ranks down to confidence 0.001; threshold tuning changes only which detections are accepted at the operating point, not the frozen checkpoint or baseline AP.
 
 
 # Confidence Threshold Selection
@@ -286,7 +290,7 @@ On the historical cohort, class-specific thresholds reduced false detections fro
 
 # Independence and Annotation Audit
 
-The local inventory contains 102,806 readable image paths (67,422 distinct inodes),
+To investigate potential overlap and dependence among evaluation images, we audited the local data inventory rather than assuming that a folder labeled `test` was independent. Similar threats from dataset provenance and distribution shift have been documented in the broader machine-learning literature [11, 12]. The inventory contains 102,806 readable image paths (67,422 distinct inodes),
 which collapse to 14,379 byte-unique images. Aliases and repeated copies are not
 independent samples. The original/candidate pool contains 9,468 byte identities
 from raw/processed/public candidate sources and the direct school originals and
@@ -421,7 +425,7 @@ source rights require review before reproducing them in a publication.
 
 # Limitations and Future Evaluation
 
-The main limitation of this study is that the reported benchmark images are development data, not a sealed holdout. Earlier inference, model selection, and related capture groups prevent an independent generalization claim. The object annotations were also AI-assisted, with limited evidence of human verification; in particular, the hinged-container class has only two validation objects and four historical-test objects. Food-serving boundaries and visually similar packaging introduce further annotation uncertainty. The existing audit reduces uncertainty about what data and model versions were used, but incomplete historical records mean that the absence of a detected duplicate cannot establish independence.
+The main limitation of this study is that the reported benchmark images are development data, not a sealed holdout. As demonstrated in research on distribution shift and leakage, performance on reused or mismatched source data may not transfer to the intended deployment setting [11, 12]. Earlier inference, model selection, and related capture groups prevent an independent generalization claim. The object annotations were also AI-assisted, with limited evidence of human verification; in particular, the hinged-container class has only two validation objects and four historical-test objects. Food-serving boundaries and visually similar packaging introduce further annotation uncertainty. The existing audit reduces uncertainty about what data and model versions were used, but incomplete historical records mean that the absence of a detected duplicate cannot establish independence.
 
 A second limitation concerns the distinction between an object class and a disposal decision. The current rule layer does not inspect whether a bottle or carton is empty, whether food is contaminated by packaging, or whether a specific material is accepted by the school's collection program. It cannot automatically assign landfill disposal, and requesting manual review is an abstention rather than a correct sorting outcome. The results therefore cannot quantify correct-bin accuracy or reductions in waste contamination. Latency, throughput, energy use, and user interaction during a real cafeteria deployment have also not been measured. Source-license and attribution records must be checked before any external image redistribution.
 
@@ -467,17 +471,29 @@ the required label format and matching convention are documented in that report.
 
 # References
 
-[1] G. Thung and M. Yang. *Classification of Trash for Recyclability Status*. Stanford CS229 Project Report, 2016. [Original report](https://cs229.stanford.edu/proj2016/report/ThungYang-ClassificationOfTrashForRecyclabilityStatus-report.pdf).
+[1] U.S. Environmental Protection Agency. *Frequent Questions on Recycling*. [Official recycling guidance](https://www.epa.gov/recycle/frequent-questions-recycling). Accessed November 2026.
 
-[2] P. F. Proença and P. Simões. *TACO: Trash Annotations in Context for Litter Detection*. arXiv:2003.06975, 2020. [Preprint](https://arxiv.org/abs/2003.06975).
+[2] G. Thung and M. Yang. *Classification of Trash for Recyclability Status*. Stanford CS229 Project Report, 2016. [Report](https://cs229.stanford.edu/proj2016/report/ThungYang-ClassificationOfTrashForRecyclabilityStatus-report.pdf).
 
-[3] T.-Y. Lin et al. *Microsoft COCO: Common Objects in Context*. European Conference on Computer Vision, 2014. [DOI](https://doi.org/10.1007/978-3-319-10602-1_48).
+[3] S. Single, S. Iranmanesh, and R. Raad. *RealWaste: A Novel Real-Life Data Set for Landfill Waste Classification Using Deep Learning*. Information, vol. 14, no. 12, article 633, 2023. [DOI: 10.3390/info14120633](https://doi.org/10.3390/info14120633).
 
-[4] G. Jocher and J. Qiu. *Ultralytics YOLO11*. Software, 2024. [Documentation](https://docs.ultralytics.com/models/yolo11/).
+[4] P. F. Proença and P. Simões. *TACO: Trash Annotations in Context for Litter Detection*. arXiv:2003.06975, 2020. [Preprint](https://arxiv.org/abs/2003.06975).
 
-[5] Y. Geifman and R. El-Yaniv. *Selective Classification for Deep Neural Networks*. Advances in Neural Information Processing Systems, 2017. [arXiv](https://arxiv.org/abs/1705.08500).
+[5] D. Bashkirova et al. *ZeroWaste Dataset: Towards Deformable Object Segmentation in Cluttered Scenes*. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 21147–21157, 2022. [CVPR paper](https://openaccess.thecvf.com/content/CVPR2022/html/Bashkirova_ZeroWaste_Dataset_Towards_Deformable_Object_Segmentation_in_Cluttered_Scenes_CVPR_2022_paper.html).
 
-[6] U.S. Environmental Protection Agency. *Frequent Questions on Recycling*. [Official guidance](https://www.epa.gov/recycle/frequent-questions-recycling), accessed November 2026.
+[6] J. Redmon, S. Divvala, R. Girshick, and A. Farhadi. *You Only Look Once: Unified, Real-Time Object Detection*. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 779–788, 2016. [CVPR paper](https://openaccess.thecvf.com/content_cvpr_2016/html/Redmon_You_Only_Look_CVPR_2016_paper.html).
+
+[7] T.-Y. Lin et al. *Microsoft COCO: Common Objects in Context*. European Conference on Computer Vision, pp. 740–755, 2014. [DOI: 10.1007/978-3-319-10602-1_48](https://doi.org/10.1007/978-3-319-10602-1_48).
+
+[8] G. Jocher and J. Qiu. *Ultralytics YOLO11*. Software, 2024. [Official model documentation and citation](https://docs.ultralytics.com/models/yolo11/).
+
+[9] Y. Geifman and R. El-Yaniv. *Selective Classification for Deep Neural Networks*. Advances in Neural Information Processing Systems, 2017. [NeurIPS paper](https://papers.nips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html).
+
+[10] Y. Geifman and R. El-Yaniv. *SelectiveNet: A Deep Neural Network with an Integrated Reject Option*. Proceedings of the 36th International Conference on Machine Learning, PMLR 97, pp. 2151–2159, 2019. [ICML paper](https://proceedings.mlr.press/v97/geifman19a.html).
+
+[11] P. W. Koh et al. *WILDS: A Benchmark of in-the-Wild Distribution Shifts*. Proceedings of the 38th International Conference on Machine Learning, PMLR 139, pp. 5637–5664, 2021. [ICML paper](https://proceedings.mlr.press/v139/koh21a.html).
+
+[12] S. Kapoor and A. Narayanan. *Leakage and the Reproducibility Crisis in Machine-Learning-Based Science*. Patterns, vol. 4, no. 9, article 100804, 2023. [DOI: 10.1016/j.patter.2023.100804](https://doi.org/10.1016/j.patter.2023.100804).
 
 # Acknowledgments
 
