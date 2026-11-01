@@ -226,70 +226,33 @@ On the historical cohort, the class-specific policy reduced false detections fro
 
 # Independence and Annotation Audit
 
-To investigate potential overlap and dependence among evaluation images, we audited the local data inventory rather than assuming that a folder labeled `test` was independent. Similar threats from dataset provenance and distribution shift have been documented in the broader machine-learning literature [11, 12]. The inventory contains 102,806 readable image paths (67,422 distinct inodes),
-which collapse to 14,379 byte-unique images. Aliases and repeated copies are not
-independent samples. The original/candidate pool contains 9,468 byte identities
-from raw/processed/public candidate sources and the direct school originals and
-JPEG conversion directories. Review figures and experiment charts are excluded
-from this candidate pool.
+A reliable evaluation requires photographs that have not influenced training, threshold selection, or earlier model decisions. The project's local inventory was therefore screened for duplicate files, overlapping capture groups, and recorded prior inference. The audit covered 102,806 readable image paths, corresponding to 67,422 distinct filesystem inodes and 14,379 byte-distinct images. Within the 9,468 candidate image identities, 3,842 were flagged for possible exposure, group overlap, or duplication; 5,482 had unresolved historical provenance; and 144 original HEIC files could not be visually decoded in the audit environment. No image was *confirmed* independent under the available evidence (Table 8). This does not prove that every candidate was used for model fitting.
 
-SHA-256 checks exact bytes; an EXIF-oriented RGB pixel hash checks identical decoded
-pixels. Eight rotation/reflection versions of a 64-bit grayscale dHash screen
-near-duplicates against 4,751 images with training-directory or prepared-manifest
-membership, at Hamming radius five. These are review flags, not proof that two
-photos are identical. Directory membership is potential exposure; it is not proof
-that a particular active checkpoint's optimizer consumed every listed image.
-Capture-group and recorded inference evidence are separately propagated.
+The audit compared SHA-256 file identities and decoded-pixel hashes and screened potential near-duplicates using rotation/reflection-invariant comparisons of 64-bit difference hashes against 4,751 images from recorded training directories or prepared manifests. A Hamming-distance threshold of five was used for screening. These tests are deliberately conservative: membership in a training directory is not proof of optimizer exposure, while the absence of a perceptual match cannot rule out related crops, viewpoints, or capture sessions.
 
-The audit parsed 2,398 JSON files. The additional label search examined 207 CSV,
-34 XML and 263 YAML files. XML objects were labeled `Plastic Bottle`, not disposal
-bins; no per-object bin-label format was found in the JSON search. Historical
-review/verified columns describe object review and do not establish independent
-human bin truth. No verified human disposal-label set was available for scoring.
+**Table 8.** Provenance status of the 9,468 candidate image identities. The categories reflect what could be established from available records, not a definitive partition of images actually used for training.
 
-**Table 8.** Candidate provenance status. These categories do not assert that no
-independent photo exists anywhere; they state what can be established locally.
-
-| Status | Byte-unique candidate identities |
+| Candidate status | Image identities |
 |---|---:|
-| Exposure/group/duplicate flag | 3,842 |
+| Exposure, group-overlap, or duplicate flag | 3,842 |
 | Unresolved historical provenance | 5,482 |
 | Original HEIC visual decoding unavailable | 144 |
-| **Confirmed independent** | **0** |
+| Confirmed independent | 0 |
 
-Reason counts overlap: 3,042 candidates share training-pool bytes/membership,
-2,590 share a training-pool group, 2,682 have recorded development inference,
-2,707 share a development group, and 588 trigger perceptual training-pool flags.
-These are not additive counts of optimizer exposures. The HEIC files were byte
-hashed; their 144 recorded converted school photos were decoded and all share
-training/development capture groups. Conversion provenance is recorded, rather
-than independently proved by a HEIC decoder in this environment.
+The school-specific history also prevents a prospective test claim. All 123 photographs in the earlier school submission and all 21 in the later submission shared recorded training or development capture groups. Four images from the October 29 submission entered the training collection, so that capture day was excluded from consideration as an independent test source. Earlier labels such as "sealed test" are superseded by subsequent prediction receipts and model-use records. Several audit leads overlap and must not be added together as unique training exposures.
 
-All 123 school photos supplied in the earlier submission and all 21 in the newer
-submission share training or development capture groups. The newer submission was
-captured on October 29; four photos were admitted to training and its whole day
-was excluded from independent testing. For the earlier submission, initial
-"sealed test" or "no inference" flags are superseded by subsequent model-use
-ledgers and prediction receipts. Historical test participation in release decisions
-makes those data development evidence. A nominal split name cannot restore independence.
+Annotation provenance is a separate limitation. The metadata audit searched 2,398 JSON files and additional CSV, XML, and YAML files but found no confirmed set of independently human-adjudicated, per-object disposal-bin labels. A historical object-review flag is not a substitute for an actual material and disposal-eligibility annotation. The audit also noted 42 unreadable image aliases and five malformed or inaccessible JSON records, which were retained rather than silently repaired. Full provenance diagnostics and hashes are preserved in `results/research-readiness.json` and the external audit artifacts.
 
-The audit also records 42 unreadable/dangling image aliases, one malformed JSON
-process record, and four inaccessible historical JSON files. It did not modify or
-repair any original. Unmatched public source photos remain unresolved because
-complete lifetime fitting/selection histories and all capture relationships are
-not available. dHash cannot rule out every crop, viewpoint change or adjacent frame.
-Generic-pretraining exposure is also not certified absent.
+**Table 9.** Real-world sorting metrics that cannot be computed from the current development annotations.
 
-**Table 9.** Independent real-world disposal metrics — unavailable, not zero.
-
-| Metric | Independent result | Missing evidence |
+| Metric | Status | Evidence required |
 |---|---|---|
-| Precision, recall, F1 by actual bin | Not measured | Human per-object bin labels and independent images |
-| Correct-bin accuracy | Not measured | Independently established disposal eligibility |
-| Automatic coverage of independent objects | Not measured | Independently annotated object inventory |
-| Manual-review rate on independent cohort | Not measured | A confirmed independent cohort run |
+| Precision, recall, and F1 for actual disposal bins | Not measured | Independent images and adjudicated bin labels |
+| Correct-bin accuracy | Not measured | Verified local disposal eligibility |
+| Automatic coverage of independently labeled objects | Not measured | Complete, independent object annotations |
+| Manual-review burden on new cafeteria photographs | Not measured | A sealed school cohort |
 
-
+The lack of independently verified bin outcomes is not equivalent to a zero score. It means that the necessary ground truth does not yet exist in the audited records.
 
 # Error Analysis and Exploratory Stress Test
 
@@ -301,6 +264,8 @@ at that cutoff and saved confidence floor. These are competing hypotheses, not
 human-confirmed causes. A box can overlap other objects or depend on uncertain
 serving definitions. Background-or-missing-annotation likewise does not distinguish
 model hallucination from an incomplete label set.
+
+**Table 10.** Frozen historical-cohort object-detection error diagnostics for food and bottle at the default 0.50 confidence cutoff. Error types are algorithmic hypotheses, not human-confirmed causes.
 
 | Diagnostic category | Food | Bottle |
 |---|---:|---:|
@@ -350,6 +315,8 @@ eligibility cannot be concluded from the photo alone. A carton photo with
 three cartons yielded four carton boxes and another carton image yielded none.
 Crowded bottle images also exhibited overlapping boxes and cross-specialist labels.
 
+A separate provisional comparison scored 41 of these 44 public-source photographs using approximate AI-generated object labels. The unchanged V1 detectors obtained 46.25% mAP50 and 21.16% mAP50–95; a developmental hinged-container V3 candidate obtained 44.78% mAP50 and 21.47% mAP50–95. These numbers are not comparable to a sealed test benchmark: the annotations were not independently human-verified, three crowded bottle photographs were excluded from the scoring subset, and the entire source set had already been inspected during development. The V3 candidate was not adopted as the frozen system. This comparison is included only to document an exploratory stress test, not to claim a measured out-of-distribution performance change.
+
 These observations describe possible failure modes, not independently measured detection or disposal accuracy, and were not used to authorize a new training run.
 Individual photo references and limitations are documented in
 [the visual audit](https://github.com/cx-57/yolo-cafeteria-research/blob/archive/pre-cleanup-20261101/docs/exploratory-44-visual-audit.md). These public images may be
@@ -364,7 +331,7 @@ The main limitation of this study is that the reported benchmark images are deve
 
 A second limitation concerns the distinction between an object class and a disposal decision. The current rule layer does not inspect whether a bottle or carton is empty, whether food is contaminated by packaging, or whether a specific material is accepted by the school's collection program. It cannot automatically assign landfill disposal, and requesting manual review is an abstention rather than a correct sorting outcome. The results therefore cannot quantify correct-bin accuracy or reductions in waste contamination. Latency, throughput, energy use, and user interaction during a real cafeteria deployment have also not been measured. Source-license and attribution records must be checked before any external image redistribution.
 
-The next evaluation should use newly collected cafeteria photographs from capture sessions excluded from all training, threshold selection, and prior inspection. Inclusion criteria and capture-group membership should be fixed before model inference. Annotators who have not seen the model's predictions should mark each relevant object's bounding box and actual disposal eligibility using documented local collection rules and, when necessary, material and contents information unavailable from the photograph. Uncertain cases should be adjudicated or recorded as unscorable under a predefined protocol. On that sealed cohort, the unchanged system can then be evaluated for object detection, correct-bin precision and recall, prediction coverage, and manual-review burden, with uncertainty estimated across independent capture groups rather than treating multiple objects in one photograph as unrelated observations.
+The next evaluation should use newly collected cafeteria photographs from capture sessions excluded from all training, threshold selection, and prior inspection. Inclusion criteria and capture-group membership should be fixed before model inference. Annotators who have not seen the model's predictions should mark each relevant object's bounding box and actual disposal eligibility using documented local collection rules and, when necessary, material and contents information unavailable from the photograph. Uncertain cases should be adjudicated or recorded as unscorable under a predefined protocol. On that sealed cohort, the unchanged system can then be evaluated for object detection, correct-bin precision and recall, prediction coverage, and manual-review burden, with uncertainty estimated across independent capture groups rather than treating multiple objects in one photograph as unrelated observations. For each disposal stream, an automatic wrong-bin recommendation should count against the predicted stream; a reviewed or missed item should not be credited as a successful automatic disposal decision. Reporting only accuracy among accepted decisions would conceal the effect of abstention, so the study should also report the fraction of *all* eligible labeled items assigned correctly without review.
 
 # Conclusion
 
@@ -373,36 +340,18 @@ The four-specialist YOLO11 system achieved 87.78% mAP50 and 67.24% mAP50–95 on
 
 # Reproducibility and Data Availability
 
-Maintained code/configuration/results are in Git. Images, checkpoints, historical
-experiments and the detailed 35 MB asset inventory remain external and intact.
-GitHub alone therefore cannot reproduce native inference without the external
-checkpoints and data. Publishing the source does not distribute the external checkpoints or image datasets.
+The retained implementation, experiment configuration, and summary results are maintained in the [GitHub repository](https://github.com/cx-57/yolo-cafeteria-research). The paper's frozen configuration, `configs/research-freeze.json`, records the four checkpoint hashes, class mappings, preprocessing settings, and active disposal rules. Existing benchmark outputs are in `results/sorting-verification.json`, with provenance and annotation limitations in `results/research-readiness.json`. The corresponding procedures are documented in `docs/sorting-evaluation.md`.
 
-- `configs/research-freeze.json`: checkpoint, policy, manifest and benchmark pins.
-- `results/sorting-verification.json`: prior verified replay and detection metrics.
-- `results/research-readiness.json`: this audit's compact findings and null bin metrics.
-- `scripts/research_audit.py`: conservative inventory, pixel/perceptual screening,
-  provenance indexing and tested error-diagnostic functions.
-- External `artifacts/research-finalization-20261101/`: protocol, complete image and
-  metadata inventory, read failures, error details, visual-review selection/notes,
-  environment metadata and shareable statistical figure. Its summaries link hashes
-  of detailed evidence; generated files are analysis artifacts, not new datasets.
+The underlying images, checkpoint binaries, and detailed local audit artifacts are stored separately from Git in `~/Desktop/yolo-cafeteria-research-assets/`. In particular, the combined dataset manifest and the repaired validation and historical-test annotations are external assets. Source URLs and historical licensing declarations are recorded in `data/datasets.csv` and `data/manifests/` within that asset collection, but licenses and redistribution rights have not been independently verified. The GitHub source alone is therefore insufficient to reproduce native inference, and no public release of the collected school photographs is implied.
 
-From the repo root, with a fresh output path:
+The original audit implementation is retained in `scripts/research_audit.py`. With the external asset environment present, its file inventory can be reproduced by executing:
 
 ```sh
 ../yolo-cafeteria-research-assets/venv/bin/python -B scripts/research_audit.py --output /tmp/cafeteria-asset-audit.json
 ../yolo-cafeteria-research-assets/venv/bin/python -B -m unittest discover -s tests -v
 ```
 
-This audit does not run YOLO or train. Its dHash/source paths are defined in code;
-future added files may change inventory totals without changing the frozen models.
-The main replay/evaluation reproduction commands and frozen receipts are in
-[sorting-evaluation.md](../docs/sorting-evaluation.md). Existing outputs refuse overwrite.
-For actual independent bin metrics, use the existing `scripts/evaluate_sorting.py`
-with new independently human-verified truth and the unchanged frozen sorting policy;
-the required label format and matching convention are documented in that report.
-
+These commands audit retained files and run software tests; they do not retrain YOLO or establish independent sorting accuracy. A future bin-label evaluation should use `scripts/evaluate_sorting.py` with a new, independently verified disposal-eligibility annotation file and the frozen prediction policy.
 
 # References
 
