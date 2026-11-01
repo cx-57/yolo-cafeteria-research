@@ -30,7 +30,7 @@ header-includes:
 ---
 
 
-**Abstract.** Sorting cafeteria waste requires more than recognizing discarded objects: a carton, wrapper, or food container may still require information about its material, contents, or local collection rules. We evaluate a vision-assisted prototype consisting of four specialized YOLO11 detectors for seven cafeteria-item classes and a rule-based policy that either suggests a disposal stream or requests manual review. On 248 previously examined development photographs containing 924 AI-assisted object annotations, the frozen system achieved 87.78% mAP50 and 67.24% mAP50–95. At a confidence threshold of 0.50, object-detection precision was 93.42%, with 78.35% recall. Class-specific thresholds selected using 186 validation photographs raised precision to 97.03% on validation and 97.22% on the historically exposed 248-image cohort; recall fell to 71.43% and 68.18%, respectively. Only six of those 248 images came from the participating school, and a provenance audit found no confirmed independent test cohort or human-verified disposal-bin labels. The results therefore characterize development-set recognition and its precision–recall trade-off, not the accuracy of actual composting or recycling decisions.
+**Abstract.** Sorting cafeteria waste requires more than recognizing discarded objects: a carton, wrapper, or food container may still require information about its material, contents, or local collection rules. We evaluate a vision-assisted prototype consisting of four specialized YOLO11 detectors for seven cafeteria-item classes and a rule-based policy that either suggests a disposal stream or requests manual review. On 248 previously examined development photographs containing 924 AI-assisted object annotations, the frozen system achieved 87.78% mAP50 and 67.24% mAP50–95. At a confidence threshold of 0.50, object-detection precision was 93.42%, with 78.35% recall. Class-specific thresholds selected using 186 validation photographs raised precision to 97.03% on validation and 97.22% on the historically exposed 248-image cohort, while reducing recall to 71.43% and 68.18%, respectively. The historical-cohort F1 also declined from 85.23% to 80.15%. Only six of those 248 images came from the participating school, and a provenance audit found no confirmed independent test cohort or human-verified disposal-bin labels. The results therefore characterize development-set recognition and its precision–recall trade-off, not the accuracy of actual composting or recycling decisions.
 
 *Keywords:* cafeteria waste, object detection, YOLO11, selective prediction, precision–recall trade-off, evaluation provenance.
 
@@ -160,7 +160,7 @@ The selected thresholds were applied unchanged to the 248-image historical cohor
 # Results
 
 **Table 4.** Per-class fixed-threshold object-recognition metrics on the exposed
-248-photo cohort (confidence>=0.50, IoU>=0.50); AP uses the full frozen score range.
+248-photo cohort (confidence ≥ 0.50, IoU ≥ 0.50); AP uses the full frozen score range.
 These are descriptive development results, not independent bin classification.
 
 | Class | TP / FP / FN | Precision | Recall | F1 | AP50 | AP50–95 |
@@ -208,7 +208,7 @@ The default display policy emitted 881 detections at confidence 0.25 or above. O
 
 
 
-## Precision--Recall Trade-off After Threshold Selection
+## Precision–Recall Trade-off After Threshold Selection
 
 **Table 7.** Overall seven-class micro object recognition at box IoU $\geq$ 0.50; same source images and labels within each cohort.
 
@@ -297,10 +297,8 @@ source-screened public photographs (nine bottle-source, six carton-source,
 15 utensil-source, 12 hinged-container-source and two wrapper-source images).
 There were 149 displayed predictions at the 0.25 confidence floor: 12 compost
 suggestions, 49 recycling suggestions and 88 manual-review outcomes. Three photos
-had no displayed detections. These are **prediction counts only**: there are no
-human-verified object boxes, original capture-day independence certificates, or
-school bin-eligibility labels, so recognition mAP, correct-bin accuracy and sorting
-precision are **unmeasured** on this cohort.
+had no displayed detections. These counts describe emitted predictions, not verified outcomes: there are no
+human-verified object boxes, documented capture-day independence, or school bin-eligibility labels. Accordingly, no **human-verified detection mAP, correct-bin accuracy, or sorting precision** is available for the complete 44-image cohort. The separate 41-image approximate-label diagnostic below is not a substitute for that missing evaluation.
 
 A preliminary image-level *source-hint* cross-check found at least one matching
 model class on 9/9 bottle-source, 5/6 carton-source, 12/15 utensil-source,
