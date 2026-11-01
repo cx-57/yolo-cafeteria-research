@@ -5,6 +5,11 @@ cafeteria item classes: food, plate, utensil, hinged container, drink carton,
 wrapper, and bottle. A separate rule layer suggests compost, recycling, or
 manual review. Object recognition is **not** verified disposal-bin accuracy.
 
+## Research paper
+
+**[Read the 10-page PDF research preprint](paper/cafeteria-waste-sorting.pdf)** |
+[Editable source and full methodology](paper/manuscript.md)
+
 ## Results
 
 | Frozen V1 metric | Development validation (186 photos) | Historical test (248 photos) |
