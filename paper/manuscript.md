@@ -14,21 +14,19 @@ toc: false
 header-includes:
   - \usepackage{microtype}
   - \usepackage{booktabs}
-  - \usepackage{titling}
-  - \usepackage{titlesec}
+  - |
+    \makeatletter
+    \renewcommand{\maketitle}{%
+      \begin{center}
+        {\LARGE\bfseries\@title\par}
+        \vspace{0.7em}
+        {\normalsize\@author\par}
+      \end{center}
+      \vspace{1em}
+    }
+    \makeatother
   - \setlength{\parindent}{1em}
   - \setlength{\parskip}{0pt}
-  - \setlength{\droptitle}{-2.5em}
-  - \pretitle{\begin{center}\bfseries\LARGE}
-  - \posttitle{\par\end{center}\vspace{0.45em}}
-  - \preauthor{\begin{center}\normalsize}
-  - \postauthor{\par\end{center}\vspace{0.25em}}
-  - \predate{}
-  - \postdate{}
-  - \titleformat{\section}{\large\bfseries}{\thesection}{0.5em}{}
-  - \titleformat{\subsection}{\normalsize\bfseries\itshape}{\thesubsection}{0.5em}{}
-  - \titlespacing*{\section}{0pt}{10pt}{4pt}
-  - \titlespacing*{\subsection}{0pt}{7pt}{3pt}
 ---
 
 
