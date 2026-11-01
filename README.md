@@ -19,6 +19,8 @@ an existing bundle; its source is `scripts/package_review_candidates.py`.
 
 The latest provisional image review and evaluation blockers are recorded in [the November 1 evaluation handoff](docs/evaluation-review-handoff-20261101.md) and [its machine-readable audit](results/provisional-screening-20261101.json). The conversation delivered a separate 44-photo offline review ZIP and its Python/HTML source toolkit; these image assets and tools are **not** part of this Git repository. No independent validation claims follow from the provisional photos.
 
+For a **no-manual-labels exploratory run** on the 44-photo review ZIP, use [the frozen-model visual test instructions](docs/exploratory-44-run.md): `./scripts/run_specialists.sh explore ...`. This generates bounding-box overlays and prediction counts, **not** accuracy or independently verified waste-sorting performance.
+
 Four YOLO specialists detect seven classes:
 
 | Model | Classes |
