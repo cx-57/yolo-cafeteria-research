@@ -76,7 +76,7 @@ def run(bundle, candidate, output, device='mps'):
                     draw.text((row[0],max(0,row[1]-16)),f'{cls} {confidence:.2f}',fill=color)
                 classes={box['class'] for box in boxes}
                 sample[name]={'detections':boxes,'source_hint_class_detected':hint_matches(hint,classes)}
-                if hint in counts and sample[name]['source_hint_class_detected']:
+                if hint in counts[name] and sample[name]['source_hint_class_detected']:
                     counts[name][hint]+=1
                 panels.append(panel)
             if hint=='hinged_container_candidate':
