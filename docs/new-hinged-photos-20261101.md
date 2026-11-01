@@ -20,3 +20,33 @@ The 29-photo selection was based on qualitative review of the new contact sheet 
 4. Make a new candidate, keeping the original four specialists frozen; compare against the unchanged validation metrics and use the 12 public hinged-source photos for qualitative diagnostics only.
 
 **No new model training or improved mAP has occurred during this acquisition.**
+
+## New AI-visual draft annotations for a separate training candidate
+
+- [Download the 29-photo annotated YOLO train-only ZIP from GitHub (11.2 MB)](https://github.com/cx-57/yolo-cafeteria-research/actions/runs/41334026397/artifacts/13094591299).
+- 29 photos, **24 hinged-container boxes** across **22 photos**, **28 food boxes**, and **7 hard-negative photos** (one entirely background-only). Zero drink cartons appear in the new photos.
+- Class IDs in the ZIP are specific to the original *three-class* food/container/carton specialist: `0=food, 1=hinged_container, 2=drink_carton`.
+- Image/checksum/YOLO-label validation passed on GitHub Actions; red/green overlays and source attribution are included in the ZIP. The annotations are **AI-assisted draft visual labels** and **not independently human verified**. Some closed boxes and mixed meals need additional expert review. This dataset is for **development training only**, not ground-truth validation or test scoring.
+
+### One-command Mac experiment (v3)
+
+Download the GitHub annotated ZIP above to your Mac's `Downloads` folder, then:
+
+```bash
+cd ~/Desktop/yolo-cafeteria-research
+git pull --ff-only origin main
+
+./scripts/run_specialists.sh hinge all \
+  --out "$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/hinged-candidate-v3-newphotos" \
+  --device mps \
+  --bundle "$HOME/Downloads/cafeteria-44-image-review-kit-github.zip" \
+  --extra-annotated "$HOME/Downloads/hinged-29-annotated-train-only-AI-DRAFT.zip"
+```
+
+This creates **new candidate weights**, updates neither the frozen baseline nor original training labels, checks exact-byte overlaps with existing train/validation/test photos and the 44-photo stress bundle, and produces frozen-development validation and 12-photo side-by-side stress comparisons. Historical *near duplicates* remain a limitation; exact hash non-overlap is not an independence certificate.
+
+Inspect:
+`.../hinged-candidate-v3-newphotos/validation-gate.json` and
+`.../hinged-candidate-v3-newphotos/stress-comparison/comparison.json`.
+Neither establishes independent accuracy; hinged-container support in the corrected 186-image validation set is only two boxes.
+
