@@ -7,6 +7,14 @@ sorting rules are frozen. Existing scores characterize exposed development data;
 no confirmed independent cohort or verified human disposal-bin labels were found.
 Actual real-world correct-bin accuracy remains unmeasured.
 
+The November 1 individual image review is recorded in
+[the 100-image CSV](results/image-selection-20261101.csv) and
+[the packaging summary](results/image-selection-20261101.json): 52 provisional
+KEEP, 35 REJECT and 13 UNCERTAIN. **Zero are independently certified.**
+The checked 52-image ZIP remains in the external assets folder; these food/plate
+candidates are not a complete seven-class benchmark. Packaging refuses to overwrite
+an existing bundle; its source is `scripts/package_review_candidates.py`.
+
 Four YOLO specialists detect seven classes:
 
 | Model | Classes |
