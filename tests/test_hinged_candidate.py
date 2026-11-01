@@ -178,6 +178,20 @@ class HingedTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'SHA'):
                 h.verify_parent_candidate(parent,baseline)
 
+    def test_v4_parent_validation_compares_identical_support(self):
+        import copy
+        import specialists
+        with tempfile.TemporaryDirectory() as temp:
+            parent=Path(temp)
+            original=specialists.read(specialists.ROOT/'results/baseline.json')
+            (parent/'candidate-validation.json').write_text(json.dumps(original))
+            candidate=copy.deepcopy(original)
+            candidate['AP50']=original['AP50']+0.002
+            candidate['per_class']['food']['AP50']+=0.014
+            report=h.parent_validation_report(parent,candidate,original)
+            self.assertAlmostEqual(0.002,report['delta_AP50'])
+            self.assertAlmostEqual(0.014,report['per_class_delta']['food']['AP50'])
+
     def test_v4_rejects_wrong_parent_class_head(self):
         import copy
         import specialists
