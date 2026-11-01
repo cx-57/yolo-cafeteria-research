@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-01",
+  "source": "https://github.com/nikhilvenkatkumsetty/TrashBox",
+  "collection_method": "Public repository tree, source folder hints, direct image downloads in GitHub Actions",
+  "acquisition_run_id": 41315363803,
+  "acquisition_artifact_id": 13087285657,
+  "artifact_expires": "2026-11-08",
+  "status": "PROVISIONAL_VISUAL_CANDIDATES_NOT_AN_INDEPENDENT_TEST",
+  "source_images_downloaded": 48,
+  "visual_review": {
+    "KEEP": 15,
+    "REJECT": 28,
+    "UNCERTAIN": 5
+  },
+  "keep_by_class_hint": {
+    "bottle": 9,
+    "drink_carton": 6,
+    "hinged_container": 0,
+    "wrapper": 0,
+    "utensil": 0
+  },
+  "all_generic_container_images_rejected": true,
+  "no_exact_duplicates_within_48": true,
+  "local_historical_archive_overlap_check": "NOT_PERFORMED_THIS_SESSION",
+  "independently_certified_images": 0,
+  "human_object_class_labels": 0,
+  "human_disposal_bin_labels": 0,
+  "rights_review": "SOURCE_IMAGE_REDISTRIBUTION_RIGHTS_UNVERIFIED",
+  "target_domain": "school cafeteria",
+  "actual_source_domain": "mixed product shots, retail images, outdoor/broad waste",
+  "visual_protocol": "Every candidate assessed for object definition, visibility, quality, watermarks, scene suitability; source class hints were not accepted as truth.",
+  "archived_outputs": "48-photo source artifact in GitHub Actions; separate 15-photo provisional bundle and full 48-row review CSV held in ChatGPT conversation artifacts, not source-control",
+  "rejected_mendeley_attempt": {
+    "source": "CoxPWD v3",
+    "status": "HTTP_401",
+    "images_downloaded": 0
+  },
+  "caveats": [
+    "Do not combine visual KEEP with verified independent test samples.",
+    "All 16 generic plastic-container images fail the hinged-container definition.",
+    "No correct compost/recycling/landfill ground truth exists for these images.",
+    "Cannot claim real-world sorting accuracy, full seven-class coverage, or independent model performance.",
+    "Individual source-image copyrights/rights are unverified."
+  ]
+}
