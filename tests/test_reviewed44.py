@@ -70,14 +70,14 @@ class Reviewed44Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);bundle,review=self.setup_source(root)
             review['images'][3]['boxes'][0]['status']='AI_DRAFT_UNVERIFIED'
-            with self.assertRaisesRegex(ValueError,'AI draft'):
+            with self.assertRaisesRegex(ValueError,'requires HUMAN_REVIEWED'):
                 dataset_from_review(bundle,review,root/'out')
 
     def test_refuses_unreviewed_image(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);bundle,review=self.setup_source(root)
             review['images'][5]['reviewed']=False
-            with self.assertRaisesRegex(ValueError,'not manually'):
+            with self.assertRaisesRegex(ValueError,'not human-confirmed'):
                 dataset_from_review(bundle,review,root/'out')
 
     def test_scoring_exclusion_and_optional_all_44(self):
