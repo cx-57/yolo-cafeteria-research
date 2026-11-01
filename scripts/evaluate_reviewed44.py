@@ -20,7 +20,7 @@ from storage import ROOT
 FORMAT='CAFETERIA_PROVISIONAL_HUMAN_REVIEW_V1'
 CLASSES=s.NAMES
 
-def dataset_from_review(bundle, review, folder, include_excluded=False):
+def dataset_from_review(bundle, review, folder, include_excluded=False, allow_ai_review=False):
     if review.get('format')!=FORMAT or review.get('not_independent') is not True:
         raise ValueError('Expected exported human-review JSON with not_independent=true')
     with zipfile.ZipFile(bundle) as z:
@@ -41,7 +41,7 @@ def dataset_from_review(bundle, review, folder, include_excluded=False):
             raise ValueError('Review and ZIP contain DIFFERENT photo bytes: '
                              f'missing {len(missing)}, unexpected {len(unexpected)}; '
                              'use a review export from the SAME 44-image collection')
-        records=[];per_class=Counter();skipped=[]
+        records=[];per_class=Counter();skipped=[];review_methods=Counter()
         folder.mkdir(parents=True,exist_ok=True)
         for index,image in enumerate(entries,1):
             marked=by_hash[image['sha256']]
@@ -52,14 +52,22 @@ def dataset_from_review(bundle, review, folder, include_excluded=False):
             if not image.get('scoring_eligible',True) and not include_excluded:
                 skipped.append(image['id'])
                 continue
-            if marked.get('reviewed') is not True:
-                raise ValueError(f'Photo {index} is not manually marked fully reviewed: {image["id"]}')
+            human=marked.get('reviewed') is True
+            assistant=(marked.get('assistant_reviewed') is True and
+                       marked.get('reviewed') is False and allow_ai_review)
+            if not (human or assistant):
+                raise ValueError(f'Photo {index} is not human-confirmed'
+                                 + (' or assistant-visually-reviewed with --allow-ai-reviewed' if allow_ai_review else '')
+                                 + ': '+image['id'])
+            method='human_marked' if human else 'assistant_visual_approximate'
+            review_methods[method]+=1
             if not isinstance(marked.get('boxes'),list):
                 raise ValueError(f'Photo {index} missing reviewed boxes array')
             lines=[]
             for bi,box in enumerate(marked['boxes'],1):
-                if box.get('status')!='HUMAN_REVIEWED':
-                    raise ValueError(f'Photo {index}, box {bi}: AI draft not individually confirmed')
+                expected='HUMAN_REVIEWED' if human else 'AI_VISUAL_REVIEWED'
+                if box.get('status')!=expected:
+                    raise ValueError(f'Photo {index}, box {bi}: requires {expected} box status; draft boxes are not scored')
                 cls=box.get('class_name')
                 coords=box.get('box_xyxy_normalized')
                 if cls not in CLASSES or not isinstance(coords,list) or len(coords)!=4:
@@ -79,7 +87,8 @@ def dataset_from_review(bundle, review, folder, include_excluded=False):
             records.append(dict(name=name,image_path=str(path),sha256=digest,
                 rows=lines,known_classes=list(range(7)),
                 source_hint=image.get('source_hint',''),
-                review_verified_by_user=True))
+                review_verified_by_user=human,
+                assistant_visual_provisional=assistant))
     if not records:
         raise ValueError('No user-reviewed, scoring-eligible photos')
     if include_excluded and len(records)!=44:
@@ -92,6 +101,9 @@ def dataset_from_review(bundle, review, folder, include_excluded=False):
     return records,dict(total_source_photos=44,scored_photos=len(records),
         excluded_photo_ids=skipped,annotation_objects=dict(per_class),
         human_review_check='user-marked statuses checked, not independently audited',
+        review_methods=dict(review_methods),
+        label_quality=('AI_ASSISTANT_VISUAL_APPROXIMATE_NOT_HUMAN_VERIFIED'
+                       if review_methods['assistant_visual_approximate'] else 'USER_MARKED_HUMAN_REVIEW_NOT_INDEPENDENTLY_AUDITED'),
         independent_test=False)
 
 def summarize(result):
@@ -99,7 +111,7 @@ def summarize(result):
                 images=result['images'],
                 per_class=result['per_class'])
 
-def compare(bundle,review_path,v3_config,output,device,include_excluded):
+def compare(bundle,review_path,v3_config,output,device,include_excluded,allow_ai_review=False):
     if output.exists():
         raise FileExistsError('Refusing to overwrite '+str(output))
     bundle=Path(bundle).expanduser().resolve()
@@ -119,7 +131,7 @@ def compare(bundle,review_path,v3_config,output,device,include_excluded):
     if s.sha(ROOT/primary['weights'])!=primary['sha256']:
         raise ValueError('V3 weights differ from candidate config SHA256')
     with tempfile.TemporaryDirectory(prefix='cafeteria-44-reviewed-') as td:
-        records,info=dataset_from_review(bundle,review,Path(td),include_excluded)
+        records,info=dataset_from_review(bundle,review,Path(td),include_excluded,allow_ai_review)
         results={}
         for label,config in (('original',s.CONFIG),('v3',v3_config)):
             print(f'Evaluating {label}: {len(records)} identical source photos...',flush=True)
@@ -129,8 +141,11 @@ def compare(bundle,review_path,v3_config,output,device,include_excluded):
             results[label]=summarize(scored)
         if frozen.check_frozen(ROOT)!=frozen_fingerprints:
             raise ValueError('Frozen model files changed while scoring')
-    summary=dict(status='USER_REVIEWED_DEVELOPMENT_DIAGNOSTIC_NOT_INDEPENDENT',
-        caveat='44 photos were repeatedly inspected for model development; this is NOT an untouched independent test. Reviewed labels have not been third-party audited.',
+    assistant_labels=bool(info['review_methods'].get('assistant_visual_approximate'))
+    summary=dict(status=('ASSISTANT_VISUAL_LABEL_DIAGNOSTIC_NOT_VERIFIED_GROUND_TRUTH'
+                         if assistant_labels else 'USER_REVIEWED_DEVELOPMENT_DIAGNOSTIC_NOT_INDEPENDENT'),
+        caveat=('AI-reviewed approximate labels NOT human ground truth; photo series was used in model development; score is exploratory, not test accuracy or generalization.'
+                if assistant_labels else '44 photos were repeatedly inspected for model development; this is NOT an untouched independent test. Reviewed labels have not been third-party audited.'),
         image_audit=info,
         source_bundle_sha256=s.sha(bundle),
         user_review_sha256=s.sha(review_path),
@@ -143,7 +158,8 @@ def compare(bundle,review_path,v3_config,output,device,include_excluded):
     s.save(output,summary)
     print(json.dumps(dict(
         images_scored=info['scored_photos'],
-        human_review_not_independent=True,
+        label_quality=info['label_quality'],
+        independent_test=False,
         original_AP50=results['original']['AP50'],
         v3_AP50=results['v3']['AP50'],
         delta_AP50=summary['delta_AP50'],
@@ -162,8 +178,10 @@ def main():
     p.add_argument('--device',choices=['cpu','mps'],default='mps')
     p.add_argument('--include-excluded',action='store_true',
                    help='Score all 44 including 3 crowded bottle photos ONLY if every visible instance was exhaustively annotated')
+    p.add_argument('--allow-ai-reviewed',action='store_true',
+                   help='EXPLORATORY ONLY: score AI-visually-reviewed approximate boxes, NOT human ground truth or independent test AP')
     a=p.parse_args()
-    compare(a.bundle,a.review,a.v3_config,a.output,a.device,a.include_excluded)
+    compare(a.bundle,a.review,a.v3_config,a.output,a.device,a.include_excluded,a.allow_ai_review)
 
 if __name__=='__main__':
     main()
