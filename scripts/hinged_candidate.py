@@ -246,7 +246,7 @@ def evaluate(args,out):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('mode',choices=['train','evaluate','stress'])
+    p.add_argument('mode',choices=['all','train','evaluate','stress'])
     p.add_argument('--data',type=Path,default=DEFAULT_DATA)
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--manifest',type=Path,default=EVALUATION)
@@ -262,18 +262,28 @@ def main():
     if a.epochs<1 or not 1<=a.repeat<=5 or a.support_cap<1 or a.background_cap<0 or not 0<a.lr<0.1:
         p.error('Invalid experiment training settings')
     out=a.out.expanduser().resolve()
-    if a.mode == 'train':
-        result=train(a,out)
-    elif a.mode == 'evaluate':
-        result=evaluate(a,out)
-    else:
+    if a.mode in ('all','train'):
+        trained=train(a,out)
+        if a.mode == 'train':
+            result=trained
+    if a.mode in ('all','evaluate'):
+        validation=evaluate(a,out)
+        if a.mode == 'evaluate':
+            result=validation
+    if a.mode in ('all','stress'):
         if not a.bundle:
-            p.error('--bundle is required for stress mode')
+            p.error('--bundle is required for stress comparison')
         from compare_hinged_stress import run as compare_stress
-        result=compare_stress(a.bundle.expanduser().resolve(),
+        stress=compare_stress(a.bundle.expanduser().resolve(),
                               out/'fit/weights/best.pt',
                               out/'stress-comparison',a.device)
-        result={k:v for k,v in result.items() if k!='per_image'}
+        stress={k:v for k,v in stress.items() if k!='per_image'}
+        result=stress if a.mode=='stress' else dict(
+            trained_candidate=trained['candidate_weight'],
+            validation=validation,
+            stress=stress,
+            frozen_models_unchanged=True,
+            promotion='NONE; candidate is not a validated replacement')
     print(json.dumps(result,indent=2))
 
 
