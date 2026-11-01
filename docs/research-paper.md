@@ -331,6 +331,38 @@ classification-head trial changed validation bottle AP50/AP50–95 from
 failed. There was no candidate test scoring or activation. This is a documented
 negative result, not a new model improvement. No retraining was performed here.
 
+### Exploratory 44-photo public-source stress test (qualitative; not independent)
+
+After the research freeze, the unchanged four detectors were run on 44
+source-screened public photographs (nine bottle-source, six carton-source,
+15 utensil-source, 12 hinged-container-source and two wrapper-source images).
+There were 149 displayed predictions at the 0.25 confidence floor: 12 compost
+suggestions, 49 recycling suggestions and 88 manual-review outcomes. Three photos
+had no displayed detections. These are **prediction counts only**: there are no
+human-verified object boxes, original capture-day independence certificates, or
+school bin-eligibility labels, so recognition mAP, correct-bin accuracy and sorting
+precision are **unmeasured** on this cohort.
+
+A preliminary image-level *source-hint* cross-check found at least one matching
+model class on 9/9 bottle-source, 5/6 carton-source, 12/15 utensil-source,
+4/12 hinged-container-source and 0/2 wrapper-source photos. These fractions
+are **not recall**: source names are not exhaustive human object labels, and some
+images contain multiple target items. Visual inspection suggests repeated
+plate/hinged-container confusion on open foam food boxes and missing wrapper
+detections. A foil meal tray was detected as `drink_carton` at confidence 0.617,
+triggering an automatic recycling suggestion under the frozen user-selected
+policy. This is a plausible wrong-object automatic action; actual local bin
+eligibility cannot be concluded from the photo alone. A carton photo with
+three cartons yielded four carton boxes and another carton image yielded none.
+Crowded bottle images also exhibited overlapping boxes and cross-specialist labels.
+
+These observations supply **qualitative failure-mode examples**, not evidence of a
+measured performance change or an authorization to retrain on a future holdout.
+Individual photo references and limitations are documented in
+[the visual audit](exploratory-44-visual-audit.md). These public images may be
+out-of-distribution relative to actual cafeteria disposal scenes, and original
+source rights require review before reproducing them in a publication.
+
 ## 8. Limitations and required independent study
 
 1. Development exposure and uncertain historical lineage prevent independent
