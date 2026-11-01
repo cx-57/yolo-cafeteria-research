@@ -1,4 +1,4 @@
-"""Unit tests for strict 44-photo review-to-AP protocol (synthetic files)."""
+"""Synthetic unit tests: 44-image human-review validation before model scoring."""
 import hashlib
 import json
 import sys
