@@ -181,7 +181,7 @@ def main():
     p.add_argument('--allow-ai-reviewed',action='store_true',
                    help='EXPLORATORY ONLY: score AI-visually-reviewed approximate boxes, NOT human ground truth or independent test AP')
     a=p.parse_args()
-    compare(a.bundle,a.review,a.v3_config,a.output,a.device,a.include_excluded,a.allow_ai_review)
+    compare(a.bundle,a.review,a.v3_config,a.output,a.device,a.include_excluded,a.allow_ai_reviewed)
 
 if __name__=='__main__':
     main()
