@@ -65,6 +65,19 @@ class HingedTests(unittest.TestCase):
                 for p in train_files for row in p.read_text().splitlines()))
             self.assertEqual('',next(p for p in val_files if p.read_text()=='').read_text())
 
+    def test_corrected_frozen_validation_overrides_stale_disk_label(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            info=self.make_info(root/'src')
+            corrected={r['sha256']:[] for r in info['records']['val']}
+            corrected[info['records']['val'][-1]['sha256']]=['3 0.5 0.5 0.5 0.5']
+            out=root/'snapshot'
+            h.export_dataset(info,out,repeat=1,support_cap=1,background_cap=1,
+                             val_rows_by_sha=corrected)
+            val_files=list((out/'labels'/'val').glob('*.txt'))
+            self.assertEqual(1,sum(x.read_text().startswith('1 ') for x in val_files))
+            self.assertEqual(3,sum(not x.read_text().strip() for x in val_files))
+
     def test_cannot_reuse_output(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
