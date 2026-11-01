@@ -291,6 +291,60 @@ validation AP50/AP50–95 rose from 77.77%/59.55% to 82.47%/62.00%; test
 rose from 70.13%/56.86% to 75.27%/59.62%. The other specialists remain
 unchanged. Detector scores are not affected by this disposal-rule update.
 
+### Reproduce the sorting decision counts (no new YOLO inference)
+
+If you have the existing per-image frozen prediction JSON in the external assets
+folder, replay the currently selected no-empty-check rules directly:
+
+```sh
+./scripts/run_specialists.sh replay /absolute/path/to/frozen-predictions.json \
+  --expected-images 248 --output /absolute/path/to/sorting-replayed.json
+```
+
+The replay verifies the active config and image identities stored in the receipt,
+but it cannot independently verify image pixels or checkpoint bytes by default.
+Use `--verify-images` if the original images exist locally. If the receipt uses
+different checkpoint/config hashes, replay stops rather than silently changing
+model versions. The projected 337 compost / 173 recycling / 371 review count
+above is **not** a verified replay until this command succeeds on the exact
+248-photo receipt.
+
+The existing food and recycling-candidate recognition results can be combined
+arithmetically as a limited class-specific proxy:
+**489 correctly matched of 510 automatic decisions (95.88% precision)**,
+**489 of 624 labeled food/bottle/carton objects (78.37% recall)**,
+and **86.24% F1**. See
+[combined proxy and limitations](results/combined-sorting-proxy.json).
+This is **not verified correct-bin accuracy**: the original labels say what
+object is pictured, not whether its material/contents qualify for the school
+recycling stream. This aggregation does not replace a fresh joint matching pass.
+
+### Weak-class optimization without regression
+
+The active model is not altered automatically. For a candidate checkpoint,
+evaluate it on exactly the same frozen 186-photo validation manifest, then run:
+
+```sh
+./scripts/run_specialists.sh guard results/baseline.json \
+  /absolute/path/to/candidate-validation.json --target bottle \
+  --output /absolute/path/to/bottle-retention.json
+```
+
+The candidate must improve the target class AP50–95 by at least 0.01
+(one percentage point) and avoid any per-class or macro AP50/AP50–95 decline
+greater than 0.002 (0.2 percentage points). A changed validation manifest
+or image/label counts fails the gate. An optional historical 124-photo
+retention check uses `--historical-baseline` and
+`--historical-candidate`, supplied together. A guard pass does not deploy
+weights or prove independent generalization. Do not tune on the 248-photo
+test set; evaluate fresh holdout school captures after choosing a candidate.
+
+Current priority is bottle recognition (33/43 matches at confidence >=0.50,
+24/57 labeled bottles missed or below threshold). Food generalization to
+fresh school photos remains unverified. Secondary diagnostic targets are
+wrapper localization and utensil validation accuracy. Avoid raising AP
+numbers by excluding difficult but valid samples or reusing test labels.
+
 Use [the independent sorting evaluation protocol](docs/sorting-evaluation.md)
 to collect human-verified bin labels. Existing test photographs may have been
 exposed to training or model selection, and the repaired labels are AI-assisted,
