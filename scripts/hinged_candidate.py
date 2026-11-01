@@ -189,10 +189,95 @@ def append_new_annotated_train(extra_zip, output_dir, previous_shas, stress_shas
     return {k:v for k,v in result.items() if k!='image_records'}
 
 
+def verify_parent_candidate(parent, baseline=None):
+    """Verify a previous *separate* experiment before using its best.pt.
+
+    Enforces the frozen class head, checkpoint SHA, same baseline validation
+    cohort, and original three-class checkpoint provenance.
+    """
+    parent=Path(parent).expanduser().resolve()
+    if not parent.is_dir():
+        raise FileNotFoundError('Parent candidate directory unavailable: '+str(parent))
+    previous=s.read(parent/'experiment.json')
+    weights=parent/'fit/weights/best.pt'
+    config=s.read(parent/'candidate-specialists.json')
+    validation=s.read(parent/'candidate-validation.json')
+    stress=s.read(parent/'stress-comparison/comparison.json')
+    baseline=baseline or s.read(DEFAULT_BASELINE)
+    frozen_config=s.read(s.CONFIG)
+    specs={item['id']:item for item in config['models']}
+    base_specs={item['id']:item for item in frozen_config['models']}
+    if previous.get('status')!='TRAINED_NOT_PROMOTED':
+        raise ValueError('Parent experiment was not finalized as separate candidate')
+    if previous.get('original_frozen_checkpoint_sha256')!=base_specs['food-container-carton']['sha256']:
+        raise ValueError('Parent was not trained from this frozen original checkpoint')
+    if previous.get('corrected_validation_manifest_sha256')!=baseline['manifest_sha256']:
+        raise ValueError('Parent used a different validation cohort')
+    if not weights.is_file() or s.sha(weights)!=previous.get('candidate_sha256'):
+        raise ValueError('Parent best.pt absent or differs from its recorded SHA')
+    if Path(previous.get('candidate_weight','')).resolve()!=weights:
+        raise ValueError('Parent recorded different candidate weight path')
+    spec=specs.get('food-container-carton')
+    if not spec or spec.get('classes')!=list(OWNED):
+        raise ValueError('Parent does not have original three-class head')
+    if Path(spec.get('weights','')).resolve()!=weights or spec.get('sha256')!=s.sha(weights):
+        raise ValueError('Parent model config does not match its best.pt')
+    if set(specs)!=set(base_specs) or any(
+            specs[k]!=base_specs[k] for k in base_specs if k!='food-container-carton'):
+        raise ValueError('Parent changed a specialist other than food-container-carton')
+    if validation.get('images')!=baseline['images'] or validation.get('manifest_sha256')!=baseline['manifest_sha256']:
+        raise ValueError('Parent validation set differs from frozen baseline')
+    if set(validation.get('per_class',{}))!=set(baseline['per_class']):
+        raise ValueError('Parent validation class mapping differs')
+    if stress.get('images')!=44 or stress.get('original_checkpoint_sha256')!=base_specs['food-container-carton']['sha256']:
+        raise ValueError('Parent source-hint diagnostics do not match original checkpoint')
+    if stress.get('source_hint_image_counts',{}).get('hinged_container_candidate')!=12:
+        raise ValueError('Parent stress cohort does not contain 12 hinged-source photographs')
+    return dict(parent_path=str(parent),initial_weights=str(weights),
+                initial_weights_sha256=s.sha(weights),
+                parent_validation_AP50=validation['AP50'],
+                parent_stress_hinged_hits=stress['class_hits_by_source_hint']['candidate']['hinged_container_candidate'])
+
+
+def parent_validation_report(parent, candidate, baseline):
+    old=s.read(Path(parent)/'candidate-validation.json')
+    if old.get('manifest_sha256')!=candidate.get('manifest_sha256'):
+        raise ValueError('Parent and V4 validation manifests differ')
+    report=guard_candidate.check_candidate(old,candidate,target='hinged_container',
+                            minimum_gain=0.0,max_regression=0.005)
+    return dict(parent_validation_AP50=old['AP50'],
+                candidate_validation_AP50=candidate['AP50'],
+                delta_AP50=candidate['AP50']-old['AP50'],
+                parent_validation_AP50_95=old['AP50_95'],
+                candidate_validation_AP50_95=candidate['AP50_95'],
+                per_class_delta=report['delta'],
+                relative_retention_gate_passed=report['passed'],
+                relative_retention_blockers=report['blockers'],
+                caveat='Development validation only; hinged-container has two annotations; not independent accuracy')
+
+
+def parent_stress_report(parent, stress):
+    old=s.read(Path(parent)/'stress-comparison/comparison.json')
+    if (old.get('images')!=stress.get('images') or
+            old.get('source_hint_image_counts')!=stress.get('source_hint_image_counts') or
+            old['class_hits_by_source_hint']['frozen']!=stress['class_hits_by_source_hint']['frozen']):
+        raise ValueError('Cannot compare different stress cohorts')
+    key='hinged_container_candidate'
+    before=old['class_hits_by_source_hint']['candidate'][key]
+    after=stress['class_hits_by_source_hint']['candidate'][key]
+    return dict(parent_hinged_source_photos_detected=before,
+                new_hinged_source_photos_detected=after,
+                change=after-before,
+                photos=old['source_hint_image_counts'][key],
+                caveat='Already-inspected 44-source-photo diagnostic, NOT human-labeled test recall or AP')
+
+
 def train(args, out):
     if out.exists():
         raise FileExistsError('Refusing to overwrite existing candidate experiment: '+str(out))
     protected=frozen.check_frozen(ROOT)
+    # Validate parent before creating any output directories.
+    parent_info=verify_parent_candidate(args.parent) if args.parent else None
     data_path=Path(args.data).expanduser().resolve()
     info=training.inspect_dataset(data_path)
     if 'train' not in info['records'] or 'val' not in info['records']:
@@ -236,6 +321,8 @@ def train(args, out):
         extra_stats=append_new_annotated_train(args.extra_annotated, out/'data',
                         train_sha | val_sha | test_sha, excluded,repeat=args.repeat)
         summary.update(extra_stats)
+    if parent_info:
+        summary.update(parent_info)
     summary.update(dict(source_yaml=str(data_path),source_yaml_sha256=s.sha(data_path),stress_image_count=44,stress_train_overlap=0,
                         original_frozen_checkpoint_sha256=protected['weights/food-container-carton.pt'],corrected_validation_manifest_sha256=s.sha(EVALUATION),
                         epochs=args.epochs,learning_rate=args.lr,
@@ -245,7 +332,9 @@ def train(args, out):
     import torch
     from ultralytics import YOLO
     torch.set_num_threads(2)
-    path=ROOT/'weights/food-container-carton.pt'
+    path=Path(parent_info['initial_weights']) if parent_info else ROOT/'weights/food-container-carton.pt'
+    if parent_info and s.sha(path)!=parent_info['initial_weights_sha256']:
+        raise ValueError('Parent candidate checkpoint changed before finetuning')
     model=YOLO(str(path))
     names=model.names
     if isinstance(names,dict):names=[names[i] for i in range(len(names))]
@@ -264,6 +353,8 @@ def train(args, out):
                 val=True,save=True,verbose=True)
     best=out/'fit/weights/best.pt'
     if not best.is_file():raise FileNotFoundError('Candidate best.pt absent')
+    if parent_info and s.sha(path)!=parent_info['initial_weights_sha256']:
+        raise ValueError('Parent checkpoint changed during training')
     if frozen.check_frozen(ROOT)!=protected:
         raise ValueError('Frozen checkpoints/config/policy changed after candidate run')
     config=s.read(s.CONFIG)
@@ -305,6 +396,13 @@ def evaluate(args,out):
         raise ValueError('Frozen checkpoints altered while evaluating')
     s.save(out/'candidate-validation.json',result)
     s.save(out/'validation-gate.json',gate)
+    meta=s.read(out/'experiment.json')
+    if meta.get('parent_path'):
+        verified=verify_parent_candidate(meta['parent_path'],baseline)
+        if verified['initial_weights_sha256']!=meta['initial_weights_sha256']:
+            raise ValueError('Parent checkpoint changed after V4 training')
+        s.save(out/'parent-validation-comparison.json',
+               parent_validation_report(meta['parent_path'],result,baseline))
     return dict(target='hinged_container',hinge_baseline_AP50_95=baseline['per_class']['hinged_container']['AP50_95'],
                 hinge_candidate_AP50_95=result['per_class']['hinged_container']['AP50_95'],
                 hinge_baseline_objects=2,gate_pass=gate['passed'],gate_blockers=gate['blockers'],
@@ -319,6 +417,7 @@ def main():
     p.add_argument('--manifest',type=Path,default=EVALUATION)
     p.add_argument('--bundle',type=Path,help='Existing 44-image ZIP; required to exclude from training and for stress comparison')
     p.add_argument('--extra-annotated',type=Path,help='Optional new 29-photo AI-assisted training-only YOLO annotated ZIP')
+    p.add_argument('--parent',type=Path,help='Previous separate candidate directory (for V4: hinged-candidate-v3-retry); initializes from its verified best.pt')
     p.add_argument('--device',choices=['cpu','mps'],default='mps')
     p.add_argument('--epochs',type=int,default=8)
     p.add_argument('--repeat',type=int,default=3)
@@ -346,6 +445,10 @@ def main():
                               out/'fit/weights/best.pt',
                               out/'stress-comparison',a.device)
         stress={k:v for k,v in stress.items() if k!='per_image'}
+        meta=s.read(out/'experiment.json')
+        if meta.get('parent_path'):
+            s.save(out/'parent-stress-comparison.json',
+                   parent_stress_report(meta['parent_path'],stress))
         result=stress if a.mode=='stress' else dict(
             trained_candidate=trained['candidate_weight'],
             validation=validation,
