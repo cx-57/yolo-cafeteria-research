@@ -17,12 +17,11 @@ class DisposalTests(unittest.TestCase):
             self.assertEqual(result['category'],'review')
             self.assertTrue(result['needs_review'])
 
-    def test_verified_food_and_empty_bottle_go_to_distinct_bins(self):
+    def test_food_and_bottle_sort_without_empty_confirmation(self):
         self.policy['verified']=True
         self.assertEqual(d.classify('food',.9,self.policy)['category'],'compost')
-        self.assertEqual(d.classify('bottle',.9,self.policy,{'empty':True})['category'],'recycling')
-        for context in [None,{'empty':False},{'empty':'true'}]:
-            self.assertEqual(d.classify('bottle',.9,self.policy,context)['category'],'review')
+        for context in [None, {'empty':True}, {'empty':False}, {'empty':'true'}]:
+            self.assertEqual(d.classify('bottle',.9,self.policy,context)['category'],'recycling')
 
     def test_unknown_material_reusable_and_low_confidence_require_review(self):
         self.policy['verified']=True
@@ -43,18 +42,18 @@ class DisposalTests(unittest.TestCase):
         self.assertEqual(result['meal'][1]['box_xyxy_normalized'],[.5,.5,1,1])
         self.assertEqual(rows,original)
 
-    def test_empty_fact_is_scoped_to_one_detection(self):
-        self.policy['verified']=True
-        rows=[[0,0,.5,.5,.9,6],[.5,.5,1,1,.9,6]]
-        result=d.classify_predictions({'x':rows},self.policy,contexts={'x':{'0':{'empty':True}}})
-        self.assertEqual([r['category'] for r in result['x']],['recycling','review'])
+    def test_bottle_and_carton_are_independent_of_empty_context(self):
+        rows=[[0,0,.5,.5,.9,6],[.5,.5,1,1,.9,4]]
+        result=d.classify_predictions({'x':rows},self.policy,contexts={'x':{'0':{'empty':True},'1':{'empty':False}}})
+        self.assertEqual([r['category'] for r in result['x']],['recycling','recycling'])
+        no_context=d.classify_predictions({'x':rows},self.policy)
+        self.assertEqual([r['category'] for r in no_context['x']],['recycling','recycling'])
 
-    def test_school_accepts_empty_cartons_but_contents_still_need_confirmation(self):
-        self.assertEqual(d.classify('food',.9,self.policy)['category'],'compost')
-        self.assertEqual(d.classify('drink_carton',.9,self.policy,{'empty':True})['category'],'recycling')
-        self.assertEqual(d.classify('drink_carton',.9,self.policy)['category'],'review')
-        self.assertEqual(d.classify('drink_carton',.9,self.policy,{'empty':False})['category'],'review')
-        self.assertEqual(d.classify('drink_carton',.9,self.policy,{'empty':True,'accepted_locally':True})['category'],'recycling')
+    def test_cartons_recycle_without_empty_confirmation(self):
+        for context in [None, {'empty':True}, {'empty':False}]:
+            self.assertEqual(d.classify('drink_carton',.9,self.policy,context)['category'],'recycling')
+        self.assertEqual(d.classify('drink_carton',.49,self.policy)['category'],'review')
+        self.assertEqual(d.classify('bottle',.49,self.policy)['category'],'review')
 
     def test_invalid_policy_and_prediction_fail_explicitly(self):
         bad=copy.deepcopy(self.policy);bad['classes']['bottle']['category']='made_up'
