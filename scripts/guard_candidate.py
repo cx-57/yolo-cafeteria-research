@@ -16,7 +16,7 @@ def check_candidate(baseline, candidate, target, minimum_gain=0.01,
     if (type(minimum_gain) not in (float, int)
             or type(max_regression) not in (float, int)
             or not math.isfinite(minimum_gain) or not math.isfinite(max_regression)
-            or minimum_gain <= 0 or max_regression < 0):
+            or minimum_gain < 0 or max_regression < 0):
         raise ValueError("Invalid target gain or regression tolerance")
     if not isinstance(baseline, dict) or not isinstance(candidate, dict):
         raise ValueError("Both inputs must be JSON objects")
@@ -59,7 +59,7 @@ def check_candidate(baseline, candidate, target, minimum_gain=0.01,
             raise ValueError("Invalid aggregate " + metric)
         if new - old < -max_regression - 1e-10:
             reasons.append("Aggregate " + metric + " regressed")
-    if delta[target]["AP50_95"] < minimum_gain - 1e-10:
+    if minimum_gain > 0 and delta[target]["AP50_95"] < minimum_gain - 1e-10:
         reasons.append(target + ": AP50-95 improvement below minimum target gain")
     return dict(
         passed=not reasons, target=target,
@@ -81,13 +81,29 @@ def main():
     p.add_argument("--target", required=True)
     p.add_argument("--minimum-gain", type=float, default=0.01)
     p.add_argument("--max-regression", type=float, default=0.002)
+    p.add_argument("--historical-baseline", type=Path,
+                   help="Optional unchanged historical reference result")
+    p.add_argument("--historical-candidate", type=Path,
+                   help="Same historical reference scored on the candidate")
     p.add_argument("--output", type=Path, required=True)
     a = p.parse_args()
+    if bool(a.historical_baseline) != bool(a.historical_candidate):
+        p.error("Both historical reference files are required together")
     if a.output.exists():
         p.error("Refusing to overwrite existing result")
     result = check_candidate(json.loads(a.baseline.read_text()),
                              json.loads(a.candidate.read_text()), a.target,
                              a.minimum_gain, a.max_regression)
+    if a.historical_baseline:
+        reference = check_candidate(
+            json.loads(a.historical_baseline.read_text()),
+            json.loads(a.historical_candidate.read_text()),
+            a.target, minimum_gain=0, max_regression=a.max_regression)
+        result["historical_retention"] = reference
+        if not reference["passed"]:
+            result["passed"] = False
+            result["blockers"].extend("historical: " + item
+                                      for item in reference["blockers"])
     a.output.parent.mkdir(parents=True, exist_ok=True)
     a.output.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
