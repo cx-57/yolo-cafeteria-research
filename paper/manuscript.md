@@ -1,5 +1,5 @@
 ---
-title: 'Computer Vision for Cafeteria Waste-Sorting Assistance'
+title: '**Computer Vision for Cafeteria Waste-Sorting Assistance**'
 author: |
   Charles Xie  
   *Natick High School*  
@@ -12,7 +12,6 @@ geometry: ['margin=0.82in']
 colorlinks: false
 toc: false
 header-includes:
-  - \usepackage{times}
   - \usepackage{microtype}
   - \usepackage{booktabs}
   - \usepackage{titling}
@@ -21,9 +20,9 @@ header-includes:
   - \setlength{\parskip}{0pt}
   - \setlength{\droptitle}{-2.5em}
   - \pretitle{\begin{center}\bfseries\LARGE}
-  - \posttitle{\par\end{center}\vspace{-0.6em}}
+  - \posttitle{\par\end{center}\vspace{0.45em}}
   - \preauthor{\begin{center}\normalsize}
-  - \postauthor{\par\end{center}\vspace{-0.5em}}
+  - \postauthor{\par\end{center}\vspace{0.25em}}
   - \predate{}
   - \postdate{}
   - \titleformat{\section}{\large\bfseries}{\thesection}{0.5em}{}
