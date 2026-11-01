@@ -302,7 +302,7 @@ interval on these data would not establish independent generalization.
 | Cohort / policy | TP | FP | FN | Precision | Recall | F1 |
 |:--|--:|--:|--:|--:|--:|--:|
 | Validation (186), uniform 0.50 | 638 | 48 | 139 | **93.00%** | 82.11% | 87.22% |
-| Validation (186), classwise selected | 555 | 17 | 222 | **97.03%** | 71.43% | 80.00% |
+| Validation (186), classwise selected | 555 | 17 | 222 | **97.03%** | 71.43% | 82.28% |
 | Historical (248), uniform 0.50 | 724 | 51 | 200 | **93.42%** | 78.35% | 85.23% |
 | Historical (248), classwise fixed | 630 | 18 | 294 | **97.22%** | 68.18% | 80.15% |
 
