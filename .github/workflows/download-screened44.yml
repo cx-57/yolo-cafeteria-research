@@ -2,6 +2,10 @@ name: Download reviewed 44 images from GitHub
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/download-screened44.yml"
+      - "scripts/package_screened44.py"
   push:
     paths:
       - ".github/workflows/download-screened44.yml"
