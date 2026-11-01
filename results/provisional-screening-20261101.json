@@ -116,7 +116,7 @@
     "public_redistribution_permitted": false,
     "rights_note": "TrashBox original image reuse rights not verified; Commons license/attribution metadata preserved; bundle is intended for private review.",
     "offline_review_editor": "index.html embedded in locally delivered image ZIP; not hosted on GitHub",
-    "code_test_status": "Five synthetic Python unit tests passed; generated JS passed Node.js syntax validation. Browser integration test blocked by session policy.",
+    "code_test_status": "Six synthetic Python unit tests passed (including optional 52-image source merging). Generated JavaScript passed Node.js syntax validation. In-memory Chromium interaction smoke test passed: 44-image navigation, existing draft boxes, refusal to approve unconfirmed AI draft, scoring-exclusion banner, and JSON export. Full file-backed browser rendering was blocked in this session.",
     "limitations": "No independent field test run. No model inference in this pass. Local Mac checkpoint weights and full historical source inventory unavailable."
   }
 }
