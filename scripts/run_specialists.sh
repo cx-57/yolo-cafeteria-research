@@ -18,11 +18,13 @@ export PYTHONDONTWRITEBYTECODE=1
 case "${1:-}" in
     -h|--help)
         cat <<'EOF'
-Usage: run_specialists.sh {predict|evaluate|sort|train|preview} [options]
+Usage: run_specialists.sh {predict|evaluate|sort|replay|guard|train|preview} [options]
 
 predict   Run the active four specialists.
 evaluate  Score a fixed annotated cohort.
 sort      Suggest disposal categories for individual detected objects.
+replay    Apply sorting rules to a frozen prediction receipt, without inference.
+guard     Check a candidate evaluation for per-class validation regression.
 train     Train a separate seven-class candidate with orientation augmentation.
 preview   Inspect native training augmentation and transformed label boxes.
 
@@ -32,6 +34,12 @@ EOF
     sort)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/disposal.py" "$@" ;;
+    replay)
+        shift
+        exec "$TASK_PYTHON" "$TASK_ROOT/scripts/replay_sorting.py" "$@" ;;
+    guard)
+        shift
+        exec "$TASK_PYTHON" "$TASK_ROOT/scripts/guard_candidate.py" "$@" ;;
     train|preview)
         # Disable PyTorch's MPS allocation cap for the authorized training runs.
         export PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0
