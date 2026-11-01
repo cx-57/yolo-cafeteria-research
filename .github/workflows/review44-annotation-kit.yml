@@ -58,7 +58,7 @@ jobs:
           assert '<canvas' in (p/'index.html').read_text()
           print('PASS: identical SHA-verified source photos, 104 unverified boxes, export JSON, offline review UI.')
           PY
-      - name: Upload 44-photo annotation reviewer to GitHub Actions artifacts
+      - name: Upload 44-photo annotation review kit to GitHub Actions artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cafeteria-44-test-annotation-review
