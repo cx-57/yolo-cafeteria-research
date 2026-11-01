@@ -2,6 +2,11 @@ name: GitHub download - 44-image annotation editor and starter JSON
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/review44-annotation-kit.yml"
+      - "scripts/package_review44_annotation_kit.py"
+      - "configs/review44-ai-draft-boxes.json"
   push:
     paths:
       - ".github/workflows/review44-annotation-kit.yml"
