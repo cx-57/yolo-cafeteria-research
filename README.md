@@ -229,66 +229,69 @@ repo. Git commit history is preserved.
 ## Disposal categories
 
 A rules-based classifier converts each object detection into a disposal decision.
-It adds no neural model and does not infer packaging material or whether a bottle
-is empty. Mixed photos retain separate decisions and boxes for every detection.
+It adds no new neural model and does not infer packaging material or container
+contents. Each detection in a mixed photo receives its own result.
 
 ```sh
 ./scripts/run_specialists.sh sort /path/to/image.jpg --device mps --output /tmp/disposal.json
 ```
 
-`configs/disposal.json` enables the user's selected compost / recycling / landfill
-policy. Food maps to compost; disposable plastic drink bottles map to recycling
-after explicit empty confirmation. School acceptance of empty milk/juice cartons is user-confirmed;
-cartons still require explicit empty confirmation. Plates, utensils, wrappers and hinged containers request
-material/local-acceptance review. Reusable items may need returning rather than
-disposal. No ambiguous object is automatically assigned to landfill.
+The **user-selected experimental shortcut** in `configs/disposal.json` is:
 
-The `verified` flag enables this user-approved configuration; it is not independent
-certification of school acceptance or classification accuracy.
-[The EPA explains why local acceptance and material matter](https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables).
+| Detector class | Result at confidence >= 0.50 |
+|---|---|
+| Food | Compost |
+| Disposable plastic drink bottle | Recycling, **without checking emptiness** |
+| Milk/juice drink carton | Recycling, **without checking emptiness** |
+| Plate, utensil, wrapper, hinged container | Review |
 
-Empty-container facts remain required for bottles/cartons even under a verified
-policy. Optional `--contexts /path/to/facts.json` supplies explicit facts scoped
-to an image's absolute path and its zero-based `detection_index` in the prediction
-receipt, for example `{"/path/to/image.jpg": {"0": {"empty": true}}}`.
-Supply facts only for that specific detection; they are not inferred from photos.
+Detected objects below confidence 0.50 also require review; detections below
+0.25 are omitted from the display. No object is automatically sent to landfill.
+A bottle/carton prediction is an **object-recognition-based recycling suggestion**:
+the system does not identify contents, material contamination or actual acceptance
+of filled containers. Prior user confirmation covered **empty** milk/juice cartons
+only. The `verified` configuration flag activates the user's requested rules; it
+does **not** certify that every suggested item is locally recyclable.
+[EPA guidance emphasizes local rules and material](https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables).
 
-The default display filter is 0.25; detections below 0.50 require review even under
-a verified policy. These are application thresholds, not changes to detector AP
-scoring. `detection_confidence` is not a disposal-confidence estimate. JSON output
-records the model hashes/settings, image hashes, rule hash, explicit facts,
-provisional suggestion, review reasons and instruction.
+Optional `--contexts` remains available for extra per-detection facts, but
+`empty` is **not required** for bottle/carton recycling decisions in this policy.
+The output records hashes, model configuration and per-object reasons.
+Detection confidence is not disposal-bin confidence.
 
-Verification: 36 unit tests pass, including mixed scenes, unknown materials,
-per-detection facts and invalid inputs. Real inference ran on the four new school
-photos; integration also processed 881 detections on 248 repaired test photos.
-With the user-selected policy and no supplied container facts, 337 detections map
-to compost and 544 require review. On the four new photos, three map to compost
-and six require review. These are detection counts, not correctness scores.
-**Full three-bin classification accuracy has not been measured:** no independent
-disposal-category labels exist. A fixed-threshold food-to-compost proxy on the
-248-photo repaired test set matches327 of337 automatic assignments to existing
-food boxes at IoU≥0.5:97.03% precision,75.52% food recall and84.94% F1.
-Review is abstention, never a correct prediction;544 of881 emitted detections
-(61.75%) require review. These are development-set object-label-derived metrics,
-not independent material/disposal accuracy.
+### Existing fixed development-cohort measurements
 
-The latest accepted model change is the one-epoch bottle update. Its paired
-validation AP50/AP50–95 rose from 77.77%/59.55% to 82.47%/62.00%; test rose from
-70.13%/56.86% to 75.27%/59.62%. Other specialists are retained. Full receipts and
-rollback files are external under `artifacts/bottle-retention-20261031/`.
+The unchanged model predictions on **248 repaired development test photos**
+contain **881 detections** at the 0.25 display threshold. From the previously
+recorded class-specific counts at the unchanged 0.50 decision threshold, the
+**new rule is projected** to make:
 
+| Decision | Detection count |
+|---|---:|
+| Compost | 337 |
+| Recycling (bottle + carton) | 173 |
+| Review | 371 |
+| **Total** | **881** |
 
-Recycling-candidate recognition on the same repaired248 test photos, at the
-unchanged confidence0.50 and one-to-one IoU≥0.5:
+This is a **reclassification of previously frozen detector outputs**, not
+fresh inference or a new end-to-end test run. Run the new policy locally to
+confirm these counts and obtain a policy-specific receipt.
 
-| Object group | Correct / predicted | Precision | Recall |
-|---|---:|---:|---:|
-| Disposable bottle | 33 /43 | 76.74% | 57.89% (33/57) |
-| Drink carton | 129 /130 | 99.23% | 96.27% (129/134) |
-| Either object | 162 /173 | 93.64% | 84.82% (162/191) |
+On the same exposed development cohort, the prior **food-to-compost object
+recognition proxy** measured **97.03% precision / 75.52% recall**. Separately,
+**bottle-or-carton recognition at 0.50 confidence** measured
+**93.64% precision / 84.82% recall** (162 correctly matched of 173
+high-confidence predictions; 191 labeled bottle/carton objects).
+These figures evaluate **object recognition**, not correct recycling of material
+or independent three-bin classification accuracy. True three-bin accuracy
+remains **unknown** without independently assigned bin labels.
 
-These measure recognition of recycling candidates, not actual recycling-bin
-correctness or contents recognition. Without explicit empty-container facts and
-confirmation that containers are empty, final recycling decisions remain review cases.
-No detector thresholds, weights or labels were changed to obtain these results.
+The latest accepted detector change was a one-epoch bottle update. Its paired
+validation AP50/AP50–95 rose from 77.77%/59.55% to 82.47%/62.00%; test
+rose from 70.13%/56.86% to 75.27%/59.62%. The other specialists remain
+unchanged. Detector scores are not affected by this disposal-rule update.
+
+Use [the independent sorting evaluation protocol](docs/sorting-evaluation.md)
+to collect human-verified bin labels. Existing test photographs may have been
+exposed to training or model selection, and the repaired labels are AI-assisted,
+so the displayed numbers are not independent generalization estimates.
