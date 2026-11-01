@@ -12,6 +12,7 @@ import json
 import math
 import random
 import shutil
+import zipfile
 from collections import Counter
 from pathlib import Path
 
@@ -129,10 +130,23 @@ def train(args, out):
     test_sha={r['sha256'] for r in info['records'].get('test',[])}
     if train_sha & (val_sha|test_sha):
         raise ValueError('Train shares exact image bytes with frozen evaluation split')
+    if not args.bundle:
+        raise ValueError('Pass --bundle of the 44 public diagnostic images to enforce the no-training-on-stress-photos SHA gate')
+    bundle=Path(args.bundle).expanduser().resolve()
+    with zipfile.ZipFile(bundle) as z:
+        stress=json.loads(z.read('manifest.json'))
+        excluded={r['sha256'] for r in stress['images']}
+        if len(stress['images']) != 44 or len(excluded) != 44:
+            raise ValueError('Expected the immutable 44-image source-screening bundle')
+        for row in stress['images']:
+            if hashlib.sha256(z.read(row['path'])).hexdigest()!=row['sha256']:
+                raise ValueError('Stress image hash mismatch: '+row['path'])
+    if train_sha & excluded:
+        raise ValueError('Existing training split overlaps the 44-photo diagnostic cohort; do not train on these photos')
     out.mkdir(parents=True)
     summary=export_dataset(info,out/'data',repeat=args.repeat, seed=args.seed,
                            support_cap=args.support_cap, background_cap=args.background_cap)
-    summary.update(dict(source_yaml=str(data_path),source_yaml_sha256=s.sha(data_path),
+    summary.update(dict(source_yaml=str(data_path),source_yaml_sha256=s.sha(data_path),stress_image_count=44,stress_train_overlap=0,
                         original_frozen_checkpoint_sha256=protected['weights/food-container-carton.pt'],
                         epochs=args.epochs,learning_rate=args.lr,
                         status='TRAINING_CANDIDATE_NOT_PROMOTED',
@@ -213,7 +227,7 @@ def main():
     p.add_argument('--data',type=Path,default=DEFAULT_DATA)
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--manifest',type=Path,default=EVALUATION)
-    p.add_argument('--bundle',type=Path,help='Existing 44-image ZIP for source-hint-only visual stress comparison')
+    p.add_argument('--bundle',type=Path,help='Existing 44-image ZIP; required to exclude from training and for stress comparison')
     p.add_argument('--device',choices=['cpu','mps'],default='mps')
     p.add_argument('--epochs',type=int,default=8)
     p.add_argument('--repeat',type=int,default=3)
