@@ -114,10 +114,27 @@ def assemble(folder,coords):
     images=manifest.get('images',[])
     if len(images)!=44 or len(coords)!=44:
         raise ValueError('Expected exactly 44 source images and 44 sets of drafts')
+    # Old AI drafts were drawn in source-category/filename order, while
+    # package_screened44 arranges photos by SHA within each source group.
+    # This canonical ordering MUST be reconstructed before assigning boxes:
+    # positional assignment in current ZIP order puts boxes on wrong photos.
+    rank={'hinged_container_candidate':0,'utensil':1,'wrapper':2,
+          'bottle':3,'drink_carton':4}
+    from collections import Counter
+    counts=Counter(x.get('source_hint') for x in images)
+    if counts!=dict(hinged_container_candidate=12,utensil=15,wrapper=2,
+                    bottle=9,drink_carton=6):
+        raise ValueError('Unexpected source group membership; cannot safely associate draft boxes')
+    sorted_images=sorted(images,key=lambda x:(rank[x['source_hint']],Path(x['path']).name))
     all_boxes=0
-    for i,(r,spec) in enumerate(zip(images,coords)):
+    for i,(r,spec) in enumerate(zip(sorted_images,coords)):
         if spec[0]!=i or not isinstance(spec[1],list):
             raise ValueError('Draft indexing mismatch')
+        # The historical source filenames include the start of the verified
+        # image SHA. This catches a renamed photo even if category matches.
+        suffix=Path(r['path']).stem.rsplit('_',1)[-1]
+        if len(suffix)<10 or not r['sha256'].startswith(suffix):
+            raise ValueError('Source filename and SHA cannot be matched safely: '+r['path'])
         image=folder/r['path']
         if not image.is_file() or hashlib.sha256(image.read_bytes()).hexdigest()!=r['sha256']:
             raise ValueError('Source SHA mismatch: '+str(image))
