@@ -21,7 +21,7 @@ reinitialize the class head as seven-class or train on the 44 public stress phot
 
 - Source: existing **training partition only** from
   `yolo-cafeteria-research-assets/data/combined-seven-school-oct29-20261031/data.yaml`.
-  The script checks exact image overlap with the existing validation/test splits and with every SHA-verified photo in the 44-image diagnostic ZIP. A matching training photo blocks the experiment.
+  The script checks exact image overlap with the existing validation/test splits and with every SHA-verified photo in the 44-image diagnostic ZIP. A matching training photo blocks the experiment. The 186 training-time validation images use the corrected labels from the pinned frozen validation manifest, not the stale disk labels.
 - Class remapping: old class IDs `food=0, hinged_container=3, drink_carton=4`
   become `food=0, hinged_container=1, drink_carton=2` for the original
   three-class checkpoint. Other objects are deliberately unlabeled
