@@ -6,11 +6,20 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from evaluate_reviewed44 import dataset_from_review, CLASSES
+from evaluate_reviewed44 import dataset_from_review, CLASSES, main
 
 class Reviewed44Tests(unittest.TestCase):
+    def test_cli_allow_ai_reviewed_argument_is_forwarded(self):
+        argv=['evaluate_reviewed44.py', '--bundle', 'source.zip',
+              '--review', 'checked.json', '--v3-config', 'candidate.json',
+              '--output', 'metrics.json', '--allow-ai-reviewed']
+        with patch('sys.argv',argv), patch('evaluate_reviewed44.compare') as compare:
+            main()
+        self.assertTrue(compare.call_args.args[-1])
+
     def setup_source(self,root):
         bundle=root/'images.zip'
         review={'format':'CAFETERIA_PROVISIONAL_HUMAN_REVIEW_V1','not_independent':True,'images':[]}
