@@ -25,7 +25,7 @@ header-includes:
 ---
 
 
-**Abstract.** Improper cafeteria waste separation motivates image-assisted identification, but recognizing an object does not establish its appropriate disposal stream. This study characterizes four frozen YOLO11 object detectors covering seven cafeteria-item classes, together with a rule-based compost/recycling/manual-review suggestion policy. The system achieved **87.78% mAP50** and **67.24% mAP50–95** on 248 historically exposed development photographs with 924 AI-assisted object annotations. At confidence 0.50, overall micro object-detection precision and recall were **93.42%** and **78.35%**. A class-specific confidence vector chosen only on 186 development-validation images increased overall precision there to **97.03%** (recall **71.43%**). Without retuning, the same vector yielded **97.22% precision and 68.18% recall** on the exposed 248-photo cohort. The greater precision was obtained without altering model weights, at the cost of 94 fewer accepted true-positive detections. An additional 41-photo public-image diagnostic with approximate AI labels gave the frozen baseline **46.25% mAP50**. The provenance audit found **no confirmed independent cohort** or human-verified object-level disposal-bin ground truth. These experiments document the utility and limitations of specialist recognition and selective confidence filtering; they **do not establish field sorting accuracy or reduced waste contamination**.
+**Abstract.** Improper cafeteria waste separation motivates image-assisted identification, but recognizing an object does not establish its appropriate disposal stream. This study characterizes four frozen YOLO11 object detectors covering seven cafeteria-item classes, together with a rule-based compost/recycling/manual-review suggestion policy. The system achieved **87.78% mAP50** and **67.24% mAP50–95** on 248 historically exposed development photographs with 924 AI-assisted object annotations. At confidence 0.50, overall micro object-detection precision and recall were **93.42%** and **78.35%**. A class-specific confidence vector chosen only on 186 development-validation images increased overall precision there to **97.03%** (recall **71.43%**). Without retuning, the same vector yielded **97.22% precision and 68.18% recall** on the exposed 248-photo cohort. The greater precision was obtained without altering model weights, at the cost of 94 fewer accepted true-positive detections. An additional 41-photo public-image diagnostic with approximate AI labels gave the frozen baseline **46.25% mAP50**. Only six of the 248 historical-test photographs came from the participating school. The provenance audit found **no confirmed independent cohort** or human-verified object-level disposal-bin ground truth. These experiments document the utility and limitations of specialist recognition and selective confidence filtering; they **do not establish field sorting accuracy or reduced waste contamination**.
 
 **Keywords:** YOLO11, object detection, cafeteria waste, selective prediction, precision--recall, evaluation leakage, annotation provenance.
 
@@ -65,6 +65,14 @@ augmentation views, for 2,372 views. Twenty school training originals contribute
 Validation contains 186 real photos (seven school); test contains 248 (six school).
 These are available working data, not a claim that each active specialist was
 trained from scratch on exactly this single manifest.
+
+The historical test cohort has seven recorded source groups: 73 `school_lunch`,
+66 `tetra_pak`, 48 `trash_detection`, 31 `plate`, 20 `utensil`,
+six `school`, and four `macworx` photographs (248 total). Thus only
+**6/248 photographs (2.42%)** originate from the participating school submission.
+The source name `school_lunch` denotes a separate dataset, not additional
+participating-school captures. The object-detection benchmark consequently
+cannot be interpreted as an estimate of on-site cafeteria performance.
 
 Evaluation uses the frozen, embedded repaired annotations in
 `artifacts/validation-label-audit-20261030/audited-eligible.json` and
@@ -229,9 +237,9 @@ The macro mAP50/mAP50–95 is **87.78%/67.24%** on the 248-image development coh
 and **86.36%/65.25%** on the 186-image frozen validation cohort. All-class test
 micro precision/recall/F1 at 0.50 is **93.42%/78.35%/85.23%**. Per-class validation
 metrics are preserved in `results/sorting-verification.json` and
-[the evaluation report](sorting-evaluation.md).
+[the evaluation report](../docs/sorting-evaluation.md).
 
-**Table 6.** Automatic-suggestion object proxies, explicitly separate from bin accuracy.
+**Table 5.** Automatic-suggestion object proxies, explicitly separate from bin accuracy.
 Recall uses the 624 food/bottle/carton object labels.
 
 | Matching convention | Correct object matches | Precision | Recall | F1 |
@@ -245,7 +253,7 @@ proven wrong-bin outcomes. The original 248-image replay was previously verified
 and a later fresh inference exactly reproduced its predictions. This finalization
 reuses those receipts; it does not rerun YOLO or train another candidate.
 
-**Table 7.** Sorting output and coverage denominators on development images.
+**Table 6.** Sorting output and coverage denominators on development images.
 
 | Quantity | Count / denominator | Value |
 |---|---:|---:|
@@ -271,7 +279,7 @@ interval on these data would not establish independent generalization.
 
 ## Precision--Recall Trade-off After Threshold Selection
 
-**Table 5.** Overall seven-class micro object recognition at box IoU $\geq$ 0.50; same source images and labels within each cohort.
+**Table 7.** Overall seven-class micro object recognition at box IoU $\geq$ 0.50; same source images and labels within each cohort.
 
 | Cohort / policy | TP | FP | FN | Precision | Recall | F1 |
 |:--|--:|--:|--:|--:|--:|--:|
@@ -468,7 +476,7 @@ The frozen four-specialist system produces seven classes of cafeteria-item detec
 Maintained code/configuration/results are in Git. Images, checkpoints, historical
 experiments and the detailed 35 MB asset inventory remain external and intact.
 GitHub alone therefore cannot reproduce native inference without the external
-checkpoints and data. Research users should avoid imply that pushing the source distributed the weights.
+checkpoints and data. Publishing the source does not distribute the external checkpoints or image datasets.
 
 - `configs/research-freeze.json`: checkpoint, policy, manifest and benchmark pins.
 - `results/sorting-verification.json`: prior verified replay and detection metrics.
@@ -483,14 +491,14 @@ checkpoints and data. Research users should avoid imply that pushing the source 
 From the repo root, with a fresh output path:
 
 ```sh
-../yolo-cafeteria-research-assets/venv/bin/python -B scripts/research_audit.py   --output /tmp/cafeteria-asset-audit.json
+../yolo-cafeteria-research-assets/venv/bin/python -B scripts/research_audit.py --output /tmp/cafeteria-asset-audit.json
 ../yolo-cafeteria-research-assets/venv/bin/python -B -m unittest discover -s tests -v
 ```
 
 This audit does not run YOLO or train. Its dHash/source paths are defined in code;
 future added files may change inventory totals without changing the frozen models.
 The main replay/evaluation reproduction commands and frozen receipts are in
-[sorting-evaluation.md](sorting-evaluation.md). Existing outputs refuse overwrite.
+[sorting-evaluation.md](../docs/sorting-evaluation.md). Existing outputs refuse overwrite.
 For actual independent bin metrics, use the existing `scripts/evaluate_sorting.py`
 with new independently human-verified truth and the unchanged frozen sorting policy;
 the required label format and matching convention are documented in that report.
