@@ -209,6 +209,6 @@ def main():
     p.add_argument('--per-group',type=int)
     a=p.parse_args()
     if a.per_group is not None and a.per_group<1:p.error('per-group must be >=1')
-    stage(a.out,a.exclude_previous_review,per_group=a.per_group)
+    stage(a.out,a.exclude_previous_review,per_group=a.per_group,seed=SEED)
 
 if __name__=='__main__': main()
