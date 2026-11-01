@@ -1,0 +1,68 @@
+name: GitHub download - 44-image annotation editor and starter JSON
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/review44-annotation-kit.yml"
+      - "scripts/package_review44_annotation_kit.py"
+      - "configs/review44-ai-draft-boxes.json"
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install packaging dependency
+        run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Download original 48-photo source artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: public-waste-provisional-not-independent
+          run-id: 41315363803
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/trashbox-source
+      - name: Download original 38-photo source artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: commons-licensed-photo-candidates-not-independent
+          run-id: 41317184879
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/commons-source
+      - name: SHA-verify 44 original photos and include annotation editor
+        shell: bash
+        run: |
+          python scripts/package_screened44.py \
+            --trashbox "$RUNNER_TEMP/trashbox-source" \
+            --commons "$RUNNER_TEMP/commons-source" \
+            --out "$RUNNER_TEMP/review44"
+          python scripts/package_review44_annotation_kit.py --folder "$RUNNER_TEMP/review44"
+          python - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'review44'
+          m=json.loads((p/'manifest.json').read_text())
+          j=json.loads((p/'cafeteria-review-export.json').read_text())
+          assert len(m['images'])==len(j['images'])==44
+          assert sum(len(x['draft_boxes']) for x in m['images'])==104
+          assert j['reviewed_image_count']==0
+          assert all(not x['reviewed'] for x in j['images'])
+          assert all(b['status']=='AI_DRAFT_UNVERIFIED' for x in j['images'] for b in x['boxes'])
+          assert '<canvas' in (p/'index.html').read_text()
+          print('PASS: identical SHA-verified source photos, 104 unverified boxes, export JSON, offline review UI.')
+          PY
+      - name: Upload 44-photo annotation reviewer to GitHub Actions artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cafeteria-44-test-annotation-review
+          path: ${{ runner.temp }}/review44/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 6
