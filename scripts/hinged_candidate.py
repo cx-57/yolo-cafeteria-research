@@ -209,10 +209,11 @@ def evaluate(args,out):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('mode',choices=['train','evaluate'])
+    p.add_argument('mode',choices=['train','evaluate','stress'])
     p.add_argument('--data',type=Path,default=DEFAULT_DATA)
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--manifest',type=Path,default=EVALUATION)
+    p.add_argument('--bundle',type=Path,help='Existing 44-image ZIP for source-hint-only visual stress comparison')
     p.add_argument('--device',choices=['cpu','mps'],default='mps')
     p.add_argument('--epochs',type=int,default=8)
     p.add_argument('--repeat',type=int,default=3)
@@ -224,7 +225,18 @@ def main():
     if a.epochs<1 or not 1<=a.repeat<=5 or a.support_cap<1 or a.background_cap<0 or not 0<a.lr<0.1:
         p.error('Invalid experiment training settings')
     out=a.out.expanduser().resolve()
-    result=train(a,out) if a.mode=='train' else evaluate(a,out)
+    if a.mode == 'train':
+        result=train(a,out)
+    elif a.mode == 'evaluate':
+        result=evaluate(a,out)
+    else:
+        if not a.bundle:
+            p.error('--bundle is required for stress mode')
+        from compare_hinged_stress import run as compare_stress
+        result=compare_stress(a.bundle.expanduser().resolve(),
+                              out/'fit/weights/best.pt',
+                              out/'stress-comparison',a.device)
+        result={k:v for k,v in result.items() if k!='per_image'}
     print(json.dumps(result,indent=2))
 
 
