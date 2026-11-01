@@ -49,8 +49,18 @@ For collections without COCO labels, inspect source images manually instead; do 
 
 **Required reporting:** number visually inspected, KEEP/REJECT/UNCERTAIN, per-class visible coverage, exact/near overlaps, independently certified (currently **zero**), human bin labels (currently **zero**), and a path to external contact sheets and ZIP. Do not promote an unresolved set to independent evaluation.
 
-## Network-enabled acquisition (November 1, 2026)
+## Network-enabled provisional acquisition and manual image review (November 1, 2026)
 
-A dedicated [GitHub Actions acquisition workflow](../.github/workflows/acquire-coxpwd-candidates.yml) is configured for **CoxPWD v3**. It downloads the public ZIP to the transient runner, selects at most 48 COCO-source-hint images (bottle, spoon, packet), creates a review CSV/contact sheet, and uploads a 7-day artifact named `coxpwd-provisional-candidates-not-independent`. The source photos are **not committed into Git**. The workflow triggers when its own file is pushed, and can be triggered manually from the Actions tab. **Do not assume a successful run merely because the workflow file exists**; inspect its run logs and artifact count.
+The first CoxPWD acquisition workflow was run and **failed**: the unauthenticated Mendeley ZIP endpoint returned HTTP 401. No image was obtained from CoxPWD. The source page may still allow manual downloads, but this automated method is not operational.
 
-It cannot certify original-photo independence, human-reviewed class identities, cafeteria relevance, or disposal-bin ground truth. Every image remains `PENDING` review and `independent=NO`. Cartons and hinged containers are not sourced by CoxPWD category names and still require a distinct intake. The workflow does not run YOLO, label bins, retrain, or modify frozen checkpoints.
+The replacement workflow [`acquire-coxpwd-candidates.yml`](../.github/workflows/acquire-coxpwd-candidates.yml), despite its historical filename, uses the public TrashBox GitHub source (not Mendeley). It targets three original source folders: plastic bottles, Tetra Pak, and generic plastic containers. It does not run models or create labels.
+
+A successful GitHub Actions PR run 41315363803 downloaded **48 source photographs** and uploaded a temporary artifact `public-waste-provisional-not-independent` (artifact ID 13087285657, expiration November 8). A human visual screening based on the original photos and contact sheets recorded:
+- **15 visual KEEP:** 9 bottle, 6 drink-carton candidates
+- **28 REJECT:** including all 16 generic storage containers, which are **not** hinged takeout containers
+- **5 UNCERTAIN:** 2 bottle and 3 carton images needing class/quality review
+- **0 confirmed independent**, **0 human disposal labels**
+
+The individual-image review CSV and an optional **15-photo provisional ZIP** were generated separately from the workflow's full 48-photo artifact. Files are **not Git-committed**; summary data appear in [`results/trashbox-review-20261101.json`](../results/trashbox-review-20261101.json).
+
+A number of photographed objects are reusable, watermarked, cropped, advertising-style, or not representative of school cafeteria waste; the source imagery is predominantly single-object product/retail/outdoor material. The originating repository's rights to redistribute individual images were not independently verified. Therefore these images may serve only as provisional source-review candidates, not a paper-ready field benchmark. Preserve the frozen models and obtain a genuinely new school-capture set with independent human annotations for a defensible sorting-accuracy result.

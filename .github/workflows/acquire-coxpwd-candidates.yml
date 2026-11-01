@@ -1,10 +1,15 @@
-name: Acquire provisional CoxPWD review candidates
+name: Acquire provisional waste-image review candidates
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/acquire-coxpwd-candidates.yml"
+      - "scripts/stage_trashbox_candidates.py"
   push:
     paths:
       - ".github/workflows/acquire-coxpwd-candidates.yml"
+      - "scripts/stage_trashbox_candidates.py"
 
 permissions:
   contents: read
@@ -18,77 +23,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install contact-sheet dependency
+      - name: Install image review tooling
         run: python -m pip install --disable-pip-version-check pillow==11.3.0
-      - name: Download published CoxPWD dataset (not an independent test)
+      - name: Stage public source images (not verified)
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/coxpwd"
-          curl -fLS --retry 3 --retry-delay 4 --connect-timeout 25 --max-time 480 \
-            "https://api.data.mendeley.com/datasets/bdzg4tjy63/zip/file_downloaded?version=3" \
-            -o "$RUNNER_TEMP/coxpwd-source.zip"
-          export SOURCE_ZIP="$RUNNER_TEMP/coxpwd-source.zip"
-          export DEST="$RUNNER_TEMP/coxpwd"
-          python - <<'PY'
-          import io, os, pathlib, zipfile
-          src=pathlib.Path(os.environ['SOURCE_ZIP'])
-          root=pathlib.Path(os.environ['DEST']).resolve()
-          if not zipfile.is_zipfile(src):
-              raise SystemExit('Download is not a ZIP; do not substitute image sources')
-          def expand(archive, root, depth=0):
-              for member in archive.infolist():
-                  if member.is_dir():
-                      continue
-                  name=pathlib.PurePosixPath(member.filename.replace('\\','/'))
-                  if name.is_absolute() or '..' in name.parts:
-                      raise ValueError('Unsafe archive path')
-                  if member.file_size>750_000_000:
-                      raise ValueError('Unexpected huge member')
-                  target=(root/name).resolve()
-                  if not target.is_relative_to(root):
-                      raise ValueError('Archive path escapes destination')
-                  if name.suffix.lower()=='.zip' and depth<1:
-                      with zipfile.ZipFile(io.BytesIO(archive.read(member))) as nested:
-                          expand(nested,root/name.stem,depth+1)
-                  elif name.suffix.lower() in {'.jpg','.jpeg','.png','.webp','.json'}:
-                      target.parent.mkdir(parents=True,exist_ok=True)
-                      target.write_bytes(archive.read(member))
-          with zipfile.ZipFile(src) as z:
-              expand(z,root)
-          print('Extracted candidate images:',sum(p.suffix.lower() in {'.jpg','.jpeg','.png','.webp'} for p in root.rglob('*') if p.is_file()))
-          PY
-      - name: Stage source-hint candidates without model inference
-        shell: bash
-        run: |
-          set -euo pipefail
-          source="$RUNNER_TEMP/coxpwd"
-          annotations=$(find "$source" -name _annotations.coco.json | grep -E '/test/' | head -1 || true)
-          if [ -z "$annotations" ]; then
-            annotations=$(find "$source" -name _annotations.coco.json | head -1 || true)
-          fi
-          if [ -z "$annotations" ]; then
-            echo "No COCO annotation file found; inspect dataset layout before continuing" >&2
-            exit 1
-          fi
-          python scripts/stage_holdout_candidates.py \
-            --coco "$annotations" --images-root "$(dirname "$annotations")" \
-            --source "CoxPWD v3 (source-category screening only)" \
-            --source-url "https://data.mendeley.com/datasets/bdzg4tjy63/3" \
-            --license "CC BY 4.0" \
-            --total 48 --per-class 20 \
-            --out "$RUNNER_TEMP/coxpwd-provisional"
-          python - <<'PY'
-          import csv,os,pathlib
-          path=pathlib.Path(os.environ['RUNNER_TEMP'])/'coxpwd-provisional/review.csv'
-          with path.open() as f: records=list(csv.DictReader(f))
-          print(f'Staged {len(records)} images. All are PENDING visual inspection and NOT independently verified.')
-          if not records:raise ValueError('No images staged')
-          PY
-      - name: Upload review candidates (NOT a validated test set)
+          python scripts/stage_trashbox_candidates.py \
+            --per-group 16 \
+            --out "$RUNNER_TEMP/waste-source-provisional"
+      - name: Upload image review artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coxpwd-provisional-candidates-not-independent
-          path: ${{ runner.temp }}/coxpwd-provisional
+          name: public-waste-provisional-not-independent
+          path: ${{ runner.temp }}/waste-source-provisional
           if-no-files-found: error
           retention-days: 7
