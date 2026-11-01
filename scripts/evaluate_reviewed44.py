@@ -30,11 +30,21 @@ def dataset_from_review(bundle, review, folder, include_excluded=False):
         if (len(entries)!=44 or len(reviews)!=44 or
                 original.get('classes')!=CLASSES):
             raise ValueError('Expected same 44 photos and seven class names')
+        # Two historically distributed ZIPs contain these same 44 photos in
+        # different orders. Exact image SHA256 is the identity; position is not.
+        # Reject duplicate hashes or ANY missing/unrecognized source photo.
+        originals={r['sha256']:r for r in entries}
+        by_hash={r['sha256']:r for r in reviews}
+        if len(originals)!=44 or len(by_hash)!=44 or set(originals)!=set(by_hash):
+            missing=sorted(set(originals)-set(by_hash))
+            unexpected=sorted(set(by_hash)-set(originals))
+            raise ValueError('Review and ZIP contain DIFFERENT photo bytes: '
+                             f'missing {len(missing)}, unexpected {len(unexpected)}; '
+                             'use a review export from the SAME 44-image collection')
         records=[];per_class=Counter();skipped=[]
         folder.mkdir(parents=True,exist_ok=True)
-        for index,(image,marked) in enumerate(zip(entries,reviews),1):
-            if any(image[k]!=marked.get(k) for k in ('id','path','sha256')):
-                raise ValueError(f'Review source identity or image order mismatch at photo {index}')
+        for index,image in enumerate(entries,1):
+            marked=by_hash[image['sha256']]
             blob=z.read(image['path'])
             digest=hashlib.sha256(blob).hexdigest()
             if digest!=image['sha256']:
