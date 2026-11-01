@@ -7,6 +7,8 @@ sorting rules are frozen. Existing scores characterize exposed development data;
 no confirmed independent cohort or verified human disposal-bin labels were found.
 Actual real-world correct-bin accuracy remains unmeasured.
 
+To screen **missing bottle, utensil, wrapper, drink-carton, and hinged-container classes**, see [the next image-intake protocol](docs/missing-class-evaluation-intake.md) and `scripts/stage_holdout_candidates.py`. This stages unverified COCO-image candidates for individual review; it does not download images, certify independence, run inference, or generate bin ground truth.
+
 The November 1 individual image review is recorded in
 [the 100-image CSV](results/image-selection-20261101.csv) and
 [the packaging summary](results/image-selection-20261101.json): 52 provisional
