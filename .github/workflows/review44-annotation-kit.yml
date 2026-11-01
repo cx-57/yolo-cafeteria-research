@@ -2,6 +2,11 @@ name: GitHub download - 44-image annotation editor and starter JSON
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/review44-annotation-kit.yml"
+      - "scripts/package_review44_annotation_kit.py"
+      - "configs/review44-ai-draft-boxes.json"
   push:
     paths:
       - ".github/workflows/review44-annotation-kit.yml"
@@ -58,7 +63,7 @@ jobs:
           assert '<canvas' in (p/'index.html').read_text()
           print('PASS: identical SHA-verified source photos, 104 unverified boxes, export JSON, offline review UI.')
           PY
-      - name: Upload 44-photo annotation reviewer to GitHub Actions artifacts
+      - name: Upload 44-photo annotation review kit to GitHub Actions artifacts
         uses: actions/upload-artifact@v4
         with:
           name: cafeteria-44-test-annotation-review
