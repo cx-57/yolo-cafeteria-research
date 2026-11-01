@@ -111,13 +111,7 @@ High scores for this class therefore provide very limited evidence.
 
 # Model Architecture and Inference
 
-The paper freeze is [research-freeze.json](../configs/research-freeze.json), rooted
-at Git commit `defcc6156a4425daf1ae530757634cc541f3c267`. It pins all four checkpoint
-hashes, specialist/rule files, benchmark summaries and inference profiles. The
-analysis script checks these protected hashes before and after its work. This is a
-recorded experimental freeze, not a filesystem lock or claim that all historical
-assets have a complete integrity inventory. Future changes must be separate
-experiments and must retain this freeze.
+The system consists of four separately adapted YOLO11 specialist models rather than one newly trained seven-class network. To keep this analysis reproducible, the checkpoint hashes, class mappings, inference settings, decision rules, and benchmark files were recorded in [research-freeze.json](../configs/research-freeze.json) at commit `defcc6156a4425daf1ae530757634cc541f3c267`. Protected file hashes were checked before and after the analysis. The freeze identifies the configuration evaluated in this paper, although it is not a complete inventory of every historical experiment.
 
 **Table 2.** Frozen specialist checkpoints, parameter counts, class ownership, and per-model inference resolution.
 
@@ -135,12 +129,7 @@ library but was retained to reproduce the frozen protocol. Box coordinates are
 normalized XYXY. Native per-specialist NMS is followed by concatenation of the
 owned classes; no additional cross-specialist deduplication is applied.
 
-The recorded local environment is an Apple M1 MacBookAir10,1, eight CPU cores,
-8 GiB RAM, with MPS available. This is environment documentation, not a latency,
-throughput or energy benchmark. None of those efficiency claims was measured.
-The active models have heterogeneous historical adaptation and selection histories;
-the preserved recipes and release receipts should accompany any training narrative.
-This pipeline is **not** one controlled, newly trained from-scratch experiment.
+The experiments were run in a recorded environment using an Apple M1 MacBook Air with 8 GiB of memory and MPS acceleration. These specifications document the computational setting; inference time, energy use, and throughput were not benchmarked. The four checkpoints also have different training and selection histories, so the system should not be described as the product of one controlled training run.
 
 The prediction receipt saves detections down to confidence 0.001 for AP analysis.
 Display/sorting emits scores at least 0.25. Scores below 0.50 require review when
@@ -201,9 +190,9 @@ Every comparison involving the 248-photo historical cohort remains a **developme
 
 # Confidence Threshold Selection
 
-A uniform-confidence diagnostic searched thresholds 0.50--0.99 in steps of 0.01, plus 0.995, on the 186-photo repaired development-validation set. No global cutoff produced **at least 97% micro precision** while retaining **at least 60% recall** and **100 accepted predictions**. The best global threshold meeting the recall and prediction guards was 0.79, giving 96.04% precision and 68.73% recall.
+We first examined whether a single confidence threshold could reduce false detections across all seven classes. Thresholds from 0.50 to 0.99, in increments of 0.01, and an additional threshold of 0.995 were tested on the 186-image validation set. No global threshold met all three requirements: at least 97% micro precision, at least 60% recall, and at least 100 accepted predictions. The best global threshold satisfying the recall and prediction-count requirements was 0.79, yielding 96.04% precision and 68.73% recall.
 
-A second, **class-specific** search enumerated each category's validation TP--FP trade-off. A dynamic program retained the largest true-positive count for each achievable aggregate false-positive count, then selected the configuration maximizing correctly detected objects among policies satisfying the same precision, recall, and detection-count constraints:
+We therefore considered a separate threshold for each class. For every class, we enumerated the true and false detections accepted at candidate thresholds on validation. A dynamic program combined these class-level possibilities and selected the policy retaining the most correctly detected objects while meeting the same precision, recall, and prediction-count requirements:
 
 $$
 \max_{\boldsymbol{\tau}}\, TP(\boldsymbol{\tau})
@@ -219,7 +208,7 @@ $$
 |---:|---:|---:|---:|---:|---:|---:|
 | **0.79** | **0.83** | **0.50** | **0.50** | **0.84** | **0.83** | **0.91** |
 
-Only after the vector was fixed was it evaluated on the 248-photo *historically exposed* cohort; no threshold was reselected there. Its numerically successful 97% result is therefore not an independently validated field-performance claim, and these thresholds have not been deployed as the default disposal-suggestion rules.
+The selected thresholds were then applied unchanged to the 248-image historical cohort. They were not retuned on those images or activated in the default sorting pipeline. Because the historical cohort had already influenced earlier development decisions, its scores remain development evidence rather than an independent estimate of field performance.
 
 
 # Results
@@ -295,7 +284,7 @@ interval on these data would not establish independent generalization.
 
 ![Precision--recall trade-off for default and validation-selected classwise confidence thresholds, measured on exposed development cohorts.](paper/fig-precision.png){width=92%}
 
-The historical cohort's accepted correct objects decreased by **94**, from 724 to 630, while false positives fell from 51 to 18. This is a precision--coverage trade-off, not a newly trained detector or improved mAP. Validation set precision rose by 4.03 percentage points; historical-set precision rose by 3.80 points. The selected thresholds produced 648 accepted historical predictions versus 775 previously. Further threshold selection on this historical cohort would make its evaluation even less independent.
+On the historical cohort, class-specific thresholds reduced false detections from 51 to 18, but they also removed 94 correct detections: true positives fell from 724 to 630. The total number of accepted predictions declined from 775 to 648. Precision increased by 3.80 percentage points, while recall declined by 10.17 percentage points. This change reflects a stricter decision policy rather than an improvement in model weights or mAP. The historical cohort was not used for another round of threshold selection.
 
 
 # Independence and Annotation Audit
@@ -387,10 +376,7 @@ model hallucination from an incomplete label set.
 | FP: background or missing annotation | 7 | 9 |
 | FP: other-class overlap/annotation ambiguity | 0 | 1 |
 
-One buffet image contributes **52 of 106 food misses (49.06%)**. One outdoor
-trash scene contributes **10 of 24 bottle misses (41.67%)**. Object errors therefore
-are strongly clustered; 106 or 24 misses are not that many independent failures.
-Both difficult scenes remain in the primary recorded result.
+Errors were concentrated in a small number of difficult scenes. One buffet photograph accounted for 52 of the 106 missed food objects (49.06%), while a single outdoor-trash photograph accounted for 10 of the 24 missed bottles (41.67%). Multiple errors in one scene should not be interpreted as independent failures across many photographs. Both scenes remained in the reported results.
 
 AI visual inspection covered 12 deterministically selected error cases from 10
 unique photographs; it is not a random audit or a human-label correction. Examples
@@ -400,11 +386,7 @@ ambiguity, dense buffet scale/serving-granularity problems, and sealed food
 packaging detected as food. Actual material, contents and bin acceptance cannot
 be settled from these previews. No labels or sorting rules were changed.
 
-The previously completed bottle experiment remains rejected. Its fixed one-epoch
-classification-head trial changed validation bottle AP50/AP50–95 from
-82.47%/62.00% to 77.95%/59.18%. Historical retention passed but the primary gate
-failed. There was no candidate test scoring or activation. This is a documented
-negative result, not a new model improvement. No retraining was performed here.
+A separate, previously completed bottle-specialist experiment tested one additional epoch of classification-head training. Validation AP50 declined from 82.47% to 77.95%, and AP50–95 fell from 62.00% to 59.18%. Because the candidate failed the predefined validation criterion, it was rejected without being activated or evaluated on the historical test cohort. The frozen system reported here was not retrained during manuscript finalization.
 
 ### Exploratory 44-photo public-source stress test (qualitative; not independent)
 
@@ -442,38 +424,15 @@ source rights require review before reproducing them in a publication.
 
 # Limitations and Future Evaluation
 
-1. Development exposure and uncertain historical lineage prevent independent
-   generalization claims for existing benchmark scores.
-2. AI-assisted labels, small hinged-container support, and possible food-serving
-   granularity and packaging class-boundary problems limit measurement validity.
-3. Detection class is an insufficient proxy for material/reuse/contamination or
-   disposal eligibility. The no-emptiness recycling shortcut may differ from
-   actual school acceptance. It must be evaluated, not encoded into ground truth.
-4. Review is abstention; omitted/missed items and unmatched predictions must remain
-   visible in the results. No automatic landfill ability has been demonstrated.
-5. The asset scan is bounded by readable local records and documented grouping.
-   A no-match result is not a certificate of independence.
-6. No new independent school capture session, human bin adjudication, latency,
-   energy, or deployment-user study was completed. Source attribution/rights
-   and the related-work bibliography need verification before submission.
+The main limitation of this study is that the reported benchmark images are development data, not a sealed holdout. Earlier inference, model selection, and related capture groups prevent an independent generalization claim. The object annotations were also AI-assisted, with limited evidence of human verification; in particular, the hinged-container class has only two validation objects and four historical-test objects. Food-serving boundaries and visually similar packaging introduce further annotation uncertainty. The existing audit reduces uncertainty about what data and model versions were used, but incomplete historical records mean that the absence of a detected duplicate cannot establish independence.
 
-To establish the missing real-world result, collect a genuinely unused cohort
-from capture groups/days absent from training and selection, document its provenance,
-and seal membership before inference. Include realistic mixed scenes and negatives;
-define inclusion criteria before seeing predictions. Have human annotators, blind
-to model outputs, label every eligible object with its box and actual school bin
-using documented local acceptance/material/contents evidence. Record annotator
-identity, time, adjudication and unresolved items; do not map detector classes to
-"truth." Uncertain bins need explicit adjudication or a predeclared unscorable
-status, with exclusions counted. Use multiple independent capture groups, determine
-sample size from intended precision and bin prevalence, and report group-aware
-uncertainty after evaluation. Do not choose thresholds using that holdout.
+A second limitation concerns the distinction between an object class and a disposal decision. The current rule layer does not inspect whether a bottle or carton is empty, whether food is contaminated by packaging, or whether a specific material is accepted by the school's collection program. It cannot automatically assign landfill disposal, and requesting manual review is an abstention rather than a correct sorting outcome. The results therefore cannot quantify correct-bin accuracy or reductions in waste contamination. Latency, throughput, energy use, and user interaction during a real cafeteria deployment have also not been measured. Source-license and attribution records must be checked before any external image redistribution.
 
-
+The next evaluation should use newly collected cafeteria photographs from capture sessions excluded from all training, threshold selection, and prior inspection. Inclusion criteria and capture-group membership should be fixed before model inference. Annotators who have not seen the model's predictions should mark each relevant object's bounding box and actual disposal eligibility using documented local collection rules and, when necessary, material and contents information unavailable from the photograph. Uncertain cases should be adjudicated or recorded as unscorable under a predefined protocol. On that sealed cohort, the unchanged system can then be evaluated for object detection, correct-bin precision and recall, prediction coverage, and manual-review burden, with uncertainty estimated across independent capture groups rather than treating multiple objects in one photograph as unrelated observations.
 
 # Conclusion
 
-The frozen four-specialist system produces seven classes of cafeteria-item detections with a historical development mAP50 of **87.78%** and mAP50--95 of **67.24%**. A validation-selected confidence vector achieved **97.03%** measured development-validation object precision and **97.22%** precision when fixed on an already-exposed historical cohort, at a substantial recall cost. These scores characterize object recognition, not correct compost or recycling decisions. Existing provenance and annotation uncertainty preclude claims of independent generalization or reduced contamination. A sealed, human-annotated school field trial with ground-truth disposal eligibility is the necessary next experiment.
+Four specialized YOLO11 detectors recognized seven categories of cafeteria items with 87.78% mAP50 and 67.24% mAP50–95 on an exposed development cohort. Choosing confidence thresholds separately by class increased measured object-detection precision to 97.03% on validation and 97.22% on the historical cohort, although fewer true objects were detected. The experiment shows that selective thresholds can make the system more conservative without retraining its detectors. It does not show that the system sends items to the correct bin. Establishing that claim requires new school photographs, independent human annotations, and verified local disposal labels evaluated without further model or threshold tuning.
 
 
 # Reproducibility and Data Availability
