@@ -16,10 +16,6 @@ toc: false
 header-includes:
   - \usepackage{microtype}
   - \usepackage{booktabs}
-  - \usepackage{tikz}
-  - \usepackage{pgfplots}
-  - \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
-  - \pgfplotsset{compat=1.18}
   - \usepackage{fancyhdr}
   - \pagestyle{fancy}
   - \fancyhf{}
@@ -152,27 +148,7 @@ labels must follow actual acceptance evidence rather than the detector mapping.
 
 
 
-\begin{figure}[ht]
-\centering
-\begin{tikzpicture}[>=Stealth, font=\footnotesize,
- node/.style={draw=blue!50!black, rounded corners=2pt, align=center, minimum height=9mm},
- sm/.style={draw=blue!35!black,rounded corners=1.5pt,fill=blue!5,align=center,font=\scriptsize,text width=25mm,minimum height=8mm},
- arr/.style={->,thick,draw=black!65}]
-\node[node,text width=21mm] (a) at (0,0) {Cafeteria\\ image};
-\node[sm] (b1) at (3.6,1.52) {YOLO11n\\ food / hinge / carton};
-\node[sm] (b2) at (3.6,.50) {YOLO11n\\ plate / wrapper};
-\node[sm] (b3) at (3.6,-.52) {YOLO11x\\ utensil};
-\node[sm] (b4) at (3.6,-1.54) {YOLO11s\\ bottle};
-\node[node,text width=25mm] (c) at (7.5,0) {Seven-class\\ detections};
-\node[node,text width=25mm] (d) at (11.2,0) {Policy: suggest\\ or review};
-\foreach \x in {b1,b2,b3,b4}{
-\draw[arr] (a.east) -- (\x.west);
-\draw[arr] (\x.east) -- (c.west);
-}
-\draw[arr] (c.east) -- (d.west);
-\end{tikzpicture}
-\caption{Inference architecture. Detectors emit class-labeled boxes and confidences; disposal eligibility is *not* learned or verified from these boxes.}\label{fig:pipeline}
-\end{figure}
+![System diagram: four YOLO11 specialists detect seven cafeteria classes before rule-based suggestions or review.](paper/fig-pipeline.png){width=95%}
 
 
 # Evaluation Design and Metrics
@@ -306,28 +282,7 @@ interval on these data would not establish independent generalization.
 | Historical (248), uniform 0.50 | 724 | 51 | 200 | **93.42%** | 78.35% | 85.23% |
 | Historical (248), classwise fixed | 630 | 18 | 294 | **97.22%** | 68.18% | 80.15% |
 
-egin{figure}[ht]
-centering
-egin{tikzpicture}
-egin{axis}[
-width=.88linewidth,height=53mm,
-ymin=55,ymax=102,ytick={60,70,80,90,100},grid=major,grid style={black!10},
-ylabel={Micro object metric (%)},
-symbolic x coords={Validation baseline,Validation classwise,Historical baseline,Historical classwise},
-xtick=data,xticklabel style={font=scriptsize,rotate=13,anchor=east},
-legend style={at={(0.5,1.04)},anchor=south,draw=none,legend columns=2,font=scriptsize}]
-addplot+[mark=*,thick,color=blue!65!black] coordinates
-{(Validation baseline,93.00) (Validation classwise,97.03)
-(Historical baseline,93.42) (Historical classwise,97.22)};
-addlegendentry{Precision}
-addplot+[mark=square*,thick,color=orange!85!black] coordinates
-{(Validation baseline,82.11) (Validation classwise,71.43)
-(Historical baseline,78.35) (Historical classwise,68.18)};
-addlegendentry{Recall}
-end{axis}
-end{tikzpicture}
-caption{Measured precision rises with a selective threshold policy, but recall falls. Neither point is independent disposal-bin accuracy.}label{fig:pr}
-end{figure}
+![Precision--recall trade-off for default and validation-selected classwise confidence thresholds, measured on exposed development cohorts.](paper/fig-precision.png){width=92%}
 
 The historical cohort's accepted correct objects decreased by **94**, from 724 to 630, while false positives fell from 51 to 18. This is a precision--coverage trade-off, not a newly trained detector or improved mAP. Validation set precision rose by 4.03 percentage points; historical-set precision rose by 3.80 points. The selected thresholds produced 648 accepted historical predictions versus 775 previously. Further threshold selection on this historical cohort would make its evaluation even less independent.
 
