@@ -50,7 +50,7 @@ Unlike image classification, which assigns one label to an image, object detecti
 
 This study investigates how specialized object detectors and class-specific confidence thresholds can be combined to identify common cafeteria items. Four YOLO11 models recognize seven categories, while a separate rule-based policy issues provisional compost or recycling suggestions for selected objects. The models are evaluated using previously collected development images, and their data and annotation histories are examined to determine what conclusions the available results can support.
 
-## Related Work
+## **Related Work**
 
 Thung and Yang introduced TrashNet, an early approach to waste classification that assigns isolated objects to six material categories [2]. More recently, Single, Iranmanesh, and Raad developed RealWaste using photographs collected at a landfill, providing a setting with less controlled object appearances [3]. While these datasets support material recognition, they do not fully represent crowded cafeteria scenes in which several different items may appear together.
 
@@ -72,7 +72,7 @@ We score detections against the frozen, repaired annotation manifests rather tha
 
 Annotation quality also limits the interpretation of the scores. Historical annotations were produced or reviewed with AI assistance, and the available records do not establish comprehensive independent human verification. The school checklist, for example, contains 123 entries with blank human-review fields. Dense food scenes can also make the boundary between adjacent servings ambiguous. This uncertainty is particularly consequential for hinged containers, represented by just two validation annotations and four in the historical cohort.
 
-**Table 1.** Object annotations by class and split; training includes augmented views.
+**Table 1.** Object boxes by class (training views include augmentation; Hinge means hinged container).
 
 | Class | Train | Val. | Test |
 |:--|--:|--:|--:|
@@ -149,7 +149,7 @@ The selected vector was subsequently applied without modification to the histori
 
 # Results
 
-**Table 4.** Per-class precision, recall and AP50 on the exposed 248-image development cohort (percent).
+**Table 4.** Detection precision, recall, and AP50 on 248 development images (%); Hinge denotes hinged container.
 
 | Class | Precision | Recall | AP50 |
 |:--|--:|--:|--:|
@@ -175,33 +175,35 @@ The selected vector was subsequently applied without modification to the histori
 
 The historical cohort achieved 87.78% mAP50 and 67.24% mAP50–95; the corresponding validation scores were 86.36% and 65.25%. These macro-averages give each class equal weight, regardless of its annotation count. The hinged-container AP50 of 99.50%, for example, is based on only four historical-cohort objects and should not be interpreted as robust performance for that category. At the uniform 0.50 confidence cutoff, pooled detection precision, recall, and F1 on the historical cohort were 93.42%, 78.35%, and 85.23%, respectively. Detailed validation results are available in the frozen evaluation records.
 
-**Table 6.** Automatic-suggestion object matches. Counts are matched/accepted; other values are percentages, not verified bin accuracy.
+**Table 6.** Automatic-suggestion object metrics. Neither matching method establishes correct-bin accuracy.
 
-| Matching | Matches | P/R/F1 (%) |
-|:--|--:|:--|
-| Per class | 489/510 | 95.88 / 78.37 / 86.24 |
-| Joint geometry | 483/510 | 94.71 / 77.40 / 85.19 |
+| Metric | Per class | Joint geometry |
+|:--|--:|--:|
+| Matches / 510 | 489 | 483 |
+| Precision | 95.88% | 94.71% |
+| Recall | 78.37% | 77.40% |
+| F1 | 86.24% | 85.19% |
 
 Class-specific matching counted 489 correct object detections among 510 automatic suggestions; geometry-first matching retained 483. Five food detections and one bottle detection were instead assigned to overlapping wrapper labels under the latter convention. These are disagreements in object assignment, not verified wrong-bin outcomes. The frozen 248-image predictions were reproduced in a separate inference replay, and the present analysis uses those saved outputs without retraining the models.
 
-**Table 7.** Default sorting-policy outcomes on the exposed cohort; n/N shows each relevant denominator.
+**Table 7.** Default sorting-policy outcomes. Denominators depend on detections versus labeled objects.
 
-| Outcome | n/N | Rate |
-|:--|--:|--:|
-| Compost | 337/881 | 38.25% |
-| Recycling | 173/881 | 19.64% |
-| All automatic | 510/881 | 57.89% |
-| Manual review | 371/881 | 42.11% |
-| Auto matched (IoU) | 489/924 | 52.92% |
-| Auto correct class | 483/924 | 52.27% |
-| Reviewed objects | 286/924 | 30.95% |
-| Missed objects | 149/924 | 16.13% |
-| Unmatched auto | 21/510 | 4.12% |
-| Unmatched review | 85/371 | 22.91% |
+| Outcome | Count (rate) |
+|:--|--:|
+| Compost | 337/881 (38.25%) |
+| Recycling | 173/881 (19.64%) |
+| All automatic | 510/881 (57.89%) |
+| Manual review | 371/881 (42.11%) |
+| Auto matched (IoU) | 489/924 (52.92%) |
+| Auto correct class | 483/924 (52.27%) |
+| Reviewed objects | 286/924 (30.95%) |
+| Missed objects | 149/924 (16.13%) |
+| Unmatched auto | 21/510 (4.12%) |
+| Unmatched review | 85/371 (22.91%) |
 
 At the display threshold of 0.25, the default policy emitted 881 detections: 337 compost suggestions, 173 recycling suggestions, and 371 manual-review outcomes. Automatic suggestions therefore accounted for 57.89% of emitted detections. This denominator is narrower than the set of actual objects in the photographs, since undetected items generate no suggestion or review record. Indeed, exact-class automatic matches account for 483 of the 924 annotated objects (52.27%), a coverage-sensitive detection proxy rather than correct-bin accuracy. We do not attach conventional object-independent confidence intervals to these results: predictions are clustered within photographs, annotations contain unresolved uncertainty, and the historical cohort has prior development exposure.
 
-## Precision–Recall Trade-off
+## **Precision–Recall Trade-off**
 
 **Table 8.** Seven-class detection at IoU ≥ 0.50. Counts are TP/FP/FN; values are percentages.
 
@@ -270,7 +272,7 @@ A targeted AI-assisted visual inspection considered 12 error cases from ten uniq
 
 A previously completed bottle-specialist trial also provided a negative experimental result. One additional epoch of classification-head training decreased validation AP50 from 82.47% to 77.95% and AP50–95 from 62.00% to 59.18%. The candidate failed its predefined validation criterion and was neither activated nor scored on the historical cohort. All main-paper results continue to use the frozen bottle checkpoint.
 
-## Additional Image Evaluation
+## **Additional Image Evaluation**
 
 The unchanged detectors were also applied to 44 source-screened public photographs: nine from bottle sources, six from carton sources, fifteen from utensil sources, twelve from hinged-container sources, and two from wrapper sources. At confidence 0.25, the system emitted 149 predictions—twelve compost suggestions, 49 recycling suggestions, and 88 review outcomes—while three photographs produced no displayed detection. These are output counts, not measurements against independently verified object or disposal labels.
 
