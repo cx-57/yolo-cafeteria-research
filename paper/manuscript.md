@@ -270,7 +270,7 @@ The missing measurements in Table 10 are not zero scores. They are undefined bec
 
 # Error Analysis
 
-We examined the frozen predictions for food and bottle, two classes that contribute to automatic disposal suggestions. A missed object was assigned a diagnostic category according to the strongest same-class overlap in the saved outputs: a sufficiently localized detection below confidence 0.50, a candidate overlapping at IoU 0.10–0.49, or no qualifying same-class overlap. False positives were similarly grouped by localization, duplication, competing class, or lack of a corresponding annotation. These categories are algorithmic descriptions rather than verified causal explanations. In particular, an apparent background false positive could reflect an incomplete reference annotation.
+Food and bottle predictions were examined separately because both categories can trigger automatic disposal suggestions. Missed objects were grouped according to the strongest matching-class candidate: a sufficiently localized box below confidence 0.50, a box with only partial overlap (IoU 0.10–0.49), or no matching-class candidate. False positives were categorized by localization, duplication, competing categories, or possible reference-label errors. These categories describe model outputs; they do not establish the causes of individual failures.
 
 **Table 11.** Food and bottle error diagnostics at confidence 0.50. Categories are provisional.
 
@@ -285,11 +285,13 @@ We examined the frozen predictions for food and bottle, two classes that contrib
 | FP: background/label | 7 | 9 |
 | FP: class ambiguity | 0 | 1 |
 
-Errors were concentrated in a few demanding photographs. One buffet scene accounted for 52 of 106 missed food objects (49.06%), while a single outdoor-trash scene accounted for 10 of 24 missed bottles (41.67%). The totals therefore reflect substantial within-image clustering rather than independent failures across dozens of different scenes. Both photographs were retained in the evaluation.
+Errors were concentrated in a few difficult scenes. One crowded buffet photograph accounted for 52 of 106 missed food objects (49.06%), while one outdoor-trash photograph accounted for ten of 24 missed bottles (41.67%). Thus, the error totals are not equivalent to failures across the same number of independent scenes. Both photographs remained in the reported evaluation.
 
-A targeted AI-assisted visual inspection considered 12 error cases from ten unique photographs. The examples included a sports-style bottle outside the intended disposable-container scope, a possible unannotated bottle, ambiguous cylindrical packaging, crowded food portions, and sealed food packaging recognized as food. These observations help identify plausible annotation and class-boundary problems, but cannot determine actual material, contents, or bin acceptance from the available previews. No annotations or disposal rules were modified.
+The breakdown in Table 11 helps distinguish confidence problems from localization problems. Among food false negatives, 53 had a same-class prediction below confidence 0.50 and 48 had only partial localization overlap. Nineteen of the 24 missed bottles had a candidate below the confidence cutoff. Raising the threshold can therefore remove detections for objects that were already difficult to recognize.
 
-A previously completed bottle-specialist trial also provided a negative experimental result. One additional epoch of classification-head training decreased validation AP50 from 82.47% to 77.95% and AP50–95 from 62.00% to 59.18%. The candidate failed its predefined validation criterion and was neither activated nor scored on the historical cohort. All main-paper results continue to use the frozen bottle checkpoint.
+A targeted AI-assisted examination considered 12 cases from ten photographs. Examples included a reusable sports bottle outside the intended disposable-container category, possibly incomplete bottle annotations, cylindrical packaging, crowded food servings, and wrapped food recognized as food. These observations suggest possible sources of confusion but cannot determine actual disposal eligibility. No annotation was changed.
+
+A previously completed bottle-specialist experiment provided a negative result. One additional epoch of classification-head training reduced validation AP50 from 82.47% to 77.95% and AP50–95 from 62.00% to 59.18%. The candidate failed the retained validation acceptance criterion, was not activated, and was not scored on the historical cohort. The main results continue to use the frozen bottle checkpoint.
 
 ## Additional Image Evaluation
 
