@@ -1,1 +1,0 @@
-PDF build or preflight failed; inspect GitHub Actions for full job logs.
