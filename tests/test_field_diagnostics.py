@@ -3,6 +3,8 @@ import sys
 import tempfile
 from pathlib import Path
 import unittest
+from unittest.mock import patch
+from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import field_diagnostics as f
 
@@ -42,6 +44,23 @@ class FieldDiagnosticsTests(unittest.TestCase):
             photo = root / 'one.jpg'; photo.write_bytes(b'')
             (root/'one.txt').write_text('')
             self.assertEqual(f.read_complete_labels([photo],root)[0]['rows'],[])
+
+
+    def test_run_writes_report_and_annotation_overlays_without_weights(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            photo = root/'test.jpg'
+            Image.new('RGB', (120, 90), 'white').save(photo)
+            output = root/'results'
+            rows = {str(photo): [[.1, .1, .5, .5, .85, 0]]}
+            fake_receipt = {'predictions': rows}
+            with patch.object(f.s, 'predict', return_value=fake_receipt), \
+                 patch.object(f.s, 'save', side_effect=lambda path, value: Path(path).write_text(__import__('json').dumps(value))):
+                result = f.run(root, output, device='cpu')
+            self.assertEqual(result['predictions']['detections_at_025'], 1)
+            self.assertTrue((output/'report.json').exists())
+            self.assertTrue((output/'predictions.json').exists())
+            self.assertEqual(len(list((output/'overlays').glob('*.jpg'))), 1)
 
 
 if __name__ == '__main__':
