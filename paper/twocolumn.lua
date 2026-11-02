@@ -18,7 +18,11 @@ local function tableFloat(t, caption, id)
   local rr=rows(t)
   local n=#t.colspecs
   local fmt
-  if id==2 then
+  if id==7 then
+    fmt='>{\\raggedright\\arraybackslash}p{0.48\\columnwidth}r'
+  elseif id==8 then
+    fmt='>{\\raggedright\\arraybackslash}p{0.35\\columnwidth}rr'
+  elseif id==2 then
     fmt='>{\\raggedright\\arraybackslash}p{0.28\\columnwidth}r>{\\raggedright\\arraybackslash}p{0.39\\columnwidth}'
   elseif id==9 then
     fmt='>{\\raggedright\\arraybackslash}p{0.73\\columnwidth}r'
@@ -40,7 +44,7 @@ local function tableFloat(t, caption, id)
     out[#out+1]='\\caption{'..escape(caption)..'}'
     out[#out+1]='\\label{tab:waste-'..id..'}'
   end
-  out[#out+1] = (id==8) and '\\scriptsize' or '\\footnotesize'
+  out[#out+1]='\\footnotesize'
   out[#out+1]='\\setlength{\\tabcolsep}{2.5pt}'
   out[#out+1]='\\renewcommand{\\arraystretch}{1.06}'
   out[#out+1]='\\begin{tabular}{'..fmt..'}'
@@ -49,6 +53,10 @@ local function tableFloat(t, caption, id)
     local cells={}
     for _,c in ipairs(r.cells) do cells[#cells+1]=textCell(c) end
     while #cells<n do cells[#cells+1]='' end
+    if id==8 and i>1 and #cells>=3 then
+      local p,r,f=cells[3]:match('([%d%.]+)%s*/%s*([%d%.]+)%s*/%s*([%d%.]+)')
+      if p then cells[3]='\\shortstack[r]{'..p..'\\\\'..r..'\\\\'..f..'}' end
+    end
     out[#out+1]=table.concat(cells,' & ')..' \\\\'
     if i==#t.head.rows and i<#rr then out[#out+1]='\\midrule' end
   end
