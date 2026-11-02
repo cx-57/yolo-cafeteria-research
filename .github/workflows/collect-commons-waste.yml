@@ -1,0 +1,54 @@
+name: Gather Commons cafeteria waste photo candidates
+
+on:
+  push:
+    branches:
+      - experiment/cafeteria-domain-image-intake-20261102
+    paths:
+      - scripts/acquire_commons_waste_candidates.py
+      - .github/workflows/collect-commons-waste.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pillow
+      - name: Download source-licensed public photo candidates (no YOLO labeling)
+        run: |
+          python scripts/acquire_commons_waste_candidates.py \
+            --output "$RUNNER_TEMP/commons-waste-candidates" \
+            --limit 110 \
+            --per-category 15
+      - name: Upload source candidates with provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: commons-cafeteria-waste-candidates-unreviewed
+          path: ${{ runner.temp }}/commons-waste-candidates/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 5
+      - name: Record artifact run and image count on experiment branch
+        env:
+          RUN_NUMBER: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json,os,pathlib
+          root=pathlib.Path(os.environ["RUNNER_TEMP"])/"commons-waste-candidates"
+          report=json.loads((root/"summary.json").read_text())
+          report["workflow_run_id"]=int(os.environ["RUN_NUMBER"])
+          pathlib.Path("results/commons-image-candidate-receipt.json").write_text(json.dumps(report,indent=2)+"\n")
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add results/commons-image-candidate-receipt.json
+          git commit -m "Record CC-licensed Commons image candidate acquisition"
+          git push
