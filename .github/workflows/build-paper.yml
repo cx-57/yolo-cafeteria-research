@@ -58,6 +58,20 @@ jobs:
           print('PDF preflight passed:',p.stat().st_size,'bytes')
           PY
 
+      - name: Render pages for two-column typography inspection
+        if: github.ref == 'refs/heads/paper/editorial-review-20261101'
+        run: |
+          python -m pip install --disable-pip-version-check 'pymupdf>=1.24,<1.29'
+          python - <<'PY'
+          from pathlib import Path
+          import fitz
+          doc = fitz.open('paper/cafeteria-waste-sorting.pdf')
+          for page_index, label in [(0, 'first'), (min(2, len(doc)-1), 'tables'), (len(doc)-1, 'last')]:
+              pix = doc[page_index].get_pixmap(matrix=fitz.Matrix(1.45, 1.45), alpha=False)
+              pix.save(f'paper/preview-{label}.png')
+          print('Page previews rendered from', len(doc), 'page PDF')
+          PY
+
       - name: Upload PDF as downloadable GitHub Actions artifact
         uses: actions/upload-artifact@v4
         with:
@@ -72,6 +86,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add paper/cafeteria-waste-sorting.pdf
+          if [ "${GITHUB_REF_NAME}" = 'paper/editorial-review-20261101' ]; then
+            git add paper/preview-first.png paper/preview-tables.png paper/preview-last.png
+          fi
           if ! git diff --cached --quiet; then
             git commit -m "Build updated cafeteria waste-sorting research PDF"
             git push origin HEAD:"${GITHUB_REF_NAME}"
