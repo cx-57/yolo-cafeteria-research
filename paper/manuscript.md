@@ -124,14 +124,14 @@ The initial experiment tested whether one confidence cutoff could improve precis
 
 We then allowed each class to have its own confidence threshold. Candidate cutoffs for each class were summarized by their validation-set true- and false-positive counts. A dynamic program combined these classwise choices, preserving the largest attainable number of true positives for each feasible false-positive total. The final threshold vector maximized correctly accepted detections subject to the same precision, recall, and accepted-prediction constraints:
 
-$
+\begin{equation*}
 \begin{aligned}
 \max_{\boldsymbol{\tau}}\quad & TP(\boldsymbol{\tau})\\
-\text{subject to}\quad & P(\boldsymbol{\tau})\geq0.97,\\
+\mathrm{subject\ to}\quad & P(\boldsymbol{\tau})\geq0.97,\\
 & R(\boldsymbol{\tau})\geq0.60,\\
 & N_{\mathrm{pred}}\geq100.
 \end{aligned}
-$
+\end{equation*}
 
 **Table 3.** Class-specific confidence thresholds selected on development validation.
 
