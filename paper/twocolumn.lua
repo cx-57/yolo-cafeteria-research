@@ -33,10 +33,13 @@ local function tableFloat(t, caption, id)
   else
     fmt='l'..string.rep('r',n-1)
   end
-  local out={'\\begin{'..env..'}[!t]', '\\centering',
-             '\\caption{'..escape(caption)..'}',
-             '\\label{tab:waste-'..id..'}',
-             '\\footnotesize', '\\setlength{\\tabcolsep}{3pt}',
+  local out={'\\begin{'..env..'}[!t]', '\\centering'}
+  if id>0 then
+    out[#out+1]='\\caption{'..escape(caption)..'}'
+    out[#out+1]='\\label{tab:waste-'..id..'}'
+  end
+  out[#out+1]='\\footnotesize'
+  out[#out+1]='\\setlength{\\tabcolsep}{3pt}'
              '\\renewcommand{\\arraystretch}{1.06}'}
   if spread then
     out[#out+1]='\\begin{tabular*}{'..width..'}{@{\\extracolsep{\\fill}}'..fmt..'@{}}'
@@ -79,6 +82,9 @@ function Pandoc(doc)
       else
         result[#result+1]=b;i=i+1
       end
+    elseif b.t=='Table' then
+      result[#result+1]=tableFloat(b,'',0)
+      i=i+1
     elseif b.t=='Para' and #b.content==1 and b.content[1].t=='Image' then
       result[#result+1]=imageFloat(b.content[1]);i=i+1
     else
