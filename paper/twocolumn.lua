@@ -67,7 +67,7 @@ local function imageFloat(im)
   local cap=escape(pandoc.utils.stringify(im.caption))
   return pandoc.RawBlock('latex',
     '\\begin{figure*}[!t]\n\\centering\n'..
-    '\\includegraphics[width=0.80\\textwidth,keepaspectratio]{'..im.src..'}\n'..
+    '\\includegraphics[width=0.88\\textwidth,keepaspectratio]{'..im.src..'}\n'..
     '\\caption{'..cap..'}\n\\end{figure*}')
 end
 function Pandoc(doc)
@@ -86,6 +86,22 @@ function Pandoc(doc)
       end
     elseif b.t=='Table' then
       result[#result+1]=tableFloat(b,'',0)
+      i=i+1
+    elseif b.t=='Figure' then
+      local im=nil
+      for _,block in ipairs(b.content) do
+        if block.t=='Plain' or block.t=='Para' then
+          for _,inline in ipairs(block.content) do
+            if inline.t=='Image' then im=inline; break end
+          end
+        end
+        if im then break end
+      end
+      if im then
+        result[#result+1]=imageFloat(im)
+      else
+        result[#result+1]=b
+      end
       i=i+1
     elseif b.t=='Para' and #b.content==1 and b.content[1].t=='Image' then
       result[#result+1]=imageFloat(b.content[1]);i=i+1
