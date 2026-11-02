@@ -40,7 +40,7 @@ local function tableFloat(t, caption, id)
   end
   out[#out+1]='\\footnotesize'
   out[#out+1]='\\setlength{\\tabcolsep}{3pt}'
-             '\\renewcommand{\\arraystretch}{1.06}'}
+  out[#out+1]='\\renewcommand{\\arraystretch}{1.06}'
   if spread then
     out[#out+1]='\\begin{tabular*}{'..width..'}{@{\\extracolsep{\\fill}}'..fmt..'@{}}'
   elseif wide then
