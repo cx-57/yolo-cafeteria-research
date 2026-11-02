@@ -1,0 +1,26 @@
+{
+  "batch": 2,
+  "source_images_individually_inspected": 10,
+  "human_verified": 0,
+  "source_roboflow_split": "train",
+  "boxes_total": 53,
+  "classes": {
+    "food": 23,
+    "plate": 13,
+    "utensil": 16,
+    "hinged_container": 0,
+    "drink_carton": 0,
+    "wrapper": 1,
+    "bottle": 0
+  },
+  "status": "PENDING_COMMAND_CENTER",
+  "source_image_bytes_changed": false,
+  "main_modified": false,
+  "training_done": false,
+  "future_batch_sizes": [
+    40,
+    40,
+    40,
+    40
+  ]
+}
