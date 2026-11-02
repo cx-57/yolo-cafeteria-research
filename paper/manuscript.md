@@ -44,11 +44,11 @@ In school cafeterias, discarded food, packaging, and utensils are often placed t
 
 # Introduction
 
-Waste separation in school cafeterias presents a problem that extends beyond identifying discarded objects. A bottle, a food container, and a wrapper can appear together in one image, but their appropriate disposal streams may depend on material, contents, contamination, and local collection rules. The U.S. Environmental Protection Agency advises checking local recycling guidance and ensuring that recyclable containers are empty and clean [1]. Thus, even a model that identifies an item correctly may still produce an inappropriate disposal suggestion.
+School cafeterias produce a mixture of food scraps, disposable utensils, drink cartons, and packaging. Although these objects can often be identified from photographs, their appropriate disposal streams depend on additional information, including material, contamination, and local collection rules. The U.S. Environmental Protection Agency recommends checking local recycling requirements and emptying and cleaning containers before recycling [1]. Consequently, correct object recognition does not necessarily imply a correct sorting decision.
 
-Unlike image classification, which assigns one label to an image, object detection identifies the location and category of multiple objects within the same scene. This makes it a useful starting point for cafeteria waste recognition. However, detection confidence does not indicate whether an item is eligible for recycling or composting. Furthermore, raising the confidence threshold to avoid incorrect detections can also remove objects that would otherwise have been recognized correctly. A practical assistance system must therefore balance recognition precision, detection coverage, and the decision to request human review.
+Object detection offers a way to identify several discarded items in one image, rather than assigning a single label to the entire scene. However, a detector's confidence score concerns the predicted object class, not whether the object belongs in a particular bin. A stricter confidence threshold may reduce false detections, but it may also discard correct ones. An effective assistance system must therefore consider the trade-off between precision and recall while allowing uncertain cases to be reviewed.
 
-This study investigates how specialized object detectors and class-specific confidence thresholds can be combined to identify common cafeteria items. Four YOLO11 models recognize seven categories, while a separate rule-based policy issues provisional compost or recycling suggestions for selected objects. The models are evaluated using previously collected development images, and their data and annotation histories are examined to determine what conclusions the available results can support.
+This study evaluates four specialized YOLO11 detectors covering seven cafeteria-item classes, together with a rule-based layer that suggests composting, recycling, or manual review. We first measure the frozen models on available development photographs, then examine how class-specific confidence thresholds affect their detection results. Finally, we audit the image and annotation records to determine the limits of those results.
 
 ## **Related Work**
 
@@ -56,9 +56,9 @@ Thung and Yang introduced TrashNet, an early approach to waste classification th
 
 Proença and Simões addressed a related problem by introducing TACO, a dataset of litter photographed in context and annotated for instance segmentation [4]. Bashkirova and colleagues subsequently developed ZeroWaste, focusing on overlapping and deformable waste objects in recycling facilities [5]. These studies demonstrate the importance of detecting individual objects within cluttered images. However, the material or visual class of an object should not be confused with its correct disposal stream, which may vary according to local collection requirements.
 
-The YOLO framework, introduced by Redmon and colleagues, approaches object detection by predicting bounding boxes and classes within a single model [6]. The present study uses Ultralytics YOLO11 [8] and follows the average-precision evaluation conventions established by the COCO benchmark [7]. Although average precision provides a useful measure across confidence thresholds, it does not describe how many detections a system accepts at a particular operating point. Consequently, fixed-threshold precision and recall are also important for a waste-sorting assistant.
+Redmon and colleagues introduced YOLO as a unified approach to predicting object locations and classes [6]. This study uses Ultralytics YOLO11 [8] and reports average precision under the COCO evaluation conventions [7]. Although average precision summarizes performance over confidence-ranked predictions, it does not describe a system operating at one chosen threshold. We therefore report fixed-threshold precision, recall, and F1 alongside mAP.
 
-Geifman and El-Yaniv explored selective classification, in which a model can reject uncertain predictions rather than issuing a decision for every input [9]. Their later SelectiveNet model incorporated this rejection mechanism directly into training [10]. This study uses a simpler method by adjusting confidence thresholds for already trained object detectors. The goal is to examine how much precision can be gained and how much recall is lost, rather than to introduce a new selective-classification architecture.
+Geifman and El-Yaniv studied selective classification, in which uncertain predictions can be rejected [9], and later incorporated a rejection option into model training through SelectiveNet [10]. Here, we use a simpler approach: choosing class-specific confidence thresholds for detectors that have already been trained. This allows us to evaluate the cost of retaining fewer predictions without changing the model weights.
 
 Finally, the WILDS benchmark demonstrates the difficulty of maintaining model performance across different data distributions [11]. Kapoor and Narayanan similarly describe how data leakage and flaws in evaluation design can overstate machine-learning results [12]. Since the historical test photographs in this project were previously examined during development, the reported scores are treated as development results rather than independent estimates of cafeteria performance.
 
@@ -86,7 +86,7 @@ Annotation quality also limits the interpretation of the scores. Historical anno
 
 # Methods
 
-Rather than training one model to recognize every cafeteria item, the prototype combines four previously adapted YOLO11 specialists. Each checkpoint is responsible for a defined subset of the seven output categories, as summarized in Table 2. This division reflects the retained development configuration, not a controlled comparison showing that specialization outperforms a unified detector. The checkpoints, class mappings, inference parameters, and disposal rules were recorded in the project's frozen configuration at commit defcc6156a4425daf1ae530757634cc541f3c267. The protected hashes were checked during the research audit so that the reported comparisons refer to unchanged model artifacts.
+The system combines four YOLO11 specialists, each trained or adapted during earlier development to recognize a subset of the seven target classes (Table 2). The specialists' division of work was inherited from that development process; this study does not compare it with a single seven-class detector. Checkpoint hashes, class mappings, inference settings, and disposal rules were recorded in the frozen configuration at commit `defcc6156a4425daf1ae530757634cc541f3c267`. An integrity audit verified that the reported comparisons used the retained artifacts.
 
 **Table 2.** Frozen specialist models. Input size is given in pixels; Hinge denotes hinged container.
 
@@ -173,7 +173,7 @@ The selected vector was subsequently applied without modification to the histori
 | Wrapper | 58/7/17 | 82.86% | 57.64% |
 | Bottle | 33/10/24 | 66.00% | 59.62% |
 
-The historical cohort achieved 87.78% mAP50 and 67.24% mAP50–95; the corresponding validation scores were 86.36% and 65.25%. These macro-averages give each class equal weight, regardless of its annotation count. The hinged-container AP50 of 99.50%, for example, is based on only four historical-cohort objects and should not be interpreted as robust performance for that category. At the uniform 0.50 confidence cutoff, pooled detection precision, recall, and F1 on the historical cohort were 93.42%, 78.35%, and 85.23%, respectively. Detailed validation results are available in the frozen evaluation records.
+On the historical development cohort, the frozen system achieved 87.78% mAP50 and 67.24% mAP50–95, compared with 86.36% and 65.25% on validation. Results varied considerably by category (Tables 4 and 5). For example, drink cartons achieved 99.23% precision and 96.27% recall at confidence 0.50, whereas bottle recall was 57.89%. Hinged containers achieved 99.50% AP50, but only four such objects were annotated in the historical cohort, limiting the interpretation of that figure. Across all seven classes, the historical cohort yielded 93.42% micro precision, 78.35% recall, and 85.23% F1 at confidence 0.50.
 
 **Table 6.** Automatic-suggestion object metrics. Neither matching method establishes correct-bin accuracy.
 
@@ -214,9 +214,9 @@ At the display threshold of 0.25, the default policy emitted 881 detections: 337
 | Hist. 0.50 | 724/51/200 | 93.42 | 78.35 | 85.23 |
 | Hist. classwise | 630/18/294 | **97.22** | 68.18 | 80.15 |
 
-![Precision–recall trade-off under uniform and class-specific confidence thresholds on exposed development cohorts.](paper/fig-precision.png){width=90%}
+![Precision and recall at uniform and class-specific thresholds, compared separately on validation and previously examined historical images.](paper/fig-precision.png){width=90%}
 
-The classwise policy reduced historical-cohort false positives from 51 to 18, but also removed 94 true positives, from 724 to 630. The number of accepted predictions declined from 775 to 648. Consequently, precision increased by 3.80 percentage points while recall decreased by 10.17 points; F1 fell from 85.23% to 80.15%. Validation F1 likewise fell from 87.22% to 82.28%. The result supports a specific trade-off—fewer false-positive detections among accepted outputs—rather than an overall improvement in recognition quality. Neither the model weights nor the ranking-based mAP changed.
+Class-specific thresholds reduced false positives on the historical cohort from 51 to 18, but also reduced true positives from 724 to 630. Accepted predictions fell from 775 to 648. Precision increased by 3.80 percentage points, while recall fell by 10.17 points and F1 decreased from 85.23% to 80.15%. Validation F1 similarly declined from 87.22% to 82.28%. Thus, class-specific thresholding produced more precise accepted detections at the cost of missing more objects. It did not improve mAP or the underlying detectors.
 
 
 # Data Independence
@@ -292,7 +292,9 @@ An independent field study would require photographs collected in previously unu
 
 # Conclusion
 
-The four-specialist YOLO11 system attained 87.78% mAP50 and 67.24% mAP50–95 on the available 248-image historical development cohort. Selecting confidence thresholds separately for each class increased measured micro precision to 97.03% on validation and 97.22% on the exposed historical cohort, but at the expense of lower recall and F1. The contribution is therefore a transparent account of selective detection and its coverage costs, supported by a frozen evaluation and an explicit provenance audit. It is not evidence that the system reliably directs waste to the correct bin. Establishing that capability will require an independent school-based study with human-verified object and disposal labels.
+This study evaluated a four-specialist YOLO11 system for recognizing seven categories of cafeteria waste. On 248 previously examined development photographs, the system achieved 87.78% mAP50 and 67.24% mAP50–95. Class-specific confidence thresholds increased object-detection precision to 97.03% on validation and 97.22% on the historical cohort, but lowered recall and F1. These results demonstrate the trade-off between accepting fewer false detections and missing more objects.
+
+A central limitation is that the available images do not form an independent school-based test set, and verified bin labels are unavailable. The next step is to collect new cafeteria photographs and evaluate the unchanged system against independently reviewed object and disposal annotations. Only then can its effectiveness as a waste-sorting assistant be established.
 
 # Reproducibility
 
