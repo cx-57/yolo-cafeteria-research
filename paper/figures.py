@@ -46,30 +46,42 @@ ax.text(6.05,3.62,"Four independent specialist checkpoints",ha="center",color=GR
 fig.savefig(ROOT/"fig-pipeline.png",bbox_inches="tight",pad_inches=.12)
 plt.close(fig)
 
-fig,ax=plt.subplots(figsize=(10.2,3.55))
-x=np.arange(4)
-precision=[93.00,97.03,93.42,97.22]
-recall=[82.11,71.43,78.35,68.18]
-xticks=["Validation\nbaseline","Validation\nclasswise","Historical\nbaseline","Historical\nclasswise"]
-ax.plot(x,precision,marker="o",markersize=7,color=BLUE,lw=2.4,label="Micro precision")
-ax.plot(x,recall,marker="s",markersize=6,color=ORANGE,lw=2.1,label="Micro recall")
-for i,y in enumerate(precision):
-    ax.annotate(f"{y:.2f}%",(i,y),xytext=(0,8),textcoords="offset points",ha="center",
-                fontsize=9,color=BLUE,fontweight="bold")
-for i,y in enumerate(recall):
-    ax.annotate(f"{y:.2f}%",(i,y),xytext=(0,-16),textcoords="offset points",ha="center",
-                fontsize=9,color=ORANGE,fontweight="bold")
-ax.set_xticks(x,xticks)
-ax.set_ylim(60,103)
-ax.set_xlim(-.3,3.3)
-ax.set_ylabel("Object detection (%)",color=NAVY)
-ax.grid(axis="y",color="#DCE5EC",lw=.7)
-ax.spines["top"].set_visible(False);ax.spines["right"].set_visible(False)
-ax.legend(loc="lower left",frameon=False,ncol=2,bbox_to_anchor=(.01,1.0))
-ax.axvline(1.5,color="#A7B2BE",linestyle="--",lw=.85)
-ax.text(.48,60.7,"186-photo validation",ha="center",fontsize=8,color=GRAY)
-ax.text(2.5,60.7,"248-photo exposed cohort",ha="center",fontsize=8,color=GRAY)
-fig.tight_layout()
-fig.savefig(ROOT/"fig-precision.png",bbox_inches="tight",pad_inches=.1)
+# Paired, unconnected comparisons: validation and previously exposed historical images
+# are separate cohorts, so connecting their scores would imply a false trajectory.
+fig, ax = plt.subplots(figsize=(10.2, 3.65))
+positions = [0, 1, 2.55, 3.55]
+precision = [93.00, 97.03, 93.42, 97.22]
+recall = [82.11, 71.43, 78.35, 68.18]
+labels = ["Uniform", "Classwise", "Uniform", "Classwise"]
+bar_width = 0.32
+
+p_bars = ax.bar([v - bar_width / 2 for v in positions], precision, bar_width,
+                label="Precision", color=BLUE, alpha=0.92)
+r_bars = ax.bar([v + bar_width / 2 for v in positions], recall, bar_width,
+                label="Recall", color=ORANGE, alpha=0.90)
+for bars in [p_bars, r_bars]:
+    for bar in bars:
+        height = bar.get_height()
+        ax.annotate(f"{height:.2f}%", (bar.get_x() + bar.get_width() / 2, height),
+                    xytext=(0, 4), textcoords="offset points", ha="center", va="bottom",
+                    fontsize=8, fontweight="bold", color=NAVY)
+ax.set_ylim(0, 110)
+ax.set_yticks([0, 20, 40, 60, 80, 100])
+ax.set_xticks(positions, labels)
+ax.set_ylabel("Object detection (%)", color=NAVY)
+ax.axvline(1.78, color="#A7B2BE", linestyle="--", linewidth=0.8)
+ax.text(0.5, -0.13, "Validation · 186 images", ha="center", fontsize=9,
+        transform=ax.get_xaxis_transform(), color=GRAY)
+ax.text(3.05, -0.13, "Historical development · 248 images", ha="center",
+        fontsize=9, transform=ax.get_xaxis_transform(), color=GRAY)
+ax.grid(axis="y", color="#DCE5EC", linewidth=0.6)
+ax.set_axisbelow(True)
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.04),
+          ncol=2, frameon=False)
+fig.subplots_adjust(bottom=0.27, top=0.85, left=0.09, right=0.98)
+fig.savefig(ROOT / "fig-precision.png", bbox_inches="tight", pad_inches=0.12)
 plt.close(fig)
+
 print("Built fig-pipeline.png and fig-precision.png")
