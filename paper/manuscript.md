@@ -344,4 +344,4 @@ The repository documents the commands for reproducing the file audit, running so
 
 # Acknowledgments
 
-The participating school's food services staff provided cafeteria inventory context and assisted with image collection. Their involvement does not imply institutional verification of the annotations, measured performance, or disposal recommendations.
+School food-services staff assisted with cafeteria context and image collection but did not validate model performance or disposal rules.
