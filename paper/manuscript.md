@@ -37,7 +37,7 @@ header-includes:
 ---
 
 
-**Abstract.** Waste-sorting assistance requires more than identifying discarded objects: their appropriate disposal streams depend on material composition, contamination, contents, and local collection rules. We examine a prototype comprising four specialized YOLO11 detectors for seven cafeteria-item classes and a rule-based policy that recommends composting, recycling, or manual review. On an historically exposed development cohort of 248 photographs with 924 AI-assisted object annotations, the frozen detectors achieved 87.78% mAP50 and 67.24% mAP50–95. At a uniform confidence threshold of 0.50, micro precision and recall were 93.42% and 78.35%. Class-specific thresholds selected on 186 validation photographs increased precision to 97.03% on validation and 97.22% on the historical cohort, while reducing recall to 71.43% and 68.18%, respectively. Historical-cohort F1 consequently declined from 85.23% to 80.15%. Only six historical-cohort images were captured at the participating school, and a provenance audit identified neither a confirmed independent test cohort nor verified ground-truth disposal-bin labels. The study therefore establishes a reproducible development-set precision–coverage trade-off, not real-world disposal accuracy or reduced waste contamination.
+**Abstract.** Waste-sorting assistance requires more than identifying discarded objects: their appropriate disposal streams depend on material composition, contamination, contents, and local collection rules. We examine a prototype comprising four specialized YOLO11 detectors for seven cafeteria-item classes and a rule-based policy that recommends composting, recycling, or manual review. On a historically exposed development cohort of 248 photographs with 924 AI-assisted object annotations, the frozen detectors achieved 87.78% mAP50 and 67.24% mAP50–95. At a uniform confidence threshold of 0.50, micro precision and recall were 93.42% and 78.35%. Class-specific thresholds selected on 186 validation photographs increased precision to 97.03% on validation and 97.22% on the historical cohort, while reducing recall to 71.43% and 68.18%, respectively. Historical-cohort F1 consequently declined from 85.23% to 80.15%. Only six historical-cohort images were captured at the participating school, and a provenance audit identified neither a confirmed independent test cohort nor verified ground-truth disposal-bin labels. The study therefore establishes a reproducible development-set precision–coverage trade-off, not real-world disposal accuracy or reduced waste contamination.
 
 *Keywords:* cafeteria waste, YOLO11, object detection, selective prediction, waste classification, evaluation provenance.
 
@@ -152,9 +152,7 @@ The selected vector was subsequently applied without modification to the histori
 
 # Results
 
-**Table 4.** Per-class fixed-threshold object-recognition metrics on the exposed
-248-photo cohort (confidence ≥ 0.50, IoU ≥ 0.50); AP uses the full frozen score range.
-These are descriptive development results, not independent bin classification.
+**Table 4.** Per-class detection performance on 248 exposed development photographs. Fixed-threshold measures use confidence ≥ 0.50 and IoU ≥ 0.50; AP spans the frozen confidence ranks.
 
 | Class | TP / FP / FN | Precision | Recall | F1 | AP50 | AP50–95 |
 |---|---:|---:|---:|---:|---:|---:|
@@ -168,8 +166,7 @@ These are descriptive development results, not independent bin classification.
 
 The historical cohort achieved 87.78% mAP50 and 67.24% mAP50–95; the corresponding validation scores were 86.36% and 65.25%. These macro-averages give each class equal weight, regardless of its annotation count. The hinged-container AP50 of 99.50%, for example, is based on only four historical-cohort objects and should not be interpreted as robust performance for that category. At the uniform 0.50 confidence cutoff, pooled detection precision, recall, and F1 on the historical cohort were 93.42%, 78.35%, and 85.23%, respectively. Detailed validation results are available in the frozen evaluation records.
 
-**Table 5.** Automatic-suggestion object proxies, explicitly separate from bin accuracy.
-Recall uses the 624 food/bottle/carton object labels.
+**Table 5.** Object-recognition proxies for 510 automatic suggestions. Recall uses 624 food, bottle, and carton annotations; these values are not verified bin accuracy.
 
 | Matching convention | Correct object matches | Precision | Recall | F1 |
 |---|---:|---:|---:|---:|
@@ -197,7 +194,7 @@ At the display threshold of 0.25, the default policy emitted 881 detections: 337
 
 ## Precision–Recall Trade-off After Threshold Selection
 
-**Table 7.** Overall seven-class micro object recognition at box IoU $\geq$ 0.50; same source images and labels within each cohort.
+**Table 7.** Seven-class micro detection metrics (IoU ≥ 0.50) under the uniform and class-specific confidence policies.
 
 | Cohort / policy | TP | FP | FN | Precision | Recall | F1 |
 |:--|--:|--:|--:|--:|--:|--:|
@@ -206,7 +203,7 @@ At the display threshold of 0.25, the default policy emitted 881 detections: 337
 | Historical (248), uniform 0.50 | 724 | 51 | 200 | **93.42%** | 78.35% | 85.23% |
 | Historical (248), classwise fixed | 630 | 18 | 294 | **97.22%** | 68.18% | 80.15% |
 
-![Precision--recall trade-off for default and validation-selected classwise confidence thresholds, measured on exposed development cohorts.](paper/fig-precision.png){width=92%}
+![Precision–recall trade-off under uniform and class-specific confidence thresholds on exposed development cohorts.](paper/fig-precision.png){width=90%}
 
 The classwise policy reduced historical-cohort false positives from 51 to 18, but also removed 94 true positives, from 724 to 630. The number of accepted predictions declined from 775 to 648. Consequently, precision increased by 3.80 percentage points while recall decreased by 10.17 points; F1 fell from 85.23% to 80.15%. Validation F1 likewise fell from 87.22% to 82.28%. The result supports a specific trade-off—fewer false-positive detections among accepted outputs—rather than an overall improvement in recognition quality. Neither the model weights nor the ranking-based mAP changed.
 
@@ -230,7 +227,7 @@ Both school submissions have development-related provenance. The earlier submiss
 
 The audit separately examined annotation provenance, screening 2,398 JSON files together with additional CSV, XML, and YAML records. It did not identify a confirmed set of independently human-adjudicated, object-level disposal-bin labels. An annotation marked “reviewed” in an earlier workflow is not, by itself, evidence that a human established the object's material or appropriate bin. Forty-two unreadable image aliases and five malformed or inaccessible JSON records were also documented rather than silently repaired. The complete provenance summary and file identities are retained in the research-readiness report and external audit artifacts.
 
-**Table 9.** Real-world sorting metrics that cannot be computed from the current development annotations.
+**Table 9.** Field-sorting outcomes unavailable without independent object and disposal-bin labels.
 
 | Metric | Status | Evidence required |
 |---|---|---|
@@ -245,7 +242,7 @@ The absence of these metrics should not be interpreted as zero performance. They
 
 We examined the frozen predictions for food and bottle, two classes that contribute to automatic disposal suggestions. A missed object was assigned a diagnostic category according to the strongest same-class overlap in the saved outputs: a sufficiently localized detection below confidence 0.50, a candidate overlapping at IoU 0.10–0.49, or no qualifying same-class overlap. False positives were similarly grouped by localization, duplication, competing class, or lack of a corresponding annotation. These categories are algorithmic descriptions rather than verified causal explanations. In particular, an apparent background false positive could reflect an incomplete reference annotation.
 
-**Table 10.** Frozen historical-cohort object-detection error diagnostics for food and bottle at the default 0.50 confidence cutoff. Error types are algorithmic hypotheses, not human-confirmed causes.
+**Table 10.** Food and bottle error diagnostics on the frozen historical cohort at confidence 0.50; categories indicate possible causes, not human-verified explanations.
 
 | Diagnostic category | Food | Bottle |
 |---|---:|---:|
@@ -294,10 +291,10 @@ The complete image data, checkpoint binaries, and detailed local audit artifacts
 
 With the external environment available, the existing inventory and automated software tests can be executed using:
 
-\`\`\`sh
+```sh
 ../yolo-cafeteria-research-assets/venv/bin/python -B scripts/research_audit.py --output /tmp/cafeteria-asset-audit.json
 ../yolo-cafeteria-research-assets/venv/bin/python -B -m unittest discover -s tests -v
-\`\`\`
+```
 
 These commands neither retrain the detectors nor generate independent field-performance metrics. The retained scripts also support future evaluation of separately collected, human-verified disposal labels without altering the frozen model configuration.
 
