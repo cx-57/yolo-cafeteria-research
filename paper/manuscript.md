@@ -136,7 +136,7 @@ We then allowed each class to have its own confidence threshold. Candidate cutof
 \end{aligned}
 \end{equation*}
 
-**Table 3.** Validation-selected confidence cutoffs by class.
+**Table 3.** Validation-selected confidence cutoffs by class; Hinge denotes hinged container.
 
 | Class | Cutoff | Class | Cutoff |
 |:--|--:|:--|--:|
@@ -205,14 +205,14 @@ At the display threshold of 0.25, the default policy emitted 881 detections: 337
 
 ## **Precision–Recall Trade-off**
 
-**Table 8.** Seven-class detection at IoU ≥ 0.50. Counts are TP/FP/FN; values are percentages.
+**Table 8.** Seven-class detection at IoU ≥ 0.50. P, R and F1 are percentages.
 
-| Cohort / cutoff | TP/FP/FN | P/R/F1 (%) |
-|:--|:--|:--|
-| Val. / 0.50 | 638/48/139 | 93.00 / 82.11 / 87.22 |
-| Val. / classwise | 555/17/222 | **97.03** / 71.43 / 82.28 |
-| Hist. / 0.50 | 724/51/200 | 93.42 / 78.35 / 85.23 |
-| Hist. / classwise | 630/18/294 | **97.22** / 68.18 / 80.15 |
+| Cohort / cutoff | TP/FP/FN | P | R | F1 |
+|:--|:--|--:|--:|--:|
+| Val. 0.50 | 638/48/139 | 93.00 | 82.11 | 87.22 |
+| Val. classwise | 555/17/222 | **97.03** | 71.43 | 82.28 |
+| Hist. 0.50 | 724/51/200 | 93.42 | 78.35 | 85.23 |
+| Hist. classwise | 630/18/294 | **97.22** | 68.18 | 80.15 |
 
 ![Precision–recall trade-off under uniform and class-specific confidence thresholds on exposed development cohorts.](paper/fig-precision.png){width=90%}
 
