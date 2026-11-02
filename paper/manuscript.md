@@ -19,6 +19,8 @@ header-includes:
   - \usepackage{booktabs}
   - \usepackage{array}
   - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \captionsetup{font=small,labelfont=bf}
   - \IfFileExists{balance.sty}{\usepackage{balance}}{}
   - \setlength{\parindent}{1em}
   - \setlength{\parskip}{0pt}
@@ -29,7 +31,7 @@ header-includes:
   - |
     \makeatletter
     \renewcommand\section{\@startsection{section}{1}{\z@}{-1.8ex plus -.4ex minus -.1ex}{.6ex plus .1ex}{\normalfont\large\bfseries}}
-    \renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-1.2ex plus -.3ex minus -.1ex}{.4ex plus .1ex}{\normalfont\normalsize\bfseries\itshape}}
+    \renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-1.2ex plus -.3ex minus -.1ex}{.4ex plus .1ex}{\normalfont\normalsize\bfseries}}
     \makeatother
 ---
 
@@ -70,15 +72,15 @@ We score detections against the frozen, repaired annotation manifests rather tha
 
 Annotation quality also limits the interpretation of the scores. Historical annotations were produced or reviewed with AI assistance, and the available records do not establish comprehensive independent human verification. The school checklist, for example, contains 123 entries with blank human-review fields. Dense food scenes can also make the boundary between adjacent servings ambiguous. This uncertainty is particularly consequential for hinged containers, represented by just two validation annotations and four in the historical cohort.
 
-**Table 1.** Annotated objects by class and split. Training counts include augmentation views and are not counts of independent photographed objects; validation and historical-test counts use the frozen repaired annotations.
+**Table 1.** Object annotations by class and split; training includes augmented views.
 
-| Class | Training-view boxes | Validation boxes | Test boxes |
-|---|---:|---:|---:|
+| Class | Train | Val. | Test |
+|:--|--:|--:|--:|
 | Food | 2,501 | 343 | 433 |
 | Plate | 722 | 110 | 123 |
 | Utensil | 457 | 101 | 98 |
-| Hinged container | 185 | 2 | 4 |
-| Drink carton | 972 | 94 | 134 |
+| Hinge* | 185 | 2 | 4 |
+| Carton | 972 | 94 | 134 |
 | Wrapper | 316 | 85 | 75 |
 | Bottle | 293 | 42 | 57 |
 
@@ -86,14 +88,14 @@ Annotation quality also limits the interpretation of the scores. Historical anno
 
 Rather than training one model to recognize every cafeteria item, the prototype combines four previously adapted YOLO11 specialists. Each checkpoint is responsible for a defined subset of the seven output categories, as summarized in Table 2. This division reflects the retained development configuration, not a controlled comparison showing that specialization outperforms a unified detector. The checkpoints, class mappings, inference parameters, and disposal rules were recorded in the project's frozen configuration at commit defcc6156a4425daf1ae530757634cc541f3c267. The protected hashes were checked during the research audit so that the reported comparisons refer to unchanged model artifacts.
 
-**Table 2.** Frozen specialist checkpoints, parameter counts, class ownership, and per-model inference resolution.
+**Table 2.** Frozen specialist models. Input size is given in pixels; Hinge denotes hinged container.
 
-| Specialist | YOLO11 variant | Parameters | Input size | Owned classes |
-|---|---|---:|---:|---|
-| food-container-carton | yolo11n.yaml | 2,590,425 | 640 | food, hinged_container, drink_carton |
-| plate-wrapper | yolo11n.yaml | 2,605,126 | 640 | plate, wrapper |
-| utensil | yolo11x.yaml | 56,877,241 | 800 | utensil |
-| bottle | yolo11s.yaml | 9,428,179 | 640 | bottle |
+| Model (input) | Parameters | Classes |
+|:--|--:|:--|
+| YOLO11n (640) | 2,590,425 | Food, hinge, carton |
+| YOLO11n (640) | 2,605,126 | Plate, wrapper |
+| YOLO11x (800) | 56,877,241 | Utensil |
+| YOLO11s (640) | 9,428,179 | Bottle |
 
 Inference was performed with Ultralytics 8.4.175, PyTorch 2.14.1, and Python 3.12. Each specialist processed one image at a time, without test-time augmentation, using its configured input resolution. Non-maximum suppression used an IoU threshold of 0.70 and a maximum of 300 detections per specialist. The saved protocol also retains half=False, an option deprecated in the installed library, to document the original invocation. Predicted boxes were represented in normalized XYXY coordinates. After each specialist's native suppression, outputs were concatenated by their assigned classes; no further cross-specialist deduplication was performed.
 
@@ -134,66 +136,81 @@ We then allowed each class to have its own confidence threshold. Candidate cutof
 \end{aligned}
 \end{equation*}
 
-**Table 3.** Class-specific confidence thresholds selected on development validation.
+**Table 3.** Validation-selected confidence cutoffs by class.
 
-| Food | Plate | Utensil | Hinged container | Drink carton | Wrapper | Bottle |
-|---:|---:|---:|---:|---:|---:|---:|
-| 0.79 | 0.83 | 0.50 | 0.50 | 0.84 | 0.83 | 0.91 |
+| Class | Cutoff | Class | Cutoff |
+|:--|--:|:--|--:|
+| Food | 0.79 | Plate | 0.83 |
+| Utensil | 0.50 | Hinge* | 0.50 |
+| Carton | 0.84 | Wrapper | 0.83 |
+| Bottle | 0.91 | — | — |
 
 The selected vector was subsequently applied without modification to the historical cohort. It was not used to replace the existing disposal-policy settings, and no additional cutoff selection was performed on those historical images. Because those images had already informed development, the resulting comparison remains descriptive rather than an independent estimate of field performance.
 
 # Results
 
-**Table 4.** Per-class detection performance on 248 exposed development photographs. Fixed-threshold measures use confidence ≥ 0.50 and IoU ≥ 0.50; AP spans the frozen confidence ranks.
+**Table 4.** Per-class precision, recall and AP50 on the exposed 248-image development cohort (percent).
 
-| Class | TP / FP / FN | Precision | Recall | F1 | AP50 | AP50–95 |
-|---|---:|---:|---:|---:|---:|---:|
-| food | 327 / 10 / 106 | 97.03% | 75.52% | 84.94% | 83.91% | 55.09% |
-| plate | 103 / 15 / 20 | 87.29% | 83.74% | 85.48% | 87.04% | 71.60% |
-| utensil | 70 / 7 / 28 | 90.91% | 71.43% | 80.00% | 86.06% | 61.26% |
-| hinged_container | 4 / 1 / 0 | 80.00% | 100.00% | 88.89% | 99.50% | 91.17% |
-| drink_carton | 129 / 1 / 5 | 99.23% | 96.27% | 97.73% | 97.55% | 74.28% |
-| wrapper | 58 / 7 / 17 | 89.23% | 77.33% | 82.86% | 85.13% | 57.64% |
-| bottle | 33 / 10 / 24 | 76.74% | 57.89% | 66.00% | 75.27% | 59.62% |
+| Class | Precision | Recall | AP50 |
+|:--|--:|--:|--:|
+| Food | 97.03% | 75.52% | 83.91% |
+| Plate | 87.29% | 83.74% | 87.04% |
+| Utensil | 90.91% | 71.43% | 86.06% |
+| Hinge* | 80.00% | 100.00% | 99.50% |
+| Carton | 99.23% | 96.27% | 97.55% |
+| Wrapper | 89.23% | 77.33% | 85.13% |
+| Bottle | 76.74% | 57.89% | 75.27% |
+
+**Table 5.** Detection counts, F1 and AP50–95 for the same cohort. TP/FP/FN are object counts; Hinge denotes hinged container.
+
+| Class | TP/FP/FN | F1 | AP50–95 |
+|:--|:--|--:|--:|
+| Food | 327/10/106 | 84.94% | 55.09% |
+| Plate | 103/15/20 | 85.48% | 71.60% |
+| Utensil | 70/7/28 | 80.00% | 61.26% |
+| Hinge* | 4/1/0 | 88.89% | 91.17% |
+| Carton | 129/1/5 | 97.73% | 74.28% |
+| Wrapper | 58/7/17 | 82.86% | 57.64% |
+| Bottle | 33/10/24 | 66.00% | 59.62% |
 
 The historical cohort achieved 87.78% mAP50 and 67.24% mAP50–95; the corresponding validation scores were 86.36% and 65.25%. These macro-averages give each class equal weight, regardless of its annotation count. The hinged-container AP50 of 99.50%, for example, is based on only four historical-cohort objects and should not be interpreted as robust performance for that category. At the uniform 0.50 confidence cutoff, pooled detection precision, recall, and F1 on the historical cohort were 93.42%, 78.35%, and 85.23%, respectively. Detailed validation results are available in the frozen evaluation records.
 
-**Table 5.** Object-recognition proxies for 510 automatic suggestions. Recall uses 624 food, bottle, and carton annotations; these values are not verified bin accuracy.
+**Table 6.** Automatic-suggestion object matches. Counts are matched/accepted; other values are percentages, not verified bin accuracy.
 
-| Matching convention | Correct object matches | Precision | Recall | F1 |
-|---|---:|---:|---:|---:|
-| Class-specific | 489 of 510 automatic suggestions | 95.88% | 78.37% | 86.24% |
-| Joint geometry-first | 483 of 510 automatic suggestions | 94.71% | 77.40% | 85.19% |
+| Matching | Matches | P/R/F1 (%) |
+|:--|--:|:--|
+| Per class | 489/510 | 95.88 / 78.37 / 86.24 |
+| Joint geometry | 483/510 | 94.71 / 77.40 / 85.19 |
 
 Class-specific matching counted 489 correct object detections among 510 automatic suggestions; geometry-first matching retained 483. Five food detections and one bottle detection were instead assigned to overlapping wrapper labels under the latter convention. These are disagreements in object assignment, not verified wrong-bin outcomes. The frozen 248-image predictions were reproduced in a separate inference replay, and the present analysis uses those saved outputs without retraining the models.
 
-**Table 6.** Default sorting-policy outputs at the 0.25 display-confidence floor on the exposed historical development cohort; results are not independently verified bin assignments.
+**Table 7.** Default sorting-policy outcomes on the exposed cohort; n/N shows each relevant denominator.
 
-| Quantity | Count / denominator | Value |
-|---|---:|---:|
-| Compost suggestions | 337 / 881 emitted detections | 38.25% |
-| Recycling suggestions | 173 / 881 | 19.64% |
-| Automatic suggestion rate | 510 / 881 | 57.89% |
-| Manual-review rate among emitted detections | 371 / 881 | 42.11% |
-| Geometry-matched automatic coverage of labeled objects | 489 / 924 | 52.92% |
-| Exact-class correct automatic matches / labeled objects | 483 / 924 | 52.27% |
-| Geometry-matched review / labeled objects | 286 / 924 | 30.95% |
-| Missed objects | 149 / 924 | 16.13% |
-| Unmatched automatic predictions | 21 / 510 automatic suggestions | 4.12% |
-| Unmatched review predictions | 85 / 371 review predictions | 22.91% |
+| Outcome | n/N | Rate |
+|:--|--:|--:|
+| Compost | 337/881 | 38.25% |
+| Recycling | 173/881 | 19.64% |
+| All automatic | 510/881 | 57.89% |
+| Manual review | 371/881 | 42.11% |
+| Auto matched (IoU) | 489/924 | 52.92% |
+| Auto correct class | 483/924 | 52.27% |
+| Reviewed objects | 286/924 | 30.95% |
+| Missed objects | 149/924 | 16.13% |
+| Unmatched auto | 21/510 | 4.12% |
+| Unmatched review | 85/371 | 22.91% |
 
 At the display threshold of 0.25, the default policy emitted 881 detections: 337 compost suggestions, 173 recycling suggestions, and 371 manual-review outcomes. Automatic suggestions therefore accounted for 57.89% of emitted detections. This denominator is narrower than the set of actual objects in the photographs, since undetected items generate no suggestion or review record. Indeed, exact-class automatic matches account for 483 of the 924 annotated objects (52.27%), a coverage-sensitive detection proxy rather than correct-bin accuracy. We do not attach conventional object-independent confidence intervals to these results: predictions are clustered within photographs, annotations contain unresolved uncertainty, and the historical cohort has prior development exposure.
 
 ## Precision–Recall Trade-off
 
-**Table 7.** Seven-class micro detection metrics (IoU ≥ 0.50) under the uniform and class-specific confidence policies.
+**Table 8.** Seven-class detection at IoU ≥ 0.50. Counts are TP/FP/FN; values are percentages.
 
-| Cohort / policy | TP | FP | FN | Precision | Recall | F1 |
-|:--|--:|--:|--:|--:|--:|--:|
-| Validation (186), uniform 0.50 | 638 | 48 | 139 | **93.00%** | 82.11% | 87.22% |
-| Validation (186), classwise selected | 555 | 17 | 222 | **97.03%** | 71.43% | 82.28% |
-| Historical (248), uniform 0.50 | 724 | 51 | 200 | **93.42%** | 78.35% | 85.23% |
-| Historical (248), classwise fixed | 630 | 18 | 294 | **97.22%** | 68.18% | 80.15% |
+| Cohort / cutoff | TP/FP/FN | P/R/F1 (%) |
+|:--|:--|:--|
+| Val. / 0.50 | 638/48/139 | 93.00 / 82.11 / 87.22 |
+| Val. / classwise | 555/17/222 | **97.03** / 71.43 / 82.28 |
+| Hist. / 0.50 | 724/51/200 | 93.42 / 78.35 / 85.23 |
+| Hist. / classwise | 630/18/294 | **97.22** / 68.18 / 80.15 |
 
 ![Precision–recall trade-off under uniform and class-specific confidence thresholds on exposed development cohorts.](paper/fig-precision.png){width=90%}
 
@@ -202,31 +219,31 @@ The classwise policy reduced historical-cohort false positives from 51 to 18, bu
 
 # Data Independence
 
-The principal threat to independent evaluation is the possibility that photographs, closely related capture sessions, or earlier prediction results influenced model selection. We therefore examined the retained local inventory rather than inferring independence from folder names. The audit identified 102,806 readable image paths, 67,422 distinct filesystem inodes, and 14,379 byte-distinct images. Among 9,468 candidate identities, 3,842 were flagged for possible exposure, capture-group overlap, or duplication; 5,482 had unresolved historical provenance; and 144 original HEIC files could not be visually decoded in the audit environment. None could be positively certified as independent under the available records (Table 8), although this does not establish that every candidate was actually used to train a checkpoint.
+The principal threat to independent evaluation is the possibility that photographs, closely related capture sessions, or earlier prediction results influenced model selection. We therefore examined the retained local inventory rather than inferring independence from folder names. The audit identified 102,806 readable image paths, 67,422 distinct filesystem inodes, and 14,379 byte-distinct images. Among 9,468 candidate identities, 3,842 were flagged for possible exposure, capture-group overlap, or duplication; 5,482 had unresolved historical provenance; and 144 original HEIC files could not be visually decoded in the audit environment. None could be positively certified as independent under the available records (Table 9), although this does not establish that every candidate was actually used to train a checkpoint.
 
 To identify potentially repeated imagery, the audit compared file-level SHA-256 and decoded-pixel hashes, then screened near-duplicates using rotation- and reflection-aware comparisons of 64-bit difference hashes at a Hamming-distance threshold of five. The screening pool contained 4,751 images associated with training directories or prepared manifests. These checks provide conservative evidence of possible overlap, not exhaustive proof of model exposure: directory membership does not guarantee that a particular optimizer consumed an image, while nonmatching hashes cannot exclude related crops, viewpoints, or photographs taken in the same session.
 
-**Table 8.** Provenance status of the 9,468 candidate image identities. The categories reflect what could be established from available records, not a definitive partition of images actually used for training.
+**Table 9.** Provenance of 9,468 candidate image identities. Categories do not imply confirmed training exposure.
 
-| Candidate status | Image identities |
-|---|---:|
-| Exposure, group-overlap, or duplicate flag | 3,842 |
-| Unresolved historical provenance | 5,482 |
-| Original HEIC visual decoding unavailable | 144 |
+| Candidate status | Images |
+|:--|--:|
+| Exposure/group/duplicate flag | 3,842 |
+| Unresolved provenance | 5,482 |
+| HEIC decoding unavailable | 144 |
 | Confirmed independent | 0 |
 
 Both school submissions have development-related provenance. The earlier submission contained 123 photographs and the later one 21; each set shared recorded training or development capture groups. Four images from the October 29 submission entered the training collection, excluding that capture day from independent evaluation. Historical descriptions such as “sealed test” must therefore be interpreted alongside later inference receipts and model-use records. Overlap counts describe different audit indicators and cannot be summed as if they identified disjoint training exposures.
 
 The audit separately examined annotation provenance, screening 2,398 JSON files together with additional CSV, XML, and YAML records. It did not identify a confirmed set of independently human-adjudicated, object-level disposal-bin labels. An annotation marked “reviewed” in an earlier workflow is not, by itself, evidence that a human established the object's material or appropriate bin. Forty-two unreadable image aliases and five malformed or inaccessible JSON records were also documented rather than silently repaired. The complete provenance summary and file identities are retained in the research-readiness report and external audit artifacts.
 
-**Table 9.** Field-sorting outcomes unavailable without independent object and disposal-bin labels.
+**Table 10.** Independent sorting outcomes remain unmeasured; required evidence is shown.
 
-| Metric | Status | Evidence required |
-|---|---|---|
-| Precision, recall, and F1 for actual disposal bins | Not measured | Independent images and adjudicated bin labels |
-| Correct-bin accuracy | Not measured | Verified local disposal eligibility |
-| Automatic coverage of independently labeled objects | Not measured | Complete, independent object annotations |
-| Manual-review burden on new cafeteria photographs | Not measured | A sealed school cohort |
+| Outcome | Required evidence |
+|:--|:--|
+| Bin precision/recall/F1 | Independent images, human bin labels |
+| Correct-bin accuracy | Verified local bin eligibility |
+| Automatic object coverage | Complete independent annotations |
+| Field review rate | Sealed school cohort |
 
 The absence of these metrics should not be interpreted as zero performance. They are undefined because the audited collection does not contain the independent disposal-label evidence needed to compute them.
 
@@ -234,18 +251,18 @@ The absence of these metrics should not be interpreted as zero performance. They
 
 We examined the frozen predictions for food and bottle, two classes that contribute to automatic disposal suggestions. A missed object was assigned a diagnostic category according to the strongest same-class overlap in the saved outputs: a sufficiently localized detection below confidence 0.50, a candidate overlapping at IoU 0.10–0.49, or no qualifying same-class overlap. False positives were similarly grouped by localization, duplication, competing class, or lack of a corresponding annotation. These categories are algorithmic descriptions rather than verified causal explanations. In particular, an apparent background false positive could reflect an incomplete reference annotation.
 
-**Table 10.** Food and bottle error diagnostics on the frozen historical cohort at confidence 0.50; categories indicate possible causes, not human-verified explanations.
+**Table 11.** Food and bottle error diagnostics at confidence 0.50. Categories are provisional.
 
-| Diagnostic category | Food | Bottle |
-|---|---:|---:|
-| Correct class matches at automatic threshold | 327 | 33 |
-| FN: below automatic threshold | 53 | 19 |
-| FN: localization candidate | 48 | 1 |
-| FN: no same-class overlap | 5 | 4 |
-| FP: localization candidate | 2 | 0 |
-| FP: duplicate/competing detection | 1 | 0 |
-| FP: background or missing annotation | 7 | 9 |
-| FP: other-class overlap/annotation ambiguity | 0 | 1 |
+| Error category | Food | Bottle |
+|:--|--:|--:|
+| Correct matches | 327 | 33 |
+| FN: below threshold | 53 | 19 |
+| FN: localization | 48 | 1 |
+| FN: no overlap | 5 | 4 |
+| FP: localization | 2 | 0 |
+| FP: duplicate | 1 | 0 |
+| FP: background/label | 7 | 9 |
+| FP: class ambiguity | 0 | 1 |
 
 Errors were concentrated in a few demanding photographs. One buffet scene accounted for 52 of 106 missed food objects (49.06%), while a single outdoor-trash scene accounted for 10 of 24 missed bottles (41.67%). The totals therefore reflect substantial within-image clustering rather than independent failures across dozens of different scenes. Both photographs were retained in the evaluation.
 
