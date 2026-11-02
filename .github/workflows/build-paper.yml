@@ -32,7 +32,6 @@ jobs:
 
       - name: Compile two-column PDF styled after the live tennis paper
         run: |
-          set -o pipefail
           docker run --rm -v "$PWD:/data" -w /data pandoc/latex:3 \
             paper/manuscript.md \
             --from markdown+raw_tex+tex_math_dollars \
@@ -40,7 +39,7 @@ jobs:
             --pdf-engine=xelatex \
             --number-sections \
             --standalone \
-            -o paper/cafeteria-waste-sorting.pdf 2>&1 | tee paper/build-output.log
+            -o paper/cafeteria-waste-sorting.pdf
 
       - name: Validate PDF structure, page count, and claims
         run: |
@@ -59,22 +58,6 @@ jobs:
           print('PDF preflight passed:',p.stat().st_size,'bytes')
           PY
 
-      - name: Render PDF pages for table-layout review
-        if: github.ref == 'refs/heads/paper/editorial-review-20261101'
-        run: |
-          python -m pip install --disable-pip-version-check 'pymupdf>=1.24,<1.29'
-          python - <<'PY'
-          import fitz
-          from pathlib import Path
-          doc=fitz.open('paper/cafeteria-waste-sorting.pdf')
-          out=Path('paper/layout-review')
-          out.mkdir(parents=True, exist_ok=True)
-          for index,page in enumerate(doc):
-              pix=page.get_pixmap(matrix=fitz.Matrix(1.25,1.25),alpha=False)
-              pix.save(out / f'page-{index+1:02d}.png')
-          print('Rendered',len(doc),'pages')
-          PY
-
       - name: Upload PDF as downloadable GitHub Actions artifact
         uses: actions/upload-artifact@v4
         with:
@@ -83,26 +66,12 @@ jobs:
           retention-days: 90
           if-no-files-found: error
 
-      - name: Preserve PDF compile diagnostics
-        if: failure() && github.ref == 'refs/heads/paper/editorial-review-20261101'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          echo 'PDF build failed; see build-output.log.' > paper/build-failure.txt
-          git add -f paper/build-failure.txt
-          if [ -f paper/build-output.log ]; then git add -f paper/build-output.log; fi
-          git commit -m "Record single-column table build failure" || true
-          git push origin HEAD:"${GITHUB_REF_NAME}"
-
       - name: Commit finished PDF to the manuscript branch
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/paper/editorial-review-20261101'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add paper/cafeteria-waste-sorting.pdf
-          if [ "${GITHUB_REF_NAME}" = 'paper/editorial-review-20261101' ]; then
-            git add paper/layout-review/page-*.png
-          fi
           if ! git diff --cached --quiet; then
             git commit -m "Build updated cafeteria waste-sorting research PDF"
             git push origin HEAD:"${GITHUB_REF_NAME}"
