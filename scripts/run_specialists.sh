@@ -18,11 +18,12 @@ export PYTHONDONTWRITEBYTECODE=1
 case "${1:-}" in
     -h|--help)
         cat <<'EOF'
-Usage: run_specialists.sh {predict|evaluate|sort|explore|review44|precision|precision-classwise|hinge|replay|guard|train|preview} [options]
+Usage: run_specialists.sh {predict|evaluate|sort|field|explore|review44|precision|precision-classwise|hinge|replay|guard|train|preview} [options]
 
 predict   Run the active four specialists.
 evaluate  Score a fixed annotated cohort.
 sort      Suggest disposal categories for individual detected objects.
+field     Diagnose unseen cafeteria photos; render overlays, class counts and optional reviewed-label metrics.
 explore   Run unchanged models on unverified review ZIP and render visual report.
 review44  Score reviewed 44-image development diagnostics (V3 vs original).
 precision Select a global-precision confidence threshold on validation; check fixed threshold on exposed test.
@@ -39,6 +40,9 @@ EOF
     sort)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/disposal.py" "$@" ;;
+    field)
+        shift
+        exec "$TASK_PYTHON" "$TASK_ROOT/scripts/field_diagnostics.py" "$@" ;;
     explore)
         shift
         exec "$TASK_PYTHON" "$TASK_ROOT/scripts/explore_candidates.py" "$@" ;;
