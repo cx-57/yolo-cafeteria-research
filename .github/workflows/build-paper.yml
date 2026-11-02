@@ -32,6 +32,7 @@ jobs:
 
       - name: Compile two-column PDF styled after the live tennis paper
         run: |
+          set -o pipefail
           docker run --rm -v "$PWD:/data" -w /data pandoc/latex:3 \
             paper/manuscript.md \
             --from markdown+raw_tex+tex_math_dollars \
@@ -39,7 +40,7 @@ jobs:
             --pdf-engine=xelatex \
             --number-sections \
             --standalone \
-            -o paper/cafeteria-waste-sorting.pdf
+            -o paper/cafeteria-waste-sorting.pdf 2>&1 | tee paper/build-output.log
 
       - name: Validate PDF structure, page count, and claims
         run: |
@@ -81,6 +82,17 @@ jobs:
           path: paper/cafeteria-waste-sorting.pdf
           retention-days: 90
           if-no-files-found: error
+
+      - name: Preserve PDF compile diagnostics
+        if: failure() && github.ref == 'refs/heads/paper/editorial-review-20261101'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo 'PDF build failed; see build-output.log.' > paper/build-failure.txt
+          git add -f paper/build-failure.txt
+          if [ -f paper/build-output.log ]; then git add -f paper/build-output.log; fi
+          git commit -m "Record single-column table build failure" || true
+          git push origin HEAD:"${GITHUB_REF_NAME}"
 
       - name: Commit finished PDF to the manuscript branch
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/paper/editorial-review-20261101'
