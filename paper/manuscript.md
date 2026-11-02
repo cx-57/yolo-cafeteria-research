@@ -30,6 +30,16 @@ header-includes:
   - \setlength{\emergencystretch}{2em}
   - |
     \makeatletter
+    \def\@maketitle{%
+      \newpage\null\vskip .5em
+      \begin{center}
+        {\LARGE\bfseries\@title\par}
+        \vskip .55em
+        {\normalsize\@author\par}
+      \end{center}
+      \vskip .45em
+    }
+    \renewcommand{\abstractname}{\textbf{Abstract}}
     \renewcommand\section{\@startsection{section}{1}{\z@}{-1.8ex plus -.4ex minus -.1ex}{.6ex plus .1ex}{\normalfont\large\bfseries}}
     \renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-1.2ex plus -.3ex minus -.1ex}{.4ex plus .1ex}{\normalfont\normalsize\bfseries}}
     \makeatother
@@ -50,7 +60,7 @@ Object detection offers a way to identify several discarded items in one image, 
 
 This study evaluates four specialized YOLO11 detectors covering seven cafeteria-item classes, together with a rule-based layer that suggests composting, recycling, or manual review. We first measure the frozen models on available development photographs, then examine how class-specific confidence thresholds affect their detection results. Finally, we audit the image and annotation records to determine the limits of those results.
 
-## **Related Work**
+## Related Work
 
 Thung and Yang introduced TrashNet, an early approach to waste classification that assigns isolated objects to six material categories [2]. More recently, Single, Iranmanesh, and Raad developed RealWaste using photographs collected at a landfill, providing a setting with less controlled object appearances [3]. While these datasets support material recognition, they do not fully represent crowded cafeteria scenes in which several different items may appear together.
 
@@ -203,7 +213,7 @@ Class-specific matching counted 489 correct object detections among 510 automati
 
 At the display threshold of 0.25, the default policy emitted 881 detections: 337 compost suggestions, 173 recycling suggestions, and 371 manual-review outcomes. Automatic suggestions therefore accounted for 57.89% of emitted detections. This denominator is narrower than the set of actual objects in the photographs, since undetected items generate no suggestion or review record. Indeed, exact-class automatic matches account for 483 of the 924 annotated objects (52.27%), a coverage-sensitive detection proxy rather than correct-bin accuracy. We do not attach conventional object-independent confidence intervals to these results: predictions are clustered within photographs, annotations contain unresolved uncertainty, and the historical cohort has prior development exposure.
 
-## **Precision–Recall Trade-off**
+## Precision–Recall Trade-off
 
 **Table 8.** Seven-class detection at IoU ≥ 0.50. P, R and F1 are percentages.
 
@@ -272,7 +282,7 @@ A targeted AI-assisted visual inspection considered 12 error cases from ten uniq
 
 A previously completed bottle-specialist trial also provided a negative experimental result. One additional epoch of classification-head training decreased validation AP50 from 82.47% to 77.95% and AP50–95 from 62.00% to 59.18%. The candidate failed its predefined validation criterion and was neither activated nor scored on the historical cohort. All main-paper results continue to use the frozen bottle checkpoint.
 
-## **Additional Image Evaluation**
+## Additional Image Evaluation
 
 The unchanged detectors were also applied to 44 source-screened public photographs: nine from bottle sources, six from carton sources, fifteen from utensil sources, twelve from hinged-container sources, and two from wrapper sources. At confidence 0.25, the system emitted 149 predictions—twelve compost suggestions, 49 recycling suggestions, and 88 review outcomes—while three photographs produced no displayed detection. These are output counts, not measurements against independently verified object or disposal labels.
 
