@@ -1,0 +1,4 @@
+image,change,class_id,old_pixel_box,new_pixel_box
+train/IMG_1428.jpeg,revised_one_transparent_wrapper,5,"1041 646 1820 1421","1010 655 1860 1505"
+train/IMG_1428.jpeg,added_open_ceramic_bowl_as_plate,1,,"1530 1270 2262 2050"
+valid/28_img.jpeg,added_soup_bowl_as_plate,1,,"0 80 791 1105"
