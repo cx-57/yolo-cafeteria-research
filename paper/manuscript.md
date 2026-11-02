@@ -19,6 +19,7 @@ header-includes:
   - \usepackage{booktabs}
   - \usepackage{array}
   - \usepackage{graphicx}
+  - \IfFileExists{balance.sty}{\usepackage{balance}}{}
   - \setlength{\parindent}{1em}
   - \setlength{\parskip}{0pt}
   - \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
@@ -288,6 +289,8 @@ With the external environment available, the existing inventory and automated so
 ```
 
 These commands neither retrain the detectors nor generate independent field-performance metrics. The retained scripts also support future evaluation of separately collected, human-verified disposal labels without altering the frozen model configuration.
+
+\ifdefined\balance\balance\fi
 
 # References
 
