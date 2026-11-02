@@ -1,0 +1,11 @@
+# Canteen Food Waste — Batch04 midpoint QC checkpoint (experimental)
+- Original source images: 175.
+- Individually inspected total: 95/175 (55 earlier plus 40 in Batch04).
+- Batch04: 40 native resolution photos, 40 matched YOLO label files, 40 bounding-box previews; 220 boxes.
+- Batch04 per class: food 101, plate including rigid bowls 61, utensil 53, wrapper 4, bottle 1, hinged_container 0, drink_carton 0.
+- Uninspected: 80. The 175-image compiled archive retains provisional labels for these 80; DO NOT treat this as completed.
+- Each source hash preserved, metadata and source split preserved; all YOLO box coordinates/IDs numerically valid. Source duplicate group provenance retained, cross-split leakage not resolved.
+- All labels AI-authored. Human verified: 0.
+- No training, no frozen-results modifications, main unchanged.
+- **QC status only on GitHub.** Downloadable original-images/labels/annotated-previews archive is the chat export named canteen_batch04_40_images_QC.zip; full provisional checkpoint canteen_175_midpoint_95reviewed_provisional.zip. GitHub Actions artifact not created.
+- Awaiting independent Command Center QC.
