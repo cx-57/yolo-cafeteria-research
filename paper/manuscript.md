@@ -281,14 +281,7 @@ The [project repository](https://github.com/cx-57/yolo-cafeteria-research) retai
 
 The complete image data, checkpoint binaries, and detailed local audit artifacts are held outside Git in the project's accompanying asset directory. The working data manifest and frozen repaired annotation files are likewise external. As a result, the public source code alone does not reproduce native inference. Historical source and license declarations are retained with the assets, but attribution and redistribution permissions have not been independently audited; the school photographs are not presented as a released dataset.
 
-With the external environment available, the existing inventory and automated software tests can be executed using:
-
-```sh
-../yolo-cafeteria-research-assets/venv/bin/python -B scripts/research_audit.py --output /tmp/cafeteria-asset-audit.json
-../yolo-cafeteria-research-assets/venv/bin/python -B -m unittest discover -s tests -v
-```
-
-These commands neither retrain the detectors nor generate independent field-performance metrics. The retained scripts also support future evaluation of separately collected, human-verified disposal labels without altering the frozen model configuration.
+The repository documents the commands for reproducing the file audit, running software tests, and evaluating newly collected annotations. These procedures do not retrain the frozen detectors or establish independent sorting accuracy; the latter requires a separately collected, human-verified evaluation cohort.
 
 \ifdefined\balance\balance\fi
 
