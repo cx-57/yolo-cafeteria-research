@@ -54,6 +54,10 @@ Git does **not** include the large model weights, image datasets, and local
 run artifacts. They live in `~/Desktop/yolo-cafeteria-research-assets/`
 and are required for actual model inference and reproducibility.
 
+## Investigating real school-photo failures
+
+The [field generalization diagnostic](docs/field-generalization.md) runs the frozen four-detector baseline on new cafeteria photos and saves confidence summaries, possible conflicting detections, and annotated overlays. It **does not** fabricate accuracy without exhaustive human-reviewed labels and does not modify the frozen models. This diagnosis precedes any new unified-model training.
+
 ## Running locally on the Mac
 
 ```bash
