@@ -1,0 +1,25 @@
+{
+  "dataset": "PUST Cafeteria Food Image Dataset",
+  "version": 2,
+  "source_url": "https://data.mendeley.com/datasets/fn6yhzjz83/2",
+  "license": "CC BY 4.0",
+  "downloaded_photos": 0,
+  "public_file_urls_verified": false,
+  "probes": [
+    {
+      "endpoint": "https://api.data.mendeley.com/datasets/publics/fn6yhzjz83/files?version=2",
+      "status": 401,
+      "error": "{\"message\":\"Unauthorized (no suitable authorization credentials were provided)\"}"
+    },
+    {
+      "endpoint": "https://api.data.mendeley.com/datasets/fn6yhzjz83/files?version=2",
+      "status": 401,
+      "error": "{\"message\":\"Unauthorized (no suitable authorization credentials were provided)\"}"
+    },
+    {
+      "endpoint": "https://api.data.mendeley.com/datasets/fn6yhzjz83/snapshot?version=2",
+      "status": 401,
+      "error": "{\"message\":\"Unauthorized (no suitable authorization credentials were provided)\"}"
+    }
+  ]
+}
