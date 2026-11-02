@@ -1,0 +1,30 @@
+{
+  "dataset": "AI-ServicesBB/food-waste-dataset",
+  "license": "CC BY 4.0",
+  "source_url": "https://huggingface.co/datasets/AI-ServicesBB/food-waste-dataset",
+  "original_train": 215,
+  "original_test_excluded": 160,
+  "downloaded": 215,
+  "distinct_meals": 12,
+  "photos_per_meal": {
+    "meal-480654": 18,
+    "meal-480656": 18,
+    "meal-480657": 23,
+    "meal-480658": 18,
+    "meal-480659": 19,
+    "meal-480660": 23,
+    "meal-497808": 23,
+    "meal-497810": 17,
+    "meal-497812": 14,
+    "meal-497814": 12,
+    "meal-497816": 12,
+    "meal-497821": 18
+  },
+  "human_verified_boxes": 0,
+  "yolo_training_ready": false,
+  "independent_school_test_eligible": false,
+  "caution": "No seven-class boxes exist; images must be exhaustively reviewed before unified YOLO training",
+  "workflow_run_id": 41503248839,
+  "branch": "experiment/cafeteria-domain-image-intake-20261102",
+  "collected_utc": "2026-11-02T18:44:13.549418+00:00"
+}
