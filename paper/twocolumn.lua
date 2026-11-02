@@ -19,13 +19,13 @@ local function tableFloat(t, caption, id)
   local n=#t.colspecs
   local fmt
   if id==2 then
-    fmt='>{\raggedright\arraybackslash}p{0.28\columnwidth}r>{\raggedright\arraybackslash}p{0.39\columnwidth}'
+    fmt='>{\\raggedright\\arraybackslash}p{0.28\\columnwidth}r>{\\raggedright\\arraybackslash}p{0.39\\columnwidth}'
   elseif id==9 then
-    fmt='>{\raggedright\arraybackslash}p{0.73\columnwidth}r'
+    fmt='>{\\raggedright\\arraybackslash}p{0.73\\columnwidth}r'
   elseif id==10 then
-    fmt='>{\raggedright\arraybackslash}p{0.44\columnwidth}>{\raggedright\arraybackslash}p{0.46\columnwidth}'
+    fmt='>{\\raggedright\\arraybackslash}p{0.44\\columnwidth}>{\\raggedright\\arraybackslash}p{0.46\\columnwidth}'
   elseif id==11 then
-    fmt='>{\raggedright\arraybackslash}p{0.66\columnwidth}rr'
+    fmt='>{\\raggedright\\arraybackslash}p{0.66\\columnwidth}rr'
   elseif n==3 then
     fmt='lrr'
   elseif n==4 then
@@ -35,26 +35,26 @@ local function tableFloat(t, caption, id)
   else
     fmt='l'..string.rep('r',n-1)
   end
-  local out={'\begin{table}[!htbp]', '\centering'}
+  local out={'\\begin{table}[!htbp]', '\\centering'}
   if id>0 then
-    out[#out+1]='\caption{'..escape(caption)..'}'
-    out[#out+1]='\label{tab:waste-'..id..'}'
+    out[#out+1]='\\caption{'..escape(caption)..'}'
+    out[#out+1]='\\label{tab:waste-'..id..'}'
   end
-  out[#out+1] = (id==8) and '\scriptsize' or '\footnotesize'
-  out[#out+1]='\setlength{\tabcolsep}{2.5pt}'
-  out[#out+1]='\renewcommand{\arraystretch}{1.06}'
-  out[#out+1]='\begin{tabular}{'..fmt..'}'
-  out[#out+1]='\toprule'
+  out[#out+1] = (id==8) and '\\scriptsize' or '\\footnotesize'
+  out[#out+1]='\\setlength{\\tabcolsep}{2.5pt}'
+  out[#out+1]='\\renewcommand{\\arraystretch}{1.06}'
+  out[#out+1]='\\begin{tabular}{'..fmt..'}'
+  out[#out+1]='\\toprule'
   for i,r in ipairs(rr) do
     local cells={}
     for _,c in ipairs(r.cells) do cells[#cells+1]=textCell(c) end
     while #cells<n do cells[#cells+1]='' end
-    out[#out+1]=table.concat(cells,' & ')..' \\'
-    if i==#t.head.rows and i<#rr then out[#out+1]='\midrule' end
+    out[#out+1]=table.concat(cells,' & ')..' \\\\'
+    if i==#t.head.rows and i<#rr then out[#out+1]='\\midrule' end
   end
-  out[#out+1]='\bottomrule'
-  out[#out+1]='\end{tabular}'
-  out[#out+1]='\end{table}'
+  out[#out+1]='\\bottomrule'
+  out[#out+1]='\\end{tabular}'
+  out[#out+1]='\\end{table}'
   return pandoc.RawBlock('latex',table.concat(out,'\n'))
 end
 local function imageFloat(im)
