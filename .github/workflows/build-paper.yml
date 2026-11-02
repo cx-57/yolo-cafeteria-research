@@ -66,10 +66,22 @@ jobs:
           from pathlib import Path
           import fitz
           doc = fitz.open('paper/cafeteria-waste-sorting.pdf')
-          for page_index, label in [(0, 'first'), (min(2, len(doc)-1), 'tables'), (len(doc)-1, 'last')]:
+          for page_index, label in [(0, 'first'), (min(2, len(doc)-1), 'tables'), (min(3, len(doc)-1), 'results'), (len(doc)-1, 'last')]:
               pix = doc[page_index].get_pixmap(matrix=fitz.Matrix(1.45, 1.45), alpha=False)
               pix.save(f'paper/preview-{label}.png')
-          print('Page previews rendered from', len(doc), 'page PDF')
+          first_page = doc[0].get_text()
+          for token in ('87.78', '97.22', '68.18'):
+              assert token in first_page, f'Abstract was truncated before {token}'
+          clipped = []
+          for page_index, page in enumerate(doc):
+              for block in page.get_text('dict')['blocks']:
+                  for line in block.get('lines', []):
+                      for span in line['spans']:
+                          x0, y0, x1, y1 = span['bbox']
+                          if x0 < -1 or x1 > page.rect.width + 1:
+                              clipped.append((page_index + 1, span['text'][:40], x0, x1))
+          assert not clipped, f'Out-of-page text: {clipped[:8]}'
+          print('Page previews and text bounds verified:', len(doc), 'pages')
           PY
 
       - name: Upload PDF as downloadable GitHub Actions artifact
@@ -87,7 +99,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add paper/cafeteria-waste-sorting.pdf
           if [ "${GITHUB_REF_NAME}" = 'paper/editorial-review-20261101' ]; then
-            git add paper/preview-first.png paper/preview-tables.png paper/preview-last.png
+            git add paper/preview-first.png paper/preview-tables.png paper/preview-results.png paper/preview-last.png
           fi
           if ! git diff --cached --quiet; then
             git commit -m "Build updated cafeteria waste-sorting research PDF"
