@@ -5,6 +5,7 @@ on:
     paths:
       - 'paper/manuscript.md'
       - 'paper/figures.py'
+      - 'paper/twocolumn.lua'
       - '.github/workflows/build-paper.yml'
   workflow_dispatch:
 
@@ -29,11 +30,12 @@ jobs:
           python -m pip install --disable-pip-version-check matplotlib==3.10.1
           python paper/figures.py
 
-      - name: Compile journal-style PDF with Pandoc and XeLaTeX
+      - name: Compile two-column PDF styled after the live tennis paper
         run: |
           docker run --rm -v "$PWD:/data" -w /data pandoc/latex:3 \
             paper/manuscript.md \
             --from markdown+raw_tex+tex_math_dollars \
+            --lua-filter=paper/twocolumn.lua \
             --pdf-engine=xelatex \
             --number-sections \
             --standalone \
@@ -49,9 +51,9 @@ jobs:
           assert p.exists() and p.stat().st_size > 30_000
           reader = PdfReader(str(p))
           print('Rendered PDF pages:',len(reader.pages))
-          assert len(reader.pages) >= 8
+          assert 5 <= len(reader.pages) <= 18
           full = ' '.join((pg.extract_text() or '') for pg in reader.pages)
-          for token in ('87.78', '97.22', 'independent'):
+          for token in ('87.78', '97.22', 'independent', 'SelectiveNet'):
               assert token in full, f'Missing manuscript token {token}'
           print('PDF preflight passed:',p.stat().st_size,'bytes')
           PY
