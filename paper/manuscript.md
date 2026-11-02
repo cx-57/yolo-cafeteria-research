@@ -96,40 +96,27 @@ Rather than training one model to recognize every cafeteria item, the prototype 
 | utensil | yolo11x.yaml | 56,877,241 | 800 | utensil |
 | bottle | yolo11s.yaml | 9,428,179 | 640 | bottle |
 
-Inference uses Ultralytics 8.4.175, PyTorch 2.14.1, Python 3.12, batch 1,
-single-pass inference, NMS IoU 0.70, `max_det=300` per specialist, no test-time
-augmentation and `half=False`. The last argument is deprecated by the installed
-library but was retained to reproduce the frozen protocol. Box coordinates are
-normalized XYXY. Native per-specialist NMS is followed by concatenation of the
-owned classes; no additional cross-specialist deduplication is applied.
+Inference was performed with Ultralytics 8.4.175, PyTorch 2.14.1, and Python 3.12. Each specialist processed one image at a time, without test-time augmentation, using its configured input resolution. Non-maximum suppression used an IoU threshold of 0.70 and a maximum of 300 detections per specialist. The saved protocol also retains half=False, an option deprecated in the installed library, to document the original invocation. Predicted boxes were represented in normalized XYXY coordinates. After each specialist's native suppression, outputs were concatenated by their assigned classes; no further cross-specialist deduplication was performed.
 
-The experiments were run in a recorded environment using an Apple M1 MacBook Air with 8 GiB of memory and MPS acceleration. These specifications document the computational setting; inference time, energy use, and throughput were not benchmarked. The four checkpoints also have different training and selection histories, so the system should not be described as the product of one controlled training run.
+Evaluation took place on an Apple M1 MacBook Air with 8 GiB of memory and MPS support. These details identify the recorded computing environment rather than establish efficiency: latency, energy use, and throughput were not measured. Moreover, the four checkpoints have different adaptation and selection histories, so their combined performance should not be described as the outcome of a single controlled training experiment.
 
-The prediction receipt saves detections down to confidence 0.001 for AP analysis.
-Display/sorting emits scores at least 0.25. Scores below 0.50 require review when
-displayed; higher scores use the unchanged policy:
+Detection outputs were retained down to confidence 0.001 for average-precision calculations. For the default display policy, predictions at or above 0.25 were shown; predictions below 0.50 were referred for review. At confidence 0.50 or above, the proposed disposal stream followed the class-dependent rules in the table below.
 
-| Recognized class | Suggested decision at confidence >=0.50 |
+| Detected category | Default suggestion at confidence ≥ 0.50 |
 |---|---|
 | Food | Compost |
-| Bottle, drink carton | Recycling, without checking emptiness |
-| Plate, utensil, wrapper, hinged container | Review |
+| Bottle or drink carton | Recycling |
+| Plate, utensil, wrapper, or hinged container | Manual review |
 
-The policy is owner-selected, not evidence that filled containers or every detected
-food/package qualifies for the school's real collection stream. Independent bin
-labels must follow actual acceptance evidence rather than the detector mapping.
+These rules encode a provisional decision policy, not independently verified disposal eligibility. In particular, the recycling suggestion does not establish that a container is empty or accepted by the school's collection program. The system does not issue an automatic landfill recommendation.
 
-
-
-
-![System diagram: four YOLO11 specialists detect seven cafeteria classes before rule-based suggestions or review.](paper/fig-pipeline.png){width=95%}
-
+![Processing pipeline: four YOLO11 specialists produce seven item classes, which are mapped to provisional compost, recycling, or manual-review suggestions.](paper/fig-pipeline.png){width=95%}
 
 # Evaluation Methods
 
-For each predicted box and annotated object box, intersection-over-union (IoU) is the area of their overlap divided by the area covered by either box. The primary localization metrics are mAP50, which averages average precision (AP) across the seven classes at IoU 0.50, and mAP50–95, which additionally averages over IoU thresholds from 0.50 to 0.95 in increments of 0.05 [7]. AP is computed over confidence-ranked predictions using the frozen Ultralytics evaluation implementation. It is distinct from precision measured after selecting one confidence threshold.
+We evaluate localization and classification jointly. Intersection-over-union (IoU) measures the overlap between a predicted bounding box and its reference annotation, divided by the area of their union. The primary ranking-based measures are mAP50, averaged across the seven classes at IoU 0.50, and mAP50–95, which additionally averages over thresholds from 0.50 to 0.95 in steps of 0.05 [7]. Both are calculated from confidence-ranked detections using the retained Ultralytics evaluation procedure; neither represents precision at one operational cutoff.
 
-At a fixed threshold, predicted objects are matched to annotations one-to-one, in descending order of confidence, when their class labels agree and IoU is at least 0.50. An unmatched prediction is a false positive, while an unmatched annotation is a false negative. We aggregate true positives (TP), false positives (FP), and false negatives (FN) across all seven classes to report micro-averaged precision, recall, and F1:
+For fixed-threshold evaluation, detections are considered in descending confidence order and matched one-to-one to unused annotations of the same class when IoU is at least 0.50. Matched detections count as true positives (TP), unmatched detections as false positives (FP), and unmatched annotations as false negatives (FN). Aggregating these counts over all classes gives micro-averaged precision, recall, and F1:
 
 $$
 P=\frac{TP}{TP+FP},\qquad
@@ -137,32 +124,31 @@ R=\frac{TP}{TP+FN},\qquad
 F_1=\frac{2PR}{P+R}.
 $$
 
-The suggestion policy is assessed separately because object detection is not itself a disposal-bin decision. First, we sum class-consistent matches for the three classes eligible for an automatic suggestion: food, bottle, and drink carton. We also report a more conservative geometry-first comparison, in which all displayed detections compete for each annotated object regardless of predicted class; the predicted class is checked only after the box is assigned. This reveals cases where overlapping food and packaging predictions would otherwise each appear to be correct. Neither matching scheme establishes the correct disposal stream of an item.
+We distinguish these detection measures from two object-level proxies for automatic disposal suggestions. The first counts class-consistent matches separately for food, bottle, and drink carton. The second assigns displayed detections to reference boxes by geometry before checking their classes, thereby exposing competition between overlapping predictions from different specialists. A prediction that matches a food box but conflicts with a wrapper annotation illustrates why these approaches can yield different totals. Neither proxy can establish whether the object actually belongs in the suggested bin.
 
-The historical 248-image partition had been examined during earlier development and model-selection decisions. It is therefore described as an exposed development cohort, not a sealed independent test. Thresholds were selected using the 186-image validation cohort and then evaluated unchanged on the exposed historical cohort. In particular, selecting a stricter confidence threshold cannot change the frozen models' mAP, which is computed from the broader ranked detection outputs saved down to confidence 0.001. Test-set reuse and incomplete separation between development and evaluation can lead to optimistic performance estimates [12].
+The evaluation also distinguishes development evidence from independent generalization. The 248-image historical cohort was examined during earlier model development and selection, so it cannot be treated as a sealed holdout. Class-specific thresholds were determined from the separate 186-image validation cohort and then applied unchanged to those historical images. Since thresholding only filters an existing ranked set of predictions, it changes fixed-cutoff precision and recall but does not change the frozen detectors' mAP. Previous use of evaluation data can otherwise inflate apparent performance [12].
 
 # Confidence Threshold Selection
 
-We first examined whether a single confidence threshold could reduce false detections across all seven classes. Thresholds from 0.50 to 0.99, in increments of 0.01, and an additional threshold of 0.995 were tested on the 186-image validation set. No global threshold met all three requirements: at least 97% micro precision, at least 60% recall, and at least 100 accepted predictions. The best global threshold satisfying the recall and prediction-count requirements was 0.79, yielding 96.04% precision and 68.73% recall.
+The initial experiment tested whether one confidence cutoff could improve precision while preserving useful detection coverage. On the 186-image validation cohort, we evaluated global thresholds from 0.50 to 0.99 at 0.01 intervals, together with 0.995. No single threshold simultaneously achieved the three prespecified criteria of at least 97% micro precision, at least 60% recall, and at least 100 accepted predictions. Among the global cutoffs satisfying the latter two requirements, the highest precision was 96.04% at a threshold of 0.79, with 68.73% recall.
 
-We therefore considered a separate threshold for each class. For every class, we enumerated the true and false detections accepted at candidate thresholds on validation. A dynamic program combined these class-level possibilities and selected the policy retaining the most correctly detected objects while meeting the same precision, recall, and prediction-count requirements:
+We then allowed each class to have its own confidence threshold. Candidate cutoffs for each class were summarized by their validation-set true- and false-positive counts. A dynamic program combined these classwise choices, preserving the largest attainable number of true positives for each feasible false-positive total. The final threshold vector maximized correctly accepted detections subject to the same precision, recall, and accepted-prediction constraints:
 
 $$
-\max_{\boldsymbol{\tau}}\, TP(\boldsymbol{\tau})
-\quad\text{subject to}\quad
-P(\boldsymbol{\tau})\geq 0.97,\quad
-R(\boldsymbol{\tau})\geq 0.60,\quad
+\max_{\boldsymbol{\tau}}\,TP(\boldsymbol{\tau})
+\quad \text{subject to}\quad
+P(\boldsymbol{\tau})\geq0.97,\quad
+R(\boldsymbol{\tau})\geq0.60,\quad
 N_{\mathrm{pred}}\geq100.
 $$
 
-**Table 3.** Confidence thresholds selected exclusively from development validation.
+**Table 3.** Class-specific confidence thresholds selected on development validation.
 
 | Food | Plate | Utensil | Hinged container | Drink carton | Wrapper | Bottle |
 |---:|---:|---:|---:|---:|---:|---:|
-| **0.79** | **0.83** | **0.50** | **0.50** | **0.84** | **0.83** | **0.91** |
+| 0.79 | 0.83 | 0.50 | 0.50 | 0.84 | 0.83 | 0.91 |
 
-The selected thresholds were applied unchanged to the 248-image historical cohort, without another round of tuning. They were not activated in the default disposal-suggestion pipeline. Since the historical photographs had already been used during earlier development, this comparison does not provide an independent estimate of performance on new school images.
-
+The selected vector was subsequently applied without modification to the historical cohort. It was not used to replace the existing disposal-policy settings, and no additional cutoff selection was performed on those historical images. Because those images had already informed development, the resulting comparison remains descriptive rather than an independent estimate of field performance.
 
 # Results
 
@@ -180,7 +166,7 @@ These are descriptive development results, not independent bin classification.
 | wrapper | 58 / 7 / 17 | 89.23% | 77.33% | 82.86% | 85.13% | 57.64% |
 | bottle | 33 / 10 / 24 | 76.74% | 57.89% | 66.00% | 75.27% | 59.62% |
 
-The historical development cohort yielded 87.78% mAP50 and 67.24% mAP50–95, compared with 86.36% and 65.25%, respectively, on validation. These are macro-averaged detection scores, so each class contributes to mAP regardless of its sample size. The hinged-container AP50 of 99.50%, for example, reflects only four annotated objects in the historical cohort and is not reliable evidence of generalization for that class. At a fixed 0.50 confidence cutoff, overall historical-cohort micro precision, recall, and F1 were 93.42%, 78.35%, and 85.23%. The underlying per-class validation results appear in `results/sorting-verification.json` and [the evaluation report](../docs/sorting-evaluation.md).
+The historical cohort achieved 87.78% mAP50 and 67.24% mAP50–95; the corresponding validation scores were 86.36% and 65.25%. These macro-averages give each class equal weight, regardless of its annotation count. The hinged-container AP50 of 99.50%, for example, is based on only four historical-cohort objects and should not be interpreted as robust performance for that category. At the uniform 0.50 confidence cutoff, pooled detection precision, recall, and F1 on the historical cohort were 93.42%, 78.35%, and 85.23%, respectively. Detailed validation results are available in the frozen evaluation records.
 
 **Table 5.** Automatic-suggestion object proxies, explicitly separate from bin accuracy.
 Recall uses the 624 food/bottle/carton object labels.
@@ -190,11 +176,7 @@ Recall uses the 624 food/bottle/carton object labels.
 | Class-specific | 489 of 510 automatic suggestions | 95.88% | 78.37% | 86.24% |
 | Joint geometry-first | 483 of 510 automatic suggestions | 94.71% | 77.40% | 85.19% |
 
-The six joint-matching conflicts are five food boxes and one bottle box assigned
-to overlapping wrapper labels. They are object/matching conflicts, not independently
-proven wrong-bin outcomes. The original 248-image replay was previously verified,
-and a later fresh inference exactly reproduced its predictions. This finalization
-reuses those receipts; it does not rerun YOLO or train another candidate.
+Class-specific matching counted 489 correct object detections among 510 automatic suggestions; geometry-first matching retained 483. Five food detections and one bottle detection were instead assigned to overlapping wrapper labels under the latter convention. These are disagreements in object assignment, not verified wrong-bin outcomes. The frozen 248-image predictions were reproduced in a separate inference replay, and the present analysis uses those saved outputs without retraining the models.
 
 **Table 6.** Default sorting-policy outputs at the 0.25 display-confidence floor on the exposed historical development cohort; results are not independently verified bin assignments.
 
@@ -211,9 +193,7 @@ reuses those receipts; it does not rerun YOLO or train another candidate.
 | Unmatched automatic predictions | 21 / 510 automatic suggestions | 4.12% |
 | Unmatched review predictions | 85 / 371 review predictions | 22.91% |
 
-The default display policy emitted 881 detections at confidence 0.25 or above. Of these, 510 received a compost or recycling suggestion and 371 were marked for review, including predictions below the 0.50 automatic-suggestion cutoff and classes designated as review-only. The 42.11% review fraction applies only to emitted detections; it excludes real objects the detectors missed altogether. Likewise, the 52.27% exact-class automatic-match fraction is a detection proxy, not the proportion of waste placed in the correct bin. Conventional object-independent confidence intervals would be misleading because many objects occur in the same scenes, and the historical images were previously exposed during development.
-
-
+At the display threshold of 0.25, the default policy emitted 881 detections: 337 compost suggestions, 173 recycling suggestions, and 371 manual-review outcomes. Automatic suggestions therefore accounted for 57.89% of emitted detections. This denominator is narrower than the set of actual objects in the photographs, since undetected items generate no suggestion or review record. Indeed, exact-class automatic matches account for 483 of the 924 annotated objects (52.27%), a coverage-sensitive detection proxy rather than correct-bin accuracy. We do not attach conventional object-independent confidence intervals to these results: predictions are clustered within photographs, annotations contain unresolved uncertainty, and the historical cohort has prior development exposure.
 
 ## Precision–Recall Trade-off After Threshold Selection
 
@@ -228,7 +208,7 @@ The default display policy emitted 881 detections at confidence 0.25 or above. O
 
 ![Precision--recall trade-off for default and validation-selected classwise confidence thresholds, measured on exposed development cohorts.](paper/fig-precision.png){width=92%}
 
-On the historical cohort, the class-specific policy reduced false detections from 51 to 18 but also rejected 94 previously correct detections, decreasing true positives from 724 to 630. Accepted detections fell from 775 to 648. Precision increased by 3.80 percentage points, but recall fell by 10.17 points and F1 decreased from 85.23% to 80.15%. A similar F1 reduction occurred on validation (87.22% to 82.28%). Thus, the policy achieved its narrower objective of reducing false-positive detections; it did not improve the detector's overall F1 or mAP. The historical cohort was not used for a second round of threshold selection.
+The classwise policy reduced historical-cohort false positives from 51 to 18, but also removed 94 true positives, from 724 to 630. The number of accepted predictions declined from 775 to 648. Consequently, precision increased by 3.80 percentage points while recall decreased by 10.17 points; F1 fell from 85.23% to 80.15%. Validation F1 likewise fell from 87.22% to 82.28%. The result supports a specific trade-off—fewer false-positive detections among accepted outputs—rather than an overall improvement in recognition quality. Neither the model weights nor the ranking-based mAP changed.
 
 
 # Independence and Annotation Audit
