@@ -52,7 +52,7 @@ fig, ax = plt.subplots(figsize=(10.2, 3.65))
 positions = [0, 1, 2.55, 3.55]
 precision = [93.00, 97.03, 93.42, 97.22]
 recall = [82.11, 71.43, 78.35, 68.18]
-labels = ["Uniform", "Classwise", "Uniform", "Classwise"]
+labels = ["Val. 0.50", "Val. class", "Hist. 0.50", "Hist. class"]
 bar_width = 0.32
 
 p_bars = ax.bar([v - bar_width / 2 for v in positions], precision, bar_width,
@@ -70,17 +70,13 @@ ax.set_yticks([0, 20, 40, 60, 80, 100])
 ax.set_xticks(positions, labels)
 ax.set_ylabel("Object detection (%)", color=NAVY)
 ax.axvline(1.78, color="#A7B2BE", linestyle="--", linewidth=0.8)
-ax.text(0.5, -0.13, "Validation · 186 images", ha="center", fontsize=9,
-        transform=ax.get_xaxis_transform(), color=GRAY)
-ax.text(3.05, -0.13, "Historical development · 248 images", ha="center",
-        fontsize=9, transform=ax.get_xaxis_transform(), color=GRAY)
 ax.grid(axis="y", color="#DCE5EC", linewidth=0.6)
 ax.set_axisbelow(True)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.04),
           ncol=2, frameon=False)
-fig.subplots_adjust(bottom=0.27, top=0.85, left=0.09, right=0.98)
+fig.subplots_adjust(bottom=0.18, top=0.85, left=0.09, right=0.98)
 fig.savefig(ROOT / "fig-precision.png", bbox_inches="tight", pad_inches=0.12)
 plt.close(fig)
 
