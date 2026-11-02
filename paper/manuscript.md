@@ -19,6 +19,7 @@ header-includes:
   - \usepackage{booktabs}
   - \usepackage{array}
   - \usepackage{graphicx}
+  - \IfFileExists{balance.sty}{\usepackage{balance}}{}
   - \setlength{\parindent}{1em}
   - \setlength{\parskip}{0pt}
   - \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
@@ -34,7 +35,7 @@ header-includes:
 
 
 \begin{abstract}
-In school cafeterias, discarded food, packaging, and utensils are often placed together, making accurate waste identification difficult. A central challenge in building an automated sorting assistant is that recognizing an object does not necessarily establish which disposal stream accepts it. This study examines four specialized YOLO11 detectors that identify seven cafeteria-item classes, together with a rule-based policy for compost, recycling, and manual-review suggestions. The system achieved 87.78% mAP50 and 67.24% mAP50--95 on 248 previously examined development photographs containing 924 AI-assisted annotations. At a uniform confidence threshold of 0.50, object-detection precision and recall were 93.42% and 78.35%. Class-specific thresholds selected on 186 validation photographs increased precision to 97.03% on validation and 97.22% on the historical cohort, while reducing recall to 71.43% and 68.18%, respectively. However, the historical images had been exposed during development, only six came from the participating school, and no independently verified disposal-bin labels were available. These results demonstrate a precision--recall trade-off in cafeteria-item detection, not verified waste-sorting accuracy.
+In school cafeterias, discarded food, packaging, and utensils are often placed together, making accurate waste identification difficult. A central challenge in building an automated sorting assistant is that recognizing an object does not necessarily establish which disposal stream accepts it. This study examines four specialized YOLO11 detectors that identify seven cafeteria-item classes, together with a rule-based policy for compost, recycling, and manual-review suggestions. The system achieved 87.78\% mAP50 and 67.24\% mAP50--95 on 248 previously examined development photographs containing 924 AI-assisted annotations. At a uniform confidence threshold of 0.50, object-detection precision and recall were 93.42\% and 78.35\%. Class-specific thresholds selected on 186 validation photographs increased precision to 97.03\% on validation and 97.22\% on the historical cohort, while reducing recall to 71.43\% and 68.18\%, respectively. However, the historical images had been exposed during development, only six came from the participating school, and no independently verified disposal-bin labels were available. These results demonstrate a precision--recall trade-off in cafeteria-item detection, not verified waste-sorting accuracy.
 \end{abstract}
 
 *Keywords:* object detection, YOLO11, cafeteria waste, selective prediction, recycling.
@@ -98,15 +99,7 @@ Inference was performed with Ultralytics 8.4.175, PyTorch 2.14.1, and Python 3.1
 
 Evaluation took place on an Apple M1 MacBook Air with 8 GiB of memory and MPS support. These details identify the recorded computing environment rather than establish efficiency: latency, energy use, and throughput were not measured. Moreover, the four checkpoints have different adaptation and selection histories, so their combined performance should not be described as the outcome of a single controlled training experiment.
 
-Detection outputs were retained down to confidence 0.001 for average-precision calculations. For the default display policy, predictions at or above 0.25 were shown; predictions below 0.50 were referred for review. At confidence 0.50 or above, the proposed disposal stream followed the class-dependent rules in the table below.
-
-| Detected category | Default suggestion at confidence ≥ 0.50 |
-|---|---|
-| Food | Compost |
-| Bottle or drink carton | Recycling |
-| Plate, utensil, wrapper, or hinged container | Manual review |
-
-These rules encode a provisional decision policy, not independently verified disposal eligibility. In particular, the recycling suggestion does not establish that a container is empty or accepted by the school's collection program. The system does not issue an automatic landfill recommendation.
+Detection outputs were retained down to confidence 0.001 for average-precision calculations. In the default display policy, predictions at or above 0.25 were shown, while scores below 0.50 were referred for review. At confidence 0.50 or above, food received a compost suggestion and bottles or drink cartons received a recycling suggestion. Plates, utensils, wrappers, and hinged containers were always referred for manual review. These are provisional rules rather than verified disposal decisions: the recycling suggestion does not establish that a container is empty or accepted locally, and the system does not issue automatic landfill recommendations.
 
 ![Processing pipeline: four YOLO11 specialists produce seven item classes, which are mapped to provisional compost, recycling, or manual-review suggestions.](paper/fig-pipeline.png){width=95%}
 
@@ -132,13 +125,14 @@ The initial experiment tested whether one confidence cutoff could improve precis
 
 We then allowed each class to have its own confidence threshold. Candidate cutoffs for each class were summarized by their validation-set true- and false-positive counts. A dynamic program combined these classwise choices, preserving the largest attainable number of true positives for each feasible false-positive total. The final threshold vector maximized correctly accepted detections subject to the same precision, recall, and accepted-prediction constraints:
 
-$$
-\max_{\boldsymbol{\tau}}\,TP(\boldsymbol{\tau})
-\quad \text{subject to}\quad
-P(\boldsymbol{\tau})\geq0.97,\quad
-R(\boldsymbol{\tau})\geq0.60,\quad
-N_{\mathrm{pred}}\geq100.
-$$
+$
+\begin{aligned}
+\max_{\boldsymbol{\tau}}\quad & TP(\boldsymbol{\tau})\\
+\text{subject to}\quad & P(\boldsymbol{\tau})\geq0.97,\\
+& R(\boldsymbol{\tau})\geq0.60,\\
+& N_{\mathrm{pred}}\geq100.
+\end{aligned}
+$
 
 **Table 3.** Class-specific confidence thresholds selected on development validation.
 
@@ -295,6 +289,8 @@ With the external environment available, the existing inventory and automated so
 ```
 
 These commands neither retrain the detectors nor generate independent field-performance metrics. The retained scripts also support future evaluation of separately collected, human-verified disposal labels without altering the frozen model configuration.
+
+\ifdefined\balance\balance\fi
 
 # References
 
