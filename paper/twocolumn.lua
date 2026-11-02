@@ -26,6 +26,8 @@ local function tableFloat(t, caption, id)
     fmt='>{\\raggedright\\arraybackslash}p{0.72\\columnwidth}r'
   elseif n==3 and not wide then
     fmt='>{\\raggedright\\arraybackslash}p{0.66\\columnwidth}rr'
+  elseif n==5 and id==2 then
+    fmt='>{\\raggedright\\arraybackslash}p{0.24\\textwidth}lrr>{\\raggedright\\arraybackslash}X'
   elseif n==3 and id==9 then
     fmt='>{\\raggedright\\arraybackslash}X>{\\raggedright\\arraybackslash}X>{\\raggedright\\arraybackslash}X'
   elseif wide and not spread then
