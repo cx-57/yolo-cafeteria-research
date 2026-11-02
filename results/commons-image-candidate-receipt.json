@@ -1,0 +1,33 @@
+{
+  "status": "UNANNOTATED_PHOTO_CANDIDATES_NEED_VISUAL_REVIEW",
+  "photos": 65,
+  "source": "Wikimedia Commons",
+  "category_counts": {
+    "Food waste": 15,
+    "Food leftovers": 0,
+    "School lunches": 0,
+    "School meals": 5,
+    "Cafeterias": 15,
+    "Meal trays": 0,
+    "Disposable food containers": 0,
+    "Disposable plates": 15,
+    "Fast food packaging": 0,
+    "Litter": 15,
+    "Plastic bottles": 0,
+    "Composting": 0
+  },
+  "licenses": [
+    "CC BY 2.0",
+    "CC BY 3.0",
+    "CC BY 4.0",
+    "CC BY-SA 2.0",
+    "CC BY-SA 3.0",
+    "CC BY-SA 4.0",
+    "CC0",
+    "Public domain"
+  ],
+  "human_reviewed_images": 0,
+  "yolo_7_class_training_ready": false,
+  "attribution_required": true,
+  "workflow_run_id": 41504266668
+}
