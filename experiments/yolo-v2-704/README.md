@@ -32,6 +32,23 @@ SHA-256 of YOLO_V2_704_GroupSplit_Trial.zip
 16c9990b2cf45a14915ae3344307f4c1bf8dc9dbbd91a31d0b697313a8c21e27
 ```
 
+## Publish the dataset to GitHub from VS Code
+
+**Current state: the 704 images are NOT yet on GitHub.** The ZIP is available as a previous chat attachment but is not accessible to this chat's file runtime. You only need to do this once from the Mac where you have downloaded that original archive.
+
+In VS Code's terminal, inside your cloned repository:
+
+```bash
+git pull origin main
+cd experiments/yolo-v2-704
+python3 -m pip install -r requirements.txt
+bash publish_dataset.sh /path/to/YOLO_V2_704_GroupSplit_Trial.zip
+```
+
+The script checks the ZIP's expected SHA-256, extracts it, verifies **all 704 original images, 704 labels, all box coordinates, and the source-group-safe split**, then commits and pushes the unpacked `yolo_v2_trial_704/images/`, `labels/`, `data.yaml`, and `source_manifest.json` directly to the current Git branch. It does **not** add the oversized ZIP, model checkpoints, or other experiment results. It refuses to commit until the dataset checks pass.
+
+Once the upload succeeds, the GitHub experiment folder will contain all images and labels; VS Code users who pull the branch can train without downloading the original ZIP. This upload has **not been performed** from the assistant environment.
+
 ## Run on Apple Silicon Mac
 
 1. Download `YOLO_V2_704_GroupSplit_Trial.zip` from the conversation.
