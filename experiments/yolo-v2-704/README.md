@@ -35,19 +35,20 @@ SHA-256 of YOLO_V2_704_GroupSplit_Trial.zip
 ## Run on Apple Silicon Mac
 
 1. Download `YOLO_V2_704_GroupSplit_Trial.zip` from the conversation.
-2. Unzip it. It creates the folder `yolo_v2_trial_704/`.
-3. From Terminal run:
+2. Clone the GitHub repository if necessary, and put the ZIP in this folder (`experiments/yolo-v2-704/`).
+3. From Terminal, run:
 
 ```bash
-cd /path/to/yolo_v2_trial_704
+cd /path/to/yolo-cafeteria-research/experiments/yolo-v2-704
+unzip YOLO_V2_704_GroupSplit_Trial.zip
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install -r /path/to/this/github/folder/requirements.txt
+python3 -m pip install -r requirements.txt
 python3 train_yolo_v2_trial.py --verify-only
 python3 train_yolo_v2_trial.py --device mps --epochs 35 --batch 4
 ```
 
-For a self-contained download, you can instead install with `python3 -m pip install ultralytics==8.4.175` inside the extracted ZIP folder; the ZIP contains the same verified training script.
+The dataset extracts into `yolo_v2_trial_704/` (gitignored). The archive also includes its own training script if you prefer to train from the extracted folder independently.
 
 The experiment initializes **new `yolo11n.pt` pretrained weights** (automatically downloaded by Ultralytics) and saves new weights as `YOLO_V2_trial_results/train/weights/best.pt`. Final metrics are saved to `YOLO_V2_trial_results/test_summary.json`, including test mAP50, mAP50-95, precision, recall, and per-supported-class AP.
 
