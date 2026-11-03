@@ -1,0 +1,30 @@
+{
+  "experiment": "yolo11n-704",
+  "status": "not_trained",
+  "source_files": {
+    "FLIC": 104,
+    "Canteen": 175,
+    "PUST": 425
+  },
+  "images": 704,
+  "groups": 362,
+  "splits": {
+    "train": 536,
+    "val": 97,
+    "test": 71
+  },
+  "boxes": {
+    "food": 2266,
+    "plate": 1130,
+    "utensil": 376,
+    "hinged_container": 0,
+    "drink_carton": 0,
+    "wrapper": 103,
+    "bottle": 4
+  },
+  "total_boxes": 3879,
+  "source_zip": "YOLO_V2_704_GroupSplit_Trial.zip",
+  "source_zip_sha256": "16c9990b2cf45a14915ae3344307f4c1bf8dc9dbbd91a31d0b697313a8c21e27",
+  "data_hosted_in_github": false,
+  "annotation_status": "provisional_AI_review"
+}
