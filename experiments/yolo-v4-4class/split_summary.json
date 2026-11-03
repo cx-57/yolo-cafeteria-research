@@ -1,0 +1,17 @@
+{
+  "source_photos": 865,
+  "active_train_cafeteria": 521,
+  "active_train_supplemented": 682,
+  "validation": 97,
+  "test": 71,
+  "quarantine": 15,
+  "classes": [
+    "food",
+    "plate",
+    "utensil",
+    "wrapper"
+  ],
+  "audit_status": "STRUCTURAL_ONLY_NOT_FULL_VISUAL_REVIEW",
+  "test_historically_exposed": true,
+  "zip_sha256": "95a386dbd9cf707e642237b92326a27ffd4958b893d1e0a7089e463b823c91e7"
+}
