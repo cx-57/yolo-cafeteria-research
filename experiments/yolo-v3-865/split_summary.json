@@ -1,0 +1,42 @@
+{
+  "experiment": "yolo11n-v3-865-legacy-supplement",
+  "status": "dataset_prepared_not_trained",
+  "dataset_sha256": "5138749bbed039886bab1f3ab961ae9430d76a8c36ba7b8e4e57a4f910b4139a",
+  "source_photos": {
+    "FLIC": 104,
+    "Canteen": 175,
+    "PUST": 425,
+    "Legacy Day1 utensil": 128,
+    "Legacy Day1 wrapper": 33
+  },
+  "images": 865,
+  "source_groups": 523,
+  "splits": {
+    "train": 697,
+    "val": 97,
+    "test": 71
+  },
+  "class_boxes": {
+    "food": 2266,
+    "plate": 1130,
+    "utensil": 621,
+    "hinged_container": 0,
+    "drink_carton": 0,
+    "wrapper": 140,
+    "bottle": 0
+  },
+  "total_boxes": 4157,
+  "added_legacy_boxes": {
+    "utensil": 244,
+    "wrapper": 37
+  },
+  "new_manually_corrected_boxes": {
+    "utensil": 1
+  },
+  "removed_labels": {
+    "bottle": 4
+  },
+  "training": "untrained new experiment; V2 weights/results unchanged",
+  "annotation_status": "legacy target labels recovered; missing 704 boxes not exhaustively reannotated",
+  "test_change": "1 previously unlabeled right-edge fork added in canteen test photo"
+}
