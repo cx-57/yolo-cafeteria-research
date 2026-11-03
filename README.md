@@ -54,6 +54,10 @@ Git does **not** include the large model weights, image datasets, and local
 run artifacts. They live in `~/Desktop/yolo-cafeteria-research-assets/`
 and are required for actual model inference and reproducibility.
 
+## Separate, provisional V3 recovery experiment
+
+The [865-image V3 utensil/wrapper supplement](experiments/yolo-v3-865/) is an **untrained isolated candidate**: it retains 704 prior images, adds 128 legacy utensil photos and 33 legacy wrapper photos, and contains 621 utensil / 140 wrapper boxes. One missing fork was manually annotated, and four bottle labels removed. Its new photos and labels are provided in a separate ZIP attachment; **they are not committed to GitHub**, and annotation completeness still needs visual review. The frozen V1 checkpoint set and 704-image V2 training results are unchanged.
+
 ## Running locally on the Mac
 
 ```bash
