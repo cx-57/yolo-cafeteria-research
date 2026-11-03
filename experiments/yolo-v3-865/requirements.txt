@@ -1,0 +1,3 @@
+ultralytics==8.4.175
+PyYAML>=6.0
+Pillow>=10.0
