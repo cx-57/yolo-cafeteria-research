@@ -1,0 +1,54 @@
+name: Download official FLIC images and masks
+on:
+  push:
+    branches:
+      - experiment/flic-bulk-originals-masks-20261102
+    paths:
+      - .github/workflows/acquire-flic-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  acquire:
+    name: Official FLIC download and ZIP
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install downloader dependencies
+        run: python -m pip install --quiet requests gdown
+      - name: Download 802 images and 802 masks
+        id: download
+        continue-on-error: true
+        run: python scripts/acquire_flic_official_release.py
+      - name: Upload complete FLIC release ZIP
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flic-official-802-images-802-masks
+          path: flic_official_release_802_images_802_masks.zip
+          retention-days: 30
+          if-no-files-found: warn
+          compression-level: 0
+      - name: Upload download receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flic-acquisition-receipt
+          path: results/flic_acquisition_receipt.json
+          retention-days: 30
+          if-no-files-found: error
+      - name: Commit audit receipt on experiment branch
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f results/flic_acquisition_receipt.json
+          git commit -m 'Record official FLIC acquisition result' || true
+          git push origin HEAD:experiment/flic-bulk-originals-masks-20261102
+      - name: Fail if source acquisition failed
+        if: steps.download.outcome != 'success'
+        run: exit 1
