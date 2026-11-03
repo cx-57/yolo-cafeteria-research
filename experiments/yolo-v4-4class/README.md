@@ -17,6 +17,12 @@ The complete ZIP includes 865 original source image files, each with a 4-class Y
 
 A name-preserving dHash screen of remaining photos found no train/held-out matches at Hamming distance ≤6 after the confirmed duplicate was quarantined. That is not proof of no exposure or leakage. There is **no claim of exhaustive original-resolution manual review**; all 865 entries in `audit_queue.csv` are flagged `NOT_REVIEWED`. Some PUST source images are already resized to 640×640.
 
+## Lightweight hybrid inference (no retraining)
+
+To evaluate the specialist idea, use [the **V4 + frozen V1 utensil** Colab comparison notebook](YOLO_V4_Hybrid_Compare.ipynb). Upload **`YOLO_V4_model_results.zip`** (contains the trained V4 `best.pt`), the original **`utensil.pt`** checkpoint from your Mac's local model assets, and a few **new** cafeteria photos. Both frozen checkpoints are hash-checked. The notebook saves paired V4-only and hybrid overlays and JSON.
+
+**Merge policy:** V4 supplies food, plate, wrapper; V1 utensil specialist supplies utensils (V4 utensil detections are discarded for hybrid). No class-wise fusion, extra models, retraining, or thresholds fitted to the test set. This is a visual comparison, **not a proven generalization gain**. The old V1 checkpoint is not hosted on GitHub. Code: [`v4_hybrid_inference.py`](v4_hybrid_inference.py).
+
 ## Train
 
 [Open the Google Colab V4 notebook](https://colab.research.google.com/github/cx-57/yolo-cafeteria-research/blob/main/experiments/yolo-v4-4class/YOLO_V4_4Class_Colab_Train.ipynb).
