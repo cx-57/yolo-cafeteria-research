@@ -52,9 +52,19 @@ The dataset extracts into `yolo_v2_trial_704/` (gitignored). The archive also in
 
 The experiment initializes **new `yolo11n.pt` pretrained weights** (automatically downloaded by Ultralytics) and saves new weights as `YOLO_V2_trial_results/train/weights/best.pt`. Final metrics are saved to `YOLO_V2_trial_results/test_summary.json`, including test mAP50, mAP50-95, precision, recall, and per-supported-class AP.
 
-## Colab GPU
+## Colab GPU (recommended)
 
-Use [`YOLO_V2_704_Colab_Train.ipynb`](YOLO_V2_704_Colab_Train.ipynb), select a GPU runtime, and upload the same ZIP. This does not overwrite the frozen specialists.
+[**Open the training notebook directly in Google Colab**](https://colab.research.google.com/github/cx-57/yolo-cafeteria-research/blob/main/experiments/yolo-v2-704/YOLO_V2_704_Colab_Train.ipynb)
+
+1. Choose **Runtime → Change runtime type → T4 GPU**.
+2. Run the notebook in order. It clones this repo, installs pinned training dependencies, and asks you to upload `YOLO_V2_704_GroupSplit_Trial.zip`.
+3. The notebook verifies the ZIP SHA-256 before extracting and independently verifies all 704 image/label pairs, dataset counts, box geometry, and group isolation.
+4. It runs YOLO11n training (35 epochs max, batch 8) followed by one held-out test evaluation.
+5. Download `YOLO_V2_704_trained_results.zip`, which contains `best.pt`, the test metrics, and run configuration.
+
+**Important:** The 704 images are NOT currently hosted on GitHub. The original 136 MiB ZIP is required. The three individual source ZIPs are not a substitute for the combined grouped-split dataset. If the combined ZIP is unavailable, training cannot run.
+
+The notebook passes the dataset YAML and results folder explicitly to the GitHub-hosted trainer; it does not depend on the trainer bundled inside the archive. It never overwrites the four frozen V1 specialists.
 
 ## Limitations
 
