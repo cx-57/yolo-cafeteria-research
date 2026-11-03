@@ -62,7 +62,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 python3 train_yolo_v2_trial.py --verify-only
-python3 train_yolo_v2_trial.py --device mps --epochs 35 --batch 4
+python3 train_yolo_v2_trial.py --device mps --epochs 20 --batch 4
 ```
 
 The dataset extracts into `yolo_v2_trial_704/` (gitignored). The archive also includes its own training script if you prefer to train from the extracted folder independently.
@@ -76,7 +76,7 @@ The experiment initializes **new `yolo11n.pt` pretrained weights** (automaticall
 1. Choose **Runtime → Change runtime type → T4 GPU**.
 2. Run the notebook in order. It clones this repo, installs pinned training dependencies, and asks you to upload `YOLO_V2_704_GroupSplit_Trial.zip`.
 3. The notebook verifies the ZIP SHA-256 before extracting and independently verifies all 704 image/label pairs, dataset counts, box geometry, and group isolation.
-4. It runs YOLO11n training (35 epochs max, batch 8) followed by one held-out test evaluation.
+4. It runs YOLO11n training (20 epochs max, batch 8) followed by one held-out test evaluation.
 5. Download `YOLO_V2_704_trained_results.zip`, which contains `best.pt`, the test metrics, and run configuration.
 
 **Important:** The 704 images are NOT currently hosted on GitHub. The original 136 MiB ZIP is required. The three individual source ZIPs are not a substitute for the combined grouped-split dataset. If the combined ZIP is unavailable, training cannot run.
