@@ -1,0 +1,15 @@
+{
+  "state": "complete",
+  "source": "https://drive.google.com/drive/folders/1IGCjr7y-_zsZfHTsL4CyxdkspTp8Uhnt",
+  "license": "CC BY 4.0",
+  "expected_files": 1604,
+  "downloaded": 1604,
+  "counts": {
+    "full_images": 401,
+    "left_images": 401,
+    "full_masks": 401,
+    "left_masks": 401
+  },
+  "failures": [],
+  "elapsed_seconds": 662.8
+}
