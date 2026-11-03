@@ -79,7 +79,7 @@ def main():
     parser.add_argument("--output",type=Path,default=HERE/"YOLO_V2_trial_results")
     parser.add_argument("--model",default="yolo11n.pt")
     parser.add_argument("--device",default="auto")
-    parser.add_argument("--epochs",type=int,default=35)
+    parser.add_argument("--epochs",type=int,default=20)
     parser.add_argument("--batch",type=int,default=4)
     parser.add_argument("--imgsz",type=int,default=640)
     parser.add_argument("--verify-only",action="store_true")
