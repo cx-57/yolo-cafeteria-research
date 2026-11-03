@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+yolo_v2_trial_704/
+YOLO_V2_704_GroupSplit_Trial.zip
+images/
+labels/
+runs/
+YOLO_V2_trial_results/
+*.pt
