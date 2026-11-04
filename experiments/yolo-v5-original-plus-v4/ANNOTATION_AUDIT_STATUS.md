@@ -2,9 +2,26 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Batch02 — 50 more School Lunch photos completed (2026-11-04)
+
+**Overall: 120 / 1,572 original V1-era photographs visually reviewed. 1,452 pending.** All 50 Batch02 source images were inspected at original 448×336 resolution, manually given bounding boxes for visible missing seven-class targets, and the 50 revised overlays individually QC'd.
+
+- 193 NEW annotations: **107 plate/bowl**, **28 utensils**, **58 wrapper/packaging**.
+- 3 originally food-labeled, completely obscured bread parcels were reclassified as **wrapper**.
+- The post-annotation QC corrected multiple spoon/chopstick box locations and recovered missed chopsticks in images 36, 37, and 38.
+- Original source image bytes unchanged; only these 50 train labels changed.
+- Final model-data class counts in training: food **3,740**; plate **1,080**; utensil **576**; hinged container **121**; drink carton **1,176**; wrapper **242**; bottle **209**.
+- Rebuilt V5 has 2,093 train, 97 validation, 71 reserved test images. Validation and test bytes and all manifest SHA256 hashes were verified unchanged; whole ZIP CRC test passed.
+- `YOLO_V5_partial_annotation_audit120.zip` is the latest **provisional** dataset; `V5_School_Lunch_Batch02_50_Annotation_Patch.zip` holds original 50 images, revised labels, annotated overlays, audit logs and QC sheets; `V5_original_review_queue_after_batch02_50.csv` lists next pending images.
+- Ambiguous cases remain marked: separate lidded food cups, freestanding metallic lids, snack packages. None have received independent human double verification. The V4 cross-class annotation audit is still outstanding.
+
+Lesson for later batches: assess EVERY visible class, notably tiny packets and thin chopsticks. Review each utensil box at original resolution separately from the food-and-plate boxes; avoid mislabeling a concealed food parcel as visible food.
+
+---
+
 ## Batch01 — 50 School Lunch photos completed (2026-11-04)
 
-**Progress: 70 / 1,572** original V1-era images individually visually reviewed at native resolution (50 new + 20 previously checked); **1,502 remaining**. The entire 1,572-photo archive passed mechanical label scanning, but the 1,502 are **not** individually verified.
+**At completion of Batch01: 70 / 1,572** original V1-era images individually visually reviewed at native resolution (50 new + 20 previously checked); **1,502 remained then; 1,452 remain after Batch02**. The entire 1,572-photo archive passed mechanical label scanning, but the 1,502 are **not** individually verified.
 
 Batch01 selection: the first 50 *PENDING* School Lunch files in `original_review_status.csv`, in source order. Every selected source photo was inspected individually at 448×336 pixels and each revised overlay received a second visual QA pass.
 
