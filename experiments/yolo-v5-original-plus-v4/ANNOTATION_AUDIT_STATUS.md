@@ -2,6 +2,24 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker B + Worker C Batch001 merged — 200 images (2026-11-04)
+
+**Command Center overall: 620 / 1,572 originals marked AI-reviewed; 952 remain.**
+
+Worker B (`Worker_B_Batch_001_100_Reviewed(1).zip`): first 100 Tetra Pak photos, 640×640. **93 corrected** and **7 unchanged** label files. Carton boxes **163 → 178**, plus **1 food, 3 plate, 1 utensil**. In total **20 new boxes**. **19 images flagged** for uncertain crop/boundary/secondary-object interpretation. Seven larger box-geometry changes were spot-checked visually.
+
+Worker C (`Worker_C_Batch_01_100_Reviewed(1).zip`): first 100 Tetra Pak photos, 640×640. **100 revised existing cartons**, one target per image, with **no additions, removals or reclassifications**. No worker-provided uncertainty flags. One larger geometry change spot-checked visually.
+
+**Integration method:** Checked each worker's exact assignments (sequences 1–100 only), matched source images and original label SHA256 values against the already-merged `YOLO_V5_CommandCenter_A001_merged420.zip`, verified all 200 revised label SHA256 values and box geometry, checked overlays exist and decode, and checked for same-class duplicate labels with IoU > 0.75. Independently viewed **35 selected original-to-overlay comparisons** (24 B, 11 C), emphasizing added objects and unusually large geometry changes. No definite error found in that sample; this was **not exhaustive independent visual review**.
+
+**New candidate archive:** `YOLO_V5_CommandCenter_ABC001_merged620.zip` (2,093 train / 97 val / 71 test); updates 193 revised label files, manifest hashes and object counts, Command Center assignments, original review status, and QA report. **All 2,261 image and label SHA256 records passed**; ZIP CRC passed; validation and test image/label bytes were compared against the previous archive and remained unchanged. The existing model checkpoints were not modified; no training.
+
+**V5 training counts after merging B+C:** food 3,741; plate 1,557; utensil 873; hinged_container 121; drink_carton 1,194; wrapper 409; bottle 214.
+
+**Next assignments:** A 101–200, B 101–200, C 101–200. Worker A has 302 remaining, Worker B 325, Worker C 325. The 19 flagged B cases and any previously flagged A cases remain provisional and should be human-reviewed before gold-standard claims. V4 cross-class exhaustiveness is not established.
+
+---
+
 ## Worker A Batch001 — Command Center integration (2026-11-04)
 
 **Worker A submission:** 100 Macworx original training images (assignment A sequences 1–100). The worker reported opening all source photos at 640×640 and inspecting each final overlay. The independent Command Center audit verified assignment order, unchanged source image SHA256s, old-label SHA256s against the pre-worker V5 archive, final YOLO coordinate bounds, and full review log consistency. It **visually spot-checked 30 before/after source images, including all nine with large box discrepancies**; this is not independent full human verification.
