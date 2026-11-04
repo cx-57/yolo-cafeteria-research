@@ -23,6 +23,12 @@ To evaluate the specialist idea, use [the **V4 + frozen V1 utensil** Colab compa
 
 **Merge policy:** V4 supplies food, plate, wrapper; V1 utensil specialist supplies utensils (V4 utensil detections are discarded for hybrid). No class-wise fusion, extra models, retraining, or thresholds fitted to the test set. This is a visual comparison, **not a proven generalization gain**. The old V1 checkpoint is not hosted on GitHub. Code: [`v4_hybrid_inference.py`](v4_hybrid_inference.py).
 
+## Validation mAP and a separate utensil-only experiment (November 4, 2026)
+
+- [Measure V4 vs current V1 hybrid vs selective fusion](YOLO_V4_Hybrid_mAP_Validation.ipynb): checks **all 97 unchanged V4 validation images** using Ultralytics `ap_per_class` and a confidence floor of 0.001, then reports mAP50 and mAP50–95 for each option. Requires the V4 source dataset ZIP, `YOLO_V4_model_results.zip`, and frozen V1 `utensil.pt`. The model weights are not changed. Code: [`v4_hybrid_validation.py`](v4_hybrid_validation.py).
+- [Train new 20-epoch YOLO11m utensil specialist](YOLO_V4_New_Utensil_Specialist_20E.ipynb): independently starts from pretrained `yolo11m.pt` using **only utensils** as a detection class, 800px, patience 10, with moderate augmentation (rotation 10°, translate .08, scale .25, HSV .015/.35/.25). Its default data is 521 cafeteria training photos with 294 utensil boxes; the 161 legacy images (244 utensil boxes) are optional and disabled by default. Uses the same 97 validation images, reporting single-class AP50/AP50–95. No test evaluation or model promotion occurs automatically. Code: [`utensil_specialist_20epoch.py`](utensil_specialist_20epoch.py).
+- Neither experiment certifies generalization: V4 validation annotations remain provisional and were historically exposed. Original V1 `utensil.pt` has an unusual 3D pooling layer; the validation runner applies the existing inference-only memory-format adapter rather than trying to fine-tune that checkpoint. Compare any new specialist against V4 and the current hybrid **on the same validation images** before adoption. Collect new school photos for final claims.
+
 ## Train
 
 [Open the Google Colab V4 notebook](https://colab.research.google.com/github/cx-57/yolo-cafeteria-research/blob/main/experiments/yolo-v4-4class/YOLO_V4_4Class_Colab_Train.ipynb).
