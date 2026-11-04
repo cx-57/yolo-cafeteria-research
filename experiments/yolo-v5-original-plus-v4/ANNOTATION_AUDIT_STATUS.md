@@ -2,6 +2,21 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker A Batch001 — Command Center integration (2026-11-04)
+
+**Worker A submission:** 100 Macworx original training images (assignment A sequences 1–100). The worker reported opening all source photos at 640×640 and inspecting each final overlay. The independent Command Center audit verified assignment order, unchanged source image SHA256s, old-label SHA256s against the pre-worker V5 archive, final YOLO coordinate bounds, and full review log consistency. It **visually spot-checked 30 before/after source images, including all nine with large box discrepancies**; this is not independent full human verification.
+
+- **95 existing class-3 `hinged_container` boxes refined; five unchanged.** No added objects, deletions, reclassifications, or other target classes in the 100 Macworx photos.
+- **15 edge/transparent-boundary cases retained as uncertain for independent human QC.** The nine largest changes visually looked plausible in the audit sample; the maximum reduction was to about 48% of the original box area.
+- **`YOLO_V5_CommandCenter_A001_merged420.zip`** created as a *separate* complete V5 candidate archive. Only these 100 train labels plus audit metadata/status/manifest hashes changed relative to `YOLO_V5_partial_annotation_audit320.zip`.
+- Verified 2,261 image/label records (2,093 train / 97 val / 71 test), all image and label SHA256 checks, all normalized box geometry checks, archive CRC, and **byte-for-byte unchanged validation/test files**.
+- **Current overall review count: 420 / 1,572; 1,152 pending.** Worker A still has 302 assignment photos; Worker B has 425 and Worker C has 425. Updated assignment ledger: `V5_Command_Center_Master_Assignment_After_A001.csv`; original-image status: `V5_Command_Center_Review_Status_After_A001.csv`.
+- **No training was performed** and no frozen V1/V4 checkpoints were touched. All corrections are **AI-provisional**, not human-adjudicated ground truth.
+
+Deliverables are attached in the Command Center conversation, not committed as 200+ MB binary blobs to GitHub.
+
+---
+
 ## Command Center — remaining 1,252 original images assigned to three workers (2026-11-04)
 
 Assignments derived from `YOLO_V5_partial_annotation_audit320.zip` and the latest review-status CSV. **All are previously PENDING training originals.** Each assignment contains original photos, their existing provisional label files, per-file manifest hashes, and a source-ordered checklist. There are **zero overlapping image IDs across workers** and **no validation/test files in the worker archives**.
