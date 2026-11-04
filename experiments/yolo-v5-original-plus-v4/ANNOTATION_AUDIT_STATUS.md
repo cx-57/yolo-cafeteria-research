@@ -2,6 +2,26 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Batch04 — 100 further School Lunch originals reviewed (2026-11-04)
+
+**Current progress: 320 / 1,572 original images visually reviewed; 1,252 pending.** The next 100 `PENDING` School Lunch images from the Batch03 review ledger were individually examined at native **448 × 336** pixel size, annotated with seven-class bounding boxes, and their full-resolution overlays reviewed in a second QC pass.
+
+- Added **471 boxes**: **233 plate/bowl**, **146 utensil**, **85 wrapper**, **5 bottle** (capped plastic drinks), and **2 drink carton** (previously entirely unlabeled, images **24 and 88**).
+- QC corrected carton omissions, tightened bread/noodle wrappers in **14, 34, 39**, adjusted chopsticks in **39 and 88**, and tightened image **100**'s seasoning-packet and spoon boxes. Image 88 needed its chopsticks moved **above** the spoon. Images **5, 25, 30, 34, 81** were treated as capped plastic bottles, not cartons. Ambiguous sealed food tubs were excluded from the seven target classes.
+- Combined V5 **training box totals** after Batch04: food **3,740**; plate **1,554**; utensil **872**; hinged_container **121**; drink_carton **1,179**; wrapper **409**; bottle **214**.
+- New dataset **`YOLO_V5_partial_annotation_audit320.zip`** (2,093 train, 97 val, 71 reserved test) includes 100 revised training labels, updated review ledger, merge report, per-image audit, and SHA256 manifest. Original source photos were not altered. Every image and label hash verified. The 97 validation and 71 test photos and labels were compared byte-for-byte against the prior `audit220` archive, identical. Full ZIP integrity CRC passed.
+- **`V5_School_Lunch_Batch04_100_Annotation_Patch.zip`** holds originals, before/after labels, 100 final overlays, 25 QC sheets, image-level audit data, and the list of second-pass repairs. **`V5_original_review_queue_after_batch04_100.csv`** tracks all 1,572 originals with 1,252 remaining. Large archives delivered in the current chat, not committed to Git.
+- **Limitations:** annotations were authored and visually checked by an AI, **not independently adjudicated by human annotators**. The V4 cross-class completeness audit is also not complete. These are provisional correction candidates and should not be called gold-standard ground truth or used for independent final claims.
+
+### Lessons for next batch
+
+1. **Audit source label omissions** even for a source's primary target class. Entire milk/drink cartons were previously missed in images 24 and 88.
+2. Distinguish capped yogurt-style **drink bottles** from paper **cartons**; do not misclassify sealed pudding/yogurt tubs as a target object when the class ontology lacks cups.
+3. **Individually verify chopstick and spoon bounds**, which sometimes overlap; geometric validity alone cannot prove correct placement.
+4. Trim box extents on clear wrappers to the **visible bag**, not empty parts of the tray; food and wrapping are separately labeled only when identifiable.
+
+---
+
 ## Batch03 — 100 more School Lunch photos reviewed (2026-11-04)
 
 **Current total: 220 / 1,572 original V1-era photos visually checked; 1,352 pending.** All 100 pending School Lunch photos were inspected in the original **448×336** pixels, each given individual seven-class candidate corrections, and revised overlays visually checked.
