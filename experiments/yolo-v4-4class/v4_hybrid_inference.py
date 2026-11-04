@@ -49,6 +49,61 @@ def draw(image, found):
                     (x1,max(16,y1-5)),cv2.FONT_HERSHEY_SIMPLEX,.5,color,2,cv2.LINE_AA)
     return out
 
+def repair_legacy_head_pooling(specialist):
+    """Adapt unexpected 3D pooling in a 2D legacy detection head (in memory only).
+
+    This does not change learned weights or the checkpoint on disk. Only touches
+    known classification-branch paths; refuse unusual 3D layers elsewhere.
+    """
+    import torch.nn as nn
+
+    model = specialist.model
+    found = [(name, module) for name, module in model.named_modules()
+             if isinstance(module, nn.MaxPool3d)]
+    if not found:
+        print("Legacy specialist: no MaxPool3d layers found; leaving architecture unchanged", flush=True)
+        return 0
+
+    allowed = (".cv3.", ".one2one_cv3.")
+    for name, module in found:
+        if not any(p in "." + name + "." for p in allowed):
+            raise RuntimeError(
+                f"Unexpected 3D pooling outside the 2D classification head: {name}. "
+                "Cannot safely adapt this checkpoint."
+            )
+
+        def two_d(value, field, default=None):
+            if value is None:
+                return default
+            if isinstance(value, int):
+                return value
+            if isinstance(value, (tuple, list)) and len(value) == 3:
+                if field == "kernel" and value[0] != 1:
+                    # The old 2D model has no depth axis; refuse ambiguous 3D kernels.
+                    raise RuntimeError(
+                        f"Cannot safely convert {name}: 3D kernel {value} has depth != 1"
+                    )
+                return tuple(value[-2:])
+            raise RuntimeError(f"Unsupported 3D pooling {field} in {name}: {value!r}")
+
+        kwargs = dict(
+            kernel_size=two_d(module.kernel_size, "kernel"),
+            stride=two_d(module.stride, "stride", None),
+            padding=two_d(module.padding, "padding", 0),
+            dilation=two_d(module.dilation, "dilation", 1),
+            return_indices=module.return_indices,
+            ceil_mode=module.ceil_mode,
+        )
+        replacement = nn.MaxPool2d(**kwargs)
+        parent_name, key = name.rsplit(".", 1)
+        parent = model.get_submodule(parent_name)
+        parent._modules[key] = replacement
+        print(f"Adapted legacy specialist 2D head pooling: {name} MaxPool3d -> MaxPool2d", flush=True)
+
+    assert not any(isinstance(x, nn.MaxPool3d) for x in model.modules())
+    return len(found)
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--v4",type=Path,required=True)
@@ -80,6 +135,7 @@ def main():
     specialist=YOLO(str(args.utensil))
     if names(v4)!=NAMES or names(specialist)!=["utensil"]:
         p.error(f"Wrong class mapping: V4={v4.names}, specialist={specialist.names}")
+    repair_legacy_head_pooling(specialist)
     device=None if args.device=="auto" else args.device
     args.output.mkdir(parents=True)
     records=[]
