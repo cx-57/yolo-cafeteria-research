@@ -1,0 +1,25 @@
+# Proposed next-trial training overrides for a NEW utensil-focused experiment.
+# Do not apply to the frozen V1 checkpoint or completed V4/hybrid runs.
+# Based on the verified V4 trainer defaults, with only modest increases.
+# Ultralytics YOLO train augmentation arguments (not a full cfg file).
+
+epochs: 20
+patience: 10
+imgsz: 800
+
+# Geometry: 5 -> 10 degrees, 0.06 -> 0.08 shift, 0.20 -> 0.25 scale
+degrees: 10.0
+translate: 0.08
+scale: 0.25
+fliplr: 0.50
+flipud: 0.0
+
+# Lighting/color: slightly more varied than V4 (0.30/0.20)
+hsv_h: 0.015
+hsv_s: 0.35
+hsv_v: 0.25
+
+# Keep mix augmentations conservative for thin, occluded utensils
+mosaic: 0.50
+mixup: 0.0
+close_mosaic: 10
