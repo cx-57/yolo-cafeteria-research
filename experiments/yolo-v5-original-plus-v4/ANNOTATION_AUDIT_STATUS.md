@@ -2,6 +2,22 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Command Center — remaining 1,252 original images assigned to three workers (2026-11-04)
+
+Assignments derived from `YOLO_V5_partial_annotation_audit320.zip` and the latest review-status CSV. **All are previously PENDING training originals.** Each assignment contains original photos, their existing provisional label files, per-file manifest hashes, and a source-ordered checklist. There are **zero overlapping image IDs across workers** and **no validation/test files in the worker archives**.
+
+| Worker | Dataset assignment | Count | Worker archive |
+| --- | --- | ---: | --- |
+| A | 159 School Lunch + 118 Macworx + 125 Utensil | **402** | `V5_Worker_A_402_Pending_Images.zip` |
+| B | First 425 remaining Tetra Pak images by filename | **425** | `V5_Worker_B_425_Pending_Images.zip` |
+| C | Remaining 231 Tetra Pak + 194 Trash Detection | **425** | `V5_Worker_C_425_Pending_Images.zip` |
+
+The worker archives and `V5_Command_Center_Control_Files.zip` (master assignment CSV, three copy-paste prompts, checksums, and prior review ledger) are delivered as attachments in the Command Center conversation. Do not falsely mark any assigned photos complete until each worker delivers image-by-image corrections and its audit log.
+
+Handoff: 100-photo batches per worker (last remainder shorter). Every batch must return corrected labels **including unchanged labels**, a per-image audit ledger, old/new SHA256 hashes, second-pass visual overlays, and ambiguous-case flags. Integrate patches only by canonical label paths with hash verification; freeze validation/test, retain provenance, and resolve ontology differences consistently across workers. Remaining V4 cross-class annotations must be audited separately before claiming exhaustive seven-class training data.
+
+---
+
 ## Batch04 — 100 further School Lunch originals reviewed (2026-11-04)
 
 **Current progress: 320 / 1,572 original images visually reviewed; 1,252 pending.** The next 100 `PENDING` School Lunch images from the Batch03 review ledger were individually examined at native **448 × 336** pixel size, annotated with seven-class bounding boxes, and their full-resolution overlays reviewed in a second QC pass.
