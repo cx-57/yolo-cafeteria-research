@@ -50,57 +50,45 @@ def draw(image, found):
     return out
 
 def repair_legacy_head_pooling(specialist):
-    """Adapt unexpected 3D pooling in a 2D legacy detection head (in memory only).
+    """Preserve the saved MaxPool3d operation, fixing only its input memory layout.
 
-    This does not change learned weights or the checkpoint on disk. Only touches
-    known classification-branch paths; refuse unusual 3D layers elsewhere.
+    The V1 model's legacy head contains MaxPool3d(kernel_size=(3,1,1))
+    applied to 4-D feature maps. PyTorch accepts these as unbatched 3-D
+    feature maps, but rejects a 4-D channels-last memory layout.
+    A contiguous copy restores the same mathematical pooling, *including*
+    its depth=3 window. Do NOT replace the operation with MaxPool2d.
+    This is an inference-only runtime adapter; no checkpoint writes.
     """
     import torch.nn as nn
+
+    class ContiguousMaxPool3d(nn.Module):
+        def __init__(self, pool):
+            super().__init__()
+            self.pool = pool
+
+        def forward(self, x):
+            return self.pool(x.contiguous())
 
     model = specialist.model
     found = [(name, module) for name, module in model.named_modules()
              if isinstance(module, nn.MaxPool3d)]
     if not found:
-        print("Legacy specialist: no MaxPool3d layers found; leaving architecture unchanged", flush=True)
+        print("Legacy specialist: no MaxPool3d layers; no adapter needed", flush=True)
         return 0
 
     allowed = (".cv3.", ".one2one_cv3.")
     for name, module in found:
-        if not any(p in "." + name + "." for p in allowed):
+        if not any(fragment in "." + name + "." for fragment in allowed):
             raise RuntimeError(
                 f"Unexpected 3D pooling outside the 2D classification head: {name}. "
-                "Cannot safely adapt this checkpoint."
+                "Refusing to modify an unknown architecture."
             )
-
-        def two_d(value, field, default=None):
-            if value is None:
-                return default
-            if isinstance(value, int):
-                return value
-            if isinstance(value, (tuple, list)) and len(value) == 3:
-                if field == "kernel" and value[0] != 1:
-                    # The old 2D model has no depth axis; refuse ambiguous 3D kernels.
-                    raise RuntimeError(
-                        f"Cannot safely convert {name}: 3D kernel {value} has depth != 1"
-                    )
-                return tuple(value[-2:])
-            raise RuntimeError(f"Unsupported 3D pooling {field} in {name}: {value!r}")
-
-        kwargs = dict(
-            kernel_size=two_d(module.kernel_size, "kernel"),
-            stride=two_d(module.stride, "stride", None),
-            padding=two_d(module.padding, "padding", 0),
-            dilation=two_d(module.dilation, "dilation", 1),
-            return_indices=module.return_indices,
-            ceil_mode=module.ceil_mode,
-        )
-        replacement = nn.MaxPool2d(**kwargs)
         parent_name, key = name.rsplit(".", 1)
         parent = model.get_submodule(parent_name)
-        parent._modules[key] = replacement
-        print(f"Adapted legacy specialist 2D head pooling: {name} MaxPool3d -> MaxPool2d", flush=True)
+        parent._modules[key] = ContiguousMaxPool3d(module)
+        print(f"Legacy pooling compatibility: {name} "
+              f"kernel={module.kernel_size} (contiguous input only)", flush=True)
 
-    assert not any(isinstance(x, nn.MaxPool3d) for x in model.modules())
     return len(found)
 
 
