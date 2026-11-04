@@ -2,6 +2,27 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Batch03 — 100 more School Lunch photos reviewed (2026-11-04)
+
+**Current total: 220 / 1,572 original V1-era photos visually checked; 1,352 pending.** All 100 pending School Lunch photos were inspected in the original **448×336** pixels, each given individual seven-class candidate corrections, and revised overlays visually checked.
+
+- **474 added boxes:** 241 `plate` (includes bowls), 150 `utensil` (spoons/chopsticks), 82 `wrapper` (clear wrapping and condiment packets), 1 `drink_carton` (missing blue carton in source photo #33).
+- **24 utensil coordinates corrected in second-pass QA**, after finding several chopstick boxes 20–40 pixels below their actual objects. The newly identified carton was also tightened to its visible extent after full-resolution source inspection.
+- Existing labels and source image pixels are preserved except the 100 corresponding training label files; no frozen model checkpoints were changed. Original food boxes were preserved where food remained visible through wrapping. Ambiguous closed cups/lids outside the schema were flagged rather than forced into classes.
+- New seven-class training box counts: food **3,740**, plate **1,321**, utensil **726**, hinged_container **121**, drink_carton **1,177**, wrapper **324**, bottle **209**.
+- The revised full V5 dataset **`YOLO_V5_partial_annotation_audit220.zip`** still contains 2,093 train, 97 validation, and 71 reserved test images. Every image/label manifest SHA256 and every bounding box geometry check passed. Validation/test images and labels were independently compared byte-for-byte with the previous 120-review archive; full ZIP CRC passed.
+- Batch patch **`V5_School_Lunch_Batch03_100_Annotation_Patch.zip`** includes the 100 original photos, old/new labels, final revised overlays, source SHA256s, per-image additions, flags, and audit metadata. Review queue **`V5_original_review_queue_after_batch03_100.csv`** tracks 1,352 pending. These large ZIP artifacts were delivered in the chat, *not* stored in Git.
+- **Scientific caveat:** these are provisional AI visual annotations with a second AI coordinate/overlay QA pass, not independent human gold-standard annotations. The remaining 1,352 original images and V4's cross-class completeness issues have not been resolved.
+
+### Lessons carried forward
+
+1. Verify thin chopsticks against the unscaled 448×336 source or a line-localization check; contact-sheet coordinate transfer caused systematic vertical offsets in this batch, which were caught and corrected.
+2. Original School Lunch source labels systematically omit plates/bowls, utensils and wrappers, and one clearly visible drink carton lacked its target label.
+3. Keep `food` and `wrapper` as separate objects where edible food is visible through clear wrapping; avoid making up new classes for sealed cups outside the seven target classes.
+4. Do not train or publish seven-class mAP from this still-incomplete corpus as if it were an independently audited detection benchmark.
+
+---
+
 ## Batch02 — 50 more School Lunch photos completed (2026-11-04)
 
 **Overall: 120 / 1,572 original V1-era photographs visually reviewed. 1,452 pending.** All 50 Batch02 source images were inspected at original 448×336 resolution, manually given bounding boxes for visible missing seven-class targets, and the 50 revised overlays individually QC'd.
