@@ -2,6 +2,24 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker C flagged-39 final QC integrated (2026-11-04)
+
+**Latest provisional V5 artifact:** `YOLO_V5_CommandCenter_C39_QC_merged1572.zip` (2,093 train / 97 val / 71 reserved test). Starting archive: `YOLO_V5_CommandCenter_A_Final50_QC_merged1572.zip`.
+
+Worker C submitted `Worker_C_39_Flagged_Images_Final_QC(2).zip`, with **39** previously flagged original training photographs, original images, before-and-after labels, overlays, per-image hash and correction log, and an unresolved-cases CSV. Two uploaded copies of this QC submission were byte-identical.
+
+- **11 of the 39 label files changed; 28 unchanged.** The edits consist of **7 added target boxes, 8 removed boxes, 0 class reassignments, 12 bounding-box adjustments**. All 11 changed photos and final overlays were independently visually inspected by the Command Center; all changes were accepted as **provisional**, not human-adjudicated ground truth.
+- Examples: removed a spurious bottle label from distant linear debris (C234), deleted two false bottle boxes around aluminum cans/unknown cylindrical litter (C362), tightened identifiable plastic bottles (C306/C346), added two small plate and two food boxes in a café scene (C384), split distinguishable food items and tightened a bottle in a refrigerator scene (C403), and removed food-wrapper labels applied to generic transparent litter or a non-food rigid blister pack (C406/C424). A carton mockup (C158) was tightened but is flagged as a domain-shift sample.
+- **Worker C unresolved: 33**, down from 39. Six cases are AI-resolved, **not independently human-confirmed**. Worker A unresolved: 29; Worker B unresolved: 187. **All-worker outstanding QC: 249 unique images**.
+- Source-assignment checks passed for all 39 C sequence IDs and original images/labels: worker original image SHA256s and baseline label SHA256s exactly matched the *current* pre-merge V5 archive. All YOLO class IDs and normalized box geometry validated, including intentionally empty label files for photos without a confident target.
+- Whole merged archive verified via **ZIP CRC, all 2,261 image/label manifest SHA256s and per-image annotation counts**. All **97 val + 71 reserved test** images and label files (336 total files) remain **byte-for-byte unchanged**. This QC submission concerns original train photos even when names contain `__valid__` because they were sourced from a separate dataset's original validation subset.
+- Updated V5 training box counts: food **3,753**, plate **2,085**, utensil **1,314**, hinged_container **121**, drink_carton **1,208**, wrapper **617**, bottle **211**.
+- Updated master assignment ledger, original review-status ledger, merged manifest, merge report, worker-specific QC log and `all_workers_249_remaining_uncertainties.csv` are inside the merged ZIP. Standalone outputs: `Worker_C_Final39_CommandCenter_QC/CommandCenter_C39_FinalQC_Integration_Report.json`, `Worker_C_Final39_CommandCenter_QC/Worker_C_33_Remaining_Uncertainties.csv`, `Worker_C_Final39_CommandCenter_QC/CommandCenter_ALL_249_Remaining_QC.csv`.
+
+**Scientific limitations:** no independent full human audit; 249 original photos remain flagged; original V4 cross-class annotation audit and a seven-class held-out benchmark are still missing. **No model training occurred.** Binary archives delivered in the conversation, not committed to GitHub.
+
+---
+
 ## Worker A final 50-image uncertainty recheck integrated with one correction withheld (2026-11-04)
 
 **Latest provisional V5 archive:** `YOLO_V5_CommandCenter_A_Final50_QC_merged1572.zip` (2,093 train, 97 validation, 71 test).
