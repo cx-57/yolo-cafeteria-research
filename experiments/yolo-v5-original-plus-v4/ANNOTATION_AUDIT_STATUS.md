@@ -2,6 +2,33 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker B flagged-187 QC — selective merge, 28 reclassifications withheld (2026-11-04)
+
+**Latest provisional V5 artifact:** `YOLO_V5_CommandCenter_B187_QC_selected_merged1572.zip`, built against `YOLO_V5_CommandCenter_C39_QC_merged1572.zip`.
+
+Worker B delivered `Worker_B_QC_187_Flagged_Reviewed(1).zip`, with 187 assigned 640×640 photographs, final YOLO labels, 187 overlays, 47 worker second-pass sheets, per-image before/after hashes, and an 80-row unresolved-case list.
+
+**Verified before integration:** All 187 assignments match the authoritative Worker B ledger; source-image SHA256s, old-label SHA256s, revised-label SHA256s, normalized geometry, and overlay presence all passed. Worker B reported 73 label files changed, 114 unchanged, with 35 box tightenings, 10 deletions and 28 nominal `wrapper→carton` reclassifications.
+
+**Critical visual finding:** All 28 proposed class-4 replacements describe highly blurred green/purple packaging repeatedly visible in the background of conveyor photographs. Magnified source crops do *not* establish whether it is a paper drink carton, flexible wrapper, or unrelated packaging. Worker B itself marked those cases unresolved. Some old red wrapper boxes also had poor geometry. **None of the 28 class-4 reclassifications was accepted**: the merged archive leaves these 28 prior label files unchanged, flagged for manual adjudication. They should be **temporarily excluded from training** because their retained class-5 labels may also be wrong; a 28-image exclusion CSV is delivered in this conversation. Repeated, near-identical conveyor frames are not independent evidence of an object's identity.
+
+**Accepted 45 label revisions:** 35 existing class-4 carton boxes were tightened to exclude opaque time-stamp overlays / off-image edges (as demonstrated in visual comparison sheets), and 10 unsupported wrapper boxes on/crossing background/rails were removed. The other 114 label files did not change. All 187 worker images are still AI-provisional; independent human verification of unchanged cases was not performed.
+
+**Updated counts:** V5 remains **2,093 train + 97 val + 71 test = 2,261** photos. Training instances are now food **3,753**, plate **2,085**, utensil **1,314**, hinged container **121**, drink carton **1,208**, wrapper **607** (minus 10), bottle **211**. No original image bytes changed. All ZIP CRC tests passed; every one of 2,261 manifest image-and-label SHA256s checked; **all 336 val/test image/label files remain byte-identical**.
+
+**Remaining AI worker flags:** A 29, B **80** (down from 187 as reported by Worker B but not human resolved), C 33 → **142 total**. Rechecking and human adjudication are still required; notably the 28 held changes should not enter a fully trusted training corpus. The original V4 cross-class completeness audit and a truly seven-class held-out test remain outstanding.
+
+Outputs:
+- `YOLO_V5_CommandCenter_B187_QC_selected_merged1572.zip` — full merged candidate (no accepted class-4 additions from blurry backgrounds)
+- `V5_WorkerB_187_QC_CommandCenter_Selected_Patch.zip` — 45 accepted labels and decision log
+- `V5_CC_WorkerB_187_QC/WorkerB_187_Selected_Decisions.csv` — per-file accept/withhold provenance
+- `V5_CC_WorkerB_187_QC/All_Workers_142_Unresolved.csv` — remaining flagged queue
+- `V5_CC_WorkerB_187_QC/WorkerB_28_Images_To_Exclude_Until_Manual_QC.csv` — conservative training exclusion recommendation.
+
+**No model training occurred.** No fully verified seven-class mAP should be reported from this corpus.
+
+---
+
 ## Worker C flagged-39 final QC integrated (2026-11-04)
 
 **Latest provisional V5 artifact:** `YOLO_V5_CommandCenter_C39_QC_merged1572.zip` (2,093 train / 97 val / 71 reserved test). Starting archive: `YOLO_V5_CommandCenter_A_Final50_QC_merged1572.zip`.
