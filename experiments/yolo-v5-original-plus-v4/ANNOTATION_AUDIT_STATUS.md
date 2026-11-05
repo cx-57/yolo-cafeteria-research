@@ -2,6 +2,25 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker B remaining 325 images integrated (2026-11-04)
+
+**Overall Command Center: 1,247 / 1,572 original images provisionally AI-reviewed; 325 still pending (Worker C sequences 101–425). Worker B is complete (all 425 assigned photographs).**
+
+Input: `Worker_B_Reviewed_Images_101_to_425(1).zip` contains 325 uniquely assigned Tetra Pak training images (640×640), 325 revised YOLO labels, 325 final overlays, assignment list, per-image audit, hashes and ambiguity log.
+
+**Independent Command Center QC:** Verified all 325 exact sequence IDs against master assignment ledger, all 325 original image hashes, exact pre-merge label hashes, all corrected label hashes and normalized box coordinates, classes and class-count consistency, ZIP CRC and overlay image decodability. Checked same-class duplicate box overlaps and independently visually spot-checked **39 selected source/overlay pairs**, prioritizing large geometry changes and added classes. High-risk previews looked broadly plausible; tiny background package objects remain ambiguous and should not be presumed correctly classified without human QC.
+
+- **325/325 label files revised.** Net additions: **+10 drink_carton, +38 wrapper, +4 food, +2 utensil, +1 plate**. No box removals reported; source photographs unchanged.
+- **168/325 images are explicitly flagged uncertain by Worker B** (69 in seq 101–200; 13 in 201–300; 63 in 301–400; 23 in 401–425). In particular, 38 background-package wrapper labels and cropped carton edges require human adjudication before claiming exhaustive reliable annotations.
+- Candidate dataset: `YOLO_V5_CommandCenter_Bcomplete_merged1247.zip`. All **2,261 image and label SHA256 manifest records** independently reverified; ZIP CRC passed. All **97 validation + 71 reserved test** image AND label files (336 total files) remain byte-identical to prior `YOLO_V5_CommandCenter_Acomplete_merged922.zip`. Same split: 2,093 train, 97 validation, 71 test.
+- Seven-class training box totals: food **3,742**, plate **2,083**, utensil **1,313**, hinged_container **121**, drink_carton **1,205**, wrapper **595**, bottle **214**.
+- Updated `merge_report.json`'s previously stale `annotation_audit_progress` and `annotation_audit_status` to 1247/1572, and updated the review-status CSV / master assignment ledger in the archive to match. Worker C remaining: 325 images.
+- Additional output files: `V5_CommandCenter_Master_Assignments_After_Bcomplete.csv`, `V5_CC_B325_QC/Worker_B_168_Uncertain_Images.csv`, and `V5_CC_B325_QC/Worker_B_Remaining325_Integration_QA_Report.json`. Large archives are delivered in the chat, not checked into GitHub.
+
+**Scientific caveat:** This is a provisional worker annotation merge with selective AI visual review; it is not an independent full-resolution gold-standard inspection of all 325 images. The 168 flagged cases, prior A/B uncertainty flags, incomplete V4 cross-class annotations, and absence of a seven-class validation benchmark still prevent claims of full seven-class annotation quality. No model training was performed.
+
+---
+
 ## Worker A remaining 302 images integrated (2026-11-04)
 
 **Overall Command Center: 922 / 1,572 original images provisionally AI-reviewed; 650 remain (Worker B: 325; Worker C: 325). Worker A all 402 assigned images submitted.**
