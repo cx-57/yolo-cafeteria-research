@@ -2,6 +2,29 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker A remaining 302 images integrated (2026-11-04)
+
+**Overall Command Center: 922 / 1,572 original images provisionally AI-reviewed; 650 remain (Worker B: 325; Worker C: 325). Worker A all 402 assigned images submitted.**
+
+Input `V5_Worker_A_Images_101_to_402_Reviewed(1).zip` contains all 302 assigned Worker A photos (sequences 101–402), revised labels, old labels, full-size final overlays, three batch logs, and 102 source+overlay QC pairs for the final batch. Breakdown: 18 Macworx, 159 School Lunch, 125 Utensil.
+
+**Independent Command Center verification:**
+- All 302 image SHA256s match the prior V5 archive; all 302 original label hashes match exact pre-merge originals.
+- Every assignment path/order, old/new log hash, existing class ID, full normalized box boundary, image dimension and final overlay encoding passed. No same-class duplicate box pair with IoU >0.80 was detected.
+- 192 of the 302 label files changed; 110 remained unchanged (mostly utensil-only images).
+- Class-box net deltas: **food −3; plate +525; utensil +438; carton +1; wrapper +148; hinged container 0; bottle 0**.
+- Visual spot-audit of **33 selected original and final overlay pairs** across all three sources did not confirm a definite error. This is **not independent review of all 302 images**.
+- **86 of 302 images flagged uncertain by Worker A**, including 3 Macworx, 61 School Lunch, 22 Utensil. Batch 003 review logs say overlay generated, not an independently human-adjudicated full-res review. Batch 004 explicitly says native-pixel review sheets plus selected standalone images, not standalone inspection of every photo.
+- No automatic reclassification or unsourced annotations were added during Command Center integration.
+
+**Merged candidate:** `YOLO_V5_CommandCenter_Acomplete_merged922.zip`. Validated ZIP CRC, **all 2,261 image/label SHA256s**, matched label line counts to manifest, and byte-for-byte unchanged **97 val / 71 test** images and labels. Totals remain **2,093 train / 97 val / 71 test**. Full train box totals now: **food 3,738; plate 2,082; utensil 1,311; hinged container 121; drink carton 1,195; wrapper 557; bottle 214**. No training occurred.
+
+Outputs in conversation: updated full V5 archive, `V5_CommandCenter_A302_Integration_QA.json`, `V5_CommandCenter_Master_Assignments_After_Acomplete.csv`, `V5_CommandCenter_A302_uncertain_images.csv`.
+
+**Next:** Complete B 101–425 (325 photos) and C 101–425 (325 photos). Resolve flagged images and audit V4 cross-class omissions before any scientific claim of complete seven-class annotations.
+
+---
+
 ## Worker B + Worker C Batch001 merged — 200 images (2026-11-04)
 
 **Command Center overall: 620 / 1,572 originals marked AI-reviewed; 952 remain.**
