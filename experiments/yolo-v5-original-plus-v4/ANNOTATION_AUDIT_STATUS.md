@@ -2,6 +2,25 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker A final 50-image uncertainty recheck integrated with one correction withheld (2026-11-04)
+
+**Latest provisional V5 archive:** `YOLO_V5_CommandCenter_A_Final50_QC_merged1572.zip` (2,093 train, 97 validation, 71 test).
+
+Submission: `V5_Worker_A_Final_50_Flagged_QC(1).zip` contains 50 previously flagged Worker A training photographs (15 from initial Macworx batch + 35 from the prior 86-image recheck), all 50 latest labels, current-before-review labels, final overlays, original images, QC pairs, per-image audit, hashes, and an unresolved-29 CSV.
+
+- Worker reports **50 individually inspected**, **2 label files modified, 48 unchanged**, **21 marked confidently resolved by the worker**, **29 still uncertain**.
+- Command Center verified all 50 assignment IDs, exact image bytes and SHA256, existing labels matching the *current* V5 archive, new label SHA256, seven-class normalized box coordinates (with floating-point tolerance), every submitted image and final overlay, audit counts and ambiguous-case rows.
+- **Accepted Macworx sequence 115:** extend class-3 hinged-container bottom bounding edge to encompass faint visible lower base. Source photo independently compared before/after; adjustment looks justified.
+- **Withheld Utensil sequence 288:** worker proposed class-5 transparent wrapper across a large mixed utensil arrangement. Independent source/photo inspection could not distinguish a genuine plastic sleeve boundary, and the proposed box encompasses separate packaging/empty space; **this label was not merged**. Its uncertainty remains open for manual adjudication. The latest archive preserves the previously merged label for that image.
+- **Final action:** only **one training label file** changed; all seven class box counts unchanged. The worker's 21 claimed resolutions remain AI-provisional, not human-verified ground truth.
+- **Outstanding flags:** A **29**, B **187**, C **39**, totaling **255 distinct original training photographs**. B/C counts reflect earlier worker flags that have not yet been independently resolved. 1,572/1,572 original images have had an AI annotation pass, but this does not mean complete high-confidence labels.
+- Archive was rebuilt without altering source images. **ZIP CRC passed**, **all 2,261 image and label SHA256 manifest records passed**, and **all 336 validation/test image + label files were byte-for-byte identical** to the prior archive. 2,093 training + 97 validation + 71 test photos. No model training performed.
+- Deliverables in the current chat: latest V5 archive, `V5_CC_WorkerA_Final50_Integration_QA.json`, `V5_CC_WorkerA_Final50_29_Remaining_Uncertainties.csv`, and `V5_CC_AllWorkers_255_Residual_QC_Queue.csv`. Binary archives are not stored in Git.
+
+**Important:** Worker A final50 and other AI corrections must not be represented as independently human-reviewed annotations. The merged V4 images still require cross-class annotation auditing, and V5 validation/test currently lack three of the seven classes.
+
+---
+
 ## Worker A flagged-86 second QC integrated (2026-11-04)
 
 **New provisional V5 archive:** `YOLO_V5_CommandCenter_Aflag86_QC_merged1572.zip`, derived from `YOLO_V5_CommandCenter_ABC_merged1572_provisional.zip`.
