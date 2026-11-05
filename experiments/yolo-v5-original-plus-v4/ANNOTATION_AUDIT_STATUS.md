@@ -2,6 +2,25 @@
 
 **Do not call the original 1,572 photographs fully annotated or visually checked.**
 
+## Worker A flagged-86 second QC integrated (2026-11-04)
+
+**New provisional V5 archive:** `YOLO_V5_CommandCenter_Aflag86_QC_merged1572.zip`, derived from `YOLO_V5_CommandCenter_ABC_merged1572_provisional.zip`.
+
+Worker A submitted `V5_Worker_A_Flagged_86_QC_Reviewed(1).zip`, with all **86** originally flagged photos and current labels, final overlays, per-image hashes, audit, and uncertainty report. The worker marked **51 AI-resolved** and **35 still uncertain**. **3 image labels changed** and **83 remained identical** to the currently merged dataset.
+
+Corrections accepted after Command Center individually viewed all **three** revised before/after image pairs:
+- School Lunch A146: tighten class-5 wrapper around upright food packet, excluding empty tray.
+- Utensil A284: add one class-5 bounding box to a transparent cutlery sleeve; exact overlap/utensil identities remain uncertain.
+- Utensil A400: extend existing class-2 broken-fork box to include a detached tine fragment.
+
+All 86 assigned Worker A sequence/image IDs, original source SHA256s, old-label/current-archive SHA256s, revised SHA256s, class IDs, normalized box geometry, per-image counts, and overlay-file presence/decodability passed. Source pixels unchanged. Entire merged archive reverified: **2,261 image/label SHA256 pairs**, 2,093 training / 97 validation / 71 test, ZIP CRC pass, byte-for-byte unchanged validation/test (336 files). **New train box totals:** food 3,748; plate 2,083; utensil 1,314; hinged_container 121; drink_carton 1,208; wrapper **620** (+1); bottle 216.
+
+**Outstanding uncertainties:** Worker A's *earlier first 100* Macworx batch has **15 additional unadjudicated** cases not covered by this 86-image handoff, so Worker A remains **50 outstanding** (15+35); B has 187; C has 39; **276 outstanding across the three workers**, assuming no overlapping IDs. This is an AI-level flag-resolution tally, **not independent human validation**, and unflagged items can still be imperfect. V4 cross-class review and seven-class held-out labels remain outstanding; no model training occurred.
+
+Delivered alongside the full archive: `V5_CC_WorkerA_86_QC_Integration_Report.json`, `V5_CC_WorkerA_86_Review_Log.csv`, `V5_CC_WorkerA_50_Remaining_Uncertainties.csv`.
+
+---
+
 ## Worker C final 325 merged — all original V1-era images provisionally AI-reviewed (2026-11-04)
 
 **Command Center milestone: 1,572 / 1,572 original V1-era training photographs processed by three annotation workers. None remains unassigned or pending an initial AI worker pass. This does NOT mean independently human-verified or complete seven-class ground truth.**
