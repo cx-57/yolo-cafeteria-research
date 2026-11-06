@@ -16,7 +16,7 @@ TRIALS = ('baseline', 'U1', 'U2', 'U3', 'U4', 'U5', 'U6')
 SEEDS = (57, 58, 59)
 
 
-def ensure_disk_space(output, minimum_bytes=5 * 1024**3):
+def ensure_disk_space(output, minimum_bytes=3 * 1024**3):
     ancestor = Path(output).resolve()
     while not ancestor.exists():
         ancestor = ancestor.parent
@@ -348,6 +348,10 @@ def run_trial(dataset, output, trial, seed=57, device='mps', batch=None, smoke=F
         record['initial_checkpoint_sha256'] = sha(pretrained)
     started = time.monotonic()
     try:
+        # A live reserve is safer than relying only on the startup estimate,
+        # especially on the 8-GB Mac where swap may grow during training.
+        model.add_callback('on_train_batch_end', lambda trainer: ensure_disk_space(
+            trainer.save_dir, minimum_bytes=1024**3))
         if resume:
             # Keep the old discoverable failure receipt until all checkpoint
             # loading and provenance validation above have succeeded.

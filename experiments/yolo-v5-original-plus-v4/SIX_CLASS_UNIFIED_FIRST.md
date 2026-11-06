@@ -11,7 +11,7 @@ Open **YOLO_V5_Six_Class_Unified_First.ipynb** in Colab, select a GPU runtime, a
 
 The corrected ZIP is still absent from the local workspace at handoff. The exclusions were also not available for inspection. Code tests use controlled fixtures. All original annotations remain provisional, including retained background negatives; filtering bottle does not certify other labels are complete.
 
-**2026-11-06 local source change:** The user explicitly authorized the available older `YOLO_V5_partial_annotation_audit320(5).zip`. For that exact archive, `prepare --allow-provisional-audit320` records the older revision and missing later corrections. The later B187 28-image ledger is not assumed to apply or fabricated. This explicit mode does not change the default corrected-archive workflow. Local preparation/training requires at least 5 GiB free for the derived data, checkpoints and swap.
+**2026-11-06 local source change:** The user explicitly authorized the available older `YOLO_V5_partial_annotation_audit320(5).zip`. For that exact archive, `prepare --allow-provisional-audit320` records the older revision and missing later corrections. The later B187 28-image ledger is not assumed to apply or fabricated. This explicit mode does not change the default corrected-archive workflow. After disposable-cache cleanup, local preparation/training requires at least 3 GiB free, and a per-batch check stops training below 1 GiB. The local 8-GB Mac uses batch 1 across candidates to reduce memory/swap demand; the nominal effective batch remains 64 through accumulation. Larger batches remain the default recipe on roomier machines.
 
 ```bash
 python scripts/v5_experiment.py prepare \
