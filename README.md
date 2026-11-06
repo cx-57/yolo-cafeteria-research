@@ -74,9 +74,17 @@ The frozen V1 specialist system remains unchanged.
 The [six-class experiment guide](experiments/yolo-v5-original-plus-v4/SIX_CLASS_UNIFIED_FIRST.md)
 and [self-contained Colab notebook](experiments/yolo-v5-original-plus-v4/YOLO_V5_Six_Class_Unified_First.ipynb)
 prepare V5 without bottle, then run a baseline and six unified-model variants
-before any specialist decision. This workflow is implemented but **has no new
-trained weights or accuracy results yet**. It requires the corrected complete
-V5 archive and the documented 28-image ambiguity exclusion ledger.
+before any specialist decision. The default workflow requires the corrected
+complete V5 archive and its 28-image ambiguity exclusion ledger. A separately
+authorized audit320 mode and local five-epoch experiments are documented in
+the guide; checkpoints remain outside Git.
+
+At the user's later request, [three specialist trials](experiments/yolo-v5-original-plus-v4/SPECIALIST_TRIALS.md)
+target utensil, drink carton and wrapper. The [GPU Colab notebook](experiments/yolo-v5-original-plus-v4/YOLO_V5_Specialists_5Epochs.ipynb)
+retains trained V5 weights, trains five epochs per specialist, and compares
+the complete six-class hybrid on one fixed development cohort. Local initial
+specialist weights exist, but **no new specialist training or accuracy gain
+has been established yet**; disk pressure blocked local training.
 
 ## Separate, provisional V3 recovery experiment
 

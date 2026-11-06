@@ -13,6 +13,30 @@ except ImportError:
 
 @unittest.skipUnless(importlib.util.find_spec('ultralytics'), 'Ultralytics unavailable')
 class ProjectionTests(unittest.TestCase):
+    def test_specialist_preserves_owned_class_weights_and_remaps_to_zero(self):
+        self.assertIsNotNone(p)
+        self.assertTrue(hasattr(p, 'project_classes'), 'single-class learned-head projection is missing')
+        import torch
+        from ultralytics.nn.tasks import DetectionModel
+        from v5_dataset import NAMES
+        old_threads = torch.get_num_threads()
+        torch.set_num_threads(1)
+        self.addCleanup(torch.set_num_threads, old_threads)
+        source = DetectionModel('yolo11n.yaml', nc=6, verbose=False).eval()
+        source.names = dict(enumerate(NAMES))
+        image = torch.randn(1, 3, 64, 64)
+        with torch.inference_mode():
+            before = source(image)[0]
+            specialist = p.project_classes(source, ['utensil'])
+            after = specialist(image)[0]
+        self.assertEqual(specialist.names, {0: 'utensil'})
+        self.assertEqual(specialist.model[-1].nc, 1)
+        torch.testing.assert_close(after[:, :4], before[:, :4])
+        torch.testing.assert_close(after[:, 4], before[:, 6])
+        self.assertEqual(source.model[-1].nc, 6)
+        for bad in ([], ['utensil', 'utensil'], ['bottle']):
+            with self.assertRaises(ValueError): p.project_classes(source, bad)
+
     def test_refinement_requires_gain_without_large_class_regressions(self):
         self.assertIsNotNone(p)
         self.assertTrue(hasattr(p, 'assess_refinement'), 'comparison gate is missing')

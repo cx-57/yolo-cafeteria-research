@@ -6,14 +6,24 @@ from v5_dataset import NAMES
 
 
 def without_bottle(source):
-    import torch.nn as nn
     names = source.names
     ordered = [names[i] for i in range(len(names))] if isinstance(names, dict) else list(names)
     if ordered != NAMES + ['bottle']:
         raise ValueError('Expected the exact original V5 seven-class order')
+    return project_classes(source, NAMES)
+
+
+def project_classes(source, retained):
+    import torch.nn as nn
+    names = source.names
+    ordered = [names[i] for i in range(len(names))] if isinstance(names, dict) else list(names)
+    if (ordered not in (NAMES, NAMES + ['bottle']) or not retained
+            or len(set(retained)) != len(retained) or not set(retained) <= set(NAMES)):
+        raise ValueError('Invalid retained classes or unsupported source class order')
+    indices = [ordered.index(name) for name in retained]
     result = copy.deepcopy(source)
     head = result.model[-1]
-    if head.nc != 7 or not hasattr(head, 'cv3'):
+    if head.nc != len(ordered) or not hasattr(head, 'cv3'):
         raise ValueError('Unsupported original detection head')
     for name in ('cv3', 'one2one_cv3'):
         branches = getattr(head, name, None)
@@ -21,24 +31,24 @@ def without_bottle(source):
             continue
         for branch in branches:
             conv = branch[-1]
-            if not isinstance(conv, nn.Conv2d) or conv.out_channels != 7:
+            if not isinstance(conv, nn.Conv2d) or conv.out_channels != len(ordered):
                 raise ValueError('Unexpected classification output; refusing partial projection')
-            replacement = nn.Conv2d(conv.in_channels, 6, conv.kernel_size,
+            replacement = nn.Conv2d(conv.in_channels, len(indices), conv.kernel_size,
                                     stride=conv.stride, padding=conv.padding,
                                     dilation=conv.dilation, groups=conv.groups,
                                     bias=conv.bias is not None, padding_mode=conv.padding_mode)
             replacement = replacement.to(device=conv.weight.device, dtype=conv.weight.dtype)
-            replacement.weight = nn.Parameter(conv.weight[:6].detach().clone(),
+            replacement.weight = nn.Parameter(conv.weight[indices].detach().clone(),
                                               requires_grad=conv.weight.requires_grad)
             if conv.bias is not None:
-                replacement.bias = nn.Parameter(conv.bias[:6].detach().clone(),
+                replacement.bias = nn.Parameter(conv.bias[indices].detach().clone(),
                                                 requires_grad=conv.bias.requires_grad)
             branch[-1] = replacement
-    head.nc = 6
-    head.no = head.reg_max * 4 + 6
-    result.names = dict(enumerate(NAMES))
+    head.nc = len(indices)
+    head.no = head.reg_max * 4 + len(indices)
+    result.names = dict(enumerate(retained))
     result.yaml = copy.deepcopy(result.yaml)
-    result.yaml['nc'] = 6
+    result.yaml['nc'] = len(indices)
     return result
 
 
