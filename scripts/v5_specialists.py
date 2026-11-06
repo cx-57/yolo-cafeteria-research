@@ -13,6 +13,22 @@ from v5_dataset import NAMES, sha, strip_bottle, verify_dataset, write_json
 from specialists import score_predictions, validate_prediction_rows
 
 
+def classification_only(model):
+    head = model.model[-1]
+    if getattr(head, 'nc', None) != 1 or not hasattr(head, 'cv3') or not hasattr(head, 'cv2'):
+        raise ValueError('Expected a single-class specialist detection head')
+    for param in model.parameters():
+        param.requires_grad_(False)
+    for param in head.cv3.parameters():
+        param.requires_grad_(True)
+    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    if not trainable:
+        raise ValueError('No trainable classification parameters')
+    return dict(trainable_parameters=trainable,
+                frozen_parameters=sum(p.numel() for p in model.parameters() if not p.requires_grad),
+                scope='classification branches only; backbone, neck and box regression frozen')
+
+
 def specialist_labels(text, global_ids):
     if not global_ids or len(set(global_ids)) != len(global_ids) or not set(global_ids) <= set(range(6)):
         raise ValueError('Invalid specialist class ownership')

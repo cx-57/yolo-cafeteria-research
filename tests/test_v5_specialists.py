@@ -24,6 +24,24 @@ class SpecialistTests(unittest.TestCase):
         self.assertEqual(s.specialist_labels('0 .5 .5 .2 .2\n', [2]), '')
         with self.assertRaises(ValueError): s.specialist_labels('6 .5 .5 .2 .2\n', [2])
 
+    @unittest.skipUnless(importlib.util.find_spec('torch'), 'PyTorch unavailable')
+    def test_classification_only_freezes_backbone_and_box_predictor(self):
+        self.assertTrue(hasattr(s, 'classification_only'), 'low-memory classifier training is missing')
+        import torch
+        class Head(torch.nn.Module):
+            def __init__(self):
+                super().__init__()
+                self.nc = 1
+                self.cv2 = torch.nn.Linear(3, 4)
+                self.cv3 = torch.nn.Linear(3, 1)
+        model = torch.nn.Module()
+        model.model = torch.nn.ModuleList([torch.nn.Linear(3,3), Head()])
+        report = s.classification_only(model)
+        self.assertEqual(report['trainable_parameters'], 4)
+        self.assertFalse(any(p.requires_grad for p in model.model[0].parameters()))
+        self.assertFalse(any(p.requires_grad for p in model.model[-1].cv2.parameters()))
+        self.assertTrue(all(p.requires_grad for p in model.model[-1].cv3.parameters()))
+
     def test_training_subset_never_uses_heldouts_and_keeps_all_positives(self):
         rows = [dict(split='train', image_path=str(i), image_sha256=str(i), counts={'2': int(i < 2)})
                 for i in range(5)]
