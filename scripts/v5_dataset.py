@@ -14,6 +14,7 @@ import yaml
 
 NAMES = ['food', 'plate', 'utensil', 'hinged_container', 'drink_carton', 'wrapper']
 ARCHIVE_NAME = 'YOLO_V5_CommandCenter_B187_QC_selected_merged1572.zip'
+AUDIT320_NAME = 'YOLO_V5_partial_annotation_audit320(5).zip'
 PREFIX = 'v5_original_plus_v4/'
 SPLITS = ('train', 'val', 'test')
 
@@ -290,14 +291,35 @@ def materialize(rows, contents, source, splits, groups, output, exclusions):
     return receipt
 
 
-def prepare(archive, output, exclusions):
-    if Path(archive).name != ARCHIVE_NAME:
-        raise ValueError(f'Use the corrected archive named {ARCHIVE_NAME}; no older-data fallback')
+def source_policy(name, allow_provisional_audit320=False, exclusions=None):
+    if name == AUDIT320_NAME:
+        if not allow_provisional_audit320:
+            raise ValueError('Older audit320 data requires explicit source authorization')
+        return dict(dataset_revision='audit320', source_choice='user-authorized older provisional archive',
+                    later_corrections_missing=True, later_28_image_exclusions_applied=False,
+                    limitation='Later B187 corrections and its 28-image exclusion ledger are unavailable; '
+                               'their identities are not guessed or fabricated for this older revision.')
+    if name != ARCHIVE_NAME:
+        raise ValueError(f'Use {ARCHIVE_NAME}, or explicitly authorize the known local audit320 archive')
+    if exclusions is None:
+        raise ValueError('The corrected B187 archive requires its 28-image exclusion ledger')
+    return dict(dataset_revision='B187_selected', later_corrections_missing=False,
+                later_28_image_exclusions_applied=True)
+
+
+def prepare(archive, output, exclusions=None, allow_provisional_audit320=False):
+    # Check existence first to preserve the useful missing-input error.
+    if not Path(archive).is_file():
+        raise FileNotFoundError(f'V5 archive is unavailable: {archive}')
+    policy = source_policy(Path(archive).name, allow_provisional_audit320, exclusions)
     if Path(output).exists():
         raise FileExistsError(output)
     rows, contents, source = read_archive(archive)
-    excluded = validate_exclusions(load_exclusions(exclusions), rows)
-    source['exclusion_ledger_sha256'] = sha(exclusions)
+    source.update(policy)
+    excluded = validate_exclusions(load_exclusions(exclusions), rows) if exclusions else set()
+    source['exclusion_ledger_sha256'] = sha(exclusions) if exclusions else None
+    if policy['dataset_revision'] == 'audit320':
+        source['later_28_image_exclusions_applied'] = False
     rows = [r for r in rows if r['image_path'] not in excluded]
     features = image_features(rows, contents)
     splits, groups = assign_splits(rows, features)

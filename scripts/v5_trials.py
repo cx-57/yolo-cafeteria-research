@@ -5,6 +5,7 @@ import json
 import math
 from pathlib import Path
 import platform
+import shutil
 import time
 
 import yaml
@@ -13,6 +14,16 @@ from v5_dataset import NAMES, sha, safe_path, verify_dataset, write_json
 
 TRIALS = ('baseline', 'U1', 'U2', 'U3', 'U4', 'U5', 'U6')
 SEEDS = (57, 58, 59)
+
+
+def ensure_disk_space(output, minimum_bytes=5 * 1024**3):
+    ancestor = Path(output).resolve()
+    while not ancestor.exists():
+        ancestor = ancestor.parent
+    free = shutil.disk_usage(ancestor).free
+    if free < minimum_bytes:
+        raise ValueError(f'Insufficient disk space: {free / 1024**3:.2f} GiB free; '
+                         f'at least {minimum_bytes / 1024**3:.1f} GiB required for data/checkpoints/swap')
 
 
 def operating_point(confidence, precision, recall):
@@ -261,6 +272,7 @@ def evaluate(model, data_file, output, recipe, device, batch):
 
 def run_trial(dataset, output, trial, seed=57, device='mps', batch=None, smoke=False, resume=False):
     dataset, output = Path(dataset).resolve(), Path(output).resolve()
+    ensure_disk_space(output)
     data = verify_dataset(dataset)
     dataset_sha = sha(dataset / 'dataset_receipt.json')
     runs = load_runs(output.parent, dataset_sha)

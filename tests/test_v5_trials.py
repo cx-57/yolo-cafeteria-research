@@ -141,6 +141,15 @@ class TrialTests(unittest.TestCase):
             t.verify_runtime(old, new)
         t.verify_runtime(old, dict(old, platform='another GPU host'))
 
+    def test_disk_preflight_fails_before_creating_run_output(self):
+        self.assertTrue(hasattr(t, 'ensure_disk_space'), 'disk-space preflight is missing')
+        with tempfile.TemporaryDirectory() as d:
+            output = Path(d) / 'new-run'
+            with self.assertRaisesRegex(ValueError, 'disk space'):
+                t.ensure_disk_space(output, minimum_bytes=10**20)
+            self.assertFalse(output.exists())
+            t.ensure_disk_space(output, minimum_bytes=0)
+
     @unittest.skipUnless(importlib.util.find_spec('ultralytics'), 'Ultralytics is not installed')
     def test_validation_adapter_saves_per_image_stats_without_training_epochs(self):
         import torch

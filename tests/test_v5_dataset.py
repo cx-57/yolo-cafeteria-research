@@ -55,6 +55,20 @@ class DatasetTests(unittest.TestCase):
                          ('2 .5 .5 .2 .2\n', 1))
         self.assertEqual(v.strip_bottle('6 .5 .5 .2 .2\n'), ('', 1))
 
+    def test_older_archive_requires_explicit_source_authorization(self):
+        self.assertTrue(hasattr(v, 'source_policy'), 'explicit older-source policy is missing')
+        name = 'YOLO_V5_partial_annotation_audit320(5).zip'
+        with self.assertRaisesRegex(ValueError, 'authorization'):
+            v.source_policy(name, False, None)
+        policy = v.source_policy(name, True, None)
+        self.assertEqual(policy['dataset_revision'], 'audit320')
+        self.assertTrue(policy['later_corrections_missing'])
+        self.assertFalse(policy['later_28_image_exclusions_applied'])
+        with self.assertRaises(ValueError):
+            v.source_policy('unknown.zip', True, None)
+        with self.assertRaisesRegex(ValueError, 'exclusion'):
+            v.source_policy(v.ARCHIVE_NAME, False, None)
+
     def test_invalid_class_and_geometry_rejected(self):
         for text in ('7 .5 .5 .2 .2', '2 .1 .5 .5 .2', '2 nan .5 .2 .2',
                      '2.0 .5 .5 .2 .2', '2 .5 .5 0 .2', '6 .5 .5 .2'):

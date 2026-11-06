@@ -11,6 +11,15 @@ Open **YOLO_V5_Six_Class_Unified_First.ipynb** in Colab, select a GPU runtime, a
 
 The corrected ZIP is still absent from the local workspace at handoff. The exclusions were also not available for inspection. Code tests use controlled fixtures. All original annotations remain provisional, including retained background negatives; filtering bottle does not certify other labels are complete.
 
+**2026-11-06 local source change:** The user explicitly authorized the available older `YOLO_V5_partial_annotation_audit320(5).zip`. For that exact archive, `prepare --allow-provisional-audit320` records the older revision and missing later corrections. The later B187 28-image ledger is not assumed to apply or fabricated. This explicit mode does not change the default corrected-archive workflow. Local preparation/training requires at least 5 GiB free for the derived data, checkpoints and swap.
+
+```bash
+python scripts/v5_experiment.py prepare \
+  --archive "$HOME/Downloads/YOLO_V5_partial_annotation_audit320(5).zip" \
+  --allow-provisional-audit320 \
+  --output "$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/v5-audit320-six-class-20261106/data"
+```
+
 ## What changes
 
 Derived names are `[food, plate, utensil, hinged_container, drink_carton, wrapper]`, with unchanged IDs 0–5. Preparation removes bottle annotation rows, retains mixed images and bottle-only background images, and hashes every output. The new detector is trained with six outputs from general pretrained weights. It does not merely hide bottle predictions from the old checkpoint.

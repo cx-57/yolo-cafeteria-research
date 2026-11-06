@@ -6,7 +6,7 @@ import sys
 import zipfile
 
 from v5_dataset import ARCHIVE_NAME, NAMES, prepare, read_archive, verify_dataset
-from v5_trials import TRIALS, run_trial, stage_report, trial_recipe
+from v5_trials import TRIALS, ensure_disk_space, run_trial, stage_report, trial_recipe
 
 
 def campaign(dataset, runs, device, batch):
@@ -39,9 +39,11 @@ def main(argv=None):
     audit.add_argument('--archive', type=Path, default=Path.home() / 'Downloads' / ARCHIVE_NAME)
     prep = sub.add_parser('prepare', help='Remove bottle and freeze a supported group-aware split')
     prep.add_argument('--archive', type=Path, required=True)
-    prep.add_argument('--exclusions', type=Path, required=True,
+    prep.add_argument('--exclusions', type=Path,
                       help='28-image ambiguity exclusion CSV (image_path column) or JSON path list')
     prep.add_argument('--output', type=Path, required=True)
+    prep.add_argument('--allow-provisional-audit320', action='store_true',
+                      help='Explicitly use the older audit320 ZIP without unavailable later QC changes')
     sub.add_parser('plan', help='Print trial recipes without loading models or training')
     check = sub.add_parser('verify', help='Verify a previously prepared six-class dataset')
     check.add_argument('--dataset', type=Path, required=True)
@@ -65,7 +67,10 @@ def main(argv=None):
         if args.command == 'audit':
             _, _, result = read_archive(args.archive)
         elif args.command == 'prepare':
-            result = prepare(args.archive, args.output, args.exclusions)
+            if not args.archive.is_file():
+                raise FileNotFoundError(f'V5 archive is unavailable: {args.archive}')
+            ensure_disk_space(args.output)
+            result = prepare(args.archive, args.output, args.exclusions, args.allow_provisional_audit320)
         elif args.command == 'plan':
             result = dict(names=NAMES, order=list(TRIALS), specialists_allowed=False,
                           recipes={k: trial_recipe(k, 57) for k in TRIALS[:-1]},
