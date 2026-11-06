@@ -54,6 +54,21 @@ Git does **not** include the large model weights, image datasets, and local
 run artifacts. They live in `~/Desktop/yolo-cafeteria-research-assets/`
 and are required for actual model inference and reproducibility.
 
+## Unified V5 checkpoint — 11/20 epochs (provisional)
+
+The separate **seven-class YOLO11s V5** experiment used a rebalanced 80/10/10
+partition of the 2,261-image corpus. The uploaded `best.pt` file records
+**11 completed epochs**, **65.94% validation mAP50** and **41.97% mAP50–95**;
+training was interrupted, and these are not independent test results.
+
+- [V5 checkpoint record, exact SHA256, and model upload instructions](experiments/yolo-v5-original-plus-v4/V5_11_EPOCH_CHECKPOINT.md)
+- [Checkpoint metadata JSON](experiments/yolo-v5-original-plus-v4/V5_11Epoch_Checkpoint_Metadata.json)
+- [V5 20-epoch training / validation Colab notebook](experiments/yolo-v5-original-plus-v4/YOLO_V5_Balanced_80_10_10_20_Epochs.ipynb)
+
+**Binary weights are not yet hosted on GitHub.** The model must be attached
+to a GitHub Release before any GitHub weight-download URL can be provided.
+The frozen V1 specialist system remains unchanged.
+
 ## Separate, provisional V3 recovery experiment
 
 The [865-image V3 utensil/wrapper supplement](experiments/yolo-v3-865/) is an **untrained isolated candidate**: it retains 704 prior images, adds 128 legacy utensil photos and 33 legacy wrapper photos, and contains 621 utensil / 140 wrapper boxes. One missing fork was manually annotated, and four bottle labels removed. Its new photos and labels are provided in a separate ZIP attachment; **they are not committed to GitHub**, and annotation completeness still needs visual review. The frozen V1 checkpoint set and 704-image V2 training results are unchanged.
