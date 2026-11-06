@@ -63,3 +63,11 @@
 ## Execution ledger
 
 2026-11-05: User said continue after the concrete design and missing-data report; proceed inline on `codex/v5-six-class-unified-first`. No extra worktree is needed: the dedicated branch already separates these changes from main, and the current checkout is clean. The corrected file remains absent at the provided path. Preparation/training on it remains pending; code and controlled-fixture verification can proceed.
+
+Task 1: complete — 11 focused data-preparation tests passed; committed as cb2c87b4.
+
+Ruling: The user subsequently offered to run training epochs and requested code. Deliver a standalone Colab notebook and runnable CLI; do not start actual experiment training locally. Full preparation/training and specialist/uncertainty decisions remain pending returned real data/results.
+
+Task 2: implementation complete — recipe, provenance, balancing, stage-gate and actual inference-only validation-adapter checks pass. No epoch-based accuracy result is claimed. Specialist eligibility intentionally remains false pending returned results and group-bootstrap analysis.
+
+Task 3: handoff implemented — notebook embeds maintained modules and can execute without publishing a branch. Whole-branch review found resume fallback, failure-receipt ordering, environment mismatch and label-cache bypass defects; regression tests reproduced them and fixes preserve phase-aware recovery and frozen-label loading. Full experiment execution remains pending the user's GPU runs.

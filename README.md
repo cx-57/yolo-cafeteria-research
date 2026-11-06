@@ -69,6 +69,15 @@ training was interrupted, and these are not independent test results.
 to a GitHub Release before any GitHub weight-download URL can be provided.
 The frozen V1 specialist system remains unchanged.
 
+## V5 six-class unified-first improvement workflow
+
+The [six-class experiment guide](experiments/yolo-v5-original-plus-v4/SIX_CLASS_UNIFIED_FIRST.md)
+and [self-contained Colab notebook](experiments/yolo-v5-original-plus-v4/YOLO_V5_Six_Class_Unified_First.ipynb)
+prepare V5 without bottle, then run a baseline and six unified-model variants
+before any specialist decision. This workflow is implemented but **has no new
+trained weights or accuracy results yet**. It requires the corrected complete
+V5 archive and the documented 28-image ambiguity exclusion ledger.
+
 ## Separate, provisional V3 recovery experiment
 
 The [865-image V3 utensil/wrapper supplement](experiments/yolo-v3-865/) is an **untrained isolated candidate**: it retains 704 prior images, adds 128 legacy utensil photos and 33 legacy wrapper photos, and contains 621 utensil / 140 wrapper boxes. One missing fork was manually annotated, and four bottle labels removed. Its new photos and labels are provided in a separate ZIP attachment; **they are not committed to GitHub**, and annotation completeness still needs visual review. The frozen V1 checkpoint set and 704-image V2 training results are unchanged.
