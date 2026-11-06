@@ -118,6 +118,15 @@ def trial_recipe(trial, seed, completed=()):
     return recipe
 
 
+def with_epoch_budget(recipe, epochs):
+    if epochs is None:
+        return dict(recipe)
+    if type(epochs) is not int or epochs < 1:
+        raise ValueError('Epoch budget must be a positive integer')
+    return dict(recipe, epochs=epochs, patience=epochs,
+                close_mosaic=min(recipe['close_mosaic'], epochs - 1))
+
+
 def balanced_training_paths(records, weak):
     weak_ids = {NAMES.index(n) for n in weak}
     paths = []
@@ -270,7 +279,7 @@ def evaluate(model, data_file, output, recipe, device, batch):
     return per_class, {k: float(v) for k, v in metrics.speed.items()}
 
 
-def run_trial(dataset, output, trial, seed=57, device='mps', batch=None, smoke=False, resume=False):
+def run_trial(dataset, output, trial, seed=57, device='mps', batch=None, smoke=False, resume=False, epochs=None):
     dataset, output = Path(dataset).resolve(), Path(output).resolve()
     ensure_disk_space(output)
     data = verify_dataset(dataset)
@@ -284,7 +293,7 @@ def run_trial(dataset, output, trial, seed=57, device='mps', batch=None, smoke=F
         report = summarize_stage(completed, dataset_sha)
         if report['missing_trials'] or trial not in ('baseline', report['selected_unified_trial']):
             raise ValueError('Complete all unified variants before baseline/selected-candidate confirmations')
-    recipe = trial_recipe(trial, seed, completed)
+    recipe = with_epoch_budget(trial_recipe(trial, seed, completed), epochs)
     if batch is not None:
         if type(batch) is not int or batch < 1:
             raise ValueError('Batch must be a positive integer')

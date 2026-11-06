@@ -46,6 +46,8 @@ python scripts/v5_experiment.py train \
 
 On Colab, use `--device 0`. A baseline runs 40 epochs. GPU time depends on the runtime; use the baseline epoch timings before deciding how much of the full campaign to run in a session. Nothing automatically purchases compute.
 
+For a user-requested shorter run, add `--epochs 10` to `train` and select a fresh output such as `runs/baseline_10epoch_seed57`. This runs only the requested trial for 10 epochs and then validates. It does not queue the campaign and does not satisfy the 40-epoch completed-trial requirement for specialist decisions. Always use the same epoch override when resuming that run.
+
 After the baseline, run all remaining trials and confirmation seeds:
 
 ```bash

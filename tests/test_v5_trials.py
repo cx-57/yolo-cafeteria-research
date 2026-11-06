@@ -41,6 +41,19 @@ class TrialTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'U1.*U5|prerequisite'):
             t.trial_recipe('U6', 57)
 
+    def test_user_can_request_ten_epochs_without_unlocking_specialists(self):
+        self.assertTrue(hasattr(t, 'with_epoch_budget'), 'user epoch override is missing')
+        original = t.trial_recipe('baseline', 57)
+        recipe = t.with_epoch_budget(original, 10)
+        self.assertEqual(recipe['epochs'], 10)
+        self.assertEqual(recipe['patience'], 10)
+        self.assertEqual(original['epochs'], 40)
+        for count in (0, -1, True, 1.5):
+            with self.assertRaises(ValueError): t.with_epoch_budget(original, count)
+        record = self.record('baseline')
+        record.update(planned_epochs=10, completed_epochs=10, recipe=recipe)
+        self.assertFalse(t.valid_completed(record, 'same'))
+
     def test_u6_extends_convergence_when_no_variant_helps(self):
         runs = [self.record(k) for k in t.TRIALS[:-1]]
         recipe = t.trial_recipe('U6', 57, runs)

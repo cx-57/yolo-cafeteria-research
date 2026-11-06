@@ -53,6 +53,7 @@ def main(argv=None):
     train = sub.add_parser('train', help='Run one unified trial, using only train/val')
     train.add_argument('--trial', choices=TRIALS, required=True)
     train.add_argument('--seed', type=int, choices=(57, 58, 59), default=57)
+    train.add_argument('--epochs', type=int, help='Explicit epoch budget; short runs do not unlock specialists')
     train.add_argument('--output', type=Path, required=True)
     train.add_argument('--smoke', action='store_true', help='Two epochs; NEVER counts as a completed trial')
     train.add_argument('--resume', action='store_true', help='Resume verified interrupted training or recover evaluation')
@@ -86,7 +87,7 @@ def main(argv=None):
             result = campaign(args.dataset, args.runs, args.device, args.batch)
         else:
             result = run_trial(args.dataset, args.output, args.trial, args.seed,
-                               args.device, args.batch, args.smoke, args.resume)
+                               args.device, args.batch, args.smoke, args.resume, epochs=args.epochs)
         print(json.dumps(result, indent=2, allow_nan=False))
         return 0
     except (OSError, ValueError, KeyError, zipfile.BadZipFile) as exc:
