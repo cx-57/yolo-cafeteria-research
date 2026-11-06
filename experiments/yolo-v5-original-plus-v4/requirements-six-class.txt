@@ -1,0 +1,3 @@
+# Install from this directory, or use the explicit path from the repository root.
+-r ../../requirements.txt
+ImageHash==4.3.2
