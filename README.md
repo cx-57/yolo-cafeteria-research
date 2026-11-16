@@ -5,6 +5,16 @@ cafeteria item classes: food, plate, utensil, hinged container, drink carton,
 wrapper, and bottle. A separate rule layer suggests compost, recycling, or
 manual review. Object recognition is **not** verified disposal-bin accuracy.
 
+## Live camera and Arduino sorter
+
+[Setup, camera/ROI calibration, firmware upload, manual/autonomous modes and logging](docs/live-sorter.md)
+| [Software verification and remaining physical tests](docs/sorter-verification.md)
+| [Later robustness work and small-food limitations](docs/live-robustness-session.md)
+
+The new application defaults to detection only. Real movement requires reviewed
+class/bin mappings and ROI calibration. Camera-to-bin operation still requires
+physical verification; existing research weights and datasets are unchanged.
+
 ## Research paper
 
 **[Read the 10-page PDF research preprint](paper/cafeteria-waste-sorting.pdf)** |
