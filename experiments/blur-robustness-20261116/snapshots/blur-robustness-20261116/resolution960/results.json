@@ -1,0 +1,827 @@
+{
+  "results": {
+    "clean": {
+      "before": {
+        "operating": {
+          "confidence_threshold": 0.6,
+          "minimum_box_iou": 0.5,
+          "matching": "Confidence-descending greedy one-to-one, exact object class required",
+          "per_class": {
+            "food": {
+              "tp": 293,
+              "fp": 6,
+              "fn": 50,
+              "predictions": 299,
+              "objects": 343,
+              "precision": 0.979933110367893,
+              "recall": 0.8542274052478134,
+              "f1": 0.9127725856697819
+            },
+            "plate": {
+              "tp": 55,
+              "fp": 4,
+              "fn": 55,
+              "predictions": 59,
+              "objects": 110,
+              "precision": 0.9322033898305084,
+              "recall": 0.5,
+              "f1": 0.650887573964497
+            },
+            "utensil": {
+              "tp": 8,
+              "fp": 1,
+              "fn": 93,
+              "predictions": 9,
+              "objects": 101,
+              "precision": 0.8888888888888888,
+              "recall": 0.07920792079207921,
+              "f1": 0.14545454545454545
+            },
+            "hinged_container": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predictions": 2,
+              "objects": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "drink_carton": {
+              "tp": 88,
+              "fp": 4,
+              "fn": 6,
+              "predictions": 92,
+              "objects": 94,
+              "precision": 0.9565217391304348,
+              "recall": 0.9361702127659575,
+              "f1": 0.946236559139785
+            },
+            "wrapper": {
+              "tp": 42,
+              "fp": 3,
+              "fn": 43,
+              "predictions": 45,
+              "objects": 85,
+              "precision": 0.9333333333333333,
+              "recall": 0.49411764705882355,
+              "f1": 0.6461538461538462
+            },
+            "bottle": {
+              "tp": 20,
+              "fp": 6,
+              "fn": 22,
+              "predictions": 26,
+              "objects": 42,
+              "precision": 0.7692307692307693,
+              "recall": 0.47619047619047616,
+              "f1": 0.5882352941176471
+            }
+          },
+          "micro": {
+            "tp": 508,
+            "fp": 24,
+            "fn": 269,
+            "predictions": 532,
+            "objects": 777,
+            "precision": 0.9548872180451128,
+            "recall": 0.6537966537966537,
+            "f1": 0.7761650114591291
+          },
+          "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+        },
+        "ap_at_occupancy_floor": {
+          "AP50": 0.7243190946606769,
+          "AP50_95": 0.47662352151049997,
+          "images": 186,
+          "per_class": {
+            "food": {
+              "AP50": 0.9201788460969148,
+              "AP50_95": 0.5348833509137674,
+              "objects": 343
+            },
+            "plate": {
+              "AP50": 0.7994927420929924,
+              "AP50_95": 0.5451963529810213,
+              "objects": 110
+            },
+            "utensil": {
+              "AP50": 0.2705430217775444,
+              "AP50_95": 0.155461727681216,
+              "objects": 101
+            },
+            "hinged_container": {
+              "AP50": 0.995,
+              "AP50_95": 0.945,
+              "objects": 2
+            },
+            "drink_carton": {
+              "AP50": 0.934747761963437,
+              "AP50_95": 0.5557478749503643,
+              "objects": 94
+            },
+            "wrapper": {
+              "AP50": 0.6643976724385822,
+              "AP50_95": 0.34388168166077643,
+              "objects": 85
+            },
+            "bottle": {
+              "AP50": 0.48587361825526715,
+              "AP50_95": 0.25619366238635555,
+              "objects": 42
+            }
+          }
+        }
+      },
+      "after": {
+        "operating": {
+          "confidence_threshold": 0.6,
+          "minimum_box_iou": 0.5,
+          "matching": "Confidence-descending greedy one-to-one, exact object class required",
+          "per_class": {
+            "food": {
+              "tp": 219,
+              "fp": 14,
+              "fn": 124,
+              "predictions": 233,
+              "objects": 343,
+              "precision": 0.9399141630901288,
+              "recall": 0.6384839650145773,
+              "f1": 0.7604166666666666
+            },
+            "plate": {
+              "tp": 36,
+              "fp": 5,
+              "fn": 74,
+              "predictions": 41,
+              "objects": 110,
+              "precision": 0.8780487804878049,
+              "recall": 0.32727272727272727,
+              "f1": 0.4768211920529801
+            },
+            "utensil": {
+              "tp": 12,
+              "fp": 2,
+              "fn": 89,
+              "predictions": 14,
+              "objects": 101,
+              "precision": 0.8571428571428571,
+              "recall": 0.1188118811881188,
+              "f1": 0.20869565217391303
+            },
+            "hinged_container": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 2,
+              "predictions": 1,
+              "objects": 2,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "drink_carton": {
+              "tp": 70,
+              "fp": 5,
+              "fn": 24,
+              "predictions": 75,
+              "objects": 94,
+              "precision": 0.9333333333333333,
+              "recall": 0.7446808510638298,
+              "f1": 0.8284023668639053
+            },
+            "wrapper": {
+              "tp": 14,
+              "fp": 4,
+              "fn": 71,
+              "predictions": 18,
+              "objects": 85,
+              "precision": 0.7777777777777778,
+              "recall": 0.16470588235294117,
+              "f1": 0.27184466019417475
+            },
+            "bottle": {
+              "tp": 19,
+              "fp": 16,
+              "fn": 23,
+              "predictions": 35,
+              "objects": 42,
+              "precision": 0.5428571428571428,
+              "recall": 0.4523809523809524,
+              "f1": 0.4935064935064935
+            }
+          },
+          "micro": {
+            "tp": 370,
+            "fp": 47,
+            "fn": 407,
+            "predictions": 417,
+            "objects": 777,
+            "precision": 0.8872901678657075,
+            "recall": 0.47619047619047616,
+            "f1": 0.6197654941373534
+          },
+          "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+        },
+        "ap_at_occupancy_floor": {
+          "AP50": 0.4930449886656832,
+          "AP50_95": 0.27298366650116074,
+          "images": 186,
+          "per_class": {
+            "food": {
+              "AP50": 0.8149456773061008,
+              "AP50_95": 0.5189586636810852,
+              "objects": 343
+            },
+            "plate": {
+              "AP50": 0.6516636964991445,
+              "AP50_95": 0.3585417265629304,
+              "objects": 110
+            },
+            "utensil": {
+              "AP50": 0.26538620623403164,
+              "AP50_95": 0.12591380040387445,
+              "objects": 101
+            },
+            "hinged_container": {
+              "AP50": 0.0,
+              "AP50_95": 0.0,
+              "objects": 2
+            },
+            "drink_carton": {
+              "AP50": 0.8712577359153926,
+              "AP50_95": 0.5321490775331215,
+              "objects": 94
+            },
+            "wrapper": {
+              "AP50": 0.39377039436547134,
+              "AP50_95": 0.173739585118123,
+              "objects": 85
+            },
+            "bottle": {
+              "AP50": 0.45429121033964137,
+              "AP50_95": 0.20158281220899082,
+              "objects": 42
+            }
+          }
+        }
+      }
+    },
+    "gaussian": {
+      "before": {
+        "operating": {
+          "confidence_threshold": 0.6,
+          "minimum_box_iou": 0.5,
+          "matching": "Confidence-descending greedy one-to-one, exact object class required",
+          "per_class": {
+            "food": {
+              "tp": 228,
+              "fp": 3,
+              "fn": 115,
+              "predictions": 231,
+              "objects": 343,
+              "precision": 0.987012987012987,
+              "recall": 0.6647230320699709,
+              "f1": 0.794425087108014
+            },
+            "plate": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 108,
+              "predictions": 3,
+              "objects": 110,
+              "precision": 0.6666666666666666,
+              "recall": 0.01818181818181818,
+              "f1": 0.035398230088495575
+            },
+            "utensil": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 97,
+              "predictions": 4,
+              "objects": 101,
+              "precision": 1.0,
+              "recall": 0.039603960396039604,
+              "f1": 0.0761904761904762
+            },
+            "hinged_container": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predictions": 2,
+              "objects": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "drink_carton": {
+              "tp": 31,
+              "fp": 6,
+              "fn": 63,
+              "predictions": 37,
+              "objects": 94,
+              "precision": 0.8378378378378378,
+              "recall": 0.32978723404255317,
+              "f1": 0.4732824427480916
+            },
+            "wrapper": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 80,
+              "predictions": 5,
+              "objects": 85,
+              "precision": 1.0,
+              "recall": 0.058823529411764705,
+              "f1": 0.1111111111111111
+            },
+            "bottle": {
+              "tp": 5,
+              "fp": 7,
+              "fn": 37,
+              "predictions": 12,
+              "objects": 42,
+              "precision": 0.4166666666666667,
+              "recall": 0.11904761904761904,
+              "f1": 0.18518518518518517
+            }
+          },
+          "micro": {
+            "tp": 277,
+            "fp": 17,
+            "fn": 500,
+            "predictions": 294,
+            "objects": 777,
+            "precision": 0.9421768707482994,
+            "recall": 0.3564993564993565,
+            "f1": 0.5172735760971056
+          },
+          "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+        },
+        "ap_at_occupancy_floor": {
+          "AP50": 0.47536551181070597,
+          "AP50_95": 0.3101022741771114,
+          "images": 186,
+          "per_class": {
+            "food": {
+              "AP50": 0.8244065228496782,
+              "AP50_95": 0.42490273234860576,
+              "objects": 343
+            },
+            "plate": {
+              "AP50": 0.3134324596712123,
+              "AP50_95": 0.18958475842235875,
+              "objects": 110
+            },
+            "utensil": {
+              "AP50": 0.17679663282974017,
+              "AP50_95": 0.07467558263728356,
+              "objects": 101
+            },
+            "hinged_container": {
+              "AP50": 0.995,
+              "AP50_95": 0.945,
+              "objects": 2
+            },
+            "drink_carton": {
+              "AP50": 0.4820869739195933,
+              "AP50_95": 0.30096725290277704,
+              "objects": 94
+            },
+            "wrapper": {
+              "AP50": 0.35946874102251675,
+              "AP50_95": 0.1615762155961476,
+              "objects": 85
+            },
+            "bottle": {
+              "AP50": 0.17636725238220125,
+              "AP50_95": 0.07400937733260708,
+              "objects": 42
+            }
+          }
+        }
+      },
+      "after": {
+        "operating": {
+          "confidence_threshold": 0.6,
+          "minimum_box_iou": 0.5,
+          "matching": "Confidence-descending greedy one-to-one, exact object class required",
+          "per_class": {
+            "food": {
+              "tp": 25,
+              "fp": 33,
+              "fn": 318,
+              "predictions": 58,
+              "objects": 343,
+              "precision": 0.43103448275862066,
+              "recall": 0.0728862973760933,
+              "f1": 0.12468827930174564
+            },
+            "plate": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 110,
+              "predictions": 0,
+              "objects": 110,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "utensil": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 99,
+              "predictions": 3,
+              "objects": 101,
+              "precision": 0.6666666666666666,
+              "recall": 0.019801980198019802,
+              "f1": 0.038461538461538464
+            },
+            "hinged_container": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "predictions": 0,
+              "objects": 2,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "drink_carton": {
+              "tp": 13,
+              "fp": 3,
+              "fn": 81,
+              "predictions": 16,
+              "objects": 94,
+              "precision": 0.8125,
+              "recall": 0.13829787234042554,
+              "f1": 0.23636363636363636
+            },
+            "wrapper": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 85,
+              "predictions": 0,
+              "objects": 85,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "bottle": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 42,
+              "predictions": 2,
+              "objects": 42,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "micro": {
+            "tp": 40,
+            "fp": 39,
+            "fn": 737,
+            "predictions": 79,
+            "objects": 777,
+            "precision": 0.5063291139240507,
+            "recall": 0.05148005148005148,
+            "f1": 0.09345794392523364
+          },
+          "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+        },
+        "ap_at_occupancy_floor": {
+          "AP50": 0.05842746274683107,
+          "AP50_95": 0.027953054166165014,
+          "images": 186,
+          "per_class": {
+            "food": {
+              "AP50": 0.1168124389850538,
+              "AP50_95": 0.06331124809064706,
+              "objects": 343
+            },
+            "plate": {
+              "AP50": 0.005,
+              "AP50_95": 0.004,
+              "objects": 110
+            },
+            "utensil": {
+              "AP50": 0.14105680559035727,
+              "AP50_95": 0.05352079336772916,
+              "objects": 101
+            },
+            "hinged_container": {
+              "AP50": 0.0,
+              "AP50_95": 0.0,
+              "objects": 2
+            },
+            "drink_carton": {
+              "AP50": 0.1411229946524064,
+              "AP50_95": 0.07283933770477888,
+              "objects": 94
+            },
+            "wrapper": {
+              "AP50": 0.0,
+              "AP50_95": 0.0,
+              "objects": 85
+            },
+            "bottle": {
+              "AP50": 0.005,
+              "AP50_95": 0.002,
+              "objects": 42
+            }
+          }
+        }
+      }
+    },
+    "downsample": {
+      "before": {
+        "operating": {
+          "confidence_threshold": 0.6,
+          "minimum_box_iou": 0.5,
+          "matching": "Confidence-descending greedy one-to-one, exact object class required",
+          "per_class": {
+            "food": {
+              "tp": 278,
+              "fp": 3,
+              "fn": 65,
+              "predictions": 281,
+              "objects": 343,
+              "precision": 0.9893238434163701,
+              "recall": 0.8104956268221575,
+              "f1": 0.8910256410256411
+            },
+            "plate": {
+              "tp": 10,
+              "fp": 2,
+              "fn": 100,
+              "predictions": 12,
+              "objects": 110,
+              "precision": 0.8333333333333334,
+              "recall": 0.09090909090909091,
+              "f1": 0.16393442622950818
+            },
+            "utensil": {
+              "tp": 7,
+              "fp": 0,
+              "fn": 94,
+              "predictions": 7,
+              "objects": 101,
+              "precision": 1.0,
+              "recall": 0.06930693069306931,
+              "f1": 0.12962962962962962
+            },
+            "hinged_container": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predictions": 2,
+              "objects": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "drink_carton": {
+              "tp": 80,
+              "fp": 6,
+              "fn": 14,
+              "predictions": 86,
+              "objects": 94,
+              "precision": 0.9302325581395349,
+              "recall": 0.851063829787234,
+              "f1": 0.8888888888888888
+            },
+            "wrapper": {
+              "tp": 18,
+              "fp": 1,
+              "fn": 67,
+              "predictions": 19,
+              "objects": 85,
+              "precision": 0.9473684210526315,
+              "recall": 0.21176470588235294,
+              "f1": 0.34615384615384615
+            },
+            "bottle": {
+              "tp": 13,
+              "fp": 7,
+              "fn": 29,
+              "predictions": 20,
+              "objects": 42,
+              "precision": 0.65,
+              "recall": 0.30952380952380953,
+              "f1": 0.41935483870967744
+            }
+          },
+          "micro": {
+            "tp": 408,
+            "fp": 19,
+            "fn": 369,
+            "predictions": 427,
+            "objects": 777,
+            "precision": 0.955503512880562,
+            "recall": 0.525096525096525,
+            "f1": 0.6777408637873754
+          },
+          "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+        },
+        "ap_at_occupancy_floor": {
+          "AP50": 0.6343242550656863,
+          "AP50_95": 0.40504003426513335,
+          "images": 186,
+          "per_class": {
+            "food": {
+              "AP50": 0.8724733168690663,
+              "AP50_95": 0.48444291913267695,
+              "objects": 343
+            },
+            "plate": {
+              "AP50": 0.5956104415554848,
+              "AP50_95": 0.38819724928299965,
+              "objects": 110
+            },
+            "utensil": {
+              "AP50": 0.2464547606227846,
+              "AP50_95": 0.11135350630393873,
+              "objects": 101
+            },
+            "hinged_container": {
+              "AP50": 0.995,
+              "AP50_95": 0.945,
+              "objects": 2
+            },
+            "drink_carton": {
+              "AP50": 0.8986743124448013,
+              "AP50_95": 0.5226811489306626,
+              "objects": 94
+            },
+            "wrapper": {
+              "AP50": 0.5539718859349243,
+              "AP50_95": 0.256356694951952,
+              "objects": 85
+            },
+            "bottle": {
+              "AP50": 0.27808506803274247,
+              "AP50_95": 0.12724872125370373,
+              "objects": 42
+            }
+          }
+        }
+      },
+      "after": {
+        "operating": {
+          "confidence_threshold": 0.6,
+          "minimum_box_iou": 0.5,
+          "matching": "Confidence-descending greedy one-to-one, exact object class required",
+          "per_class": {
+            "food": {
+              "tp": 85,
+              "fp": 33,
+              "fn": 258,
+              "predictions": 118,
+              "objects": 343,
+              "precision": 0.7203389830508474,
+              "recall": 0.2478134110787172,
+              "f1": 0.368763557483731
+            },
+            "plate": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 109,
+              "predictions": 1,
+              "objects": 110,
+              "precision": 1.0,
+              "recall": 0.00909090909090909,
+              "f1": 0.018018018018018018
+            },
+            "utensil": {
+              "tp": 7,
+              "fp": 3,
+              "fn": 94,
+              "predictions": 10,
+              "objects": 101,
+              "precision": 0.7,
+              "recall": 0.06930693069306931,
+              "f1": 0.12612612612612611
+            },
+            "hinged_container": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "predictions": 0,
+              "objects": 2,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "drink_carton": {
+              "tp": 17,
+              "fp": 3,
+              "fn": 77,
+              "predictions": 20,
+              "objects": 94,
+              "precision": 0.85,
+              "recall": 0.18085106382978725,
+              "f1": 0.2982456140350877
+            },
+            "wrapper": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 85,
+              "predictions": 0,
+              "objects": 85,
+              "precision": null,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "bottle": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 39,
+              "predictions": 4,
+              "objects": 42,
+              "precision": 0.75,
+              "recall": 0.07142857142857142,
+              "f1": 0.13043478260869565
+            }
+          },
+          "micro": {
+            "tp": 113,
+            "fp": 40,
+            "fn": 664,
+            "predictions": 153,
+            "objects": 777,
+            "precision": 0.738562091503268,
+            "recall": 0.14543114543114544,
+            "f1": 0.24301075268817204
+          },
+          "limitation": "Object recognition only; object labels do not establish disposal eligibility."
+        },
+        "ap_at_occupancy_floor": {
+          "AP50": 0.12638706318658752,
+          "AP50_95": 0.06178543030365973,
+          "images": 186,
+          "per_class": {
+            "food": {
+              "AP50": 0.37846311760196527,
+              "AP50_95": 0.22132850728564485,
+              "objects": 343
+            },
+            "plate": {
+              "AP50": 0.051666666666666666,
+              "AP50_95": 0.021933333333333332,
+              "objects": 110
+            },
+            "utensil": {
+              "AP50": 0.16687935721386674,
+              "AP50_95": 0.0645831805345935,
+              "objects": 101
+            },
+            "hinged_container": {
+              "AP50": 0.0,
+              "AP50_95": 0.0,
+              "objects": 2
+            },
+            "drink_carton": {
+              "AP50": 0.2011093917327051,
+              "AP50_95": 0.09853935460841008,
+              "objects": 94
+            },
+            "wrapper": {
+              "AP50": 0.0,
+              "AP50_95": 0.0,
+              "objects": 85
+            },
+            "bottle": {
+              "AP50": 0.0865909090909091,
+              "AP50_95": 0.02611363636363636,
+              "objects": 42
+            }
+          }
+        }
+      }
+    }
+  },
+  "checks": {
+    "clean": {
+      "recall_delta": -0.17760617760617758,
+      "precision_delta": -0.06759705017940532,
+      "accept": false
+    },
+    "gaussian": {
+      "recall_delta": -0.305019305019305,
+      "precision_delta": -0.4358477568242487,
+      "accept": false
+    },
+    "downsample": {
+      "recall_delta": -0.3796653796653796,
+      "precision_delta": -0.216941421377294,
+      "accept": false
+    },
+    "clean_class_retention": false
+  },
+  "accept": false,
+  "seconds": 111.15807829098776,
+  "seconds_per_image": 0.19920802561108916,
+  "parent_sha256": "19e1294484efe9bbabbc71866ccd57f59942899cc385937dc7aeed55fc373795",
+  "protocol_sha256": "bba1429c77922ca7cc373234ea8da482e52a90d895a3efb14b1a0f8e06b9e0bc",
+  "ap_input_confidence_floor": 0.15,
+  "real_camera_certified": false
+}

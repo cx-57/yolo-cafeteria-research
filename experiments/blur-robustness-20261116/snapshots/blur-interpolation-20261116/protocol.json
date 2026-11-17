@@ -1,0 +1,27 @@
+{
+  "alpha": 0.5,
+  "rationale": "Blur candidate gains recall but loses precision. Fixed equal interpolation toward unchanged parent may retain some blur adaptation while limiting drift. Apply same blend to matched clean control; no alpha sweep.",
+  "development_origin_sha256": "fc7c791ff4965c500a7e6618e9304c24a0161737a513e2df6b5b39bb3404b66b",
+  "confirmation_opened": false,
+  "training": false,
+  "parent": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/weights/best.pt",
+  "source_proof": {
+    "parent": {
+      "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/weights/best.pt",
+      "sha256": "19e1294484efe9bbabbc71866ccd57f59942899cc385937dc7aeed55fc373795",
+      "recipe_sha256": null
+    },
+    "control": {
+      "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/blur-robustness-control-20261116/weights/last.pt",
+      "sha256": "6bde3f55c93044a32e432aeaeafe89f13832ef264675beb48a3786b3e2383e2d",
+      "recipe_sha256": "0856906aea7f105e5cd5d9203383785587e46a9a40f1e942d0be4970e23113cc"
+    },
+    "candidate": {
+      "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/blur-robustness-candidate-20261116/weights/last.pt",
+      "sha256": "048552687e1bb53df19e0952afe8b7354895d3139f78498c4e4ed5925bdee2b0",
+      "recipe_sha256": "988744144bb65fc57c6e8fbb2292e267c41b726555dde3924185f4f446780a4d"
+    }
+  },
+  "gates": "Identical original aggregate/AP gates plus additive per-class operating retention; no relaxation.",
+  "automatic_promotion": false
+}

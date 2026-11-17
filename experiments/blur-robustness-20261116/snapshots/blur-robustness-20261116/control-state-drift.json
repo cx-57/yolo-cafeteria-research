@@ -1,0 +1,26 @@
+{
+  "scope": "Read-only frozen-layer state drift audit; buffer drift does not establish causation",
+  "comparison": "parent vs matched clean control",
+  "frozen_first_10_layers": {
+    "running_mean": {
+      "tensors": 33,
+      "changed": 0,
+      "max_absolute_delta": 0.0
+    },
+    "running_var": {
+      "tensors": 33,
+      "changed": 0,
+      "max_absolute_delta": 0.0
+    },
+    "weight": {
+      "tensors": 66,
+      "changed": 0,
+      "max_absolute_delta": 0.0
+    },
+    "bias": {
+      "tensors": 33,
+      "changed": 0,
+      "max_absolute_delta": 0.0
+    }
+  }
+}

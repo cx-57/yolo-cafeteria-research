@@ -1,0 +1,5 @@
+{
+  "timing": "Before first matched checkpoint comparison and before any confirmation inference",
+  "requirement": "For every class and every condition, fixed-.60 recall and precision may not decline more than .02 absolute vs parent or matched control. Undefined baseline precision imposes no precision gate; undefined candidate precision fails when baseline precision exists. Existing aggregate and clean AP gates remain mandatory.",
+  "reason": "Reject minority-class operating regressions that aggregate or ranking-based AP can hide."
+}

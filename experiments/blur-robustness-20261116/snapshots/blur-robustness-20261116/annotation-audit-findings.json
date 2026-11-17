@@ -1,0 +1,12 @@
+{
+  "observations": [
+    "All14 empty-label validation images inspected, not just false positives. Two definite drink-carton positives (Tropicana and Vfresh) have zero labels. Pureoom cat carrier mockup is correctly not a drink carton; do not blanket-correct tetra_pak source.",
+    "School empty-label images include visible ketchup packet(s) and food residue; taxonomy/completeness require review, not automatic additions.",
+    "Other missing-label candidates from fixed-model FP sheet: multiple bottles, sealed food packages and cup; no corrections have been made.",
+    "Original248 test partition has historical published evaluation in docs/research-paper.md and docs/sorting-evaluation.md. It is unopened for CURRENT trials, not globally unseen."
+  ],
+  "consequence": "Preserve original failures and scores. Do not silently relabel only model errors or claim statistically independent new-photo generalization from historical test cohort. A fully audited benchmark or fresh source-blinded cohort is needed.",
+  "labels_changed": false,
+  "test_inference_current_experiment": false,
+  "automatic_promotion": false
+}

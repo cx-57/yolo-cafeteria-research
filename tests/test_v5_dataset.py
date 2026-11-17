@@ -43,6 +43,12 @@ def archive_fixture(path, extra=None, corrupt=False):
     return rows
 
 
+def distinct_features(count):
+    return [dict(phash=int(hashlib.sha256(f'photo-{i}'.encode()).hexdigest()[:16], 16),
+                 dhash=int(hashlib.sha256(f'photo-{i}'.encode()).hexdigest()[16:32], 16),
+                 aspect=1.0) for i in range(count)]
+
+
 class DatasetTests(unittest.TestCase):
     def setUp(self):
         self.assertIsNotNone(v, 'six-class preparation module is missing')
@@ -121,8 +127,7 @@ class DatasetTests(unittest.TestCase):
         rows[2]['meal_id'] = rows[3]['meal_id'] = 'meal-a'
         rows[0]['split'] = 'val'
         rows[2]['split'] = 'test'
-        features = [dict(phash=(1 << (i + 4)) - 1, dhash=1 << i, aspect=2 ** i)
-                    for i in range(40)]
+        features = distinct_features(40)
         splits, groups = v.assign_splits(rows, features)
         self.assertEqual(splits[0], splits[1])
         self.assertEqual(splits[2], splits[3])
@@ -131,6 +136,19 @@ class DatasetTests(unittest.TestCase):
         self.assertEqual(len(set(groups)), 38)
         self.assertEqual(splits.count('val'), 4)
         self.assertEqual(splits.count('test'), 4)
+
+    def test_stretched_copy_stays_with_held_out_original(self):
+        rows = [dict(split='train', dataset='fixture', image_sha256=str(i),
+                     counts={c: 1 for c in range(6)}) for i in range(40)]
+        rows[1]['split'] = 'val'
+        features = distinct_features(40)
+        features[0] = dict(features[1], aspect=.75,
+                           dhash=features[1]['dhash'] ^ 3)
+        splits, groups = v.assign_splits(rows, features)
+        self.assertEqual(groups[0], groups[1])
+        self.assertEqual(splits[0], splits[1])
+        self.assertNotEqual(splits[0], 'train')
+        self.assertEqual(len(set(groups)), 39)
 
     def test_missing_support_fails(self):
         rows = [dict(split='train', dataset='x', image_sha256=str(i), counts={0: 1})

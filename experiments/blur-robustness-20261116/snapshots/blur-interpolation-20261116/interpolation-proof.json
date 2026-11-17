@@ -1,0 +1,12 @@
+{
+  "control": {
+    "source_checkpoint_sha256": "6bde3f55c93044a32e432aeaeafe89f13832ef264675beb48a3786b3e2383e2d",
+    "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/runs/sorter/blur-interpolation-20261116/weights/control.pt",
+    "sha256": "e80d2d8fdfe4ef030ba3c6f0c273ed6fd38eb9d0cdff37d9d6d3fb239bd9bede"
+  },
+  "candidate": {
+    "source_checkpoint_sha256": "048552687e1bb53df19e0952afe8b7354895d3139f78498c4e4ed5925bdee2b0",
+    "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research/runs/sorter/blur-interpolation-20261116/weights/candidate.pt",
+    "sha256": "4db9a665da48faeb86a69d00d591fc96215786bdccd3b98644dc1b65cfd579be"
+  }
+}

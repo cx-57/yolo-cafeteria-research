@@ -1,0 +1,15 @@
+{
+  "parent": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/weights/best.pt",
+  "parent_sha256": "19e1294484efe9bbabbc71866ccd57f59942899cc385937dc7aeed55fc373795",
+  "control_data": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/resolved-data.yaml",
+  "candidate_data": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/blur-training-data-20261116/data.yaml",
+  "epochs": 2,
+  "selected_checkpoint": "last.pt at matched two-epoch cap",
+  "seed": 42,
+  "confidence": 0.6,
+  "iou": 0.5,
+  "benchmark_sha256": "09368509968878e7290491f48a94b97d7271bacb38fda3ae970391cacab02b18",
+  "acceptance": "Blur-condition recall gain>=.02 absolute; precision loss<=.02. Clean precision and recall loss<=.02. Report every class and reject material class regressions. Synthetic development score alone does not certify phone-photo robustness.",
+  "user_screenshots_training": false,
+  "automatic_promotion": false
+}

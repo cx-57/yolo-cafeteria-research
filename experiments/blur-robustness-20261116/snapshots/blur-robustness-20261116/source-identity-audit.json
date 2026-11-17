@@ -1,0 +1,7 @@
+{
+  "validation_images": 186,
+  "training_images": 2372,
+  "same_named_source_overlaps": [],
+  "validation_source_groups": 178,
+  "scope": "Exact bytes checked by inspect_dataset; normalized source identity strips snapshot and Roboflow augmentation suffix. This does not certify photographer/capture-session independence."
+}

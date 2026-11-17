@@ -1,0 +1,39 @@
+augmentation:
+  copy_paste: 0.0
+  cutmix: 0.0
+  degrees: 15.0
+  fliplr: 0.5
+  flipud: 0.0
+  hsv_h: 0.015
+  hsv_s: 0.25
+  hsv_v: 0.2
+  mixup: 0.0
+  mosaic: 0.0
+  perspective: 0.0003
+  scale: 0.15
+  shear: 2.0
+  translate: 0.03
+names:
+- food
+- plate
+- utensil
+- hinged_container
+- drink_carton
+- wrapper
+- bottle
+training:
+  batch: 1
+  cache: false
+  epochs: 2
+  freeze: 10
+  imgsz: 640
+  lr0: 5.0e-05
+  lrf: 0.05
+  nbs: 16
+  optimizer: AdamW
+  patience: 2
+  plots: false
+  seed: 42
+  warmup_bias_lr: 0.0
+  warmup_epochs: 1
+  workers: 0

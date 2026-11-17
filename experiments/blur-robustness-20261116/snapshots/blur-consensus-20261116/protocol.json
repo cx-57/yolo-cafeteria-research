@@ -1,0 +1,25 @@
+{
+  "hypothesis": "Conservative agreement-based score fusion: preserve original detections/boxes, and only boost a borderline original detection when trained model agrees on class and IoU>=.50 with confidence>=.60. Fused confidence max(parent,sqrt(parent*candidate)); acceptance remains .60. Same transformation for control and candidate. No parameter search.",
+  "source_predictions": {
+    "parent": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/runs/sorter/blur-robustness-20261116/evaluation-parent/predictions.json",
+      "sha256": "18ea08770a952f57b0ef138e0f4efdd03b6c23efbbc74355460d164881c999fe"
+    },
+    "control": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/runs/sorter/blur-robustness-20261116/evaluation-control/predictions.json",
+      "sha256": "4c37894a9b9d42aae7c05720f955b5b8efdf85c528e629b778a70cfffe89f61a"
+    },
+    "candidate": {
+      "path": "/Users/Charles1/Desktop/yolo-cafeteria-research/runs/sorter/blur-robustness-20261116/evaluation-candidate/predictions.json",
+      "sha256": "319ca87c4bb9a99f04a4b623f411257f2edfdd3e36743e4135e01c030dd0a3c2"
+    }
+  },
+  "benchmark_sha256": "09368509968878e7290491f48a94b97d7271bacb38fda3ae970391cacab02b18",
+  "config_sha256": "50c4df4170551bcf8f82dabae601d691c396cabeac9bcf5ec1c2c4ee9c3d7285",
+  "development_comparison_sha256": "fc7c791ff4965c500a7e6618e9304c24a0161737a513e2df6b5b39bb3404b66b",
+  "class_amendment_sha256": "ce220f73bd919cb6530e9f953e731a167df38a7609f97784d44256f841086aed",
+  "fixed_confidence": 0.6,
+  "matching_iou": 0.5,
+  "confirmation_opened": false,
+  "automatic_promotion": false
+}

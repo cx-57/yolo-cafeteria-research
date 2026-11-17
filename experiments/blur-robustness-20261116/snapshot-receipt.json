@@ -1,0 +1,268 @@
+[
+  {
+    "source": "runs/sorter/blur-robustness-20261116/PLAN.md",
+    "snapshot": "snapshots/blur-robustness-20261116/PLAN.md",
+    "sha256": "a7a8670dcd03c5692260284977d88879411602686748de8754865e2719743e43"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/WORK_LOG.md",
+    "snapshot": "snapshots/blur-robustness-20261116/WORK_LOG.md",
+    "sha256": "3f5e5940ffdc23d25ef912ac58783877ae9f03a43ab92e61b89c31677d2dadeb"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/annotation-audit-findings.json",
+    "snapshot": "snapshots/blur-robustness-20261116/annotation-audit-findings.json",
+    "sha256": "6f0bddc27f125b80487195fd4bd651922798430ffe3c18534496744e0511cb92"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/annotation-reconciliation.json",
+    "snapshot": "snapshots/blur-robustness-20261116/annotation-reconciliation.json",
+    "sha256": "c033317b79f2d951adbe95962461d56b057c9b0924e084ef32d94b8a083a375d"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/audit_perceptual.py",
+    "snapshot": "snapshots/blur-robustness-20261116/audit_perceptual.py",
+    "sha256": "6dadc90b539ca7421fb913a4b6bd53b690103198714ce6be69d945ef835a7885"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/auto_compare.py",
+    "snapshot": "snapshots/blur-robustness-20261116/auto_compare.py",
+    "sha256": "405c88dcb4952e08a472ddb49649ece40fa7d2064466687f64e55f46d7ff1a6c"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/benchmark.py",
+    "snapshot": "snapshots/blur-robustness-20261116/benchmark.py",
+    "sha256": "ec7b3d0a9f666f3e9ef5b4eeee1cafcc40d2ac176e3f4bad03cca1c24e8a68b3"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/candidate.yaml",
+    "snapshot": "snapshots/blur-robustness-20261116/candidate.yaml",
+    "sha256": "5fcbd03973864d71f5a24166a5278291d56e7d446e416db6449515a7630bae39"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/check_screenshots.py",
+    "snapshot": "snapshots/blur-robustness-20261116/check_screenshots.py",
+    "sha256": "474eb90fbf5a8baed6551f045ea005cc49594caf30c144bbe33db8470a2e9862"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/class-retention-amendment.json",
+    "snapshot": "snapshots/blur-robustness-20261116/class-retention-amendment.json",
+    "sha256": "ce220f73bd919cb6530e9f953e731a167df38a7609f97784d44256f841086aed"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/compare_trials.py",
+    "snapshot": "snapshots/blur-robustness-20261116/compare_trials.py",
+    "sha256": "c10df28512cae83f7887275660559e9af3040240b146a9b6cd8e64c885d6fd81"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/comparison.json",
+    "snapshot": "snapshots/blur-robustness-20261116/comparison.json",
+    "sha256": "fc7c791ff4965c500a7e6618e9304c24a0161737a513e2df6b5b39bb3404b66b"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/confirm_selected.py",
+    "snapshot": "snapshots/blur-robustness-20261116/confirm_selected.py",
+    "sha256": "f43809249512daa0316a68ceba6edecae3219ce8e6b6777a35df7b98f3de9488"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/consensus_trial.py",
+    "snapshot": "snapshots/blur-robustness-20261116/consensus_trial.py",
+    "sha256": "cbedf2e9299439a375dcc97cc9769134a51ac32cb1bf6f27fbee162d52c1e559"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/control-state-drift.json",
+    "snapshot": "snapshots/blur-robustness-20261116/control-state-drift.json",
+    "sha256": "d971be16967beedf5d5eb192f107987fa3f956dae7c2dca6e308a638ddb9bb85"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/control.yaml",
+    "snapshot": "snapshots/blur-robustness-20261116/control.yaml",
+    "sha256": "5fcbd03973864d71f5a24166a5278291d56e7d446e416db6449515a7630bae39"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/diagnose_precision.py",
+    "snapshot": "snapshots/blur-robustness-20261116/diagnose_precision.py",
+    "sha256": "3a500f99661b30560613cdb3c563a239b7028a8cf04f6c5ad95cc940f5ced49d"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/inference-config.json",
+    "snapshot": "snapshots/blur-robustness-20261116/inference-config.json",
+    "sha256": "50c4df4170551bcf8f82dabae601d691c396cabeac9bcf5ec1c2c4ee9c3d7285"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/perceptual-audit.json",
+    "snapshot": "snapshots/blur-robustness-20261116/perceptual-audit.json",
+    "sha256": "70655c6d7dfab385ed3061620591e8a1612e8a7628f88aa055e32a9cbe9ac631"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/prepare_benchmark.py",
+    "snapshot": "snapshots/blur-robustness-20261116/prepare_benchmark.py",
+    "sha256": "8be89e4e767eddbc66f7fe761476e50de126605ab24fc787538e7268f3223e73"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/prepare_confirmation.py",
+    "snapshot": "snapshots/blur-robustness-20261116/prepare_confirmation.py",
+    "sha256": "98bc93f267158a28f86379c616dc7342d236e6a8688eef9d04a6f84c88cb2150"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/prepare_interpolation.py",
+    "snapshot": "snapshots/blur-robustness-20261116/prepare_interpolation.py",
+    "sha256": "389d67bce65a7a30188daaf3c5a86d06411d5a1a0639b64ff0ab427cdaf0b2e2"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/prepare_trial.py",
+    "snapshot": "snapshots/blur-robustness-20261116/prepare_trial.py",
+    "sha256": "a8e233c9c6493832b0b9d23465f73e5daf686f0f811111a44dcf2383371c33d2"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/resolution_trial.py",
+    "snapshot": "snapshots/blur-robustness-20261116/resolution_trial.py",
+    "sha256": "ede0385a3409bd4bbe9e0cafbf609507fc7c39f65c66ae073b2d5d0242b67afb"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/retention.py",
+    "snapshot": "snapshots/blur-robustness-20261116/retention.py",
+    "sha256": "e602f23651f88ad1b34d5a955f9c0f2e9edb106a2c59f900e8ad3aa34085e35e",
+    "source_sha256": "5edca185e3b9995074bf26da3008748513d9bc2d4278dc4ffa374a24f849ab2d",
+    "normalization": "Trailing blank lines removed in archived copy only."
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/run_trials.py",
+    "snapshot": "snapshots/blur-robustness-20261116/run_trials.py",
+    "sha256": "234d90c0cb95b456a0d75ccd3ec5f4795acaedca1dbea04c6e62c9667dfb3271"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/source-identity-audit.json",
+    "snapshot": "snapshots/blur-robustness-20261116/source-identity-audit.json",
+    "sha256": "ea019e58c64ee8f1d78b3965e4b6e549f439db64d172a5bc231e0e15180782f2"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/trial-protocol.json",
+    "snapshot": "snapshots/blur-robustness-20261116/trial-protocol.json",
+    "sha256": "e9d25f4db45d808378c42bccc63f6aa06dcce903beb7f061e04409c559749c62"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/baseline/results.json",
+    "snapshot": "snapshots/blur-robustness-20261116/baseline/results.json",
+    "sha256": "c4a634a8af46be3a37dc609f961edc78ec380cb641733a4bad78ae2713f2398b"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/resolution960/results.json",
+    "snapshot": "snapshots/blur-robustness-20261116/resolution960/results.json",
+    "sha256": "1db0823f7fe8e2f1868f5f8efd514c4dc5c12af120f857606881c584f8de6a28"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/class-retention-amendment.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/class-retention-amendment.json",
+    "sha256": "ce220f73bd919cb6530e9f953e731a167df38a7609f97784d44256f841086aed"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/compare_trials.py",
+    "snapshot": "snapshots/blur-interpolation-20261116/compare_trials.py",
+    "sha256": "058e78e81478a341bbe5d7ea2aa4c74bc0fa61f897a933ea54ef260ef0eb88ae"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/comparison.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/comparison.json",
+    "sha256": "9f66f3d240dc1995361f2b1d1c60735b5bba023ac7ee838f33fe51098a082f6d"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/identity-audit.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/identity-audit.json",
+    "sha256": "15400339feec772e10f1b60407ea80a0daf8d4a01c9a09ddae776a16ff61dd61"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/inference-config.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/inference-config.json",
+    "sha256": "50c4df4170551bcf8f82dabae601d691c396cabeac9bcf5ec1c2c4ee9c3d7285"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/interpolation-proof.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/interpolation-proof.json",
+    "sha256": "d779f69dbe67e008e80bc39b60a3c935111f6c8c8070503189bc913598a2a9fb"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/protocol.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/protocol.json",
+    "sha256": "868b439a776acb0647964fc9dd1db09fde342a357f90cafc73e3ce468463cecd"
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/retention.py",
+    "snapshot": "snapshots/blur-interpolation-20261116/retention.py",
+    "sha256": "e602f23651f88ad1b34d5a955f9c0f2e9edb106a2c59f900e8ad3aa34085e35e",
+    "source_sha256": "5edca185e3b9995074bf26da3008748513d9bc2d4278dc4ffa374a24f849ab2d",
+    "normalization": "Trailing blank lines removed in archived copy only."
+  },
+  {
+    "source": "runs/sorter/blur-interpolation-20261116/trial-protocol.json",
+    "snapshot": "snapshots/blur-interpolation-20261116/trial-protocol.json",
+    "sha256": "e9d25f4db45d808378c42bccc63f6aa06dcce903beb7f061e04409c559749c62"
+  },
+  {
+    "source": "runs/sorter/blur-consensus-20261116/comparison.json",
+    "snapshot": "snapshots/blur-consensus-20261116/comparison.json",
+    "sha256": "05175a589550234ca308c799a0e7535ce8cb0f09d0d6c1408f6107f08ed016f4"
+  },
+  {
+    "source": "runs/sorter/blur-consensus-20261116/protocol.json",
+    "snapshot": "snapshots/blur-consensus-20261116/protocol.json",
+    "sha256": "c4f7d53e42e342bf44488c9233093cce92e4b50e9d06b9476de72756f52f1448"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/PLAN.md",
+    "snapshot": "snapshots/blur-neck-20261116/PLAN.md",
+    "sha256": "5cb4d7c7af07a08fe8cc4773332f98b1329a8810e319ae995a93ae0970da486f"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/auto_compare.py",
+    "snapshot": "snapshots/blur-neck-20261116/auto_compare.py",
+    "sha256": "b31bdca7870997bcd98d31ae61c26c1f06da8342b206466e579f63d7a96330ab"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/candidate.yaml",
+    "snapshot": "snapshots/blur-neck-20261116/candidate.yaml",
+    "sha256": "80bf123dbfeba725364f2182d3e2a9c39850e990190a54ee2143056ddf96f497"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/class-retention-amendment.json",
+    "snapshot": "snapshots/blur-neck-20261116/class-retention-amendment.json",
+    "sha256": "ce220f73bd919cb6530e9f953e731a167df38a7609f97784d44256f841086aed"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/compare_trials.py",
+    "snapshot": "snapshots/blur-neck-20261116/compare_trials.py",
+    "sha256": "4e2123f516b1af7c73a69f9832b24aba9728dbe9823b53676a5c1de08f8cb0f9"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/control.yaml",
+    "snapshot": "snapshots/blur-neck-20261116/control.yaml",
+    "sha256": "80bf123dbfeba725364f2182d3e2a9c39850e990190a54ee2143056ddf96f497"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/inference-config.json",
+    "snapshot": "snapshots/blur-neck-20261116/inference-config.json",
+    "sha256": "50c4df4170551bcf8f82dabae601d691c396cabeac9bcf5ec1c2c4ee9c3d7285"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/retention.py",
+    "snapshot": "snapshots/blur-neck-20261116/retention.py",
+    "sha256": "e602f23651f88ad1b34d5a955f9c0f2e9edb106a2c59f900e8ad3aa34085e35e",
+    "source_sha256": "5edca185e3b9995074bf26da3008748513d9bc2d4278dc4ffa374a24f849ab2d",
+    "normalization": "Trailing blank lines removed in archived copy only."
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/run_trials.py",
+    "snapshot": "snapshots/blur-neck-20261116/run_trials.py",
+    "sha256": "6ea355fd17b75420be8fdfa31b59d4f0a7cd2dc0dc8b3c4262648f0bed68135d"
+  },
+  {
+    "source": "runs/sorter/blur-neck-20261116/trial-protocol.json",
+    "snapshot": "snapshots/blur-neck-20261116/trial-protocol.json",
+    "sha256": "3bed39475a15137d6d1cf6c64614ef9a66a987c83d982113d70991060118f0d4"
+  },
+  {
+    "source": "runs/sorter/blur-robustness-20261116/screenshot-diagnostics/results.json",
+    "snapshot": "snapshots/blur-robustness-20261116/screenshot-diagnostics/results.json",
+    "sha256": "a225ebf862834d549d9a9782a38f12a5bb07cc25e3936dc8b50a181943c70ac4"
+  }
+]

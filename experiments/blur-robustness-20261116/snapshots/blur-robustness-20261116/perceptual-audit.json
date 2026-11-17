@@ -1,0 +1,6 @@
+{
+  "matches": [],
+  "train_images": 2372,
+  "val_images": 186,
+  "policy": "Aspect-independent exact/pixel or pHash<=4 and dHash<=6; source-name identity separately checked. Crops/session independence remain uncertain."
+}

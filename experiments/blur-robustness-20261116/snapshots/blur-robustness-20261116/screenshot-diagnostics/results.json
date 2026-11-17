@@ -1,0 +1,363 @@
+{
+  "development_accepted": false,
+  "scope": "Diagnostic only. Correlated screenshots are not independent photo samples; unknown 8.40.49 ground truth remains unknown. No box annotations, no detection-accuracy estimate.",
+  "records": [
+    {
+      "path": "/Users/Charles1/Desktop/Screenshot 2026-11-16 at 8.30.37\u202fPM.png",
+      "sha256": "5bdd24e166a43ba5e11f60959240123d6ced2d9785b5be3b464830f35d86bd16",
+      "time": "8.30.37",
+      "description": "food-like bread",
+      "ground_truth_boxes": null
+    },
+    {
+      "path": "/Users/Charles1/Desktop/Screenshot 2026-11-16 at 8.36.52\u202fPM.png",
+      "sha256": "a61aa503c56faf09c31f9b6232d00e1afef2daf7ea09c97283bdabbd77844e22",
+      "time": "8.36.52",
+      "description": "wrapper (explicit user correction)",
+      "ground_truth_boxes": null
+    },
+    {
+      "path": "/Users/Charles1/Desktop/Screenshot 2026-11-16 at 8.38.51\u202fPM.png",
+      "sha256": "58bef813ecc83a37bd4ce831384668abce393b3ea4c822a873cd1a988d54a2a2",
+      "time": "8.38.51",
+      "description": "wrapper (same objects, another view)",
+      "ground_truth_boxes": null
+    },
+    {
+      "path": "/Users/Charles1/Desktop/Screenshot 2026-11-16 at 8.40.49\u202fPM.png",
+      "sha256": "835ce15819ad313d5990ad81e8b38ef997f1b607e93552ca1afa84069d2c4ae8",
+      "time": "8.40.49",
+      "description": null,
+      "ground_truth_boxes": null
+    },
+    {
+      "path": "/Users/Charles1/Desktop/Screenshot 2026-11-16 at 8.39.53\u202fPM.png",
+      "sha256": "8db7a2222cc542734151cef81fa0b0333a2f564e3e79d281fb44ecf5f225aa48",
+      "time": "8.39.53",
+      "description": "food-like bread",
+      "ground_truth_boxes": null
+    }
+  ],
+  "models": {
+    "parent": {
+      "checkpoint": {
+        "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/weights/best.pt",
+        "sha256": "19e1294484efe9bbabbc71866ccd57f59942899cc385937dc7aeed55fc373795",
+        "recipe_sha256": null
+      },
+      "predictions": {
+        "8.30.37": [
+          {
+            "box": [
+              0.1473002859039596,
+              0.16926597652578712,
+              0.6981968454436966,
+              0.6178159785449953
+            ],
+            "confidence": 0.33040285110473633,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": false
+          }
+        ],
+        "8.36.52": [
+          {
+            "box": [
+              0.3345238864037298,
+              0.03629184663295746,
+              0.5267627740675404,
+              0.9424244880676269
+            ],
+            "confidence": 0.6346502900123596,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": true
+          },
+          {
+            "box": [
+              0.5958002299647177,
+              0.052917075157165525,
+              0.9330768806703629,
+              0.8974324226379394
+            ],
+            "confidence": 0.5773117542266846,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.0008319139480590821,
+              0.024216970801353453,
+              0.2850611532888105,
+              0.819821834564209
+            ],
+            "confidence": 0.565365731716156,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.017898774916125883,
+              0.020620287954807283,
+              0.784025406376008,
+              0.9547583580017089
+            ],
+            "confidence": 0.35449084639549255,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          }
+        ],
+        "8.38.51": [
+          {
+            "box": [
+              0.014237748718261719,
+              0.034067787792747474,
+              0.38819755859375,
+              0.9816379143752361
+            ],
+            "confidence": 0.1773112416267395,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": false
+          }
+        ],
+        "8.40.49": [],
+        "8.39.53": [
+          {
+            "box": [
+              0.08354025057819493,
+              0.19461080039419779,
+              0.8452255366098546,
+              0.8425943514195884
+            ],
+            "confidence": 0.9154780507087708,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": true
+          }
+        ]
+      }
+    },
+    "control": {
+      "checkpoint": {
+        "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/blur-robustness-control-20261116/weights/last.pt",
+        "sha256": "6bde3f55c93044a32e432aeaeafe89f13832ef264675beb48a3786b3e2383e2d",
+        "recipe_sha256": "0856906aea7f105e5cd5d9203383785587e46a9a40f1e942d0be4970e23113cc"
+      },
+      "predictions": {
+        "8.30.37": [
+          {
+            "box": [
+              0.1480123530755233,
+              0.1661982830305745,
+              0.701497086990038,
+              0.6119136953712406
+            ],
+            "confidence": 0.25607404112815857,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": false
+          }
+        ],
+        "8.36.52": [
+          {
+            "box": [
+              0.3193796268586189,
+              0.03198993504047394,
+              0.5482675466229838,
+              0.9336029052734375
+            ],
+            "confidence": 0.6077167987823486,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": true
+          },
+          {
+            "box": [
+              0.0005223274230957032,
+              0.0,
+              0.817340836063508,
+              0.9287060737609864
+            ],
+            "confidence": 0.4823896884918213,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.5979659935735887,
+              0.05954340696334839,
+              0.9289133379536291,
+              0.8895970344543457
+            ],
+            "confidence": 0.4372417628765106,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.0004977226257324219,
+              0.02739883363246918,
+              0.28335852838331654,
+              0.8186285018920898
+            ],
+            "confidence": 0.3862237334251404,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          }
+        ],
+        "8.38.51": [
+          {
+            "box": [
+              0.45296845703125,
+              0.0717425908206813,
+              0.533409765625,
+              0.6408351656173291
+            ],
+            "confidence": 0.24415414035320282,
+            "class_id": 6,
+            "class_name": "bottle",
+            "passes_60_percent": false
+          }
+        ],
+        "8.40.49": [],
+        "8.39.53": [
+          {
+            "box": [
+              0.09006673905550672,
+              0.18208621885718368,
+              0.8351930584139227,
+              0.8377987001000381
+            ],
+            "confidence": 0.9066199660301208,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": true
+          }
+        ]
+      }
+    },
+    "candidate": {
+      "checkpoint": {
+        "checkpoint": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/blur-robustness-candidate-20261116/weights/last.pt",
+        "sha256": "048552687e1bb53df19e0952afe8b7354895d3139f78498c4e4ed5925bdee2b0",
+        "recipe_sha256": "988744144bb65fc57c6e8fbb2292e267c41b726555dde3924185f4f446780a4d"
+      },
+      "predictions": {
+        "8.30.37": [
+          {
+            "box": [
+              0.14860811179231648,
+              0.17171334861812734,
+              0.6971830480238971,
+              0.6020332049606438
+            ],
+            "confidence": 0.5680418610572815,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": false
+          }
+        ],
+        "8.36.52": [
+          {
+            "box": [
+              0.0,
+              0.026312336325645447,
+              0.28325882450226814,
+              0.8209697723388671
+            ],
+            "confidence": 0.5982576012611389,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.5993095545614919,
+              0.05465348362922669,
+              0.9309986139112904,
+              0.8956685066223145
+            ],
+            "confidence": 0.5179557204246521,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.3326955881426411,
+              0.03739836812019348,
+              0.5204150390625,
+              0.9372736930847168
+            ],
+            "confidence": 0.428004652261734,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.0010920524597167968,
+              0.0,
+              0.8069014616935484,
+              0.9288989067077636
+            ],
+            "confidence": 0.3982422351837158,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          },
+          {
+            "box": [
+              0.031792403190366685,
+              0.021400249004364012,
+              0.6224558971774193,
+              0.9537744522094727
+            ],
+            "confidence": 0.3218488395214081,
+            "class_id": 4,
+            "class_name": "drink_carton",
+            "passes_60_percent": false
+          }
+        ],
+        "8.38.51": [
+          {
+            "box": [
+              0.456828857421875,
+              0.0711169804691188,
+              0.53310068359375,
+              0.6213017028624197
+            ],
+            "confidence": 0.16022515296936035,
+            "class_id": 6,
+            "class_name": "bottle",
+            "passes_60_percent": false
+          }
+        ],
+        "8.40.49": [],
+        "8.39.53": [
+          {
+            "box": [
+              0.08782272143742008,
+              0.1782625337926353,
+              0.8367618648597347,
+              0.8364600204839939
+            ],
+            "confidence": 0.8933478593826294,
+            "class_id": 0,
+            "class_name": "food",
+            "passes_60_percent": true
+          }
+        ]
+      }
+    }
+  },
+  "confidence": 0.6,
+  "selection_comparison_sha256": "fc7c791ff4965c500a7e6618e9304c24a0161737a513e2df6b5b39bb3404b66b"
+}

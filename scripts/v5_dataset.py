@@ -189,8 +189,9 @@ def assign_splits(rows, features):
     for i in range(n):
         for j in range(i):
             a, b = features[i], features[j]
-            if (abs(a['aspect']-b['aspect']) / max(a['aspect'], b['aspect']) <= .025
-                    and (a['phash'] ^ b['phash']).bit_count() <= 3
+            # Hashes normalize image size. A stretched export of a held-out
+            # photo must stay in its group even when its aspect ratio changes.
+            if ((a['phash'] ^ b['phash']).bit_count() <= 3
                     and (a['dhash'] ^ b['dhash']).bit_count() <= 4):
                 union(i, j)
     grouped = defaultdict(list)

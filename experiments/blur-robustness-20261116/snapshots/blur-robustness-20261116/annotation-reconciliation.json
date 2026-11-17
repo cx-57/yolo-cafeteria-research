@@ -1,0 +1,1124 @@
+{
+  "audit_manifest": "/Users/Charles1/Desktop/yolo-cafeteria-research-assets/artifacts/validation-label-audit-20261030/audited-eligible.json",
+  "matched_sources": 186,
+  "differing_annotations": 0,
+  "records": [
+    {
+      "benchmark": "clean-0000",
+      "source_sha256": "b0979eeb985fa5e1907e67f722a875ad3a449580c949f6cfc97333611ef46b85",
+      "audit_name": "macworx__img_10_jpg.rf.4aa7aaa433154d423bd3bcabee4da707.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0001",
+      "source_sha256": "bdab0480b5c5cccea03efd6ce01ab8be19d97db880be032df98d1d9a9c525f01",
+      "audit_name": "macworx__img_10_jpg.rf.cf5919466d0ef217b4fa5eb41519e811.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0002",
+      "source_sha256": "2395ef91051c9b46ef5badc7e7abf1f2b591ef8912a5185fc4bc7055ead12a09",
+      "audit_name": "plate__train__lvis_000000026676.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0003",
+      "source_sha256": "410f6992ed4a5480b2eccc990f803302fef0f4910bd458f1f9d06299e1a9fe54",
+      "audit_name": "plate__train__lvis_000000097922.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0004",
+      "source_sha256": "2c0fd9315e0b538e5f420bb87648e045f8cdcfee9f5678a74fc6230809648270",
+      "audit_name": "plate__train__lvis_000000127256.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0005",
+      "source_sha256": "c3c4303c2eb4996c2ae0bbc6493ee8d37ab0598e5db7083e90f174c8962a36a6",
+      "audit_name": "plate__train__lvis_000000190177.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0006",
+      "source_sha256": "e11a8ab38796b37c138db54d7a327de297b184f736b0897e3915e35208790467",
+      "audit_name": "plate__train__lvis_000000232663.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0007",
+      "source_sha256": "43d398aa2cb7f5193b502929d7200a6c995d67ffa4ca1948aadb31599bb7a8ac",
+      "audit_name": "plate__train__lvis_000000236626.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0008",
+      "source_sha256": "e71b4b9ecd0ca98e8af74fd4a8bcba69690d4ccb5b67d95e43b6b77882d47f62",
+      "audit_name": "plate__train__lvis_000000249839.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0009",
+      "source_sha256": "3db7bce359b775934035c37cda08ef513b98aac200d0b481ea614a3ff7690a92",
+      "audit_name": "plate__train__lvis_000000310655.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0010",
+      "source_sha256": "add01728fba679dd393bf18c06535524319fb88a3cc0206334bbffa8800ff74a",
+      "audit_name": "plate__train__lvis_000000313155.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0011",
+      "source_sha256": "2296d989343861818962c5970f3cfcb11153831241ed4944c5dbf818fbf91e9f",
+      "audit_name": "plate__train__lvis_000000321390.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0012",
+      "source_sha256": "71489a678ee6f7f925dbc4cc5c8e3bc8d296669e085b28fe75522b385b833594",
+      "audit_name": "plate__train__lvis_000000335722.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0013",
+      "source_sha256": "9ae27238c80537f2792bb1e044c1a40332c82f6fe155aa8a340fc41c6fcf95eb",
+      "audit_name": "plate__train__lvis_000000346262.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0014",
+      "source_sha256": "298de714a7b95a0bd581dbce5a23706ff7e70c8199945bdbfe4d476a8e5eeed1",
+      "audit_name": "plate__train__lvis_000000379820.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0015",
+      "source_sha256": "ddcd06e2ec9a2d2a04288716699efa7a559b5a6c907cdfa86f076d8e685cf8c2",
+      "audit_name": "plate__train__lvis_000000386009.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0016",
+      "source_sha256": "2a24ba0ec76965a3229c0f911615a14654a2574eae407b5b95b64cfbcfe13f39",
+      "audit_name": "plate__train__lvis_000000405214.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0017",
+      "source_sha256": "f30ff10bf5ed406b2159e62d05017190a51da784274ce1cc14242fda92c43ecd",
+      "audit_name": "plate__train__lvis_000000456761.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0018",
+      "source_sha256": "02dcba871aea830f74df0a607c3ddc4e560aaf4e8c1d99e2958956ea2048fc8f",
+      "audit_name": "plate__val__lvis_000000358770.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0019",
+      "source_sha256": "2ccded452ae3585120155e9e2f3b1165ca8c2d1d389650bbae946252167bb0cc",
+      "audit_name": "school__IMG_3957.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0020",
+      "source_sha256": "d544da8a9888cf350a9b9591cdbcc2f9019a78b77a679949c5d49c61b834c8ee",
+      "audit_name": "school__IMG_3965.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0021",
+      "source_sha256": "20281dba25831f8d30bd9e366cb013fbd42d61693d2af3e008b31352afe5cf57",
+      "audit_name": "school__IMG_3966.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0022",
+      "source_sha256": "3829e860f0738b11ef3f1bc854eff2721e016938885715841ef5a76406b9b978",
+      "audit_name": "school__IMG_3976.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0023",
+      "source_sha256": "a041a8b655da7ff8827b7890766634f2c055340c11acdb1925a32bb25637c29a",
+      "audit_name": "school__IMG_3984.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0024",
+      "source_sha256": "378f86794b3ddf0ae2839df3b86570f6885311483cbcf5ca1bd441afc0c20f4f",
+      "audit_name": "school__IMG_3999.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0025",
+      "source_sha256": "637654996b5763149e0d4bc83be8e9fda51b06eedd515d9667e4e139ef701738",
+      "audit_name": "school__IMG_4001.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0026",
+      "source_sha256": "43825d15288836d309b50225afaa9eb61d63179e474d7931d3cceae532c8cc4c",
+      "audit_name": "school_lunch__010363000_jpg.rf.c4b582e924f680b5ac0eaae78d99aded.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0027",
+      "source_sha256": "1d414f5db7680ecb479d7fdf8497cb5b6cc0d90905fc4eff7007bf23bbd2af4a",
+      "audit_name": "school_lunch__011003000_jpg.rf.f09538c21f3a5e802c7ccc6c0407387d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0028",
+      "source_sha256": "74c154dd8f626704f028f82561da62ed2d4abb270cc8c50aca6e1f05a227ac16",
+      "audit_name": "school_lunch__011003001_jpg.rf.5c5b352dd6a7a8a143e6665aa8f9a0f3.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0029",
+      "source_sha256": "910fbe4deffc61ae197f8868a977000a4bdb682c00ac64e1eba26b04d0113c67",
+      "audit_name": "school_lunch__011057000_jpg.rf.fa6fd4d50216ddafdfc885f2af9b9463.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0030",
+      "source_sha256": "ea69693050f16bdd2c377592838a379738a67bb059e1778e1cf2af90bd667254",
+      "audit_name": "school_lunch__020315001_jpg.rf.6a16a7066fdfc7a0aa19aa1a9fa5bc60.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0031",
+      "source_sha256": "d542b193d054c4358b4f9ba0260688e20f72ebe68212f6190425f3ae24748d74",
+      "audit_name": "school_lunch__020415000_jpg.rf.31f4cbb018796a46caff93b7a6a7ecab.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0032",
+      "source_sha256": "e2874be8b60fc8ef1f9fa444c01f72e35b04f62e3cfedcc11feed78ec864ae1f",
+      "audit_name": "school_lunch__020415002_jpg.rf.e3860387f6eb719f24e1960c243aded8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0033",
+      "source_sha256": "3031715c2124e4f35190513100fd4a3a2f66acd7c9fd531ed070b02b0943ffd2",
+      "audit_name": "school_lunch__020512002_jpg.rf.e9576902fd90505b0589d2fd4e664da1.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0034",
+      "source_sha256": "009c4d9c2e96249f83cf90f900b1e63f11b5934035dc14c9385fbde19e401757",
+      "audit_name": "school_lunch__020572000_jpg.rf.0d8385e171452b71bf5da6672577e410.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0035",
+      "source_sha256": "ee6bb91fb4ea0ac72f107b25461d73601c83bda2b8fe6d283c211335bda1ab01",
+      "audit_name": "school_lunch__021019002_jpg.rf.3a39bf6ce0b8cf9bfae576c37394e677.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0036",
+      "source_sha256": "e797be3074b0f1dd32a9ee862d9a7b801c80af049f2df26d90a26da11df64a91",
+      "audit_name": "school_lunch__021053000_jpg.rf.773de2be62c566f3545b9e6789593f71.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0037",
+      "source_sha256": "ff34834cc0d8c08bb7b5e5f9f3bce7c97b7a8155d99c3839118091e0f3fd7c95",
+      "audit_name": "school_lunch__021053002_jpg.rf.45769acb8972c744ad4829446fbf673a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0038",
+      "source_sha256": "3a4e098056011099e5c959d46c835761a2ea76e92e6aae70a2a9d115ccabdb87",
+      "audit_name": "school_lunch__021110000_jpg.rf.5b548c2141d796c87abee6988eae819e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0039",
+      "source_sha256": "775f07ea60e1ce5429c7524aea4d0cd33077646dc03d346ce10a9b3b663e63da",
+      "audit_name": "school_lunch__021110002_jpg.rf.6333426df90b56c7fb533e52c01b1e29.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0040",
+      "source_sha256": "bd230ca2f1377a9748357a0fbf9d2fe020a6c6a493bbad3a9bd8cbf3a659f8ae",
+      "audit_name": "school_lunch__021225000_jpg.rf.064880040c34125549ffd0fb29548bf3.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0041",
+      "source_sha256": "bf9af0e022b1aad8bb86a7643aa145e72573bf22518c7d2bf4c3663b57a3df34",
+      "audit_name": "school_lunch__021225002_jpg.rf.9a19ddd02096d70f0532fc7e869b134d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0042",
+      "source_sha256": "87eafb95812e93c58fc98fa60a84be5e438ca1cc062725b2824b3d69b6469ec7",
+      "audit_name": "school_lunch__021265000_jpg.rf.cabd42a6ae6d99549caeb30407b202d2.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0043",
+      "source_sha256": "684cb1a5a6d1d4d4f4065d5d95e30c951827c76003f24475ebb920e722cae52c",
+      "audit_name": "school_lunch__021265002_jpg.rf.36fafddddfdbb64c19da86f834a82f00.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0044",
+      "source_sha256": "3b1dbeb15e6d90a28bed9e2e6efdbf10ed44d9458c00d156eca811b39e5d8735",
+      "audit_name": "school_lunch__021306002_jpg.rf.d1b81ced878eef9a0b1a69c1ce0835ab.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0045",
+      "source_sha256": "7378fedd96879ea175091b18146eb5cdcda24a9119e7b9bb87597eec423e4b3e",
+      "audit_name": "school_lunch__021414000_jpg.rf.7a245c0d06bb29356b2be533754ec7ae.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0046",
+      "source_sha256": "6b738df7b583bd30f3cc65de98464c7ddce6f3297334ae240637b7095521b937",
+      "audit_name": "school_lunch__021479001_jpg.rf.4f1e46cd73ee506de5ec49e620f3c3b7.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0047",
+      "source_sha256": "32ed05fdb5ff025b162623f990cd4014e67d3d3194ac75b3bcc85d33496e30dd",
+      "audit_name": "school_lunch__021479002_jpg.rf.b09eb06240244a2c34cf969d47ab9ea5.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0048",
+      "source_sha256": "88757a500bac718158fb4f78d5fc308416e71346e4f1da596bb08a441af8293a",
+      "audit_name": "school_lunch__022011000_jpg.rf.8af5e082939900e78152e5255b49a1c5.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0049",
+      "source_sha256": "92988f057ad848e2bfed2aa4b90b6447a74552d9730b2b3858bcb5458c18857c",
+      "audit_name": "school_lunch__022073001_jpg.rf.69fa9717efb22574a634f4370e82a322.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0050",
+      "source_sha256": "1aacdbd03391ec80d7312ba9e5bb041dae06e4a349f9860583b6cef93949db8a",
+      "audit_name": "school_lunch__022073002_jpg.rf.8c40f1bc7ba9a990c9f372a81a86548e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0051",
+      "source_sha256": "65fad109cb43eeba7f14c9c3bef7f39da603de827fa15aaadbb70ad57925fefa",
+      "audit_name": "school_lunch__022271000_jpg.rf.d6c5c6a416c6b473c45ff6cac25958a6.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0052",
+      "source_sha256": "9dc7c62eb0dbcf6fdd9427b56e4e422334254fa50fb9a42142ebf98614d88a61",
+      "audit_name": "school_lunch__022406000_jpg.rf.583311225cab0a1b62ef2d4ddf893b03.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0053",
+      "source_sha256": "0c994e439fdb7e8d1ddb1e50f176419afc3907b82cc9a4a59014471342d36764",
+      "audit_name": "school_lunch__023024000_jpg.rf.a0fb596e1db39b11b4c2a0267e7c996b.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0054",
+      "source_sha256": "826d7c51c9b636cf0fee8ca4ceced32b2ee1ffdae1180bc53313df7a7853c1ab",
+      "audit_name": "school_lunch__023024001_jpg.rf.7c7787f39b88258236db8cb880eb3166.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0055",
+      "source_sha256": "2c5d5fa12acf1f035055c7d8ec7f28517c2e4e98172e94854f9a7b036b5dfd94",
+      "audit_name": "school_lunch__023024002_jpg.rf.d6d38a0f248e3b8e1b66237fcbba6e23.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0056",
+      "source_sha256": "77173eb420e9f5eeef77987af3e247bbf75a216d38673870df705026f77938f9",
+      "audit_name": "school_lunch__023228000_jpg.rf.f1f59683036f669d6a5718ea51ae2a6d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0057",
+      "source_sha256": "f7e63b78b10f45da4397c90f29706aa9d270ccc16ea2fcd9928009235c9d51d4",
+      "audit_name": "school_lunch__023313001_jpg.rf.b3884f9e59d0bc42b87ad00a2438b5a8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0058",
+      "source_sha256": "b421f1df7092c7db82e0295d453eac2bdf885520002b0f4f46d923bf3f32a127",
+      "audit_name": "school_lunch__023313002_jpg.rf.17262c8322d7670f05381d351ec37e0f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0059",
+      "source_sha256": "e64e89e3aacfa7fb90cd8ceeef9124984b196f4291215c3d56441bba2daed789",
+      "audit_name": "school_lunch__023411000_jpg.rf.e0010fc083a5d5175cc1ac8db861f45a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0060",
+      "source_sha256": "66acea0c0cf100c61eb2452498ff2d0561683ae29e0f9dfd6cc196c27372c6c9",
+      "audit_name": "school_lunch__023411001_jpg.rf.0d84605eb4ad8d25ef6837a492f1c6a0.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0061",
+      "source_sha256": "3c47ead092e567c0a5a4304e6b6f5653a8c2c14b845af39af68307e97132ded3",
+      "audit_name": "school_lunch__023425002_jpg.rf.6ef238ca19a6dbd73b909313d4343c25.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0062",
+      "source_sha256": "596d4c335ff19cf6f525c21f12e1aba2cb11da3f88d0da984d6a357654e554b7",
+      "audit_name": "school_lunch__023465000_jpg.rf.ee628cc479429c37d03687180845b786.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0063",
+      "source_sha256": "0413735dbd93ccac650ba2cf57e6f7fbc47b8f54224e5e398313f3862224b165",
+      "audit_name": "school_lunch__023465001_jpg.rf.ad01cd8814fee640dd57182911605341.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0064",
+      "source_sha256": "aa96adc0296c8e930160fcbe16af88899a5bb9b6b5f43cb35b8d20971fa74da1",
+      "audit_name": "school_lunch__023480000_jpg.rf.5135d413221817ad177d7fa89c8f08f7.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0065",
+      "source_sha256": "c2f97a76710d28e9993567cff918e24b119ab1a8043155fc074f209b006216b4",
+      "audit_name": "school_lunch__023506000_jpg.rf.fa034ad1be8c5c1cfb412e0662948aa0.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0066",
+      "source_sha256": "1ee02d96562fd281104e9e22df45e0a52bb54b9a46c6254ccd4d00b0f7042891",
+      "audit_name": "school_lunch__023530002_jpg.rf.9a036496a8afc9f022628b8e7517da8c.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0067",
+      "source_sha256": "0471f748036c7d879e187837e547a7a24323460e031968404b55628d2fcd7ab3",
+      "audit_name": "school_lunch__024022000_jpg.rf.ea9e7652eda1f3d5c7a55dcde65afbe8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0068",
+      "source_sha256": "0f13a5c3d2944be960d7e4fdcc2bb0d9491f06df7d09fa1ba589eb3449c2effe",
+      "audit_name": "school_lunch__024111002_jpg.rf.9e8308a53f6c46dd0a25349046388eff.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0069",
+      "source_sha256": "bc53aee199b7965bc0489a92e7aa6d1c7ac2e09a5556829da951e38297fc3209",
+      "audit_name": "school_lunch__024112002_jpg.rf.14daabbcfc306268ad4b3c09ac034a7d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0070",
+      "source_sha256": "4eb0bfc90f788618a5098dcaebf4e7b3552b11f7146be35a5cd08ef59c21034b",
+      "audit_name": "school_lunch__024180001_jpg.rf.6cb8f9b95fe72f7185d214b486ec4462.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0071",
+      "source_sha256": "6c5d8d86993ded357a1031fa4f12ba0193a643145b03a8c1931c737aa1b159e6",
+      "audit_name": "school_lunch__024180002_jpg.rf.7ade851578d4383460726fb76ac25858.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0072",
+      "source_sha256": "a77dc0fcf790385e611be4b6b26d9005bcece17a3c662e2b702b2d5efa0a825d",
+      "audit_name": "school_lunch__024318002_jpg.rf.e4c456f683352bbefe033045cb81a640.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0073",
+      "source_sha256": "9784af8ebff618b69f269db0cddea38f9621623476b9daf60a50a5f6c04bba3b",
+      "audit_name": "school_lunch__024406001_jpg.rf.ac76e52a4f821937fe21154845f550fe.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0074",
+      "source_sha256": "0f59e13fe54aca3bb820ee6dadd767134aa54069f0c2ba9b88feef260cbbd560",
+      "audit_name": "school_lunch__024406002_jpg.rf.b4bbacce2d2f2faab9c39d99c9775016.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0075",
+      "source_sha256": "719d9f5f314ce41fc59433d67e23acb5b1c595dffe7a9701518bc4f89f3f348d",
+      "audit_name": "school_lunch__024410000_jpg.rf.8f0807c82ee3816e3279b9e3ff2cb145.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0076",
+      "source_sha256": "61a4470779e7dc0db103bc2969c878ec29b5607fcfda895ea037ae6638668114",
+      "audit_name": "school_lunch__024410002_jpg.rf.9da79361c0901f241488cb8848e82122.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0077",
+      "source_sha256": "3c6fb5740d2cc7c81321bd76cbc386c4ff41fd8339bd1c6a8e68264a8c09d0e3",
+      "audit_name": "school_lunch__024526001_jpg.rf.5c92a5c366dec789cec81238092c9b64.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0078",
+      "source_sha256": "6f6f1bdbe42cd43a2c4867eaabfb1727e0f9cbe10d33911a56679be3c6baeed3",
+      "audit_name": "school_lunch__024526002_jpg.rf.3eb467912ad83afcd644b7691b1ad9b3.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0079",
+      "source_sha256": "6f82b2513bd6f21b4a4abd80f3ebd164bd321c004c4b9831b4b6f650bc549e85",
+      "audit_name": "school_lunch__024552001_jpg.rf.70ab2387ce2e3c7b7e08e406363e2bed.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0080",
+      "source_sha256": "5586d4bf9aaa8be4f4d09d2855203cefec9a293c44d269b62b48e1b5b1dff6fa",
+      "audit_name": "school_lunch__024552002_jpg.rf.82d791fadd0d373501ac755241b67b2c.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0081",
+      "source_sha256": "606dc32637f7982101590ae1746d65bf7f1ed726a283e3f606aa7d5689d8883a",
+      "audit_name": "school_lunch__024553000_jpg.rf.a5343f893c35316203e611b5ad283b2c.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0082",
+      "source_sha256": "550c22898a50c55e8200b377b7e3bada0f3c8cfc23a874d90e7c84fb139a41da",
+      "audit_name": "school_lunch__024553002_jpg.rf.2e3636e96e36eba9ffec66a051fe2604.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0083",
+      "source_sha256": "057fda43df8f4984cd895ff79eca14e037c32e48312e7746e86d001800725799",
+      "audit_name": "school_lunch__025023000_jpg.rf.495493e92b02f3fe30f348f75eab2dda.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0084",
+      "source_sha256": "605d635f3253c90c88379accb1790db697d3f25d8de760148f6d5952916a327a",
+      "audit_name": "school_lunch__025023002_jpg.rf.83e0fe34e2ac7b8d3e5d3b698d9b073f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0085",
+      "source_sha256": "3bc4001ac6d9ec835420da6a7687b5936e35eea7db4bd42e7340d03451fefd4e",
+      "audit_name": "school_lunch__025213000_jpg.rf.26f652631694a8a1fad5df8d9d1cf21f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0086",
+      "source_sha256": "6047416a419541cb7229994a5b29bde273978fac5fff035f1719c832cd9b1f11",
+      "audit_name": "school_lunch__025315000_jpg.rf.2659ecee5c2414b943f1d4e48d9e4f2f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0087",
+      "source_sha256": "338bce550c69b9ad88f480af8a4bcd8f0ca28f81f1e1553ac3fc49a8e52c9c99",
+      "audit_name": "school_lunch__025315002_jpg.rf.773df9f64100896cfe582aa31bc6f80d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0088",
+      "source_sha256": "def5c240795fba90db483e92fa189cb522cab580a3b967a59e9832dbc0c939b7",
+      "audit_name": "school_lunch__025464000_jpg.rf.31f91acd5b1f0691467229deb73b41f6.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0089",
+      "source_sha256": "b7bbcd78a4d5f3166fc63c621ead8a5f19af480db698bc91720615fbac3bd93e",
+      "audit_name": "school_lunch__025512001_jpg.rf.4c8ab4661704faede5090ee0aab7161e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0090",
+      "source_sha256": "1527b27db317babf09116d09f11cf195dfce8d9d866993b5f2ca36a9c4c1fffb",
+      "audit_name": "school_lunch__026027000_jpg.rf.70304a5d313d2d72b29767a538989331.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0091",
+      "source_sha256": "c0b5061ae67d860f4dce59201b8e28475862faffa51a165dbb0678db61ca0063",
+      "audit_name": "school_lunch__026075001_jpg.rf.43139a506fcf5d335cd2d0b1e965209a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0092",
+      "source_sha256": "1df2c8b4eb102719570bbb2ddc7e0827f4d490e54c44cd291f766e4d2ee4ffe5",
+      "audit_name": "school_lunch__026212000_jpg.rf.ce3d56d6ebf7a0e1445295805177d440.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0093",
+      "source_sha256": "9ca0fa75413d421f9f1fbdc51d11ecac8e5015baa39bdaa7681fccd9ce9bfb84",
+      "audit_name": "school_lunch__027019000_jpg.rf.858cecf004472cb51c6be2889fd53f20.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0094",
+      "source_sha256": "9c55442648919d8aa3170b82cdd914aff4b845e4c49849d3ceb48acd1805eda1",
+      "audit_name": "school_lunch__027019002_jpg.rf.433f5850dd0a877cdfe5cb159a0b7540.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0095",
+      "source_sha256": "515ccc313e6cd475a51fbedf3cd8b67c0f838dd4dbf89a74b8e201795d777435",
+      "audit_name": "school_lunch__027171000_jpg.rf.2a90c9ed392cdd0d56644b96b91c815c.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0096",
+      "source_sha256": "29f7652cd19d8eb332772151b90c01748859942b8e14579ffd700b48a26c5543",
+      "audit_name": "school_lunch__027224000_jpg.rf.1b1740094291f62b11afb1feaffa4c7d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0097",
+      "source_sha256": "1da5ff53d047c9e2367ded2365b7b04218e353688a6c4c8c177447aa0b94f49f",
+      "audit_name": "tetra_pak__15-_jpg.rf.ca275956e9894503af06b8e1afe25b6d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0098",
+      "source_sha256": "8bc1765e185ce9f172b99adcac62e298d25ed4640da6dc0c15d76da799ac8add",
+      "audit_name": "tetra_pak__19-_jpg.rf.480a82398b000ed28103f36daf19a8ba.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0099",
+      "source_sha256": "c5d3b9b807acc962fcfc7c1ea05c229b6c213cfe9d3df267943b51a89515cf78",
+      "audit_name": "tetra_pak__4-_jpg.rf.a44a1ff7c4ca455cddf60c906fd78853.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0100",
+      "source_sha256": "b9391881747a024a32827a32f95108d0b6551c8d8aa8493fc295d669c2fbbf8e",
+      "audit_name": "tetra_pak__44-_jpg.rf.9e54011d6c498c5f923388f3d6a1ec52.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0101",
+      "source_sha256": "a2baee757355baf762a0e92081af3942d47e03eda10790681e87c9c8b74f60d9",
+      "audit_name": "tetra_pak__53-_jpg.rf.e9c77935c5e8ec9858d8e1e342818dde.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0102",
+      "source_sha256": "0935f28791529ed483b8d4607069e1848b4eb1aec8a6a89df5e885cf3298cb65",
+      "audit_name": "tetra_pak__64-_jpg.rf.e38e7f4daa5bfad3963d608e513a8743.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0103",
+      "source_sha256": "bced6c502703a0080d2391ed82f7071f9b14f238f32c03ac5a9297494cbcf582",
+      "audit_name": "tetra_pak__C_024_jpg.rf.27899d9808dcac0f0c288221f5c4f135.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0104",
+      "source_sha256": "7c505f353685e979c037dc55436c6b3e99c566fbdd0ad2d86803da00ee71e934",
+      "audit_name": "tetra_pak__C_181_jpg.rf.0cb15147de1583472d35893fe5b58500.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0105",
+      "source_sha256": "e9fa18d12bec30b730d707b515f134b239d1335c4e9d32f86e32de61b136ec4f",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_0_jpg.rf.7d31f5835a3e179c3d1abe9033c21a6a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0106",
+      "source_sha256": "7118b21d098322e545fcc4219abc6acacfca65f4ace2f236d15879425a12516b",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_163_jpg.rf.f31bf9165d6eb5b832c31dc8c8bf6824.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0107",
+      "source_sha256": "c3b24ad884db29ffd8307be6a34a3448137ee8abb0e6b1fe74414ac436d01ab3",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_164_jpg.rf.af4cd83cf63450e4031ff84e3eabba94.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0108",
+      "source_sha256": "bc21e4e810b8569b8e0da3cadaf216b2eb65fbc855138dc1895b1c9b89103882",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_171_jpg.rf.031f8b09d53919391fab462d862f655b.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0109",
+      "source_sha256": "88300940739d06c0629cca7af86a6ebed3c7838c32cdf5d3352573d7fb052954",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_178_jpg.rf.faa67e9b56cf51b01a8d5a238bca14ec.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0110",
+      "source_sha256": "65318efc77392b82e6b804b859c359e96d55f430f8abd877655c2d796453e8ec",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_180_jpg.rf.67b42fbe1544f8603278ffb6c1e4011e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0111",
+      "source_sha256": "c00caff1776c279c420fd0067db70a708db627ceb30082ded16e05edf91f4a4a",
+      "audit_name": "tetra_pak__LINE_ALBUM_test_221220_51_jpg.rf.67dac01dec28874dafcc1a80d400dc5a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0112",
+      "source_sha256": "64e7825b5c0a4e169e608bd2a388bf11bfef18640d542ebcf5e873ecc1e8d888",
+      "audit_name": "tetra_pak__cart-104-_jpg.rf.f42fb478ea04f624c367cba56d8b9e38.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0113",
+      "source_sha256": "3a5b35a396f569763b75f2f06ecb8ffb4065f24b874b73ebb2077887b19fd240",
+      "audit_name": "tetra_pak__cart-12-_jpg.rf.3acfd7edd5871fdb496d51b876f9f8db.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0114",
+      "source_sha256": "1b2bf71be845f5b0618b818f05cfc457aaf37b5977b1099e6ba2090f312c9a94",
+      "audit_name": "tetra_pak__cart-120-_jpg.rf.d5a535ce78f7b1594315b9f7ae15e3d0.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0115",
+      "source_sha256": "a66fc9a31e508dc81fc2222f7631ecaa7c6991a540595115b4afa25d325119ee",
+      "audit_name": "tetra_pak__fruitjuice-17-_jpeg.rf.15736ea6aeff46bb885190b23580044a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0116",
+      "source_sha256": "f084637e3174b11760d0f711b3100324d1a917aa50343ed45f84a4f4f67b8736",
+      "audit_name": "tetra_pak__fruitjuice-19-_jpg.rf.22c996ecac6ec951bdae5825dd706f92.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0117",
+      "source_sha256": "ceea6fd66e6ec04472545d7a6e3e4a710b34260eae6970a5600bb42d7d01211c",
+      "audit_name": "tetra_pak__fruitjuice-2-_png.rf.328e6846810030889b9031e96885997e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0118",
+      "source_sha256": "d8d569be7ec443295bdfcf5deffab914d24834d49d6f7d91ff79e4d3d19ec44c",
+      "audit_name": "tetra_pak__mockup-102-_jpg.rf.7ed0e3d0b3cce762925084292bb82b14.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0119",
+      "source_sha256": "cd8c81279ad3e9c48982abda2253e958468a05a4b9df907b6e42ce1d833fce74",
+      "audit_name": "tetra_pak__vfresh-35-_jpg.rf.dfcb4d96c5519b004b7ea0a4c4ba0297.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0120",
+      "source_sha256": "15a570b3028b19fcbb279ba3b440c976309ee26d213b7ac80cc8f3fb15a44509",
+      "audit_name": "tetra_pak__yomost-10-_jpg.rf.7dc70c338ad3cb87b2f6ad8e0a26a7a5.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0121",
+      "source_sha256": "5f411c41224ab42aaa4f6cd0e8cf507bfe238a06b2c1727e710323ecc6226bbe",
+      "audit_name": "tetra_pak__yomost-2-_jpg.rf.de0f7c8542d6a8208dbbf06d54a5dc9c.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0122",
+      "source_sha256": "7715c455580e79153375a2a55c6138379a298f5094a14c8f73e4d49872595607",
+      "audit_name": "trash_detection__test__000023_jpg.rf.b16a9fb7e7d6693f7fd46f1d6063f56f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0123",
+      "source_sha256": "8b664c666b8ebadf25607d5df2f2e54c34d8675e7e77bfb8389afd79b620828d",
+      "audit_name": "trash_detection__train__000005_jpg.rf.1b745f64a55edd7dc3e11b40196cf81e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0124",
+      "source_sha256": "87b8e4f9a6ba8bea9212d67fe49b1368bda1711d9ec12fd999cedd3352b48d12",
+      "audit_name": "trash_detection__train__000005_jpg.rf.8ec14faaa2d63050935736de74198798.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0125",
+      "source_sha256": "b6a7cbcdcdb95274e970ce300320894ba822ee0ed8cefd2682d40a856b9bec2e",
+      "audit_name": "trash_detection__train__000007_jpg.rf.65ae90f48b656e72e7f7850983ba8092.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0126",
+      "source_sha256": "edf78b884b8a46d9fa29d337e8cc59c236a5788f259ba7ae2e9756cc77bc83a9",
+      "audit_name": "trash_detection__train__000016_JPG.rf.6a36c0567a53d01e53a958e26c42cfd5.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0127",
+      "source_sha256": "f760edc62d7ba04cb6dd47797a49f2929726dd1a0a5e150d70ab47811f5c1d73",
+      "audit_name": "trash_detection__train__000016_JPG.rf.ecc4b4f26f1754062e51d8798202a49f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0128",
+      "source_sha256": "16e48e01333924d622315f062919b883bdc322f93f73e1d336a60d553e788e0c",
+      "audit_name": "trash_detection__train__000020_JPG.rf.43fa54851aa7cb82b4062e2b73a800f0.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0129",
+      "source_sha256": "82629ce5f78c0383f91742baa24f1518ad77360679498f866182ddbda8eba10d",
+      "audit_name": "trash_detection__train__000023_JPG.rf.1ca3cfb9d910aef56003e2abaf5cdca2.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0130",
+      "source_sha256": "b86a2e7c8d15fb78e05eec1b3257dcae9efe8d67a560d20e9cf8a4f4d0ad5c9d",
+      "audit_name": "trash_detection__train__000032_JPG.rf.cbf03a9b729557ed636289ae8c39e1e3.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0131",
+      "source_sha256": "0aec72efc38c26851a039e7c2c9ec19e726948dd4af8688a30d5159ed07ee86c",
+      "audit_name": "trash_detection__train__000037_JPG.rf.7ce5844905e941f713561bf61c19df09.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0132",
+      "source_sha256": "3d6f20c658ca29935a41a6e356bc86ce0523d6fd66c825c6e32c69581714a2a0",
+      "audit_name": "trash_detection__train__000037_JPG.rf.d0e10276ca28382ca2330a1091865784.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0133",
+      "source_sha256": "38ffc0847cf334e0c7a04c459f33a1230d10c7f9df1828ad0ef0b6375beb72d4",
+      "audit_name": "trash_detection__train__000037_jpg.rf.38cb5de90e63fee1eadd43d9a10b3e87.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0134",
+      "source_sha256": "cdda63ff20a154f9be19c39e1296af0ab0f0995468f13312b9c00127a393581f",
+      "audit_name": "trash_detection__train__000043_JPG.rf.33aa725da4b2464e3a1ae2ea1df4ae89.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0135",
+      "source_sha256": "8e63d5edc6a05dccb7035c6a61ee6d216f78ba82f91bc595ef1c65dc610e0d17",
+      "audit_name": "trash_detection__train__000043_jpg.rf.a569d2743086fbec8dff80866dfbf3c8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0136",
+      "source_sha256": "e3d3deada81424f3a9ef8fb2e792e77fd8ac4e08ee6f7269a92667b61e0e1b3c",
+      "audit_name": "trash_detection__train__000049_jpg.rf.7e6120d6706ec8ef4520868586fb5370.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0137",
+      "source_sha256": "09fefd2b688a2c6a9654b213d535b1d73b5307c36956a0d65337f53f5f22519d",
+      "audit_name": "trash_detection__train__000056_JPG.rf.181b6cc7ffa54bd9a93852dc18adc7d6.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0138",
+      "source_sha256": "f192190b23a50400eff168e5db57f1bd7605c169e7552b98f0208a30d913e90d",
+      "audit_name": "trash_detection__train__000056_JPG.rf.8e62d7e972da866f374674043e33bee7.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0139",
+      "source_sha256": "4f2a815d950476c70ab224e4233684fbca2b5db040426a4351738eaa1fce11a8",
+      "audit_name": "trash_detection__train__000056_jpg.rf.8f2b9cd06892aba10b4c45d39b811e98.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0140",
+      "source_sha256": "6cce3a7dc91c5500ffb4731e30aecf96b2bd045d53b8063702948c80c24985ed",
+      "audit_name": "trash_detection__train__000057_JPG.rf.fe7c9a98acbca227ec286a7f33fddfc7.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0141",
+      "source_sha256": "f37744d7c76c7b105d99aa66db72708d93fd73c03fb17989f8c2eaebe47fdb16",
+      "audit_name": "trash_detection__train__000057_jpg.rf.05f3f58db88828c726d9bf766afa3d06.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0142",
+      "source_sha256": "57bc118a99954bcd118e6d6f19a13466b4249699ceeb57f30fbde58023ab7d3c",
+      "audit_name": "trash_detection__train__000061_jpg.rf.117e656e6b299552886e34301975690a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0143",
+      "source_sha256": "e25135a39be101e1878b807dd17c4ec40db4c24db6babc36c0a61c22e874257f",
+      "audit_name": "trash_detection__train__000070_JPG.rf.690c6feb91fbfe7cad895d4d3010e4fe.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0144",
+      "source_sha256": "26293b5079413ef924c0dd4b4dec3f2eb70729f7b85d9b3576215dc1a6cb75e9",
+      "audit_name": "trash_detection__train__000070_JPG.rf.adbf70d8edc66e1e5fe35c6855ae27e7.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0145",
+      "source_sha256": "a91aefd27beefd320d9f5968f38d3b3c7750d041d5a3c458c2f3b0e82b443274",
+      "audit_name": "trash_detection__train__000070_jpg.rf.4d3d66d496ea41fbef2a2fdcec3b78c9.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0146",
+      "source_sha256": "e84e3f7ec09922f1f6dde8c9588af430140a53d0429ce81fc85ea5ada0de7a9d",
+      "audit_name": "trash_detection__train__000070_jpg.rf.6e398d00faf9d54fe95814d1023fd052.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0147",
+      "source_sha256": "98987af6661adfa18a4273f8ce319dee91509f908e4943afa29c8ae501bce0ef",
+      "audit_name": "trash_detection__train__000072_JPG.rf.2580e9e025b226e4744dc84a933daab4.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0148",
+      "source_sha256": "72134acddf162213ed0a30b49a42fefdd750b00acd9bfecc623c467ae1704072",
+      "audit_name": "trash_detection__train__000072_jpg.rf.5dd681cee6167d77519f9967ed267499.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0149",
+      "source_sha256": "6de2fa45d5a63efe98d99a54b761443aab8b9cebfb3a4143cac3086295cf9c06",
+      "audit_name": "trash_detection__train__000082_JPG.rf.3a23b667c9bbb6a3f1cbe22d29df40d1.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0150",
+      "source_sha256": "f7ad8fec02d2ecc585db2dc1501c9de890f239028dfae09fe90efca8bcb6f2ce",
+      "audit_name": "trash_detection__train__000087_JPG.rf.9c76faa7891baa4452f391b1391247f2.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0151",
+      "source_sha256": "7c19fef5b2ee7c5be36fb1f9ede168094caa4af5382356066dba805deb36dd60",
+      "audit_name": "trash_detection__train__000087_jpg.rf.77221350fa41f94d0bafc9d7d5b83789.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0152",
+      "source_sha256": "ac5cca44563759c07807dfed1ae0587b4be4d78c0491e93381166c62dfe9e7a4",
+      "audit_name": "trash_detection__train__000095_JPG.rf.3a7da6521cf540b9540a4036122bc3a6.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0153",
+      "source_sha256": "0d3037fb1ce98359a761b57fb8b8543f0b0d1a5adef43f7c316f58e687829f72",
+      "audit_name": "trash_detection__train__000097_JPG.rf.52c07a66faaad5dc6dc5a1cbaba0b80e.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0154",
+      "source_sha256": "30c68a6d9478ee5eb93271b2ff8098fc012dc73f7db25d2151a68c4c00ba326e",
+      "audit_name": "trash_detection__train__000097_jpg.rf.f04c44037b55c5ad9c3d09592e4f416f.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0155",
+      "source_sha256": "1e2241439ff790fdabc7fc5b92357fdaa05c88f1f8f21de2362ec1e74324991d",
+      "audit_name": "trash_detection__train__IMG_5040_JPG.rf.e5c7cae13461f93b1fb5a215b58d95b8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0156",
+      "source_sha256": "5eae9cd0efc37564a5643ab18dd98eb2309a0d60a445b3a176a361ee1d0100bd",
+      "audit_name": "trash_detection__train__IMG_5041_JPG.rf.901be6623abcbb2175088693769f2de8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0157",
+      "source_sha256": "25ce7bb7c10c8f3a57828de08d5df5a8b652b7ca875fdc47ec884e6efc239ba3",
+      "audit_name": "trash_detection__valid__000005_jpg.rf.6d6fa989052cef7cd10f88afcb567ac0.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0158",
+      "source_sha256": "4809d665a107fd22c17da5abe69ad0bf4036d667f022306af9341bd7aac38638",
+      "audit_name": "trash_detection__valid__000023_jpg.rf.1f2257760456d7278188732a79ab018a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0159",
+      "source_sha256": "5a9ad02c39c7932dfc2d0df1c7c7897e3ac9f74614ded6f31774464d4d95c91a",
+      "audit_name": "trash_detection__valid__000043_jpg.rf.baadd49a073b6db7e5801acb779e27cf.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0160",
+      "source_sha256": "2a747901443c490b5cad0d16d5ede6dd48ffdfa2e289616c4c25c8b2315d846c",
+      "audit_name": "trash_detection__valid__000049_JPG.rf.fc95994296930d055db44a7ee890027d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0161",
+      "source_sha256": "22f7da330285cffce544a4d9f1e1471aa01dc875a788110216b67b8f8300eeea",
+      "audit_name": "trash_detection__valid__000061_jpg.rf.2332b025600a7b61eb098d4488c96958.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0162",
+      "source_sha256": "51422933f370eac6d83bbba643af0869688ec0fd3a4de9087d3b0b4701a3a3b1",
+      "audit_name": "trash_detection__valid__000072_JPG.rf.190c2fe87a573bf4bb8ae6f821daadea.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0163",
+      "source_sha256": "316b01b825c3159bdd8632255059235abec70441d94ba57879890e08f8889dfa",
+      "audit_name": "trash_detection__valid__000072_JPG.rf.57d2f9a3608df138c2f5bc7f26a8c7c5.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0164",
+      "source_sha256": "922fcbbbf7e81f7ac31ccf82deb50f3d9b5013a1de36792f0f433f7bd88bdee9",
+      "audit_name": "trash_detection__valid__000078_JPG.rf.abdd6c3784e1de4d0d6a814e78b3e70b.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0165",
+      "source_sha256": "ecdfaff72f908dac322e8e2766d1187c33a967527be04d4637961933b8ee6821",
+      "audit_name": "trash_detection__valid__000082_JPG.rf.7a7bf759937dec5cc0f0947227a8bbb5.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0166",
+      "source_sha256": "293c6afaffdc30dd15c2142a27b7b67268e4deff605f08ea5a1c39e57e9196b5",
+      "audit_name": "trash_detection__valid__000095_jpg.rf.6fedef9e7448282345187ba8b3922e2a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0167",
+      "source_sha256": "70d2642806bb7674e46e3804156f50d62cf2870750f97f42c810fd9d6d26d18c",
+      "audit_name": "utensil__1206_jpg.rf.85c3e907747bfa7009fc128d215029ed.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0168",
+      "source_sha256": "15ae7b2ba6b7315173add093b98f593cbe21777a4cfaf18f6fdf1ca10be1169c",
+      "audit_name": "utensil__1217_jpg.rf.04447ef0499e84e7b7d462591bea29b6.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0169",
+      "source_sha256": "caedcc32d6f97cc0ac8b0b003d0c96fab49ef5440a0d46fe246642719a8bba12",
+      "audit_name": "utensil__1219_jpg.rf.7fc782aca125dc1b1f174d91bba44e3a.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0170",
+      "source_sha256": "ea7a450a00adeda19d053041d98644b1a8864b6c3902cf30cc71078e218eeb99",
+      "audit_name": "utensil__1225_png_jpg.rf.e97a8274b340a8e4d49e02a56847cc66.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0171",
+      "source_sha256": "386f756100aaebd009c1407e910fa1b699032028a2af3dcabae54fb0f90efd5b",
+      "audit_name": "utensil__20220216_214806_jpg.rf.93ec7cbdebf0159536f909363970f76b.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0172",
+      "source_sha256": "4c946e568daa16b648d9978484620714e59ead30321eeae3b79ec2fc8f31ea48",
+      "audit_name": "utensil__20220218_183855_jpg.rf.dd390ca843d2022b8862630683a7ef50.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0173",
+      "source_sha256": "cfb2a2b73539355dbde1fea877541341f641f7ec59cc877a99233aa60bc1272a",
+      "audit_name": "utensil__IMG_20231109_141036_jpg.rf.1c6c1c896b7ef955836821ecac4a2571.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0174",
+      "source_sha256": "3a99f1a4ef0b19dbd86c1ab1a610c768149c5042e4cb928fcc21b6c69580b3fb",
+      "audit_name": "utensil__IMG_20231109_141037_jpg.rf.4d3019dceff80445c90ed85f85f79dbf.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0175",
+      "source_sha256": "e0c91be46ae0362de55d3033f058826b3521a22ef98997b93fd49270effa8ecd",
+      "audit_name": "utensil__WOW_MEDIUMWEIGHT_6_INCH_PP_WHITE__84550-1633106354_jpg.rf.983fa38b2783d75bbec1517a6812d225.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0176",
+      "source_sha256": "1fc6bdd6c69322e5c24dcde8ac4da174279791f09b67c867b19b1423619a6cd7",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-20-at-4-23-23-PM-1-_jpeg_jpg.rf.e7dd30b713df65f2365a97d0dc4139a9.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0177",
+      "source_sha256": "e4c148c85718286d3304110b83361e9d2537401a3187b0671f31a15c9439f8e9",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-24-at-3-32-03-PM_jpeg_jpg.rf.225c80045e41e1e7ad5a0204b32cfb36.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0178",
+      "source_sha256": "a1aeccb1f101a40146d2f93b2d9ec123e7d602d1e75e8ed8fefb4ed6f2a796b7",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-24-at-3-32-05-PM-4-_jpeg_jpg.rf.eb938afdfa98962053e8fee83e587f1c.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0179",
+      "source_sha256": "a232b9ca068f8fd487fd3bc6f2fccd50aaae103fac60351d02019ddecb66209a",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-24-at-3-32-05-PM_jpeg_jpg.rf.ebc192b81a15c119af682b8cd29550b7.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0180",
+      "source_sha256": "95b666e63d467a2c45c2166048719b460a725bee7a0bfb700f4133562ee63290",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-27-at-4-44-12-PM-5-_jpeg_jpg.rf.ecaaabe2fdf961c421156702c8c888a2.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0181",
+      "source_sha256": "a6ccbe1f58bbdbf9335aa82da90435f1ca5ce3f68218d529a0bb755b0e1c5117",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-27-at-4-44-14-PM-1-_jpeg_jpg.rf.8e9d38e00e570056548cafa1e8d4a8fc.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0182",
+      "source_sha256": "cfa6efc709d4243150388ca6956031d4cd77993f2b0c7d9eff308e3c7301a689",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-27-at-4-44-49-PM-2-_jpeg_jpg.rf.7ea421970b9a7ec44d9d8bcf3dc07e6d.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0183",
+      "source_sha256": "c60cd4339d0ea478fe72f6c02ffda6c1877adcaef2905b310c96e8c8fa060561",
+      "audit_name": "utensil__WhatsApp-Image-2022-01-27-at-4-45-25-PM-6-_jpeg_jpg.rf.8b1ec79e00aee6addd06835bf241c3be.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0184",
+      "source_sha256": "7616e3d35e6855fe56f590356683f64de9f314276925f11692b744ecf15577de",
+      "audit_name": "utensil__gjo30403_jpg.rf.2072a7f8f16a531ee2e4157196d53ea8.jpg",
+      "rows_identical": true
+    },
+    {
+      "benchmark": "clean-0185",
+      "source_sha256": "057594e452b37b8a4b9e257fa53874bb0873981bcc19ee9dab7f0874b0a6aba2",
+      "audit_name": "utensil__plastic-fork-and-spoon-250x250_jpg.rf.650dd2ccad6d2d12bafdfdb66b404cd9.jpg",
+      "rows_identical": true
+    }
+  ],
+  "conclusion": "No stale-label discrepancy between CURRENT benchmark rows and audited embedded rows. Older referenced disk-file discrepancies described in docs do not apply to training runner snapshots."
+}

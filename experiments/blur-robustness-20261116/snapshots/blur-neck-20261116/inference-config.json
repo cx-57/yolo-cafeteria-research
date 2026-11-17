@@ -1,0 +1,30 @@
+{
+  "weights": "../yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/weights/best.pt",
+  "camera": 0,
+  "confidence": 0.60,
+  "occupancy_confidence": 0.15,
+  "stable_frames": 5,
+  "clear_frames": 10,
+  "tracking_iou": 0.4,
+  "imgsz": 640,
+  "max_frame_seconds": 2.0,
+  "roi": null,
+  "roi_verified": false,
+  "disposal_verified": false,
+  "physical_bins_verified": false,
+  "class_to_bin": {
+    "food": null,
+    "plate": null,
+    "utensil": null,
+    "hinged_container": null,
+    "drink_carton": null,
+    "wrapper": null,
+    "bottle": null
+  },
+  "bin_to_position": {"Recycle": null, "Compost": null, "Trash": null},
+  "chute_angles": [60, 90, 120],
+  "serial_ready_seconds": 10.0,
+  "serial_ack_seconds": 2.0,
+  "serial_cycle_seconds": 20.0,
+  "log": "runs/sorter/attempts.csv"
+}
