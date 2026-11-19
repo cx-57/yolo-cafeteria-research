@@ -1,47 +1,89 @@
-# YOLO Cafeteria Research
+# Cafeteria Waste Sorting — Computer Vision + Arduino
 
-Research repository for evaluating whether a real-time YOLO-based computer vision system can provide accurate and reliable waste-disposal guidance under realistic school cafeteria conditions.
+Research and prototype code for a cafeteria waste-sorting system. The repository contains **two separate paths**:
 
-## Research question
+1. **Offline research:** four frozen YOLO11 specialist detectors covering food, plate, utensil, hinged container, drink carton, wrapper, and bottle. A separate rules layer produces compost/recycling/manual-review *suggestions*, not verified correct-bin decisions.
+2. **Live prototype:** camera detection, a configurable loading-area ROI, Arduino/servo control, and logging. **Detection-only is the default.** Automatic movement is blocked until the ROI, disposal mappings, and physical bin positions are verified.
 
-> **To what extent can a real-time YOLO-based computer vision system provide accurate and reliable disposal guidance under realistic school cafeteria conditions?**
+## Start here
 
-## System
+| Task | File or guide |
+| --- | --- |
+| Live camera and hardware | [Live sorter setup](docs/live-sorter.md) |
+| Arduino sketch | [firmware/waste_sorter/waste_sorter.ino](firmware/waste_sorter/waste_sorter.ino) |
+| Camera/servo controller | [scripts/live_sorter.py](scripts/live_sorter.py) |
+| Offline research inference | [scripts/specialists.py](scripts/specialists.py) |
+| Disposal rules | [scripts/disposal.py](scripts/disposal.py) and [configs/disposal.json](configs/disposal.json) |
+| Evaluation and audits | [scripts/evaluate_sorting.py](scripts/evaluate_sorting.py), [scripts/research_audit.py](scripts/research_audit.py) |
+| Research manuscript | [Research PDF](paper/cafeteria-waste-sorting.pdf) and [source](paper/manuscript.md) |
+| Frozen research settings | [configs/research-freeze.json](configs/research-freeze.json) |
+| Software verification and limitations | [docs/sorter-verification.md](docs/sorter-verification.md) |
+| Real-camera robustness observations | [docs/live-robustness-session.md](docs/live-robustness-session.md) |
 
-```text
-camera
-  ↓
-YOLO object detector
-  ↓
-physical item class
-  ↓
-local disposal-rule engine
-  ↓
-compost / recycling / trash / manual check
+## Setup
+
+Python 3.12 is recommended.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
 ```
 
-The detector predicts **physical objects**, not disposal streams. Disposal policy is kept in a separate rules file so the model can remain unchanged when local waste rules change.
+Model weights, original datasets, and private camera footage are **not** tracked by Git. Restore them separately under `../yolo-cafeteria-research-assets/` or configure explicit paths.
 
-## Repository layout
+### Live controller (safe defaults)
 
-- `configs/` — class taxonomy, disposal rules, dataset definitions, and experiment configs
-- `data/` — manifests and local dataset layout; raw/processed image data are not committed
-- `src/data/` — dataset audit, filtering, remapping, deduplication, validation, and split tools
-- `src/training/` — model training entry point
-- `src/evaluation/` — detection, disposal, robustness, error, and latency evaluation
-- `src/inference/` — detector and real-time disposal-guidance pipeline
-- `experiments/` — compact experiment ledger
-- `results/` — paper-ready metrics, figures, tables, and qualitative examples
-- `docs/` — research protocol, taxonomy, annotation rules, and deployment protocol
-- `paper/` — manuscript and references
-- `tests/` — integrity checks for mappings and dataset structure
+```bash
+python scripts/live_sorter.py --image /absolute/path/to/photo.jpg --output runs/sorter/preview.jpg
+python scripts/live_sorter.py --probe-cameras 0,1,2
+python scripts/live_sorter.py --camera 0 --mode detection
+```
 
-## Data principle
+See [setup and safety gates](docs/live-sorter.md) before enabling servo movement. The included `configs/sorter.json` deliberately leaves ROI, class destinations, and physical bin assignments **unset**. Do not invent calibration values.
 
-Public data are filtered by **visual/domain match**, not just class name. A ceramic restaurant plate, for example, should not count as useful training data for a disposable cafeteria plate simply because both are labeled `plate`.
+### Frozen research inference
 
-Raw images, processed datasets, model weights, and Ultralytics run directories are intentionally excluded from Git.
+```bash
+./scripts/run_specialists.sh predict /absolute/path/to/photo.jpg --device mps --output /tmp/predictions.json
+./scripts/run_specialists.sh sort /absolute/path/to/photo.jpg --device mps --output /tmp/suggestions.json
+```
 
-## Status
+## Frozen V1 research metrics
 
-Scaffolding initialized. The next research milestone is to freeze the NHS cafeteria object taxonomy after a real waste audit and populate `data/manifests/` with strictly matched sources.
+| Metric | Development validation (186 photos) | Historical test (248 photos) |
+| --- | ---: | ---: |
+| mAP50 | 86.36% | 87.78% |
+| mAP50–95 | 65.25% | 67.24% |
+| Object precision at confidence 0.50 | 93.00% | 93.42% |
+
+Class-specific thresholds chosen on development validation produced **97.03% precision / 71.43% recall** on validation and **97.22% precision / 68.18% recall** on the historically exposed test set. They have **not** been deployed to the default sorting pipeline.
+
+**Limitations:** These are exposed development cohorts with AI-assisted annotations, not sealed independent tests. Object-detection metrics do not establish disposal-bin accuracy, reliable camera-to-bin performance, or reduced school waste contamination. See [sorting-evaluation protocol](docs/sorting-evaluation.md) and [provenance/readiness report](results/research-readiness.json).
+
+## Repo organization
+
+- `scripts/` — inference, evaluation, audits, experimental training, and live controller.
+- `firmware/` — Arduino sorter sketch.
+- `configs/` — research freeze, model configuration, and hardware-safe defaults.
+- `tests/` — Python and Arduino host-simulation tests.
+- `results/` — preserved benchmark summaries and audit receipts.
+- `paper/` and `docs/` — manuscript and validation/verification documentation.
+- `experiments/` — retained V5 training notebooks, checkpoint metadata, and annotation audit. V2–V4 and superseded notebook variants are available in the linked historical commit below.
+
+The separately documented V5 seven-class checkpoint stopped after **11/20 epochs** (65.94% validation mAP50; 41.97% mAP50–95). It is provisional, not an independent test result. See [V5 checkpoint record](experiments/yolo-v5-original-plus-v4/V5_11_EPOCH_CHECKPOINT.md). No model weights are shipped in Git.
+
+Do not merge experimental threshold, training-label, or disposal-policy changes into the frozen research results without a new, explicitly identified experiment.
+
+## Earlier versions (preserved, not active)
+
+To keep the current source tree focused, older experimental training code and duplicate Colab entrypoints were removed **from the current `main` tree only**. Their exact, unchanged source remains browsable in the [pre-condensation commit](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f) and recoverable through Git history:
+
+- [V2 (704-image) experiments](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v2-704)
+- [V3 (865-image) experiments](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v3-865)
+- [V4 four-class experiments](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v4-4class)
+- [Earlier V5 training notebook variants](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v5-original-plus-v4)
+- [Prior research manuscript working draft](https://github.com/cx-57/yolo-cafeteria-research/blob/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/docs/research-paper.md)
+
+These archival records are **not** substitutes for the current frozen evaluation results, and the current source tree does not include the large training datasets or model weight files. The archived copies can be restored without reconstructing or altering the original experiments.

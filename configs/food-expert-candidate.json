@@ -1,0 +1,51 @@
+{
+  "name": "Offline food-owner candidate; existing checkpoints only; not deployed",
+  "models": [
+    {
+      "id": "unified-other-six",
+      "weights": "../yolo-cafeteria-research-assets/artifacts/cumulative20-100views-20261031/train/weights/best.pt",
+      "sha256": "19e1294484efe9bbabbc71866ccd57f59942899cc385937dc7aeed55fc373795",
+      "classes": [
+        "plate",
+        "utensil",
+        "hinged_container",
+        "drink_carton",
+        "wrapper",
+        "bottle"
+      ],
+      "source_classes": [
+        "food",
+        "plate",
+        "utensil",
+        "hinged_container",
+        "drink_carton",
+        "wrapper",
+        "bottle"
+      ],
+      "settings": {
+        "imgsz": 640
+      }
+    },
+    {
+      "id": "frozen-food-owner",
+      "weights": "weights/food-container-carton.pt",
+      "sha256": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+      "classes": [
+        "food"
+      ],
+      "source_classes": [
+        "food",
+        "hinged_container",
+        "drink_carton"
+      ],
+      "settings": {
+        "imgsz": 640
+      }
+    }
+  ],
+  "limitations": [
+    "Fixed exposed-development selection; not independent field performance",
+    "No weights retrained; live configuration remains unchanged",
+    "No verified real crumb evaluation; other-six outputs are preserved by ownership"
+  ]
+}

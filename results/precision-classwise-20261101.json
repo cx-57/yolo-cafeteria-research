@@ -1,0 +1,61 @@
+{
+  "status": "VALIDATION_SELECTED_DEVELOPMENT_DIAGNOSTIC_NOT_INDEPENDENT",
+  "source": "Mac evaluation output provided November 1, 2026. Full local output: ~/Desktop/yolo-cafeteria-research-assets/artifacts/precision-classwise-20261101.json",
+  "metric": "Seven-class micro object-detection precision at box IoU >=0.50; NOT mAP or correct disposal-bin accuracy",
+  "weights_changed": false,
+  "default_pipeline_thresholds_changed": false,
+  "validation": {
+    "images": 186,
+    "baseline_confidence": 0.5,
+    "baseline": {
+      "tp": 638,
+      "fp": 48,
+      "fn": 139,
+      "precision": 0.9300291545189504,
+      "recall": 0.8211068211068211
+    },
+    "selected": {
+      "tp": 555,
+      "fp": 17,
+      "fn": 222,
+      "precision": 0.9702797202797203,
+      "recall": 0.7142857142857143
+    }
+  },
+  "selected_class_confidence_thresholds": {
+    "food": 0.79,
+    "plate": 0.83,
+    "utensil": 0.5,
+    "hinged_container": 0.5,
+    "drink_carton": 0.84,
+    "wrapper": 0.83,
+    "bottle": 0.91
+  },
+  "historical_test": {
+    "images": 248,
+    "baseline": {
+      "tp": 724,
+      "fp": 51,
+      "fn": 200,
+      "precision": 0.9341935483870968,
+      "recall": 0.7835497835497836
+    },
+    "selected": {
+      "tp": 630,
+      "fp": 18,
+      "fn": 294,
+      "precision": 0.9722222222222222,
+      "recall": 0.6818181818181818
+    },
+    "prediction_receipt_sha256": "01b8c6448b851b57f53768eff67fddefc6b4c927fb42603b4c1421c94c3e2848"
+  },
+  "constraints": {
+    "min_precision": 0.97,
+    "min_recall": 0.6,
+    "min_predictions": 100
+  },
+  "labels": "AI-assisted, unverified by an independent human review",
+  "test_exposure": "Previously evaluated and used in release decisions. Not an independent holdout.",
+  "independent_test": false,
+  "sorting_accuracy_measured": false
+}

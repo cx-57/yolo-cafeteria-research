@@ -1,0 +1,461 @@
+"""One controlled hinged-container specialist fine-tuning experiment.
+
+Creates a separate 3-class candidate from existing SEVEN-class train labels.
+Never trains on validation, test, public 44-image stress photos, or untouched
+checkpoint/research freeze files. Development validation has just two hinged
+instances: this experiment cannot prove independent accuracy improvements.
+"""
+import argparse
+import copy
+import hashlib
+import json
+import math
+import random
+import shutil
+import zipfile
+from collections import Counter
+from pathlib import Path
+
+import yaml
+
+import explore_candidates as frozen
+import guard_candidate
+import specialists as s
+import training
+from storage import ROOT, STORE, EVALUATION
+
+OWNED = ('food', 'hinged_container', 'drink_carton')
+MAP = {0: 0, 3: 1, 4: 2}
+DEFAULT_DATA = STORE / 'data/combined-seven-school-oct29-20261031/data.yaml'
+DEFAULT_BASELINE = ROOT / 'results/baseline.json'
+
+
+def parse_rows(path):
+    rows = []
+    for line in Path(path).read_text().splitlines():
+        if not line.strip():
+            continue
+        items = line.split()
+        if len(items) != 5:
+            raise ValueError('Non-5-column YOLO label: ' + str(path))
+        c = int(items[0])
+        if items[0] not in (str(c), str(float(c))):
+            raise ValueError('Invalid class index: ' + line)
+        values = [float(v) for v in items[1:]]
+        if not all(math.isfinite(v) for v in values):
+            raise ValueError('Nonfinite YOLO box: ' + str(path))
+        rows.append((c, values))
+    return rows
+
+
+def choose_train(records, seed=42, support_cap=250, background_cap=90):
+    """Every hinged-positive training view, bounded food/carton positives,
+    and plate-only negatives. No validation/test membership considered here."""
+    rng = random.Random(seed)
+    annotated = [(r, {c for c, _ in parse_rows(r['label'])}) for r in records]
+    hinged = [r for r, classes in annotated if 3 in classes]
+    if len(hinged) < 5:
+        raise ValueError('Need >= 5 existing hinged-positive training views')
+    selected = {r['image']:r for r in hinged}
+    for cls in [4, 0]:
+        options = [r for r, classes in annotated if cls in classes and r['image'] not in selected]
+        rng.shuffle(options)
+        selected.update({r['image']:r for r in options[:support_cap]})
+    # Hard negatives: visible plates but none of the three owned classes.
+    negatives = [r for r, classes in annotated if 1 in classes and not classes.intersection(MAP)]
+    rng.shuffle(negatives)
+    selected.update({r['image']:r for r in negatives[:background_cap]})
+    chosen = sorted(selected.values(),key=lambda x:x['image'])
+    return chosen, len(hinged), min(background_cap,len(negatives))
+
+
+def export_dataset(info, out, repeat=3, support_cap=250, background_cap=90, seed=42, val_rows_by_sha=None):
+    """Copy old training images/labels, remap owned classes, oversample ONLY
+    hinged-positive training views (augmentation online; copies not new photos)."""
+    if out.exists():
+        raise FileExistsError('Refusing to reuse training snapshot')
+    if not (1 <= repeat <= 5) or support_cap < 1 or background_cap < 0:
+        raise ValueError('Invalid training repeat or caps')
+    chosen, n_hinge, n_negative = choose_train(
+        info['records']['train'],seed,support_cap,background_cap)
+    val = info['records']['val']
+    root = out
+    counts = Counter()
+    index = []
+    for split, records in [('train', chosen), ('val', val)]:
+        for i, r in enumerate(records):
+            if split == 'val' and val_rows_by_sha is not None:
+                if r['sha256'] not in val_rows_by_sha:
+                    raise ValueError('Frozen validation SHA missing from corrected manifest')
+                labels = []
+                for line in val_rows_by_sha[r['sha256']]:
+                    cols = line.split()
+                    if len(cols) != 5:
+                        raise ValueError('Invalid corrected validation row')
+                    labels.append((int(cols[0]),[float(x) for x in cols[1:]]))
+            else:
+                labels = parse_rows(r['label'])
+            owned = [(MAP[c],values) for c, values in labels if c in MAP]
+            repeats = repeat if split == 'train' and any(c == 1 for c,_ in owned) else 1
+            for k in range(repeats):
+                stem = f'{i:05d}_{k:02d}_{hashlib.sha256(r["image"].encode()).hexdigest()[:8]}'
+                image = root / 'images' / split / (stem + Path(r['image']).suffix.lower())
+                label = root / 'labels' / split / (stem + '.txt')
+                image.parent.mkdir(parents=True,exist_ok=True)
+                label.parent.mkdir(parents=True,exist_ok=True)
+                shutil.copyfile(r['image'],image)
+                if s.sha(image) != r['sha256']:
+                    raise ValueError('Training source image changed during snapshot')
+                label.write_text(''.join(
+                    f'{c} ' + ' '.join(f'{v:.9g}' for v in values) + '\n'
+                    for c,values in owned))
+                for c,_ in owned:counts[(split, OWNED[c])] += 1
+                index.append(dict(split=split, image=str(image), image_sha256=r['sha256'],
+                                  original_image=r['image'],original_label_sha256=r['label_sha256'],
+                                  repeat=k,classes=[OWNED[c] for c,_ in owned]))
+    config = dict(path=str(root),train='images/train',val='images/val',nc=3,names=list(OWNED))
+    (root/'data.yaml').write_text(yaml.safe_dump(config,sort_keys=False))
+    (root/'sampling.json').write_text(json.dumps(dict(
+        original_train_selected=len(chosen),original_train_hinged_views=n_hinge,
+        negative_plate_only_train_views=n_negative,hinge_repeat=repeat,
+        selected_photos_are_not_independent= True,
+        val_originals=len(val), # kept out of training
+        annotation_boxes_by_split_and_class={f'{split}:{cls}':n for (split,cls),n in sorted(counts.items())},
+        image_records=index),indent=2)+'\n')
+    return dict(train_originals=len(chosen), train_hinged_views=n_hinge,
+                train_hinged_oversampling=repeat, val_images=len(val), image_records=len(index))
+
+
+def append_new_annotated_train(extra_zip, output_dir, previous_shas, stress_shas, repeat=3):
+    """Append checksum-checked AI-visual draft images to training ONLY."""
+    extra_zip=Path(extra_zip).expanduser().resolve()
+    if not extra_zip.is_file():
+        raise FileNotFoundError(extra_zip)
+    added=[]
+    with zipfile.ZipFile(extra_zip) as z:
+        manifest=json.loads(z.read('manifest.json'))
+        if manifest.get('status')!='AI_VISUAL_DRAFT_NOT_HUMAN_VERIFIED':
+            raise ValueError('Refuse unsupported annotation status')
+        if manifest.get('classes')!=list(OWNED) or len(manifest.get('images',[]))!=29:
+            raise ValueError('Expected 29 training-only photos with unchanged three-class mapping')
+        seen=set()
+        for i,r in enumerate(manifest['images']):
+            image_name=r['image']
+            label_name=r['label']
+            if not image_name.startswith('images/train/') or not label_name.startswith('labels/train/'):
+                raise ValueError('Extra images must be training-only')
+            if '..' in Path(image_name).parts or '..' in Path(label_name).parts:
+                raise ValueError('Unsafe filename')
+            image=z.read(image_name)
+            label=z.read(label_name)
+            digest=hashlib.sha256(image).hexdigest()
+            if digest!=r['image_sha256'] or hashlib.sha256(label).hexdigest()!=r['label_sha256']:
+                raise ValueError('Extra image/label checksum mismatch')
+            if digest in seen or digest in previous_shas or digest in stress_shas:
+                raise ValueError('New candidate overlaps train/validation/test or stress photo')
+            seen.add(digest)
+            lines=label.decode('utf-8').splitlines()
+            classes=[]
+            for line in lines:
+                parts=line.split()
+                if len(parts)!=5:
+                    raise ValueError('Invalid extra YOLO annotation')
+                cls=float(parts[0])
+                if not cls.is_integer() or not 0<=cls<3:
+                    raise ValueError('Extra label outside three-class model')
+                x,y,w,h=map(float,parts[1:])
+                if not all(math.isfinite(v) for v in (x,y,w,h)) or w<=0 or h<=0 or x-w/2 < -1e-6 or y-h/2 < -1e-6 or x+w/2>1+1e-6 or y+h/2>1+1e-6:
+                    raise ValueError('Invalid extra bounding box')
+                classes.append(int(cls))
+            copies=repeat if 1 in classes else 1
+            for j in range(copies):
+                name=f'newhinged-{i:03d}-{j}-{digest[:12]}'+Path(image_name).suffix.lower()
+                dest_image=output_dir/'images/train'/name
+                dest_label=output_dir/'labels/train'/Path(name).with_suffix('.txt').name
+                if dest_image.exists() or dest_label.exists():
+                    raise FileExistsError(dest_image)
+                dest_image.write_bytes(image)
+                dest_label.write_bytes(label)
+                added.append(dict(image=str(dest_image),label=str(dest_label),
+                                  sha256=digest,classes=classes,
+                                  source_gallery_index=r['source_gallery_index'],
+                                  repeat=j,ai_visual_draft_not_ground_truth=True))
+    result=dict(images_added=len(manifest['images']),
+                positive_photos=sum(any(b['class_id']==1 for b in r['boxes']) for r in manifest['images']),
+                negative_photos=sum(not any(b['class_id']==1 for b in r['boxes']) for r in manifest['images']),
+                training_views_added=len(added),source_zip_sha256=s.sha(extra_zip),
+                image_records=added)
+    (output_dir/'extra-data-index.json').write_text(json.dumps(result,indent=2)+'\n')
+    return {k:v for k,v in result.items() if k!='image_records'}
+
+
+def verify_parent_candidate(parent, baseline=None):
+    """Verify a previous *separate* experiment before using its best.pt.
+
+    Enforces the frozen class head, checkpoint SHA, same baseline validation
+    cohort, and original three-class checkpoint provenance.
+    """
+    parent=Path(parent).expanduser().resolve()
+    if not parent.is_dir():
+        raise FileNotFoundError('Parent candidate directory unavailable: '+str(parent))
+    previous=s.read(parent/'experiment.json')
+    weights=parent/'fit/weights/best.pt'
+    config=s.read(parent/'candidate-specialists.json')
+    validation=s.read(parent/'candidate-validation.json')
+    stress=s.read(parent/'stress-comparison/comparison.json')
+    baseline=baseline or s.read(DEFAULT_BASELINE)
+    frozen_config=s.read(s.CONFIG)
+    specs={item['id']:item for item in config['models']}
+    base_specs={item['id']:item for item in frozen_config['models']}
+    if previous.get('status')!='TRAINED_NOT_PROMOTED':
+        raise ValueError('Parent experiment was not finalized as separate candidate')
+    if previous.get('original_frozen_checkpoint_sha256')!=base_specs['food-container-carton']['sha256']:
+        raise ValueError('Parent was not trained from this frozen original checkpoint')
+    if previous.get('corrected_validation_manifest_sha256')!=baseline['manifest_sha256']:
+        raise ValueError('Parent used a different validation cohort')
+    if not weights.is_file() or s.sha(weights)!=previous.get('candidate_sha256'):
+        raise ValueError('Parent best.pt absent or differs from its recorded SHA')
+    if Path(previous.get('candidate_weight','')).resolve()!=weights:
+        raise ValueError('Parent recorded different candidate weight path')
+    spec=specs.get('food-container-carton')
+    if not spec or spec.get('classes')!=list(OWNED):
+        raise ValueError('Parent does not have original three-class head')
+    if Path(spec.get('weights','')).resolve()!=weights or spec.get('sha256')!=s.sha(weights):
+        raise ValueError('Parent model config does not match its best.pt')
+    if set(specs)!=set(base_specs) or any(
+            specs[k]!=base_specs[k] for k in base_specs if k!='food-container-carton'):
+        raise ValueError('Parent changed a specialist other than food-container-carton')
+    if validation.get('images')!=baseline['images'] or validation.get('manifest_sha256')!=baseline['manifest_sha256']:
+        raise ValueError('Parent validation set differs from frozen baseline')
+    if set(validation.get('per_class',{}))!=set(baseline['per_class']):
+        raise ValueError('Parent validation class mapping differs')
+    if stress.get('images')!=44 or stress.get('original_checkpoint_sha256')!=base_specs['food-container-carton']['sha256']:
+        raise ValueError('Parent source-hint diagnostics do not match original checkpoint')
+    if stress.get('source_hint_image_counts',{}).get('hinged_container_candidate')!=12:
+        raise ValueError('Parent stress cohort does not contain 12 hinged-source photographs')
+    return dict(parent_path=str(parent),initial_weights=str(weights),
+                initial_weights_sha256=s.sha(weights),
+                parent_validation_AP50=validation['AP50'],
+                parent_stress_hinged_hits=stress['class_hits_by_source_hint']['candidate']['hinged_container_candidate'])
+
+
+def parent_validation_report(parent, candidate, baseline):
+    old=s.read(Path(parent)/'candidate-validation.json')
+    if old.get('manifest_sha256')!=candidate.get('manifest_sha256'):
+        raise ValueError('Parent and V4 validation manifests differ')
+    report=guard_candidate.check_candidate(old,candidate,target='hinged_container',
+                            minimum_gain=0.0,max_regression=0.005)
+    return dict(parent_validation_AP50=old['AP50'],
+                candidate_validation_AP50=candidate['AP50'],
+                delta_AP50=candidate['AP50']-old['AP50'],
+                parent_validation_AP50_95=old['AP50_95'],
+                candidate_validation_AP50_95=candidate['AP50_95'],
+                per_class_delta=report['delta'],
+                relative_retention_gate_passed=report['passed'],
+                relative_retention_blockers=report['blockers'],
+                caveat='Development validation only; hinged-container has two annotations; not independent accuracy')
+
+
+def parent_stress_report(parent, stress):
+    old=s.read(Path(parent)/'stress-comparison/comparison.json')
+    if (old.get('images')!=stress.get('images') or
+            old.get('source_hint_image_counts')!=stress.get('source_hint_image_counts') or
+            old['class_hits_by_source_hint']['frozen']!=stress['class_hits_by_source_hint']['frozen']):
+        raise ValueError('Cannot compare different stress cohorts')
+    key='hinged_container_candidate'
+    before=old['class_hits_by_source_hint']['candidate'][key]
+    after=stress['class_hits_by_source_hint']['candidate'][key]
+    return dict(parent_hinged_source_photos_detected=before,
+                new_hinged_source_photos_detected=after,
+                change=after-before,
+                photos=old['source_hint_image_counts'][key],
+                caveat='Already-inspected 44-source-photo diagnostic, NOT human-labeled test recall or AP')
+
+
+def train(args, out):
+    if out.exists():
+        raise FileExistsError('Refusing to overwrite existing candidate experiment: '+str(out))
+    protected=frozen.check_frozen(ROOT)
+    # Validate parent before creating any output directories.
+    parent_info=verify_parent_candidate(args.parent) if args.parent else None
+    data_path=Path(args.data).expanduser().resolve()
+    info=training.inspect_dataset(data_path)
+    if 'train' not in info['records'] or 'val' not in info['records']:
+        raise ValueError('Expected training and validation splits')
+    # No image can be in both roles. inspect_dataset also checks SHA duplicates.
+    train_sha={r['sha256'] for r in info['records']['train']}
+    val_sha={r['sha256'] for r in info['records']['val']}
+    test_sha={r['sha256'] for r in info['records'].get('test',[])}
+    if train_sha & (val_sha|test_sha):
+        raise ValueError('Train shares exact image bytes with frozen evaluation split')
+    if not args.bundle:
+        raise ValueError('Pass --bundle of the 44 public diagnostic images to enforce the no-training-on-stress-photos SHA gate')
+    bundle=Path(args.bundle).expanduser().resolve()
+    with zipfile.ZipFile(bundle) as z:
+        stress=json.loads(z.read('manifest.json'))
+        excluded={r['sha256'] for r in stress['images']}
+        if len(stress['images']) != 44 or len(excluded) != 44:
+            raise ValueError('Expected the immutable 44-image source-screening bundle')
+        for row in stress['images']:
+            if hashlib.sha256(z.read(row['path'])).hexdigest()!=row['sha256']:
+                raise ValueError('Stress image hash mismatch: '+row['path'])
+    if train_sha & excluded:
+        raise ValueError('Existing training split overlaps the 44-photo diagnostic cohort; do not train on these photos')
+    # Corrected embedded validation labels supersede stale disk labels for 109
+    # development photos. This cohort is *validation only*, never training.
+    frozen_val = s.read(EVALUATION)
+    baseline = s.read(DEFAULT_BASELINE)
+    if s.sha(EVALUATION) != baseline['manifest_sha256']:
+        raise ValueError('Frozen corrected validation manifest differs from baseline')
+    if frozen_val['names'] != s.NAMES:
+        raise ValueError('Frozen manifest class mapping changed')
+    s.validate_annotations(frozen_val['records'], frozen_val['evaluated_classes'])
+    val_rows_by_sha={r['sha256']: r['rows'] for r in frozen_val['records']}
+    if set(val_rows_by_sha) != val_sha or len(val_rows_by_sha) != len(frozen_val['records']):
+        raise ValueError('Training dataset val images do not match corrected 186-photo cohort')
+    out.mkdir(parents=True)
+    summary=export_dataset(info,out/'data',repeat=args.repeat, seed=args.seed,
+                           support_cap=args.support_cap, background_cap=args.background_cap,
+                           val_rows_by_sha=val_rows_by_sha)
+    if args.extra_annotated:
+        extra_stats=append_new_annotated_train(args.extra_annotated, out/'data',
+                        train_sha | val_sha | test_sha, excluded,repeat=args.repeat)
+        summary.update(extra_stats)
+    if parent_info:
+        summary.update(parent_info)
+    summary.update(dict(source_yaml=str(data_path),source_yaml_sha256=s.sha(data_path),stress_image_count=44,stress_train_overlap=0,
+                        original_frozen_checkpoint_sha256=protected['weights/food-container-carton.pt'],corrected_validation_manifest_sha256=s.sha(EVALUATION),
+                        epochs=args.epochs,learning_rate=args.lr,
+                        status='TRAINING_CANDIDATE_NOT_PROMOTED',
+                        warning='Validation has only two hinged-container objects. No independent improvement claim.'))
+    (out/'experiment.json').write_text(json.dumps(summary,indent=2)+'\n')
+    import torch
+    from ultralytics import YOLO
+    torch.set_num_threads(2)
+    path=Path(parent_info['initial_weights']) if parent_info else ROOT/'weights/food-container-carton.pt'
+    if parent_info and s.sha(path)!=parent_info['initial_weights_sha256']:
+        raise ValueError('Parent candidate checkpoint changed before finetuning')
+    model=YOLO(str(path))
+    names=model.names
+    if isinstance(names,dict):names=[names[i] for i in range(len(names))]
+    if list(names) != list(OWNED):
+        raise ValueError('Original checkpoint must have exactly three classes: '+str(OWNED))
+    for field in ('resume','save_dir'):
+        model.overrides.pop(field,None)
+    model.train(data=str(out/'data/data.yaml'),device=args.device,
+                project=str(out),name='fit',exist_ok=False,
+                epochs=args.epochs,imgsz=640,batch=1,nbs=8,
+                workers=0,seed=args.seed,optimizer='AdamW',lr0=args.lr,lrf=0.25,
+                warmup_epochs=1,patience=args.epochs,freeze=10,
+                degrees=10,translate=0.06,scale=0.20,shear=1.0,
+                fliplr=0.5,flipud=0.0,hsv_h=.01,hsv_s=.20,hsv_v=.18,
+                mosaic=0.0,mixup=0.0,copy_paste=0.0,plots=False,cache=False,
+                val=True,save=True,verbose=True)
+    best=out/'fit/weights/best.pt'
+    if not best.is_file():raise FileNotFoundError('Candidate best.pt absent')
+    if parent_info and s.sha(path)!=parent_info['initial_weights_sha256']:
+        raise ValueError('Parent checkpoint changed during training')
+    if frozen.check_frozen(ROOT)!=protected:
+        raise ValueError('Frozen checkpoints/config/policy changed after candidate run')
+    config=s.read(s.CONFIG)
+    config=copy.deepcopy(config)
+    for spec in config['models']:
+        if spec['id']=='food-container-carton':
+            spec['weights']=str(best.resolve())
+            spec['sha256']=s.sha(best)
+    s.save(out/'candidate-specialists.json',config)
+    summary.update(dict(status='TRAINED_NOT_PROMOTED',candidate_weight=str(best),
+                        candidate_sha256=s.sha(best), active_models_unchanged=True))
+    (out/'experiment.json').write_text(json.dumps(summary,indent=2)+'\n')
+    return summary
+
+
+def evaluate(args,out):
+    config=out/'candidate-specialists.json'
+    if not config.is_file():
+        raise FileNotFoundError('Train the candidate first; missing candidate config: '+str(config))
+    baseline=s.read(DEFAULT_BASELINE)
+    manifest=Path(args.manifest).expanduser().resolve()
+    if s.sha(manifest)!=baseline.get('manifest_sha256'):
+        raise ValueError('Must compare to the SAME pinned 186-photo baseline validation manifest')
+    protected=frozen.check_frozen(ROOT)
+    source=s.read(manifest)
+    records,classes=source['records'],source['evaluated_classes']
+    s.validate_annotations(records,classes)
+    s.verify_images(records)
+    candidate_config=s.read(config)
+    receipt=s.predict(records,args.device,config_path=config)
+    receipt=s.validate_receipt(receipt,records,candidate_config,s.sha(config))
+    scored=s.score_predictions(records,receipt['predictions'],classes)
+    result=dict(scored, independent_test=False,manifest_sha256=s.sha(manifest),
+                annotation_status='AI-assisted development validation, hinged class has only TWO labels',
+                model_config_sha256=s.sha(config))
+    gate=guard_candidate.check_candidate(
+        baseline,result,target='hinged_container',minimum_gain=0.0,max_regression=0.005)
+    if frozen.check_frozen(ROOT)!=protected:
+        raise ValueError('Frozen checkpoints altered while evaluating')
+    s.save(out/'candidate-validation.json',result)
+    s.save(out/'validation-gate.json',gate)
+    meta=s.read(out/'experiment.json')
+    if meta.get('parent_path'):
+        verified=verify_parent_candidate(meta['parent_path'],baseline)
+        if verified['initial_weights_sha256']!=meta['initial_weights_sha256']:
+            raise ValueError('Parent checkpoint changed after V4 training')
+        s.save(out/'parent-validation-comparison.json',
+               parent_validation_report(meta['parent_path'],result,baseline))
+    return dict(target='hinged_container',hinge_baseline_AP50_95=baseline['per_class']['hinged_container']['AP50_95'],
+                hinge_candidate_AP50_95=result['per_class']['hinged_container']['AP50_95'],
+                hinge_baseline_objects=2,gate_pass=gate['passed'],gate_blockers=gate['blockers'],
+                recommendation='NOT AUTOMATICALLY PROMOTED. Need visual diagnostics and independent field evaluation.')
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('mode',choices=['all','train','evaluate','stress'])
+    p.add_argument('--data',type=Path,default=DEFAULT_DATA)
+    p.add_argument('--out',type=Path,required=True)
+    p.add_argument('--manifest',type=Path,default=EVALUATION)
+    p.add_argument('--bundle',type=Path,help='Existing 44-image ZIP; required to exclude from training and for stress comparison')
+    p.add_argument('--extra-annotated',type=Path,help='Optional new 29-photo AI-assisted training-only YOLO annotated ZIP')
+    p.add_argument('--parent',type=Path,help='Previous separate candidate directory (for V4: hinged-candidate-v3-retry); initializes from its verified best.pt')
+    p.add_argument('--device',choices=['cpu','mps'],default='mps')
+    p.add_argument('--epochs',type=int,default=8)
+    p.add_argument('--repeat',type=int,default=3)
+    p.add_argument('--support-cap',type=int,default=250)
+    p.add_argument('--background-cap',type=int,default=90)
+    p.add_argument('--seed',type=int,default=42)
+    p.add_argument('--lr',type=float,default=0.00005)
+    a=p.parse_args()
+    if a.epochs<1 or not 1<=a.repeat<=5 or a.support_cap<1 or a.background_cap<0 or not 0<a.lr<0.1:
+        p.error('Invalid experiment training settings')
+    out=a.out.expanduser().resolve()
+    if a.mode in ('all','train'):
+        trained=train(a,out)
+        if a.mode == 'train':
+            result=trained
+    if a.mode in ('all','evaluate'):
+        validation=evaluate(a,out)
+        if a.mode == 'evaluate':
+            result=validation
+    if a.mode in ('all','stress'):
+        if not a.bundle:
+            p.error('--bundle is required for stress comparison')
+        from compare_hinged_stress import run as compare_stress
+        stress=compare_stress(a.bundle.expanduser().resolve(),
+                              out/'fit/weights/best.pt',
+                              out/'stress-comparison',a.device)
+        stress={k:v for k,v in stress.items() if k!='per_image'}
+        meta=s.read(out/'experiment.json')
+        if meta.get('parent_path'):
+            s.save(out/'parent-stress-comparison.json',
+                   parent_stress_report(meta['parent_path'],stress))
+        result=stress if a.mode=='stress' else dict(
+            trained_candidate=trained['candidate_weight'],
+            validation=validation,
+            stress=stress,
+            frozen_models_unchanged=True,
+            promotion='NONE; candidate is not a validated replacement')
+    print(json.dumps(result,indent=2))
+
+
+if __name__=='__main__':main()

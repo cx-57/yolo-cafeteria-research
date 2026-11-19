@@ -1,0 +1,32 @@
+names: [food, plate, utensil, hinged_container, drink_carton, wrapper, bottle]
+training:
+  epochs: 20
+  imgsz: 640
+  batch: 1
+  nbs: 16
+  workers: 0
+  seed: 42
+  cache: false
+  plots: false
+  optimizer: AdamW
+  lr0: 0.0002
+  lrf: 0.05
+  warmup_epochs: 1
+  warmup_bias_lr: 0.0
+  patience: 5
+  freeze: 10
+augmentation:
+  degrees: 15.0
+  shear: 2.0
+  perspective: 0.0003
+  translate: 0.03
+  scale: 0.15
+  fliplr: 0.5
+  flipud: 0.0
+  hsv_h: 0.015
+  hsv_s: 0.25
+  hsv_v: 0.20
+  mosaic: 0.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0

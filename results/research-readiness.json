@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "starting_commit": "defcc6156a4425daf1ae530757634cc541f3c267",
+  "freeze_sha256": "58be0599afd79ed400b485fb738d75eeb91bca3462eb4c994579c54a30c5b8d0",
+  "no_new_training": true,
+  "no_new_detector_inference": true,
+  "independence_audit": {
+    "inventory": {
+      "readable_paths": 102806,
+      "distinct_inodes": 67422,
+      "byte_unique_images": 14379,
+      "candidate_unique_images": 9468,
+      "metadata_json_files": 2398,
+      "trained_pool_unique_images": 4751
+    },
+    "candidate_status_counts": {
+      "exposure_or_duplicate": 3842,
+      "unresolved_history": 5482,
+      "unresolved_visual_screen": 144
+    },
+    "candidate_reason_counts": {
+      "training_directory_or_manifest_membership": 3042,
+      "exact_decoded_pixels_in_training_pool": 3042,
+      "capture_or_group_overlap_with_training_pool": 2590,
+      "recorded_development_inference": 2682,
+      "capture_or_group_overlap_with_development_pool": 2707,
+      "perceptual_near_duplicate_flag_radius5": 588,
+      "decode_unavailable_no_visual_screen": 144
+    },
+    "confirmed_independent_images": 0,
+    "original_school_photos_audited": 144,
+    "original_school_photos_with_capture_exposure": 144,
+    "unreadable_image_paths": 42,
+    "unreadable_or_invalid_metadata_files": 5,
+    "metadata_read_errors": [
+      {
+        "path": "artifacts/expanded-replay-20261031/process.json",
+        "error": "Extra data: line 1 column 33 (char 32)"
+      },
+      {
+        "path": "history/condense-20261027/migration.json",
+        "error": "[Errno 60] Operation timed out"
+      },
+      {
+        "path": "history/condense-verification/packet-condense-smoke/recipe.json",
+        "error": "[Errno 60] Operation timed out"
+      },
+      {
+        "path": "history/packet-retired-20261027/configs/specialists.json",
+        "error": "[Errno 60] Operation timed out"
+      },
+      {
+        "path": "history/packet-retired-20261027/results/baseline.json",
+        "error": "[Errno 60] Operation timed out"
+      }
+    ],
+    "decoded_heic_originals_unavailable": 144,
+    "exact_method": "Local assets only, venv/cache/git excluded. All image extensions byte-audited; 64-bit dHash screens rotations/reflections at Hamming radius5. Training-directory or manifest membership is potential exposure, not proof of optimizer use. Unmatched is unresolved, never independent by default.",
+    "bounds": "No overlap is not independence. Training-directory or prepared-manifest membership indicates possible exposure, not confirmed fitting by a particular active checkpoint. Near-hash flags require visual adjudication. Unmatched public originals lack complete lifetime provenance."
+  },
+  "labels": {
+    "verified_human_disposal_label_sets_found": 0,
+    "json_files_searched": 2398,
+    "csv_search": {
+      "csv_files": 207,
+      "candidates": [
+        {
+          "path": "data/school-submission-20261027/label-audit-20261028/review-checklist.csv",
+          "headers": [
+            "photo",
+            "split",
+            "decision",
+            "boxes",
+            "notes",
+            "human_reviewed"
+          ]
+        },
+        {
+          "path": "data/school-submission-20261027/clean-scope-20261028/selection-checklist.csv",
+          "headers": [
+            "photo",
+            "split",
+            "include",
+            "reasons",
+            "visible_food",
+            "coverage_unverified",
+            "notes"
+          ]
+        },
+        {
+          "path": "data/audits/v2_review_2026-10-12/all_3096_visual_screening_register.csv",
+          "headers": [
+            "source",
+            "image",
+            "contact_sheet",
+            "screening_status",
+            "direct_original_resolution_inspected",
+            "reviewed_v2_override_exists",
+            "approved_food_only_overlay_exists",
+            "full_11_class_verified_by_this_screening"
+          ]
+        },
+        {
+          "path": "data/audits/v2_review_2026-10-12/full_11_class_review_ledger.csv",
+          "headers": [
+            "source",
+            "source_image",
+            "review_status",
+            "full_original_resolution_inspected",
+            "all_11_classes_verified",
+            "original_label_sha256",
+            "image_sha256",
+            "reviewer",
+            "visual_evidence_and_followup"
+          ]
+        },
+        {
+          "path": "data/audits/v2_review_2026-10-12/ingredient_reviewed.csv",
+          "headers": [
+            "split",
+            "image",
+            "annotation_id",
+            "ingredient",
+            "containing_foods",
+            "max_containment",
+            "review_status",
+            "reviewer",
+            "decision_reason"
+          ]
+        },
+        {
+          "path": "data/v2_candidates/provisional_train_20261013.csv",
+          "headers": [
+            "image",
+            "label",
+            "split",
+            "session",
+            "reviewer",
+            "reviewed",
+            "complete",
+            "source_url",
+            "license",
+            "attribution"
+          ]
+        },
+        {
+          "path": "data/v2_candidates/weak_cafeteria_20261013/provisional_manifest.csv",
+          "headers": [
+            "image",
+            "label",
+            "split",
+            "session",
+            "reviewer",
+            "reviewed",
+            "complete",
+            "source_url",
+            "license",
+            "attribution"
+          ]
+        },
+        {
+          "path": "data/v2_candidates/lvis_trays/provisional_manifest.csv",
+          "headers": [
+            "image",
+            "label",
+            "split",
+            "session",
+            "reviewer",
+            "reviewed",
+            "complete"
+          ]
+        }
+      ],
+      "read_errors": [],
+      "annotation_format_counts": {
+        ".json": 2403,
+        ".txt": 105608,
+        ".yaml": 261,
+        ".csv": 207,
+        ".yml": 2,
+        ".xml": 34
+      }
+    },
+    "other_formats": {
+      "xml_files": 34,
+      "yaml_files": 263,
+      "xml_object_classes": {
+        "Plastic Bottle": 204
+      },
+      "bin_class_candidates": [],
+      "read_errors": []
+    },
+    "school_review_checklist": {
+      "records": 123,
+      "human_reviewed_nonempty": 0
+    },
+    "caution": "Reviewer/verified strings in historical object ledgers do not establish human authorship or independent disposal-bin labels.",
+    "reproducible_supplemental_search": {
+      "counts": {
+        "csv": 207,
+        "xml": 34,
+        "yaml": 263
+      },
+      "hashed_file_count": 504,
+      "read_errors": 0,
+      "method": "CSV headers screened for bin/disposal/human/verified/reviewer; XML object/name and YAML names screened for exact compost/recycling/landfill. Format matches are leads, never verified human truth."
+    }
+  },
+  "actual_disposal_metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "correct_bin_accuracy": null,
+    "automatic_coverage_of_independent_objects": null,
+    "manual_review_rate_on_independent_objects": null,
+    "reason": "No confirmed independent images with verified human disposal labels available; object-class labels cannot substitute."
+  },
+  "existing_development_result": "results/sorting-verification.json",
+  "dataset_statistics": {
+    "train": {
+      "images": 2372,
+      "real_photos": 2052,
+      "augmentation_views": 320,
+      "object_counts": {
+        "bottle": 293,
+        "wrapper": 316,
+        "food": 2501,
+        "plate": 722,
+        "hinged_container": 185,
+        "utensil": 457,
+        "drink_carton": 972
+      },
+      "sources": {
+        "dry_wet_waste": 195,
+        "food_american": 275,
+        "macworx": 110,
+        "plate": 187,
+        "school": 20,
+        "school_lunch": 252,
+        "school_lunch_asian": 111,
+        "tartanhacks": 26,
+        "tetra_pak": 522,
+        "trash_detection": 86,
+        "utensil": 83,
+        "waste_detection_v3": 185,
+        "school_augmentation": 320
+      },
+      "label_basis": "Working frozen manifest rows"
+    },
+    "val": {
+      "images": 186,
+      "real_photos": 186,
+      "augmentation_views": 0,
+      "object_counts": {
+        "hinged_container": 2,
+        "plate": 110,
+        "utensil": 101,
+        "food": 343,
+        "bottle": 42,
+        "drink_carton": 94,
+        "wrapper": 85
+      },
+      "sources": {
+        "macworx": 2,
+        "plate": 17,
+        "school": 7,
+        "school_lunch": 71,
+        "tetra_pak": 25,
+        "trash_detection": 45,
+        "utensil": 19
+      },
+      "label_basis": "Repaired audited-eligible manifest"
+    },
+    "test": {
+      "images": 248,
+      "real_photos": 248,
+      "augmentation_views": 0,
+      "object_counts": {
+        "hinged_container": 4,
+        "plate": 123,
+        "food": 433,
+        "utensil": 98,
+        "wrapper": 75,
+        "bottle": 57,
+        "drink_carton": 134
+      },
+      "sources": {
+        "macworx": 4,
+        "plate": 31,
+        "school": 6,
+        "school_lunch": 73,
+        "tetra_pak": 66,
+        "trash_detection": 48,
+        "utensil": 20
+      },
+      "label_basis": "Repaired audited-all248 manifest"
+    }
+  },
+  "working_dataset_manifest_sha256": "bb4e0fbbe621b73037f87004b3c1c785d93db9553f65a2020bb3f086ffdebd44",
+  "frozen_test_label_manifest_sha256": "f1fdd09d538d146e2714f099ffd9dee6e7b90a198aca471a2081c125839e2859",
+  "frozen_validation_manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+  "errors": {
+    "food": {
+      "tp": 327,
+      "false_negatives": {
+        "below_automatic_threshold": 53,
+        "localization_candidate": 48,
+        "no_same_class_overlap": 5
+      },
+      "false_positives": {
+        "localization_candidate": 2,
+        "background_or_missing_annotation": 7,
+        "duplicate_or_competing_box": 1
+      },
+      "largest_fn_image": [
+        "plate__train__lvis_000000089725.jpg",
+        52
+      ],
+      "uncertainty": "Geometric/confidence diagnostic hypotheses only; visual review AI-assisted and not a new ground truth audit"
+    },
+    "bottle": {
+      "tp": 33,
+      "false_negatives": {
+        "below_automatic_threshold": 19,
+        "no_same_class_overlap": 4,
+        "localization_candidate": 1
+      },
+      "false_positives": {
+        "background_or_missing_annotation": 9,
+        "other_class_overlap_or_annotation_ambiguity": 1
+      },
+      "largest_fn_image": [
+        "trash_detection__train__000085_JPG.rf.d198d9e8601130b6c9ad5c066b598dd3.jpg",
+        10
+      ],
+      "uncertainty": "Geometric/confidence diagnostic hypotheses only; visual review AI-assisted and not a new ground truth audit"
+    }
+  },
+  "visual_review": {
+    "cases": 12,
+    "unique_photographs": 10,
+    "labels_changed": false,
+    "human_verified": false
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "torch": "2.14.1",
+    "mps_available": true,
+    "hardware": {
+      "hw.model": "MacBookAir10,1",
+      "hw.memsize": "8589934592",
+      "hw.ncpu": "8",
+      "machdep.cpu.brand_string": "Apple M1"
+    },
+    "models": {
+      "food-container-carton": {
+        "architecture": "yolo11n.yaml",
+        "scale": "n",
+        "parameters": 2590425,
+        "classes": {
+          "0": "food",
+          "1": "hinged_container",
+          "2": "drink_carton"
+        }
+      },
+      "plate-wrapper": {
+        "architecture": "yolo11n.yaml",
+        "scale": "n",
+        "parameters": 2605126,
+        "classes": {
+          "0": "plate",
+          "1": "wrapper"
+        }
+      },
+      "utensil": {
+        "architecture": "yolo11x.yaml",
+        "scale": "x",
+        "parameters": 56877241,
+        "classes": {
+          "0": "utensil"
+        }
+      },
+      "bottle": {
+        "architecture": "yolo11s.yaml",
+        "scale": "s",
+        "parameters": 9428179,
+        "classes": {
+          "0": "bottle"
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "asset-audit.json": {
+      "path": "artifacts/research-finalization-20261101/asset-audit.json",
+      "sha256": "bed4a40d40f54af58479cbd5b1430ba1988aa712f346f4f772dd54f53190f8ab"
+    },
+    "error-analysis.json": {
+      "path": "artifacts/research-finalization-20261101/error-analysis.json",
+      "sha256": "5729dcadeb2f324fd42d4c00bbc47b4d5f4f9e61539bdd1e795c08c17ee9375d"
+    },
+    "visual-review.json": {
+      "path": "artifacts/research-finalization-20261101/visual-review.json",
+      "sha256": "d19f0ece1b6a48da3c0663744139596ccdff92a98e97cad51d7eef1b19ed60eb"
+    },
+    "environment.json": {
+      "path": "artifacts/research-finalization-20261101/environment.json",
+      "sha256": "98a881d29446dc831a073b10b6e43163e5af0ed9cd5273a5c8662f863a572bfe"
+    },
+    "protocol.json": {
+      "path": "artifacts/research-finalization-20261101/protocol.json",
+      "sha256": "d5a0585931e97290fb5eb58082743dee51bc556fd64a954d99a3c1589760e8bb"
+    },
+    "error-review-selection.json": {
+      "path": "artifacts/research-finalization-20261101/error-review-selection.json",
+      "sha256": "5c1ad3b95d75a87db86d40023e7ae2514b2c99b0fc778f443b3d3604a02d3d78"
+    },
+    "development-results.pdf": {
+      "path": "artifacts/research-finalization-20261101/development-results.pdf",
+      "sha256": "1b69c3737e921e70d74836e071ad8c0901e296d8d77b65a59be60d40ad57968a"
+    },
+    "paper_figure.py": {
+      "path": "artifacts/research-finalization-20261101/paper_figure.py",
+      "sha256": "02869840cfbba38050be8b9b0177f81c3905880c1e2dba81f70a751b76fece54"
+    },
+    "tests.log": {
+      "path": "artifacts/research-finalization-20261101/tests.log",
+      "sha256": "9c046de8039e63ff6a36a1443031b7567325be3f813c5538e83660b0f4d64fae"
+    }
+  },
+  "paper_readiness": {
+    "ready_to_draft_methods_and_development_results": true,
+    "ready_to_claim_independent_real_world_disposal_accuracy": false,
+    "decision": "Ready for a transparent development/prototype paper draft; not ready for a validated real-world sorting-performance claim.",
+    "missing": [
+      "A genuinely unused capture cohort with documented capture-group and training/selection history, sealed before inference.",
+      "Blind human per-object bin labels with box coordinates, annotator identity, local acceptance evidence and adjudicated uncertain items.",
+      "Independent evaluation of the frozen model/rules on that cohort; object recognition must remain separate from bin correctness.",
+      "Human adjudication of flagged object annotations/serving granularity and the reusable/packaged-food class boundaries.",
+      "Source/license/attribution verification for public data before redistribution; existing datasets.csv is a provenance lead, not an independent license audit."
+    ]
+  },
+  "verification": {
+    "full_suite_passed": 63,
+    "full_suite_failed": 0,
+    "focused_tests": 10,
+    "review": "Two reproducibility gaps fixed and independently re-reviewed; no important remaining issue.",
+    "frozen_models_rules_results_and_external_manifests_match": true,
+    "code_sha256": {
+      "scripts/research_audit.py": "5240ee7cd6f007ebe93706b7e0fdbe59d244adc463dfa855f7a0feca0bed13b4",
+      "tests/test_research_audit.py": "6eac51081051b7ced0a9baf7b440db862e407f753e8d6a87e39ac1c1824be775"
+    },
+    "tests_log_sha256": "9c046de8039e63ff6a36a1443031b7567325be3f813c5538e83660b0f4d64fae"
+  }
+}

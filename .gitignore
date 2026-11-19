@@ -1,0 +1,21 @@
+# Local datasets, checkpoints, environments and generated output
+/data/
+/model/
+/weights/
+/runs/
+.venv/
+venv/
+.env
+*.pt
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+# Rebuildable caches and OS metadata
+__pycache__/
+*.py[cod]
+*.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store

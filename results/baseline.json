@@ -1,0 +1,59 @@
+{
+  "AP50": 0.8636433164260234,
+  "AP50_95": 0.6525422104353948,
+  "images": 186,
+  "per_class": {
+    "food": {
+      "AP50": 0.9577255455565946,
+      "AP50_95": 0.6500697755834846,
+      "objects": 343
+    },
+    "plate": {
+      "AP50": 0.8156136887656074,
+      "AP50_95": 0.6899041634616293,
+      "objects": 110
+    },
+    "utensil": {
+      "AP50": 0.7493655956581344,
+      "AP50_95": 0.46774238800954515,
+      "objects": 101
+    },
+    "hinged_container": {
+      "AP50": 0.995,
+      "AP50_95": 0.945,
+      "objects": 2
+    },
+    "drink_carton": {
+      "AP50": 0.9284000370782618,
+      "AP50_95": 0.6519206748780891,
+      "objects": 94
+    },
+    "wrapper": {
+      "AP50": 0.7747468785540175,
+      "AP50_95": 0.543111180697627,
+      "objects": 85
+    },
+    "bottle": {
+      "AP50": 0.8246514693695477,
+      "AP50_95": 0.6200472904173895,
+      "objects": 42
+    }
+  },
+  "config_sha256": "c9b70ce27b55a27bd6ab70c4f837fbbe0e4269c58f97622ac586c4e89c26aa78",
+  "checkpoint_sha256": {
+    "food-container-carton": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+    "plate-wrapper": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+    "utensil": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+    "bottle": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb"
+  },
+  "model_image_sizes": {
+    "food-container-carton": 640,
+    "plate-wrapper": 640,
+    "utensil": 800,
+    "bottle": 640
+  },
+  "manifest_sha256": "0e8e8afef975539943f2ab39e0f402cce66ca25fbd0292ff3318246a6bbad1ec",
+  "independent_test": false,
+  "annotation_status": "Existing repaired AI-reviewed development labels; inherited training exposure remains",
+  "receipt_provenance": "Native candidate bottle predictions merged with unchanged native specialist predictions; all checkpoint hashes verified"
+}

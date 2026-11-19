@@ -1,0 +1,57 @@
+{
+  "name": "User-selected compost / recycling / landfill policy",
+  "verified": true,
+  "categories": [
+    "compost",
+    "recycling",
+    "landfill",
+    "review"
+  ],
+  "automatic_confidence_threshold": 0.5,
+  "sources": [
+    "https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables"
+  ],
+  "note": "User-selected experimental sorting shortcut: food to compost; detected bottles and milk/juice cartons to recycling without checking whether empty; plates, utensils, wrappers, and hinged containers to review. Verified activates this owner-selected mapping only, not real-world disposal eligibility or independent accuracy.",
+  "classes": {
+    "food": {
+      "category": "compost",
+      "requires": [],
+      "instruction": "Separate food from packaging and place food scraps in the compost bin."
+    },
+    "plate": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Check plate material, coating, contamination and local acceptance. Return reusable plates."
+    },
+    "utensil": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Return reusable utensils; identify disposable material and local acceptance."
+    },
+    "hinged_container": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Check whether the container is foam, rigid plastic, fiber or compostable, and whether it is accepted."
+    },
+    "drink_carton": {
+      "category": "recycling",
+      "requires": [],
+      "instruction": "Recycling candidate under user-selected shortcut; carton contents are not checked. Prior school acceptance confirmation covered empty cartons only."
+    },
+    "wrapper": {
+      "category": "review",
+      "requires": [],
+      "instruction": "Identify paper, film or foil and check local rules; this detector does not recognize wrapper material."
+    },
+    "bottle": {
+      "category": "recycling",
+      "requires": [],
+      "instruction": "Recycling candidate under user-selected shortcut; bottle contents are not checked. Confirm local acceptance before actual disposal."
+    }
+  },
+  "verification_basis": "User explicitly requested automatic recycling for bottle and drink-carton detections without an emptiness check; previously confirmed school acceptance was for empty cartons only. This is an experimental sorting policy, not verified eligibility of filled containers.",
+  "local_acceptance": {
+    "drink_carton": true
+  },
+  "local_acceptance_note": "Carton acceptance was previously confirmed only for empty cartons. The new automatic suggestion does not establish acceptance of filled cartons or bottles."
+}

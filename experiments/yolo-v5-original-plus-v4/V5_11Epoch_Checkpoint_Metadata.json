@@ -1,0 +1,53 @@
+{
+  "experiment_id": "v5_balanced_80_10_10_interrupted_epoch11_20261105",
+  "status": "checkpoint_metadata_committed_weights_not_uploaded",
+  "artifact": {
+    "original_upload_filename": "best(1).pt",
+    "proposed_release_asset": "YOLO_V5_11epochs_best.pt",
+    "size_bytes": 94869987,
+    "sha256": "62711f9deb1bb104eb23aabf5ae6fa83cba011c0aacee62877d04a77b827af27",
+    "format": "Ultralytics/PyTorch .pt",
+    "embedded_timestamp_utc": "2026-11-06T04:12:58.402089+00:00",
+    "stored_in_github": false
+  },
+  "model": {
+    "architecture": "YOLO11s",
+    "output_classes": [
+      "food",
+      "plate",
+      "utensil",
+      "hinged_container",
+      "drink_carton",
+      "wrapper",
+      "bottle"
+    ],
+    "ultralytics_checkpoint_version": "8.4.203"
+  },
+  "training": {
+    "planned_epochs": 20,
+    "checkpoint_epoch_zero_based": 10,
+    "completed_epochs_at_checkpoint": 11,
+    "interrupted": true,
+    "dataset_images": 2261,
+    "split_target_percentages": {
+      "train": 80,
+      "val": 10,
+      "test": 10
+    },
+    "image_size_planned": 800,
+    "actual_split_counts_and_args_from_original_run": "not independently verified from full training logs"
+  },
+  "embedded_validation_metrics": {
+    "precision": 0.69911,
+    "recall": 0.62426,
+    "mAP50": 0.65944,
+    "mAP50_95": 0.41966
+  },
+  "limitations": [
+    "The model was interrupted before the planned 20 epochs.",
+    "Metrics are recovered from checkpoint metadata; validation outputs and per-class scores are not available in this report.",
+    "The provisional dataset may include inconsistent cross-class annotations; these are not independently verified benchmark results.",
+    "This checkpoint is not the frozen four-specialist V1 set."
+  ],
+  "provenance": "Metadata read non-executingly from PyTorch ZIP pickle opcodes and verified file SHA256 on the user-uploaded checkpoint."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "food-container-carton",
+      "weights": "weights/food-container-carton.pt",
+      "sha256": "b1f26b232a946521242bdfa6f383b6fe34905e9cb59aac2bc6b77a8e81086356",
+      "classes": [
+        "food",
+        "hinged_container",
+        "drink_carton"
+      ]
+    },
+    {
+      "id": "plate-wrapper",
+      "weights": "weights/plate-wrapper.pt",
+      "sha256": "3321b8c7fe82c9e050069eea9bfdb54f46a6808778eb0c41a56d91b254b8cdb1",
+      "classes": [
+        "plate",
+        "wrapper"
+      ]
+    },
+    {
+      "id": "utensil",
+      "weights": "weights/utensil.pt",
+      "sha256": "ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff211c3d4c7f",
+      "classes": [
+        "utensil"
+      ],
+      "settings": {
+        "imgsz": 800
+      }
+    },
+    {
+      "id": "bottle",
+      "weights": "weights/bottle.pt",
+      "sha256": "c25af009a12fa769276762b9838fc121aac6f3314251e35124a0cd2577a6a2eb",
+      "classes": [
+        "bottle"
+      ]
+    }
+  ],
+  "independent_test": false
+}
