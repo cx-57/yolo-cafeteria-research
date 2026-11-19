@@ -413,13 +413,43 @@ LEGACY_UTENSIL_SHA256 = 'ce4956547f0c421db1dc4b3d2fa7c28d9d9ae2fc44ddf5acf333ff2
 
 
 def adapt_legacy_pooling(model, checkpoint_sha256):
+    """Preserve the V1 utensil checkpoint's 3D pooling on channels-last tensors.
+
+    The original MaxPool3d kernel and mathematical operation are unchanged.
+    Only the input tensor is made contiguous. This applies solely to the
+    hash-verified frozen utensil model and modifies no stored checkpoint.
+    """
     if checkpoint_sha256 != LEGACY_UTENSIL_SHA256:
         return 0
-    import importlib.util
-    spec = importlib.util.spec_from_file_location('live_legacy_pooling', ROOT/'experiments/yolo-v4-4class/v4_hybrid_inference.py')
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module.repair_legacy_head_pooling(model)
+
+    import torch.nn as nn
+
+    class ContiguousMaxPool3d(nn.Module):
+        def __init__(self, pool):
+            super().__init__()
+            self.pool = pool
+
+        def forward(self, x):
+            return self.pool(x.contiguous())
+
+    head = model.model
+    found = [(name, layer) for name, layer in head.named_modules()
+             if isinstance(layer, nn.MaxPool3d)]
+    if not found:
+        LOG.info('Legacy utensil model has no MaxPool3d layers; no adapter needed')
+        return 0
+
+    for name, layer in found:
+        if not any(fragment in '.' + name + '.' for fragment in ('.cv3.', '.one2one_cv3.')):
+            raise RuntimeError(
+                f'Unexpected 3D pooling outside the 2D classification head: {name}. '
+                'Refusing to modify an unknown architecture.'
+            )
+        parent_name, key = name.rsplit('.', 1)
+        head.get_submodule(parent_name)._modules[key] = ContiguousMaxPool3d(layer)
+        LOG.info('Legacy pooling compatibility: %s kernel=%s (contiguous input only)',
+                 name, layer.kernel_size)
+    return len(found)
 
 
 class SpecialistDetector:
