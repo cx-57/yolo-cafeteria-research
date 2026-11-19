@@ -37,8 +37,28 @@ jobs:
           done < prune.txt
 
           # Stage and verify *all* backup tags; abort before deletion on any mismatch.
+          while IFS=
+          echo "All branch-history backup tags verified."
+
+          # Do not delete an updated branch; leave it and fail safely.
           while IFS=$'\t' read -r sha branch; do
             [[ -n "$branch" ]] || continue
+            current="$(gh api "repos/$GH_REPO/git/ref/heads/$branch" --jq '.object.sha')"
+            [[ "$current" == "$sha" ]] || { echo "Branch changed during cleanup: $branch" >&2; exit 1; }
+            gh api -X DELETE "repos/$GH_REPO/git/refs/heads/$branch" >/dev/null
+            echo "Deleted branch reference: $branch"
+          done < planned.tsv
+
+          gh api --paginate "repos/$GH_REPO/branches?per_page=100" --jq '.[].name' > remaining.txt
+          if [[ "$(cat remaining.txt)" != "main" ]]; then
+            echo "Unexpected remaining branch references:" >&2
+            cat remaining.txt >&2
+            exit 1
+          fi
+          echo "Cleanup complete: only main remains; deleted branch commits are preserved by verified backup tags."
+\t' read -r sha branch; do
+            [[ -n "$branch" ]] || continue
+            echo "Checking backup: $branch"
             ref="refs/tags/pre-branch-prune-20261119/$branch"
             short="${ref#refs/}"
             if gh api "repos/$GH_REPO/git/ref/$short" >/dev/null 2>&1; then
@@ -48,9 +68,17 @@ jobs:
                 exit 1
               fi
             else
-              gh api -X POST "repos/$GH_REPO/git/refs" -f ref="$ref" -f sha="$sha" >/dev/null
+              if ! gh api -X POST "repos/$GH_REPO/git/refs" -f ref="$ref" -f sha="$sha" >/dev/null; then
+                echo "Failed creating backup for: $branch" >&2
+                exit 1
+              fi
             fi
-            actual="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha')"
+            actual=""
+            for attempt in 1 2 3 4 5; do
+              actual="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha' 2>/dev/null || true)"
+              [[ "$actual" == "$sha" ]] && break
+              sleep 2
+            done
             [[ "$actual" == "$sha" ]] || { echo "Backup verification failed: $branch" >&2; exit 1; }
           done < planned.tsv
           echo "All branch-history backup tags verified."
