@@ -6,7 +6,7 @@ Updated 2026-11-04. Links below only point to **files verified on GitHub**; unav
 
 - [Colab notebook — Worker A/B/C reviewed-patch merge and 7-class training](YOLO_V5_Worker_Patch_Merge_7Class_Colab.ipynb)
 - [Annotation audit and three-way assignment status](ANNOTATION_AUDIT_STATUS.md)
-- [Previous V5 training Colab notebook](YOLO_V5_Original_Plus_V4_7Class_Train.ipynb)
+- [Earlier V5 training Colab notebook (archived)](https://github.com/cx-57/yolo-cafeteria-research/blob/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v5-original-plus-v4/YOLO_V5_Original_Plus_V4_7Class_Train.ipynb)
 
 ## Generated files that are NOT uploaded to GitHub yet
 

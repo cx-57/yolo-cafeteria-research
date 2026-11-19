@@ -70,8 +70,20 @@ Class-specific thresholds chosen on development validation produced **97.03% pre
 - `tests/` — Python and Arduino host-simulation tests.
 - `results/` — preserved benchmark summaries and audit receipts.
 - `paper/` and `docs/` — manuscript and validation/verification documentation.
-- `experiments/` — **historical, non-default** V2–V5 trials, notebooks, and checkpoint metadata. These remain for reproducibility, not because each is part of the live system.
+- `experiments/` — retained V5 training notebooks, checkpoint metadata, and annotation audit. V2–V4 and superseded notebook variants are available in the linked historical commit below.
 
 The separately documented V5 seven-class checkpoint stopped after **11/20 epochs** (65.94% validation mAP50; 41.97% mAP50–95). It is provisional, not an independent test result. See [V5 checkpoint record](experiments/yolo-v5-original-plus-v4/V5_11_EPOCH_CHECKPOINT.md). No model weights are shipped in Git.
 
 Do not merge experimental threshold, training-label, or disposal-policy changes into the frozen research results without a new, explicitly identified experiment.
+
+## Earlier versions (preserved, not active)
+
+To keep the current source tree focused, older experimental training code and duplicate Colab entrypoints were removed **from the current `main` tree only**. Their exact, unchanged source remains browsable in the [pre-condensation commit](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f) and recoverable through Git history:
+
+- [V2 (704-image) experiments](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v2-704)
+- [V3 (865-image) experiments](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v3-865)
+- [V4 four-class experiments](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v4-4class)
+- [Earlier V5 training notebook variants](https://github.com/cx-57/yolo-cafeteria-research/tree/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v5-original-plus-v4)
+- [Prior research manuscript working draft](https://github.com/cx-57/yolo-cafeteria-research/blob/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/docs/research-paper.md)
+
+These archival records are **not** substitutes for the current frozen evaluation results, and the current source tree does not include the large training datasets or model weight files. The archived copies can be restored without reconstructing or altering the original experiments.

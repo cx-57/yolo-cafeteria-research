@@ -1,5 +1,0 @@
-path: .
-train: images/train
-val: images/val
-test: images/test
-names: [food, plate, utensil, hinged_container, drink_carton, wrapper, bottle]

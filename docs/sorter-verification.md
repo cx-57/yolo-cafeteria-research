@@ -12,7 +12,7 @@ replay, and validation scripts. No existing camera/Arduino controller or `.ino`
 was found. The checkout already contained unrelated modified/untracked V5
 research files; they were left in place without edits, staging or commits.
 
-Dataset definitions in `experiments/yolo-v2-704/data.yaml` and the external
+Dataset definitions in the [archived V2 `data.yaml`](https://github.com/cx-57/yolo-cafeteria-research/blob/fae3d929ef9c1cfa917fa8ec2660f2bfcc6bf37f/experiments/yolo-v2-704/data.yaml) and the external
 `data/combined-seven-reviewed-20261031/data.yaml` match the requested seven
 classes. Original datasets, labels, splits and trained weights were not edited.
 
