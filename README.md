@@ -1,109 +1,77 @@
-# Cafeteria waste-sorting computer vision
+# Cafeteria Waste Sorting — Computer Vision + Arduino
 
-Research prototype combining **four specialist YOLO11 detectors** for seven
-cafeteria item classes: food, plate, utensil, hinged container, drink carton,
-wrapper, and bottle. A separate rule layer suggests compost, recycling, or
-manual review. Object recognition is **not** verified disposal-bin accuracy.
+Research and prototype code for a cafeteria waste-sorting system. The repository contains **two separate paths**:
 
-## Research paper
+1. **Offline research:** four frozen YOLO11 specialist detectors covering food, plate, utensil, hinged container, drink carton, wrapper, and bottle. A separate rules layer produces compost/recycling/manual-review *suggestions*, not verified correct-bin decisions.
+2. **Live prototype:** camera detection, a configurable loading-area ROI, Arduino/servo control, and logging. **Detection-only is the default.** Automatic movement is blocked until the ROI, disposal mappings, and physical bin positions are verified.
 
-**[Read the 10-page PDF research preprint](paper/cafeteria-waste-sorting.pdf)** |
-[Editable source and full methodology](paper/manuscript.md)
+## Start here
 
-## Results
+| Task | File or guide |
+| --- | --- |
+| Live camera and hardware | [Live sorter setup](docs/live-sorter.md) |
+| Arduino sketch | [firmware/waste_sorter/waste_sorter.ino](firmware/waste_sorter/waste_sorter.ino) |
+| Camera/servo controller | [scripts/live_sorter.py](scripts/live_sorter.py) |
+| Offline research inference | [scripts/specialists.py](scripts/specialists.py) |
+| Disposal rules | [scripts/disposal.py](scripts/disposal.py) and [configs/disposal.json](configs/disposal.json) |
+| Evaluation and audits | [scripts/evaluate_sorting.py](scripts/evaluate_sorting.py), [scripts/research_audit.py](scripts/research_audit.py) |
+| Research manuscript | [Research PDF](paper/cafeteria-waste-sorting.pdf) and [source](paper/manuscript.md) |
+| Frozen research settings | [configs/research-freeze.json](configs/research-freeze.json) |
+| Software verification and limitations | [docs/sorter-verification.md](docs/sorter-verification.md) |
+| Real-camera robustness observations | [docs/live-robustness-session.md](docs/live-robustness-session.md) |
 
-| Frozen V1 metric | Development validation (186 photos) | Historical test (248 photos) |
+## Setup
+
+Python 3.12 is recommended.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+```
+
+Model weights, original datasets, and private camera footage are **not** tracked by Git. Restore them separately under `../yolo-cafeteria-research-assets/` or configure explicit paths.
+
+### Live controller (safe defaults)
+
+```bash
+python scripts/live_sorter.py --image /absolute/path/to/photo.jpg --output runs/sorter/preview.jpg
+python scripts/live_sorter.py --probe-cameras 0,1,2
+python scripts/live_sorter.py --camera 0 --mode detection
+```
+
+See [setup and safety gates](docs/live-sorter.md) before enabling servo movement. The included `configs/sorter.json` deliberately leaves ROI, class destinations, and physical bin assignments **unset**. Do not invent calibration values.
+
+### Frozen research inference
+
+```bash
+./scripts/run_specialists.sh predict /absolute/path/to/photo.jpg --device mps --output /tmp/predictions.json
+./scripts/run_specialists.sh sort /absolute/path/to/photo.jpg --device mps --output /tmp/suggestions.json
+```
+
+## Frozen V1 research metrics
+
+| Metric | Development validation (186 photos) | Historical test (248 photos) |
 | --- | ---: | ---: |
 | mAP50 | 86.36% | 87.78% |
 | mAP50–95 | 65.25% | 67.24% |
 | Object precision at confidence 0.50 | 93.00% | 93.42% |
 
-With **class-specific thresholds chosen on development validation**, unchanged
-V1 weights reached **97.03% precision / 71.43% recall** on validation and
-**97.22% precision / 68.18% recall** on the historically exposed test cohort.
-These thresholds have **not been deployed** to the default sorting pipeline.
-The frozen detector's mAP values did not increase with a confidence cutoff.
+Class-specific thresholds chosen on development validation produced **97.03% precision / 71.43% recall** on validation and **97.22% precision / 68.18% recall** on the historically exposed test set. They have **not** been deployed to the default sorting pipeline.
 
-**Scientific limitation:** These are exposed development datasets with
-AI-assisted labels, not sealed independent tests. The outside-source
-41-image exploratory V1 versus V3 comparison also uses approximate AI
-annotations. Actual correct-bin accuracy and reduced school waste contamination
-have **not been established**.
+**Limitations:** These are exposed development cohorts with AI-assisted annotations, not sealed independent tests. Object-detection metrics do not establish disposal-bin accuracy, reliable camera-to-bin performance, or reduced school waste contamination. See [sorting-evaluation protocol](docs/sorting-evaluation.md) and [provenance/readiness report](results/research-readiness.json).
 
-## Keep these components
+## Repo organization
 
-| Location | Purpose |
-| --- | --- |
-| `scripts/specialists.py` | Four-model inference and seven-class object metrics |
-| `scripts/disposal.py` | Local-rule suggestions and manual-review logic |
-| `scripts/evaluate_sorting.py` | Evaluate against independent, human-verified bin labels |
-| `scripts/replay_sorting.py` | Replay decisions from frozen predictions |
-| `scripts/precision_sweep.py` | Global threshold diagnostics |
-| `scripts/precision_per_class.py` | Validation-only threshold selection, exposed test check |
-| `scripts/hinged_candidate.py` | Optional hinged-container V3 experiment |
-| `scripts/evaluate_reviewed44.py` | Original versus V3 external-image development comparison |
-| `scripts/research_audit.py` | Provenance, annotation quality, and error analysis |
-| `scripts/training.py` | Optional isolated training without overwriting frozen weights |
-| `configs/` | Active model/rule definitions and research freeze |
-| `results/` | Frozen benchmark summaries and research-readiness evidence |
-| `docs/` | Paper draft and evaluation/review protocols |
-| `tests/` | Tests for retained functionality |
+- `scripts/` — inference, evaluation, audits, experimental training, and live controller.
+- `firmware/` — Arduino sorter sketch.
+- `configs/` — research freeze, model configuration, and hardware-safe defaults.
+- `tests/` — Python and Arduino host-simulation tests.
+- `results/` — preserved benchmark summaries and audit receipts.
+- `paper/` and `docs/` — manuscript and validation/verification documentation.
+- `experiments/` — **historical, non-default** V2–V5 trials, notebooks, and checkpoint metadata. These remain for reproducibility, not because each is part of the live system.
 
-Minor support modules and the reviewed-44 annotation package remain in `scripts/`.
-Git does **not** include the large model weights, image datasets, and local
-run artifacts. They live in `~/Desktop/yolo-cafeteria-research-assets/`
-and are required for actual model inference and reproducibility.
+The separately documented V5 seven-class checkpoint stopped after **11/20 epochs** (65.94% validation mAP50; 41.97% mAP50–95). It is provisional, not an independent test result. See [V5 checkpoint record](experiments/yolo-v5-original-plus-v4/V5_11_EPOCH_CHECKPOINT.md). No model weights are shipped in Git.
 
-## Unified V5 checkpoint — 11/20 epochs (provisional)
-
-The separate **seven-class YOLO11s V5** experiment used a rebalanced 80/10/10
-partition of the 2,261-image corpus. The uploaded `best.pt` file records
-**11 completed epochs**, **65.94% validation mAP50** and **41.97% mAP50–95**;
-training was interrupted, and these are not independent test results.
-
-- [V5 checkpoint record, exact SHA256, and model upload instructions](experiments/yolo-v5-original-plus-v4/V5_11_EPOCH_CHECKPOINT.md)
-- [Checkpoint metadata JSON](experiments/yolo-v5-original-plus-v4/V5_11Epoch_Checkpoint_Metadata.json)
-- [V5 20-epoch training / validation Colab notebook](experiments/yolo-v5-original-plus-v4/YOLO_V5_Balanced_80_10_10_20_Epochs.ipynb)
-
-**Binary weights are not yet hosted on GitHub.** The model must be attached
-to a GitHub Release before any GitHub weight-download URL can be provided.
-The frozen V1 specialist system remains unchanged.
-
-## Separate, provisional V3 recovery experiment
-
-The [865-image V3 utensil/wrapper supplement](experiments/yolo-v3-865/) is an **untrained isolated candidate**: it retains 704 prior images, adds 128 legacy utensil photos and 33 legacy wrapper photos, and contains 621 utensil / 140 wrapper boxes. One missing fork was manually annotated, and four bottle labels removed. Its new photos and labels are provided in a separate ZIP attachment; **they are not committed to GitHub**, and annotation completeness still needs visual review. The frozen V1 checkpoint set and 704-image V2 training results are unchanged.
-
-## Running locally on the Mac
-
-```bash
-cd ~/Desktop/yolo-cafeteria-research
-git pull --ff-only origin main
-python3 -m unittest discover -s tests -v
-
-./scripts/run_specialists.sh predict /path/to/photo.jpg --device mps --output /tmp/predictions.json
-
-./scripts/run_specialists.sh sort /path/to/photo.jpg --device mps --output /tmp/suggestions.json
-
-./scripts/run_specialists.sh precision-classwise --device mps \
-  --output "$HOME/Desktop/yolo-cafeteria-research-assets/artifacts/classwise-new-run.json"
-```
-
-The 44-image offline review kit can still be built from the GitHub Actions
-workflow named **GitHub download - 44-image annotation editor and starter JSON**.
-
-## Paper and provenance
-
-- [Research manuscript draft](docs/research-paper.md)
-- [Independent sorting evaluation protocol and current limitations](docs/sorting-evaluation.md)
-- [V3 / external-photo annotation protocol](docs/reviewed44-v3-scoring.md)
-- [Development validation](results/baseline.json) and [historical test](results/test.json)
-- [Frozen research configuration](configs/research-freeze.json)
-- [Research readiness/provenance audit](results/research-readiness.json)
-
-Every retired workflow, staging script, superseded report, and historical
-experiment is preserved in the
-[pre-cleanup archive branch](https://github.com/cx-57/yolo-cafeteria-research/tree/archive/pre-cleanup-20261101).
-
-For a publishable field-performance claim, collect fresh sealed school photos,
-independently annotate object boxes and verified disposal-bin eligibility, and
-evaluate the frozen model **without tuning on those photos**.
+Do not merge experimental threshold, training-label, or disposal-policy changes into the frozen research results without a new, explicitly identified experiment.
