@@ -41,12 +41,14 @@ jobs:
             [[ -n "$branch" ]] || continue
             ref="refs/tags/pre-branch-prune-20261119/$branch"
             short="${ref#refs/}"
-            existing="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha' 2>/dev/null || true)"
-            if [[ -z "$existing" ]]; then
+            if gh api "repos/$GH_REPO/git/ref/$short" >/dev/null 2>&1; then
+              existing="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha')"
+              if [[ "$existing" != "$sha" ]]; then
+                echo "Backup tag conflict: $branch" >&2
+                exit 1
+              fi
+            else
               gh api -X POST "repos/$GH_REPO/git/refs" -f ref="$ref" -f sha="$sha" >/dev/null
-            elif [[ "$existing" != "$sha" ]]; then
-              echo "Backup tag conflict: $branch" >&2
-              exit 1
             fi
             actual="$(gh api "repos/$GH_REPO/git/ref/$short" --jq '.object.sha')"
             [[ "$actual" == "$sha" ]] || { echo "Backup verification failed: $branch" >&2; exit 1; }
