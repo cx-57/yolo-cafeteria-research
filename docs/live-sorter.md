@@ -119,7 +119,7 @@ Visible labels now use the configured `confidence` threshold (default 0.60).
 Predictions down to `occupancy_confidence` (0.15) still block ambiguous sorting
 or premature rearming, even when hidden from the display. Filtering labels does
 not retrain a model or prove improved recognition. See
-[live detector comparison](live-detection-comparison.md) for measured development
+[live detector comparison](https://github.com/cx-57/yolo-cafeteria-research/blob/36e302f71e4d66faa5f8897bbee7993a53f776ae/docs/live-detection-comparison.md) for measured development
 results and limitations.
 
 ## Optional fixed-ROI zoom and diagnostic snapshots
@@ -343,4 +343,4 @@ physical success rate. No physical success rate has been measured here.
 
 `python3 scripts/live_sorter.py --detector food-fallback --mode detection --device mps`
 
-Keeps confident original food and all other-six predictions; consults the existing food specialist when food is missing. Experimental, detection-only, and slower when consulted. The default remains unified. See [measured results and limitations](food-fallback.md); individual crumb localization and some cutlery/wrapper misses remain unresolved.
+Keeps confident original food and all other-six predictions; consults the existing food specialist when food is missing. Experimental, detection-only, and slower when consulted. The default remains unified. See [measured results and limitations](https://github.com/cx-57/yolo-cafeteria-research/blob/36e302f71e4d66faa5f8897bbee7993a53f776ae/docs/food-fallback.md); individual crumb localization and some cutlery/wrapper misses remain unresolved.
