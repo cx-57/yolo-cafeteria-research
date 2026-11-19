@@ -261,6 +261,7 @@ class CandidateGuardTests(unittest.TestCase):
 """Tests for separate 3-class candidate construction. Synthetic labels only."""
 
 import hinged_candidate as h
+import specialists
 
 
 def fake(root, name, classes):
