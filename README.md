@@ -72,6 +72,8 @@ Class-specific thresholds chosen on development validation produced **97.03% pre
 - `paper/` and `docs/` — manuscript and validation/verification documentation.
 - `experiments/` — retained V5 training notebooks, checkpoint metadata, and annotation audit. V2–V4 and superseded notebook variants are available in the linked historical commit below.
 
+The former GitHub Actions job that rebuilt the historical 44-photo annotation ZIP is retired: its input artifacts expired, and its upstream source-selection module was absent. Existing local 44-photo review bundles can still be annotated with `scripts/package_review44_annotation_kit.py` when their original images and SHA-verified `manifest.json` are available. This does **not** turn development-exposed images into an independent test set.
+
 The separately documented V5 seven-class checkpoint stopped after **11/20 epochs** (65.94% validation mAP50; 41.97% mAP50–95). It is provisional, not an independent test result. See [V5 checkpoint record](experiments/yolo-v5-original-plus-v4/V5_11_EPOCH_CHECKPOINT.md). No model weights are shipped in Git.
 
 Do not merge experimental threshold, training-label, or disposal-policy changes into the frozen research results without a new, explicitly identified experiment.

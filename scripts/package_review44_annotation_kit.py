@@ -1,7 +1,8 @@
-"""Package the 44 GitHub-source images with editable, explicitly unverified boxes.
+"""Create a 44-image manual annotation editor from an existing reviewed-source bundle.
 
-Run ONLY after package_screened44.py rebuilds the exact historical 44 photos.
-No source photo or annotation is promoted to independent test ground truth.
+Requires the original source images and a matching, SHA-verified manifest.json.
+The retired automatic downloader cannot reconstruct expired GitHub artifacts.
+Draft boxes remain unverified, and this is not independent test ground truth.
 """
 import argparse
 import hashlib
