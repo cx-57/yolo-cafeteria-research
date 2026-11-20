@@ -12,8 +12,8 @@ import sys
 import time
 import uuid
 
-ROOT = Path(__file__).resolve().parents[1]
-NAMES = ['food', 'plate', 'utensil', 'hinged_container', 'drink_carton', 'wrapper', 'bottle']
+from specialists import NAMES, sha as file_sha
+from storage import ROOT
 BINS = {'Recycle', 'Compost', 'Trash'}
 LOG = logging.getLogger('sorter')
 
@@ -389,14 +389,6 @@ def resolve_path(value):
     return p if p.is_absolute() else ROOT / p
 
 
-def file_sha(path):
-    digest = hashlib.sha256()
-    with Path(path).open('rb') as f:
-        for block in iter(lambda: f.read(1024*1024), b''):
-            digest.update(block)
-    return digest.hexdigest()
-
-
 def load_model(weights):
     path = resolve_path(weights)
     if not path.is_file():
@@ -405,7 +397,7 @@ def load_model(weights):
     model = YOLO(str(path))
     verify_names(model.names)
     model.checkpoint_sha256 = file_sha(path)
-    LOG.info('Loaded %s; scale=%s; SHA256=%s; names=%s', path, model.model.yaml.get('scale'), file_sha(path), model.names)
+    LOG.info('Loaded %s; scale=%s; SHA256=%s; names=%s', path, model.model.yaml.get('scale'), model.checkpoint_sha256, model.names)
     return model
 
 

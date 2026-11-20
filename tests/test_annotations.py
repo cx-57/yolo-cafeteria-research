@@ -144,6 +144,11 @@ SIZES=[('hinged_container_candidate',12,'commons'),('utensil',15,'commons'),
        ('wrapper',2,'commons'),('bottle',9,'trashbox'),('drink_carton',6,'trashbox')]
 
 class AnnotationPackageTests(unittest.TestCase):
+    def test_annotation_classes_reuse_canonical_model_classes(self):
+        import specialists
+        from package_review44_annotation_kit import NAMES
+        self.assertIs(NAMES, specialists.NAMES)
+
     def synthetic(self,folder):
         images=[]
         for hint,count,source in SIZES:

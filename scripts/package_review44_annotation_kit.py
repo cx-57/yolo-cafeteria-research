@@ -8,8 +8,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-
-NAMES=['food','plate','utensil','hinged_container','drink_carton','wrapper','bottle']
+from specialists import NAMES
 TEMPLATE="""<!doctype html>
 <meta charset="utf-8">
 <title>44-photo seven-class annotation review</title>

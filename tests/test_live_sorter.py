@@ -184,6 +184,28 @@ class InputTests(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             s.load_model('/missing/yolo11n.pt')
 
+    def test_shared_class_ids_and_single_checkpoint_hash(self):
+        """The live camera reuses the frozen class list and file-hash implementation."""
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        import specialists
+        self.assertIs(s.NAMES, specialists.NAMES)
+        self.assertIs(s.file_sha, specialists.sha)
+
+        class FakeYOLO:
+            def __init__(self, path):
+                self.names = dict(enumerate(s.NAMES))
+                self.model = SimpleNamespace(yaml={'scale': 'n'})
+
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / 'weights.pt'
+            path.write_bytes(b'local test checkpoint')
+            with patch.dict(sys.modules, {'ultralytics': SimpleNamespace(YOLO=FakeYOLO)}):
+                with patch.object(s, 'file_sha', wraps=s.file_sha) as hash_file:
+                    model = s.load_model(path)
+                    self.assertEqual(hash_file.call_count, 1)
+            self.assertEqual(model.checkpoint_sha256, specialists.sha(path))
+
     def test_prediction_geometry_and_names(self):
         self.assertTrue(hasattr(s, 'decode_detections'), 'prediction decoder missing')
         rows = [[10, 20, 50, 60, .9, 2]]
